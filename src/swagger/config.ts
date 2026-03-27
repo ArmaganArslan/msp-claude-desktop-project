@@ -34,7 +34,7 @@ export const WHITELISTED_ENDPOINTS: EndpointConfig[] = [
 
   // ─── CARİ ────────────────────────────────────────────────────────────────────
 
-  // ✅ /api/CariHareketleri GET
+  // 🔍 /api/CariHareketleri GET
   {
     path: "/api/CariHareketleri",
     method: "get",
@@ -42,7 +42,7 @@ export const WHITELISTED_ENDPOINTS: EndpointConfig[] = [
     description:
       "ERP sisteminden cari hesap hareketlerini getirir. Müşteri/tedarikçi ekstresi, borç/alacak durumları ve finansal raporlama için kullanılır.",
   },
-  // ✅ /api/CariHareketleri/Pivot GET
+  // 🔍 /api/CariHareketleri/Pivot GET
   {
     path: "/api/CariHareketleri/Pivot",
     method: "get",
@@ -50,7 +50,7 @@ export const WHITELISTED_ENDPOINTS: EndpointConfig[] = [
     description:
       "Cari hareketleri pivot (özet/çapraz tablo) formatında getirir. Dönemsel karşılaştırma ve toplu analiz için idealdir.",
   },
-  // ✅ /api/Cari/Bakiye GET
+  // 🔍 /api/Cari/Bakiye GET
   {
     path: "/api/Cari/Bakiye",
     method: "get",
@@ -58,7 +58,7 @@ export const WHITELISTED_ENDPOINTS: EndpointConfig[] = [
     description:
       "Cari hesapların güncel bakiyelerini getirir. Müşteri ve tedarikçi borç/alacak durumlarını görmek için kullanılır.",
   },
-  // ✅ /api/Cari/{id} GET
+  // 🔍 /api/Cari/{id} GET
   {
     path: "/api/Cari/{id}",
     method: "get",
@@ -66,7 +66,7 @@ export const WHITELISTED_ENDPOINTS: EndpointConfig[] = [
     description:
       "ERP sisteminden ID'ye göre tek bir cari kartın detay bilgisini getirir.",
   },
-  // ✅ /api/Cari/{id} PUT
+  // ✏️ /api/Cari/{id} PUT
   {
     path: "/api/Cari/{id}",
     method: "put",
@@ -76,7 +76,7 @@ export const WHITELISTED_ENDPOINTS: EndpointConfig[] = [
       "Güncellenecek alanları 'body' parametresi olarak JSON string formatında gönderin. " +
       "Örnek: '{\"Adi\":\"Yeni Ad\", \"Telefon\":\"05001234567\"}'",
   },
-  // ✅ /api/Cari/{id} DELETE
+  // ❌ /api/Cari/{id} DELETE
   {
     path: "/api/Cari/{id}",
     method: "delete",
@@ -85,7 +85,7 @@ export const WHITELISTED_ENDPOINTS: EndpointConfig[] = [
       "Belirtilen ID'ye sahip cari kaydı için ERP API'sine istek gönderir. " +
       "İşlem sonucunda API'den dönen yanıt kullanıcıya iletilir.",
   },
-  // ✅ /api/Cari GET
+  // 🔍 /api/Cari GET
   {
     path: "/api/Cari",
     method: "get",
@@ -96,7 +96,7 @@ export const WHITELISTED_ENDPOINTS: EndpointConfig[] = [
 
   // ─── STOK ────────────────────────────────────────────────────────────────────
 
-  // ✅ /api/StokHareketleri GET
+  // 🔍 /api/StokHareketleri GET
   {
     path: "/api/StokHareketleri",
     method: "get",
@@ -104,7 +104,7 @@ export const WHITELISTED_ENDPOINTS: EndpointConfig[] = [
     description:
       "ERP sisteminden stok (ürün) hareketlerini listeler. Ürün giriş-çıkışları, depo transferleri ve envanter geçmişi takibi için kullanılır.",
   },
-  // ✅ /api/StokHareketleri/Pivot GET
+  // 🔍 /api/StokHareketleri/Pivot GET
   {
     path: "/api/StokHareketleri/Pivot",
     method: "get",
@@ -112,7 +112,7 @@ export const WHITELISTED_ENDPOINTS: EndpointConfig[] = [
     description:
       "ERP sisteminden stok hareketlerini pivot (özet/çapraz tablo) formatında getirir.",
   },
-  // ✅ /api/Stok GET
+  // 🔍 /api/Stok GET
   {
     path: "/api/Stok",
     method: "get",
@@ -120,7 +120,7 @@ export const WHITELISTED_ENDPOINTS: EndpointConfig[] = [
     description:
       "ERP sistemindeki stok (ürün) kartlarını listeler. Ürün arama, filtreleme ve envanter inceleme için kullanılır.",
   },
-  // ✅ /api/Stok/MinListe GET
+  // 🔍 /api/Stok/MinListe GET
   {
     path: "/api/Stok/MinListe",
     method: "get",
@@ -128,7 +128,7 @@ export const WHITELISTED_ENDPOINTS: EndpointConfig[] = [
     description:
       "Minimum stok seviyesinin altına düşmüş ürünleri listeler. Kritik stok takibi, yenileme planlaması ve uyarı raporları için kullanılır.",
   },
-  // ✅ /api/Stok/StokMiktarListe GET
+  // 🔍 /api/Stok/StokMiktarListe GET
   {
     path: "/api/Stok/StokMiktarListe",
     method: "get",
@@ -139,7 +139,7 @@ export const WHITELISTED_ENDPOINTS: EndpointConfig[] = [
       "ERP API'den dönen stok miktar listesi kullanıcıya iletilir.",
   },
 
-  // ✅ /api/Stok/{id} GET
+  // 🔍 /api/Stok/{id} GET
   {
     path: "/api/Stok/{id}",
     method: "get",
@@ -149,7 +149,7 @@ export const WHITELISTED_ENDPOINTS: EndpointConfig[] = [
       "⚠️ Buradaki 'id' bir STOK kartı ID'sidir; cari, sipariş veya başka bir kayıt ID'siyle karıştırılmamalıdır. " +
       "ERP API'den dönen stok bilgisi kullanıcıya iletilir.",
   },
-  // ✅ /api/Stok/{id} PUT
+  // ✏️ /api/Stok/{id} PUT
   {
     path: "/api/Stok/{id}",
     method: "put",
@@ -160,7 +160,7 @@ export const WHITELISTED_ENDPOINTS: EndpointConfig[] = [
       "Güncellenecek alanları 'body' parametresi olarak JSON string formatında gönderin. " +
       "Örnek: '{\"Adi\":\"Yeni Stok\", \"Barkod\":\"1234567890\"}'",
   },
-  // ✅ /api/Stok/{id} DELETE
+  // ❌ /api/Stok/{id} DELETE
   {
     path: "/api/Stok/{id}",
     method: "delete",
@@ -173,7 +173,7 @@ export const WHITELISTED_ENDPOINTS: EndpointConfig[] = [
       "İşlem sonucu kullanıcıya iletilir.",
   },
 
-  // ✅ /api/Stok POST
+  // ➕ /api/Stok POST
   {
     path: "/api/Stok",
     method: "post",
@@ -183,7 +183,7 @@ export const WHITELISTED_ENDPOINTS: EndpointConfig[] = [
     "Stok bilgilerini 'body' parametresi olarak JSON string formatında gönderin. " +
     "Örnek: '{\"Adi\":\"Yeni Ürün\", \"Barkod\":\"1234567890\"}'",
   },
-  // ✅ /api/Stok/List GET
+  // 🔍 /api/Stok/List GET
   {
     path: "/api/Stok/Liste",
     method: "get",
@@ -194,7 +194,7 @@ export const WHITELISTED_ENDPOINTS: EndpointConfig[] = [
     "Bu tool yalnızca özel filtreleme ve gelişmiş sorgular gerektiğinde kullanılmalıdır. " +
     "Basit listeleme için standart stok listeleme tool'u tercih edilmelidir.",
   },
-  // ✅ /api/Stok/List GET
+  // 🔍 /api/Stok/List GET
   {
   path: "/api/Stok/GrupluListe",
   method: "get",
@@ -204,8 +204,78 @@ export const WHITELISTED_ENDPOINTS: EndpointConfig[] = [
     "Kategori, tip veya diğer alanlara göre gruplanmış stok verileri getirir. " +
     "Bu tool raporlama ve analiz amaçlı kullanılmalıdır.",
   },
-
+  // 🔍 /api/Stok/{id}/OnayDurumu GET
+  {
+    path: "/api/Stok/{id}/OnayDurumu",
+    method: "get",
+    toolName: "stok_onay_durumu_getir",
+    description:
+    "Belirtilen ID'ye sahip stok kartının onay durumunu getirir. " +
+    "Onay bilgileri ve mevcut durum ERP API'den alınarak kullanıcıya iletilir.",
+  },
+  // 🔍 /api/Stok/{id}/DegisiklikGecmisi GET
+  {
+  path: "/api/Stok/{id}/DegisiklikGecmisi",
+  method: "get",
+  toolName: "stok_degisim_gecmisi_getir",
+  description:
+    "Belirtilen ID'ye sahip stok kartının değişiklik geçmişini getirir. " +
+    "Yapılan değişiklikler, eski ve yeni değerler ile birlikte listelenir. " +
+    "Bu tool audit ve geçmiş inceleme amaçlı kullanılmalıdır.",
+  },
+  // 🔍 /api/Stok/{id}/Belgeler GET
+  {
+    path: "/api/Stok/{id}/Belgeler",
+    method: "get",
+    toolName: "stok_belgeleri_getir",
+    description:
+    "Belirtilen ID'ye sahip stok kartına ait belgeleri ve dokümanları getirir. " +
+    "Dosya bilgileri ve ilişkili belgeler ERP API'den alınarak kullanıcıya iletilir.",
+  },
+  
+  // 🔍 /api/Stok/{id}/Belgeler GET
+  {
+    path: "/api/Stok/{id}/BelgeSil/{BelgeID}",
+    method: "delete",
+    toolName: "stok_belge_kaldir",
+    description:
+    "Belirtilen stok kaydına ait belgeyi kaldırmak için ERP API'ye istek gönderir. " +
+    "Bu işlem geri alınamayabilir. " +
+    "Yalnızca kullanıcı açıkça ilgili belgenin kaldırılmasını istediğinde kullanılmalıdır. " +
+    "İşlem sonucu kullanıcıya iletilir.",
+  },
+  
+  // 🔍 /api/Stok/{id}/Notlar GET
+  {
+  path: "/api/Stok/{id}/Notlar",
+  method: "get",
+  toolName: "stok_notlarini_getir",
+  description:
+    "Belirtilen ID'ye sahip stok kartına ait notları getirir. " +
+    "Kayda eklenmiş açıklama, yorum ve serbest metin notları ERP API'den alınarak kullanıcıya iletilir.",
+  },
+  // ➕ /api/Stok/{id}/Notlar POST
+  {
+  path: "/api/Stok/{id}/NotEkle",
+  method: "post",
+  toolName: "stok_not_ekle",
+  description:
+    "Belirtilen ID'ye sahip stok kartına yeni bir not ekler. " +
+    "Not içeriği ERP API'ye gönderilir ve işlem sonucu kullanıcıya iletilir.",
+  },
+  // ❌ /api/Stok/{id}/Notlar DELETE
+  {
+  path: "/api/Stok/{id}/NotSil/{NotID}",
+  method: "delete",
+  toolName: "stok_not_kaldir",
+  description:
+    "Belirtilen stok kaydına ait notu kaldırmak için ERP API'ye istek gönderir. " +
+    "Bu işlem geri alınamayabilir. " +
+    "Yalnızca kullanıcı açıkça ilgili notun kaldırılmasını istediğinde kullanılmalıdır. " +
+    "İşlem sonucu kullanıcıya iletilir.",
+  },
 ];
+
 
 /** Swagger JSON'un indirileceği URL */
 export const SWAGGER_URL =

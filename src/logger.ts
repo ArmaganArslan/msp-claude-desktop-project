@@ -1,12 +1,29 @@
 /**
- * ─── MCP Logger ───────────────────────────────────────────────────────────────
+ * ─── MCP Logger ─────────────────────────────────────────────────────────────────
  *
  * MCP sunucusu stdio üzerinden çalıştığı için console.log() kesinlikle
  * kullanılamaz — stdout'a yazan her şey MCP protokolünü bozar.
  *
- * Bu modül tüm logları process.stderr'e yazar.
- * Claude Desktop'ın MCP log panelinde veya terminalde görünür.
+ * Bu modül tüm logları iki yere yazar:
+ *   1. process.stderr  → Claude Desktop MCP log paneli
+ *   2. logs/requests.log → Terminalde canlı izlenebilir dosya
  */
+import * as fs from "fs";
+import * as path from "path";
+import { fileURLToPath } from "url";
+
+// Proje kök dizini
+const PROJECT_ROOT = path.resolve(
+  path.dirname(fileURLToPath(import.meta.url)),
+  ".."
+);
+const LOG_DIR  = path.join(PROJECT_ROOT, "logs");
+const LOG_FILE = path.join(LOG_DIR, "requests.log");
+
+// Log dizini yoksa oluştur
+if (!fs.existsSync(LOG_DIR)) {
+  fs.mkdirSync(LOG_DIR, { recursive: true });
+}
 
 // ─── ANSI Renk Kodları ────────────────────────────────────────────────────────
 const C = {
@@ -18,33 +35,37 @@ const C = {
   yellow: "\x1b[33m",
   red:    "\x1b[31m",
   blue:   "\x1b[34m",
+  magenta:"\x1b[35m",
   gray:   "\x1b[90m",
+  bgBlack: "\x1b[40m",
 };
 
 function timestamp(): string {
-  return new Date().toISOString().replace("T", " ").slice(0, 23);
+  const d = new Date();
+  return d.toLocaleTimeString("tr-TR", { hour12: false });
 }
 
+/** ANSI escape kodlarını temizler (dosyaya sade metin yazılır) */
+function stripAnsi(str: string): string {
+  return str.replace(/\x1b\[[0-9;]*m/g, "");
+}
+
+/** stderr'e RENKLİ, dosyaya SAF metin yazar */
 function write(line: string): void {
   process.stderr.write(line + "\n");
+  try {
+    fs.appendFileSync(LOG_FILE, stripAnsi(line) + "\n");
+  } catch {
+    //
+  }
 }
 
 // ─── Log Seviyeleri ───────────────────────────────────────────────────────────
 
-/** Genel bilgi logu */
 export function logInfo(message: string): void {
-  write(`${C.gray}[${timestamp()}]${C.reset} ${C.blue}ℹ INFO   ${C.reset} ${message}`);
+  write(`\n${C.gray}[${timestamp()}]${C.reset} ${C.blue}INFO${C.reset}  ${message}`);
 }
 
-/**
- * Claude bir tool'u çağırdığında → istek gönderilmeden ÖNCE loglanır.
- *
- * @param toolName  - MCP tool adı (örn: "stok_listele")
- * @param method    - HTTP metodu (GET, POST, PUT, DELETE)
- * @param path      - Çözülmüş path (örn: "/api/Stok/123")
- * @param params    - Query parametreleri objesi
- * @param body      - PUT/POST body (varsa)
- */
 export function logRequest(
   toolName: string,
   method: string,
@@ -58,35 +79,24 @@ export function logRequest(
     method === "PUT"    ? C.yellow :
     method === "DELETE" ? C.red    : C.reset;
 
+  write(`\n${C.gray}──────────────────────────────────────────────────────────────────────────${C.reset}`);
   write(
     `${C.gray}[${timestamp()}]${C.reset} ` +
-    `${C.bold}${methodColor}⬆ ${method.padEnd(6)}${C.reset} ` +
-    `${C.bold}${path}${C.reset}` +
-    `${C.gray} ← tool: ${toolName}${C.reset}`
+    `${C.bold}${methodColor}${method.padEnd(7)}${C.reset} ` +
+    `${C.bold}${path}${C.reset}`
   );
+  write(`${C.gray}               Tool: ${C.magenta}${toolName}${C.reset}`);
 
   if (params && Object.keys(params).length > 0) {
-    write(
-      `${C.gray}             query : ${JSON.stringify(params)}${C.reset}`
-    );
+    write(`${C.gray}               Query: ${C.reset}${JSON.stringify(params, null, 2).replace(/\n/g, "\n               ")}`);
   }
 
   if (body !== undefined) {
-    const bodyStr = typeof body === "string" ? body : JSON.stringify(body);
-    write(
-      `${C.gray}             body  : ${bodyStr.slice(0, 300)}${bodyStr.length > 300 ? "…" : ""}${C.reset}`
-    );
+    const bodyStr = typeof body === "string" ? body : JSON.stringify(body, null, 2);
+    write(`${C.gray}               Body:  ${C.reset}${bodyStr.replace(/\n/g, "\n               ")}`);
   }
 }
 
-/**
- * API'den yanıt döndüğünde loglanır.
- *
- * @param path       - Endpoint path'i
- * @param statusCode - HTTP durum kodu
- * @param recordCount - Dönen kayıt sayısı (tahmin)
- * @param durationMs - İstek süresi (ms)
- */
 export function logResponse(
   path: string,
   statusCode: number,
@@ -94,25 +104,17 @@ export function logResponse(
   durationMs: number
 ): void {
   const ok = statusCode >= 200 && statusCode < 300;
-  const icon = ok ? `${C.green}✔` : `${C.yellow}⚠`;
+  const statusColor = ok ? C.green : C.yellow;
+  const icon = ok ? "OK" : "!!";
 
   write(
     `${C.gray}[${timestamp()}]${C.reset} ` +
-    `${icon} ${C.bold}${statusCode}${C.reset}    ` +
-    `${C.gray}${path}${C.reset}` +
-    `  kayıt: ${C.bold}${recordCount}${C.reset}` +
-    `  ${C.dim}${durationMs}ms${C.reset}`
+    `${statusColor}${icon} ${statusCode}${C.reset}  ` +
+    `${C.gray}Süre: ${C.reset}${durationMs}ms  ` +
+    `${C.gray}Kayıt: ${C.reset}${recordCount}`
   );
 }
 
-/**
- * Hata oluştuğunda loglanır.
- *
- * @param path       - Endpoint path'i
- * @param statusCode - HTTP durum kodu (yoksa "N/A")
- * @param message    - Hata mesajı
- * @param durationMs - İstek süresi (ms)
- */
 export function logError(
   path: string,
   statusCode: number | string,
@@ -121,9 +123,8 @@ export function logError(
 ): void {
   write(
     `${C.gray}[${timestamp()}]${C.reset} ` +
-    `${C.red}✖ ${statusCode}    ` +
-    `${path}${C.reset}` +
-    `  ${C.dim}${durationMs}ms${C.reset}`
+    `${C.red}ERROR ${statusCode}${C.reset} ` +
+    `${C.gray}Süre: ${C.reset}${durationMs}ms`
   );
-  write(`${C.red}             hata  : ${message.slice(0, 500)}${C.reset}`);
+  write(`${C.red}               Hata:  ${C.reset}${message}`);
 }

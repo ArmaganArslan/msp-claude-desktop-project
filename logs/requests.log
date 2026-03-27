@@ -1,0 +1,5 @@
+[2026-03-27 09:36:52.765] ✖ N/A    /api/Cari/{id}  0ms
+             hata  : ERP_BEARER_TOKEN bulunamadı. Lütfen .env dosyasında ERP_BEARER_TOKEN=tokeniniz şeklinde tanımlayın. Mevcut değer: 'undefined'
+[2026-03-27 09:37:42.194] ⬆ GET    /api/Cari/1917 ← tool: cari_getir
+[2026-03-27 09:37:42.582] ✖ 401    /api/Cari/{id}  391ms
+             hata  : {"error":"invalid_token","error_description":"Token is invalid, expired, or revoked"}
