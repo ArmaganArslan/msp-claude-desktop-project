@@ -3,27 +3,35 @@ import * as fs from "fs";
 import * as path from "path";
 
 /**
- * ─── Swagger Tip Tanımları ────────────────────────────────────────────────────
- * Swagger/OpenAPI 2.0 (Swashbuckle) formatındaki temel yapılar.
- * AARO ERP'nin ürettiği swagger.json bu formattadır.
+ * Swagger/OpenAPI 2.0 şema tipi
  */
+export interface SwaggerSchema {
+  $ref?: string;
+  type?: string;
+  format?: string;
+  description?: string;
+  enum?: (string | number)[];
+  items?: SwaggerSchema;
+  required?: string[];
+  properties?: Record<string, SwaggerSchema>;
+  additionalProperties?: SwaggerSchema | boolean;
+}
 
+/**
+ * Swagger parametresi
+ */
 export interface SwaggerParameter {
   name: string;
   in: "query" | "path" | "body" | "header" | "formData";
   required?: boolean;
-  type?: string;           // "string" | "integer" | "number" | "boolean" | "array"
-  format?: string;         // "int32" | "int64" | "float" | "double" | "date-time" vb.
+  type?: string;
+  format?: string;
   description?: string;
   minimum?: number;
   maximum?: number;
   enum?: (string | number)[];
   items?: { type?: string };
-  schema?: {
-    $ref?: string;
-    type?: string;
-    properties?: Record<string, SwaggerParameter>;
-  };
+  schema?: SwaggerSchema;
 }
 
 export interface SwaggerOperation {
@@ -40,7 +48,7 @@ export interface SwaggerDoc {
   openapi?: string;
   info?: { title?: string; version?: string };
   paths: Record<string, Record<string, SwaggerOperation>>;
-  definitions?: Record<string, unknown>;
+  definitions?: Record<string, SwaggerSchema>;
 }
 
 /**
@@ -48,31 +56,32 @@ export interface SwaggerDoc {
  * Başarısız olursa hata fırlatır.
  */
 export async function loadSwaggerDoc(urlOrPath: string): Promise<SwaggerDoc> {
-  // Yerel dosya yolu mu yoksa HTTP URL mi?
   const isLocalFile =
     !urlOrPath.startsWith("http://") && !urlOrPath.startsWith("https://");
 
   if (isLocalFile) {
-    // Yerel dosyadan oku
     const absolutePath = path.resolve(urlOrPath);
-    process.stderr.write(`📂 Swagger yerel dosyadan yükleniyor: ${absolutePath}\n`);
+    process.stderr.write(
+      `📂 Swagger yerel dosyadan yükleniyor: ${absolutePath}\n`,
+    );
 
     const raw = fs.readFileSync(absolutePath, "utf-8");
     const doc: SwaggerDoc = JSON.parse(raw);
 
     if (!doc || !doc.paths) {
-      throw new Error(`Geçersiz Swagger belgesi: 'paths' alanı bulunamadı. (${absolutePath})`);
+      throw new Error(
+        `Geçersiz Swagger belgesi: 'paths' alanı bulunamadı. (${absolutePath})`,
+      );
     }
 
     const endpointSayisi = Object.keys(doc.paths).length;
     process.stderr.write(
-      `✅ Swagger yüklendi (yerel). Toplam endpoint sayısı: ${endpointSayisi}\n`
+      `✅ Swagger yüklendi (yerel). Toplam endpoint sayısı: ${endpointSayisi}\n`,
     );
 
     return doc;
   }
 
-  // Uzak URL'den indir
   process.stderr.write(`📥 Swagger uzak sunucudan yükleniyor: ${urlOrPath}\n`);
 
   try {
@@ -89,7 +98,7 @@ export async function loadSwaggerDoc(urlOrPath: string): Promise<SwaggerDoc> {
 
     const endpointSayisi = Object.keys(doc.paths).length;
     process.stderr.write(
-      `✅ Swagger yüklendi (uzak). Toplam endpoint sayısı: ${endpointSayisi}\n`
+      `✅ Swagger yüklendi (uzak). Toplam endpoint sayısı: ${endpointSayisi}\n`,
     );
 
     return doc;
@@ -106,7 +115,7 @@ export async function loadSwaggerDoc(urlOrPath: string): Promise<SwaggerDoc> {
 export function findOperation(
   doc: SwaggerDoc,
   path: string,
-  method: string
+  method: string,
 ): SwaggerOperation | null {
   const pathItem = doc.paths[path];
   if (!pathItem) return null;

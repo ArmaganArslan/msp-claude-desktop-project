@@ -5,147 +5,224 @@ import {
   SwaggerDoc,
   SwaggerOperation,
   SwaggerParameter,
+  SwaggerSchema,
   findOperation,
 } from "./loader.js";
-import { EndpointConfig } from "./config.js";
+import type { EndpointConfig } from "./types.js";
 import { logRequest, logResponse, logError } from "../logger.js";
 
-// Swagger'dan gelen parametre bilgisini alıp
-// bunu Zod şemasına (validation schema) dönüştüren fonksiyon.
-// Amaç: Swagger parametrelerini MCP tool input şemasına çevirmek.
 function swaggerParamToZod(param: SwaggerParameter): z.ZodTypeAny {
-  // Swagger parametresinin type bilgisini alıyoruz.
-  // Eğer type yoksa varsayılan olarak "string" kabul ediyoruz.
   const type = param.type?.toLowerCase() ?? "string";
-
-  // Format bilgisini alıyoruz (int32, int64, date vb.).
-  // Yoksa boş string.
   const format = param.format?.toLowerCase() ?? "";
-
-  // Açıklama varsa onu kullanıyoruz.
-  // Yoksa parametre adını açıklama olarak kullanıyoruz.
   const desc = param.description ?? param.name;
 
-  // Oluşturulacak Zod şemasını tutacak değişken
   let schema: z.ZodTypeAny;
 
-  // Eğer parametre tipi number veya integer ise
   if (type === "integer" || type === "number") {
-    // Temel number schema oluştur
     let numSchema = z.number();
 
-    // Eğer integer ise veya format int32/int64 ise
-    // sadece tam sayı kabul edecek şekilde ayarla
     if (type === "integer" || format === "int32" || format === "int64") {
       numSchema = numSchema.int();
     }
 
-    // Minimum değer varsa Zod min kuralını ekle
     if (param.minimum !== undefined) {
       numSchema = numSchema.min(param.minimum);
     }
 
-    // Maximum değer varsa Zod max kuralını ekle
     if (param.maximum !== undefined) {
       numSchema = numSchema.max(param.maximum);
     }
 
-    // Son oluşturulan number schema'yı ana schema'ya ata
     schema = numSchema;
-
-    // Eğer parametre boolean ise
   } else if (type === "boolean") {
-    // Boolean Zod schema oluştur
     schema = z.boolean();
   } else {
-    // Diğer tüm durumlar string olarak kabul edilir
-
-    // Eğer Swagger parametresinde enum varsa
     if (param.enum && param.enum.length > 0) {
-      // Enum değerlerini string'e çevir
-      // Zod enum için tuple formatı gerekiyor
       const strEnums = param.enum.map(String) as [string, ...string[]];
-
-      // Enum değerlerini kabul eden Zod enum schema oluştur
       schema = z.enum(strEnums);
     } else {
-      // Enum yoksa normal string kabul eden schema oluştur
       schema = z.string();
     }
   }
 
-  // Schema'ya açıklama ekliyoruz.
-  // Bu açıklama MCP tool input'unda Claude'a gösterilir.
-  schema = (schema as z.ZodString).describe(
-    `${desc}${param.required ? " (zorunlu)" : " (opsiyonel)"}`
+  schema = schema.describe(
+    `${desc}${param.required ? " (zorunlu)" : " (opsiyonel)"}`,
   );
 
-  // Eğer parametre zorunlu değilse
-  // schema'yı optional yapıyoruz
   if (!param.required) {
     schema = schema.optional();
   }
 
-  // Son oluşturulan Zod schema'yı döndür
   return schema;
 }
 
-// Swagger'dan gelen bir operation (endpoint tanımı) içindeki parametreleri
-// Zod şemasına dönüştürerek MCP tool input shape'i oluşturan fonksiyon.
-// Amaç: Swagger parametrelerinden otomatik Zod input objesi üretmek.
-function buildZodShape(
+function getBodyParameter(
   operation: SwaggerOperation,
-  method: string
+): SwaggerParameter | undefined {
+  return (operation.parameters ?? []).find((p) => p.in === "body");
+}
+
+function resolveRef(doc: SwaggerDoc, ref: string): SwaggerSchema | null {
+  if (!ref.startsWith("#/definitions/")) return null;
+
+  const key = ref.replace("#/definitions/", "");
+  const definition = doc.definitions?.[key];
+
+  return definition ?? null;
+}
+
+function schemaToZod(
+  doc: SwaggerDoc,
+  schema?: SwaggerSchema,
+  fallbackName = "body",
+): z.ZodTypeAny {
+  if (!schema) {
+    return z
+      .string()
+      .describe(`${fallbackName} (fallback string body)`)
+      .optional();
+  }
+
+  if (schema.$ref) {
+    const resolved = resolveRef(doc, schema.$ref);
+    if (!resolved) {
+      return z
+        .string()
+        .describe(`${fallbackName} ($ref çözülemedi, fallback string body)`);
+    }
+    return schemaToZod(doc, resolved, fallbackName);
+  }
+
+  const type = schema.type?.toLowerCase();
+
+  if (!type && schema.properties) {
+    const shape: Record<string, z.ZodTypeAny> = {};
+    const requiredSet = new Set(schema.required ?? []);
+
+    for (const [propName, propSchema] of Object.entries(schema.properties)) {
+      let propZod = schemaToZod(doc, propSchema, propName);
+
+      if (!requiredSet.has(propName)) {
+        propZod = propZod.optional();
+      }
+
+      shape[propName] = propZod.describe(
+        `${propSchema.description ?? propName}${requiredSet.has(propName) ? " (zorunlu)" : " (opsiyonel)"}`,
+      );
+    }
+
+    return z.object(shape);
+  }
+
+  if (type === "object") {
+    const shape: Record<string, z.ZodTypeAny> = {};
+    const requiredSet = new Set(schema.required ?? []);
+
+    for (const [propName, propSchema] of Object.entries(
+      schema.properties ?? {},
+    )) {
+      let propZod = schemaToZod(doc, propSchema, propName);
+
+      if (!requiredSet.has(propName)) {
+        propZod = propZod.optional();
+      }
+
+      shape[propName] = propZod.describe(
+        `${propSchema.description ?? propName}${requiredSet.has(propName) ? " (zorunlu)" : " (opsiyonel)"}`,
+      );
+    }
+
+    return z.object(shape);
+  }
+
+  if (type === "array") {
+    const itemSchema = schema.items
+      ? schemaToZod(doc, schema.items, `${fallbackName}_item`)
+      : z.any();
+
+    return z.array(itemSchema);
+  }
+
+  if (type === "integer" || type === "number") {
+    let numSchema = z.number();
+
+    if (type === "integer") {
+      numSchema = numSchema.int();
+    }
+
+    return numSchema;
+  }
+
+  if (type === "boolean") {
+    return z.boolean();
+  }
+
+  if (schema.enum && schema.enum.length > 0) {
+    const strEnums = schema.enum.map(String) as [string, ...string[]];
+    return z.enum(strEnums);
+  }
+
+  return z.string();
+}
+
+function buildZodShape(
+  doc: SwaggerDoc,
+  operation: SwaggerOperation,
+  method: string,
 ): Record<string, z.ZodTypeAny> {
   const shape: Record<string, z.ZodTypeAny> = {
-    // Her endpoint için ortak: kullanıcı isterse manuel token gönderebilir.
     token: z
       .string()
       .optional()
       .describe(
-        "Bearer token. Girilmezse .env'deki ERP_BEARER_TOKEN kullanılır."
+        "Bearer token. Girilmezse .env'deki ERP_BEARER_TOKEN kullanılır.",
       ),
   };
 
   const params = operation.parameters ?? [];
+
   for (const param of params) {
-    // query ve path parametrelerini işle
     if (param.in !== "query" && param.in !== "path") continue;
 
     const safeKey = param.name;
     try {
       shape[safeKey] = swaggerParamToZod(param);
     } catch {
-      shape[safeKey] = z.string().optional().describe(param.description ?? safeKey);
+      shape[safeKey] = z
+        .string()
+        .optional()
+        .describe(param.description ?? safeKey);
     }
   }
 
-  // PUT ve POST metodunda body parametresi ekleniyor.
-  // Swagger'daki body schema genellikle $ref ile karmaşık bir model olduğundan
-  // Claude'un kolayca doldurabileceği JSON string olarak kabul ediyoruz.
   if (method === "put" || method === "post") {
-    shape["body"] = z
-      .string()
-      .describe(
-        "Gönderilecek alanları içeren JSON string. " +
-        "Örnek: '{\"Adi\":\"Yeni Ad\", \"Telefon\":\"05001234567\"}'"
-      );
+    const bodyParam = getBodyParameter(operation);
+
+    if (bodyParam?.schema) {
+      try {
+        let bodyZod = schemaToZod(doc, bodyParam.schema, bodyParam.name);
+
+        if (!bodyParam.required) {
+          bodyZod = bodyZod.optional();
+        }
+
+        shape[bodyParam.name] = bodyZod.describe(
+          `${bodyParam.description ?? bodyParam.name}${bodyParam.required ? " (zorunlu)" : " (opsiyonel)"}`,
+        );
+      } catch {
+        shape[bodyParam.name] = z
+          .string()
+          .describe(
+            `${bodyParam.name} için fallback JSON string body. Örnek: '{"Adi":"Yeni Ad"}'`,
+          );
+      }
+    }
   }
 
   return shape;
 }
 
-// Path içindeki {id}, {cariId} gibi alanları
-// tool input içinden alıp gerçek değere çevirir.
-//
-// Örnek:
-// path  = "/api/Cari/{id}"
-// input = { id: 123 }
-// sonuç = "/api/Cari/123"
-function buildPathParams(
-  path: string,
-  input: Record<string, unknown>
-): string {
+function buildPathParams(path: string, input: Record<string, unknown>): string {
   return path.replace(/{(.*?)}/g, (_, key) => {
     const value = input[key];
 
@@ -157,219 +234,201 @@ function buildPathParams(
   });
 }
 
-// MCP tool'dan gelen input parametrelerini alıp
-// ERP API'ye gönderilecek query parametrelerini hazırlayan fonksiyon.
-//
-// Amaç:
-// Claude → MCP Tool Input → API Query Params dönüşümünü yapmak
 function buildRequestParams(
   input: Record<string, unknown>,
-  path: string
+  path: string,
+  bodyParamName?: string,
 ): Record<string, string | number | boolean> {
-  // API'ye gönderilecek parametreleri tutacak obje.
   const params: Record<string, string | number | boolean> = {};
 
-  // Path içindeki parametre adlarını çıkarıyoruz.
-  // Örn: "/api/Cari/{id}" -> ["id"]
   const pathParamNames = Array.from(path.matchAll(/{(.*?)}/g)).map(
-    (match) => match[1]
+    (match) => match[1],
   );
 
-  // Tool input objesindeki tüm key-value çiftlerini dolaşıyoruz
   for (const [key, value] of Object.entries(input)) {
-    // token query param'a gitmez
     if (key === "token") continue;
-
-    // path içinde kullanılan parametre query'ye tekrar eklenmez
+    if (bodyParamName && key === bodyParamName) continue;
     if (pathParamNames.includes(key)) continue;
-
-    // boş değerleri query'ye gönderme
     if (value === undefined || value === null || value === "") continue;
 
-    // geçerli değerleri params objesine ekle
-    params[key] = value as string | number | boolean;
+    if (
+      typeof value === "string" ||
+      typeof value === "number" ||
+      typeof value === "boolean"
+    ) {
+      params[key] = value;
+    }
   }
 
   return params;
 }
 
-/**
- * ─── Ana Fonksiyon: Dinamik Tool Kayıt ───────────────────────────────────────
- *
- * Beyaz listedeki endpoint'leri teker teker Swagger doc'tan bulur,
- * Zod şemasını otomatik üretir ve MCP server'a tool olarak kaydeder.
- *
- * @param server  - MCP server instance
- * @param doc     - Swagger JSON dökümanı
- * @param configs - Kullanmak istediğimiz endpoint'lerin whitelist konfigürasyonu
- */
 export function registerSwaggerTools(
   server: McpServer,
   doc: SwaggerDoc,
-  configs: EndpointConfig[]
+  configs: EndpointConfig[],
 ): void {
-  // Kaç tool başarıyla kaydedildi onu saymak için sayaç
   let basariSayisi = 0;
-
-  // Kaç endpoint swagger'da bulunamadı ya da kaydedilemedi onu saymak için sayaç
   let hataSayisi = 0;
 
-  // Whitelist'teki her endpoint config'ini tek tek dolaşıyoruz
   for (const config of configs) {
-    // İlgili endpoint'i swagger dokümanı içinde bulmaya çalışıyoruz
     const operation = findOperation(doc, config.path, config.method);
 
-    // Eğer swagger içinde bu endpoint yoksa
     if (!operation) {
       process.stderr.write(
-        `⚠️  Bulunamadı: ${config.method.toUpperCase()} ${config.path} (swagger'da yok, atlanıyor)\n`
+        `⚠️  Bulunamadı: ${config.method.toUpperCase()} ${config.path} (swagger'da yok, atlanıyor)\n`,
       );
-
       hataSayisi++;
       continue;
     }
 
-    // Tool açıklamasını belirliyoruz
     const toolDescription =
       config.description ||
       operation.summary ||
       operation.description ||
       `${config.path} endpoint'ini sorgular.`;
 
-    // Swagger operation içindeki parametrelerden Zod input schema üretiyoruz
-    const zodShape = buildZodShape(operation, config.method);
-
-    // Closure içinde kullanmak için path'i ayrı değişkende tutuyoruz
+    const zodShape = buildZodShape(doc, operation, config.method);
     const endpointPath = config.path;
+    const bodyParam = getBodyParameter(operation);
+    const bodyParamName = bodyParam?.name;
 
-    // MCP tool'unu server'a kaydediyoruz
-    server.tool(
-      config.toolName,
-      toolDescription,
-      zodShape,
+    server.tool(config.toolName, toolDescription, zodShape, async (input) => {
+      const startTime = Date.now();
 
-      async (input) => {
-        const startTime = Date.now();
-        try {
-          // Eğer kullanıcı input içinde token gönderirse onu al
+      try {
+        const token = typeof input.token === "string" ? input.token : undefined;
+        const client = createErpClient(token);
 
-          const token = typeof input.token === "string" ? input.token : undefined;
+        const resolvedPath = buildPathParams(
+          endpointPath,
+          input as Record<string, unknown>,
+        );
 
-          // ERP API client'ını oluştur
-          const client = createErpClient(token);
+        const params = buildRequestParams(
+          input as Record<string, unknown>,
+          endpointPath,
+          bodyParamName,
+        );
 
-          // Path parametrelerini URL içine yerleştir
-          const resolvedPath = buildPathParams(
-            endpointPath,
-            input as Record<string, unknown>
-          );
+        const rawBody =
+          bodyParamName !== undefined
+            ? (input as Record<string, unknown>)[bodyParamName]
+            : undefined;
 
-          // Query parametrelerini hazırla
-          const params = buildRequestParams(
-            input as Record<string, unknown>,
-            endpointPath
-          );
+        logRequest(
+          config.toolName,
+          config.method.toUpperCase(),
+          resolvedPath,
+          Object.keys(params).length > 0 ? params : undefined,
+          rawBody,
+        );
 
-          // İstek logunu yaz
-          const rawBody = (input as Record<string, unknown>)["body"];
-          logRequest(
-            config.toolName,
-            config.method.toUpperCase(),
-            resolvedPath,
-            Object.keys(params).length > 0 ? params : undefined,
-            (config.method === "put" || config.method === "post") ? rawBody : undefined
-          );
+        let response;
 
-          // Method'a göre doğru HTTP isteğini at
-          let response;
-          if (config.method === "put" || config.method === "post") {
-            // Body JSON string'i parse edip gönder
-            const rawBody = (input as Record<string, unknown>)["body"];
-            if (!rawBody) {
-              throw new Error(`${config.method.toUpperCase()} isteği için 'body' parametresi zorunludur.`);
+        if (config.method === "put" || config.method === "post") {
+          if (bodyParamName) {
+            if (rawBody === undefined) {
+              throw new Error(
+                `${config.method.toUpperCase()} isteği için '${bodyParamName}' parametresi zorunludur.`,
+              );
             }
-            let parsedBody: unknown;
-            try {
-              parsedBody = typeof rawBody === "string" ? JSON.parse(rawBody) : rawBody;
-            } catch {
-              throw new Error(`'body' parametresi geçerli bir JSON değil: ${rawBody}`);
+
+            let parsedBody: unknown = rawBody;
+
+            if (typeof rawBody === "string") {
+              try {
+                parsedBody = JSON.parse(rawBody);
+              } catch {
+                parsedBody = rawBody;
+              }
             }
+
             if (config.method === "post") {
-              response = await client.post(resolvedPath, parsedBody);
+              response = await client.post(resolvedPath, parsedBody, {
+                params,
+              });
             } else {
-              response = await client.put(resolvedPath, parsedBody);
+              response = await client.put(resolvedPath, parsedBody, { params });
             }
-          } else if (config.method === "delete") {
-            response = await client.delete(resolvedPath);
           } else {
-            response = await client.get(resolvedPath, { params });
+            if (config.method === "post") {
+              response = await client.post(resolvedPath, null, { params });
+            } else {
+              response = await client.put(resolvedPath, null, { params });
+            }
           }
-
-          // Dönen response body
-          const data = response.data;
-
-          // Dönen veri içindeki kayıt sayısını tahmin etmeye çalışıyoruz
-          const kayitSayisi = Array.isArray(data?.sonuc)
-            ? data.sonuc.length
-            : Array.isArray(data)
-              ? data.length
-              : "?";
-
-          // Yanıt logunu yaz
-          logResponse(resolvedPath, response.status ?? 200, kayitSayisi, Date.now() - startTime);
-
-          return {
-            content: [
-              {
-                type: "text" as const,
-                text:
-                  `✅ ${resolvedPath} başarıyla sorgulandı.\n` +
-                  `📊 Dönen kayıt sayısı: ${kayitSayisi}\n\n` +
-                  JSON.stringify(data, null, 2),
-              },
-            ],
-          };
-        } catch (error: any) {
-          const mesaj =
-            error?.response?.data?.message ||
-            error?.response?.data ||
-            error?.message ||
-            "Bilinmeyen hata";
-
-          const statusKod = error?.response?.status ?? "N/A";
-
-          // Hata logunu yaz
-          logError(
-            endpointPath,
-            statusKod,
-            typeof mesaj === "string" ? mesaj : JSON.stringify(mesaj),
-            Date.now() - startTime
-          );
-
-          return {
-            isError: true,
-            content: [
-              {
-                type: "text" as const,
-                text:
-                  `❌ ${endpointPath} sorgulanamadı.\n` +
-                  `HTTP Durum: ${statusKod}\n` +
-                  `Hata: ${JSON.stringify(mesaj, null, 2)}`,
-              },
-            ],
-          };
+        } else if (config.method === "delete") {
+          response = await client.delete(resolvedPath, { params });
+        } else {
+          response = await client.get(resolvedPath, { params });
         }
+
+        const data = response.data;
+
+        const kayitSayisi = Array.isArray(data?.sonuc)
+          ? data.sonuc.length
+          : Array.isArray(data)
+            ? data.length
+            : "?";
+
+        logResponse(
+          resolvedPath,
+          response.status ?? 200,
+          kayitSayisi,
+          Date.now() - startTime,
+        );
+
+        return {
+          content: [
+            {
+              type: "text" as const,
+              text:
+                `✅ ${resolvedPath} başarıyla sorgulandı.\n` +
+                `📊 Dönen kayıt sayısı: ${kayitSayisi}\n\n` +
+                JSON.stringify(data, null, 2),
+            },
+          ],
+        };
+      } catch (error: any) {
+        const mesaj =
+          error?.response?.data?.message ||
+          error?.response?.data ||
+          error?.message ||
+          "Bilinmeyen hata";
+
+        const statusKod = error?.response?.status ?? "N/A";
+
+        logError(
+          endpointPath,
+          statusKod,
+          typeof mesaj === "string" ? mesaj : JSON.stringify(mesaj),
+          Date.now() - startTime,
+        );
+
+        return {
+          isError: true,
+          content: [
+            {
+              type: "text" as const,
+              text:
+                `❌ ${endpointPath} sorgulanamadı.\n` +
+                `HTTP Durum: ${statusKod}\n` +
+                `Hata: ${JSON.stringify(mesaj, null, 2)}`,
+            },
+          ],
+        };
       }
-    );
+    });
 
     process.stderr.write(
-      `✅ Tool kaydedildi: ${config.toolName} ← ${config.method.toUpperCase()} ${endpointPath}\n`
+      `✅ Tool kaydedildi: ${config.toolName} ← ${config.method.toUpperCase()} ${endpointPath}\n`,
     );
 
     basariSayisi++;
   }
 
   process.stderr.write(
-    `\n📋 Tool kayıt özeti: ${basariSayisi} başarılı, ${hataSayisi} başarısız.\n`
+    `\n📋 Tool kayıt özeti: ${basariSayisi} başarılı, ${hataSayisi} başarısız.\n`,
   );
 }
