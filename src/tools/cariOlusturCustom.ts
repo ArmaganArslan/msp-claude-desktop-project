@@ -15,9 +15,8 @@
 
 import { z } from "zod";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-import { getCari } from "../api/endpoints/cari/cari.js";
+import { createErpClient } from "../erp/client.js";
 import { logRequest, logResponse, logError } from "../logger.js";
-import type { AaroModullerCariKayitSadeKayitModelBody } from "../api/models/index.js";
 
 /**
  * Kullanıcının yazdığı cari tipini ERP'nin beklediği numeric ID'ye çevirir.
@@ -122,6 +121,10 @@ export function registerCariOlusturCustomTool(server: McpServer) {
       const startTime = Date.now(); // Yanıt süresini ölçmek için
 
       try {
+        // Bearer token: kullanıcı verdiyse onu, yoksa .env'dekini kullan
+        const token = input.token;
+        const client = createErpClient(token);
+
         // API'ye gönderilecek body'yi oluştur.
         // Kullanıcının yazdığı "Müşteri" → TIP_MAP ile 102001'e çevrilir.
         const body = {
@@ -178,9 +181,10 @@ export function registerCariOlusturCustomTool(server: McpServer) {
           cleanedBody,
         );
 
-        // ERP API'sine Orval üzerinden POST isteği gönder
-        const { Cari_PostPost } = getCari();
-        const responseData = await Cari_PostPost(cleanedBody as AaroModullerCariKayitSadeKayitModelBody);
+        // ERP API'sine POST isteği gönder
+        const res = await client.post("/api/Cari", cleanedBody);
+
+        const responseData = res.data;
 
         // Dönen kayıt sayısını belirle (loglama için)
         const recordCount = Array.isArray(responseData?.Model)
@@ -192,7 +196,7 @@ export function registerCariOlusturCustomTool(server: McpServer) {
         // Başarılı yanıtı logla
         logResponse(
           "/api/Cari",
-          200, // Orval success
+          res.status,
           recordCount,
           Date.now() - startTime,
         );

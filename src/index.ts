@@ -57,7 +57,9 @@ try {
 // ─── MCP & Swagger Importları ─────────────────────────────────────────────────
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { registerOrvalTools } from "./api/registerOrvalTools.js";
+import { loadSwaggerDoc } from "./swagger/loader.js";
+import { registerSwaggerTools } from "./swagger/generator.js";
+import { SWAGGER_URL, WHITELISTED_ENDPOINTS } from "./swagger/config.js";
 
 // Custom tool'lar — Swagger'ın yetersiz kaldığı veya özelleştirme
 // gerektiren durumlar için manuel yazılmış tool'lar buradan import edilir.
@@ -90,16 +92,33 @@ async function main() {
   // Swagger yüklenemese bile bu tool'lar çalışmaya devam eder.
   registerCariOlusturCustomTool(server);
 
-  // ── 2. Orval'den Otomatik Tool Keşfi ──────────────────────────────────────
-  // src/api/endpoints/ klasörü altındaki üretilmiş dosyaları tarar
-  // ve her bir API metodunu otomatik olarak bir MCP tool'una dönüştürür.
+  // ── 2. Swagger'dan Otomatik Tool Üretimi ───────────────────────────────────
+  // src/swagger/config.ts'deki SWAGGER_URL'yi kullanarak yerel swagger.json'u okur.
+  // Ardından WHITELISTED_ENDPOINTS listesindeki her endpoint için
+  // otomatik olarak bir MCP tool oluşturur ve server'a kaydeder.
+  //
+  // Yeni endpoint eklemek için:
+  //   → src/swagger/endpoints/ altındaki ilgili dosyaya EndpointConfig ekle
+  //   → Örnek: cari.ts, stok.ts, bankahesap.ts...
   try {
-    const endpointsDir = join(__dirname, "api/endpoints");
-    await registerOrvalTools(server, endpointsDir);
+    // SWAGGER_URL relative path ise __dirname'e göre mutlak path'e çevir.
+    // Claude Desktop farklı bir cwd'den başlattığında process.cwd() güvenilmez,
+    // bu yüzden __dirname kullanıyoruz.
+    // tsx src/index.ts  → __dirname = .../src/   → ../src/swagger.json = ✅
+    // node dist/index.js → __dirname = .../dist/ → ../src/swagger.json = ✅
+    // 1. config.ts'den gelen SWAGGER_URL bilgisine gidiyor:
+    const resolvedSwaggerPath =
+      SWAGGER_URL.startsWith("http://") || SWAGGER_URL.startsWith("https://")
+        ? SWAGGER_URL
+        : join(__dirname, "../src/swagger.json");
+
+    const swaggerDoc = await loadSwaggerDoc(resolvedSwaggerPath);
+    // 2. config.ts'den gelen WHITELISTED_ENDPOINTS listesine göre oluşturuyor:
+    registerSwaggerTools(server, swaggerDoc, WHITELISTED_ENDPOINTS);
   } catch (err: any) {
-    // Tool'lar yüklenemezse log yaz
+    // Swagger yüklenemezse custom tool'lar hâlâ çalışır, sadece log yaz
     process.stderr.write(
-      `❌ Orval tool'ları kaydedilemedi: ${err.message}\n`,
+      `❌ Swagger yüklenemedi, otomatik tool'lar kaydedilemedi: ${err.message}\n`,
     );
   }
 

@@ -1,20 +1,30 @@
-import { AxiosInstance } from "axios";
-import axiosInstance from "../api/axios.js";
+import axios, { AxiosInstance } from "axios";
+
+const ERP_BASE_URL = process.env.ERP_BASE_URL || "https://erp.aaro.com.tr";
 
 /**
- * ERP API istemcisini döndürür.
- * Not: Token artık src/api/axios.ts içindeki interceptor tarafından yönetiliyor.
- * Özel bir token geçilirse (custom tool'dan), o token header'a eklenebilir.
+ * Token ile ERP API istemcisi oluşturur.
+ * Her tool çağrısında token parametre olarak geçilebilir
+ * ya da .env'deki varsayılan token kullanılır.
  */
 export function createErpClient(token?: string): AxiosInstance {
-  if (token) {
-    // Eğer özel bir token geçilirse, varsayılan token yerine bunu kullanabilmesi için
-    // geçici bir header override yapılabilir.
-    // Ancak axiosInstance singleton olduğu için dikkatli olunmalı.
-    // Buradaki çözüm, manuel token geçilirse sadece o istek için geçerli olacak şekilde tools içinde yönetmektir.
-    // Veya basitçe:
-    axiosInstance.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+  const bearerToken = token || process.env.ERP_BEARER_TOKEN;
+
+  if (!bearerToken) {
+    throw new Error(
+      "ERP_BEARER_TOKEN bulunamadı. " +
+      "Lütfen .env dosyasında ERP_BEARER_TOKEN=tokeniniz şeklinde tanımlayın. " +
+      `Mevcut değer: '${process.env.ERP_BEARER_TOKEN ?? "undefined"}'`
+    );
   }
 
-  return axiosInstance;
+  return axios.create({
+    baseURL: ERP_BASE_URL,
+    headers: {
+      Authorization: `Bearer ${bearerToken}`,
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    timeout: 30000,
+  });
 }
