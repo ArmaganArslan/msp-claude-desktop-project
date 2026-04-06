@@ -10,7 +10,6 @@
     "typecheck": "tsc --noEmit",
     "logs": "powershell -Command \"[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; if (!(Test-Path logs)) { New-Item -ItemType Directory -Path logs }; if (!(Test-Path logs/requests.log)) { New-Item -ItemType File -Path logs/requests.log }; Get-Content -Path logs/requests.log -Wait -Tail 50\""
   },
-
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -26,6 +25,7 @@
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/node": "^25.4.0",
+    "orval": "^8.6.2",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }
