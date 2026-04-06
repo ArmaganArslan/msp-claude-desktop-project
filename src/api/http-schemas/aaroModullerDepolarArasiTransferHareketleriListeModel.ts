@@ -4,9 +4,9 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerDepolarArasiTransferHareketleriListeModelKartTipID } from './aaroModullerDepolarArasiTransferHareketleriListeModelKartTipID';
-import type { AaroModullerDepolarArasiTransferHareketleriListeModelOnayDurum } from './aaroModullerDepolarArasiTransferHareketleriListeModelOnayDurum';
-import type { AaroModullerDepolarArasiTransferHareketleriListeModelTipID } from './aaroModullerDepolarArasiTransferHareketleriListeModelTipID';
+import type { AaroModullerDepolarArasiTransferHareketleriListeModelKartTipID } from './aaroModullerDepolarArasiTransferHareketleriListeModelKartTipID.js';
+import type { AaroModullerDepolarArasiTransferHareketleriListeModelOnayDurum } from './aaroModullerDepolarArasiTransferHareketleriListeModelOnayDurum.js';
+import type { AaroModullerDepolarArasiTransferHareketleriListeModelTipID } from './aaroModullerDepolarArasiTransferHareketleriListeModelTipID.js';
 
 export interface AaroModullerDepolarArasiTransferHareketleriListeModel {
   KaynakDepoID?: number;

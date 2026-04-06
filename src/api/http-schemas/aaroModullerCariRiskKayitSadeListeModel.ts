@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerCariRiskKayitSadeListeModelOnayDurum } from './aaroModullerCariRiskKayitSadeListeModelOnayDurum';
+import type { AaroModullerCariRiskKayitSadeListeModelOnayDurum } from './aaroModullerCariRiskKayitSadeListeModelOnayDurum.js';
 
 export interface AaroModullerCariRiskKayitSadeListeModel {
   OnayDurum?: AaroModullerCariRiskKayitSadeListeModelOnayDurum;

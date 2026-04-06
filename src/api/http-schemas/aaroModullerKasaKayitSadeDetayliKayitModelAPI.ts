@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerKasaKayitSadeDetayliKayitModelAPITipID } from './aaroModullerKasaKayitSadeDetayliKayitModelAPITipID';
-import type { AaroModullerKasaKayitSadeKasaEntegrasyonKayitModel } from './aaroModullerKasaKayitSadeKasaEntegrasyonKayitModel';
+import type { AaroModullerKasaKayitSadeDetayliKayitModelAPITipID } from './aaroModullerKasaKayitSadeDetayliKayitModelAPITipID.js';
+import type { AaroModullerKasaKayitSadeKasaEntegrasyonKayitModel } from './aaroModullerKasaKayitSadeKasaEntegrasyonKayitModel.js';
 
 /**
  * Kasa kartı ve ilişkili entegrasyon tanımlarını (muhasebe hesapları vb.) içeren detaylı API veri modeli.

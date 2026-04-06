@@ -4,9 +4,9 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerYevmiyeFisHareketleriKayitSadeKayitModelCariHareketTabloID } from './aaroModullerYevmiyeFisHareketleriKayitSadeKayitModelCariHareketTabloID';
-import type { AaroModullerYevmiyeFisHareketleriKayitSadeKayitModelCariKartTabloID } from './aaroModullerYevmiyeFisHareketleriKayitSadeKayitModelCariKartTabloID';
-import type { AaroModullerYevmiyeFisHareketleriKayitSadeKayitModelTipID } from './aaroModullerYevmiyeFisHareketleriKayitSadeKayitModelTipID';
+import type { AaroModullerYevmiyeFisHareketleriKayitSadeKayitModelCariHareketTabloID } from './aaroModullerYevmiyeFisHareketleriKayitSadeKayitModelCariHareketTabloID.js';
+import type { AaroModullerYevmiyeFisHareketleriKayitSadeKayitModelCariKartTabloID } from './aaroModullerYevmiyeFisHareketleriKayitSadeKayitModelCariKartTabloID.js';
+import type { AaroModullerYevmiyeFisHareketleriKayitSadeKayitModelTipID } from './aaroModullerYevmiyeFisHareketleriKayitSadeKayitModelTipID.js';
 
 export interface AaroModullerYevmiyeFisHareketleriKayitSadeKayitModel {
   HareketID?: number;

@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerStokDepoMiktarKayitSadeListeModelOnayDurum } from './aaroModullerStokDepoMiktarKayitSadeListeModelOnayDurum';
+import type { AaroModullerStokDepoMiktarKayitSadeListeModelOnayDurum } from './aaroModullerStokDepoMiktarKayitSadeListeModelOnayDurum.js';
 
 export interface AaroModullerStokDepoMiktarKayitSadeListeModel {
   SubeKodu?: string;

@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroKayitSonucMesajlar } from './aaroKayitSonucMesajlar';
+import type { AaroKayitSonucMesajlar } from './aaroKayitSonucMesajlar.js';
 
 export interface AaroKayitSonuc {
   Mesajlar?: AaroKayitSonucMesajlar;

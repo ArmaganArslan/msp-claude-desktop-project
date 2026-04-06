@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerStokRafKayitSadeKayitModelEtiketKonum } from './aaroModullerStokRafKayitSadeKayitModelEtiketKonum';
+import type { AaroModullerStokRafKayitSadeKayitModelEtiketKonum } from './aaroModullerStokRafKayitSadeKayitModelEtiketKonum.js';
 
 export interface AaroModullerStokRafKayitSadeKayitModel {
   StokRafID?: number;

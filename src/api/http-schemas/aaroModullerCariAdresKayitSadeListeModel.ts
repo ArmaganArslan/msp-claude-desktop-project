@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerCariAdresKayitSadeListeModelOnayDurum } from './aaroModullerCariAdresKayitSadeListeModelOnayDurum';
-import type { AaroModullerCariAdresKayitSadeListeModelTipID } from './aaroModullerCariAdresKayitSadeListeModelTipID';
+import type { AaroModullerCariAdresKayitSadeListeModelOnayDurum } from './aaroModullerCariAdresKayitSadeListeModelOnayDurum.js';
+import type { AaroModullerCariAdresKayitSadeListeModelTipID } from './aaroModullerCariAdresKayitSadeListeModelTipID.js';
 
 export interface AaroModullerCariAdresKayitSadeListeModel {
   CariAdi?: string;

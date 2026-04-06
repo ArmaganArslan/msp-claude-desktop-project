@@ -4,9 +4,9 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerAlinanSiparisListeListeModelKartTipID } from './aaroModullerAlinanSiparisListeListeModelKartTipID';
-import type { AaroModullerAlinanSiparisListeListeModelOnayDurum } from './aaroModullerAlinanSiparisListeListeModelOnayDurum';
-import type { AaroModullerAlinanSiparisListeListeModelTipID } from './aaroModullerAlinanSiparisListeListeModelTipID';
+import type { AaroModullerAlinanSiparisListeListeModelKartTipID } from './aaroModullerAlinanSiparisListeListeModelKartTipID.js';
+import type { AaroModullerAlinanSiparisListeListeModelOnayDurum } from './aaroModullerAlinanSiparisListeListeModelOnayDurum.js';
+import type { AaroModullerAlinanSiparisListeListeModelTipID } from './aaroModullerAlinanSiparisListeListeModelTipID.js';
 
 export interface AaroModullerAlinanSiparisListeListeModel {
   UretimOrani?: number;

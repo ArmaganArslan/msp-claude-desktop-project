@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerMuhasebeKayitSadeListeModelOnayDurum } from './aaroModullerMuhasebeKayitSadeListeModelOnayDurum';
+import type { AaroModullerMuhasebeKayitSadeListeModelOnayDurum } from './aaroModullerMuhasebeKayitSadeListeModelOnayDurum.js';
 
 export interface AaroModullerMuhasebeKayitSadeListeModel {
   AnaHesapKodu?: string;

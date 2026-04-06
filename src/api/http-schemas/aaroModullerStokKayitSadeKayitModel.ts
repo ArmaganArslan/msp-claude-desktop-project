@@ -4,9 +4,9 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerStokKayitSadeKayitModelFaturaKartTuru } from './aaroModullerStokKayitSadeKayitModelFaturaKartTuru';
-import type { AaroModullerStokKayitSadeKayitModelTakipYontemi } from './aaroModullerStokKayitSadeKayitModelTakipYontemi';
-import type { AaroModullerStokKayitSadeKayitModelTipID } from './aaroModullerStokKayitSadeKayitModelTipID';
+import type { AaroModullerStokKayitSadeKayitModelFaturaKartTuru } from './aaroModullerStokKayitSadeKayitModelFaturaKartTuru.js';
+import type { AaroModullerStokKayitSadeKayitModelTakipYontemi } from './aaroModullerStokKayitSadeKayitModelTakipYontemi.js';
+import type { AaroModullerStokKayitSadeKayitModelTipID } from './aaroModullerStokKayitSadeKayitModelTipID.js';
 
 /**
  * Stok kartı kayıt işlemleri için detay veri modeli.

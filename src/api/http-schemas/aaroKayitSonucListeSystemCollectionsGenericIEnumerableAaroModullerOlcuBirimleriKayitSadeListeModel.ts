@@ -4,9 +4,9 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroKayitSonucListeSystemCollectionsGenericIEnumerableAaroModullerOlcuBirimleriKayitSadeListeModelMesajlar } from './aaroKayitSonucListeSystemCollectionsGenericIEnumerableAaroModullerOlcuBirimleriKayitSadeListeModelMesajlar';
-import type { AaroModullerOlcuBirimleriKayitSadeListeModel } from './aaroModullerOlcuBirimleriKayitSadeListeModel';
-import type { AaroSayfalandirmaBilgisi } from './aaroSayfalandirmaBilgisi';
+import type { AaroKayitSonucListeSystemCollectionsGenericIEnumerableAaroModullerOlcuBirimleriKayitSadeListeModelMesajlar } from './aaroKayitSonucListeSystemCollectionsGenericIEnumerableAaroModullerOlcuBirimleriKayitSadeListeModelMesajlar.js';
+import type { AaroModullerOlcuBirimleriKayitSadeListeModel } from './aaroModullerOlcuBirimleriKayitSadeListeModel.js';
+import type { AaroSayfalandirmaBilgisi } from './aaroSayfalandirmaBilgisi.js';
 
 export interface AaroKayitSonucListeSystemCollectionsGenericIEnumerableAaroModullerOlcuBirimleriKayitSadeListeModel {
   SayfalandirmaBilgisi?: AaroSayfalandirmaBilgisi;

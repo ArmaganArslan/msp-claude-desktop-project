@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModellerStokHareketleriVergiDetaylari } from './aaroModellerStokHareketleriVergiDetaylari';
+import type { AaroModellerStokHareketleriVergiDetaylari } from './aaroModellerStokHareketleriVergiDetaylari.js';
 
 export interface AaroMVCControllersWebApiBayiControllerBayiSiparisKalemModel {
   /** Satırın bağlı olduğu üst sipariş (Dekont) ID'si. */

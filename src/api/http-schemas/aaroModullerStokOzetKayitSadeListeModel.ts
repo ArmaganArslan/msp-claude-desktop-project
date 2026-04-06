@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerStokOzetKayitSadeListeModelFiyatDurumu } from './aaroModullerStokOzetKayitSadeListeModelFiyatDurumu';
-import type { AaroModullerStokOzetKayitSadeListeModelMiktarDurumu } from './aaroModullerStokOzetKayitSadeListeModelMiktarDurumu';
+import type { AaroModullerStokOzetKayitSadeListeModelFiyatDurumu } from './aaroModullerStokOzetKayitSadeListeModelFiyatDurumu.js';
+import type { AaroModullerStokOzetKayitSadeListeModelMiktarDurumu } from './aaroModullerStokOzetKayitSadeListeModelMiktarDurumu.js';
 
 export interface AaroModullerStokOzetKayitSadeListeModel {
   SirketKodu?: string;

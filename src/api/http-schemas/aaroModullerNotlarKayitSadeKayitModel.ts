@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerNotlarKayitSadeKayitModelTabloID } from './aaroModullerNotlarKayitSadeKayitModelTabloID';
-import type { AaroModullerNotlarKayitSadeKayitModelTipID } from './aaroModullerNotlarKayitSadeKayitModelTipID';
+import type { AaroModullerNotlarKayitSadeKayitModelTabloID } from './aaroModullerNotlarKayitSadeKayitModelTabloID.js';
+import type { AaroModullerNotlarKayitSadeKayitModelTipID } from './aaroModullerNotlarKayitSadeKayitModelTipID.js';
 
 export interface AaroModullerNotlarKayitSadeKayitModel {
   NotID?: number;

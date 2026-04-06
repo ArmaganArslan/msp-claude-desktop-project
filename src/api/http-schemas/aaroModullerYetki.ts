@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerYetkiKayitTipi } from './aaroModullerYetkiKayitTipi';
-import type { AaroModullerYetkiProgramID } from './aaroModullerYetkiProgramID';
+import type { AaroModullerYetkiKayitTipi } from './aaroModullerYetkiKayitTipi.js';
+import type { AaroModullerYetkiProgramID } from './aaroModullerYetkiProgramID.js';
 
 export interface AaroModullerYetki {
   ProgramID?: AaroModullerYetkiProgramID;

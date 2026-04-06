@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroKayitSonucSystemInt32Mesajlar } from './aaroKayitSonucSystemInt32Mesajlar';
+import type { AaroKayitSonucSystemInt32Mesajlar } from './aaroKayitSonucSystemInt32Mesajlar.js';
 
 export interface AaroKayitSonucSystemInt32 {
   Model?: number;

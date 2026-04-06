@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModellerStokHareketleriVergiDetaylari } from './aaroModellerStokHareketleriVergiDetaylari';
-import type { AaroMVCControllersWebApiStokKalemBrmFiyatTipi } from './aaroMVCControllersWebApiStokKalemBrmFiyatTipi';
+import type { AaroModellerStokHareketleriVergiDetaylari } from './aaroModellerStokHareketleriVergiDetaylari.js';
+import type { AaroMVCControllersWebApiStokKalemBrmFiyatTipi } from './aaroMVCControllersWebApiStokKalemBrmFiyatTipi.js';
 
 export interface AaroMVCControllersWebApiStokKalem {
   /** Ürünün iskontolar düşüldükten sonraki net birim alış/satış fiyatı. */

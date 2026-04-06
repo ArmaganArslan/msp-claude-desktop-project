@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerUrReceteKayitSadeListeModelOnayDurum } from './aaroModullerUrReceteKayitSadeListeModelOnayDurum';
-import type { AaroModullerUrReceteKayitSadeListeModelTipID } from './aaroModullerUrReceteKayitSadeListeModelTipID';
+import type { AaroModullerUrReceteKayitSadeListeModelOnayDurum } from './aaroModullerUrReceteKayitSadeListeModelOnayDurum.js';
+import type { AaroModullerUrReceteKayitSadeListeModelTipID } from './aaroModullerUrReceteKayitSadeListeModelTipID.js';
 
 export interface AaroModullerUrReceteKayitSadeListeModel {
   IsEmriNo?: string;

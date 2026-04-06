@@ -4,10 +4,10 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroMVCControllersWebApiCekSenetKalemDevirSonDurumID } from './aaroMVCControllersWebApiCekSenetKalemDevirSonDurumID';
-import type { AaroMVCControllersWebApiCekSenetKalemOnayDurum } from './aaroMVCControllersWebApiCekSenetKalemOnayDurum';
-import type { AaroMVCControllersWebApiCekSenetKalemSonDurumID } from './aaroMVCControllersWebApiCekSenetKalemSonDurumID';
-import type { AaroMVCControllersWebApiCekSenetKalemTipID } from './aaroMVCControllersWebApiCekSenetKalemTipID';
+import type { AaroMVCControllersWebApiCekSenetKalemDevirSonDurumID } from './aaroMVCControllersWebApiCekSenetKalemDevirSonDurumID.js';
+import type { AaroMVCControllersWebApiCekSenetKalemOnayDurum } from './aaroMVCControllersWebApiCekSenetKalemOnayDurum.js';
+import type { AaroMVCControllersWebApiCekSenetKalemSonDurumID } from './aaroMVCControllersWebApiCekSenetKalemSonDurumID.js';
+import type { AaroMVCControllersWebApiCekSenetKalemTipID } from './aaroMVCControllersWebApiCekSenetKalemTipID.js';
 
 export interface AaroMVCControllersWebApiCekSenetKalem {
   /** Kıymetli evraka (Çek/Senet) ait benzersiz sistem ID'si. */

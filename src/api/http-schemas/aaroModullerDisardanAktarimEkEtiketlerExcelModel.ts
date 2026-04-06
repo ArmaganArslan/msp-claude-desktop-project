@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerDisardanAktarimEkEtiketlerExcelModelTip2ID } from './aaroModullerDisardanAktarimEkEtiketlerExcelModelTip2ID';
-import type { AaroModullerDisardanAktarimEkEtiketlerExcelModelTipID } from './aaroModullerDisardanAktarimEkEtiketlerExcelModelTipID';
+import type { AaroModullerDisardanAktarimEkEtiketlerExcelModelTip2ID } from './aaroModullerDisardanAktarimEkEtiketlerExcelModelTip2ID.js';
+import type { AaroModullerDisardanAktarimEkEtiketlerExcelModelTipID } from './aaroModullerDisardanAktarimEkEtiketlerExcelModelTipID.js';
 
 export interface AaroModullerDisardanAktarimEkEtiketlerExcelModel {
   SirketID?: number;

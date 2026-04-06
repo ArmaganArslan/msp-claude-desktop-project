@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerEtiketlerKayitSadeKayitModelTip2ID } from './aaroModullerEtiketlerKayitSadeKayitModelTip2ID';
-import type { AaroModullerEtiketlerKayitSadeKayitModelTipID } from './aaroModullerEtiketlerKayitSadeKayitModelTipID';
+import type { AaroModullerEtiketlerKayitSadeKayitModelTip2ID } from './aaroModullerEtiketlerKayitSadeKayitModelTip2ID.js';
+import type { AaroModullerEtiketlerKayitSadeKayitModelTipID } from './aaroModullerEtiketlerKayitSadeKayitModelTipID.js';
 
 export interface AaroModullerEtiketlerKayitSadeKayitModel {
   SirketID?: number;

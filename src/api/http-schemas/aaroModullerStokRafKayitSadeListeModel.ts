@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerStokRafKayitSadeListeModelEtiketKonum } from './aaroModullerStokRafKayitSadeListeModelEtiketKonum';
-import type { AaroModullerStokRafKayitSadeListeModelOnayDurum } from './aaroModullerStokRafKayitSadeListeModelOnayDurum';
+import type { AaroModullerStokRafKayitSadeListeModelEtiketKonum } from './aaroModullerStokRafKayitSadeListeModelEtiketKonum.js';
+import type { AaroModullerStokRafKayitSadeListeModelOnayDurum } from './aaroModullerStokRafKayitSadeListeModelOnayDurum.js';
 
 export interface AaroModullerStokRafKayitSadeListeModel {
   DepoKodu?: string;

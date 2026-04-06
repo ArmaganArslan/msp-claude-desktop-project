@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerEntegrasyonTanimKayitSadeListeModelTipID } from './aaroModullerEntegrasyonTanimKayitSadeListeModelTipID';
+import type { AaroModullerEntegrasyonTanimKayitSadeListeModelTipID } from './aaroModullerEntegrasyonTanimKayitSadeListeModelTipID.js';
 
 export interface AaroModullerEntegrasyonTanimKayitSadeListeModel {
   TipAdi?: string;

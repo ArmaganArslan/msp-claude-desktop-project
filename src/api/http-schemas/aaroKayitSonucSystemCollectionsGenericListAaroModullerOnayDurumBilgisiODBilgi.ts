@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroKayitSonucSystemCollectionsGenericListAaroModullerOnayDurumBilgisiODBilgiMesajlar } from './aaroKayitSonucSystemCollectionsGenericListAaroModullerOnayDurumBilgisiODBilgiMesajlar';
-import type { AaroModullerOnayDurumBilgisiODBilgi } from './aaroModullerOnayDurumBilgisiODBilgi';
+import type { AaroKayitSonucSystemCollectionsGenericListAaroModullerOnayDurumBilgisiODBilgiMesajlar } from './aaroKayitSonucSystemCollectionsGenericListAaroModullerOnayDurumBilgisiODBilgiMesajlar.js';
+import type { AaroModullerOnayDurumBilgisiODBilgi } from './aaroModullerOnayDurumBilgisiODBilgi.js';
 
 export interface AaroKayitSonucSystemCollectionsGenericListAaroModullerOnayDurumBilgisiODBilgi {
   Model?: AaroModullerOnayDurumBilgisiODBilgi[];

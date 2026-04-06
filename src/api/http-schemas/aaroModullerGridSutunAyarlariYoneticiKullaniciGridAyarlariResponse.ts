@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerGridSutunAyarlariYoneticiKullaniciGridAyarlariResponseAyarlar } from './aaroModullerGridSutunAyarlariYoneticiKullaniciGridAyarlariResponseAyarlar';
+import type { AaroModullerGridSutunAyarlariYoneticiKullaniciGridAyarlariResponseAyarlar } from './aaroModullerGridSutunAyarlariYoneticiKullaniciGridAyarlariResponseAyarlar.js';
 
 export interface AaroModullerGridSutunAyarlariYoneticiKullaniciGridAyarlariResponse {
   Ayarlar?: AaroModullerGridSutunAyarlariYoneticiKullaniciGridAyarlariResponseAyarlar;

@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerBelgeAdresKayitSadeKayitModelTabloID } from './aaroModullerBelgeAdresKayitSadeKayitModelTabloID';
-import type { AaroModullerBelgeAdresKayitSadeKayitModelTipID } from './aaroModullerBelgeAdresKayitSadeKayitModelTipID';
+import type { AaroModullerBelgeAdresKayitSadeKayitModelTabloID } from './aaroModullerBelgeAdresKayitSadeKayitModelTabloID.js';
+import type { AaroModullerBelgeAdresKayitSadeKayitModelTipID } from './aaroModullerBelgeAdresKayitSadeKayitModelTipID.js';
 
 export interface AaroModullerBelgeAdresKayitSadeKayitModel {
   KartID?: number;

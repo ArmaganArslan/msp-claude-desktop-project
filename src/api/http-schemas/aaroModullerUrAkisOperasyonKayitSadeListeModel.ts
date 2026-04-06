@@ -4,13 +4,13 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModellerUrAkisOperasyon } from './aaroModellerUrAkisOperasyon';
-import type { AaroModullerUrAkisOperasyonKayitSadeListeModelTipID } from './aaroModullerUrAkisOperasyonKayitSadeListeModelTipID';
-import type { AaroModullerUrAkisOperasyonKayitSadeMolaSaatleriViewModel } from './aaroModullerUrAkisOperasyonKayitSadeMolaSaatleriViewModel';
-import type { AaroModullerUrAkisOperasyonKayitSadeStokBirimAD } from './aaroModullerUrAkisOperasyonKayitSadeStokBirimAD';
-import type { AaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonHammaddeleri } from './aaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonHammaddeleri';
-import type { AaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonMamulleri } from './aaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonMamulleri';
-import type { AaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonPersonelleri } from './aaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonPersonelleri';
+import type { AaroModellerUrAkisOperasyon } from './aaroModellerUrAkisOperasyon.js';
+import type { AaroModullerUrAkisOperasyonKayitSadeListeModelTipID } from './aaroModullerUrAkisOperasyonKayitSadeListeModelTipID.js';
+import type { AaroModullerUrAkisOperasyonKayitSadeMolaSaatleriViewModel } from './aaroModullerUrAkisOperasyonKayitSadeMolaSaatleriViewModel.js';
+import type { AaroModullerUrAkisOperasyonKayitSadeStokBirimAD } from './aaroModullerUrAkisOperasyonKayitSadeStokBirimAD.js';
+import type { AaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonHammaddeleri } from './aaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonHammaddeleri.js';
+import type { AaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonMamulleri } from './aaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonMamulleri.js';
+import type { AaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonPersonelleri } from './aaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonPersonelleri.js';
 
 export interface AaroModullerUrAkisOperasyonKayitSadeListeModel {
   HamListStokBirimAd?: AaroModullerUrAkisOperasyonKayitSadeStokBirimAD[];

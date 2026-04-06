@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerStokSayimHareketleriListeListeModelOnayDurum } from './aaroModullerStokSayimHareketleriListeListeModelOnayDurum';
+import type { AaroModullerStokSayimHareketleriListeListeModelOnayDurum } from './aaroModullerStokSayimHareketleriListeListeModelOnayDurum.js';
 
 export interface AaroModullerStokSayimHareketleriListeListeModel {
   SubeKodu?: string;

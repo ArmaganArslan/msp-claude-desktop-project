@@ -4,11 +4,11 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerCariHareketleriListeListeModelCariTipID } from './aaroModullerCariHareketleriListeListeModelCariTipID';
-import type { AaroModullerCariHareketleriListeListeModelEFaturaTipi } from './aaroModullerCariHareketleriListeListeModelEFaturaTipi';
-import type { AaroModullerCariHareketleriListeListeModelKartTipID } from './aaroModullerCariHareketleriListeListeModelKartTipID';
-import type { AaroModullerCariHareketleriListeListeModelOnayDurum } from './aaroModullerCariHareketleriListeListeModelOnayDurum';
-import type { AaroModullerCariHareketleriListeListeModelTipID } from './aaroModullerCariHareketleriListeListeModelTipID';
+import type { AaroModullerCariHareketleriListeListeModelCariTipID } from './aaroModullerCariHareketleriListeListeModelCariTipID.js';
+import type { AaroModullerCariHareketleriListeListeModelEFaturaTipi } from './aaroModullerCariHareketleriListeListeModelEFaturaTipi.js';
+import type { AaroModullerCariHareketleriListeListeModelKartTipID } from './aaroModullerCariHareketleriListeListeModelKartTipID.js';
+import type { AaroModullerCariHareketleriListeListeModelOnayDurum } from './aaroModullerCariHareketleriListeListeModelOnayDurum.js';
+import type { AaroModullerCariHareketleriListeListeModelTipID } from './aaroModullerCariHareketleriListeListeModelTipID.js';
 
 export interface AaroModullerCariHareketleriListeListeModel {
   CariID?: number;

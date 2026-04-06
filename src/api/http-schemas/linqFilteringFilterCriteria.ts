@@ -4,9 +4,9 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { LinqFilteringFilterCriteriaLogic } from './linqFilteringFilterCriteriaLogic';
-import type { LinqFilteringFilterCriteriaOperator } from './linqFilteringFilterCriteriaOperator';
-import type { LinqFilteringFilterCriteriaValue } from './linqFilteringFilterCriteriaValue';
+import type { LinqFilteringFilterCriteriaLogic } from './linqFilteringFilterCriteriaLogic.js';
+import type { LinqFilteringFilterCriteriaOperator } from './linqFilteringFilterCriteriaOperator.js';
+import type { LinqFilteringFilterCriteriaValue } from './linqFilteringFilterCriteriaValue.js';
 
 export interface LinqFilteringFilterCriteria {
   Field?: string;

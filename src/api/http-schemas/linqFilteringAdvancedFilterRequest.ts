@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { LinqFilteringFilterCriteria } from './linqFilteringFilterCriteria';
-import type { LinqFilteringSortingInfo } from './linqFilteringSortingInfo';
+import type { LinqFilteringFilterCriteria } from './linqFilteringFilterCriteria.js';
+import type { LinqFilteringSortingInfo } from './linqFilteringSortingInfo.js';
 
 export interface LinqFilteringAdvancedFilterRequest {
   Filters?: LinqFilteringFilterCriteria[];

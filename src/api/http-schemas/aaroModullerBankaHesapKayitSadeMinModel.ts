@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerBankaHesapKayitSadeMinModelTipID } from './aaroModullerBankaHesapKayitSadeMinModelTipID';
+import type { AaroModullerBankaHesapKayitSadeMinModelTipID } from './aaroModullerBankaHesapKayitSadeMinModelTipID.js';
 
 /**
  * Banka hesap kartları için minimal veri modeli. Dropdown ve hızlı listeleme işlemleri için kullanılır.

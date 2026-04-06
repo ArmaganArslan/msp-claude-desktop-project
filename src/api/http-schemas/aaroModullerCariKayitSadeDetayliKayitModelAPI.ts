@@ -4,11 +4,11 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerCariAdresKayitSadeKayitModel } from './aaroModullerCariAdresKayitSadeKayitModel';
-import type { AaroModullerCariBankaKayitSadeKayitModel } from './aaroModullerCariBankaKayitSadeKayitModel';
-import type { AaroModullerCariIlgiliKayitSadeKayitModel } from './aaroModullerCariIlgiliKayitSadeKayitModel';
-import type { AaroModullerCariKayitSadeCariEntegrasyonTanimKayitModel } from './aaroModullerCariKayitSadeCariEntegrasyonTanimKayitModel';
-import type { AaroModullerCariKayitSadeDetayliKayitModelAPITipID } from './aaroModullerCariKayitSadeDetayliKayitModelAPITipID';
+import type { AaroModullerCariAdresKayitSadeKayitModel } from './aaroModullerCariAdresKayitSadeKayitModel.js';
+import type { AaroModullerCariBankaKayitSadeKayitModel } from './aaroModullerCariBankaKayitSadeKayitModel.js';
+import type { AaroModullerCariIlgiliKayitSadeKayitModel } from './aaroModullerCariIlgiliKayitSadeKayitModel.js';
+import type { AaroModullerCariKayitSadeCariEntegrasyonTanimKayitModel } from './aaroModullerCariKayitSadeCariEntegrasyonTanimKayitModel.js';
+import type { AaroModullerCariKayitSadeDetayliKayitModelAPITipID } from './aaroModullerCariKayitSadeDetayliKayitModelAPITipID.js';
 
 export interface AaroModullerCariKayitSadeDetayliKayitModelAPI {
   EntegrasyonTanimi?: AaroModullerCariKayitSadeCariEntegrasyonTanimKayitModel;

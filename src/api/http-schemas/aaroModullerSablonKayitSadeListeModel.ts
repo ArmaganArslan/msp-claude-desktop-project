@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerSablonKayitSadeListeModelOnayDurum } from './aaroModullerSablonKayitSadeListeModelOnayDurum';
-import type { AaroModullerSablonKayitSadeListeModelTabloID } from './aaroModullerSablonKayitSadeListeModelTabloID';
+import type { AaroModullerSablonKayitSadeListeModelOnayDurum } from './aaroModullerSablonKayitSadeListeModelOnayDurum.js';
+import type { AaroModullerSablonKayitSadeListeModelTabloID } from './aaroModullerSablonKayitSadeListeModelTabloID.js';
 
 export interface AaroModullerSablonKayitSadeListeModel {
   OnayDurum?: AaroModullerSablonKayitSadeListeModelOnayDurum;

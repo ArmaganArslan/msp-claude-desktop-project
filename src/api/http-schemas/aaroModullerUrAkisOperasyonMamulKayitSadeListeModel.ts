@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerUrAkisOperasyonMamulKayitSadeListeModelTipID } from './aaroModullerUrAkisOperasyonMamulKayitSadeListeModelTipID';
+import type { AaroModullerUrAkisOperasyonMamulKayitSadeListeModelTipID } from './aaroModullerUrAkisOperasyonMamulKayitSadeListeModelTipID.js';
 
 export interface AaroModullerUrAkisOperasyonMamulKayitSadeListeModel {
   StokID?: number;

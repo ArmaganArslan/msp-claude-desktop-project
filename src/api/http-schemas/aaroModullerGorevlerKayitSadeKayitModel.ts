@@ -4,12 +4,12 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerGorevlerKayitSadeKayitModelBitisTuru } from './aaroModullerGorevlerKayitSadeKayitModelBitisTuru';
-import type { AaroModullerGorevlerKayitSadeKayitModelTabloID } from './aaroModullerGorevlerKayitSadeKayitModelTabloID';
-import type { AaroModullerGorevlerKayitSadeKayitModelTabloID2 } from './aaroModullerGorevlerKayitSadeKayitModelTabloID2';
-import type { AaroModullerGorevlerKayitSadeKayitModelTamamlanmaTipi } from './aaroModullerGorevlerKayitSadeKayitModelTamamlanmaTipi';
-import type { AaroModullerGorevlerKayitSadeKayitModelTekrarSekli } from './aaroModullerGorevlerKayitSadeKayitModelTekrarSekli';
-import type { AaroModullerGorevlerKayitSadeKayitModelTipID } from './aaroModullerGorevlerKayitSadeKayitModelTipID';
+import type { AaroModullerGorevlerKayitSadeKayitModelBitisTuru } from './aaroModullerGorevlerKayitSadeKayitModelBitisTuru.js';
+import type { AaroModullerGorevlerKayitSadeKayitModelTabloID } from './aaroModullerGorevlerKayitSadeKayitModelTabloID.js';
+import type { AaroModullerGorevlerKayitSadeKayitModelTabloID2 } from './aaroModullerGorevlerKayitSadeKayitModelTabloID2.js';
+import type { AaroModullerGorevlerKayitSadeKayitModelTamamlanmaTipi } from './aaroModullerGorevlerKayitSadeKayitModelTamamlanmaTipi.js';
+import type { AaroModullerGorevlerKayitSadeKayitModelTekrarSekli } from './aaroModullerGorevlerKayitSadeKayitModelTekrarSekli.js';
+import type { AaroModullerGorevlerKayitSadeKayitModelTipID } from './aaroModullerGorevlerKayitSadeKayitModelTipID.js';
 
 export interface AaroModullerGorevlerKayitSadeKayitModel {
   GorevID?: number;

@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerPerPuantajKayitSadeListeModelOnayDurum } from './aaroModullerPerPuantajKayitSadeListeModelOnayDurum';
-import type { AaroModullerPerPuantajKayitSadeListeModelTipID } from './aaroModullerPerPuantajKayitSadeListeModelTipID';
+import type { AaroModullerPerPuantajKayitSadeListeModelOnayDurum } from './aaroModullerPerPuantajKayitSadeListeModelOnayDurum.js';
+import type { AaroModullerPerPuantajKayitSadeListeModelTipID } from './aaroModullerPerPuantajKayitSadeListeModelTipID.js';
 
 export interface AaroModullerPerPuantajKayitSadeListeModel {
   PersonelKodu?: string;

@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroKayitSonucSystemCollectionsGenericListAaroModullerYetkiMesajlar } from './aaroKayitSonucSystemCollectionsGenericListAaroModullerYetkiMesajlar';
-import type { AaroModullerYetki } from './aaroModullerYetki';
+import type { AaroKayitSonucSystemCollectionsGenericListAaroModullerYetkiMesajlar } from './aaroKayitSonucSystemCollectionsGenericListAaroModullerYetkiMesajlar.js';
+import type { AaroModullerYetki } from './aaroModullerYetki.js';
 
 export interface AaroKayitSonucSystemCollectionsGenericListAaroModullerYetki {
   Model?: AaroModullerYetki[];

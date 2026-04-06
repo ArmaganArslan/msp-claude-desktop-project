@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerSirketlerKayitSadeListeModelEFaturaEntegrator } from './aaroModullerSirketlerKayitSadeListeModelEFaturaEntegrator';
-import type { AaroModullerSirketlerKayitSadeListeModelEPostaSSL } from './aaroModullerSirketlerKayitSadeListeModelEPostaSSL';
+import type { AaroModullerSirketlerKayitSadeListeModelEFaturaEntegrator } from './aaroModullerSirketlerKayitSadeListeModelEFaturaEntegrator.js';
+import type { AaroModullerSirketlerKayitSadeListeModelEPostaSSL } from './aaroModullerSirketlerKayitSadeListeModelEPostaSSL.js';
 
 export interface AaroModullerSirketlerKayitSadeListeModel {
   VergiDairesiKodu?: string;

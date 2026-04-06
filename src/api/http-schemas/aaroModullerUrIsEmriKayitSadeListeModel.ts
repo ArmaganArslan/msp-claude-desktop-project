@@ -4,9 +4,9 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerUrIsEmriKayitSadeListeModelOnayDurum } from './aaroModullerUrIsEmriKayitSadeListeModelOnayDurum';
-import type { AaroModullerUrIsEmriKayitSadeListeModelTipID } from './aaroModullerUrIsEmriKayitSadeListeModelTipID';
-import type { AaroModullerUrIsEmriKayitSadeListeModelUretimDurumu } from './aaroModullerUrIsEmriKayitSadeListeModelUretimDurumu';
+import type { AaroModullerUrIsEmriKayitSadeListeModelOnayDurum } from './aaroModullerUrIsEmriKayitSadeListeModelOnayDurum.js';
+import type { AaroModullerUrIsEmriKayitSadeListeModelTipID } from './aaroModullerUrIsEmriKayitSadeListeModelTipID.js';
+import type { AaroModullerUrIsEmriKayitSadeListeModelUretimDurumu } from './aaroModullerUrIsEmriKayitSadeListeModelUretimDurumu.js';
 
 export interface AaroModullerUrIsEmriKayitSadeListeModel {
   SubeKodu?: string;

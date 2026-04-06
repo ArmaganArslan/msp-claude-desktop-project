@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { SystemIOStream } from './systemIOStream';
+import type { SystemIOStream } from './systemIOStream.js';
 
 export interface SystemWebHttpPostedFileBase {
   readonly ContentLength?: number;

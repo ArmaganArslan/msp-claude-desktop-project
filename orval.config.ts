@@ -1,9 +1,9 @@
 import { defineConfig } from 'orval';
 
 export default defineConfig({
-  petstore: {
+  aaroApi: {
     input: {
-      target: './src/api/schema/openapi.json',
+      target: './src/apiSchema/openapi.json',
     },
     output: {
       mode: 'single',
@@ -11,6 +11,14 @@ export default defineConfig({
       baseUrl: 'https://erp.aaro.com.tr',
       target: 'src/api/handlers.ts',
       schemas: 'src/api/http-schemas',
+      override: {
+        // Duplicate schema isimlerini çözmek için
+        operationName: (operation, route, verb) => {
+          return `${operation.operationId || route.replace(/\//g, '_')}${verb.charAt(0).toUpperCase() + verb.slice(1)}`;
+        },
+      },
+      clean: true,
+      tsconfig: './tsconfig.json',
     },
   },
 });

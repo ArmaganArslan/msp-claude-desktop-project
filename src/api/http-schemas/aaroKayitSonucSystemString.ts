@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroKayitSonucSystemStringMesajlar } from './aaroKayitSonucSystemStringMesajlar';
+import type { AaroKayitSonucSystemStringMesajlar } from './aaroKayitSonucSystemStringMesajlar.js';
 
 export interface AaroKayitSonucSystemString {
   Model?: string;

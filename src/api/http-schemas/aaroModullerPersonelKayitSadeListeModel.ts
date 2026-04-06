@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerPersonelKayitSadeListeModelOnayDurum } from './aaroModullerPersonelKayitSadeListeModelOnayDurum';
+import type { AaroModullerPersonelKayitSadeListeModelOnayDurum } from './aaroModullerPersonelKayitSadeListeModelOnayDurum.js';
 
 export interface AaroModullerPersonelKayitSadeListeModel {
   CariKodu?: string;

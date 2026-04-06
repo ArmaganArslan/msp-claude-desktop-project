@@ -4,9 +4,9 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerAlinanTeklifListeListeModelKartTipID } from './aaroModullerAlinanTeklifListeListeModelKartTipID';
-import type { AaroModullerAlinanTeklifListeListeModelOnayDurum } from './aaroModullerAlinanTeklifListeListeModelOnayDurum';
-import type { AaroModullerAlinanTeklifListeListeModelTipID } from './aaroModullerAlinanTeklifListeListeModelTipID';
+import type { AaroModullerAlinanTeklifListeListeModelKartTipID } from './aaroModullerAlinanTeklifListeListeModelKartTipID.js';
+import type { AaroModullerAlinanTeklifListeListeModelOnayDurum } from './aaroModullerAlinanTeklifListeListeModelOnayDurum.js';
+import type { AaroModullerAlinanTeklifListeListeModelTipID } from './aaroModullerAlinanTeklifListeListeModelTipID.js';
 
 export interface AaroModullerAlinanTeklifListeListeModel {
   SiparislestirilmisMi?: boolean;

@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerBeklenenTahsilatlarVeOdemelerKayitSadeListeModelOnayDurum } from './aaroModullerBeklenenTahsilatlarVeOdemelerKayitSadeListeModelOnayDurum';
-import type { AaroModullerBeklenenTahsilatlarVeOdemelerKayitSadeListeModelTipID } from './aaroModullerBeklenenTahsilatlarVeOdemelerKayitSadeListeModelTipID';
+import type { AaroModullerBeklenenTahsilatlarVeOdemelerKayitSadeListeModelOnayDurum } from './aaroModullerBeklenenTahsilatlarVeOdemelerKayitSadeListeModelOnayDurum.js';
+import type { AaroModullerBeklenenTahsilatlarVeOdemelerKayitSadeListeModelTipID } from './aaroModullerBeklenenTahsilatlarVeOdemelerKayitSadeListeModelTipID.js';
 
 export interface AaroModullerBeklenenTahsilatlarVeOdemelerKayitSadeListeModel {
   DovizSembol?: string;

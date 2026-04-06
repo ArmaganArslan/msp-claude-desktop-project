@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerPerOnayBaslikKayitSadeKayitModelTipID } from './aaroModullerPerOnayBaslikKayitSadeKayitModelTipID';
+import type { AaroModullerPerOnayBaslikKayitSadeKayitModelTipID } from './aaroModullerPerOnayBaslikKayitSadeKayitModelTipID.js';
 
 export interface AaroModullerPerOnayBaslikKayitSadeKayitModel {
   BaslikID?: number;

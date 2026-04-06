@@ -4,12 +4,12 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { SayfaKisitlariHEtiketIDTipID } from './sayfaKisitlariHEtiketIDTipID';
-import type { SayfaKisitlariKodIDTip2ID } from './sayfaKisitlariKodIDTip2ID';
-import type { SayfaKisitlariKodIDTipID } from './sayfaKisitlariKodIDTipID';
-import type { SayfaKisitlariRehberEkKisitlariItem } from './sayfaKisitlariRehberEkKisitlariItem';
-import type { SayfaKisitlariTipIDTabloID } from './sayfaKisitlariTipIDTabloID';
-import type { SayfaKisitlariTipIDTuru } from './sayfaKisitlariTipIDTuru';
+import type { SayfaKisitlariHEtiketIDTipID } from './sayfaKisitlariHEtiketIDTipID.js';
+import type { SayfaKisitlariKodIDTip2ID } from './sayfaKisitlariKodIDTip2ID.js';
+import type { SayfaKisitlariKodIDTipID } from './sayfaKisitlariKodIDTipID.js';
+import type { SayfaKisitlariRehberEkKisitlariItem } from './sayfaKisitlariRehberEkKisitlariItem.js';
+import type { SayfaKisitlariTipIDTabloID } from './sayfaKisitlariTipIDTabloID.js';
+import type { SayfaKisitlariTipIDTuru } from './sayfaKisitlariTipIDTuru.js';
 
 export interface SayfaKisitlari {
   SekmeGenel2KisitlariVarMi?: boolean;

@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerDepoTerminalHareketListeModelTipID } from './aaroModullerDepoTerminalHareketListeModelTipID';
+import type { AaroModullerDepoTerminalHareketListeModelTipID } from './aaroModullerDepoTerminalHareketListeModelTipID.js';
 
 export interface AaroModullerDepoTerminalHareketListeModel {
   TipKodu?: string;

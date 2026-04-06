@@ -4,15 +4,15 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerAlisIadeIrsaliyesiListeListeModelCariTipID } from './aaroModullerAlisIadeIrsaliyesiListeListeModelCariTipID';
-import type { AaroModullerAlisIadeIrsaliyesiListeListeModelEFaturaDurumID } from './aaroModullerAlisIadeIrsaliyesiListeListeModelEFaturaDurumID';
-import type { AaroModullerAlisIadeIrsaliyesiListeListeModelEFaturaProfilID } from './aaroModullerAlisIadeIrsaliyesiListeListeModelEFaturaProfilID';
-import type { AaroModullerAlisIadeIrsaliyesiListeListeModelEFaturaTipID } from './aaroModullerAlisIadeIrsaliyesiListeListeModelEFaturaTipID';
-import type { AaroModullerAlisIadeIrsaliyesiListeListeModelEFaturaTurID } from './aaroModullerAlisIadeIrsaliyesiListeListeModelEFaturaTurID';
-import type { AaroModullerAlisIadeIrsaliyesiListeListeModelEFaturaUygulamaYanitiDurumID } from './aaroModullerAlisIadeIrsaliyesiListeListeModelEFaturaUygulamaYanitiDurumID';
-import type { AaroModullerAlisIadeIrsaliyesiListeListeModelKartTipID } from './aaroModullerAlisIadeIrsaliyesiListeListeModelKartTipID';
-import type { AaroModullerAlisIadeIrsaliyesiListeListeModelOnayDurum } from './aaroModullerAlisIadeIrsaliyesiListeListeModelOnayDurum';
-import type { AaroModullerAlisIadeIrsaliyesiListeListeModelTipID } from './aaroModullerAlisIadeIrsaliyesiListeListeModelTipID';
+import type { AaroModullerAlisIadeIrsaliyesiListeListeModelCariTipID } from './aaroModullerAlisIadeIrsaliyesiListeListeModelCariTipID.js';
+import type { AaroModullerAlisIadeIrsaliyesiListeListeModelEFaturaDurumID } from './aaroModullerAlisIadeIrsaliyesiListeListeModelEFaturaDurumID.js';
+import type { AaroModullerAlisIadeIrsaliyesiListeListeModelEFaturaProfilID } from './aaroModullerAlisIadeIrsaliyesiListeListeModelEFaturaProfilID.js';
+import type { AaroModullerAlisIadeIrsaliyesiListeListeModelEFaturaTipID } from './aaroModullerAlisIadeIrsaliyesiListeListeModelEFaturaTipID.js';
+import type { AaroModullerAlisIadeIrsaliyesiListeListeModelEFaturaTurID } from './aaroModullerAlisIadeIrsaliyesiListeListeModelEFaturaTurID.js';
+import type { AaroModullerAlisIadeIrsaliyesiListeListeModelEFaturaUygulamaYanitiDurumID } from './aaroModullerAlisIadeIrsaliyesiListeListeModelEFaturaUygulamaYanitiDurumID.js';
+import type { AaroModullerAlisIadeIrsaliyesiListeListeModelKartTipID } from './aaroModullerAlisIadeIrsaliyesiListeListeModelKartTipID.js';
+import type { AaroModullerAlisIadeIrsaliyesiListeListeModelOnayDurum } from './aaroModullerAlisIadeIrsaliyesiListeListeModelOnayDurum.js';
+import type { AaroModullerAlisIadeIrsaliyesiListeListeModelTipID } from './aaroModullerAlisIadeIrsaliyesiListeListeModelTipID.js';
 
 export interface AaroModullerAlisIadeIrsaliyesiListeListeModel {
   FaturalastirilmisMi?: boolean;

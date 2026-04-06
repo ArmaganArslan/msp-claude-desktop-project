@@ -4,17 +4,17 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModellerAciklamalar } from './aaroModellerAciklamalar';
-import type { AaroMVCControllersWebApiBankaKalem } from './aaroMVCControllersWebApiBankaKalem';
-import type { AaroMVCControllersWebApiCariKalem } from './aaroMVCControllersWebApiCariKalem';
-import type { AaroMVCControllersWebApiCekSenetKalem } from './aaroMVCControllersWebApiCekSenetKalem';
-import type { AaroMVCControllersWebApiKalemModelKalemTipi } from './aaroMVCControllersWebApiKalemModelKalemTipi';
-import type { AaroMVCControllersWebApiKalemModelOnayDurum } from './aaroMVCControllersWebApiKalemModelOnayDurum';
-import type { AaroMVCControllersWebApiKalemModelTipID } from './aaroMVCControllersWebApiKalemModelTipID';
-import type { AaroMVCControllersWebApiKasaKalem } from './aaroMVCControllersWebApiKasaKalem';
-import type { AaroMVCControllersWebApiSiparisCariKalem } from './aaroMVCControllersWebApiSiparisCariKalem';
-import type { AaroMVCControllersWebApiSiparisStokKalem } from './aaroMVCControllersWebApiSiparisStokKalem';
-import type { AaroMVCControllersWebApiStokKalem } from './aaroMVCControllersWebApiStokKalem';
+import type { AaroModellerAciklamalar } from './aaroModellerAciklamalar.js';
+import type { AaroMVCControllersWebApiBankaKalem } from './aaroMVCControllersWebApiBankaKalem.js';
+import type { AaroMVCControllersWebApiCariKalem } from './aaroMVCControllersWebApiCariKalem.js';
+import type { AaroMVCControllersWebApiCekSenetKalem } from './aaroMVCControllersWebApiCekSenetKalem.js';
+import type { AaroMVCControllersWebApiKalemModelKalemTipi } from './aaroMVCControllersWebApiKalemModelKalemTipi.js';
+import type { AaroMVCControllersWebApiKalemModelOnayDurum } from './aaroMVCControllersWebApiKalemModelOnayDurum.js';
+import type { AaroMVCControllersWebApiKalemModelTipID } from './aaroMVCControllersWebApiKalemModelTipID.js';
+import type { AaroMVCControllersWebApiKasaKalem } from './aaroMVCControllersWebApiKasaKalem.js';
+import type { AaroMVCControllersWebApiSiparisCariKalem } from './aaroMVCControllersWebApiSiparisCariKalem.js';
+import type { AaroMVCControllersWebApiSiparisStokKalem } from './aaroMVCControllersWebApiSiparisStokKalem.js';
+import type { AaroMVCControllersWebApiStokKalem } from './aaroMVCControllersWebApiStokKalem.js';
 
 export interface AaroMVCControllersWebApiKalemModel {
   /** Satırın tipini belirler (Cari, Stok, Banka vb.). Bu değer alt nesnelerin hangisinin dolu olduğunu tayin eder. */

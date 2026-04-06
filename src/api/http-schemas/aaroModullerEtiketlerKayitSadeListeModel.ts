@@ -4,9 +4,9 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerEtiketlerKayitSadeListeModelOnayDurum } from './aaroModullerEtiketlerKayitSadeListeModelOnayDurum';
-import type { AaroModullerEtiketlerKayitSadeListeModelTip2ID } from './aaroModullerEtiketlerKayitSadeListeModelTip2ID';
-import type { AaroModullerEtiketlerKayitSadeListeModelTipID } from './aaroModullerEtiketlerKayitSadeListeModelTipID';
+import type { AaroModullerEtiketlerKayitSadeListeModelOnayDurum } from './aaroModullerEtiketlerKayitSadeListeModelOnayDurum.js';
+import type { AaroModullerEtiketlerKayitSadeListeModelTip2ID } from './aaroModullerEtiketlerKayitSadeListeModelTip2ID.js';
+import type { AaroModullerEtiketlerKayitSadeListeModelTipID } from './aaroModullerEtiketlerKayitSadeListeModelTipID.js';
 
 export interface AaroModullerEtiketlerKayitSadeListeModel {
   Tip2Adi?: string;

@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerUrAkisOperasyonKayitSadeStokBirimADHammaddeStokSeriLotTakibi } from './aaroModullerUrAkisOperasyonKayitSadeStokBirimADHammaddeStokSeriLotTakibi';
-import type { AaroModullerUrAkisOperasyonKayitSadeStokBirimADMamulStokSeriLotTakibi } from './aaroModullerUrAkisOperasyonKayitSadeStokBirimADMamulStokSeriLotTakibi';
+import type { AaroModullerUrAkisOperasyonKayitSadeStokBirimADHammaddeStokSeriLotTakibi } from './aaroModullerUrAkisOperasyonKayitSadeStokBirimADHammaddeStokSeriLotTakibi.js';
+import type { AaroModullerUrAkisOperasyonKayitSadeStokBirimADMamulStokSeriLotTakibi } from './aaroModullerUrAkisOperasyonKayitSadeStokBirimADMamulStokSeriLotTakibi.js';
 
 export interface AaroModullerUrAkisOperasyonKayitSadeStokBirimAD {
   HammaddeStokAdi?: string;

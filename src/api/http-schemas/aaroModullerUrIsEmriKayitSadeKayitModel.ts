@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerUrIsEmriKayitSadeKayitModelTipID } from './aaroModullerUrIsEmriKayitSadeKayitModelTipID';
+import type { AaroModullerUrIsEmriKayitSadeKayitModelTipID } from './aaroModullerUrIsEmriKayitSadeKayitModelTipID.js';
 
 export interface AaroModullerUrIsEmriKayitSadeKayitModel {
   IsEmriID?: number;

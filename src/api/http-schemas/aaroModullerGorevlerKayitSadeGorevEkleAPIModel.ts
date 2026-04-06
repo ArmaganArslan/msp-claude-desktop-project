@@ -4,19 +4,19 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { _AaroModullerGorevlerKayitSadeGorevEkleAPIModelProgramID } from './_aaroModullerGorevlerKayitSadeGorevEkleAPIModelProgramID';
-import type { _AaroModullerGorevlerKayitSadeGorevEkleAPIModelTabloID } from './_aaroModullerGorevlerKayitSadeGorevEkleAPIModelTabloID';
-import type { AaroModellerEtiketler } from './aaroModellerEtiketler';
-import type { AaroModellerGorevHareketleri } from './aaroModellerGorevHareketleri';
-import type { AaroModellerGorevKullanicilari } from './aaroModellerGorevKullanicilari';
-import type { AaroModellerKullanicilar } from './aaroModellerKullanicilar';
-import type { AaroModullerGorevlerKayitSadeGorevEkleAPIModelBitisTuru } from './aaroModullerGorevlerKayitSadeGorevEkleAPIModelBitisTuru';
-import type { AaroModullerGorevlerKayitSadeGorevEkleAPIModelOnayDurum } from './aaroModullerGorevlerKayitSadeGorevEkleAPIModelOnayDurum';
-import type { AaroModullerGorevlerKayitSadeGorevEkleAPIModelTabloID } from './aaroModullerGorevlerKayitSadeGorevEkleAPIModelTabloID';
-import type { AaroModullerGorevlerKayitSadeGorevEkleAPIModelTabloID2 } from './aaroModullerGorevlerKayitSadeGorevEkleAPIModelTabloID2';
-import type { AaroModullerGorevlerKayitSadeGorevEkleAPIModelTamamlanmaTipi } from './aaroModullerGorevlerKayitSadeGorevEkleAPIModelTamamlanmaTipi';
-import type { AaroModullerGorevlerKayitSadeGorevEkleAPIModelTekrarSekli } from './aaroModullerGorevlerKayitSadeGorevEkleAPIModelTekrarSekli';
-import type { AaroModullerGorevlerKayitSadeGorevEkleAPIModelTipID } from './aaroModullerGorevlerKayitSadeGorevEkleAPIModelTipID';
+import type { _AaroModullerGorevlerKayitSadeGorevEkleAPIModelProgramID } from './_aaroModullerGorevlerKayitSadeGorevEkleAPIModelProgramID.js';
+import type { _AaroModullerGorevlerKayitSadeGorevEkleAPIModelTabloID } from './_aaroModullerGorevlerKayitSadeGorevEkleAPIModelTabloID.js';
+import type { AaroModellerEtiketler } from './aaroModellerEtiketler.js';
+import type { AaroModellerGorevHareketleri } from './aaroModellerGorevHareketleri.js';
+import type { AaroModellerGorevKullanicilari } from './aaroModellerGorevKullanicilari.js';
+import type { AaroModellerKullanicilar } from './aaroModellerKullanicilar.js';
+import type { AaroModullerGorevlerKayitSadeGorevEkleAPIModelBitisTuru } from './aaroModullerGorevlerKayitSadeGorevEkleAPIModelBitisTuru.js';
+import type { AaroModullerGorevlerKayitSadeGorevEkleAPIModelOnayDurum } from './aaroModullerGorevlerKayitSadeGorevEkleAPIModelOnayDurum.js';
+import type { AaroModullerGorevlerKayitSadeGorevEkleAPIModelTabloID } from './aaroModullerGorevlerKayitSadeGorevEkleAPIModelTabloID.js';
+import type { AaroModullerGorevlerKayitSadeGorevEkleAPIModelTabloID2 } from './aaroModullerGorevlerKayitSadeGorevEkleAPIModelTabloID2.js';
+import type { AaroModullerGorevlerKayitSadeGorevEkleAPIModelTamamlanmaTipi } from './aaroModullerGorevlerKayitSadeGorevEkleAPIModelTamamlanmaTipi.js';
+import type { AaroModullerGorevlerKayitSadeGorevEkleAPIModelTekrarSekli } from './aaroModullerGorevlerKayitSadeGorevEkleAPIModelTekrarSekli.js';
+import type { AaroModullerGorevlerKayitSadeGorevEkleAPIModelTipID } from './aaroModullerGorevlerKayitSadeGorevEkleAPIModelTipID.js';
 
 export interface AaroModullerGorevlerKayitSadeGorevEkleAPIModel {
   GorevKullanicilari?: AaroModellerGorevKullanicilari[];

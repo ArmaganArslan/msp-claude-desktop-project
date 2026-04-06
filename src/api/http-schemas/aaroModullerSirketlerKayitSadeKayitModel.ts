@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerSirketlerKayitSadeKayitModelEFaturaEntegrator } from './aaroModullerSirketlerKayitSadeKayitModelEFaturaEntegrator';
-import type { AaroModullerSirketlerKayitSadeKayitModelEPostaSSL } from './aaroModullerSirketlerKayitSadeKayitModelEPostaSSL';
+import type { AaroModullerSirketlerKayitSadeKayitModelEFaturaEntegrator } from './aaroModullerSirketlerKayitSadeKayitModelEFaturaEntegrator.js';
+import type { AaroModullerSirketlerKayitSadeKayitModelEPostaSSL } from './aaroModullerSirketlerKayitSadeKayitModelEPostaSSL.js';
 
 export interface AaroModullerSirketlerKayitSadeKayitModel {
   SirketID?: number;

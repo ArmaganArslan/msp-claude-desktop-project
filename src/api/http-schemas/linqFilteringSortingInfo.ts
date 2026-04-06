@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { LinqFilteringSortingInfoDirection } from './linqFilteringSortingInfoDirection';
+import type { LinqFilteringSortingInfoDirection } from './linqFilteringSortingInfoDirection.js';
 
 export interface LinqFilteringSortingInfo {
   Field?: string;

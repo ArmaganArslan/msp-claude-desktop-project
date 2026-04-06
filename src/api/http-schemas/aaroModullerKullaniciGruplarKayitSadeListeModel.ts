@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerKullaniciGruplarKayitSadeListeModelOnayDurum } from './aaroModullerKullaniciGruplarKayitSadeListeModelOnayDurum';
+import type { AaroModullerKullaniciGruplarKayitSadeListeModelOnayDurum } from './aaroModullerKullaniciGruplarKayitSadeListeModelOnayDurum.js';
 
 export interface AaroModullerKullaniciGruplarKayitSadeListeModel {
   OnayDurum?: AaroModullerKullaniciGruplarKayitSadeListeModelOnayDurum;

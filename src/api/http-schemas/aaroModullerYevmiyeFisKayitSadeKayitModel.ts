@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerYevmiyeFisKayitSadeKayitModelDekontTipID } from './aaroModullerYevmiyeFisKayitSadeKayitModelDekontTipID';
-import type { AaroModullerYevmiyeFisKayitSadeKayitModelTipID } from './aaroModullerYevmiyeFisKayitSadeKayitModelTipID';
+import type { AaroModullerYevmiyeFisKayitSadeKayitModelDekontTipID } from './aaroModullerYevmiyeFisKayitSadeKayitModelDekontTipID.js';
+import type { AaroModullerYevmiyeFisKayitSadeKayitModelTipID } from './aaroModullerYevmiyeFisKayitSadeKayitModelTipID.js';
 
 export interface AaroModullerYevmiyeFisKayitSadeKayitModel {
   YevmiyeFisID?: number;

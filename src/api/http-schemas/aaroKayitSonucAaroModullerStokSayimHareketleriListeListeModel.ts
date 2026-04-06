@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroKayitSonucAaroModullerStokSayimHareketleriListeListeModelMesajlar } from './aaroKayitSonucAaroModullerStokSayimHareketleriListeListeModelMesajlar';
-import type { AaroModullerStokSayimHareketleriListeListeModel } from './aaroModullerStokSayimHareketleriListeListeModel';
+import type { AaroKayitSonucAaroModullerStokSayimHareketleriListeListeModelMesajlar } from './aaroKayitSonucAaroModullerStokSayimHareketleriListeListeModelMesajlar.js';
+import type { AaroModullerStokSayimHareketleriListeListeModel } from './aaroModullerStokSayimHareketleriListeListeModel.js';
 
 export interface AaroKayitSonucAaroModullerStokSayimHareketleriListeListeModel {
   Model?: AaroModullerStokSayimHareketleriListeListeModel;

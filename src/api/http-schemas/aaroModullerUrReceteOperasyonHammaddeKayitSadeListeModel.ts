@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerUrReceteOperasyonHammaddeKayitSadeListeModelTipID } from './aaroModullerUrReceteOperasyonHammaddeKayitSadeListeModelTipID';
+import type { AaroModullerUrReceteOperasyonHammaddeKayitSadeListeModelTipID } from './aaroModullerUrReceteOperasyonHammaddeKayitSadeListeModelTipID.js';
 
 export interface AaroModullerUrReceteOperasyonHammaddeKayitSadeListeModel {
   HammaddeKodu?: string;

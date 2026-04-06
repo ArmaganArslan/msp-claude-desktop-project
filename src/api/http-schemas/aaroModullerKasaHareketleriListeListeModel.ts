@@ -4,9 +4,9 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerKasaHareketleriListeListeModelKartTipID } from './aaroModullerKasaHareketleriListeListeModelKartTipID';
-import type { AaroModullerKasaHareketleriListeListeModelOnayDurum } from './aaroModullerKasaHareketleriListeListeModelOnayDurum';
-import type { AaroModullerKasaHareketleriListeListeModelTipID } from './aaroModullerKasaHareketleriListeListeModelTipID';
+import type { AaroModullerKasaHareketleriListeListeModelKartTipID } from './aaroModullerKasaHareketleriListeListeModelKartTipID.js';
+import type { AaroModullerKasaHareketleriListeListeModelOnayDurum } from './aaroModullerKasaHareketleriListeListeModelOnayDurum.js';
+import type { AaroModullerKasaHareketleriListeListeModelTipID } from './aaroModullerKasaHareketleriListeListeModelTipID.js';
 
 export interface AaroModullerKasaHareketleriListeListeModel {
   KasaID?: number;

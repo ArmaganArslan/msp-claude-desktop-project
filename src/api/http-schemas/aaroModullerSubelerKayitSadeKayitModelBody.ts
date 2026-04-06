@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerSubelerKayitSadeKayitModel } from './aaroModullerSubelerKayitSadeKayitModel';
+import type { AaroModullerSubelerKayitSadeKayitModel } from './aaroModullerSubelerKayitSadeKayitModel.js';
 
 /**
  * Yeni şube bilgilerini ve kurum referanslarını içeren KayitModel objesi.

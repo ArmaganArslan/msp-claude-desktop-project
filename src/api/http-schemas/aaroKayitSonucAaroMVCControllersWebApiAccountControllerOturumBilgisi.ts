@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroKayitSonucAaroMVCControllersWebApiAccountControllerOturumBilgisiMesajlar } from './aaroKayitSonucAaroMVCControllersWebApiAccountControllerOturumBilgisiMesajlar';
-import type { AaroMVCControllersWebApiAccountControllerOturumBilgisi } from './aaroMVCControllersWebApiAccountControllerOturumBilgisi';
+import type { AaroKayitSonucAaroMVCControllersWebApiAccountControllerOturumBilgisiMesajlar } from './aaroKayitSonucAaroMVCControllersWebApiAccountControllerOturumBilgisiMesajlar.js';
+import type { AaroMVCControllersWebApiAccountControllerOturumBilgisi } from './aaroMVCControllersWebApiAccountControllerOturumBilgisi.js';
 
 export interface AaroKayitSonucAaroMVCControllersWebApiAccountControllerOturumBilgisi {
   Model?: AaroMVCControllersWebApiAccountControllerOturumBilgisi;

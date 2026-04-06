@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerKaliteKontrolleriKayitSadeListeModelKaliteKontrolDurum } from './aaroModullerKaliteKontrolleriKayitSadeListeModelKaliteKontrolDurum';
-import type { AaroModullerKaliteKontrolleriKayitSadeListeModelOnayDurum } from './aaroModullerKaliteKontrolleriKayitSadeListeModelOnayDurum';
+import type { AaroModullerKaliteKontrolleriKayitSadeListeModelKaliteKontrolDurum } from './aaroModullerKaliteKontrolleriKayitSadeListeModelKaliteKontrolDurum.js';
+import type { AaroModullerKaliteKontrolleriKayitSadeListeModelOnayDurum } from './aaroModullerKaliteKontrolleriKayitSadeListeModelOnayDurum.js';
 
 export interface AaroModullerKaliteKontrolleriKayitSadeListeModel {
   OlsTar?: string;

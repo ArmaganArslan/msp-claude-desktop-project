@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerBankaSubeKayitSadeListeModelOnayDurum } from './aaroModullerBankaSubeKayitSadeListeModelOnayDurum';
+import type { AaroModullerBankaSubeKayitSadeListeModelOnayDurum } from './aaroModullerBankaSubeKayitSadeListeModelOnayDurum.js';
 
 export interface AaroModullerBankaSubeKayitSadeListeModel {
   BankaAdi?: string;

@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerSeriLotKayitSadeHizliGirisOnBilgi } from './aaroModullerSeriLotKayitSadeHizliGirisOnBilgi';
-import type { AaroModullerSeriLotKayitSadeHizliGirisSatir } from './aaroModullerSeriLotKayitSadeHizliGirisSatir';
+import type { AaroModullerSeriLotKayitSadeHizliGirisOnBilgi } from './aaroModullerSeriLotKayitSadeHizliGirisOnBilgi.js';
+import type { AaroModullerSeriLotKayitSadeHizliGirisSatir } from './aaroModullerSeriLotKayitSadeHizliGirisSatir.js';
 
 export interface AaroModullerSeriLotKayitSadeSeriLotHizliKayitModel {
   OnBilgi?: AaroModullerSeriLotKayitSadeHizliGirisOnBilgi;

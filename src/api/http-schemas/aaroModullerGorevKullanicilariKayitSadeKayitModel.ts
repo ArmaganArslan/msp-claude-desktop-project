@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerGorevKullanicilariKayitSadeKayitModelTipID } from './aaroModullerGorevKullanicilariKayitSadeKayitModelTipID';
+import type { AaroModullerGorevKullanicilariKayitSadeKayitModelTipID } from './aaroModullerGorevKullanicilariKayitSadeKayitModelTipID.js';
 
 export interface AaroModullerGorevKullanicilariKayitSadeKayitModel {
   GorevKullanicilariSatirID?: number;

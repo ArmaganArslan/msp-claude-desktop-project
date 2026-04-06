@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroKayitSonucAaroMVCControllersWebApiBaslikModelMesajlar } from './aaroKayitSonucAaroMVCControllersWebApiBaslikModelMesajlar';
-import type { AaroMVCControllersWebApiBaslikModel } from './aaroMVCControllersWebApiBaslikModel';
+import type { AaroKayitSonucAaroMVCControllersWebApiBaslikModelMesajlar } from './aaroKayitSonucAaroMVCControllersWebApiBaslikModelMesajlar.js';
+import type { AaroMVCControllersWebApiBaslikModel } from './aaroMVCControllersWebApiBaslikModel.js';
 
 export interface AaroKayitSonucAaroMVCControllersWebApiBaslikModel {
   Model?: AaroMVCControllersWebApiBaslikModel;

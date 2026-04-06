@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerUrIsEmriPlanKayitSadeListeModelHata } from './aaroModullerUrIsEmriPlanKayitSadeListeModelHata';
+import type { AaroModullerUrIsEmriPlanKayitSadeListeModelHata } from './aaroModullerUrIsEmriPlanKayitSadeListeModelHata.js';
 
 export interface AaroModullerUrIsEmriPlanKayitSadeListeModel {
   MakineKodu?: string;

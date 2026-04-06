@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroMVCControllersWebApiStokBayiModelTipID } from './aaroMVCControllersWebApiStokBayiModelTipID';
+import type { AaroMVCControllersWebApiStokBayiModelTipID } from './aaroMVCControllersWebApiStokBayiModelTipID.js';
 
 export interface AaroMVCControllersWebApiStokBayiModel {
   /** Ürünün sistemdeki benzersiz stok ID'si. */

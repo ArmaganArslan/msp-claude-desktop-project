@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerOnayKosulTanimKayitSadeOnaylanacaklarViewModelOnayDurum } from './aaroModullerOnayKosulTanimKayitSadeOnaylanacaklarViewModelOnayDurum';
-import type { AaroModullerOnayKosulTanimKayitSadeOnaylanacaklarViewModelTabloID } from './aaroModullerOnayKosulTanimKayitSadeOnaylanacaklarViewModelTabloID';
+import type { AaroModullerOnayKosulTanimKayitSadeOnaylanacaklarViewModelOnayDurum } from './aaroModullerOnayKosulTanimKayitSadeOnaylanacaklarViewModelOnayDurum.js';
+import type { AaroModullerOnayKosulTanimKayitSadeOnaylanacaklarViewModelTabloID } from './aaroModullerOnayKosulTanimKayitSadeOnaylanacaklarViewModelTabloID.js';
 
 export interface AaroModullerOnayKosulTanimKayitSadeOnaylanacaklarViewModel {
   Sube?: string;

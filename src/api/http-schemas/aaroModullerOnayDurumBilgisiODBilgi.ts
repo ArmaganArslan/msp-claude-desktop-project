@@ -4,11 +4,11 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerOnayDurumBilgisiKullanici } from './aaroModullerOnayDurumBilgisiKullanici';
-import type { AaroModullerOnayDurumBilgisiODBilgiKayitTipi } from './aaroModullerOnayDurumBilgisiODBilgiKayitTipi';
-import type { AaroModullerOnayDurumBilgisiODBilgiOnayDurum } from './aaroModullerOnayDurumBilgisiODBilgiOnayDurum';
-import type { AaroModullerOnayDurumBilgisiODBilgiTabloID } from './aaroModullerOnayDurumBilgisiODBilgiTabloID';
-import type { AaroModullerOnayDurumBilgisiSeviyeKullanicilari } from './aaroModullerOnayDurumBilgisiSeviyeKullanicilari';
+import type { AaroModullerOnayDurumBilgisiKullanici } from './aaroModullerOnayDurumBilgisiKullanici.js';
+import type { AaroModullerOnayDurumBilgisiODBilgiKayitTipi } from './aaroModullerOnayDurumBilgisiODBilgiKayitTipi.js';
+import type { AaroModullerOnayDurumBilgisiODBilgiOnayDurum } from './aaroModullerOnayDurumBilgisiODBilgiOnayDurum.js';
+import type { AaroModullerOnayDurumBilgisiODBilgiTabloID } from './aaroModullerOnayDurumBilgisiODBilgiTabloID.js';
+import type { AaroModullerOnayDurumBilgisiSeviyeKullanicilari } from './aaroModullerOnayDurumBilgisiSeviyeKullanicilari.js';
 
 export interface AaroModullerOnayDurumBilgisiODBilgi {
   OnayID?: number;

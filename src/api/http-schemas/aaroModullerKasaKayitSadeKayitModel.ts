@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerKasaKayitSadeKayitModelTipID } from './aaroModullerKasaKayitSadeKayitModelTipID';
+import type { AaroModullerKasaKayitSadeKayitModelTipID } from './aaroModullerKasaKayitSadeKayitModelTipID.js';
 
 /**
  * Kasa kartı kayıt oluşturma ve güncelleme işlemleri için kullanılan detaylı veri modeli.

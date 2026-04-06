@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroKayitSonucSystemCollectionsGenericListSystemStringMesajlar } from './aaroKayitSonucSystemCollectionsGenericListSystemStringMesajlar';
+import type { AaroKayitSonucSystemCollectionsGenericListSystemStringMesajlar } from './aaroKayitSonucSystemCollectionsGenericListSystemStringMesajlar.js';
 
 export interface AaroKayitSonucSystemCollectionsGenericListSystemString {
   Model?: string[];

@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerCariKayitSadeMinModelTipID } from './aaroModullerCariKayitSadeMinModelTipID';
+import type { AaroModullerCariKayitSadeMinModelTipID } from './aaroModullerCariKayitSadeMinModelTipID.js';
 
 /**
  * Cari kayıtları için minimal veri modeli. Dropdown ve hızlı listeleme işlemleri için kullanılır.

@@ -4,9 +4,9 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerStokHareketleriListeModelKartTipID } from './aaroModullerStokHareketleriListeModelKartTipID';
-import type { AaroModullerStokHareketleriListeModelOnayDurum } from './aaroModullerStokHareketleriListeModelOnayDurum';
-import type { AaroModullerStokHareketleriListeModelTipID } from './aaroModullerStokHareketleriListeModelTipID';
+import type { AaroModullerStokHareketleriListeModelKartTipID } from './aaroModullerStokHareketleriListeModelKartTipID.js';
+import type { AaroModullerStokHareketleriListeModelOnayDurum } from './aaroModullerStokHareketleriListeModelOnayDurum.js';
+import type { AaroModullerStokHareketleriListeModelTipID } from './aaroModullerStokHareketleriListeModelTipID.js';
 
 export interface AaroModullerStokHareketleriListeModel {
   /** Birim fiyat brüt - İndirim veya artırım uygulanmamış fiyatıdır. Vergiler hariçtir. */

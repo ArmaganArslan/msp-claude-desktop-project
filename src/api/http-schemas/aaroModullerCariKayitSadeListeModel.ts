@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerCariKayitSadeListeModelOnayDurum } from './aaroModullerCariKayitSadeListeModelOnayDurum';
-import type { AaroModullerCariKayitSadeListeModelTipID } from './aaroModullerCariKayitSadeListeModelTipID';
+import type { AaroModullerCariKayitSadeListeModelOnayDurum } from './aaroModullerCariKayitSadeListeModelOnayDurum.js';
+import type { AaroModullerCariKayitSadeListeModelTipID } from './aaroModullerCariKayitSadeListeModelTipID.js';
 
 /**
  * Cari listeleme işlemleri için genişletilmiş veri modeli.

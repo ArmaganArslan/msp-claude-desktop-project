@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroKayitSonucAaroMVCControllersWebApiKalemModelMesajlar } from './aaroKayitSonucAaroMVCControllersWebApiKalemModelMesajlar';
-import type { AaroMVCControllersWebApiKalemModel } from './aaroMVCControllersWebApiKalemModel';
+import type { AaroKayitSonucAaroMVCControllersWebApiKalemModelMesajlar } from './aaroKayitSonucAaroMVCControllersWebApiKalemModelMesajlar.js';
+import type { AaroMVCControllersWebApiKalemModel } from './aaroMVCControllersWebApiKalemModel.js';
 
 export interface AaroKayitSonucAaroMVCControllersWebApiKalemModel {
   Model?: AaroMVCControllersWebApiKalemModel;

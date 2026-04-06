@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerSeriLotKayitSadeHizliGirisOnBilgiSeriLotTipID } from './aaroModullerSeriLotKayitSadeHizliGirisOnBilgiSeriLotTipID';
-import type { AaroModullerSeriLotKayitSadeHizliGirisOnBilgiStokHareketTipID } from './aaroModullerSeriLotKayitSadeHizliGirisOnBilgiStokHareketTipID';
+import type { AaroModullerSeriLotKayitSadeHizliGirisOnBilgiSeriLotTipID } from './aaroModullerSeriLotKayitSadeHizliGirisOnBilgiSeriLotTipID.js';
+import type { AaroModullerSeriLotKayitSadeHizliGirisOnBilgiStokHareketTipID } from './aaroModullerSeriLotKayitSadeHizliGirisOnBilgiStokHareketTipID.js';
 
 export interface AaroModullerSeriLotKayitSadeHizliGirisOnBilgi {
   UrAkisOperasyonHammaddeID?: number;

@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroKayitSonucSystemCollectionsGenericIEnumerableAaroModullerUrReceteKayitSadeExcelModelDetayliMesajlar } from './aaroKayitSonucSystemCollectionsGenericIEnumerableAaroModullerUrReceteKayitSadeExcelModelDetayliMesajlar';
-import type { AaroModullerUrReceteKayitSadeExcelModelDetayli } from './aaroModullerUrReceteKayitSadeExcelModelDetayli';
+import type { AaroKayitSonucSystemCollectionsGenericIEnumerableAaroModullerUrReceteKayitSadeExcelModelDetayliMesajlar } from './aaroKayitSonucSystemCollectionsGenericIEnumerableAaroModullerUrReceteKayitSadeExcelModelDetayliMesajlar.js';
+import type { AaroModullerUrReceteKayitSadeExcelModelDetayli } from './aaroModullerUrReceteKayitSadeExcelModelDetayli.js';
 
 export interface AaroKayitSonucSystemCollectionsGenericIEnumerableAaroModullerUrReceteKayitSadeExcelModelDetayli {
   Model?: AaroModullerUrReceteKayitSadeExcelModelDetayli[];

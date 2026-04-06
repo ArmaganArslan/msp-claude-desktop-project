@@ -4,9 +4,9 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerSipCariHareketleriListeListeModelKartTipID } from './aaroModullerSipCariHareketleriListeListeModelKartTipID';
-import type { AaroModullerSipCariHareketleriListeListeModelOnayDurum } from './aaroModullerSipCariHareketleriListeListeModelOnayDurum';
-import type { AaroModullerSipCariHareketleriListeListeModelTipID } from './aaroModullerSipCariHareketleriListeListeModelTipID';
+import type { AaroModullerSipCariHareketleriListeListeModelKartTipID } from './aaroModullerSipCariHareketleriListeListeModelKartTipID.js';
+import type { AaroModullerSipCariHareketleriListeListeModelOnayDurum } from './aaroModullerSipCariHareketleriListeListeModelOnayDurum.js';
+import type { AaroModullerSipCariHareketleriListeListeModelTipID } from './aaroModullerSipCariHareketleriListeListeModelTipID.js';
 
 export interface AaroModullerSipCariHareketleriListeListeModel {
   CariID?: number;

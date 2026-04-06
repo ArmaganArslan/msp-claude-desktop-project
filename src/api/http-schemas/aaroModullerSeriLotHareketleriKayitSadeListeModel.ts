@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerSeriLotHareketleriKayitSadeListeModelOnayDurum } from './aaroModullerSeriLotHareketleriKayitSadeListeModelOnayDurum';
-import type { AaroModullerSeriLotHareketleriKayitSadeListeModelTipID } from './aaroModullerSeriLotHareketleriKayitSadeListeModelTipID';
+import type { AaroModullerSeriLotHareketleriKayitSadeListeModelOnayDurum } from './aaroModullerSeriLotHareketleriKayitSadeListeModelOnayDurum.js';
+import type { AaroModullerSeriLotHareketleriKayitSadeListeModelTipID } from './aaroModullerSeriLotHareketleriKayitSadeListeModelTipID.js';
 
 export interface AaroModullerSeriLotHareketleriKayitSadeListeModel {
   SeriLotKodu?: string;

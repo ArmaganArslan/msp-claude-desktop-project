@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroKayitSonucAaroModellerFiyatBulSonucMesajlar } from './aaroKayitSonucAaroModellerFiyatBulSonucMesajlar';
-import type { AaroModellerFiyatBulSonuc } from './aaroModellerFiyatBulSonuc';
+import type { AaroKayitSonucAaroModellerFiyatBulSonucMesajlar } from './aaroKayitSonucAaroModellerFiyatBulSonucMesajlar.js';
+import type { AaroModellerFiyatBulSonuc } from './aaroModellerFiyatBulSonuc.js';
 
 export interface AaroKayitSonucAaroModellerFiyatBulSonuc {
   Model?: AaroModellerFiyatBulSonuc;

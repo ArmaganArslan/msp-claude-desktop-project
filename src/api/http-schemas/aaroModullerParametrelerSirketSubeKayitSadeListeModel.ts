@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerParametrelerSirketSubeKayitSadeListeModelParametreID } from './aaroModullerParametrelerSirketSubeKayitSadeListeModelParametreID';
+import type { AaroModullerParametrelerSirketSubeKayitSadeListeModelParametreID } from './aaroModullerParametrelerSirketSubeKayitSadeListeModelParametreID.js';
 
 export interface AaroModullerParametrelerSirketSubeKayitSadeListeModel {
   ParametreAdi?: string;

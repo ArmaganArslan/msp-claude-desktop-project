@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerDovizKayitlariKayitSadeListeModelOnayDurum } from './aaroModullerDovizKayitlariKayitSadeListeModelOnayDurum';
+import type { AaroModullerDovizKayitlariKayitSadeListeModelOnayDurum } from './aaroModullerDovizKayitlariKayitSadeListeModelOnayDurum.js';
 
 export interface AaroModullerDovizKayitlariKayitSadeListeModel {
   DovizKodu?: string;

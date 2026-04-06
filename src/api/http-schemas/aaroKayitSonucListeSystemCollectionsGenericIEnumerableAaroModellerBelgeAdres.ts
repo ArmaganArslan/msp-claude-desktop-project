@@ -4,9 +4,9 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroKayitSonucListeSystemCollectionsGenericIEnumerableAaroModellerBelgeAdresMesajlar } from './aaroKayitSonucListeSystemCollectionsGenericIEnumerableAaroModellerBelgeAdresMesajlar';
-import type { AaroModellerBelgeAdres } from './aaroModellerBelgeAdres';
-import type { AaroSayfalandirmaBilgisi } from './aaroSayfalandirmaBilgisi';
+import type { AaroKayitSonucListeSystemCollectionsGenericIEnumerableAaroModellerBelgeAdresMesajlar } from './aaroKayitSonucListeSystemCollectionsGenericIEnumerableAaroModellerBelgeAdresMesajlar.js';
+import type { AaroModellerBelgeAdres } from './aaroModellerBelgeAdres.js';
+import type { AaroSayfalandirmaBilgisi } from './aaroSayfalandirmaBilgisi.js';
 
 export interface AaroKayitSonucListeSystemCollectionsGenericIEnumerableAaroModellerBelgeAdres {
   SayfalandirmaBilgisi?: AaroSayfalandirmaBilgisi;

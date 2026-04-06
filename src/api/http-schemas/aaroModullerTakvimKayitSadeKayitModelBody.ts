@@ -4,6 +4,6 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerTakvimKayitSadeKayitModel } from './aaroModullerTakvimKayitSadeKayitModel';
+import type { AaroModullerTakvimKayitSadeKayitModel } from './aaroModullerTakvimKayitSadeKayitModel.js';
 
 export type AaroModullerTakvimKayitSadeKayitModelBody = AaroModullerTakvimKayitSadeKayitModel;

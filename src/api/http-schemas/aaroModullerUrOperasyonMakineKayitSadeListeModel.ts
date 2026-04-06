@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerUrOperasyonMakineKayitSadeListeModelOnayDurum } from './aaroModullerUrOperasyonMakineKayitSadeListeModelOnayDurum';
+import type { AaroModullerUrOperasyonMakineKayitSadeListeModelOnayDurum } from './aaroModullerUrOperasyonMakineKayitSadeListeModelOnayDurum.js';
 
 export interface AaroModullerUrOperasyonMakineKayitSadeListeModel {
   OlsTar?: string;

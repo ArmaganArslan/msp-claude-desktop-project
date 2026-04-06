@@ -4,9 +4,9 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerVerilenSiparisListeListeModelKartTipID } from './aaroModullerVerilenSiparisListeListeModelKartTipID';
-import type { AaroModullerVerilenSiparisListeListeModelOnayDurum } from './aaroModullerVerilenSiparisListeListeModelOnayDurum';
-import type { AaroModullerVerilenSiparisListeListeModelTipID } from './aaroModullerVerilenSiparisListeListeModelTipID';
+import type { AaroModullerVerilenSiparisListeListeModelKartTipID } from './aaroModullerVerilenSiparisListeListeModelKartTipID.js';
+import type { AaroModullerVerilenSiparisListeListeModelOnayDurum } from './aaroModullerVerilenSiparisListeListeModelOnayDurum.js';
+import type { AaroModullerVerilenSiparisListeListeModelTipID } from './aaroModullerVerilenSiparisListeListeModelTipID.js';
 
 export interface AaroModullerVerilenSiparisListeListeModel {
   SevkiyatOrani?: number;

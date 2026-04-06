@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerStokKayitSadeMinModelTipID } from './aaroModullerStokKayitSadeMinModelTipID';
+import type { AaroModullerStokKayitSadeMinModelTipID } from './aaroModullerStokKayitSadeMinModelTipID.js';
 
 /**
  * Stok kartı için minimal veri modeli.

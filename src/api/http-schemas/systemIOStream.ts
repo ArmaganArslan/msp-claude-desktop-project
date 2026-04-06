@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { _SystemIOStreamIdentity } from './_systemIOStreamIdentity';
+import type { _SystemIOStreamIdentity } from './_systemIOStreamIdentity.js';
 
 export interface SystemIOStream {
   __identity?: _SystemIOStreamIdentity;

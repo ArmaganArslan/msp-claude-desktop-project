@@ -4,10 +4,10 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerBankaHareketleriListeListeModelBankaTipID } from './aaroModullerBankaHareketleriListeListeModelBankaTipID';
-import type { AaroModullerBankaHareketleriListeListeModelKartTipID } from './aaroModullerBankaHareketleriListeListeModelKartTipID';
-import type { AaroModullerBankaHareketleriListeListeModelOnayDurum } from './aaroModullerBankaHareketleriListeListeModelOnayDurum';
-import type { AaroModullerBankaHareketleriListeListeModelTipID } from './aaroModullerBankaHareketleriListeListeModelTipID';
+import type { AaroModullerBankaHareketleriListeListeModelBankaTipID } from './aaroModullerBankaHareketleriListeListeModelBankaTipID.js';
+import type { AaroModullerBankaHareketleriListeListeModelKartTipID } from './aaroModullerBankaHareketleriListeListeModelKartTipID.js';
+import type { AaroModullerBankaHareketleriListeListeModelOnayDurum } from './aaroModullerBankaHareketleriListeListeModelOnayDurum.js';
+import type { AaroModullerBankaHareketleriListeListeModelTipID } from './aaroModullerBankaHareketleriListeListeModelTipID.js';
 
 export interface AaroModullerBankaHareketleriListeListeModel {
   BankaHesapID?: number;

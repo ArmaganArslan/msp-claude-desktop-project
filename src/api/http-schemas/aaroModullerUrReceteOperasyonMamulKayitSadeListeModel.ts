@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerUrReceteOperasyonMamulKayitSadeListeModelTipID } from './aaroModullerUrReceteOperasyonMamulKayitSadeListeModelTipID';
+import type { AaroModullerUrReceteOperasyonMamulKayitSadeListeModelTipID } from './aaroModullerUrReceteOperasyonMamulKayitSadeListeModelTipID.js';
 
 export interface AaroModullerUrReceteOperasyonMamulKayitSadeListeModel {
   MamulKodu?: string;

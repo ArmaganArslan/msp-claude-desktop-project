@@ -4,12 +4,12 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerUrAkisOperasyonKayitSadeKayitModelTipID } from './aaroModullerUrAkisOperasyonKayitSadeKayitModelTipID';
-import type { AaroModullerUrAkisOperasyonKayitSadeMolaSaatleriViewModel } from './aaroModullerUrAkisOperasyonKayitSadeMolaSaatleriViewModel';
-import type { AaroModullerUrAkisOperasyonKayitSadeStokBirimAD } from './aaroModullerUrAkisOperasyonKayitSadeStokBirimAD';
-import type { AaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonHammaddeleri } from './aaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonHammaddeleri';
-import type { AaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonMamulleri } from './aaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonMamulleri';
-import type { AaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonPersonelleri } from './aaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonPersonelleri';
+import type { AaroModullerUrAkisOperasyonKayitSadeKayitModelTipID } from './aaroModullerUrAkisOperasyonKayitSadeKayitModelTipID.js';
+import type { AaroModullerUrAkisOperasyonKayitSadeMolaSaatleriViewModel } from './aaroModullerUrAkisOperasyonKayitSadeMolaSaatleriViewModel.js';
+import type { AaroModullerUrAkisOperasyonKayitSadeStokBirimAD } from './aaroModullerUrAkisOperasyonKayitSadeStokBirimAD.js';
+import type { AaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonHammaddeleri } from './aaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonHammaddeleri.js';
+import type { AaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonMamulleri } from './aaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonMamulleri.js';
+import type { AaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonPersonelleri } from './aaroModullerUrAkisOperasyonKayitSadeUrAkisOperasyonPersonelleri.js';
 
 export interface AaroModullerUrAkisOperasyonKayitSadeKayitModel {
   HamListStokBirimAd?: AaroModullerUrAkisOperasyonKayitSadeStokBirimAD[];

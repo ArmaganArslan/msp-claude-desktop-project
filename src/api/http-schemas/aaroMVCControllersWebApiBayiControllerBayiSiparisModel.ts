@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroMVCControllersWebApiBayiControllerBayiSiparisModelOnayDurum } from './aaroMVCControllersWebApiBayiControllerBayiSiparisModelOnayDurum';
+import type { AaroMVCControllersWebApiBayiControllerBayiSiparisModelOnayDurum } from './aaroMVCControllersWebApiBayiControllerBayiSiparisModelOnayDurum.js';
 
 export interface AaroMVCControllersWebApiBayiControllerBayiSiparisModel {
   /** Siparişin sistemdeki benzersiz kayıt (Dekont) ID'si. */

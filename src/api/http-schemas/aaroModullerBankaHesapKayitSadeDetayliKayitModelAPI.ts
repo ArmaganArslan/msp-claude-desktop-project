@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerBankaHesapKayitSadeBankaHesapEntegrasyonKayitModel } from './aaroModullerBankaHesapKayitSadeBankaHesapEntegrasyonKayitModel';
-import type { AaroModullerBankaHesapKayitSadeDetayliKayitModelAPITipID } from './aaroModullerBankaHesapKayitSadeDetayliKayitModelAPITipID';
+import type { AaroModullerBankaHesapKayitSadeBankaHesapEntegrasyonKayitModel } from './aaroModullerBankaHesapKayitSadeBankaHesapEntegrasyonKayitModel.js';
+import type { AaroModullerBankaHesapKayitSadeDetayliKayitModelAPITipID } from './aaroModullerBankaHesapKayitSadeDetayliKayitModelAPITipID.js';
 
 /**
  * Banka hesap kartı ve ilişkili entegrasyon tanımlarını (muhasebe hesapları vb.) içeren detaylı API veri modeli.

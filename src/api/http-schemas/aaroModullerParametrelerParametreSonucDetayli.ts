@@ -4,10 +4,10 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerParametrelerParametreSonucDetayliDeger } from './aaroModullerParametrelerParametreSonucDetayliDeger';
-import type { AaroModullerParametrelerParametreSonucDetayliDegerTipi } from './aaroModullerParametrelerParametreSonucDetayliDegerTipi';
-import type { AaroModullerParametrelerParametreSonucDetayliOnDeger } from './aaroModullerParametrelerParametreSonucDetayliOnDeger';
-import type { AaroModullerParametrelerParametreSonucDetayliParametreID } from './aaroModullerParametrelerParametreSonucDetayliParametreID';
+import type { AaroModullerParametrelerParametreSonucDetayliDeger } from './aaroModullerParametrelerParametreSonucDetayliDeger.js';
+import type { AaroModullerParametrelerParametreSonucDetayliDegerTipi } from './aaroModullerParametrelerParametreSonucDetayliDegerTipi.js';
+import type { AaroModullerParametrelerParametreSonucDetayliOnDeger } from './aaroModullerParametrelerParametreSonucDetayliOnDeger.js';
+import type { AaroModullerParametrelerParametreSonucDetayliParametreID } from './aaroModullerParametrelerParametreSonucDetayliParametreID.js';
 
 export interface AaroModullerParametrelerParametreSonucDetayli {
   ParametreID?: AaroModullerParametrelerParametreSonucDetayliParametreID;

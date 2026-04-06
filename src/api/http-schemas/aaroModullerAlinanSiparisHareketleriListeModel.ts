@@ -4,10 +4,10 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerAlinanSiparisHareketleriListeModelKartTipID } from './aaroModullerAlinanSiparisHareketleriListeModelKartTipID';
-import type { AaroModullerAlinanSiparisHareketleriListeModelOnayDurum } from './aaroModullerAlinanSiparisHareketleriListeModelOnayDurum';
-import type { AaroModullerAlinanSiparisHareketleriListeModelTipID } from './aaroModullerAlinanSiparisHareketleriListeModelTipID';
-import type { AaroModullerAlinanSiparisHareketleriListeModelUretimDurumu } from './aaroModullerAlinanSiparisHareketleriListeModelUretimDurumu';
+import type { AaroModullerAlinanSiparisHareketleriListeModelKartTipID } from './aaroModullerAlinanSiparisHareketleriListeModelKartTipID.js';
+import type { AaroModullerAlinanSiparisHareketleriListeModelOnayDurum } from './aaroModullerAlinanSiparisHareketleriListeModelOnayDurum.js';
+import type { AaroModullerAlinanSiparisHareketleriListeModelTipID } from './aaroModullerAlinanSiparisHareketleriListeModelTipID.js';
+import type { AaroModullerAlinanSiparisHareketleriListeModelUretimDurumu } from './aaroModullerAlinanSiparisHareketleriListeModelUretimDurumu.js';
 
 export interface AaroModullerAlinanSiparisHareketleriListeModel {
   TeklifNo?: string;

@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerCariKayitSadeBakiyeModelOnayDurum } from './aaroModullerCariKayitSadeBakiyeModelOnayDurum';
-import type { AaroModullerCariKayitSadeBakiyeModelTipID } from './aaroModullerCariKayitSadeBakiyeModelTipID';
+import type { AaroModullerCariKayitSadeBakiyeModelOnayDurum } from './aaroModullerCariKayitSadeBakiyeModelOnayDurum.js';
+import type { AaroModullerCariKayitSadeBakiyeModelTipID } from './aaroModullerCariKayitSadeBakiyeModelTipID.js';
 
 export interface AaroModullerCariKayitSadeBakiyeModel {
   BakiyeTarihi?: string;

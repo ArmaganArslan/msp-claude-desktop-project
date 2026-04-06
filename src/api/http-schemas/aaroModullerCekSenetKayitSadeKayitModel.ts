@@ -4,9 +4,9 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerCekSenetKayitSadeKayitModelDevirSonDurumID } from './aaroModullerCekSenetKayitSadeKayitModelDevirSonDurumID';
-import type { AaroModullerCekSenetKayitSadeKayitModelSonDurumID } from './aaroModullerCekSenetKayitSadeKayitModelSonDurumID';
-import type { AaroModullerCekSenetKayitSadeKayitModelTipID } from './aaroModullerCekSenetKayitSadeKayitModelTipID';
+import type { AaroModullerCekSenetKayitSadeKayitModelDevirSonDurumID } from './aaroModullerCekSenetKayitSadeKayitModelDevirSonDurumID.js';
+import type { AaroModullerCekSenetKayitSadeKayitModelSonDurumID } from './aaroModullerCekSenetKayitSadeKayitModelSonDurumID.js';
+import type { AaroModullerCekSenetKayitSadeKayitModelTipID } from './aaroModullerCekSenetKayitSadeKayitModelTipID.js';
 
 export interface AaroModullerCekSenetKayitSadeKayitModel {
   CekSenetID?: number;

@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerKasaKayitSadeListeModelOnayDurum } from './aaroModullerKasaKayitSadeListeModelOnayDurum';
-import type { AaroModullerKasaKayitSadeListeModelTipID } from './aaroModullerKasaKayitSadeListeModelTipID';
+import type { AaroModullerKasaKayitSadeListeModelOnayDurum } from './aaroModullerKasaKayitSadeListeModelOnayDurum.js';
+import type { AaroModullerKasaKayitSadeListeModelTipID } from './aaroModullerKasaKayitSadeListeModelTipID.js';
 
 /**
  * Kasa kartı listeleme işlemleri için genişletilmiş veri modeli.

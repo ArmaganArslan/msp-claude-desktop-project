@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerYetkilerKayitSadeListeModelOnayDurum } from './aaroModullerYetkilerKayitSadeListeModelOnayDurum';
-import type { AaroModullerYetkilerKayitSadeListeModelProgramID } from './aaroModullerYetkilerKayitSadeListeModelProgramID';
+import type { AaroModullerYetkilerKayitSadeListeModelOnayDurum } from './aaroModullerYetkilerKayitSadeListeModelOnayDurum.js';
+import type { AaroModullerYetkilerKayitSadeListeModelProgramID } from './aaroModullerYetkilerKayitSadeListeModelProgramID.js';
 
 export interface AaroModullerYetkilerKayitSadeListeModel {
   KullaniciKodu?: string;

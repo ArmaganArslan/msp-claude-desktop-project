@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerDegisiklikLoglariKayitSadeLogBilgisiKayitTipi } from './aaroModullerDegisiklikLoglariKayitSadeLogBilgisiKayitTipi';
+import type { AaroModullerDegisiklikLoglariKayitSadeLogBilgisiKayitTipi } from './aaroModullerDegisiklikLoglariKayitSadeLogBilgisiKayitTipi.js';
 
 export interface AaroModullerDegisiklikLoglariKayitSadeLogBilgisi {
   Tarih?: string;

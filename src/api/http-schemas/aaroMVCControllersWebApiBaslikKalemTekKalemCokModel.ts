@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroMVCControllersWebApiBaslikModel } from './aaroMVCControllersWebApiBaslikModel';
-import type { AaroMVCControllersWebApiKalemModel } from './aaroMVCControllersWebApiKalemModel';
+import type { AaroMVCControllersWebApiBaslikModel } from './aaroMVCControllersWebApiBaslikModel.js';
+import type { AaroMVCControllersWebApiKalemModel } from './aaroMVCControllersWebApiKalemModel.js';
 
 export interface AaroMVCControllersWebApiBaslikKalemTekKalemCokModel {
   Baslik?: AaroMVCControllersWebApiBaslikModel;

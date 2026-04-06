@@ -4,10 +4,10 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerStokKayitSadeListeModelFaturaKartTuru } from './aaroModullerStokKayitSadeListeModelFaturaKartTuru';
-import type { AaroModullerStokKayitSadeListeModelOnayDurum } from './aaroModullerStokKayitSadeListeModelOnayDurum';
-import type { AaroModullerStokKayitSadeListeModelTakipYontemi } from './aaroModullerStokKayitSadeListeModelTakipYontemi';
-import type { AaroModullerStokKayitSadeListeModelTipID } from './aaroModullerStokKayitSadeListeModelTipID';
+import type { AaroModullerStokKayitSadeListeModelFaturaKartTuru } from './aaroModullerStokKayitSadeListeModelFaturaKartTuru.js';
+import type { AaroModullerStokKayitSadeListeModelOnayDurum } from './aaroModullerStokKayitSadeListeModelOnayDurum.js';
+import type { AaroModullerStokKayitSadeListeModelTakipYontemi } from './aaroModullerStokKayitSadeListeModelTakipYontemi.js';
+import type { AaroModullerStokKayitSadeListeModelTipID } from './aaroModullerStokKayitSadeListeModelTipID.js';
 
 /**
  * Stok kartı liste görünümü için genişletilmiş model.

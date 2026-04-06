@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroKayitSonucSystemCollectionsGenericListAaroModellerIStokHareketleriVergiDetaylariMesajlar } from './aaroKayitSonucSystemCollectionsGenericListAaroModellerIStokHareketleriVergiDetaylariMesajlar';
-import type { AaroModellerIStokHareketleriVergiDetaylari } from './aaroModellerIStokHareketleriVergiDetaylari';
+import type { AaroKayitSonucSystemCollectionsGenericListAaroModellerIStokHareketleriVergiDetaylariMesajlar } from './aaroKayitSonucSystemCollectionsGenericListAaroModellerIStokHareketleriVergiDetaylariMesajlar.js';
+import type { AaroModellerIStokHareketleriVergiDetaylari } from './aaroModellerIStokHareketleriVergiDetaylari.js';
 
 export interface AaroKayitSonucSystemCollectionsGenericListAaroModellerIStokHareketleriVergiDetaylari {
   Model?: AaroModellerIStokHareketleriVergiDetaylari[];

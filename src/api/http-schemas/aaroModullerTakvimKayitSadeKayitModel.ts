@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerTakvimKayitSadeKayitModelTipID } from './aaroModullerTakvimKayitSadeKayitModelTipID';
+import type { AaroModullerTakvimKayitSadeKayitModelTipID } from './aaroModullerTakvimKayitSadeKayitModelTipID.js';
 
 export interface AaroModullerTakvimKayitSadeKayitModel {
   TakvimID?: number;

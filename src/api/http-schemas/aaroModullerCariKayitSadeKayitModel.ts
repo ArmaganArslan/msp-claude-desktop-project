@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerCariKayitSadeKayitModelTipID } from './aaroModullerCariKayitSadeKayitModelTipID';
+import type { AaroModullerCariKayitSadeKayitModelTipID } from './aaroModullerCariKayitSadeKayitModelTipID.js';
 
 /**
  * Cari kayıt oluşturma ve güncelleme işlemleri için kullanılan detaylı veri modeli.

@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerBankaHesapKayitSadeListeModelOnayDurum } from './aaroModullerBankaHesapKayitSadeListeModelOnayDurum';
-import type { AaroModullerBankaHesapKayitSadeListeModelTipID } from './aaroModullerBankaHesapKayitSadeListeModelTipID';
+import type { AaroModullerBankaHesapKayitSadeListeModelOnayDurum } from './aaroModullerBankaHesapKayitSadeListeModelOnayDurum.js';
+import type { AaroModullerBankaHesapKayitSadeListeModelTipID } from './aaroModullerBankaHesapKayitSadeListeModelTipID.js';
 
 /**
  * Banka hesap kartı liste görünümü için genişletilmiş veri modeli.

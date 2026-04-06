@@ -4,6 +4,6 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerGridSutunAyarlariYoneticiSutunDetayModel } from './aaroModullerGridSutunAyarlariYoneticiSutunDetayModel';
+import type { AaroModullerGridSutunAyarlariYoneticiSutunDetayModel } from './aaroModullerGridSutunAyarlariYoneticiSutunDetayModel.js';
 
 export type AaroModullerGridSutunAyarlariYoneticiKullaniciGridAyarlariResponseAyarlar = {[key: string]: AaroModullerGridSutunAyarlariYoneticiSutunDetayModel};

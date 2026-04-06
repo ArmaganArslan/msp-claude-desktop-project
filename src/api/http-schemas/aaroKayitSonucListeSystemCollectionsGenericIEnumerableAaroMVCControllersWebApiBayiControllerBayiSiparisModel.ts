@@ -4,9 +4,9 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroKayitSonucListeSystemCollectionsGenericIEnumerableAaroMVCControllersWebApiBayiControllerBayiSiparisModelMesajlar } from './aaroKayitSonucListeSystemCollectionsGenericIEnumerableAaroMVCControllersWebApiBayiControllerBayiSiparisModelMesajlar';
-import type { AaroMVCControllersWebApiBayiControllerBayiSiparisModel } from './aaroMVCControllersWebApiBayiControllerBayiSiparisModel';
-import type { AaroSayfalandirmaBilgisi } from './aaroSayfalandirmaBilgisi';
+import type { AaroKayitSonucListeSystemCollectionsGenericIEnumerableAaroMVCControllersWebApiBayiControllerBayiSiparisModelMesajlar } from './aaroKayitSonucListeSystemCollectionsGenericIEnumerableAaroMVCControllersWebApiBayiControllerBayiSiparisModelMesajlar.js';
+import type { AaroMVCControllersWebApiBayiControllerBayiSiparisModel } from './aaroMVCControllersWebApiBayiControllerBayiSiparisModel.js';
+import type { AaroSayfalandirmaBilgisi } from './aaroSayfalandirmaBilgisi.js';
 
 export interface AaroKayitSonucListeSystemCollectionsGenericIEnumerableAaroMVCControllersWebApiBayiControllerBayiSiparisModel {
   SayfalandirmaBilgisi?: AaroSayfalandirmaBilgisi;

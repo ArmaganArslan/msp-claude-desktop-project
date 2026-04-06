@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerKodlarKayitSadeKodlarTumSeviyelerModelTip2ID } from './aaroModullerKodlarKayitSadeKodlarTumSeviyelerModelTip2ID';
-import type { AaroModullerKodlarKayitSadeKodlarTumSeviyelerModelTipID } from './aaroModullerKodlarKayitSadeKodlarTumSeviyelerModelTipID';
+import type { AaroModullerKodlarKayitSadeKodlarTumSeviyelerModelTip2ID } from './aaroModullerKodlarKayitSadeKodlarTumSeviyelerModelTip2ID.js';
+import type { AaroModullerKodlarKayitSadeKodlarTumSeviyelerModelTipID } from './aaroModullerKodlarKayitSadeKodlarTumSeviyelerModelTipID.js';
 
 export interface AaroModullerKodlarKayitSadeKodlarTumSeviyelerModel {
   TipID?: AaroModullerKodlarKayitSadeKodlarTumSeviyelerModelTipID;

@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerPerGirisCikisKayitSadeListeModelOnayDurum } from './aaroModullerPerGirisCikisKayitSadeListeModelOnayDurum';
+import type { AaroModullerPerGirisCikisKayitSadeListeModelOnayDurum } from './aaroModullerPerGirisCikisKayitSadeListeModelOnayDurum.js';
 
 export interface AaroModullerPerGirisCikisKayitSadeListeModel {
   OnayDurum?: AaroModullerPerGirisCikisKayitSadeListeModelOnayDurum;

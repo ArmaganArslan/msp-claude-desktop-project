@@ -4,10 +4,10 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerCekSenetKayitSadeListeModelDevirSonDurumID } from './aaroModullerCekSenetKayitSadeListeModelDevirSonDurumID';
-import type { AaroModullerCekSenetKayitSadeListeModelOnayDurum } from './aaroModullerCekSenetKayitSadeListeModelOnayDurum';
-import type { AaroModullerCekSenetKayitSadeListeModelSonDurumID } from './aaroModullerCekSenetKayitSadeListeModelSonDurumID';
-import type { AaroModullerCekSenetKayitSadeListeModelTipID } from './aaroModullerCekSenetKayitSadeListeModelTipID';
+import type { AaroModullerCekSenetKayitSadeListeModelDevirSonDurumID } from './aaroModullerCekSenetKayitSadeListeModelDevirSonDurumID.js';
+import type { AaroModullerCekSenetKayitSadeListeModelOnayDurum } from './aaroModullerCekSenetKayitSadeListeModelOnayDurum.js';
+import type { AaroModullerCekSenetKayitSadeListeModelSonDurumID } from './aaroModullerCekSenetKayitSadeListeModelSonDurumID.js';
+import type { AaroModullerCekSenetKayitSadeListeModelTipID } from './aaroModullerCekSenetKayitSadeListeModelTipID.js';
 
 export interface AaroModullerCekSenetKayitSadeListeModel {
   OnayDurum?: AaroModullerCekSenetKayitSadeListeModelOnayDurum;

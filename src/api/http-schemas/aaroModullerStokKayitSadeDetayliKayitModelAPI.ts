@@ -4,13 +4,13 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerAciklamalarKayitSadeKayitModel } from './aaroModullerAciklamalarKayitSadeKayitModel';
-import type { AaroModullerFiyatListesiSatirlarKayitSadeKayitModel } from './aaroModullerFiyatListesiSatirlarKayitSadeKayitModel';
-import type { AaroModullerStokBarkodKayitSadeKayitModel } from './aaroModullerStokBarkodKayitSadeKayitModel';
-import type { AaroModullerStokKayitSadeDetayliKayitModelAPIFaturaKartTuru } from './aaroModullerStokKayitSadeDetayliKayitModelAPIFaturaKartTuru';
-import type { AaroModullerStokKayitSadeDetayliKayitModelAPITakipYontemi } from './aaroModullerStokKayitSadeDetayliKayitModelAPITakipYontemi';
-import type { AaroModullerStokKayitSadeDetayliKayitModelAPITipID } from './aaroModullerStokKayitSadeDetayliKayitModelAPITipID';
-import type { AaroModullerStokKayitSadeStokEntegrasyonTanimKayitModel } from './aaroModullerStokKayitSadeStokEntegrasyonTanimKayitModel';
+import type { AaroModullerAciklamalarKayitSadeKayitModel } from './aaroModullerAciklamalarKayitSadeKayitModel.js';
+import type { AaroModullerFiyatListesiSatirlarKayitSadeKayitModel } from './aaroModullerFiyatListesiSatirlarKayitSadeKayitModel.js';
+import type { AaroModullerStokBarkodKayitSadeKayitModel } from './aaroModullerStokBarkodKayitSadeKayitModel.js';
+import type { AaroModullerStokKayitSadeDetayliKayitModelAPIFaturaKartTuru } from './aaroModullerStokKayitSadeDetayliKayitModelAPIFaturaKartTuru.js';
+import type { AaroModullerStokKayitSadeDetayliKayitModelAPITakipYontemi } from './aaroModullerStokKayitSadeDetayliKayitModelAPITakipYontemi.js';
+import type { AaroModullerStokKayitSadeDetayliKayitModelAPITipID } from './aaroModullerStokKayitSadeDetayliKayitModelAPITipID.js';
+import type { AaroModullerStokKayitSadeStokEntegrasyonTanimKayitModel } from './aaroModullerStokKayitSadeStokEntegrasyonTanimKayitModel.js';
 
 export interface AaroModullerStokKayitSadeDetayliKayitModelAPI {
   EntegrasyonTanimi?: AaroModullerStokKayitSadeStokEntegrasyonTanimKayitModel;

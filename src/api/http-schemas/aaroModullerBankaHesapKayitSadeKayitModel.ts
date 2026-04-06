@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerBankaHesapKayitSadeKayitModelTipID } from './aaroModullerBankaHesapKayitSadeKayitModelTipID';
+import type { AaroModullerBankaHesapKayitSadeKayitModelTipID } from './aaroModullerBankaHesapKayitSadeKayitModelTipID.js';
 
 /**
  * Banka hesap kartı kayıt oluşturma ve güncelleme işlemleri için kullanılan detaylı veri modeli.

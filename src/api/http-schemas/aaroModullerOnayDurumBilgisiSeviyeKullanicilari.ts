@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerOnayDurumBilgisiSeviyeKullanicilariOnayDurum } from './aaroModullerOnayDurumBilgisiSeviyeKullanicilariOnayDurum';
+import type { AaroModullerOnayDurumBilgisiSeviyeKullanicilariOnayDurum } from './aaroModullerOnayDurumBilgisiSeviyeKullanicilariOnayDurum.js';
 
 export interface AaroModullerOnayDurumBilgisiSeviyeKullanicilari {
   OnayID?: number;

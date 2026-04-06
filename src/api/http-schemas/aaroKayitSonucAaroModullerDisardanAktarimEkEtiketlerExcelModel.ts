@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroKayitSonucAaroModullerDisardanAktarimEkEtiketlerExcelModelMesajlar } from './aaroKayitSonucAaroModullerDisardanAktarimEkEtiketlerExcelModelMesajlar';
-import type { AaroModullerDisardanAktarimEkEtiketlerExcelModel } from './aaroModullerDisardanAktarimEkEtiketlerExcelModel';
+import type { AaroKayitSonucAaroModullerDisardanAktarimEkEtiketlerExcelModelMesajlar } from './aaroKayitSonucAaroModullerDisardanAktarimEkEtiketlerExcelModelMesajlar.js';
+import type { AaroModullerDisardanAktarimEkEtiketlerExcelModel } from './aaroModullerDisardanAktarimEkEtiketlerExcelModel.js';
 
 export interface AaroKayitSonucAaroModullerDisardanAktarimEkEtiketlerExcelModel {
   Model?: AaroModullerDisardanAktarimEkEtiketlerExcelModel;

@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerDegisiklikLoglariKayitSadeListeModelKayitTipi } from './aaroModullerDegisiklikLoglariKayitSadeListeModelKayitTipi';
-import type { AaroModullerDegisiklikLoglariKayitSadeListeModelTabloID } from './aaroModullerDegisiklikLoglariKayitSadeListeModelTabloID';
+import type { AaroModullerDegisiklikLoglariKayitSadeListeModelKayitTipi } from './aaroModullerDegisiklikLoglariKayitSadeListeModelKayitTipi.js';
+import type { AaroModullerDegisiklikLoglariKayitSadeListeModelTabloID } from './aaroModullerDegisiklikLoglariKayitSadeListeModelTabloID.js';
 
 export interface AaroModullerDegisiklikLoglariKayitSadeListeModel {
   KulAdi?: string;

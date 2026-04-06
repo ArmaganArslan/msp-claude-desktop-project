@@ -4,15 +4,15 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerFaturaListeListeModelCariTipID } from './aaroModullerFaturaListeListeModelCariTipID';
-import type { AaroModullerFaturaListeListeModelEFaturaDurumID } from './aaroModullerFaturaListeListeModelEFaturaDurumID';
-import type { AaroModullerFaturaListeListeModelEFaturaProfilID } from './aaroModullerFaturaListeListeModelEFaturaProfilID';
-import type { AaroModullerFaturaListeListeModelEFaturaTipID } from './aaroModullerFaturaListeListeModelEFaturaTipID';
-import type { AaroModullerFaturaListeListeModelEFaturaTurID } from './aaroModullerFaturaListeListeModelEFaturaTurID';
-import type { AaroModullerFaturaListeListeModelEFaturaUygulamaYanitiDurumID } from './aaroModullerFaturaListeListeModelEFaturaUygulamaYanitiDurumID';
-import type { AaroModullerFaturaListeListeModelKartTipID } from './aaroModullerFaturaListeListeModelKartTipID';
-import type { AaroModullerFaturaListeListeModelOnayDurum } from './aaroModullerFaturaListeListeModelOnayDurum';
-import type { AaroModullerFaturaListeListeModelTipID } from './aaroModullerFaturaListeListeModelTipID';
+import type { AaroModullerFaturaListeListeModelCariTipID } from './aaroModullerFaturaListeListeModelCariTipID.js';
+import type { AaroModullerFaturaListeListeModelEFaturaDurumID } from './aaroModullerFaturaListeListeModelEFaturaDurumID.js';
+import type { AaroModullerFaturaListeListeModelEFaturaProfilID } from './aaroModullerFaturaListeListeModelEFaturaProfilID.js';
+import type { AaroModullerFaturaListeListeModelEFaturaTipID } from './aaroModullerFaturaListeListeModelEFaturaTipID.js';
+import type { AaroModullerFaturaListeListeModelEFaturaTurID } from './aaroModullerFaturaListeListeModelEFaturaTurID.js';
+import type { AaroModullerFaturaListeListeModelEFaturaUygulamaYanitiDurumID } from './aaroModullerFaturaListeListeModelEFaturaUygulamaYanitiDurumID.js';
+import type { AaroModullerFaturaListeListeModelKartTipID } from './aaroModullerFaturaListeListeModelKartTipID.js';
+import type { AaroModullerFaturaListeListeModelOnayDurum } from './aaroModullerFaturaListeListeModelOnayDurum.js';
+import type { AaroModullerFaturaListeListeModelTipID } from './aaroModullerFaturaListeListeModelTipID.js';
 
 export interface AaroModullerFaturaListeListeModel {
   CariID?: number;

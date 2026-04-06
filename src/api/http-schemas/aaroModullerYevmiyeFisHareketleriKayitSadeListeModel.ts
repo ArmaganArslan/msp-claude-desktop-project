@@ -4,11 +4,11 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerYevmiyeFisHareketleriKayitSadeListeModelCariHareketTabloID } from './aaroModullerYevmiyeFisHareketleriKayitSadeListeModelCariHareketTabloID';
-import type { AaroModullerYevmiyeFisHareketleriKayitSadeListeModelCariKartTabloID } from './aaroModullerYevmiyeFisHareketleriKayitSadeListeModelCariKartTabloID';
-import type { AaroModullerYevmiyeFisHareketleriKayitSadeListeModelDekontTipID } from './aaroModullerYevmiyeFisHareketleriKayitSadeListeModelDekontTipID';
-import type { AaroModullerYevmiyeFisHareketleriKayitSadeListeModelOnayDurum } from './aaroModullerYevmiyeFisHareketleriKayitSadeListeModelOnayDurum';
-import type { AaroModullerYevmiyeFisHareketleriKayitSadeListeModelTipID } from './aaroModullerYevmiyeFisHareketleriKayitSadeListeModelTipID';
+import type { AaroModullerYevmiyeFisHareketleriKayitSadeListeModelCariHareketTabloID } from './aaroModullerYevmiyeFisHareketleriKayitSadeListeModelCariHareketTabloID.js';
+import type { AaroModullerYevmiyeFisHareketleriKayitSadeListeModelCariKartTabloID } from './aaroModullerYevmiyeFisHareketleriKayitSadeListeModelCariKartTabloID.js';
+import type { AaroModullerYevmiyeFisHareketleriKayitSadeListeModelDekontTipID } from './aaroModullerYevmiyeFisHareketleriKayitSadeListeModelDekontTipID.js';
+import type { AaroModullerYevmiyeFisHareketleriKayitSadeListeModelOnayDurum } from './aaroModullerYevmiyeFisHareketleriKayitSadeListeModelOnayDurum.js';
+import type { AaroModullerYevmiyeFisHareketleriKayitSadeListeModelTipID } from './aaroModullerYevmiyeFisHareketleriKayitSadeListeModelTipID.js';
 
 export interface AaroModullerYevmiyeFisHareketleriKayitSadeListeModel {
   SubeKodu?: string;

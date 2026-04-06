@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerKaliteKontrolleriKayitSadeKayitModelKaliteKontrolDurum } from './aaroModullerKaliteKontrolleriKayitSadeKayitModelKaliteKontrolDurum';
+import type { AaroModullerKaliteKontrolleriKayitSadeKayitModelKaliteKontrolDurum } from './aaroModullerKaliteKontrolleriKayitSadeKayitModelKaliteKontrolDurum.js';
 
 export interface AaroModullerKaliteKontrolleriKayitSadeKayitModel {
   KaliteKontrolID?: number;

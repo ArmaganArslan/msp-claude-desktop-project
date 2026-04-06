@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerSablonKayitSadeKayitModelTabloID } from './aaroModullerSablonKayitSadeKayitModelTabloID';
+import type { AaroModullerSablonKayitSadeKayitModelTabloID } from './aaroModullerSablonKayitSadeKayitModelTabloID.js';
 
 export interface AaroModullerSablonKayitSadeKayitModel {
   SablonID?: number;

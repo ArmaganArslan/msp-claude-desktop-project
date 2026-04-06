@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroOturumYetkiListesiProgramlarSonucKayitTipi } from './aaroOturumYetkiListesiProgramlarSonucKayitTipi';
-import type { AaroOturumYetkiListesiProgramlarSonucProgramID } from './aaroOturumYetkiListesiProgramlarSonucProgramID';
+import type { AaroOturumYetkiListesiProgramlarSonucKayitTipi } from './aaroOturumYetkiListesiProgramlarSonucKayitTipi.js';
+import type { AaroOturumYetkiListesiProgramlarSonucProgramID } from './aaroOturumYetkiListesiProgramlarSonucProgramID.js';
 
 export interface AaroOturumYetkiListesiProgramlarSonuc {
   SirketID?: number;

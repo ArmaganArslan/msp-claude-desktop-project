@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroKayitSonucAaroModullerGridSutunAyarlariYoneticiKullaniciGridAyarlariResponseMesajlar } from './aaroKayitSonucAaroModullerGridSutunAyarlariYoneticiKullaniciGridAyarlariResponseMesajlar';
-import type { AaroModullerGridSutunAyarlariYoneticiKullaniciGridAyarlariResponse } from './aaroModullerGridSutunAyarlariYoneticiKullaniciGridAyarlariResponse';
+import type { AaroKayitSonucAaroModullerGridSutunAyarlariYoneticiKullaniciGridAyarlariResponseMesajlar } from './aaroKayitSonucAaroModullerGridSutunAyarlariYoneticiKullaniciGridAyarlariResponseMesajlar.js';
+import type { AaroModullerGridSutunAyarlariYoneticiKullaniciGridAyarlariResponse } from './aaroModullerGridSutunAyarlariYoneticiKullaniciGridAyarlariResponse.js';
 
 export interface AaroKayitSonucAaroModullerGridSutunAyarlariYoneticiKullaniciGridAyarlariResponse {
   Model?: AaroModullerGridSutunAyarlariYoneticiKullaniciGridAyarlariResponse;

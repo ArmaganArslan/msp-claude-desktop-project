@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroKayitSonucAaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModelMesajlar } from './aaroKayitSonucAaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModelMesajlar';
-import type { AaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModel } from './aaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModel';
+import type { AaroKayitSonucAaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModelMesajlar } from './aaroKayitSonucAaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModelMesajlar.js';
+import type { AaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModel } from './aaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModel.js';
 
 export interface AaroKayitSonucAaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModel {
   Model?: AaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModel;

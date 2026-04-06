@@ -4,6 +4,6 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerBankaKayitSadeKayitModel } from './aaroModullerBankaKayitSadeKayitModel';
+import type { AaroModullerBankaKayitSadeKayitModel } from './aaroModullerBankaKayitSadeKayitModel.js';
 
 export type AaroModullerBankaKayitSadeKayitModelBody = AaroModullerBankaKayitSadeKayitModel;

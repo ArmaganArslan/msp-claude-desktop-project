@@ -4,9 +4,9 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerSatisIadeIrsaliyesiHareketleriListeModelKartTipID } from './aaroModullerSatisIadeIrsaliyesiHareketleriListeModelKartTipID';
-import type { AaroModullerSatisIadeIrsaliyesiHareketleriListeModelOnayDurum } from './aaroModullerSatisIadeIrsaliyesiHareketleriListeModelOnayDurum';
-import type { AaroModullerSatisIadeIrsaliyesiHareketleriListeModelTipID } from './aaroModullerSatisIadeIrsaliyesiHareketleriListeModelTipID';
+import type { AaroModullerSatisIadeIrsaliyesiHareketleriListeModelKartTipID } from './aaroModullerSatisIadeIrsaliyesiHareketleriListeModelKartTipID.js';
+import type { AaroModullerSatisIadeIrsaliyesiHareketleriListeModelOnayDurum } from './aaroModullerSatisIadeIrsaliyesiHareketleriListeModelOnayDurum.js';
+import type { AaroModullerSatisIadeIrsaliyesiHareketleriListeModelTipID } from './aaroModullerSatisIadeIrsaliyesiHareketleriListeModelTipID.js';
 
 export interface AaroModullerSatisIadeIrsaliyesiHareketleriListeModel {
   IrsaliyeID?: number;

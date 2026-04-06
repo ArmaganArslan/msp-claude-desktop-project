@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerIthalatIhracatKayitSadeListeModelOnayDurum } from './aaroModullerIthalatIhracatKayitSadeListeModelOnayDurum';
-import type { AaroModullerIthalatIhracatKayitSadeListeModelTipID } from './aaroModullerIthalatIhracatKayitSadeListeModelTipID';
+import type { AaroModullerIthalatIhracatKayitSadeListeModelOnayDurum } from './aaroModullerIthalatIhracatKayitSadeListeModelOnayDurum.js';
+import type { AaroModullerIthalatIhracatKayitSadeListeModelTipID } from './aaroModullerIthalatIhracatKayitSadeListeModelTipID.js';
 
 export interface AaroModullerIthalatIhracatKayitSadeListeModel {
   CariKodu?: string;

@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerIthalatIhracatKayitSadeKayitModelTipID } from './aaroModullerIthalatIhracatKayitSadeKayitModelTipID';
+import type { AaroModullerIthalatIhracatKayitSadeKayitModelTipID } from './aaroModullerIthalatIhracatKayitSadeKayitModelTipID.js';
 
 export interface AaroModullerIthalatIhracatKayitSadeKayitModel {
   IthalatIhracatID?: number;

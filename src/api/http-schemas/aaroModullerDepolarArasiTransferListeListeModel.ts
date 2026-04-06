@@ -4,15 +4,15 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerDepolarArasiTransferListeListeModelCariTipID } from './aaroModullerDepolarArasiTransferListeListeModelCariTipID';
-import type { AaroModullerDepolarArasiTransferListeListeModelEFaturaDurumID } from './aaroModullerDepolarArasiTransferListeListeModelEFaturaDurumID';
-import type { AaroModullerDepolarArasiTransferListeListeModelEFaturaProfilID } from './aaroModullerDepolarArasiTransferListeListeModelEFaturaProfilID';
-import type { AaroModullerDepolarArasiTransferListeListeModelEFaturaTipID } from './aaroModullerDepolarArasiTransferListeListeModelEFaturaTipID';
-import type { AaroModullerDepolarArasiTransferListeListeModelEFaturaTurID } from './aaroModullerDepolarArasiTransferListeListeModelEFaturaTurID';
-import type { AaroModullerDepolarArasiTransferListeListeModelEFaturaUygulamaYanitiDurumID } from './aaroModullerDepolarArasiTransferListeListeModelEFaturaUygulamaYanitiDurumID';
-import type { AaroModullerDepolarArasiTransferListeListeModelKartTipID } from './aaroModullerDepolarArasiTransferListeListeModelKartTipID';
-import type { AaroModullerDepolarArasiTransferListeListeModelOnayDurum } from './aaroModullerDepolarArasiTransferListeListeModelOnayDurum';
-import type { AaroModullerDepolarArasiTransferListeListeModelTipID } from './aaroModullerDepolarArasiTransferListeListeModelTipID';
+import type { AaroModullerDepolarArasiTransferListeListeModelCariTipID } from './aaroModullerDepolarArasiTransferListeListeModelCariTipID.js';
+import type { AaroModullerDepolarArasiTransferListeListeModelEFaturaDurumID } from './aaroModullerDepolarArasiTransferListeListeModelEFaturaDurumID.js';
+import type { AaroModullerDepolarArasiTransferListeListeModelEFaturaProfilID } from './aaroModullerDepolarArasiTransferListeListeModelEFaturaProfilID.js';
+import type { AaroModullerDepolarArasiTransferListeListeModelEFaturaTipID } from './aaroModullerDepolarArasiTransferListeListeModelEFaturaTipID.js';
+import type { AaroModullerDepolarArasiTransferListeListeModelEFaturaTurID } from './aaroModullerDepolarArasiTransferListeListeModelEFaturaTurID.js';
+import type { AaroModullerDepolarArasiTransferListeListeModelEFaturaUygulamaYanitiDurumID } from './aaroModullerDepolarArasiTransferListeListeModelEFaturaUygulamaYanitiDurumID.js';
+import type { AaroModullerDepolarArasiTransferListeListeModelKartTipID } from './aaroModullerDepolarArasiTransferListeListeModelKartTipID.js';
+import type { AaroModullerDepolarArasiTransferListeListeModelOnayDurum } from './aaroModullerDepolarArasiTransferListeListeModelOnayDurum.js';
+import type { AaroModullerDepolarArasiTransferListeListeModelTipID } from './aaroModullerDepolarArasiTransferListeListeModelTipID.js';
 
 export interface AaroModullerDepolarArasiTransferListeListeModel {
   CariID?: number;

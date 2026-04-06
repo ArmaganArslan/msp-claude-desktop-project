@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerHareketTurleriAltKayitSadeKayitModelHareketTurDtyID } from './aaroModullerHareketTurleriAltKayitSadeKayitModelHareketTurDtyID';
+import type { AaroModullerHareketTurleriAltKayitSadeKayitModelHareketTurDtyID } from './aaroModullerHareketTurleriAltKayitSadeKayitModelHareketTurDtyID.js';
 
 export interface AaroModullerHareketTurleriAltKayitSadeKayitModel {
   HareketTurAltID?: number;

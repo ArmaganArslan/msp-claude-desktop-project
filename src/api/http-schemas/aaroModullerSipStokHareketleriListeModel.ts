@@ -4,9 +4,9 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerSipStokHareketleriListeModelKartTipID } from './aaroModullerSipStokHareketleriListeModelKartTipID';
-import type { AaroModullerSipStokHareketleriListeModelOnayDurum } from './aaroModullerSipStokHareketleriListeModelOnayDurum';
-import type { AaroModullerSipStokHareketleriListeModelTipID } from './aaroModullerSipStokHareketleriListeModelTipID';
+import type { AaroModullerSipStokHareketleriListeModelKartTipID } from './aaroModullerSipStokHareketleriListeModelKartTipID.js';
+import type { AaroModullerSipStokHareketleriListeModelOnayDurum } from './aaroModullerSipStokHareketleriListeModelOnayDurum.js';
+import type { AaroModullerSipStokHareketleriListeModelTipID } from './aaroModullerSipStokHareketleriListeModelTipID.js';
 
 export interface AaroModullerSipStokHareketleriListeModel {
   BirimFiyatNet?: number;

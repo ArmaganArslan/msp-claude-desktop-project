@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerHareketTurleriAltKayitSadeListeModelHareketTurDtyID } from './aaroModullerHareketTurleriAltKayitSadeListeModelHareketTurDtyID';
+import type { AaroModullerHareketTurleriAltKayitSadeListeModelHareketTurDtyID } from './aaroModullerHareketTurleriAltKayitSadeListeModelHareketTurDtyID.js';
 
 export interface AaroModullerHareketTurleriAltKayitSadeListeModel {
   SubeKodu?: string;

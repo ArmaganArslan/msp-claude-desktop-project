@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerKasaKayitSadeMinModelTipID } from './aaroModullerKasaKayitSadeMinModelTipID';
+import type { AaroModullerKasaKayitSadeMinModelTipID } from './aaroModullerKasaKayitSadeMinModelTipID.js';
 
 /**
  * Kasa kartları için minimal veri modeli. Dropdown ve hızlı listeleme işlemleri için kullanılır.

@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerFiyatListesiSatirlarKayitSadeKayitModelTipID } from './aaroModullerFiyatListesiSatirlarKayitSadeKayitModelTipID';
+import type { AaroModullerFiyatListesiSatirlarKayitSadeKayitModelTipID } from './aaroModullerFiyatListesiSatirlarKayitSadeKayitModelTipID.js';
 
 export interface AaroModullerFiyatListesiSatirlarKayitSadeKayitModel {
   StrID?: number;

@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerPaketKayitSadeKayitModelTipID } from './aaroModullerPaketKayitSadeKayitModelTipID';
+import type { AaroModullerPaketKayitSadeKayitModelTipID } from './aaroModullerPaketKayitSadeKayitModelTipID.js';
 
 export interface AaroModullerPaketKayitSadeKayitModel {
   PaketID?: number;

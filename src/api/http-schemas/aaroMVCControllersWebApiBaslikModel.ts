@@ -4,12 +4,12 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroMVCControllersWebApiBaslikModelEFaturaDurumID } from './aaroMVCControllersWebApiBaslikModelEFaturaDurumID';
-import type { AaroMVCControllersWebApiBaslikModelEFaturaProfilID } from './aaroMVCControllersWebApiBaslikModelEFaturaProfilID';
-import type { AaroMVCControllersWebApiBaslikModelEFaturaTipID } from './aaroMVCControllersWebApiBaslikModelEFaturaTipID';
-import type { AaroMVCControllersWebApiBaslikModelEFaturaTurID } from './aaroMVCControllersWebApiBaslikModelEFaturaTurID';
-import type { AaroMVCControllersWebApiBaslikModelOnayDurum } from './aaroMVCControllersWebApiBaslikModelOnayDurum';
-import type { AaroMVCControllersWebApiBaslikModelTipID } from './aaroMVCControllersWebApiBaslikModelTipID';
+import type { AaroMVCControllersWebApiBaslikModelEFaturaDurumID } from './aaroMVCControllersWebApiBaslikModelEFaturaDurumID.js';
+import type { AaroMVCControllersWebApiBaslikModelEFaturaProfilID } from './aaroMVCControllersWebApiBaslikModelEFaturaProfilID.js';
+import type { AaroMVCControllersWebApiBaslikModelEFaturaTipID } from './aaroMVCControllersWebApiBaslikModelEFaturaTipID.js';
+import type { AaroMVCControllersWebApiBaslikModelEFaturaTurID } from './aaroMVCControllersWebApiBaslikModelEFaturaTurID.js';
+import type { AaroMVCControllersWebApiBaslikModelOnayDurum } from './aaroMVCControllersWebApiBaslikModelOnayDurum.js';
+import type { AaroMVCControllersWebApiBaslikModelTipID } from './aaroMVCControllersWebApiBaslikModelTipID.js';
 
 export interface AaroMVCControllersWebApiBaslikModel {
   /** Belgenin sistemdeki benzersiz temel ID'si. */

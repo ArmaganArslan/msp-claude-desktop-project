@@ -8,7 +8,8 @@
     "start": "node dist/index.js",
     "dev": "tsx src/index.ts",
     "typecheck": "tsc --noEmit",
-    "logs": "powershell -Command \"[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; if (!(Test-Path logs)) { New-Item -ItemType Directory -Path logs }; if (!(Test-Path logs/requests.log)) { New-Item -ItemType File -Path logs/requests.log }; Get-Content -Path logs/requests.log -Wait -Tail 50\""
+    "logs": "powershell -Command \"[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; if (!(Test-Path logs)) { New-Item -ItemType Directory -Path logs }; if (!(Test-Path logs/requests.log)) { New-Item -ItemType File -Path logs/requests.log }; Get-Content -Path logs/requests.log -Wait -Tail 50\"",
+    "generate": "orval --config ./orval.config.ts && node scripts/fix-esm-imports.mjs"
   },
   "keywords": [],
   "author": "",

@@ -4,9 +4,9 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerCekSenetHareketleriListeListeModelKartTipID } from './aaroModullerCekSenetHareketleriListeListeModelKartTipID';
-import type { AaroModullerCekSenetHareketleriListeListeModelOnayDurum } from './aaroModullerCekSenetHareketleriListeListeModelOnayDurum';
-import type { AaroModullerCekSenetHareketleriListeListeModelTipID } from './aaroModullerCekSenetHareketleriListeListeModelTipID';
+import type { AaroModullerCekSenetHareketleriListeListeModelKartTipID } from './aaroModullerCekSenetHareketleriListeListeModelKartTipID.js';
+import type { AaroModullerCekSenetHareketleriListeListeModelOnayDurum } from './aaroModullerCekSenetHareketleriListeListeModelOnayDurum.js';
+import type { AaroModullerCekSenetHareketleriListeListeModelTipID } from './aaroModullerCekSenetHareketleriListeListeModelTipID.js';
 
 export interface AaroModullerCekSenetHareketleriListeListeModel {
   CekSenetID?: number;

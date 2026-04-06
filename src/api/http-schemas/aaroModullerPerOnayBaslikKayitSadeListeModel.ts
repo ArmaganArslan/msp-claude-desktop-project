@@ -4,8 +4,8 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerPerOnayBaslikKayitSadeListeModelOnayDurum } from './aaroModullerPerOnayBaslikKayitSadeListeModelOnayDurum';
-import type { AaroModullerPerOnayBaslikKayitSadeListeModelTipID } from './aaroModullerPerOnayBaslikKayitSadeListeModelTipID';
+import type { AaroModullerPerOnayBaslikKayitSadeListeModelOnayDurum } from './aaroModullerPerOnayBaslikKayitSadeListeModelOnayDurum.js';
+import type { AaroModullerPerOnayBaslikKayitSadeListeModelTipID } from './aaroModullerPerOnayBaslikKayitSadeListeModelTipID.js';
 
 export interface AaroModullerPerOnayBaslikKayitSadeListeModel {
   OnayDurum?: AaroModullerPerOnayBaslikKayitSadeListeModelOnayDurum;

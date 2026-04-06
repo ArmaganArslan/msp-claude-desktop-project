@@ -4,7 +4,7 @@
  * Aaro API
  * OpenAPI spec version: v1
  */
-import type { AaroModullerUrReceteKayitSadeKayitModelTipID } from './aaroModullerUrReceteKayitSadeKayitModelTipID';
+import type { AaroModullerUrReceteKayitSadeKayitModelTipID } from './aaroModullerUrReceteKayitSadeKayitModelTipID.js';
 
 export interface AaroModullerUrReceteKayitSadeKayitModel {
   ReceteID?: number;
