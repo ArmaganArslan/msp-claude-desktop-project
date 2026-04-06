@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler", 
+    "allowImportingTsExtensions": false, // Uzantısız importlara izin ver
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
