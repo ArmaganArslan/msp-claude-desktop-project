@@ -14,3 +14,6 @@ export default defineConfig({
     },
   },
 });
+
+// npx swagger2openapi src/api/schema/v1.json -o src/api/schema/openapi.json
+// npx orval --config ./orval.config.ts
