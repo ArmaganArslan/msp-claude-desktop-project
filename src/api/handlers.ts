@@ -5193,22 +5193,22 @@ Alternatif İsimler: GetActiveBasket, SepetListesi, GetDraftOrderItems
 Kullanım: Bayi portalında sepet ekranı açıldığında ürünlerin, miktarların ve güncel fiyatların gösterilmesi için kullanılır.
  */
 
-export type Bayi_SepetGetArgs = {
-  queryParams: BayiSepetGetParams;
-}
+// export type Bayi_SepetGetArgs = {
+//   queryParams: BayiSepetGetParams;
+// }
 
-export const Bayi_SepetGetHandler = async (args: Bayi_SepetGetArgs) => {
-  const res = await Bayi_SepetGet(args.queryParams);
+// export const Bayi_SepetGetHandler = async (args: Bayi_SepetGetArgs) => {
+//   const res = await Bayi_SepetGet(args.queryParams);
 
-  return {
-    content: [
-      {
-        type: 'text' as const,
-        text: JSON.stringify(res),
-      },
-    ],
-  };
-};
+//   return {
+//     content: [
+//       {
+//         type: 'text' as const,
+//         text: JSON.stringify(res),
+//       },
+//     ],
+//   };
+// };
 
 /**
  * @summary Sepeti (Taslak Siparişi) onaylayarak kesin siparişe dönüştürür veya tüm sepeti iptal ederek siler.
@@ -10876,22 +10876,22 @@ export const DepoTerminal_FaturaIrsaliyeKalemDetaylarGetHandler = async (args: D
 };
 
 
-export type DepoTerminal_FaturaIrsaliyeKalemDetayGetArgs = {
-  queryParams: DepoTerminalFaturaIrsaliyeKalemDetayGetParams;
-}
+// export type DepoTerminal_FaturaIrsaliyeKalemDetayGetArgs = {
+//   queryParams: DepoTerminalFaturaIrsaliyeKalemDetayGetParams;
+// }
 
-export const DepoTerminal_FaturaIrsaliyeKalemDetayGetHandler = async (args: DepoTerminal_FaturaIrsaliyeKalemDetayGetArgs) => {
-  const res = await DepoTerminal_FaturaIrsaliyeKalemDetayGet(args.queryParams);
+// export const DepoTerminal_FaturaIrsaliyeKalemDetayGetHandler = async (args: DepoTerminal_FaturaIrsaliyeKalemDetayGetArgs) => {
+//   const res = await DepoTerminal_FaturaIrsaliyeKalemDetayGet(args.queryParams);
 
-  return {
-    content: [
-      {
-        type: 'text' as const,
-        text: JSON.stringify(res),
-      },
-    ],
-  };
-};
+//   return {
+//     content: [
+//       {
+//         type: 'text' as const,
+//         text: JSON.stringify(res),
+//       },
+//     ],
+//   };
+// };
 
 
 export type DepoTerminal_FaturaIrsaliyeKalemDetayPostArgs = {
@@ -10931,18 +10931,18 @@ export const DepoTerminal_StokMiktarListesiGetHandler = async (args: DepoTermina
 };
 
 
-export const DepoTerminal_TransferGetHandler = async () => {
-  const res = await DepoTerminal_TransferGet();
+// export const DepoTerminal_TransferGetHandler = async () => {
+//   const res = await DepoTerminal_TransferGet();
 
-  return {
-    content: [
-      {
-        type: 'text' as const,
-        text: JSON.stringify(res),
-      },
-    ],
-  };
-};
+//   return {
+//     content: [
+//       {
+//         type: 'text' as const,
+//         text: JSON.stringify(res),
+//       },
+//     ],
+//   };
+// };
 
 
 export type DepoTerminal_TransferPostArgs = {
@@ -11027,22 +11027,22 @@ export const DepoTerminal_DepolarArasiTransferKalemDetaylarGetHandler = async ()
 };
 
 
-export type DepoTerminal_DepolarArasiTransferKalemDetayGetArgs = {
-  queryParams: DepoTerminalDepolarArasiTransferKalemDetayGetParams;
-}
+// export type DepoTerminal_DepolarArasiTransferKalemDetayGetArgs = {
+//   queryParams: DepoTerminalDepolarArasiTransferKalemDetayGetParams;
+// }
 
-export const DepoTerminal_DepolarArasiTransferKalemDetayGetHandler = async (args: DepoTerminal_DepolarArasiTransferKalemDetayGetArgs) => {
-  const res = await DepoTerminal_DepolarArasiTransferKalemDetayGet(args.queryParams);
+// export const DepoTerminal_DepolarArasiTransferKalemDetayGetHandler = async (args: DepoTerminal_DepolarArasiTransferKalemDetayGetArgs) => {
+//   const res = await DepoTerminal_DepolarArasiTransferKalemDetayGet(args.queryParams);
 
-  return {
-    content: [
-      {
-        type: 'text' as const,
-        text: JSON.stringify(res),
-      },
-    ],
-  };
-};
+//   return {
+//     content: [
+//       {
+//         type: 'text' as const,
+//         text: JSON.stringify(res),
+//       },
+//     ],
+//   };
+// };
 
 
 export type DepoTerminal_DepolarArasiTransferKalemDetayPostArgs = {
@@ -13320,22 +13320,22 @@ export const FiyatListesiSatirlar_BulkCreatePostHandler = async (args: FiyatList
  * @summary Fiyat listesindeki birden fazla satırı toplu olarak günceller.
  */
 
-export type FiyatListesiSatirlar_BulkUpdatePostArgs = {
-  bodyParams: FiyatListesiSatirlarBulkUpdatePostBodyOneItem[] | FiyatListesiSatirlarBulkUpdatePostBodyTwoItem[] | FiyatListesiSatirlarBulkUpdatePostBodyThreeItem[] | FiyatListesiSatirlarBulkUpdatePostBodyFourItem[] | FiyatListesiSatirlarBulkUpdatePostBodyFiveItem[];
-}
+// export type FiyatListesiSatirlar_BulkUpdatePostArgs = {
+//   bodyParams: FiyatListesiSatirlarBulkUpdatePostBodyOneItem[] | FiyatListesiSatirlarBulkUpdatePostBodyTwoItem[] | FiyatListesiSatirlarBulkUpdatePostBodyThreeItem[] | FiyatListesiSatirlarBulkUpdatePostBodyFourItem[] | FiyatListesiSatirlarBulkUpdatePostBodyFiveItem[];
+// }
 
-export const FiyatListesiSatirlar_BulkUpdatePostHandler = async (args: FiyatListesiSatirlar_BulkUpdatePostArgs) => {
-  const res = await FiyatListesiSatirlar_BulkUpdatePost(args.bodyParams);
+// export const FiyatListesiSatirlar_BulkUpdatePostHandler = async (args: FiyatListesiSatirlar_BulkUpdatePostArgs) => {
+//   const res = await FiyatListesiSatirlar_BulkUpdatePost(args.bodyParams);
 
-  return {
-    content: [
-      {
-        type: 'text' as const,
-        text: JSON.stringify(res),
-      },
-    ],
-  };
-};
+//   return {
+//     content: [
+//       {
+//         type: 'text' as const,
+//         text: JSON.stringify(res),
+//       },
+//     ],
+//   };
+// };
 
 /**
  * @summary Belirtilen ID'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.
@@ -26925,22 +26925,22 @@ export const SatisIrsaliyesiListe_DetayliListeGetHandler = async (args: SatisIrs
 Kullanım: Çok sayıda seri numarasının (örn: barkod okutarak) tek seferde sisteme aktarılması veya otomatik seri üretilmesi işlemlerinde kullanılır. Kayıt Getirme işlemidir.
  */
 
-export type SeriLot_SeriLotHizliKayitGetArgs = {
-  queryParams: SeriLotSeriLotHizliKayitGetParams;
-}
+// export type SeriLot_SeriLotHizliKayitGetArgs = {
+//   queryParams: SeriLotSeriLotHizliKayitGetParams;
+// }
 
-export const SeriLot_SeriLotHizliKayitGetHandler = async (args: SeriLot_SeriLotHizliKayitGetArgs) => {
-  const res = await SeriLot_SeriLotHizliKayitGet(args.queryParams);
+// export const SeriLot_SeriLotHizliKayitGetHandler = async (args: SeriLot_SeriLotHizliKayitGetArgs) => {
+//   const res = await SeriLot_SeriLotHizliKayitGet(args.queryParams);
 
-  return {
-    content: [
-      {
-        type: 'text' as const,
-        text: JSON.stringify(res),
-      },
-    ],
-  };
-};
+//   return {
+//     content: [
+//       {
+//         type: 'text' as const,
+//         text: JSON.stringify(res),
+//       },
+//     ],
+//   };
+// };
 
 /**
  * @summary Seri/Lot kayıtları için hızlı giriş ekranı bilgilerini kaydeder.

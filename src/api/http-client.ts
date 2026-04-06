@@ -80111,7 +80111,9 @@ export const getUrAkisOperasyonListeGetGetUrl = (params?: UrAkisOperasyonListeGe
 
     if (Array.isArray(value) && explodeParameters.includes(key)) {
       value.forEach((v) => {
-        normalizedParams.append(key, v === null ? 'null' : v.toString());
+        if (v !== undefined) {
+          normalizedParams.append(key, v === null ? 'null' : v.toString());
+        }
       });
       return;
     }
