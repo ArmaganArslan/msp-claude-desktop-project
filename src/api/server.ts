@@ -458,7 +458,7 @@ import {
   FiyatListesi_NotEklePostHandler,
   FiyatListesi_NotSilDeleteHandler,
   FiyatListesiSatirlar_BulkCreatePostHandler,
-  FiyatListesiSatirlar_BulkUpdatePostHandler,
+  // FiyatListesiSatirlar_BulkUpdatePostHandler,
   FiyatListesiSatirlar_GetGetHandler,
   FiyatListesiSatirlar_PutPutHandler,
   FiyatListesiSatirlar_DeleteDeleteHandler,
@@ -8111,14 +8111,14 @@ server.tool(
   FiyatListesiSatirlar_BulkCreatePostHandler
 );
 
-server.tool(
-  'FiyatListesiSatirlar_BulkUpdatePost',
-  'Fiyat listesindeki birden fazla satırı toplu olarak günceller.',
-  {
-    bodyParams: FiyatListesiSatirlarBulkUpdatePostBody
-  },
-  FiyatListesiSatirlar_BulkUpdatePostHandler
-);
+// server.tool(
+//   'FiyatListesiSatirlar_BulkUpdatePost',
+//   'Fiyat listesindeki birden fazla satırı toplu olarak günceller.',
+//   {
+//     bodyParams: FiyatListesiSatirlarBulkUpdatePostBody
+//   },
+//   FiyatListesiSatirlar_BulkUpdatePostHandler
+// );
 
 server.tool(
   'FiyatListesiSatirlar_GetGet',
