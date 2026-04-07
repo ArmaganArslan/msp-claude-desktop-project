@@ -102,12 +102,74 @@ async function main() {
   const server = new McpServer({
     name: "aaro-erp-mcp",
     version: "2.0.0",
-  });
+  },
+    {
+      instructions: [
+        "You are connected to a LIVE ERP system via tools.",
+
+        "You do NOT have access to ERP data unless you use tools.",
+
+        "If the request is about ERP and you do not call tools, your answer is INCORRECT.",
+
+        "ALWAYS use tools for anything related to:",
+        "- stok",
+        "- cari",
+        "- fatura",
+        "- sipariş",
+        "- muhasebe",
+        "- müşteri",
+        "- ürün",
+        "- or ANY business / ERP data",
+
+        "",
+        "MANDATORY WORKFLOW:",
+        "1. You MUST call search_api_tools first",
+        "2. Then you MUST call get_tool_details",
+        "3. Then you MUST call call_api_tool",
+
+        "",
+        "STRICT RULES:",
+        "- You are NOT allowed to skip steps",
+        "- You are NOT allowed to answer directly",
+        "- You MUST follow the workflow exactly",
+        "- If unsure, ALWAYS start with search_api_tools",
+
+        "",
+        "If you skip tool usage when required, your answer is WRONG.",
+        "Do NOT guess. Do NOT simulate data.",
+      ].join("\n"),
+    },
+  );
 
   // ── 1. search_api_tools ──────────────────────────────────────────────────
   server.tool(
     "search_api_tools",
-    "Aaro ERP API endpointlerini arar. Türkçe veya İngilizce arama yapabilirsiniz. Örnek: 'cari kart listele', 'stok bakiye', 'fatura olustur'",
+    [
+      "PRIMARY ENTRY POINT for ALL ERP requests.",
+
+      "",
+      "You MUST call this tool if the user asks for:",
+      "- any data",
+      "- listing records",
+      "- fetching information",
+      "- searching",
+      "- filtering",
+      "- anything related to business entities (stok, cari, fatura, sipariş, müşteri, ürün, etc.)",
+
+      "",
+      "STRICT RULES:",
+      "- Do NOT answer the user directly",
+      "- Do NOT skip this step",
+      "- If there is ANY chance this is ERP-related → CALL THIS TOOL",
+
+      "",
+      "MANDATORY FLOW:",
+      "- After calling this tool, you MUST call get_tool_details",
+      "- You MUST NOT produce final answers after this step",
+
+      "",
+      "If you do not call this tool when required, your answer is INCORRECT.",
+    ].join("\n"),
     {
       query: z.string().describe("Arama sorgusu"),
       limit: z
@@ -137,7 +199,29 @@ async function main() {
   // ── 2. get_tool_details ──────────────────────────────────────────────────
   server.tool(
     "get_tool_details",
-    "Belirli bir API tool'unun parametre detaylarını (alan adları ve tipleri) getirir. search_api_tools sonucundan gelen tool adını kullanın.",
+    [
+      "SECOND STEP in ERP workflow.",
+
+      "",
+      "Use this tool AFTER search_api_tools to retrieve:",
+      "- parameter names",
+      "- parameter types",
+      "- required fields",
+
+      "",
+      "STRICT RULES:",
+      "- You MUST use the toolName from search_api_tools result",
+      "- Do NOT guess parameters",
+      "- Do NOT skip this step",
+
+      "",
+      "MANDATORY FLOW:",
+      "- After calling this tool, you MUST call call_api_tool",
+      "- You MUST NOT answer the user yet",
+
+      "",
+      "If you skip this step, your answer is INCORRECT.",
+    ].join("\n"),
     {
       toolName: z.string().describe("Tool adı (search_api_tools sonucundan)"),
     },
@@ -162,7 +246,26 @@ async function main() {
   // ── 3. call_api_tool ────────────────────────────────────────────────────
   server.tool(
     "call_api_tool",
-    "Belirtilen Aaro API endpoint'ini çağırır. Parametreler pathParams, queryParams ve/veya bodyParams olarak verilir.",
+    [
+      "FINAL STEP in ERP workflow.",
+
+      "",
+      "This tool performs the actual API call and returns REAL ERP data.",
+
+      "",
+      "STRICT RULES:",
+      "- This is the ONLY tool that can produce a final answer",
+      "- You MUST have correct parameters from get_tool_details",
+      "- Do NOT guess parameters",
+
+      "",
+      "MANDATORY:",
+      "- You MUST call this tool before answering the user",
+      "- You MUST NOT answer the user without calling this tool",
+
+      "",
+      "If you answer without calling this tool, your answer is INCORRECT.",
+    ].join("\n"),
     {
       toolName: z.string().describe("Çağrılacak tool adı"),
       params: z
