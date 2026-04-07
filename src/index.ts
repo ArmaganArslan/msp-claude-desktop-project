@@ -42,6 +42,7 @@ import {
   getToolDetails,
   callTool,
 } from "./registry/tool-registry.js";
+import { log, logHttp, logMcpTool, getLogConfig } from "./logger.js";
 
 // ─── ERP Auth: API_TOKEN / ERP_BEARER_TOKEN ──────────────────────────────────
 // Orval-generated client uses global fetch. We wrap fetch once so every API call
@@ -49,33 +50,51 @@ import {
 const bearerFromEnv =
   process.env.API_TOKEN || process.env.ERP_BEARER_TOKEN || undefined;
 
-if (bearerFromEnv) {
-  const originalFetch = globalThis.fetch.bind(globalThis);
+const originalFetch = globalThis.fetch.bind(globalThis);
 
-  globalThis.fetch = async (
-    input: RequestInfo | URL,
-    init?: RequestInit,
-  ): Promise<Response> => {
+globalThis.fetch = async (
+  input: RequestInfo | URL,
+  init?: RequestInit,
+): Promise<Response> => {
+  const url =
+    typeof input === "string"
+      ? input
+      : input instanceof URL
+        ? input.href
+        : input.url;
+  const method = (init?.method ?? "GET").toUpperCase();
+
+  if (bearerFromEnv) {
     const existing = new Headers(init?.headers ?? undefined);
     if (!existing.has("Authorization")) {
       existing.set("Authorization", `Bearer ${bearerFromEnv}`);
     }
     if (!existing.has("Accept")) existing.set("Accept", "application/json");
+    init = { ...init, headers: existing };
+  }
 
-    return originalFetch(input, {
-      ...init,
-      headers: existing,
+  const started = performance.now();
+  try {
+    const res = await originalFetch(input, init);
+    logHttp(method, url, res.status, Math.round(performance.now() - started));
+    return res;
+  } catch (err: any) {
+    log.error("[HTTP] fetch failed", {
+      method,
+      url,
+      message: err?.message ?? String(err),
     });
-  };
-}
+    throw err;
+  }
+};
 
 // ─── Hata Yakalayıcılar ─────────────────────────────────────────────────────
 process.on("uncaughtException", (err) => {
-  process.stderr.write(`Yakalanmamis hata: ${err.message}\n${err.stack}\n`);
+  log.error("uncaughtException", { message: err.message, stack: err.stack });
 });
 
 process.on("unhandledRejection", (reason) => {
-  process.stderr.write(`Yakalanmamis Promise hatasi: ${String(reason)}\n`);
+  log.error("unhandledRejection", { reason: String(reason) });
 });
 
 // ─── Ana Fonksiyon ───────────────────────────────────────────────────────────
@@ -97,7 +116,22 @@ async function main() {
         .default(10)
         .describe("Maksimum sonuç sayısı"),
     },
-    async (args) => searchTools(args.query, args.limit),
+    async (args) => {
+      logMcpTool("search_api_tools", "start", args as Record<string, unknown>);
+      const started = performance.now();
+      try {
+        const out = await searchTools(args.query, args.limit);
+        logMcpTool("search_api_tools", "end", undefined, {
+          ms: Math.round(performance.now() - started),
+        });
+        return out;
+      } catch (e: any) {
+        logMcpTool("search_api_tools", "error", args as Record<string, unknown>, {
+          message: e?.message,
+        });
+        throw e;
+      }
+    },
   );
 
   // ── 2. get_tool_details ──────────────────────────────────────────────────
@@ -107,7 +141,22 @@ async function main() {
     {
       toolName: z.string().describe("Tool adı (search_api_tools sonucundan)"),
     },
-    async (args) => getToolDetails(args.toolName),
+    async (args) => {
+      logMcpTool("get_tool_details", "start", args as Record<string, unknown>);
+      const started = performance.now();
+      try {
+        const out = await getToolDetails(args.toolName);
+        logMcpTool("get_tool_details", "end", undefined, {
+          ms: Math.round(performance.now() - started),
+        });
+        return out;
+      } catch (e: any) {
+        logMcpTool("get_tool_details", "error", args as Record<string, unknown>, {
+          message: e?.message,
+        });
+        throw e;
+      }
+    },
   );
 
   // ── 3. call_api_tool ────────────────────────────────────────────────────
@@ -123,17 +172,43 @@ async function main() {
           "Tool parametreleri: { pathParams?: {...}, queryParams?: {...}, bodyParams?: {...} }",
         ),
     },
-    async (args) => callTool(args.toolName, args.params),
+    async (args) => {
+      logMcpTool("call_api_tool", "start", args as Record<string, unknown>);
+      const started = performance.now();
+      try {
+        const out = await callTool(args.toolName, args.params);
+        const err =
+          out &&
+          typeof out === "object" &&
+          "isError" in out &&
+          (out as { isError?: boolean }).isError;
+        logMcpTool("call_api_tool", "end", undefined, {
+          ms: Math.round(performance.now() - started),
+          targetTool: args.toolName,
+          mcpError: Boolean(err),
+        });
+        return out;
+      } catch (e: any) {
+        logMcpTool("call_api_tool", "error", args as Record<string, unknown>, {
+          message: e?.message,
+        });
+        throw e;
+      }
+    },
   );
 
   // ── Claude Desktop'a Bağlan ────────────────────────────────────────────
   const transport = new StdioServerTransport();
   await server.connect(transport);
 
-  process.stderr.write("AARO ERP MCP Server baslatildi (stdio modu)\n");
+  const cfg = getLogConfig();
+  log.info("AARO ERP MCP Server baslatildi (stdio)", {
+    ...cfg,
+    authConfigured: Boolean(bearerFromEnv),
+  });
 }
 
 main().catch((err) => {
-  process.stderr.write(`Baslatma hatasi: ${err.message}\n`);
+  log.error("Baslatma hatasi", { message: err.message, stack: err.stack });
   process.exit(1);
 });

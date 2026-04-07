@@ -2,6 +2,7 @@ import { readFileSync } from "fs";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import Fuse from "fuse.js";
+import { log } from "../logger.js";
 
 interface CatalogEntry {
   name: string;
@@ -48,10 +49,14 @@ let handlersModule: Record<string, any> | null = null;
 
 async function getHandlers(): Promise<Record<string, any>> {
   if (!handlersModule) {
+    const started = performance.now();
     handlersModule = (await import("../api/handlers.js")) as Record<
       string,
       any
     >;
+    log.debug("api/handlers modulu yuklendi", {
+      ms: Math.round(performance.now() - started),
+    });
   }
   return handlersModule;
 }
