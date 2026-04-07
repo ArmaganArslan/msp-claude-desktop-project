@@ -8111,14 +8111,14 @@ server.tool(
   FiyatListesiSatirlar_BulkCreatePostHandler
 );
 
-server.tool(
-  'FiyatListesiSatirlar_BulkUpdatePost',
-  'Fiyat listesindeki birden fazla satırı toplu olarak günceller.',
-  {
-    bodyParams: FiyatListesiSatirlarBulkUpdatePostBody
-  },
-  FiyatListesiSatirlar_BulkUpdatePostHandler
-);
+// server.tool(
+//   'FiyatListesiSatirlar_BulkUpdatePost',
+//   'Fiyat listesindeki birden fazla satırı toplu olarak günceller.',
+//   {
+//     bodyParams: FiyatListesiSatirlarBulkUpdatePostBody
+//   },
+//   FiyatListesiSatirlar_BulkUpdatePostHandler
+// );
 
 server.tool(
   'FiyatListesiSatirlar_GetGet',
