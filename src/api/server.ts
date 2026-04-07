@@ -8,10 +8,10 @@
 import {
   McpServer
 } from '@modelcontextprotocol/sdk/server/mcp.js';
-  
+
 import {
   StdioServerTransport
-} from '@modelcontextprotocol/sdk/server/stdio.js';  
+} from '@modelcontextprotocol/sdk/server/stdio.js';
 
 import {
   Account_OturumBilgisiGetirPostHandler,
@@ -8111,14 +8111,14 @@ server.tool(
   FiyatListesiSatirlar_BulkCreatePostHandler
 );
 
-// server.tool(
-//   'FiyatListesiSatirlar_BulkUpdatePost',
-//   'Fiyat listesindeki birden fazla satırı toplu olarak günceller.',
-//   {
-//     bodyParams: FiyatListesiSatirlarBulkUpdatePostBody
-//   },
-//   FiyatListesiSatirlar_BulkUpdatePostHandler
-// );
+server.tool(
+  'FiyatListesiSatirlar_BulkUpdatePost',
+  'Fiyat listesindeki birden fazla satırı toplu olarak günceller.',
+  {
+    bodyParams: FiyatListesiSatirlarBulkUpdatePostBody
+  },
+  FiyatListesiSatirlar_BulkUpdatePostHandler
+);
 
 server.tool(
   'FiyatListesiSatirlar_GetGet',

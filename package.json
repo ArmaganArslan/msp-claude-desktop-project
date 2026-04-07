@@ -9,7 +9,8 @@
     "dev": "tsx src/index.ts",
     "typecheck": "tsc --noEmit",
     "logs": "powershell -Command \"[Console]::OutputEncoding = [System.Text.Encoding]::UTF8; if (!(Test-Path logs)) { New-Item -ItemType Directory -Path logs }; if (!(Test-Path logs/requests.log)) { New-Item -ItemType File -Path logs/requests.log }; Get-Content -Path logs/requests.log -Wait -Tail 50\"",
-    "generate": "orval --config ./orval.config.ts && node scripts/fix-esm-imports.mjs"
+    "generate-models": "node scripts/generate-model-descriptions.mjs",
+    "generate": "orval --config ./orval.config.ts && node scripts/fix-esm-imports.mjs && npm run generate-models"
   },
   "keywords": [],
   "author": "",

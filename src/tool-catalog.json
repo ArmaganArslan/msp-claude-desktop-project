@@ -14628,6 +14628,14 @@
     }
   },
   {
+    "name": "FiyatListesiSatirlar_BulkUpdatePost",
+    "description": "Fiyat listesindeki birden fazla satırı toplu olarak günceller.",
+    "handlerName": "FiyatListesiSatirlar_BulkUpdatePostHandler",
+    "params": {
+      "bodyParams": []
+    }
+  },
+  {
     "name": "FiyatListesiSatirlar_GetGet",
     "description": "Belirtilen ID'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.",
     "handlerName": "FiyatListesiSatirlar_GetGetHandler",

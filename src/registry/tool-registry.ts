@@ -4,6 +4,12 @@ import { dirname, join } from "path";
 import Fuse from "fuse.js";
 import { log } from "../logger.js";
 
+interface ModelDescEntry {
+  responseModel?: Record<string, string>;
+  bodyModel?: Record<string, string>;
+  paramDescriptions?: Record<string, string>;
+}
+
 interface CatalogEntry {
   name: string;
   description: string;
@@ -17,6 +23,11 @@ const __dirname = dirname(__filename);
 const catalogPath = join(__dirname, "../../src/tool-catalog.json");
 const catalog: CatalogEntry[] = JSON.parse(
   readFileSync(catalogPath, "utf-8"),
+);
+
+const modelDescPath = join(__dirname, "../../src/model-descriptions.json");
+const modelDescriptions: Record<string, ModelDescEntry> = JSON.parse(
+  readFileSync(modelDescPath, "utf-8"),
 );
 
 const catalogMap = new Map<string, CatalogEntry>();
@@ -100,11 +111,30 @@ export async function getToolDetails(toolName: string) {
   const entry = catalogMap.get(toolName);
   if (!entry) return mcpError(`Tool '${toolName}' bulunamadı`);
 
-  return mcpText({
+  const modelDesc = modelDescriptions[toolName];
+
+  const details: Record<string, unknown> = {
     name: entry.name,
     description: entry.description || "(açıklama yok)",
     params: entry.params ?? "Bu tool parametre almaz.",
-  });
+  };
+
+  // Parametre açıklamaları (query/path param descriptions)
+  if (modelDesc?.paramDescriptions) {
+    details.paramDescriptions = modelDesc.paramDescriptions;
+  }
+
+  // Body model açıklamaları (POST/PUT gönderilecek alan açıklamaları)
+  if (modelDesc?.bodyModel) {
+    details.bodyModel = modelDesc.bodyModel;
+  }
+
+  // Response model açıklamaları (API'den dönecek alanların ne anlama geldiği)
+  if (modelDesc?.responseModel) {
+    details.responseModel = modelDesc.responseModel;
+  }
+
+  return mcpText(details);
 }
 
 export async function callTool(
