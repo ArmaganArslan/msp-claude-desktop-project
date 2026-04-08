@@ -34,8 +34,12 @@ try {
 }
 
 // ─── Imports ─────────────────────────────────────────────────────────────────
+import express from "express";
+import cors from "cors";
+import { AsyncLocalStorage } from "node:async_hooks";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { z } from "zod";
 import {
   searchTools,
@@ -46,9 +50,11 @@ import { log, logHttp, logMcpTool, getLogConfig } from "./logger.js";
 
 // ─── ERP Auth: API_TOKEN / ERP_BEARER_TOKEN ──────────────────────────────────
 // Orval-generated client uses global fetch. We wrap fetch once so every API call
-// automatically sends Authorization header from Claude Desktop "env".
+// automatically sends Authorization header from Claude Desktop "env" or express request.
 const bearerFromEnv =
   process.env.API_TOKEN || process.env.ERP_BEARER_TOKEN || undefined;
+
+export const authContext = new AsyncLocalStorage<string | undefined>();
 
 const originalFetch = globalThis.fetch.bind(globalThis);
 
@@ -64,10 +70,12 @@ globalThis.fetch = async (
         : input.url;
   const method = (init?.method ?? "GET").toUpperCase();
 
-  if (bearerFromEnv) {
+  const currentBearer = authContext.getStore() || bearerFromEnv;
+
+  if (currentBearer) {
     const existing = new Headers(init?.headers ?? undefined);
     if (!existing.has("Authorization")) {
-      existing.set("Authorization", `Bearer ${bearerFromEnv}`);
+      existing.set("Authorization", `Bearer ${currentBearer}`);
     }
     if (!existing.has("Accept")) existing.set("Accept", "application/json");
     init = { ...init, headers: existing };
@@ -300,15 +308,55 @@ async function main() {
     },
   );
 
-  // ── Claude Desktop'a Bağlan ────────────────────────────────────────────
-  const transport = new StdioServerTransport();
-  await server.connect(transport);
-
+  // ── Sunucu Bağlantı / Taşıma Ayarı ─────────────────────────────────────
+  const transportMode = process.env.TRANSPORT || "stdio";
   const cfg = getLogConfig();
-  log.info("AARO ERP MCP Server baslatildi (stdio)", {
-    ...cfg,
-    authConfigured: Boolean(bearerFromEnv),
-  });
+
+  if (transportMode === "sse") {
+    // SSE / Express Modu (Uzak Sunucu / Canlı)
+    const app = express();
+    app.use(cors());
+
+    const sseTransport = new StreamableHTTPServerTransport();
+    await server.connect(sseTransport);
+
+    const handleReq = async (req: express.Request, res: express.Response) => {
+      // Authorization başlığından token çekilir
+      let token = undefined;
+      const authHeader = req.headers.authorization;
+      if (authHeader && authHeader.toLowerCase().startsWith("bearer ")) {
+        token = authHeader.substring(7);
+      }
+
+      // authContext ile sarmalayarak fetch override'ına thread-local token'i geçir
+      authContext.run(token, () => {
+        sseTransport.handleRequest(req, res);
+      });
+    };
+
+    // Client hem GET /sse hem de POST /message yapabilmeli 
+    // veya dogrudan /mcp diyerek tek uctan baglanabilmeli
+    app.all("/mcp", handleReq);
+    app.all("/sse", handleReq);
+    app.all("/message", handleReq);
+
+    const port = process.env.PORT || 3000;
+    app.listen(port, () => {
+      log.info(`AARO ERP MCP Server (SSE Modu) http://localhost:${port} adresinde dinliyor`, {
+        ...cfg,
+        authConfigured: Boolean(bearerFromEnv),
+      });
+    });
+  } else {
+    // Standart I/O Modu (Lokal Geliştirme - Claude Desktop)
+    const transport = new StdioServerTransport();
+    await server.connect(transport);
+
+    log.info("AARO ERP MCP Server baslatildi (stdio)", {
+      ...cfg,
+      authConfigured: Boolean(bearerFromEnv),
+    });
+  }
 }
 
 main().catch((err) => {
