@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "aaro-erp": {
+      "command": "npx",
+      "args": [
+        "tsx",
+        "/Users/armaganarslan/Aaro/mcp-yedekler/msp-claude-desktop-project/src/index.ts"
+      ],
+      "env": {
+        "AARO_BASE_URL": "https://192.168.100.230:44347",
+        "API_TOKEN": "pat_NfM4Qu_AAYJyQceDYgZjjPAbwHb3MAnnNmGFO8O-siM",
+        "NODE_OPTIONS": "--max-old-space-size=4096",
+        "NODE_TLS_REJECT_UNAUTHORIZED": "0"
+      }
+    }
+  },
+  "preferences": {
+    "coworkWebSearchEnabled": true,
+    "coworkScheduledTasksEnabled": true,
+    "ccdScheduledTasksEnabled": true,
+    "sidebarMode": "chat"
+  }
+}

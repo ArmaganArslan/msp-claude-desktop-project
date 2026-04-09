@@ -16,6 +16,7 @@ type NonReadonly<T> = [T] extends [UnionToIntersection<T>]
 type DistributeReadOnlyOverUnions<T> = T extends any ? NonReadonly<T> : never;
 
 
+import { getBaseUrl } from '../api-config.js';
 import {
   AaroKayitSonucAaroMVCControllersWebApiAccountControllerOturumBilgisi,
   AaroKayitSonuc,
@@ -2210,7 +2211,7 @@ export const getAccountOturumBilgisiGetirPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Account/OturumBilgisiGetir`
+  return `${getBaseUrl()}/api/Account/OturumBilgisiGetir`
 }
 
 export const Account_OturumBilgisiGetirPost = async (options?: RequestInit): Promise<Account_OturumBilgisiGetirPostResponse> => {
@@ -2249,7 +2250,7 @@ export const getAccountOturumSonlandirPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Account/OturumSonlandir`
+  return `${getBaseUrl()}/api/Account/OturumSonlandir`
 }
 
 export const Account_OturumSonlandirPost = async (options?: RequestInit): Promise<Account_OturumSonlandirPostResponse> => {
@@ -2310,7 +2311,7 @@ export const getAccountSirketSubeSecPostUrl = (params: AccountSirketSubeSecPostP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Account/SirketSubeSec?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Account/SirketSubeSec`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Account/SirketSubeSec?${stringifiedParams}` : `${getBaseUrl()}/api/Account/SirketSubeSec`
 }
 
 export const Account_SirketSubeSecPost = async (params: AccountSirketSubeSecPostParams, options?: RequestInit): Promise<Account_SirketSubeSecPostResponse> => {
@@ -2371,7 +2372,7 @@ export const getAccountYetkiKontrolGetUrl = (params: AccountYetkiKontrolGetParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Account/YetkiKontrol?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Account/YetkiKontrol`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Account/YetkiKontrol?${stringifiedParams}` : `${getBaseUrl()}/api/Account/YetkiKontrol`
 }
 
 export const Account_YetkiKontrolGet = async (params: AccountYetkiKontrolGetParams, options?: RequestInit): Promise<Account_YetkiKontrolGetResponse> => {
@@ -2425,7 +2426,7 @@ export const getAccountYetkiListesiGetUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Account/YetkiListesi`
+  return `${getBaseUrl()}/api/Account/YetkiListesi`
 }
 
 export const Account_YetkiListesiGet = async (options?: RequestInit): Promise<Account_YetkiListesiGetResponse> => {
@@ -2479,7 +2480,7 @@ export const getAccountYetkiListesiOturumAcmaGetUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Account/YetkiListesiOturumAcma`
+  return `${getBaseUrl()}/api/Account/YetkiListesiOturumAcma`
 }
 
 export const Account_YetkiListesiOturumAcmaGet = async (options?: RequestInit): Promise<Account_YetkiListesiOturumAcmaGetResponse> => {
@@ -2540,7 +2541,7 @@ export const getAccountParametreGetirGetUrl = (params: AccountParametreGetirGetP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Account/ParametreGetir?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Account/ParametreGetir`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Account/ParametreGetir?${stringifiedParams}` : `${getBaseUrl()}/api/Account/ParametreGetir`
 }
 
 export const Account_ParametreGetirGet = async (params: AccountParametreGetirGetParams, options?: RequestInit): Promise<Account_ParametreGetirGetResponse> => {
@@ -2594,7 +2595,7 @@ export const getAccountParametreListesiGetUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Account/ParametreListesi`
+  return `${getBaseUrl()}/api/Account/ParametreListesi`
 }
 
 export const Account_ParametreListesiGet = async (options?: RequestInit): Promise<Account_ParametreListesiGetResponse> => {
@@ -2648,7 +2649,7 @@ export const getAciklamalarGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Aciklamalar/${id}`
+  return `${getBaseUrl()}/api/Aciklamalar/${id}`
 }
 
 export const Aciklamalar_GetGet = async (id: number, options?: RequestInit): Promise<Aciklamalar_GetGetResponse> => {
@@ -2702,7 +2703,7 @@ export const getAciklamalarPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Aciklamalar/${id}`
+  return `${getBaseUrl()}/api/Aciklamalar/${id}`
 }
 
 export const Aciklamalar_PutPut = async (id: number,
@@ -2758,7 +2759,7 @@ export const getAciklamalarDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Aciklamalar/${id}`
+  return `${getBaseUrl()}/api/Aciklamalar/${id}`
 }
 
 export const Aciklamalar_DeleteDelete = async (id: number, options?: RequestInit): Promise<Aciklamalar_DeleteDeleteResponse> => {
@@ -2819,7 +2820,7 @@ export const getAciklamalarListeGetGetUrl = (params?: AciklamalarListeGetGetPara
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Aciklamalar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Aciklamalar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Aciklamalar?${stringifiedParams}` : `${getBaseUrl()}/api/Aciklamalar`
 }
 
 export const Aciklamalar_ListeGetGet = async (params?: AciklamalarListeGetGetParams, options?: RequestInit): Promise<Aciklamalar_ListeGetGetResponse> => {
@@ -2873,7 +2874,7 @@ export const getAciklamalarPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Aciklamalar`
+  return `${getBaseUrl()}/api/Aciklamalar`
 }
 
 export const Aciklamalar_PostPost = async (aaroModullerAciklamalarKayitSadeKayitModelBody: AaroModullerAciklamalarKayitSadeKayitModelBody, options?: RequestInit): Promise<Aciklamalar_PostPostResponse> => {
@@ -2935,7 +2936,7 @@ export const getAciklamalarOnaylaPostUrl = (params: AciklamalarOnaylaPostParams,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Aciklamalar/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Aciklamalar/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Aciklamalar/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Aciklamalar/Onayla`
 }
 
 export const Aciklamalar_OnaylaPost = async (params: AciklamalarOnaylaPostParams, options?: RequestInit): Promise<Aciklamalar_OnaylaPostResponse> => {
@@ -2996,7 +2997,7 @@ export const getAciklamalarReddetPostUrl = (params: AciklamalarReddetPostParams,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Aciklamalar/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Aciklamalar/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Aciklamalar/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Aciklamalar/Reddet`
 }
 
 export const Aciklamalar_ReddetPost = async (params: AciklamalarReddetPostParams, options?: RequestInit): Promise<Aciklamalar_ReddetPostResponse> => {
@@ -3057,7 +3058,7 @@ export const getAciklamalarListeEsnekGetUrl = (params?: AciklamalarListeEsnekGet
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Aciklamalar/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Aciklamalar/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Aciklamalar/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Aciklamalar/Liste`
 }
 
 export const Aciklamalar_ListeEsnekGet = async (params?: AciklamalarListeEsnekGetParams, options?: RequestInit): Promise<Aciklamalar_ListeEsnekGetResponse> => {
@@ -3111,7 +3112,7 @@ export const getAciklamalarListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Aciklamalar/Liste`
+  return `${getBaseUrl()}/api/Aciklamalar/Liste`
 }
 
 export const Aciklamalar_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Aciklamalar_ListePostPostResponse> => {
@@ -3173,7 +3174,7 @@ export const getAciklamalarGrupluListeGetUrl = (params: AciklamalarGrupluListeGe
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Aciklamalar/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Aciklamalar/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Aciklamalar/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Aciklamalar/GrupluListe`
 }
 
 export const Aciklamalar_GrupluListeGet = async (params: AciklamalarGrupluListeGetParams, options?: RequestInit): Promise<Aciklamalar_GrupluListeGetResponse> => {
@@ -3227,7 +3228,7 @@ export const getAciklamalarOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Aciklamalar/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Aciklamalar/${id}/OnayDurumu`
 }
 
 export const Aciklamalar_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Aciklamalar_OnayDurumuGetResponse> => {
@@ -3289,7 +3290,7 @@ export const getAciklamalarDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Aciklamalar/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Aciklamalar/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Aciklamalar/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Aciklamalar/${id}/DegisiklikGecmisi`
 }
 
 export const Aciklamalar_DegisiklikGecmisiGet = async (id: number,
@@ -3352,7 +3353,7 @@ export const getAciklamalarBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Aciklamalar/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Aciklamalar/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Aciklamalar/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Aciklamalar/${id}/Belgeler`
 }
 
 export const Aciklamalar_BelgelerGet = async (id: number,
@@ -3415,7 +3416,7 @@ export const getAciklamalarBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Aciklamalar/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Aciklamalar/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Aciklamalar/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Aciklamalar/${id}/BelgeEkle`
 }
 
 export const Aciklamalar_BelgeEklePost = async (id: number,
@@ -3479,7 +3480,7 @@ export const getAciklamalarBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Aciklamalar/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Aciklamalar/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Aciklamalar/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Aciklamalar/${id}/BelgeSil/${belgeID}`
 }
 
 export const Aciklamalar_BelgeSilDelete = async (id: number,
@@ -3543,7 +3544,7 @@ export const getAciklamalarNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Aciklamalar/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Aciklamalar/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Aciklamalar/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Aciklamalar/${id}/Notlar`
 }
 
 export const Aciklamalar_NotlarGet = async (id: number,
@@ -3598,7 +3599,7 @@ export const getAciklamalarNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Aciklamalar/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Aciklamalar/${id}/NotEkle`
 }
 
 export const Aciklamalar_NotEklePost = async (id: number,
@@ -3655,7 +3656,7 @@ export const getAciklamalarNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Aciklamalar/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Aciklamalar/${id}/NotSil/${notID}`
 }
 
 export const Aciklamalar_NotSilDelete = async (id: number,
@@ -3717,7 +3718,7 @@ export const getAlinanSiparisHareketleriDetayliListeGetUrl = (params?: AlinanSip
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/AlinanSiparisHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/AlinanSiparisHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/AlinanSiparisHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/AlinanSiparisHareketleri`
 }
 
 export const AlinanSiparisHareketleri_DetayliListeGet = async (params?: AlinanSiparisHareketleriDetayliListeGetParams, options?: RequestInit): Promise<AlinanSiparisHareketleri_DetayliListeGetResponse> => {
@@ -3778,7 +3779,7 @@ export const getAlinanSiparisListeDetayliListeGetUrl = (params?: AlinanSiparisLi
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/AlinanSiparisListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/AlinanSiparisListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/AlinanSiparisListe?${stringifiedParams}` : `${getBaseUrl()}/api/AlinanSiparisListe`
 }
 
 export const AlinanSiparisListe_DetayliListeGet = async (params?: AlinanSiparisListeDetayliListeGetParams, options?: RequestInit): Promise<AlinanSiparisListe_DetayliListeGetResponse> => {
@@ -3839,7 +3840,7 @@ export const getAlinanTeklifHareketleriDetayliListeGetUrl = (params?: AlinanTekl
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/AlinanTeklifHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/AlinanTeklifHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/AlinanTeklifHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/AlinanTeklifHareketleri`
 }
 
 export const AlinanTeklifHareketleri_DetayliListeGet = async (params?: AlinanTeklifHareketleriDetayliListeGetParams, options?: RequestInit): Promise<AlinanTeklifHareketleri_DetayliListeGetResponse> => {
@@ -3900,7 +3901,7 @@ export const getAlinanTeklifListeDetayliListeGetUrl = (params?: AlinanTeklifList
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/AlinanTeklifListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/AlinanTeklifListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/AlinanTeklifListe?${stringifiedParams}` : `${getBaseUrl()}/api/AlinanTeklifListe`
 }
 
 export const AlinanTeklifListe_DetayliListeGet = async (params?: AlinanTeklifListeDetayliListeGetParams, options?: RequestInit): Promise<AlinanTeklifListe_DetayliListeGetResponse> => {
@@ -3961,7 +3962,7 @@ export const getAlisFaturasiHareketleriDetayliListeGetUrl = (params?: AlisFatura
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/AlisFaturasiHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/AlisFaturasiHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/AlisFaturasiHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/AlisFaturasiHareketleri`
 }
 
 export const AlisFaturasiHareketleri_DetayliListeGet = async (params?: AlisFaturasiHareketleriDetayliListeGetParams, options?: RequestInit): Promise<AlisFaturasiHareketleri_DetayliListeGetResponse> => {
@@ -4022,7 +4023,7 @@ export const getAlisFaturasiListeDetayliListeGetUrl = (params?: AlisFaturasiList
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/AlisFaturasiListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/AlisFaturasiListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/AlisFaturasiListe?${stringifiedParams}` : `${getBaseUrl()}/api/AlisFaturasiListe`
 }
 
 export const AlisFaturasiListe_DetayliListeGet = async (params?: AlisFaturasiListeDetayliListeGetParams, options?: RequestInit): Promise<AlisFaturasiListe_DetayliListeGetResponse> => {
@@ -4083,7 +4084,7 @@ export const getAlisIadeFaturasiHareketleriDetayliListeGetUrl = (params?: AlisIa
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/AlisIadeFaturasiHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/AlisIadeFaturasiHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/AlisIadeFaturasiHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/AlisIadeFaturasiHareketleri`
 }
 
 export const AlisIadeFaturasiHareketleri_DetayliListeGet = async (params?: AlisIadeFaturasiHareketleriDetayliListeGetParams, options?: RequestInit): Promise<AlisIadeFaturasiHareketleri_DetayliListeGetResponse> => {
@@ -4144,7 +4145,7 @@ export const getAlisIadeFaturasiListeDetayliListeGetUrl = (params?: AlisIadeFatu
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/AlisIadeFaturasiListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/AlisIadeFaturasiListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/AlisIadeFaturasiListe?${stringifiedParams}` : `${getBaseUrl()}/api/AlisIadeFaturasiListe`
 }
 
 export const AlisIadeFaturasiListe_DetayliListeGet = async (params?: AlisIadeFaturasiListeDetayliListeGetParams, options?: RequestInit): Promise<AlisIadeFaturasiListe_DetayliListeGetResponse> => {
@@ -4205,7 +4206,7 @@ export const getAlisIadeIrsaliyesiHareketleriDetayliListeGetUrl = (params?: Alis
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/AlisIadeIrsaliyesiHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/AlisIadeIrsaliyesiHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/AlisIadeIrsaliyesiHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/AlisIadeIrsaliyesiHareketleri`
 }
 
 export const AlisIadeIrsaliyesiHareketleri_DetayliListeGet = async (params?: AlisIadeIrsaliyesiHareketleriDetayliListeGetParams, options?: RequestInit): Promise<AlisIadeIrsaliyesiHareketleri_DetayliListeGetResponse> => {
@@ -4266,7 +4267,7 @@ export const getAlisIadeIrsaliyesiListeDetayliListeGetUrl = (params?: AlisIadeIr
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/AlisIadeIrsaliyesiListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/AlisIadeIrsaliyesiListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/AlisIadeIrsaliyesiListe?${stringifiedParams}` : `${getBaseUrl()}/api/AlisIadeIrsaliyesiListe`
 }
 
 export const AlisIadeIrsaliyesiListe_DetayliListeGet = async (params?: AlisIadeIrsaliyesiListeDetayliListeGetParams, options?: RequestInit): Promise<AlisIadeIrsaliyesiListe_DetayliListeGetResponse> => {
@@ -4327,7 +4328,7 @@ export const getAlisIrsaliyesiHareketleriDetayliListeGetUrl = (params?: AlisIrsa
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/AlisIrsaliyesiHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/AlisIrsaliyesiHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/AlisIrsaliyesiHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/AlisIrsaliyesiHareketleri`
 }
 
 export const AlisIrsaliyesiHareketleri_DetayliListeGet = async (params?: AlisIrsaliyesiHareketleriDetayliListeGetParams, options?: RequestInit): Promise<AlisIrsaliyesiHareketleri_DetayliListeGetResponse> => {
@@ -4388,7 +4389,7 @@ export const getAlisIrsaliyesiListeDetayliListeGetUrl = (params?: AlisIrsaliyesi
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/AlisIrsaliyesiListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/AlisIrsaliyesiListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/AlisIrsaliyesiListe?${stringifiedParams}` : `${getBaseUrl()}/api/AlisIrsaliyesiListe`
 }
 
 export const AlisIrsaliyesiListe_DetayliListeGet = async (params?: AlisIrsaliyesiListeDetayliListeGetParams, options?: RequestInit): Promise<AlisIrsaliyesiListe_DetayliListeGetResponse> => {
@@ -4442,7 +4443,7 @@ export const getBankaGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Banka/${id}`
+  return `${getBaseUrl()}/api/Banka/${id}`
 }
 
 export const Banka_GetGet = async (id: number, options?: RequestInit): Promise<Banka_GetGetResponse> => {
@@ -4496,7 +4497,7 @@ export const getBankaPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Banka/${id}`
+  return `${getBaseUrl()}/api/Banka/${id}`
 }
 
 export const Banka_PutPut = async (id: number,
@@ -4552,7 +4553,7 @@ export const getBankaDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Banka/${id}`
+  return `${getBaseUrl()}/api/Banka/${id}`
 }
 
 export const Banka_DeleteDelete = async (id: number, options?: RequestInit): Promise<Banka_DeleteDeleteResponse> => {
@@ -4613,7 +4614,7 @@ export const getBankaListeGetGetUrl = (params?: BankaListeGetGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Banka?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Banka`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Banka?${stringifiedParams}` : `${getBaseUrl()}/api/Banka`
 }
 
 export const Banka_ListeGetGet = async (params?: BankaListeGetGetParams, options?: RequestInit): Promise<Banka_ListeGetGetResponse> => {
@@ -4667,7 +4668,7 @@ export const getBankaPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Banka`
+  return `${getBaseUrl()}/api/Banka`
 }
 
 export const Banka_PostPost = async (aaroModullerBankaKayitSadeKayitModelBody: AaroModullerBankaKayitSadeKayitModelBody, options?: RequestInit): Promise<Banka_PostPostResponse> => {
@@ -4729,7 +4730,7 @@ export const getBankaOnaylaPostUrl = (params: BankaOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Banka/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Banka/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Banka/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Banka/Onayla`
 }
 
 export const Banka_OnaylaPost = async (params: BankaOnaylaPostParams, options?: RequestInit): Promise<Banka_OnaylaPostResponse> => {
@@ -4790,7 +4791,7 @@ export const getBankaReddetPostUrl = (params: BankaReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Banka/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Banka/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Banka/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Banka/Reddet`
 }
 
 export const Banka_ReddetPost = async (params: BankaReddetPostParams, options?: RequestInit): Promise<Banka_ReddetPostResponse> => {
@@ -4851,7 +4852,7 @@ export const getBankaListeEsnekGetUrl = (params?: BankaListeEsnekGetParams,) => 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Banka/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Banka/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Banka/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Banka/Liste`
 }
 
 export const Banka_ListeEsnekGet = async (params?: BankaListeEsnekGetParams, options?: RequestInit): Promise<Banka_ListeEsnekGetResponse> => {
@@ -4905,7 +4906,7 @@ export const getBankaListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Banka/Liste`
+  return `${getBaseUrl()}/api/Banka/Liste`
 }
 
 export const Banka_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Banka_ListePostPostResponse> => {
@@ -4967,7 +4968,7 @@ export const getBankaGrupluListeGetUrl = (params: BankaGrupluListeGetParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Banka/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Banka/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Banka/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Banka/GrupluListe`
 }
 
 export const Banka_GrupluListeGet = async (params: BankaGrupluListeGetParams, options?: RequestInit): Promise<Banka_GrupluListeGetResponse> => {
@@ -5021,7 +5022,7 @@ export const getBankaOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Banka/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Banka/${id}/OnayDurumu`
 }
 
 export const Banka_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Banka_OnayDurumuGetResponse> => {
@@ -5083,7 +5084,7 @@ export const getBankaDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Banka/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Banka/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Banka/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Banka/${id}/DegisiklikGecmisi`
 }
 
 export const Banka_DegisiklikGecmisiGet = async (id: number,
@@ -5146,7 +5147,7 @@ export const getBankaBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Banka/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Banka/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Banka/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Banka/${id}/Belgeler`
 }
 
 export const Banka_BelgelerGet = async (id: number,
@@ -5209,7 +5210,7 @@ export const getBankaBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Banka/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Banka/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Banka/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Banka/${id}/BelgeEkle`
 }
 
 export const Banka_BelgeEklePost = async (id: number,
@@ -5273,7 +5274,7 @@ export const getBankaBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Banka/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Banka/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Banka/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Banka/${id}/BelgeSil/${belgeID}`
 }
 
 export const Banka_BelgeSilDelete = async (id: number,
@@ -5337,7 +5338,7 @@ export const getBankaNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Banka/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Banka/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Banka/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Banka/${id}/Notlar`
 }
 
 export const Banka_NotlarGet = async (id: number,
@@ -5392,7 +5393,7 @@ export const getBankaNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Banka/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Banka/${id}/NotEkle`
 }
 
 export const Banka_NotEklePost = async (id: number,
@@ -5449,7 +5450,7 @@ export const getBankaNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Banka/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Banka/${id}/NotSil/${notID}`
 }
 
 export const Banka_NotSilDelete = async (id: number,
@@ -5511,7 +5512,7 @@ export const getBankaHareketleriDetayliListeGetUrl = (params?: BankaHareketleriD
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/BankaHareketleri`
 }
 
 export const BankaHareketleri_DetayliListeGet = async (params?: BankaHareketleriDetayliListeGetParams, options?: RequestInit): Promise<BankaHareketleri_DetayliListeGetResponse> => {
@@ -5572,7 +5573,7 @@ export const getBankaHesapMinListeGetUrl = (params?: BankaHesapMinListeGetParams
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaHesap/MinListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaHesap/MinListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaHesap/MinListe?${stringifiedParams}` : `${getBaseUrl()}/api/BankaHesap/MinListe`
 }
 
 export const BankaHesap_MinListeGet = async (params?: BankaHesapMinListeGetParams, options?: RequestInit): Promise<BankaHesap_MinListeGetResponse> => {
@@ -5626,7 +5627,7 @@ export const getBankaHesapDetayliPutPutUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BankaHesap/Detayli`
+  return `${getBaseUrl()}/api/BankaHesap/Detayli`
 }
 
 export const BankaHesap_DetayliPutPut = async (aaroModullerBankaHesapKayitSadeDetayliKayitModelAPI: AaroModullerBankaHesapKayitSadeDetayliKayitModelAPI, options?: RequestInit): Promise<BankaHesap_DetayliPutPutResponse> => {
@@ -5681,7 +5682,7 @@ export const getBankaHesapDetayliPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BankaHesap/Detayli`
+  return `${getBaseUrl()}/api/BankaHesap/Detayli`
 }
 
 export const BankaHesap_DetayliPostPost = async (aaroModullerBankaHesapKayitSadeDetayliKayitModelAPI: AaroModullerBankaHesapKayitSadeDetayliKayitModelAPI, options?: RequestInit): Promise<BankaHesap_DetayliPostPostResponse> => {
@@ -5736,7 +5737,7 @@ export const getBankaHesapDetayliGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BankaHesap/Detayli/${id}`
+  return `${getBaseUrl()}/api/BankaHesap/Detayli/${id}`
 }
 
 export const BankaHesap_DetayliGetGet = async (id: number, options?: RequestInit): Promise<BankaHesap_DetayliGetGetResponse> => {
@@ -5790,7 +5791,7 @@ export const getBankaHesapGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BankaHesap/${id}`
+  return `${getBaseUrl()}/api/BankaHesap/${id}`
 }
 
 export const BankaHesap_GetGet = async (id: number, options?: RequestInit): Promise<BankaHesap_GetGetResponse> => {
@@ -5844,7 +5845,7 @@ export const getBankaHesapPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BankaHesap/${id}`
+  return `${getBaseUrl()}/api/BankaHesap/${id}`
 }
 
 export const BankaHesap_PutPut = async (id: number,
@@ -5900,7 +5901,7 @@ export const getBankaHesapDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BankaHesap/${id}`
+  return `${getBaseUrl()}/api/BankaHesap/${id}`
 }
 
 export const BankaHesap_DeleteDelete = async (id: number, options?: RequestInit): Promise<BankaHesap_DeleteDeleteResponse> => {
@@ -5961,7 +5962,7 @@ export const getBankaHesapListeGetGetUrl = (params?: BankaHesapListeGetGetParams
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaHesap?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaHesap`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaHesap?${stringifiedParams}` : `${getBaseUrl()}/api/BankaHesap`
 }
 
 export const BankaHesap_ListeGetGet = async (params?: BankaHesapListeGetGetParams, options?: RequestInit): Promise<BankaHesap_ListeGetGetResponse> => {
@@ -6015,7 +6016,7 @@ export const getBankaHesapPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BankaHesap`
+  return `${getBaseUrl()}/api/BankaHesap`
 }
 
 export const BankaHesap_PostPost = async (aaroModullerBankaHesapKayitSadeKayitModelBody: AaroModullerBankaHesapKayitSadeKayitModelBody, options?: RequestInit): Promise<BankaHesap_PostPostResponse> => {
@@ -6077,7 +6078,7 @@ export const getBankaHesapOnaylaPostUrl = (params: BankaHesapOnaylaPostParams,) 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaHesap/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaHesap/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaHesap/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/BankaHesap/Onayla`
 }
 
 export const BankaHesap_OnaylaPost = async (params: BankaHesapOnaylaPostParams, options?: RequestInit): Promise<BankaHesap_OnaylaPostResponse> => {
@@ -6138,7 +6139,7 @@ export const getBankaHesapReddetPostUrl = (params: BankaHesapReddetPostParams,) 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaHesap/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaHesap/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaHesap/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/BankaHesap/Reddet`
 }
 
 export const BankaHesap_ReddetPost = async (params: BankaHesapReddetPostParams, options?: RequestInit): Promise<BankaHesap_ReddetPostResponse> => {
@@ -6199,7 +6200,7 @@ export const getBankaHesapListeEsnekGetUrl = (params?: BankaHesapListeEsnekGetPa
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaHesap/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaHesap/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaHesap/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/BankaHesap/Liste`
 }
 
 export const BankaHesap_ListeEsnekGet = async (params?: BankaHesapListeEsnekGetParams, options?: RequestInit): Promise<BankaHesap_ListeEsnekGetResponse> => {
@@ -6253,7 +6254,7 @@ export const getBankaHesapListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BankaHesap/Liste`
+  return `${getBaseUrl()}/api/BankaHesap/Liste`
 }
 
 export const BankaHesap_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<BankaHesap_ListePostPostResponse> => {
@@ -6315,7 +6316,7 @@ export const getBankaHesapGrupluListeGetUrl = (params: BankaHesapGrupluListeGetP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaHesap/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaHesap/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaHesap/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/BankaHesap/GrupluListe`
 }
 
 export const BankaHesap_GrupluListeGet = async (params: BankaHesapGrupluListeGetParams, options?: RequestInit): Promise<BankaHesap_GrupluListeGetResponse> => {
@@ -6369,7 +6370,7 @@ export const getBankaHesapOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BankaHesap/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/BankaHesap/${id}/OnayDurumu`
 }
 
 export const BankaHesap_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<BankaHesap_OnayDurumuGetResponse> => {
@@ -6431,7 +6432,7 @@ export const getBankaHesapDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaHesap/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaHesap/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaHesap/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/BankaHesap/${id}/DegisiklikGecmisi`
 }
 
 export const BankaHesap_DegisiklikGecmisiGet = async (id: number,
@@ -6494,7 +6495,7 @@ export const getBankaHesapBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaHesap/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaHesap/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaHesap/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/BankaHesap/${id}/Belgeler`
 }
 
 export const BankaHesap_BelgelerGet = async (id: number,
@@ -6557,7 +6558,7 @@ export const getBankaHesapBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaHesap/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaHesap/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaHesap/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/BankaHesap/${id}/BelgeEkle`
 }
 
 export const BankaHesap_BelgeEklePost = async (id: number,
@@ -6621,7 +6622,7 @@ export const getBankaHesapBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaHesap/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaHesap/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaHesap/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/BankaHesap/${id}/BelgeSil/${belgeID}`
 }
 
 export const BankaHesap_BelgeSilDelete = async (id: number,
@@ -6685,7 +6686,7 @@ export const getBankaHesapNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaHesap/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaHesap/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaHesap/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/BankaHesap/${id}/Notlar`
 }
 
 export const BankaHesap_NotlarGet = async (id: number,
@@ -6740,7 +6741,7 @@ export const getBankaHesapNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BankaHesap/${id}/NotEkle`
+  return `${getBaseUrl()}/api/BankaHesap/${id}/NotEkle`
 }
 
 export const BankaHesap_NotEklePost = async (id: number,
@@ -6797,7 +6798,7 @@ export const getBankaHesapNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/BankaHesap/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/BankaHesap/${id}/NotSil/${notID}`
 }
 
 export const BankaHesap_NotSilDelete = async (id: number,
@@ -6852,7 +6853,7 @@ export const getBankaSubeGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BankaSube/${id}`
+  return `${getBaseUrl()}/api/BankaSube/${id}`
 }
 
 export const BankaSube_GetGet = async (id: number, options?: RequestInit): Promise<BankaSube_GetGetResponse> => {
@@ -6906,7 +6907,7 @@ export const getBankaSubePutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BankaSube/${id}`
+  return `${getBaseUrl()}/api/BankaSube/${id}`
 }
 
 export const BankaSube_PutPut = async (id: number,
@@ -6962,7 +6963,7 @@ export const getBankaSubeDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BankaSube/${id}`
+  return `${getBaseUrl()}/api/BankaSube/${id}`
 }
 
 export const BankaSube_DeleteDelete = async (id: number, options?: RequestInit): Promise<BankaSube_DeleteDeleteResponse> => {
@@ -7023,7 +7024,7 @@ export const getBankaSubeListeGetGetUrl = (params?: BankaSubeListeGetGetParams,)
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaSube?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaSube`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaSube?${stringifiedParams}` : `${getBaseUrl()}/api/BankaSube`
 }
 
 export const BankaSube_ListeGetGet = async (params?: BankaSubeListeGetGetParams, options?: RequestInit): Promise<BankaSube_ListeGetGetResponse> => {
@@ -7077,7 +7078,7 @@ export const getBankaSubePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BankaSube`
+  return `${getBaseUrl()}/api/BankaSube`
 }
 
 export const BankaSube_PostPost = async (aaroModullerBankaSubeKayitSadeKayitModelBody: AaroModullerBankaSubeKayitSadeKayitModelBody, options?: RequestInit): Promise<BankaSube_PostPostResponse> => {
@@ -7139,7 +7140,7 @@ export const getBankaSubeOnaylaPostUrl = (params: BankaSubeOnaylaPostParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaSube/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaSube/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaSube/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/BankaSube/Onayla`
 }
 
 export const BankaSube_OnaylaPost = async (params: BankaSubeOnaylaPostParams, options?: RequestInit): Promise<BankaSube_OnaylaPostResponse> => {
@@ -7200,7 +7201,7 @@ export const getBankaSubeReddetPostUrl = (params: BankaSubeReddetPostParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaSube/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaSube/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaSube/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/BankaSube/Reddet`
 }
 
 export const BankaSube_ReddetPost = async (params: BankaSubeReddetPostParams, options?: RequestInit): Promise<BankaSube_ReddetPostResponse> => {
@@ -7261,7 +7262,7 @@ export const getBankaSubeListeEsnekGetUrl = (params?: BankaSubeListeEsnekGetPara
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaSube/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaSube/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaSube/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/BankaSube/Liste`
 }
 
 export const BankaSube_ListeEsnekGet = async (params?: BankaSubeListeEsnekGetParams, options?: RequestInit): Promise<BankaSube_ListeEsnekGetResponse> => {
@@ -7315,7 +7316,7 @@ export const getBankaSubeListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BankaSube/Liste`
+  return `${getBaseUrl()}/api/BankaSube/Liste`
 }
 
 export const BankaSube_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<BankaSube_ListePostPostResponse> => {
@@ -7377,7 +7378,7 @@ export const getBankaSubeGrupluListeGetUrl = (params: BankaSubeGrupluListeGetPar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaSube/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaSube/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaSube/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/BankaSube/GrupluListe`
 }
 
 export const BankaSube_GrupluListeGet = async (params: BankaSubeGrupluListeGetParams, options?: RequestInit): Promise<BankaSube_GrupluListeGetResponse> => {
@@ -7431,7 +7432,7 @@ export const getBankaSubeOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BankaSube/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/BankaSube/${id}/OnayDurumu`
 }
 
 export const BankaSube_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<BankaSube_OnayDurumuGetResponse> => {
@@ -7493,7 +7494,7 @@ export const getBankaSubeDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaSube/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaSube/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaSube/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/BankaSube/${id}/DegisiklikGecmisi`
 }
 
 export const BankaSube_DegisiklikGecmisiGet = async (id: number,
@@ -7556,7 +7557,7 @@ export const getBankaSubeBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaSube/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaSube/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaSube/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/BankaSube/${id}/Belgeler`
 }
 
 export const BankaSube_BelgelerGet = async (id: number,
@@ -7619,7 +7620,7 @@ export const getBankaSubeBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaSube/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaSube/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaSube/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/BankaSube/${id}/BelgeEkle`
 }
 
 export const BankaSube_BelgeEklePost = async (id: number,
@@ -7683,7 +7684,7 @@ export const getBankaSubeBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaSube/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaSube/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaSube/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/BankaSube/${id}/BelgeSil/${belgeID}`
 }
 
 export const BankaSube_BelgeSilDelete = async (id: number,
@@ -7747,7 +7748,7 @@ export const getBankaSubeNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BankaSube/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BankaSube/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BankaSube/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/BankaSube/${id}/Notlar`
 }
 
 export const BankaSube_NotlarGet = async (id: number,
@@ -7802,7 +7803,7 @@ export const getBankaSubeNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BankaSube/${id}/NotEkle`
+  return `${getBaseUrl()}/api/BankaSube/${id}/NotEkle`
 }
 
 export const BankaSube_NotEklePost = async (id: number,
@@ -7859,7 +7860,7 @@ export const getBankaSubeNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/BankaSube/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/BankaSube/${id}/NotSil/${notID}`
 }
 
 export const BankaSube_NotSilDelete = async (id: number,
@@ -7929,7 +7930,7 @@ export const getBayiStoklarGetUrl = (params?: BayiStoklarGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Bayi/Stoklar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Bayi/Stoklar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Bayi/Stoklar?${stringifiedParams}` : `${getBaseUrl()}/api/Bayi/Stoklar`
 }
 
 export const Bayi_StoklarGet = async (params?: BayiStoklarGetParams, options?: RequestInit): Promise<Bayi_StoklarGetResponse> => {
@@ -7998,7 +7999,7 @@ export const getBayiKodlarGetUrl = (params?: BayiKodlarGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Bayi/Kodlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Bayi/Kodlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Bayi/Kodlar?${stringifiedParams}` : `${getBaseUrl()}/api/Bayi/Kodlar`
 }
 
 export const Bayi_KodlarGet = async (params?: BayiKodlarGetParams, options?: RequestInit): Promise<Bayi_KodlarGetResponse> => {
@@ -8059,7 +8060,7 @@ export const getBayiKodlarSeviyeliGetUrl = (params: BayiKodlarSeviyeliGetParams,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Bayi/KodlarSeviyeli?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Bayi/KodlarSeviyeli`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Bayi/KodlarSeviyeli?${stringifiedParams}` : `${getBaseUrl()}/api/Bayi/KodlarSeviyeli`
 }
 
 export const Bayi_KodlarSeviyeliGet = async (params: BayiKodlarSeviyeliGetParams, options?: RequestInit): Promise<Bayi_KodlarSeviyeliGetResponse> => {
@@ -8113,7 +8114,7 @@ export const getBayiOturumBilgisiGetirPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Bayi/OturumBilgisiGetir`
+  return `${getBaseUrl()}/api/Bayi/OturumBilgisiGetir`
 }
 
 export const Bayi_OturumBilgisiGetirPost = async (options?: RequestInit): Promise<Bayi_OturumBilgisiGetirPostResponse> => {
@@ -8152,7 +8153,7 @@ export const getBayiOturumSonlandirPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Bayi/OturumSonlandir`
+  return `${getBaseUrl()}/api/Bayi/OturumSonlandir`
 }
 
 export const Bayi_OturumSonlandirPost = async (options?: RequestInit): Promise<Bayi_OturumSonlandirPostResponse> => {
@@ -8213,7 +8214,7 @@ export const getBayiSepetPostUrl = (params: BayiSepetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Bayi/Sepet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Bayi/Sepet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Bayi/Sepet?${stringifiedParams}` : `${getBaseUrl()}/api/Bayi/Sepet`
 }
 
 export const Bayi_SepetPost = async (params: BayiSepetPostParams, options?: RequestInit): Promise<Bayi_SepetPostResponse> => {
@@ -8267,7 +8268,7 @@ export const getBayiSepetKalemAdediGetUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Bayi/SepetKalemAdedi`
+  return `${getBaseUrl()}/api/Bayi/SepetKalemAdedi`
 }
 
 export const Bayi_SepetKalemAdediGet = async (options?: RequestInit): Promise<Bayi_SepetKalemAdediGetResponse> => {
@@ -8336,7 +8337,7 @@ export const getBayiSiparislerimGetUrl = (params?: BayiSiparislerimGetParams,) =
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Bayi/Siparislerim?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Bayi/Siparislerim`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Bayi/Siparislerim?${stringifiedParams}` : `${getBaseUrl()}/api/Bayi/Siparislerim`
 }
 
 export const Bayi_SiparislerimGet = async (params?: BayiSiparislerimGetParams, options?: RequestInit): Promise<Bayi_SiparislerimGetResponse> => {
@@ -8397,7 +8398,7 @@ export const getBayiSiparisKalemleriGetUrl = (params: BayiSiparisKalemleriGetPar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Bayi/SiparisKalemleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Bayi/SiparisKalemleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Bayi/SiparisKalemleri?${stringifiedParams}` : `${getBaseUrl()}/api/Bayi/SiparisKalemleri`
 }
 
 export const Bayi_SiparisKalemleriGet = async (params: BayiSiparisKalemleriGetParams, options?: RequestInit): Promise<Bayi_SiparisKalemleriGetResponse> => {
@@ -8458,7 +8459,7 @@ export const getBayiSiparisVergiToplamlariGetUrl = (params: BayiSiparisVergiTopl
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Bayi/SiparisVergiToplamlari?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Bayi/SiparisVergiToplamlari`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Bayi/SiparisVergiToplamlari?${stringifiedParams}` : `${getBaseUrl()}/api/Bayi/SiparisVergiToplamlari`
 }
 
 export const Bayi_SiparisVergiToplamlariGet = async (params: BayiSiparisVergiToplamlariGetParams, options?: RequestInit): Promise<Bayi_SiparisVergiToplamlariGetResponse> => {
@@ -8512,7 +8513,7 @@ export const getBayiSepeteKalemEklePostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Bayi/SepeteKalemEkle`
+  return `${getBaseUrl()}/api/Bayi/SepeteKalemEkle`
 }
 
 export const Bayi_SepeteKalemEklePost = async (aaroMVCControllersWebApiBayiControllerBayiSiparisKalemModel: AaroMVCControllersWebApiBayiControllerBayiSiparisKalemModel, options?: RequestInit): Promise<Bayi_SepeteKalemEklePostResponse> => {
@@ -8567,7 +8568,7 @@ export const getBayiSepettenKalemSilPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Bayi/SepettenKalemSil`
+  return `${getBaseUrl()}/api/Bayi/SepettenKalemSil`
 }
 
 export const Bayi_SepettenKalemSilPost = async (bayiSepettenKalemSilPostBody: number, options?: RequestInit): Promise<Bayi_SepettenKalemSilPostResponse> => {
@@ -8622,7 +8623,7 @@ export const getBayiSepetKalemDuzeltPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Bayi/SepetKalemDuzelt`
+  return `${getBaseUrl()}/api/Bayi/SepetKalemDuzelt`
 }
 
 export const Bayi_SepetKalemDuzeltPost = async (aaroMVCControllersWebApiBayiControllerBayiSiparisKalemModel: AaroMVCControllersWebApiBayiControllerBayiSiparisKalemModel, options?: RequestInit): Promise<Bayi_SepetKalemDuzeltPostResponse> => {
@@ -8677,7 +8678,7 @@ export const getBeklenenTahsilatlarVeOdemelerGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/${id}`
+  return `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/${id}`
 }
 
 export const BeklenenTahsilatlarVeOdemeler_GetGet = async (id: number, options?: RequestInit): Promise<BeklenenTahsilatlarVeOdemeler_GetGetResponse> => {
@@ -8731,7 +8732,7 @@ export const getBeklenenTahsilatlarVeOdemelerPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/${id}`
+  return `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/${id}`
 }
 
 export const BeklenenTahsilatlarVeOdemeler_PutPut = async (id: number,
@@ -8787,7 +8788,7 @@ export const getBeklenenTahsilatlarVeOdemelerDeleteDeleteUrl = (id: number,) => 
 
 
 
-  return `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/${id}`
+  return `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/${id}`
 }
 
 export const BeklenenTahsilatlarVeOdemeler_DeleteDelete = async (id: number, options?: RequestInit): Promise<BeklenenTahsilatlarVeOdemeler_DeleteDeleteResponse> => {
@@ -8848,7 +8849,7 @@ export const getBeklenenTahsilatlarVeOdemelerDetayliListeGetUrl = (params?: Bekl
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler?${stringifiedParams}` : `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler`
 }
 
 export const BeklenenTahsilatlarVeOdemeler_DetayliListeGet = async (params?: BeklenenTahsilatlarVeOdemelerDetayliListeGetParams, options?: RequestInit): Promise<BeklenenTahsilatlarVeOdemeler_DetayliListeGetResponse> => {
@@ -8902,7 +8903,7 @@ export const getBeklenenTahsilatlarVeOdemelerPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler`
+  return `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler`
 }
 
 export const BeklenenTahsilatlarVeOdemeler_PostPost = async (aaroModullerBeklenenTahsilatlarVeOdemelerKayitSadeKayitModelBody: AaroModullerBeklenenTahsilatlarVeOdemelerKayitSadeKayitModelBody, options?: RequestInit): Promise<BeklenenTahsilatlarVeOdemeler_PostPostResponse> => {
@@ -8964,7 +8965,7 @@ export const getBeklenenTahsilatlarVeOdemelerOnaylaPostUrl = (params: BeklenenTa
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/Onayla`
 }
 
 export const BeklenenTahsilatlarVeOdemeler_OnaylaPost = async (params: BeklenenTahsilatlarVeOdemelerOnaylaPostParams, options?: RequestInit): Promise<BeklenenTahsilatlarVeOdemeler_OnaylaPostResponse> => {
@@ -9025,7 +9026,7 @@ export const getBeklenenTahsilatlarVeOdemelerReddetPostUrl = (params: BeklenenTa
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/Reddet`
 }
 
 export const BeklenenTahsilatlarVeOdemeler_ReddetPost = async (params: BeklenenTahsilatlarVeOdemelerReddetPostParams, options?: RequestInit): Promise<BeklenenTahsilatlarVeOdemeler_ReddetPostResponse> => {
@@ -9086,7 +9087,7 @@ export const getBeklenenTahsilatlarVeOdemelerListeEsnekGetUrl = (params?: Beklen
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/Liste`
 }
 
 export const BeklenenTahsilatlarVeOdemeler_ListeEsnekGet = async (params?: BeklenenTahsilatlarVeOdemelerListeEsnekGetParams, options?: RequestInit): Promise<BeklenenTahsilatlarVeOdemeler_ListeEsnekGetResponse> => {
@@ -9140,7 +9141,7 @@ export const getBeklenenTahsilatlarVeOdemelerListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/Liste`
+  return `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/Liste`
 }
 
 export const BeklenenTahsilatlarVeOdemeler_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<BeklenenTahsilatlarVeOdemeler_ListePostPostResponse> => {
@@ -9202,7 +9203,7 @@ export const getBeklenenTahsilatlarVeOdemelerGrupluListeGetUrl = (params: Beklen
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/GrupluListe`
 }
 
 export const BeklenenTahsilatlarVeOdemeler_GrupluListeGet = async (params: BeklenenTahsilatlarVeOdemelerGrupluListeGetParams, options?: RequestInit): Promise<BeklenenTahsilatlarVeOdemeler_GrupluListeGetResponse> => {
@@ -9256,7 +9257,7 @@ export const getBeklenenTahsilatlarVeOdemelerOnayDurumuGetUrl = (id: number,) =>
 
 
 
-  return `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/${id}/OnayDurumu`
 }
 
 export const BeklenenTahsilatlarVeOdemeler_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<BeklenenTahsilatlarVeOdemeler_OnayDurumuGetResponse> => {
@@ -9318,7 +9319,7 @@ export const getBeklenenTahsilatlarVeOdemelerDegisiklikGecmisiGetUrl = (id: numb
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/${id}/DegisiklikGecmisi`
 }
 
 export const BeklenenTahsilatlarVeOdemeler_DegisiklikGecmisiGet = async (id: number,
@@ -9381,7 +9382,7 @@ export const getBeklenenTahsilatlarVeOdemelerBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/${id}/Belgeler`
 }
 
 export const BeklenenTahsilatlarVeOdemeler_BelgelerGet = async (id: number,
@@ -9444,7 +9445,7 @@ export const getBeklenenTahsilatlarVeOdemelerBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/${id}/BelgeEkle`
 }
 
 export const BeklenenTahsilatlarVeOdemeler_BelgeEklePost = async (id: number,
@@ -9508,7 +9509,7 @@ export const getBeklenenTahsilatlarVeOdemelerBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/${id}/BelgeSil/${belgeID}`
 }
 
 export const BeklenenTahsilatlarVeOdemeler_BelgeSilDelete = async (id: number,
@@ -9572,7 +9573,7 @@ export const getBeklenenTahsilatlarVeOdemelerNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/${id}/Notlar`
 }
 
 export const BeklenenTahsilatlarVeOdemeler_NotlarGet = async (id: number,
@@ -9627,7 +9628,7 @@ export const getBeklenenTahsilatlarVeOdemelerNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/${id}/NotEkle`
+  return `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/${id}/NotEkle`
 }
 
 export const BeklenenTahsilatlarVeOdemeler_NotEklePost = async (id: number,
@@ -9684,7 +9685,7 @@ export const getBeklenenTahsilatlarVeOdemelerNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/BeklenenTahsilatlarVeOdemeler/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/BeklenenTahsilatlarVeOdemeler/${id}/NotSil/${notID}`
 }
 
 export const BeklenenTahsilatlarVeOdemeler_NotSilDelete = async (id: number,
@@ -9746,7 +9747,7 @@ export const getBelgeAdresGetGetUrl = (params: BelgeAdresGetGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/BelgeAdres?${stringifiedParams}` : `https://erp.aaro.com.tr/api/BelgeAdres`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/BelgeAdres?${stringifiedParams}` : `${getBaseUrl()}/api/BelgeAdres`
 }
 
 export const BelgeAdres_GetGet = async (params: BelgeAdresGetGetParams, options?: RequestInit): Promise<BelgeAdres_GetGetResponse> => {
@@ -9807,7 +9808,7 @@ export const getCariBakiyeGetUrl = (params?: CariBakiyeGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Cari/Bakiye?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Cari/Bakiye`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Cari/Bakiye?${stringifiedParams}` : `${getBaseUrl()}/api/Cari/Bakiye`
 }
 
 export const Cari_BakiyeGet = async (params?: CariBakiyeGetParams, options?: RequestInit): Promise<Cari_BakiyeGetResponse> => {
@@ -9861,7 +9862,7 @@ export const getCariDetayliPutPutUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Cari/Detayli`
+  return `${getBaseUrl()}/api/Cari/Detayli`
 }
 
 export const Cari_DetayliPutPut = async (aaroModullerCariKayitSadeDetayliKayitModelAPI: AaroModullerCariKayitSadeDetayliKayitModelAPI, options?: RequestInit): Promise<Cari_DetayliPutPutResponse> => {
@@ -9916,7 +9917,7 @@ export const getCariDetayliPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Cari/Detayli`
+  return `${getBaseUrl()}/api/Cari/Detayli`
 }
 
 export const Cari_DetayliPostPost = async (aaroModullerCariKayitSadeDetayliKayitModelAPI: AaroModullerCariKayitSadeDetayliKayitModelAPI, options?: RequestInit): Promise<Cari_DetayliPostPostResponse> => {
@@ -9978,7 +9979,7 @@ export const getCariMinListeGetUrl = (params?: CariMinListeGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Cari/MinListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Cari/MinListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Cari/MinListe?${stringifiedParams}` : `${getBaseUrl()}/api/Cari/MinListe`
 }
 
 export const Cari_MinListeGet = async (params?: CariMinListeGetParams, options?: RequestInit): Promise<Cari_MinListeGetResponse> => {
@@ -10032,7 +10033,7 @@ export const getCariGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Cari/${id}`
+  return `${getBaseUrl()}/api/Cari/${id}`
 }
 
 export const Cari_GetGet = async (id: number, options?: RequestInit): Promise<Cari_GetGetResponse> => {
@@ -10086,7 +10087,7 @@ export const getCariPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Cari/${id}`
+  return `${getBaseUrl()}/api/Cari/${id}`
 }
 
 export const Cari_PutPut = async (id: number,
@@ -10142,7 +10143,7 @@ export const getCariDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Cari/${id}`
+  return `${getBaseUrl()}/api/Cari/${id}`
 }
 
 export const Cari_DeleteDelete = async (id: number, options?: RequestInit): Promise<Cari_DeleteDeleteResponse> => {
@@ -10203,7 +10204,7 @@ export const getCariListeGetGetUrl = (params?: CariListeGetGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Cari?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Cari`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Cari?${stringifiedParams}` : `${getBaseUrl()}/api/Cari`
 }
 
 export const Cari_ListeGetGet = async (params?: CariListeGetGetParams, options?: RequestInit): Promise<Cari_ListeGetGetResponse> => {
@@ -10257,7 +10258,7 @@ export const getCariPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Cari`
+  return `${getBaseUrl()}/api/Cari`
 }
 
 export const Cari_PostPost = async (aaroModullerCariKayitSadeKayitModelBody: AaroModullerCariKayitSadeKayitModelBody, options?: RequestInit): Promise<Cari_PostPostResponse> => {
@@ -10319,7 +10320,7 @@ export const getCariOnaylaPostUrl = (params: CariOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Cari/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Cari/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Cari/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Cari/Onayla`
 }
 
 export const Cari_OnaylaPost = async (params: CariOnaylaPostParams, options?: RequestInit): Promise<Cari_OnaylaPostResponse> => {
@@ -10380,7 +10381,7 @@ export const getCariReddetPostUrl = (params: CariReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Cari/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Cari/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Cari/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Cari/Reddet`
 }
 
 export const Cari_ReddetPost = async (params: CariReddetPostParams, options?: RequestInit): Promise<Cari_ReddetPostResponse> => {
@@ -10441,7 +10442,7 @@ export const getCariListeEsnekGetUrl = (params?: CariListeEsnekGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Cari/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Cari/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Cari/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Cari/Liste`
 }
 
 export const Cari_ListeEsnekGet = async (params?: CariListeEsnekGetParams, options?: RequestInit): Promise<Cari_ListeEsnekGetResponse> => {
@@ -10495,7 +10496,7 @@ export const getCariListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Cari/Liste`
+  return `${getBaseUrl()}/api/Cari/Liste`
 }
 
 export const Cari_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Cari_ListePostPostResponse> => {
@@ -10557,7 +10558,7 @@ export const getCariGrupluListeGetUrl = (params: CariGrupluListeGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Cari/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Cari/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Cari/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Cari/GrupluListe`
 }
 
 export const Cari_GrupluListeGet = async (params: CariGrupluListeGetParams, options?: RequestInit): Promise<Cari_GrupluListeGetResponse> => {
@@ -10611,7 +10612,7 @@ export const getCariOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Cari/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Cari/${id}/OnayDurumu`
 }
 
 export const Cari_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Cari_OnayDurumuGetResponse> => {
@@ -10673,7 +10674,7 @@ export const getCariDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Cari/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Cari/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Cari/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Cari/${id}/DegisiklikGecmisi`
 }
 
 export const Cari_DegisiklikGecmisiGet = async (id: number,
@@ -10736,7 +10737,7 @@ export const getCariBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Cari/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Cari/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Cari/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Cari/${id}/Belgeler`
 }
 
 export const Cari_BelgelerGet = async (id: number,
@@ -10799,7 +10800,7 @@ export const getCariBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Cari/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Cari/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Cari/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Cari/${id}/BelgeEkle`
 }
 
 export const Cari_BelgeEklePost = async (id: number,
@@ -10863,7 +10864,7 @@ export const getCariBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Cari/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Cari/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Cari/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Cari/${id}/BelgeSil/${belgeID}`
 }
 
 export const Cari_BelgeSilDelete = async (id: number,
@@ -10927,7 +10928,7 @@ export const getCariNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Cari/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Cari/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Cari/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Cari/${id}/Notlar`
 }
 
 export const Cari_NotlarGet = async (id: number,
@@ -10982,7 +10983,7 @@ export const getCariNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Cari/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Cari/${id}/NotEkle`
 }
 
 export const Cari_NotEklePost = async (id: number,
@@ -11039,7 +11040,7 @@ export const getCariNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Cari/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Cari/${id}/NotSil/${notID}`
 }
 
 export const Cari_NotSilDelete = async (id: number,
@@ -11094,7 +11095,7 @@ export const getCariAdresGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariAdres/${id}`
+  return `${getBaseUrl()}/api/CariAdres/${id}`
 }
 
 export const CariAdres_GetGet = async (id: number, options?: RequestInit): Promise<CariAdres_GetGetResponse> => {
@@ -11148,7 +11149,7 @@ export const getCariAdresPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariAdres/${id}`
+  return `${getBaseUrl()}/api/CariAdres/${id}`
 }
 
 export const CariAdres_PutPut = async (id: number,
@@ -11204,7 +11205,7 @@ export const getCariAdresDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariAdres/${id}`
+  return `${getBaseUrl()}/api/CariAdres/${id}`
 }
 
 export const CariAdres_DeleteDelete = async (id: number, options?: RequestInit): Promise<CariAdres_DeleteDeleteResponse> => {
@@ -11265,7 +11266,7 @@ export const getCariAdresListeGetGetUrl = (params?: CariAdresListeGetGetParams,)
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariAdres?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariAdres`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariAdres?${stringifiedParams}` : `${getBaseUrl()}/api/CariAdres`
 }
 
 export const CariAdres_ListeGetGet = async (params?: CariAdresListeGetGetParams, options?: RequestInit): Promise<CariAdres_ListeGetGetResponse> => {
@@ -11319,7 +11320,7 @@ export const getCariAdresPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariAdres`
+  return `${getBaseUrl()}/api/CariAdres`
 }
 
 export const CariAdres_PostPost = async (aaroModullerCariAdresKayitSadeKayitModelBody: AaroModullerCariAdresKayitSadeKayitModelBody, options?: RequestInit): Promise<CariAdres_PostPostResponse> => {
@@ -11381,7 +11382,7 @@ export const getCariAdresOnaylaPostUrl = (params: CariAdresOnaylaPostParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariAdres/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariAdres/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariAdres/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/CariAdres/Onayla`
 }
 
 export const CariAdres_OnaylaPost = async (params: CariAdresOnaylaPostParams, options?: RequestInit): Promise<CariAdres_OnaylaPostResponse> => {
@@ -11442,7 +11443,7 @@ export const getCariAdresReddetPostUrl = (params: CariAdresReddetPostParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariAdres/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariAdres/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariAdres/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/CariAdres/Reddet`
 }
 
 export const CariAdres_ReddetPost = async (params: CariAdresReddetPostParams, options?: RequestInit): Promise<CariAdres_ReddetPostResponse> => {
@@ -11503,7 +11504,7 @@ export const getCariAdresListeEsnekGetUrl = (params?: CariAdresListeEsnekGetPara
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariAdres/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariAdres/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariAdres/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/CariAdres/Liste`
 }
 
 export const CariAdres_ListeEsnekGet = async (params?: CariAdresListeEsnekGetParams, options?: RequestInit): Promise<CariAdres_ListeEsnekGetResponse> => {
@@ -11557,7 +11558,7 @@ export const getCariAdresListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariAdres/Liste`
+  return `${getBaseUrl()}/api/CariAdres/Liste`
 }
 
 export const CariAdres_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<CariAdres_ListePostPostResponse> => {
@@ -11619,7 +11620,7 @@ export const getCariAdresGrupluListeGetUrl = (params: CariAdresGrupluListeGetPar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariAdres/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariAdres/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariAdres/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/CariAdres/GrupluListe`
 }
 
 export const CariAdres_GrupluListeGet = async (params: CariAdresGrupluListeGetParams, options?: RequestInit): Promise<CariAdres_GrupluListeGetResponse> => {
@@ -11673,7 +11674,7 @@ export const getCariAdresOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariAdres/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/CariAdres/${id}/OnayDurumu`
 }
 
 export const CariAdres_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<CariAdres_OnayDurumuGetResponse> => {
@@ -11735,7 +11736,7 @@ export const getCariAdresDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariAdres/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariAdres/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariAdres/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/CariAdres/${id}/DegisiklikGecmisi`
 }
 
 export const CariAdres_DegisiklikGecmisiGet = async (id: number,
@@ -11798,7 +11799,7 @@ export const getCariAdresBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariAdres/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariAdres/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariAdres/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/CariAdres/${id}/Belgeler`
 }
 
 export const CariAdres_BelgelerGet = async (id: number,
@@ -11861,7 +11862,7 @@ export const getCariAdresBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariAdres/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariAdres/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariAdres/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/CariAdres/${id}/BelgeEkle`
 }
 
 export const CariAdres_BelgeEklePost = async (id: number,
@@ -11925,7 +11926,7 @@ export const getCariAdresBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariAdres/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariAdres/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariAdres/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/CariAdres/${id}/BelgeSil/${belgeID}`
 }
 
 export const CariAdres_BelgeSilDelete = async (id: number,
@@ -11989,7 +11990,7 @@ export const getCariAdresNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariAdres/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariAdres/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariAdres/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/CariAdres/${id}/Notlar`
 }
 
 export const CariAdres_NotlarGet = async (id: number,
@@ -12044,7 +12045,7 @@ export const getCariAdresNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariAdres/${id}/NotEkle`
+  return `${getBaseUrl()}/api/CariAdres/${id}/NotEkle`
 }
 
 export const CariAdres_NotEklePost = async (id: number,
@@ -12101,7 +12102,7 @@ export const getCariAdresNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/CariAdres/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/CariAdres/${id}/NotSil/${notID}`
 }
 
 export const CariAdres_NotSilDelete = async (id: number,
@@ -12156,7 +12157,7 @@ export const getCariBankaGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariBanka/${id}`
+  return `${getBaseUrl()}/api/CariBanka/${id}`
 }
 
 export const CariBanka_GetGet = async (id: number, options?: RequestInit): Promise<CariBanka_GetGetResponse> => {
@@ -12210,7 +12211,7 @@ export const getCariBankaPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariBanka/${id}`
+  return `${getBaseUrl()}/api/CariBanka/${id}`
 }
 
 export const CariBanka_PutPut = async (id: number,
@@ -12266,7 +12267,7 @@ export const getCariBankaDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariBanka/${id}`
+  return `${getBaseUrl()}/api/CariBanka/${id}`
 }
 
 export const CariBanka_DeleteDelete = async (id: number, options?: RequestInit): Promise<CariBanka_DeleteDeleteResponse> => {
@@ -12327,7 +12328,7 @@ export const getCariBankaListeGetGetUrl = (params?: CariBankaListeGetGetParams,)
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariBanka?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariBanka`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariBanka?${stringifiedParams}` : `${getBaseUrl()}/api/CariBanka`
 }
 
 export const CariBanka_ListeGetGet = async (params?: CariBankaListeGetGetParams, options?: RequestInit): Promise<CariBanka_ListeGetGetResponse> => {
@@ -12381,7 +12382,7 @@ export const getCariBankaPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariBanka`
+  return `${getBaseUrl()}/api/CariBanka`
 }
 
 export const CariBanka_PostPost = async (aaroModullerCariBankaKayitSadeKayitModelBody: AaroModullerCariBankaKayitSadeKayitModelBody, options?: RequestInit): Promise<CariBanka_PostPostResponse> => {
@@ -12443,7 +12444,7 @@ export const getCariBankaOnaylaPostUrl = (params: CariBankaOnaylaPostParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariBanka/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariBanka/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariBanka/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/CariBanka/Onayla`
 }
 
 export const CariBanka_OnaylaPost = async (params: CariBankaOnaylaPostParams, options?: RequestInit): Promise<CariBanka_OnaylaPostResponse> => {
@@ -12504,7 +12505,7 @@ export const getCariBankaReddetPostUrl = (params: CariBankaReddetPostParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariBanka/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariBanka/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariBanka/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/CariBanka/Reddet`
 }
 
 export const CariBanka_ReddetPost = async (params: CariBankaReddetPostParams, options?: RequestInit): Promise<CariBanka_ReddetPostResponse> => {
@@ -12565,7 +12566,7 @@ export const getCariBankaListeEsnekGetUrl = (params?: CariBankaListeEsnekGetPara
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariBanka/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariBanka/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariBanka/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/CariBanka/Liste`
 }
 
 export const CariBanka_ListeEsnekGet = async (params?: CariBankaListeEsnekGetParams, options?: RequestInit): Promise<CariBanka_ListeEsnekGetResponse> => {
@@ -12619,7 +12620,7 @@ export const getCariBankaListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariBanka/Liste`
+  return `${getBaseUrl()}/api/CariBanka/Liste`
 }
 
 export const CariBanka_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<CariBanka_ListePostPostResponse> => {
@@ -12681,7 +12682,7 @@ export const getCariBankaGrupluListeGetUrl = (params: CariBankaGrupluListeGetPar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariBanka/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariBanka/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariBanka/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/CariBanka/GrupluListe`
 }
 
 export const CariBanka_GrupluListeGet = async (params: CariBankaGrupluListeGetParams, options?: RequestInit): Promise<CariBanka_GrupluListeGetResponse> => {
@@ -12735,7 +12736,7 @@ export const getCariBankaOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariBanka/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/CariBanka/${id}/OnayDurumu`
 }
 
 export const CariBanka_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<CariBanka_OnayDurumuGetResponse> => {
@@ -12797,7 +12798,7 @@ export const getCariBankaDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariBanka/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariBanka/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariBanka/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/CariBanka/${id}/DegisiklikGecmisi`
 }
 
 export const CariBanka_DegisiklikGecmisiGet = async (id: number,
@@ -12860,7 +12861,7 @@ export const getCariBankaBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariBanka/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariBanka/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariBanka/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/CariBanka/${id}/Belgeler`
 }
 
 export const CariBanka_BelgelerGet = async (id: number,
@@ -12923,7 +12924,7 @@ export const getCariBankaBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariBanka/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariBanka/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariBanka/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/CariBanka/${id}/BelgeEkle`
 }
 
 export const CariBanka_BelgeEklePost = async (id: number,
@@ -12987,7 +12988,7 @@ export const getCariBankaBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariBanka/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariBanka/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariBanka/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/CariBanka/${id}/BelgeSil/${belgeID}`
 }
 
 export const CariBanka_BelgeSilDelete = async (id: number,
@@ -13051,7 +13052,7 @@ export const getCariBankaNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariBanka/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariBanka/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariBanka/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/CariBanka/${id}/Notlar`
 }
 
 export const CariBanka_NotlarGet = async (id: number,
@@ -13106,7 +13107,7 @@ export const getCariBankaNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariBanka/${id}/NotEkle`
+  return `${getBaseUrl()}/api/CariBanka/${id}/NotEkle`
 }
 
 export const CariBanka_NotEklePost = async (id: number,
@@ -13163,7 +13164,7 @@ export const getCariBankaNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/CariBanka/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/CariBanka/${id}/NotSil/${notID}`
 }
 
 export const CariBanka_NotSilDelete = async (id: number,
@@ -13225,7 +13226,7 @@ export const getCariHareketleriDetayliListeGetUrl = (params?: CariHareketleriDet
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/CariHareketleri`
 }
 
 export const CariHareketleri_DetayliListeGet = async (params?: CariHareketleriDetayliListeGetParams, options?: RequestInit): Promise<CariHareketleri_DetayliListeGetResponse> => {
@@ -13286,7 +13287,7 @@ export const getCariHareketleriListeEsnekGetUrl = (params?: CariHareketleriListe
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariHareketleri/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariHareketleri/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariHareketleri/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/CariHareketleri/Liste`
 }
 
 export const CariHareketleri_ListeEsnekGet = async (params?: CariHareketleriListeEsnekGetParams, options?: RequestInit): Promise<CariHareketleri_ListeEsnekGetResponse> => {
@@ -13347,7 +13348,7 @@ export const getCariHareketleriGrupluListeGetUrl = (params: CariHareketleriGrupl
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariHareketleri/Pivot?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariHareketleri/Pivot`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariHareketleri/Pivot?${stringifiedParams}` : `${getBaseUrl()}/api/CariHareketleri/Pivot`
 }
 
 export const CariHareketleri_GrupluListeGet = async (params: CariHareketleriGrupluListeGetParams, options?: RequestInit): Promise<CariHareketleri_GrupluListeGetResponse> => {
@@ -13401,7 +13402,7 @@ export const getCariIlgiliGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariIlgili/${id}`
+  return `${getBaseUrl()}/api/CariIlgili/${id}`
 }
 
 export const CariIlgili_GetGet = async (id: number, options?: RequestInit): Promise<CariIlgili_GetGetResponse> => {
@@ -13455,7 +13456,7 @@ export const getCariIlgiliPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariIlgili/${id}`
+  return `${getBaseUrl()}/api/CariIlgili/${id}`
 }
 
 export const CariIlgili_PutPut = async (id: number,
@@ -13511,7 +13512,7 @@ export const getCariIlgiliDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariIlgili/${id}`
+  return `${getBaseUrl()}/api/CariIlgili/${id}`
 }
 
 export const CariIlgili_DeleteDelete = async (id: number, options?: RequestInit): Promise<CariIlgili_DeleteDeleteResponse> => {
@@ -13572,7 +13573,7 @@ export const getCariIlgiliListeGetGetUrl = (params?: CariIlgiliListeGetGetParams
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariIlgili?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariIlgili`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariIlgili?${stringifiedParams}` : `${getBaseUrl()}/api/CariIlgili`
 }
 
 export const CariIlgili_ListeGetGet = async (params?: CariIlgiliListeGetGetParams, options?: RequestInit): Promise<CariIlgili_ListeGetGetResponse> => {
@@ -13626,7 +13627,7 @@ export const getCariIlgiliPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariIlgili`
+  return `${getBaseUrl()}/api/CariIlgili`
 }
 
 export const CariIlgili_PostPost = async (aaroModullerCariIlgiliKayitSadeKayitModelBody: AaroModullerCariIlgiliKayitSadeKayitModelBody, options?: RequestInit): Promise<CariIlgili_PostPostResponse> => {
@@ -13688,7 +13689,7 @@ export const getCariIlgiliOnaylaPostUrl = (params: CariIlgiliOnaylaPostParams,) 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariIlgili/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariIlgili/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariIlgili/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/CariIlgili/Onayla`
 }
 
 export const CariIlgili_OnaylaPost = async (params: CariIlgiliOnaylaPostParams, options?: RequestInit): Promise<CariIlgili_OnaylaPostResponse> => {
@@ -13749,7 +13750,7 @@ export const getCariIlgiliReddetPostUrl = (params: CariIlgiliReddetPostParams,) 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariIlgili/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariIlgili/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariIlgili/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/CariIlgili/Reddet`
 }
 
 export const CariIlgili_ReddetPost = async (params: CariIlgiliReddetPostParams, options?: RequestInit): Promise<CariIlgili_ReddetPostResponse> => {
@@ -13810,7 +13811,7 @@ export const getCariIlgiliListeEsnekGetUrl = (params?: CariIlgiliListeEsnekGetPa
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariIlgili/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariIlgili/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariIlgili/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/CariIlgili/Liste`
 }
 
 export const CariIlgili_ListeEsnekGet = async (params?: CariIlgiliListeEsnekGetParams, options?: RequestInit): Promise<CariIlgili_ListeEsnekGetResponse> => {
@@ -13864,7 +13865,7 @@ export const getCariIlgiliListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariIlgili/Liste`
+  return `${getBaseUrl()}/api/CariIlgili/Liste`
 }
 
 export const CariIlgili_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<CariIlgili_ListePostPostResponse> => {
@@ -13926,7 +13927,7 @@ export const getCariIlgiliGrupluListeGetUrl = (params: CariIlgiliGrupluListeGetP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariIlgili/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariIlgili/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariIlgili/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/CariIlgili/GrupluListe`
 }
 
 export const CariIlgili_GrupluListeGet = async (params: CariIlgiliGrupluListeGetParams, options?: RequestInit): Promise<CariIlgili_GrupluListeGetResponse> => {
@@ -13980,7 +13981,7 @@ export const getCariIlgiliOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariIlgili/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/CariIlgili/${id}/OnayDurumu`
 }
 
 export const CariIlgili_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<CariIlgili_OnayDurumuGetResponse> => {
@@ -14042,7 +14043,7 @@ export const getCariIlgiliDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariIlgili/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariIlgili/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariIlgili/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/CariIlgili/${id}/DegisiklikGecmisi`
 }
 
 export const CariIlgili_DegisiklikGecmisiGet = async (id: number,
@@ -14105,7 +14106,7 @@ export const getCariIlgiliBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariIlgili/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariIlgili/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariIlgili/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/CariIlgili/${id}/Belgeler`
 }
 
 export const CariIlgili_BelgelerGet = async (id: number,
@@ -14168,7 +14169,7 @@ export const getCariIlgiliBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariIlgili/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariIlgili/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariIlgili/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/CariIlgili/${id}/BelgeEkle`
 }
 
 export const CariIlgili_BelgeEklePost = async (id: number,
@@ -14232,7 +14233,7 @@ export const getCariIlgiliBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariIlgili/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariIlgili/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariIlgili/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/CariIlgili/${id}/BelgeSil/${belgeID}`
 }
 
 export const CariIlgili_BelgeSilDelete = async (id: number,
@@ -14296,7 +14297,7 @@ export const getCariIlgiliNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariIlgili/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariIlgili/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariIlgili/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/CariIlgili/${id}/Notlar`
 }
 
 export const CariIlgili_NotlarGet = async (id: number,
@@ -14351,7 +14352,7 @@ export const getCariIlgiliNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariIlgili/${id}/NotEkle`
+  return `${getBaseUrl()}/api/CariIlgili/${id}/NotEkle`
 }
 
 export const CariIlgili_NotEklePost = async (id: number,
@@ -14408,7 +14409,7 @@ export const getCariIlgiliNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/CariIlgili/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/CariIlgili/${id}/NotSil/${notID}`
 }
 
 export const CariIlgili_NotSilDelete = async (id: number,
@@ -14463,7 +14464,7 @@ export const getCariRiskRiskGrafigiGetUrl = (cariID: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariRisk/Grafik/${cariID}`
+  return `${getBaseUrl()}/api/CariRisk/Grafik/${cariID}`
 }
 
 export const CariRisk_RiskGrafigiGet = async (cariID: number, options?: RequestInit): Promise<CariRisk_RiskGrafigiGetResponse> => {
@@ -14517,7 +14518,7 @@ export const getCariRiskGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariRisk/${id}`
+  return `${getBaseUrl()}/api/CariRisk/${id}`
 }
 
 export const CariRisk_GetGet = async (id: number, options?: RequestInit): Promise<CariRisk_GetGetResponse> => {
@@ -14571,7 +14572,7 @@ export const getCariRiskPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariRisk/${id}`
+  return `${getBaseUrl()}/api/CariRisk/${id}`
 }
 
 export const CariRisk_PutPut = async (id: number,
@@ -14627,7 +14628,7 @@ export const getCariRiskDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariRisk/${id}`
+  return `${getBaseUrl()}/api/CariRisk/${id}`
 }
 
 export const CariRisk_DeleteDelete = async (id: number, options?: RequestInit): Promise<CariRisk_DeleteDeleteResponse> => {
@@ -14688,7 +14689,7 @@ export const getCariRiskListeGetGetUrl = (params?: CariRiskListeGetGetParams,) =
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariRisk?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariRisk`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariRisk?${stringifiedParams}` : `${getBaseUrl()}/api/CariRisk`
 }
 
 export const CariRisk_ListeGetGet = async (params?: CariRiskListeGetGetParams, options?: RequestInit): Promise<CariRisk_ListeGetGetResponse> => {
@@ -14742,7 +14743,7 @@ export const getCariRiskPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariRisk`
+  return `${getBaseUrl()}/api/CariRisk`
 }
 
 export const CariRisk_PostPost = async (aaroModullerCariRiskKayitSadeKayitModelBody: AaroModullerCariRiskKayitSadeKayitModelBody, options?: RequestInit): Promise<CariRisk_PostPostResponse> => {
@@ -14804,7 +14805,7 @@ export const getCariRiskOnaylaPostUrl = (params: CariRiskOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariRisk/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariRisk/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariRisk/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/CariRisk/Onayla`
 }
 
 export const CariRisk_OnaylaPost = async (params: CariRiskOnaylaPostParams, options?: RequestInit): Promise<CariRisk_OnaylaPostResponse> => {
@@ -14865,7 +14866,7 @@ export const getCariRiskReddetPostUrl = (params: CariRiskReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariRisk/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariRisk/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariRisk/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/CariRisk/Reddet`
 }
 
 export const CariRisk_ReddetPost = async (params: CariRiskReddetPostParams, options?: RequestInit): Promise<CariRisk_ReddetPostResponse> => {
@@ -14926,7 +14927,7 @@ export const getCariRiskListeEsnekGetUrl = (params?: CariRiskListeEsnekGetParams
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariRisk/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariRisk/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariRisk/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/CariRisk/Liste`
 }
 
 export const CariRisk_ListeEsnekGet = async (params?: CariRiskListeEsnekGetParams, options?: RequestInit): Promise<CariRisk_ListeEsnekGetResponse> => {
@@ -14980,7 +14981,7 @@ export const getCariRiskListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariRisk/Liste`
+  return `${getBaseUrl()}/api/CariRisk/Liste`
 }
 
 export const CariRisk_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<CariRisk_ListePostPostResponse> => {
@@ -15042,7 +15043,7 @@ export const getCariRiskGrupluListeGetUrl = (params: CariRiskGrupluListeGetParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariRisk/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariRisk/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariRisk/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/CariRisk/GrupluListe`
 }
 
 export const CariRisk_GrupluListeGet = async (params: CariRiskGrupluListeGetParams, options?: RequestInit): Promise<CariRisk_GrupluListeGetResponse> => {
@@ -15096,7 +15097,7 @@ export const getCariRiskOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariRisk/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/CariRisk/${id}/OnayDurumu`
 }
 
 export const CariRisk_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<CariRisk_OnayDurumuGetResponse> => {
@@ -15158,7 +15159,7 @@ export const getCariRiskDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariRisk/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariRisk/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariRisk/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/CariRisk/${id}/DegisiklikGecmisi`
 }
 
 export const CariRisk_DegisiklikGecmisiGet = async (id: number,
@@ -15221,7 +15222,7 @@ export const getCariRiskBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariRisk/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariRisk/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariRisk/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/CariRisk/${id}/Belgeler`
 }
 
 export const CariRisk_BelgelerGet = async (id: number,
@@ -15284,7 +15285,7 @@ export const getCariRiskBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariRisk/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariRisk/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariRisk/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/CariRisk/${id}/BelgeEkle`
 }
 
 export const CariRisk_BelgeEklePost = async (id: number,
@@ -15348,7 +15349,7 @@ export const getCariRiskBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariRisk/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariRisk/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariRisk/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/CariRisk/${id}/BelgeSil/${belgeID}`
 }
 
 export const CariRisk_BelgeSilDelete = async (id: number,
@@ -15412,7 +15413,7 @@ export const getCariRiskNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariRisk/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariRisk/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariRisk/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/CariRisk/${id}/Notlar`
 }
 
 export const CariRisk_NotlarGet = async (id: number,
@@ -15467,7 +15468,7 @@ export const getCariRiskNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariRisk/${id}/NotEkle`
+  return `${getBaseUrl()}/api/CariRisk/${id}/NotEkle`
 }
 
 export const CariRisk_NotEklePost = async (id: number,
@@ -15524,7 +15525,7 @@ export const getCariRiskNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/CariRisk/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/CariRisk/${id}/NotSil/${notID}`
 }
 
 export const CariRisk_NotSilDelete = async (id: number,
@@ -15579,7 +15580,7 @@ export const getCariZiyaretGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariZiyaret/${id}`
+  return `${getBaseUrl()}/api/CariZiyaret/${id}`
 }
 
 export const CariZiyaret_GetGet = async (id: number, options?: RequestInit): Promise<CariZiyaret_GetGetResponse> => {
@@ -15633,7 +15634,7 @@ export const getCariZiyaretPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariZiyaret/${id}`
+  return `${getBaseUrl()}/api/CariZiyaret/${id}`
 }
 
 export const CariZiyaret_PutPut = async (id: number,
@@ -15689,7 +15690,7 @@ export const getCariZiyaretDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariZiyaret/${id}`
+  return `${getBaseUrl()}/api/CariZiyaret/${id}`
 }
 
 export const CariZiyaret_DeleteDelete = async (id: number, options?: RequestInit): Promise<CariZiyaret_DeleteDeleteResponse> => {
@@ -15750,7 +15751,7 @@ export const getCariZiyaretListeGetGetUrl = (params?: CariZiyaretListeGetGetPara
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariZiyaret?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariZiyaret`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariZiyaret?${stringifiedParams}` : `${getBaseUrl()}/api/CariZiyaret`
 }
 
 export const CariZiyaret_ListeGetGet = async (params?: CariZiyaretListeGetGetParams, options?: RequestInit): Promise<CariZiyaret_ListeGetGetResponse> => {
@@ -15804,7 +15805,7 @@ export const getCariZiyaretPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariZiyaret`
+  return `${getBaseUrl()}/api/CariZiyaret`
 }
 
 export const CariZiyaret_PostPost = async (aaroModullerCariZiyaretKayitSadeKayitModelBody: AaroModullerCariZiyaretKayitSadeKayitModelBody, options?: RequestInit): Promise<CariZiyaret_PostPostResponse> => {
@@ -15866,7 +15867,7 @@ export const getCariZiyaretOnaylaPostUrl = (params: CariZiyaretOnaylaPostParams,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariZiyaret/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariZiyaret/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariZiyaret/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/CariZiyaret/Onayla`
 }
 
 export const CariZiyaret_OnaylaPost = async (params: CariZiyaretOnaylaPostParams, options?: RequestInit): Promise<CariZiyaret_OnaylaPostResponse> => {
@@ -15927,7 +15928,7 @@ export const getCariZiyaretReddetPostUrl = (params: CariZiyaretReddetPostParams,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariZiyaret/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariZiyaret/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariZiyaret/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/CariZiyaret/Reddet`
 }
 
 export const CariZiyaret_ReddetPost = async (params: CariZiyaretReddetPostParams, options?: RequestInit): Promise<CariZiyaret_ReddetPostResponse> => {
@@ -15988,7 +15989,7 @@ export const getCariZiyaretListeEsnekGetUrl = (params?: CariZiyaretListeEsnekGet
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariZiyaret/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariZiyaret/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariZiyaret/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/CariZiyaret/Liste`
 }
 
 export const CariZiyaret_ListeEsnekGet = async (params?: CariZiyaretListeEsnekGetParams, options?: RequestInit): Promise<CariZiyaret_ListeEsnekGetResponse> => {
@@ -16042,7 +16043,7 @@ export const getCariZiyaretListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariZiyaret/Liste`
+  return `${getBaseUrl()}/api/CariZiyaret/Liste`
 }
 
 export const CariZiyaret_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<CariZiyaret_ListePostPostResponse> => {
@@ -16104,7 +16105,7 @@ export const getCariZiyaretGrupluListeGetUrl = (params: CariZiyaretGrupluListeGe
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariZiyaret/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariZiyaret/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariZiyaret/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/CariZiyaret/GrupluListe`
 }
 
 export const CariZiyaret_GrupluListeGet = async (params: CariZiyaretGrupluListeGetParams, options?: RequestInit): Promise<CariZiyaret_GrupluListeGetResponse> => {
@@ -16158,7 +16159,7 @@ export const getCariZiyaretOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariZiyaret/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/CariZiyaret/${id}/OnayDurumu`
 }
 
 export const CariZiyaret_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<CariZiyaret_OnayDurumuGetResponse> => {
@@ -16220,7 +16221,7 @@ export const getCariZiyaretDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariZiyaret/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariZiyaret/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariZiyaret/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/CariZiyaret/${id}/DegisiklikGecmisi`
 }
 
 export const CariZiyaret_DegisiklikGecmisiGet = async (id: number,
@@ -16283,7 +16284,7 @@ export const getCariZiyaretBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariZiyaret/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariZiyaret/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariZiyaret/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/CariZiyaret/${id}/Belgeler`
 }
 
 export const CariZiyaret_BelgelerGet = async (id: number,
@@ -16346,7 +16347,7 @@ export const getCariZiyaretBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariZiyaret/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariZiyaret/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariZiyaret/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/CariZiyaret/${id}/BelgeEkle`
 }
 
 export const CariZiyaret_BelgeEklePost = async (id: number,
@@ -16410,7 +16411,7 @@ export const getCariZiyaretBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariZiyaret/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariZiyaret/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariZiyaret/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/CariZiyaret/${id}/BelgeSil/${belgeID}`
 }
 
 export const CariZiyaret_BelgeSilDelete = async (id: number,
@@ -16474,7 +16475,7 @@ export const getCariZiyaretNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CariZiyaret/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CariZiyaret/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CariZiyaret/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/CariZiyaret/${id}/Notlar`
 }
 
 export const CariZiyaret_NotlarGet = async (id: number,
@@ -16529,7 +16530,7 @@ export const getCariZiyaretNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CariZiyaret/${id}/NotEkle`
+  return `${getBaseUrl()}/api/CariZiyaret/${id}/NotEkle`
 }
 
 export const CariZiyaret_NotEklePost = async (id: number,
@@ -16586,7 +16587,7 @@ export const getCariZiyaretNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/CariZiyaret/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/CariZiyaret/${id}/NotSil/${notID}`
 }
 
 export const CariZiyaret_NotSilDelete = async (id: number,
@@ -16641,7 +16642,7 @@ export const getCekSenetGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CekSenet/${id}`
+  return `${getBaseUrl()}/api/CekSenet/${id}`
 }
 
 export const CekSenet_GetGet = async (id: number, options?: RequestInit): Promise<CekSenet_GetGetResponse> => {
@@ -16695,7 +16696,7 @@ export const getCekSenetPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CekSenet/${id}`
+  return `${getBaseUrl()}/api/CekSenet/${id}`
 }
 
 export const CekSenet_PutPut = async (id: number,
@@ -16751,7 +16752,7 @@ export const getCekSenetDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CekSenet/${id}`
+  return `${getBaseUrl()}/api/CekSenet/${id}`
 }
 
 export const CekSenet_DeleteDelete = async (id: number, options?: RequestInit): Promise<CekSenet_DeleteDeleteResponse> => {
@@ -16812,7 +16813,7 @@ export const getCekSenetListeGetGetUrl = (params?: CekSenetListeGetGetParams,) =
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CekSenet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CekSenet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CekSenet?${stringifiedParams}` : `${getBaseUrl()}/api/CekSenet`
 }
 
 export const CekSenet_ListeGetGet = async (params?: CekSenetListeGetGetParams, options?: RequestInit): Promise<CekSenet_ListeGetGetResponse> => {
@@ -16866,7 +16867,7 @@ export const getCekSenetPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CekSenet`
+  return `${getBaseUrl()}/api/CekSenet`
 }
 
 export const CekSenet_PostPost = async (aaroModullerCekSenetKayitSadeKayitModelBody: AaroModullerCekSenetKayitSadeKayitModelBody, options?: RequestInit): Promise<CekSenet_PostPostResponse> => {
@@ -16928,7 +16929,7 @@ export const getCekSenetOnaylaPostUrl = (params: CekSenetOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CekSenet/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CekSenet/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CekSenet/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/CekSenet/Onayla`
 }
 
 export const CekSenet_OnaylaPost = async (params: CekSenetOnaylaPostParams, options?: RequestInit): Promise<CekSenet_OnaylaPostResponse> => {
@@ -16989,7 +16990,7 @@ export const getCekSenetReddetPostUrl = (params: CekSenetReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CekSenet/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CekSenet/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CekSenet/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/CekSenet/Reddet`
 }
 
 export const CekSenet_ReddetPost = async (params: CekSenetReddetPostParams, options?: RequestInit): Promise<CekSenet_ReddetPostResponse> => {
@@ -17050,7 +17051,7 @@ export const getCekSenetListeEsnekGetUrl = (params?: CekSenetListeEsnekGetParams
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CekSenet/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CekSenet/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CekSenet/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/CekSenet/Liste`
 }
 
 export const CekSenet_ListeEsnekGet = async (params?: CekSenetListeEsnekGetParams, options?: RequestInit): Promise<CekSenet_ListeEsnekGetResponse> => {
@@ -17104,7 +17105,7 @@ export const getCekSenetListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CekSenet/Liste`
+  return `${getBaseUrl()}/api/CekSenet/Liste`
 }
 
 export const CekSenet_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<CekSenet_ListePostPostResponse> => {
@@ -17166,7 +17167,7 @@ export const getCekSenetGrupluListeGetUrl = (params: CekSenetGrupluListeGetParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CekSenet/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CekSenet/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CekSenet/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/CekSenet/GrupluListe`
 }
 
 export const CekSenet_GrupluListeGet = async (params: CekSenetGrupluListeGetParams, options?: RequestInit): Promise<CekSenet_GrupluListeGetResponse> => {
@@ -17220,7 +17221,7 @@ export const getCekSenetOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CekSenet/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/CekSenet/${id}/OnayDurumu`
 }
 
 export const CekSenet_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<CekSenet_OnayDurumuGetResponse> => {
@@ -17282,7 +17283,7 @@ export const getCekSenetDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CekSenet/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CekSenet/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CekSenet/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/CekSenet/${id}/DegisiklikGecmisi`
 }
 
 export const CekSenet_DegisiklikGecmisiGet = async (id: number,
@@ -17345,7 +17346,7 @@ export const getCekSenetBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CekSenet/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CekSenet/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CekSenet/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/CekSenet/${id}/Belgeler`
 }
 
 export const CekSenet_BelgelerGet = async (id: number,
@@ -17408,7 +17409,7 @@ export const getCekSenetBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CekSenet/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CekSenet/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CekSenet/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/CekSenet/${id}/BelgeEkle`
 }
 
 export const CekSenet_BelgeEklePost = async (id: number,
@@ -17472,7 +17473,7 @@ export const getCekSenetBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CekSenet/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CekSenet/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CekSenet/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/CekSenet/${id}/BelgeSil/${belgeID}`
 }
 
 export const CekSenet_BelgeSilDelete = async (id: number,
@@ -17536,7 +17537,7 @@ export const getCekSenetNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CekSenet/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CekSenet/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CekSenet/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/CekSenet/${id}/Notlar`
 }
 
 export const CekSenet_NotlarGet = async (id: number,
@@ -17591,7 +17592,7 @@ export const getCekSenetNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/CekSenet/${id}/NotEkle`
+  return `${getBaseUrl()}/api/CekSenet/${id}/NotEkle`
 }
 
 export const CekSenet_NotEklePost = async (id: number,
@@ -17648,7 +17649,7 @@ export const getCekSenetNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/CekSenet/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/CekSenet/${id}/NotSil/${notID}`
 }
 
 export const CekSenet_NotSilDelete = async (id: number,
@@ -17710,7 +17711,7 @@ export const getCekSenetHareketleriDetayliListeGetUrl = (params?: CekSenetHareke
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/CekSenetHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/CekSenetHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/CekSenetHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/CekSenetHareketleri`
 }
 
 export const CekSenetHareketleri_DetayliListeGet = async (params?: CekSenetHareketleriDetayliListeGetParams, options?: RequestInit): Promise<CekSenetHareketleri_DetayliListeGetResponse> => {
@@ -17764,7 +17765,7 @@ export const getDegisiklikLoglariGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/DegisiklikLoglari/${id}`
+  return `${getBaseUrl()}/api/DegisiklikLoglari/${id}`
 }
 
 export const DegisiklikLoglari_GetGet = async (id: number, options?: RequestInit): Promise<DegisiklikLoglari_GetGetResponse> => {
@@ -17818,7 +17819,7 @@ export const getDegisiklikLoglariPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/DegisiklikLoglari/${id}`
+  return `${getBaseUrl()}/api/DegisiklikLoglari/${id}`
 }
 
 export const DegisiklikLoglari_PutPut = async (id: number,
@@ -17874,7 +17875,7 @@ export const getDegisiklikLoglariDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/DegisiklikLoglari/${id}`
+  return `${getBaseUrl()}/api/DegisiklikLoglari/${id}`
 }
 
 export const DegisiklikLoglari_DeleteDelete = async (id: number, options?: RequestInit): Promise<DegisiklikLoglari_DeleteDeleteResponse> => {
@@ -17935,7 +17936,7 @@ export const getDegisiklikLoglariListeGetGetUrl = (params?: DegisiklikLoglariLis
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DegisiklikLoglari?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DegisiklikLoglari`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DegisiklikLoglari?${stringifiedParams}` : `${getBaseUrl()}/api/DegisiklikLoglari`
 }
 
 export const DegisiklikLoglari_ListeGetGet = async (params?: DegisiklikLoglariListeGetGetParams, options?: RequestInit): Promise<DegisiklikLoglari_ListeGetGetResponse> => {
@@ -17989,7 +17990,7 @@ export const getDegisiklikLoglariPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/DegisiklikLoglari`
+  return `${getBaseUrl()}/api/DegisiklikLoglari`
 }
 
 export const DegisiklikLoglari_PostPost = async (aaroModullerDegisiklikLoglariKayitSadeKayitModelBody: AaroModullerDegisiklikLoglariKayitSadeKayitModelBody, options?: RequestInit): Promise<DegisiklikLoglari_PostPostResponse> => {
@@ -18051,7 +18052,7 @@ export const getDegisiklikLoglariOnaylaPostUrl = (params: DegisiklikLoglariOnayl
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DegisiklikLoglari/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DegisiklikLoglari/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DegisiklikLoglari/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/DegisiklikLoglari/Onayla`
 }
 
 export const DegisiklikLoglari_OnaylaPost = async (params: DegisiklikLoglariOnaylaPostParams, options?: RequestInit): Promise<DegisiklikLoglari_OnaylaPostResponse> => {
@@ -18112,7 +18113,7 @@ export const getDegisiklikLoglariReddetPostUrl = (params: DegisiklikLoglariRedde
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DegisiklikLoglari/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DegisiklikLoglari/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DegisiklikLoglari/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/DegisiklikLoglari/Reddet`
 }
 
 export const DegisiklikLoglari_ReddetPost = async (params: DegisiklikLoglariReddetPostParams, options?: RequestInit): Promise<DegisiklikLoglari_ReddetPostResponse> => {
@@ -18173,7 +18174,7 @@ export const getDegisiklikLoglariListeEsnekGetUrl = (params?: DegisiklikLoglariL
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DegisiklikLoglari/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DegisiklikLoglari/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DegisiklikLoglari/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/DegisiklikLoglari/Liste`
 }
 
 export const DegisiklikLoglari_ListeEsnekGet = async (params?: DegisiklikLoglariListeEsnekGetParams, options?: RequestInit): Promise<DegisiklikLoglari_ListeEsnekGetResponse> => {
@@ -18227,7 +18228,7 @@ export const getDegisiklikLoglariListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/DegisiklikLoglari/Liste`
+  return `${getBaseUrl()}/api/DegisiklikLoglari/Liste`
 }
 
 export const DegisiklikLoglari_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<DegisiklikLoglari_ListePostPostResponse> => {
@@ -18289,7 +18290,7 @@ export const getDegisiklikLoglariGrupluListeGetUrl = (params: DegisiklikLoglariG
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DegisiklikLoglari/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DegisiklikLoglari/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DegisiklikLoglari/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/DegisiklikLoglari/GrupluListe`
 }
 
 export const DegisiklikLoglari_GrupluListeGet = async (params: DegisiklikLoglariGrupluListeGetParams, options?: RequestInit): Promise<DegisiklikLoglari_GrupluListeGetResponse> => {
@@ -18343,7 +18344,7 @@ export const getDegisiklikLoglariOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/DegisiklikLoglari/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/DegisiklikLoglari/${id}/OnayDurumu`
 }
 
 export const DegisiklikLoglari_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<DegisiklikLoglari_OnayDurumuGetResponse> => {
@@ -18405,7 +18406,7 @@ export const getDegisiklikLoglariDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DegisiklikLoglari/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DegisiklikLoglari/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DegisiklikLoglari/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/DegisiklikLoglari/${id}/DegisiklikGecmisi`
 }
 
 export const DegisiklikLoglari_DegisiklikGecmisiGet = async (id: number,
@@ -18468,7 +18469,7 @@ export const getDegisiklikLoglariBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DegisiklikLoglari/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DegisiklikLoglari/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DegisiklikLoglari/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/DegisiklikLoglari/${id}/Belgeler`
 }
 
 export const DegisiklikLoglari_BelgelerGet = async (id: number,
@@ -18531,7 +18532,7 @@ export const getDegisiklikLoglariBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DegisiklikLoglari/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DegisiklikLoglari/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DegisiklikLoglari/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/DegisiklikLoglari/${id}/BelgeEkle`
 }
 
 export const DegisiklikLoglari_BelgeEklePost = async (id: number,
@@ -18595,7 +18596,7 @@ export const getDegisiklikLoglariBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DegisiklikLoglari/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DegisiklikLoglari/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DegisiklikLoglari/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/DegisiklikLoglari/${id}/BelgeSil/${belgeID}`
 }
 
 export const DegisiklikLoglari_BelgeSilDelete = async (id: number,
@@ -18659,7 +18660,7 @@ export const getDegisiklikLoglariNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DegisiklikLoglari/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DegisiklikLoglari/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DegisiklikLoglari/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/DegisiklikLoglari/${id}/Notlar`
 }
 
 export const DegisiklikLoglari_NotlarGet = async (id: number,
@@ -18714,7 +18715,7 @@ export const getDegisiklikLoglariNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/DegisiklikLoglari/${id}/NotEkle`
+  return `${getBaseUrl()}/api/DegisiklikLoglari/${id}/NotEkle`
 }
 
 export const DegisiklikLoglari_NotEklePost = async (id: number,
@@ -18771,7 +18772,7 @@ export const getDegisiklikLoglariNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/DegisiklikLoglari/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/DegisiklikLoglari/${id}/NotSil/${notID}`
 }
 
 export const DegisiklikLoglari_NotSilDelete = async (id: number,
@@ -18833,7 +18834,7 @@ export const getDekontFaturalastirPostUrl = (params: DekontFaturalastirPostParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Dekont/Faturalastir?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Dekont/Faturalastir`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Dekont/Faturalastir?${stringifiedParams}` : `${getBaseUrl()}/api/Dekont/Faturalastir`
 }
 
 export const Dekont_FaturalastirPost = async (params: DekontFaturalastirPostParams, options?: RequestInit): Promise<Dekont_FaturalastirPostResponse> => {
@@ -18894,7 +18895,7 @@ export const getDekontFiyatBulPostUrl = (params?: DekontFiyatBulPostParams,) => 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Dekont/FiyatBul?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Dekont/FiyatBul`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Dekont/FiyatBul?${stringifiedParams}` : `${getBaseUrl()}/api/Dekont/FiyatBul`
 }
 
 export const Dekont_FiyatBulPost = async (params?: DekontFiyatBulPostParams, options?: RequestInit): Promise<Dekont_FiyatBulPostResponse> => {
@@ -18955,7 +18956,7 @@ export const getDekontKalemVergiDetaylariGetirPostUrl = (params: DekontKalemVerg
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Dekont/KalemVergiDetaylariGetir?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Dekont/KalemVergiDetaylariGetir`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Dekont/KalemVergiDetaylariGetir?${stringifiedParams}` : `${getBaseUrl()}/api/Dekont/KalemVergiDetaylariGetir`
 }
 
 export const Dekont_KalemVergiDetaylariGetirPost = async (params: DekontKalemVergiDetaylariGetirPostParams, options?: RequestInit): Promise<Dekont_KalemVergiDetaylariGetirPostResponse> => {
@@ -19016,7 +19017,7 @@ export const getDekontZorunluDemirbasCariPostUrl = (params: DekontZorunluDemirba
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Dekont/ZorunluDemirbasCari?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Dekont/ZorunluDemirbasCari`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Dekont/ZorunluDemirbasCari?${stringifiedParams}` : `${getBaseUrl()}/api/Dekont/ZorunluDemirbasCari`
 }
 
 export const Dekont_ZorunluDemirbasCariPost = async (params: DekontZorunluDemirbasCariPostParams, options?: RequestInit): Promise<Dekont_ZorunluDemirbasCariPostResponse> => {
@@ -19077,7 +19078,7 @@ export const getDekontBasliklarGetUrl = (params?: DekontBasliklarGetParams,) => 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Dekont/Baslik?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Dekont/Baslik`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Dekont/Baslik?${stringifiedParams}` : `${getBaseUrl()}/api/Dekont/Baslik`
 }
 
 export const Dekont_BasliklarGet = async (params?: DekontBasliklarGetParams, options?: RequestInit): Promise<Dekont_BasliklarGetResponse> => {
@@ -19138,7 +19139,7 @@ export const getDekontBaslikKaydetPostUrl = (params?: DekontBaslikKaydetPostPara
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Dekont/Baslik?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Dekont/Baslik`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Dekont/Baslik?${stringifiedParams}` : `${getBaseUrl()}/api/Dekont/Baslik`
 }
 
 export const Dekont_BaslikKaydetPost = async (aaroMVCControllersWebApiBaslikKalemTekKalemCokModel: AaroMVCControllersWebApiBaslikKalemTekKalemCokModel,
@@ -19194,7 +19195,7 @@ export const getDekontBaslikGetirGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Dekont/Baslik/${id}`
+  return `${getBaseUrl()}/api/Dekont/Baslik/${id}`
 }
 
 export const Dekont_BaslikGetirGet = async (id: number, options?: RequestInit): Promise<Dekont_BaslikGetirGetResponse> => {
@@ -19255,7 +19256,7 @@ export const getDekontOnaylaPostUrl = (params: DekontOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Dekont/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Dekont/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Dekont/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Dekont/Onayla`
 }
 
 export const Dekont_OnaylaPost = async (params: DekontOnaylaPostParams, options?: RequestInit): Promise<Dekont_OnaylaPostResponse> => {
@@ -19316,7 +19317,7 @@ export const getDekontReddetPostUrl = (params: DekontReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Dekont/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Dekont/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Dekont/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Dekont/Reddet`
 }
 
 export const Dekont_ReddetPost = async (params: DekontReddetPostParams, options?: RequestInit): Promise<Dekont_ReddetPostResponse> => {
@@ -19370,7 +19371,7 @@ export const getDekontTamamlaPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Dekont/Tamamla`
+  return `${getBaseUrl()}/api/Dekont/Tamamla`
 }
 
 export const Dekont_TamamlaPost = async (aaroMVCControllersWebApiDekontControllerTamamlaModel: AaroMVCControllersWebApiDekontControllerTamamlaModel, options?: RequestInit): Promise<Dekont_TamamlaPostResponse> => {
@@ -19432,7 +19433,7 @@ export const getDekontKalemPostUrl = (params?: DekontKalemPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Dekont/Kalem?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Dekont/Kalem`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Dekont/Kalem?${stringifiedParams}` : `${getBaseUrl()}/api/Dekont/Kalem`
 }
 
 export const Dekont_KalemPost = async (aaroMVCControllersWebApiKalemModel: AaroMVCControllersWebApiKalemModel,
@@ -19495,7 +19496,7 @@ export const getDekontKalemTekGetUrl = (params: DekontKalemTekGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Dekont/KalemTek?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Dekont/KalemTek`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Dekont/KalemTek?${stringifiedParams}` : `${getBaseUrl()}/api/Dekont/KalemTek`
 }
 
 export const Dekont_KalemTekGet = async (params: DekontKalemTekGetParams, options?: RequestInit): Promise<Dekont_KalemTekGetResponse> => {
@@ -19556,7 +19557,7 @@ export const getDekontKalemlerGetUrl = (params: DekontKalemlerGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Dekont/Kalemler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Dekont/Kalemler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Dekont/Kalemler?${stringifiedParams}` : `${getBaseUrl()}/api/Dekont/Kalemler`
 }
 
 export const Dekont_KalemlerGet = async (params: DekontKalemlerGetParams, options?: RequestInit): Promise<Dekont_KalemlerGetResponse> => {
@@ -19617,7 +19618,7 @@ export const getDekontKalemlerOtomatikGetUrl = (params: DekontKalemlerOtomatikGe
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Dekont/KalemlerOtomatik?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Dekont/KalemlerOtomatik`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Dekont/KalemlerOtomatik?${stringifiedParams}` : `${getBaseUrl()}/api/Dekont/KalemlerOtomatik`
 }
 
 export const Dekont_KalemlerOtomatikGet = async (params: DekontKalemlerOtomatikGetParams, options?: RequestInit): Promise<Dekont_KalemlerOtomatikGetResponse> => {
@@ -19671,7 +19672,7 @@ export const getDemirbasGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Demirbas/${id}`
+  return `${getBaseUrl()}/api/Demirbas/${id}`
 }
 
 export const Demirbas_GetGet = async (id: number, options?: RequestInit): Promise<Demirbas_GetGetResponse> => {
@@ -19725,7 +19726,7 @@ export const getDemirbasPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Demirbas/${id}`
+  return `${getBaseUrl()}/api/Demirbas/${id}`
 }
 
 export const Demirbas_PutPut = async (id: number,
@@ -19781,7 +19782,7 @@ export const getDemirbasDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Demirbas/${id}`
+  return `${getBaseUrl()}/api/Demirbas/${id}`
 }
 
 export const Demirbas_DeleteDelete = async (id: number, options?: RequestInit): Promise<Demirbas_DeleteDeleteResponse> => {
@@ -19842,7 +19843,7 @@ export const getDemirbasListeGetGetUrl = (params?: DemirbasListeGetGetParams,) =
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Demirbas?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Demirbas`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Demirbas?${stringifiedParams}` : `${getBaseUrl()}/api/Demirbas`
 }
 
 export const Demirbas_ListeGetGet = async (params?: DemirbasListeGetGetParams, options?: RequestInit): Promise<Demirbas_ListeGetGetResponse> => {
@@ -19896,7 +19897,7 @@ export const getDemirbasPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Demirbas`
+  return `${getBaseUrl()}/api/Demirbas`
 }
 
 export const Demirbas_PostPost = async (aaroModullerStokKayitSadeKayitModelBody: AaroModullerStokKayitSadeKayitModelBody, options?: RequestInit): Promise<Demirbas_PostPostResponse> => {
@@ -19958,7 +19959,7 @@ export const getDemirbasOnaylaPostUrl = (params: DemirbasOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Demirbas/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Demirbas/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Demirbas/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Demirbas/Onayla`
 }
 
 export const Demirbas_OnaylaPost = async (params: DemirbasOnaylaPostParams, options?: RequestInit): Promise<Demirbas_OnaylaPostResponse> => {
@@ -20019,7 +20020,7 @@ export const getDemirbasReddetPostUrl = (params: DemirbasReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Demirbas/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Demirbas/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Demirbas/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Demirbas/Reddet`
 }
 
 export const Demirbas_ReddetPost = async (params: DemirbasReddetPostParams, options?: RequestInit): Promise<Demirbas_ReddetPostResponse> => {
@@ -20080,7 +20081,7 @@ export const getDemirbasListeEsnekGetUrl = (params?: DemirbasListeEsnekGetParams
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Demirbas/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Demirbas/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Demirbas/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Demirbas/Liste`
 }
 
 export const Demirbas_ListeEsnekGet = async (params?: DemirbasListeEsnekGetParams, options?: RequestInit): Promise<Demirbas_ListeEsnekGetResponse> => {
@@ -20134,7 +20135,7 @@ export const getDemirbasListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Demirbas/Liste`
+  return `${getBaseUrl()}/api/Demirbas/Liste`
 }
 
 export const Demirbas_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Demirbas_ListePostPostResponse> => {
@@ -20196,7 +20197,7 @@ export const getDemirbasGrupluListeGetUrl = (params: DemirbasGrupluListeGetParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Demirbas/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Demirbas/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Demirbas/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Demirbas/GrupluListe`
 }
 
 export const Demirbas_GrupluListeGet = async (params: DemirbasGrupluListeGetParams, options?: RequestInit): Promise<Demirbas_GrupluListeGetResponse> => {
@@ -20250,7 +20251,7 @@ export const getDemirbasOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Demirbas/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Demirbas/${id}/OnayDurumu`
 }
 
 export const Demirbas_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Demirbas_OnayDurumuGetResponse> => {
@@ -20312,7 +20313,7 @@ export const getDemirbasDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Demirbas/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Demirbas/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Demirbas/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Demirbas/${id}/DegisiklikGecmisi`
 }
 
 export const Demirbas_DegisiklikGecmisiGet = async (id: number,
@@ -20375,7 +20376,7 @@ export const getDemirbasBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Demirbas/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Demirbas/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Demirbas/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Demirbas/${id}/Belgeler`
 }
 
 export const Demirbas_BelgelerGet = async (id: number,
@@ -20438,7 +20439,7 @@ export const getDemirbasBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Demirbas/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Demirbas/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Demirbas/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Demirbas/${id}/BelgeEkle`
 }
 
 export const Demirbas_BelgeEklePost = async (id: number,
@@ -20502,7 +20503,7 @@ export const getDemirbasBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Demirbas/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Demirbas/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Demirbas/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Demirbas/${id}/BelgeSil/${belgeID}`
 }
 
 export const Demirbas_BelgeSilDelete = async (id: number,
@@ -20566,7 +20567,7 @@ export const getDemirbasNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Demirbas/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Demirbas/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Demirbas/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Demirbas/${id}/Notlar`
 }
 
 export const Demirbas_NotlarGet = async (id: number,
@@ -20621,7 +20622,7 @@ export const getDemirbasNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Demirbas/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Demirbas/${id}/NotEkle`
 }
 
 export const Demirbas_NotEklePost = async (id: number,
@@ -20678,7 +20679,7 @@ export const getDemirbasNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Demirbas/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Demirbas/${id}/NotSil/${notID}`
 }
 
 export const Demirbas_NotSilDelete = async (id: number,
@@ -20740,7 +20741,7 @@ export const getDemirbasHareketleriDetayliListeGetUrl = (params?: DemirbasHareke
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DemirbasHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DemirbasHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DemirbasHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/DemirbasHareketleri`
 }
 
 export const DemirbasHareketleri_DetayliListeGet = async (params?: DemirbasHareketleriDetayliListeGetParams, options?: RequestInit): Promise<DemirbasHareketleri_DetayliListeGetResponse> => {
@@ -20794,7 +20795,7 @@ export const getDepoGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Depo/${id}`
+  return `${getBaseUrl()}/api/Depo/${id}`
 }
 
 export const Depo_GetGet = async (id: number, options?: RequestInit): Promise<Depo_GetGetResponse> => {
@@ -20848,7 +20849,7 @@ export const getDepoPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Depo/${id}`
+  return `${getBaseUrl()}/api/Depo/${id}`
 }
 
 export const Depo_PutPut = async (id: number,
@@ -20904,7 +20905,7 @@ export const getDepoDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Depo/${id}`
+  return `${getBaseUrl()}/api/Depo/${id}`
 }
 
 export const Depo_DeleteDelete = async (id: number, options?: RequestInit): Promise<Depo_DeleteDeleteResponse> => {
@@ -20965,7 +20966,7 @@ export const getDepoListeGetGetUrl = (params?: DepoListeGetGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Depo?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Depo`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Depo?${stringifiedParams}` : `${getBaseUrl()}/api/Depo`
 }
 
 export const Depo_ListeGetGet = async (params?: DepoListeGetGetParams, options?: RequestInit): Promise<Depo_ListeGetGetResponse> => {
@@ -21019,7 +21020,7 @@ export const getDepoPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Depo`
+  return `${getBaseUrl()}/api/Depo`
 }
 
 export const Depo_PostPost = async (aaroModullerDepoKayitSadeKayitModelBody: AaroModullerDepoKayitSadeKayitModelBody, options?: RequestInit): Promise<Depo_PostPostResponse> => {
@@ -21081,7 +21082,7 @@ export const getDepoOnaylaPostUrl = (params: DepoOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Depo/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Depo/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Depo/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Depo/Onayla`
 }
 
 export const Depo_OnaylaPost = async (params: DepoOnaylaPostParams, options?: RequestInit): Promise<Depo_OnaylaPostResponse> => {
@@ -21142,7 +21143,7 @@ export const getDepoReddetPostUrl = (params: DepoReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Depo/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Depo/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Depo/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Depo/Reddet`
 }
 
 export const Depo_ReddetPost = async (params: DepoReddetPostParams, options?: RequestInit): Promise<Depo_ReddetPostResponse> => {
@@ -21203,7 +21204,7 @@ export const getDepoListeEsnekGetUrl = (params?: DepoListeEsnekGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Depo/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Depo/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Depo/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Depo/Liste`
 }
 
 export const Depo_ListeEsnekGet = async (params?: DepoListeEsnekGetParams, options?: RequestInit): Promise<Depo_ListeEsnekGetResponse> => {
@@ -21257,7 +21258,7 @@ export const getDepoListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Depo/Liste`
+  return `${getBaseUrl()}/api/Depo/Liste`
 }
 
 export const Depo_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Depo_ListePostPostResponse> => {
@@ -21319,7 +21320,7 @@ export const getDepoGrupluListeGetUrl = (params: DepoGrupluListeGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Depo/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Depo/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Depo/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Depo/GrupluListe`
 }
 
 export const Depo_GrupluListeGet = async (params: DepoGrupluListeGetParams, options?: RequestInit): Promise<Depo_GrupluListeGetResponse> => {
@@ -21373,7 +21374,7 @@ export const getDepoOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Depo/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Depo/${id}/OnayDurumu`
 }
 
 export const Depo_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Depo_OnayDurumuGetResponse> => {
@@ -21435,7 +21436,7 @@ export const getDepoDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Depo/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Depo/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Depo/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Depo/${id}/DegisiklikGecmisi`
 }
 
 export const Depo_DegisiklikGecmisiGet = async (id: number,
@@ -21498,7 +21499,7 @@ export const getDepoBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Depo/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Depo/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Depo/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Depo/${id}/Belgeler`
 }
 
 export const Depo_BelgelerGet = async (id: number,
@@ -21561,7 +21562,7 @@ export const getDepoBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Depo/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Depo/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Depo/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Depo/${id}/BelgeEkle`
 }
 
 export const Depo_BelgeEklePost = async (id: number,
@@ -21625,7 +21626,7 @@ export const getDepoBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Depo/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Depo/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Depo/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Depo/${id}/BelgeSil/${belgeID}`
 }
 
 export const Depo_BelgeSilDelete = async (id: number,
@@ -21689,7 +21690,7 @@ export const getDepoNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Depo/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Depo/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Depo/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Depo/${id}/Notlar`
 }
 
 export const Depo_NotlarGet = async (id: number,
@@ -21744,7 +21745,7 @@ export const getDepoNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Depo/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Depo/${id}/NotEkle`
 }
 
 export const Depo_NotEklePost = async (id: number,
@@ -21801,7 +21802,7 @@ export const getDepoNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Depo/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Depo/${id}/NotSil/${notID}`
 }
 
 export const Depo_NotSilDelete = async (id: number,
@@ -21863,7 +21864,7 @@ export const getDepolarArasiTransferHareketleriDetayliListeGetUrl = (params?: De
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DepolarArasiTransferHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DepolarArasiTransferHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DepolarArasiTransferHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/DepolarArasiTransferHareketleri`
 }
 
 export const DepolarArasiTransferHareketleri_DetayliListeGet = async (params?: DepolarArasiTransferHareketleriDetayliListeGetParams, options?: RequestInit): Promise<DepolarArasiTransferHareketleri_DetayliListeGetResponse> => {
@@ -21924,7 +21925,7 @@ export const getDepolarArasiTransferListeDetayliListeGetUrl = (params?: DepolarA
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DepolarArasiTransferListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DepolarArasiTransferListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DepolarArasiTransferListe?${stringifiedParams}` : `${getBaseUrl()}/api/DepolarArasiTransferListe`
 }
 
 export const DepolarArasiTransferListe_DetayliListeGet = async (params?: DepolarArasiTransferListeDetayliListeGetParams, options?: RequestInit): Promise<DepolarArasiTransferListe_DetayliListeGetResponse> => {
@@ -21985,7 +21986,7 @@ export const getDepoTerminalHareketListesiGetUrl = (params?: DepoTerminalHareket
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DepoTerminal/HareketListesi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DepoTerminal/HareketListesi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DepoTerminal/HareketListesi?${stringifiedParams}` : `${getBaseUrl()}/api/DepoTerminal/HareketListesi`
 }
 
 export const DepoTerminal_HareketListesiGet = async (params?: DepoTerminalHareketListesiGetParams, options?: RequestInit): Promise<DepoTerminal_HareketListesiGetResponse> => {
@@ -22039,7 +22040,7 @@ export const getDepoTerminalListeKayitlarSayisiGetUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/DepoTerminal/ListeKayitlarSayisi`
+  return `${getBaseUrl()}/api/DepoTerminal/ListeKayitlarSayisi`
 }
 
 export const DepoTerminal_ListeKayitlarSayisiGet = async (options?: RequestInit): Promise<DepoTerminal_ListeKayitlarSayisiGetResponse> => {
@@ -22100,7 +22101,7 @@ export const getDepoTerminalFaturaIrsaliyeGetUrl = (params: DepoTerminalFaturaIr
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DepoTerminal/FaturaIrsaliye?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DepoTerminal/FaturaIrsaliye`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DepoTerminal/FaturaIrsaliye?${stringifiedParams}` : `${getBaseUrl()}/api/DepoTerminal/FaturaIrsaliye`
 }
 
 export const DepoTerminal_FaturaIrsaliyeGet = async (params: DepoTerminalFaturaIrsaliyeGetParams, options?: RequestInit): Promise<DepoTerminal_FaturaIrsaliyeGetResponse> => {
@@ -22161,7 +22162,7 @@ export const getDepoTerminalFaturaIrsaliyeKalemlerGetUrl = (params: DepoTerminal
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DepoTerminal/FaturaIrsaliyeKalemler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DepoTerminal/FaturaIrsaliyeKalemler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DepoTerminal/FaturaIrsaliyeKalemler?${stringifiedParams}` : `${getBaseUrl()}/api/DepoTerminal/FaturaIrsaliyeKalemler`
 }
 
 export const DepoTerminal_FaturaIrsaliyeKalemlerGet = async (params: DepoTerminalFaturaIrsaliyeKalemlerGetParams, options?: RequestInit): Promise<DepoTerminal_FaturaIrsaliyeKalemlerGetResponse> => {
@@ -22222,7 +22223,7 @@ export const getDepoTerminalFaturaIrsaliyeKalemGetUrl = (params: DepoTerminalFat
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DepoTerminal/FaturaIrsaliyeKalem?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DepoTerminal/FaturaIrsaliyeKalem`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DepoTerminal/FaturaIrsaliyeKalem?${stringifiedParams}` : `${getBaseUrl()}/api/DepoTerminal/FaturaIrsaliyeKalem`
 }
 
 export const DepoTerminal_FaturaIrsaliyeKalemGet = async (params: DepoTerminalFaturaIrsaliyeKalemGetParams, options?: RequestInit): Promise<DepoTerminal_FaturaIrsaliyeKalemGetResponse> => {
@@ -22283,7 +22284,7 @@ export const getDepoTerminalFaturaIrsaliyeKalemDetaylarGetUrl = (params: DepoTer
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DepoTerminal/FaturaIrsaliyeKalemDetaylar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DepoTerminal/FaturaIrsaliyeKalemDetaylar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DepoTerminal/FaturaIrsaliyeKalemDetaylar?${stringifiedParams}` : `${getBaseUrl()}/api/DepoTerminal/FaturaIrsaliyeKalemDetaylar`
 }
 
 export const DepoTerminal_FaturaIrsaliyeKalemDetaylarGet = async (params: DepoTerminalFaturaIrsaliyeKalemDetaylarGetParams, options?: RequestInit): Promise<DepoTerminal_FaturaIrsaliyeKalemDetaylarGetResponse> => {
@@ -22344,7 +22345,7 @@ export const getDepoTerminalFaturaIrsaliyeKalemDetayPostUrl = (params: DepoTermi
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DepoTerminal/FaturaIrsaliyeKalemDetay?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DepoTerminal/FaturaIrsaliyeKalemDetay`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DepoTerminal/FaturaIrsaliyeKalemDetay?${stringifiedParams}` : `${getBaseUrl()}/api/DepoTerminal/FaturaIrsaliyeKalemDetay`
 }
 
 export const DepoTerminal_FaturaIrsaliyeKalemDetayPost = async (aaroModullerSeriLotKayitSadeHizliGirisSatirBody: AaroModullerSeriLotKayitSadeHizliGirisSatirBody,
@@ -22407,7 +22408,7 @@ export const getDepoTerminalStokMiktarListesiGetUrl = (params?: DepoTerminalStok
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DepoTerminal/StokMiktarListesi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DepoTerminal/StokMiktarListesi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DepoTerminal/StokMiktarListesi?${stringifiedParams}` : `${getBaseUrl()}/api/DepoTerminal/StokMiktarListesi`
 }
 
 export const DepoTerminal_StokMiktarListesiGet = async (params?: DepoTerminalStokMiktarListesiGetParams, options?: RequestInit): Promise<DepoTerminal_StokMiktarListesiGetResponse> => {
@@ -22468,7 +22469,7 @@ export const getDepoTerminalTransferPostUrl = (params: DepoTerminalTransferPostP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DepoTerminal/Transfer?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DepoTerminal/Transfer`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DepoTerminal/Transfer?${stringifiedParams}` : `${getBaseUrl()}/api/DepoTerminal/Transfer`
 }
 
 export const DepoTerminal_TransferPost = async (params: DepoTerminalTransferPostParams, options?: RequestInit): Promise<DepoTerminal_TransferPostResponse> => {
@@ -22529,7 +22530,7 @@ export const getDepoTerminalDepolarArasiTransferGetUrl = (params: DepoTerminalDe
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DepoTerminal/DepolarArasiTransfer?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DepoTerminal/DepolarArasiTransfer`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DepoTerminal/DepolarArasiTransfer?${stringifiedParams}` : `${getBaseUrl()}/api/DepoTerminal/DepolarArasiTransfer`
 }
 
 export const DepoTerminal_DepolarArasiTransferGet = async (params: DepoTerminalDepolarArasiTransferGetParams, options?: RequestInit): Promise<DepoTerminal_DepolarArasiTransferGetResponse> => {
@@ -22583,7 +22584,7 @@ export const getDepoTerminalDepolarArasiTransferListesiGetirGetUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/DepoTerminal/DepolarArasiTransferListesiGetir`
+  return `${getBaseUrl()}/api/DepoTerminal/DepolarArasiTransferListesiGetir`
 }
 
 export const DepoTerminal_DepolarArasiTransferListesiGetirGet = async (options?: RequestInit): Promise<DepoTerminal_DepolarArasiTransferListesiGetirGetResponse> => {
@@ -22644,7 +22645,7 @@ export const getDepoTerminalDepolarArasiTransferKalemGetUrl = (params: DepoTermi
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DepoTerminal/DepolarArasiTransferKalem?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DepoTerminal/DepolarArasiTransferKalem`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DepoTerminal/DepolarArasiTransferKalem?${stringifiedParams}` : `${getBaseUrl()}/api/DepoTerminal/DepolarArasiTransferKalem`
 }
 
 export const DepoTerminal_DepolarArasiTransferKalemGet = async (params: DepoTerminalDepolarArasiTransferKalemGetParams, options?: RequestInit): Promise<DepoTerminal_DepolarArasiTransferKalemGetResponse> => {
@@ -22698,7 +22699,7 @@ export const getDepoTerminalDepolarArasiTransferKalemDetaylarGetUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/DepoTerminal/DepolarArasiTransferKalemDetaylar`
+  return `${getBaseUrl()}/api/DepoTerminal/DepolarArasiTransferKalemDetaylar`
 }
 
 export const DepoTerminal_DepolarArasiTransferKalemDetaylarGet = async (options?: RequestInit): Promise<DepoTerminal_DepolarArasiTransferKalemDetaylarGetResponse> => {
@@ -22759,7 +22760,7 @@ export const getDepoTerminalDepolarArasiTransferKalemDetayPostUrl = (params: Dep
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DepoTerminal/DepolarArasiTransferKalemDetay?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DepoTerminal/DepolarArasiTransferKalemDetay`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DepoTerminal/DepolarArasiTransferKalemDetay?${stringifiedParams}` : `${getBaseUrl()}/api/DepoTerminal/DepolarArasiTransferKalemDetay`
 }
 
 export const DepoTerminal_DepolarArasiTransferKalemDetayPost = async (aaroModullerSeriLotKayitSadeHizliGirisSatirBody: AaroModullerSeriLotKayitSadeHizliGirisSatirBody,
@@ -22815,7 +22816,7 @@ export const getDovizGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Doviz/${id}`
+  return `${getBaseUrl()}/api/Doviz/${id}`
 }
 
 export const Doviz_GetGet = async (id: number, options?: RequestInit): Promise<Doviz_GetGetResponse> => {
@@ -22869,7 +22870,7 @@ export const getDovizPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Doviz/${id}`
+  return `${getBaseUrl()}/api/Doviz/${id}`
 }
 
 export const Doviz_PutPut = async (id: number,
@@ -22925,7 +22926,7 @@ export const getDovizDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Doviz/${id}`
+  return `${getBaseUrl()}/api/Doviz/${id}`
 }
 
 export const Doviz_DeleteDelete = async (id: number, options?: RequestInit): Promise<Doviz_DeleteDeleteResponse> => {
@@ -22986,7 +22987,7 @@ export const getDovizListeGetGetUrl = (params?: DovizListeGetGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Doviz?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Doviz`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Doviz?${stringifiedParams}` : `${getBaseUrl()}/api/Doviz`
 }
 
 export const Doviz_ListeGetGet = async (params?: DovizListeGetGetParams, options?: RequestInit): Promise<Doviz_ListeGetGetResponse> => {
@@ -23040,7 +23041,7 @@ export const getDovizPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Doviz`
+  return `${getBaseUrl()}/api/Doviz`
 }
 
 export const Doviz_PostPost = async (aaroModullerDovizKayitSadeKayitModelBody: AaroModullerDovizKayitSadeKayitModelBody, options?: RequestInit): Promise<Doviz_PostPostResponse> => {
@@ -23102,7 +23103,7 @@ export const getDovizOnaylaPostUrl = (params: DovizOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Doviz/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Doviz/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Doviz/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Doviz/Onayla`
 }
 
 export const Doviz_OnaylaPost = async (params: DovizOnaylaPostParams, options?: RequestInit): Promise<Doviz_OnaylaPostResponse> => {
@@ -23163,7 +23164,7 @@ export const getDovizReddetPostUrl = (params: DovizReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Doviz/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Doviz/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Doviz/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Doviz/Reddet`
 }
 
 export const Doviz_ReddetPost = async (params: DovizReddetPostParams, options?: RequestInit): Promise<Doviz_ReddetPostResponse> => {
@@ -23224,7 +23225,7 @@ export const getDovizListeEsnekGetUrl = (params?: DovizListeEsnekGetParams,) => 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Doviz/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Doviz/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Doviz/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Doviz/Liste`
 }
 
 export const Doviz_ListeEsnekGet = async (params?: DovizListeEsnekGetParams, options?: RequestInit): Promise<Doviz_ListeEsnekGetResponse> => {
@@ -23278,7 +23279,7 @@ export const getDovizListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Doviz/Liste`
+  return `${getBaseUrl()}/api/Doviz/Liste`
 }
 
 export const Doviz_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Doviz_ListePostPostResponse> => {
@@ -23340,7 +23341,7 @@ export const getDovizGrupluListeGetUrl = (params: DovizGrupluListeGetParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Doviz/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Doviz/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Doviz/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Doviz/GrupluListe`
 }
 
 export const Doviz_GrupluListeGet = async (params: DovizGrupluListeGetParams, options?: RequestInit): Promise<Doviz_GrupluListeGetResponse> => {
@@ -23394,7 +23395,7 @@ export const getDovizOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Doviz/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Doviz/${id}/OnayDurumu`
 }
 
 export const Doviz_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Doviz_OnayDurumuGetResponse> => {
@@ -23456,7 +23457,7 @@ export const getDovizDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Doviz/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Doviz/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Doviz/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Doviz/${id}/DegisiklikGecmisi`
 }
 
 export const Doviz_DegisiklikGecmisiGet = async (id: number,
@@ -23519,7 +23520,7 @@ export const getDovizBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Doviz/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Doviz/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Doviz/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Doviz/${id}/Belgeler`
 }
 
 export const Doviz_BelgelerGet = async (id: number,
@@ -23582,7 +23583,7 @@ export const getDovizBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Doviz/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Doviz/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Doviz/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Doviz/${id}/BelgeEkle`
 }
 
 export const Doviz_BelgeEklePost = async (id: number,
@@ -23646,7 +23647,7 @@ export const getDovizBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Doviz/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Doviz/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Doviz/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Doviz/${id}/BelgeSil/${belgeID}`
 }
 
 export const Doviz_BelgeSilDelete = async (id: number,
@@ -23710,7 +23711,7 @@ export const getDovizNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Doviz/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Doviz/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Doviz/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Doviz/${id}/Notlar`
 }
 
 export const Doviz_NotlarGet = async (id: number,
@@ -23765,7 +23766,7 @@ export const getDovizNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Doviz/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Doviz/${id}/NotEkle`
 }
 
 export const Doviz_NotEklePost = async (id: number,
@@ -23822,7 +23823,7 @@ export const getDovizNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Doviz/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Doviz/${id}/NotSil/${notID}`
 }
 
 export const Doviz_NotSilDelete = async (id: number,
@@ -23877,7 +23878,7 @@ export const getDovizKayitlariGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/DovizKayitlari/${id}`
+  return `${getBaseUrl()}/api/DovizKayitlari/${id}`
 }
 
 export const DovizKayitlari_GetGet = async (id: number, options?: RequestInit): Promise<DovizKayitlari_GetGetResponse> => {
@@ -23931,7 +23932,7 @@ export const getDovizKayitlariPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/DovizKayitlari/${id}`
+  return `${getBaseUrl()}/api/DovizKayitlari/${id}`
 }
 
 export const DovizKayitlari_PutPut = async (id: number,
@@ -23987,7 +23988,7 @@ export const getDovizKayitlariDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/DovizKayitlari/${id}`
+  return `${getBaseUrl()}/api/DovizKayitlari/${id}`
 }
 
 export const DovizKayitlari_DeleteDelete = async (id: number, options?: RequestInit): Promise<DovizKayitlari_DeleteDeleteResponse> => {
@@ -24048,7 +24049,7 @@ export const getDovizKayitlariListeGetGetUrl = (params?: DovizKayitlariListeGetG
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DovizKayitlari?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DovizKayitlari`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DovizKayitlari?${stringifiedParams}` : `${getBaseUrl()}/api/DovizKayitlari`
 }
 
 export const DovizKayitlari_ListeGetGet = async (params?: DovizKayitlariListeGetGetParams, options?: RequestInit): Promise<DovizKayitlari_ListeGetGetResponse> => {
@@ -24102,7 +24103,7 @@ export const getDovizKayitlariPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/DovizKayitlari`
+  return `${getBaseUrl()}/api/DovizKayitlari`
 }
 
 export const DovizKayitlari_PostPost = async (aaroModullerDovizKayitlariKayitSadeKayitModelBody: AaroModullerDovizKayitlariKayitSadeKayitModelBody, options?: RequestInit): Promise<DovizKayitlari_PostPostResponse> => {
@@ -24164,7 +24165,7 @@ export const getDovizKayitlariOnaylaPostUrl = (params: DovizKayitlariOnaylaPostP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DovizKayitlari/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DovizKayitlari/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DovizKayitlari/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/DovizKayitlari/Onayla`
 }
 
 export const DovizKayitlari_OnaylaPost = async (params: DovizKayitlariOnaylaPostParams, options?: RequestInit): Promise<DovizKayitlari_OnaylaPostResponse> => {
@@ -24225,7 +24226,7 @@ export const getDovizKayitlariReddetPostUrl = (params: DovizKayitlariReddetPostP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DovizKayitlari/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DovizKayitlari/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DovizKayitlari/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/DovizKayitlari/Reddet`
 }
 
 export const DovizKayitlari_ReddetPost = async (params: DovizKayitlariReddetPostParams, options?: RequestInit): Promise<DovizKayitlari_ReddetPostResponse> => {
@@ -24286,7 +24287,7 @@ export const getDovizKayitlariListeEsnekGetUrl = (params?: DovizKayitlariListeEs
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DovizKayitlari/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DovizKayitlari/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DovizKayitlari/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/DovizKayitlari/Liste`
 }
 
 export const DovizKayitlari_ListeEsnekGet = async (params?: DovizKayitlariListeEsnekGetParams, options?: RequestInit): Promise<DovizKayitlari_ListeEsnekGetResponse> => {
@@ -24340,7 +24341,7 @@ export const getDovizKayitlariListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/DovizKayitlari/Liste`
+  return `${getBaseUrl()}/api/DovizKayitlari/Liste`
 }
 
 export const DovizKayitlari_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<DovizKayitlari_ListePostPostResponse> => {
@@ -24402,7 +24403,7 @@ export const getDovizKayitlariGrupluListeGetUrl = (params: DovizKayitlariGrupluL
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DovizKayitlari/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DovizKayitlari/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DovizKayitlari/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/DovizKayitlari/GrupluListe`
 }
 
 export const DovizKayitlari_GrupluListeGet = async (params: DovizKayitlariGrupluListeGetParams, options?: RequestInit): Promise<DovizKayitlari_GrupluListeGetResponse> => {
@@ -24456,7 +24457,7 @@ export const getDovizKayitlariOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/DovizKayitlari/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/DovizKayitlari/${id}/OnayDurumu`
 }
 
 export const DovizKayitlari_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<DovizKayitlari_OnayDurumuGetResponse> => {
@@ -24518,7 +24519,7 @@ export const getDovizKayitlariDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DovizKayitlari/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DovizKayitlari/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DovizKayitlari/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/DovizKayitlari/${id}/DegisiklikGecmisi`
 }
 
 export const DovizKayitlari_DegisiklikGecmisiGet = async (id: number,
@@ -24581,7 +24582,7 @@ export const getDovizKayitlariBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DovizKayitlari/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DovizKayitlari/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DovizKayitlari/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/DovizKayitlari/${id}/Belgeler`
 }
 
 export const DovizKayitlari_BelgelerGet = async (id: number,
@@ -24644,7 +24645,7 @@ export const getDovizKayitlariBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DovizKayitlari/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DovizKayitlari/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DovizKayitlari/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/DovizKayitlari/${id}/BelgeEkle`
 }
 
 export const DovizKayitlari_BelgeEklePost = async (id: number,
@@ -24708,7 +24709,7 @@ export const getDovizKayitlariBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DovizKayitlari/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DovizKayitlari/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DovizKayitlari/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/DovizKayitlari/${id}/BelgeSil/${belgeID}`
 }
 
 export const DovizKayitlari_BelgeSilDelete = async (id: number,
@@ -24772,7 +24773,7 @@ export const getDovizKayitlariNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/DovizKayitlari/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/DovizKayitlari/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/DovizKayitlari/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/DovizKayitlari/${id}/Notlar`
 }
 
 export const DovizKayitlari_NotlarGet = async (id: number,
@@ -24827,7 +24828,7 @@ export const getDovizKayitlariNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/DovizKayitlari/${id}/NotEkle`
+  return `${getBaseUrl()}/api/DovizKayitlari/${id}/NotEkle`
 }
 
 export const DovizKayitlari_NotEklePost = async (id: number,
@@ -24884,7 +24885,7 @@ export const getDovizKayitlariNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/DovizKayitlari/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/DovizKayitlari/${id}/NotSil/${notID}`
 }
 
 export const DovizKayitlari_NotSilDelete = async (id: number,
@@ -24946,7 +24947,7 @@ export const getEkGorevlerBelgeNoGetUrl = (params: EkGorevlerBelgeNoGetParams,) 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/EkGorevler/BelgeNo?${stringifiedParams}` : `https://erp.aaro.com.tr/api/EkGorevler/BelgeNo`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/EkGorevler/BelgeNo?${stringifiedParams}` : `${getBaseUrl()}/api/EkGorevler/BelgeNo`
 }
 
 export const EkGorevler_BelgeNoGet = async (params: EkGorevlerBelgeNoGetParams, options?: RequestInit): Promise<EkGorevler_BelgeNoGetResponse> => {
@@ -25007,7 +25008,7 @@ export const getEkGorevlerKartKoduGetUrl = (params: EkGorevlerKartKoduGetParams,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/EkGorevler/KartKodu?${stringifiedParams}` : `https://erp.aaro.com.tr/api/EkGorevler/KartKodu`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/EkGorevler/KartKodu?${stringifiedParams}` : `${getBaseUrl()}/api/EkGorevler/KartKodu`
 }
 
 export const EkGorevler_KartKoduGet = async (params: EkGorevlerKartKoduGetParams, options?: RequestInit): Promise<EkGorevler_KartKoduGetResponse> => {
@@ -25061,7 +25062,7 @@ export const getEntegrasyonTanimGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/EntegrasyonTanim/${id}`
+  return `${getBaseUrl()}/api/EntegrasyonTanim/${id}`
 }
 
 export const EntegrasyonTanim_GetGet = async (id: number, options?: RequestInit): Promise<EntegrasyonTanim_GetGetResponse> => {
@@ -25115,7 +25116,7 @@ export const getEntegrasyonTanimPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/EntegrasyonTanim/${id}`
+  return `${getBaseUrl()}/api/EntegrasyonTanim/${id}`
 }
 
 export const EntegrasyonTanim_PutPut = async (id: number,
@@ -25171,7 +25172,7 @@ export const getEntegrasyonTanimDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/EntegrasyonTanim/${id}`
+  return `${getBaseUrl()}/api/EntegrasyonTanim/${id}`
 }
 
 export const EntegrasyonTanim_DeleteDelete = async (id: number, options?: RequestInit): Promise<EntegrasyonTanim_DeleteDeleteResponse> => {
@@ -25232,7 +25233,7 @@ export const getEntegrasyonTanimListeGetGetUrl = (params?: EntegrasyonTanimListe
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/EntegrasyonTanim?${stringifiedParams}` : `https://erp.aaro.com.tr/api/EntegrasyonTanim`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/EntegrasyonTanim?${stringifiedParams}` : `${getBaseUrl()}/api/EntegrasyonTanim`
 }
 
 export const EntegrasyonTanim_ListeGetGet = async (params?: EntegrasyonTanimListeGetGetParams, options?: RequestInit): Promise<EntegrasyonTanim_ListeGetGetResponse> => {
@@ -25286,7 +25287,7 @@ export const getEntegrasyonTanimPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/EntegrasyonTanim`
+  return `${getBaseUrl()}/api/EntegrasyonTanim`
 }
 
 export const EntegrasyonTanim_PostPost = async (aaroModullerEntegrasyonTanimKayitSadeKayitModelBody: AaroModullerEntegrasyonTanimKayitSadeKayitModelBody, options?: RequestInit): Promise<EntegrasyonTanim_PostPostResponse> => {
@@ -25348,7 +25349,7 @@ export const getEntegrasyonTanimOnaylaPostUrl = (params: EntegrasyonTanimOnaylaP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/EntegrasyonTanim/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/EntegrasyonTanim/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/EntegrasyonTanim/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/EntegrasyonTanim/Onayla`
 }
 
 export const EntegrasyonTanim_OnaylaPost = async (params: EntegrasyonTanimOnaylaPostParams, options?: RequestInit): Promise<EntegrasyonTanim_OnaylaPostResponse> => {
@@ -25409,7 +25410,7 @@ export const getEntegrasyonTanimReddetPostUrl = (params: EntegrasyonTanimReddetP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/EntegrasyonTanim/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/EntegrasyonTanim/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/EntegrasyonTanim/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/EntegrasyonTanim/Reddet`
 }
 
 export const EntegrasyonTanim_ReddetPost = async (params: EntegrasyonTanimReddetPostParams, options?: RequestInit): Promise<EntegrasyonTanim_ReddetPostResponse> => {
@@ -25470,7 +25471,7 @@ export const getEntegrasyonTanimListeEsnekGetUrl = (params?: EntegrasyonTanimLis
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/EntegrasyonTanim/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/EntegrasyonTanim/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/EntegrasyonTanim/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/EntegrasyonTanim/Liste`
 }
 
 export const EntegrasyonTanim_ListeEsnekGet = async (params?: EntegrasyonTanimListeEsnekGetParams, options?: RequestInit): Promise<EntegrasyonTanim_ListeEsnekGetResponse> => {
@@ -25524,7 +25525,7 @@ export const getEntegrasyonTanimListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/EntegrasyonTanim/Liste`
+  return `${getBaseUrl()}/api/EntegrasyonTanim/Liste`
 }
 
 export const EntegrasyonTanim_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<EntegrasyonTanim_ListePostPostResponse> => {
@@ -25586,7 +25587,7 @@ export const getEntegrasyonTanimGrupluListeGetUrl = (params: EntegrasyonTanimGru
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/EntegrasyonTanim/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/EntegrasyonTanim/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/EntegrasyonTanim/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/EntegrasyonTanim/GrupluListe`
 }
 
 export const EntegrasyonTanim_GrupluListeGet = async (params: EntegrasyonTanimGrupluListeGetParams, options?: RequestInit): Promise<EntegrasyonTanim_GrupluListeGetResponse> => {
@@ -25640,7 +25641,7 @@ export const getEntegrasyonTanimOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/EntegrasyonTanim/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/EntegrasyonTanim/${id}/OnayDurumu`
 }
 
 export const EntegrasyonTanim_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<EntegrasyonTanim_OnayDurumuGetResponse> => {
@@ -25702,7 +25703,7 @@ export const getEntegrasyonTanimDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/EntegrasyonTanim/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/EntegrasyonTanim/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/EntegrasyonTanim/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/EntegrasyonTanim/${id}/DegisiklikGecmisi`
 }
 
 export const EntegrasyonTanim_DegisiklikGecmisiGet = async (id: number,
@@ -25765,7 +25766,7 @@ export const getEntegrasyonTanimBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/EntegrasyonTanim/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/EntegrasyonTanim/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/EntegrasyonTanim/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/EntegrasyonTanim/${id}/Belgeler`
 }
 
 export const EntegrasyonTanim_BelgelerGet = async (id: number,
@@ -25828,7 +25829,7 @@ export const getEntegrasyonTanimBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/EntegrasyonTanim/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/EntegrasyonTanim/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/EntegrasyonTanim/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/EntegrasyonTanim/${id}/BelgeEkle`
 }
 
 export const EntegrasyonTanim_BelgeEklePost = async (id: number,
@@ -25892,7 +25893,7 @@ export const getEntegrasyonTanimBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/EntegrasyonTanim/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/EntegrasyonTanim/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/EntegrasyonTanim/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/EntegrasyonTanim/${id}/BelgeSil/${belgeID}`
 }
 
 export const EntegrasyonTanim_BelgeSilDelete = async (id: number,
@@ -25956,7 +25957,7 @@ export const getEntegrasyonTanimNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/EntegrasyonTanim/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/EntegrasyonTanim/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/EntegrasyonTanim/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/EntegrasyonTanim/${id}/Notlar`
 }
 
 export const EntegrasyonTanim_NotlarGet = async (id: number,
@@ -26011,7 +26012,7 @@ export const getEntegrasyonTanimNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/EntegrasyonTanim/${id}/NotEkle`
+  return `${getBaseUrl()}/api/EntegrasyonTanim/${id}/NotEkle`
 }
 
 export const EntegrasyonTanim_NotEklePost = async (id: number,
@@ -26068,7 +26069,7 @@ export const getEntegrasyonTanimNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/EntegrasyonTanim/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/EntegrasyonTanim/${id}/NotSil/${notID}`
 }
 
 export const EntegrasyonTanim_NotSilDelete = async (id: number,
@@ -26123,7 +26124,7 @@ export const getEtiketlerIDSizTumSeviyeleriBirdenKaydetPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Etiketler/IDSizTumSeviyeleriBirdenKaydet`
+  return `${getBaseUrl()}/api/Etiketler/IDSizTumSeviyeleriBirdenKaydet`
 }
 
 export const Etiketler_IDSizTumSeviyeleriBirdenKaydetPost = async (aaroModullerDisardanAktarimEkEtiketlerExcelModel: AaroModullerDisardanAktarimEkEtiketlerExcelModel, options?: RequestInit): Promise<Etiketler_IDSizTumSeviyeleriBirdenKaydetPostResponse> => {
@@ -26178,7 +26179,7 @@ export const getEtiketlerGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Etiketler/${id}`
+  return `${getBaseUrl()}/api/Etiketler/${id}`
 }
 
 export const Etiketler_GetGet = async (id: number, options?: RequestInit): Promise<Etiketler_GetGetResponse> => {
@@ -26232,7 +26233,7 @@ export const getEtiketlerPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Etiketler/${id}`
+  return `${getBaseUrl()}/api/Etiketler/${id}`
 }
 
 export const Etiketler_PutPut = async (id: number,
@@ -26288,7 +26289,7 @@ export const getEtiketlerDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Etiketler/${id}`
+  return `${getBaseUrl()}/api/Etiketler/${id}`
 }
 
 export const Etiketler_DeleteDelete = async (id: number, options?: RequestInit): Promise<Etiketler_DeleteDeleteResponse> => {
@@ -26349,7 +26350,7 @@ export const getEtiketlerListeGetGetUrl = (params?: EtiketlerListeGetGetParams,)
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Etiketler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Etiketler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Etiketler?${stringifiedParams}` : `${getBaseUrl()}/api/Etiketler`
 }
 
 export const Etiketler_ListeGetGet = async (params?: EtiketlerListeGetGetParams, options?: RequestInit): Promise<Etiketler_ListeGetGetResponse> => {
@@ -26403,7 +26404,7 @@ export const getEtiketlerPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Etiketler`
+  return `${getBaseUrl()}/api/Etiketler`
 }
 
 export const Etiketler_PostPost = async (aaroModullerEtiketlerKayitSadeKayitModelBody: AaroModullerEtiketlerKayitSadeKayitModelBody, options?: RequestInit): Promise<Etiketler_PostPostResponse> => {
@@ -26465,7 +26466,7 @@ export const getEtiketlerOnaylaPostUrl = (params: EtiketlerOnaylaPostParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Etiketler/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Etiketler/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Etiketler/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Etiketler/Onayla`
 }
 
 export const Etiketler_OnaylaPost = async (params: EtiketlerOnaylaPostParams, options?: RequestInit): Promise<Etiketler_OnaylaPostResponse> => {
@@ -26526,7 +26527,7 @@ export const getEtiketlerReddetPostUrl = (params: EtiketlerReddetPostParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Etiketler/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Etiketler/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Etiketler/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Etiketler/Reddet`
 }
 
 export const Etiketler_ReddetPost = async (params: EtiketlerReddetPostParams, options?: RequestInit): Promise<Etiketler_ReddetPostResponse> => {
@@ -26587,7 +26588,7 @@ export const getEtiketlerListeEsnekGetUrl = (params?: EtiketlerListeEsnekGetPara
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Etiketler/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Etiketler/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Etiketler/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Etiketler/Liste`
 }
 
 export const Etiketler_ListeEsnekGet = async (params?: EtiketlerListeEsnekGetParams, options?: RequestInit): Promise<Etiketler_ListeEsnekGetResponse> => {
@@ -26641,7 +26642,7 @@ export const getEtiketlerListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Etiketler/Liste`
+  return `${getBaseUrl()}/api/Etiketler/Liste`
 }
 
 export const Etiketler_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Etiketler_ListePostPostResponse> => {
@@ -26703,7 +26704,7 @@ export const getEtiketlerGrupluListeGetUrl = (params: EtiketlerGrupluListeGetPar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Etiketler/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Etiketler/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Etiketler/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Etiketler/GrupluListe`
 }
 
 export const Etiketler_GrupluListeGet = async (params: EtiketlerGrupluListeGetParams, options?: RequestInit): Promise<Etiketler_GrupluListeGetResponse> => {
@@ -26757,7 +26758,7 @@ export const getEtiketlerOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Etiketler/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Etiketler/${id}/OnayDurumu`
 }
 
 export const Etiketler_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Etiketler_OnayDurumuGetResponse> => {
@@ -26819,7 +26820,7 @@ export const getEtiketlerDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Etiketler/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Etiketler/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Etiketler/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Etiketler/${id}/DegisiklikGecmisi`
 }
 
 export const Etiketler_DegisiklikGecmisiGet = async (id: number,
@@ -26882,7 +26883,7 @@ export const getEtiketlerBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Etiketler/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Etiketler/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Etiketler/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Etiketler/${id}/Belgeler`
 }
 
 export const Etiketler_BelgelerGet = async (id: number,
@@ -26945,7 +26946,7 @@ export const getEtiketlerBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Etiketler/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Etiketler/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Etiketler/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Etiketler/${id}/BelgeEkle`
 }
 
 export const Etiketler_BelgeEklePost = async (id: number,
@@ -27009,7 +27010,7 @@ export const getEtiketlerBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Etiketler/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Etiketler/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Etiketler/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Etiketler/${id}/BelgeSil/${belgeID}`
 }
 
 export const Etiketler_BelgeSilDelete = async (id: number,
@@ -27073,7 +27074,7 @@ export const getEtiketlerNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Etiketler/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Etiketler/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Etiketler/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Etiketler/${id}/Notlar`
 }
 
 export const Etiketler_NotlarGet = async (id: number,
@@ -27128,7 +27129,7 @@ export const getEtiketlerNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Etiketler/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Etiketler/${id}/NotEkle`
 }
 
 export const Etiketler_NotEklePost = async (id: number,
@@ -27185,7 +27186,7 @@ export const getEtiketlerNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Etiketler/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Etiketler/${id}/NotSil/${notID}`
 }
 
 export const Etiketler_NotSilDelete = async (id: number,
@@ -27247,7 +27248,7 @@ export const getFaturaListeDetayliListeGetUrl = (params?: FaturaListeDetayliList
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FaturaListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FaturaListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FaturaListe?${stringifiedParams}` : `${getBaseUrl()}/api/FaturaListe`
 }
 
 export const FaturaListe_DetayliListeGet = async (params?: FaturaListeDetayliListeGetParams, options?: RequestInit): Promise<FaturaListe_DetayliListeGetResponse> => {
@@ -27301,7 +27302,7 @@ export const getFiyatListesiGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/FiyatListesi/${id}`
+  return `${getBaseUrl()}/api/FiyatListesi/${id}`
 }
 
 export const FiyatListesi_GetGet = async (id: number, options?: RequestInit): Promise<FiyatListesi_GetGetResponse> => {
@@ -27355,7 +27356,7 @@ export const getFiyatListesiPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/FiyatListesi/${id}`
+  return `${getBaseUrl()}/api/FiyatListesi/${id}`
 }
 
 export const FiyatListesi_PutPut = async (id: number,
@@ -27411,7 +27412,7 @@ export const getFiyatListesiDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/FiyatListesi/${id}`
+  return `${getBaseUrl()}/api/FiyatListesi/${id}`
 }
 
 export const FiyatListesi_DeleteDelete = async (id: number, options?: RequestInit): Promise<FiyatListesi_DeleteDeleteResponse> => {
@@ -27472,7 +27473,7 @@ export const getFiyatListesiListeGetGetUrl = (params?: FiyatListesiListeGetGetPa
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FiyatListesi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FiyatListesi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FiyatListesi?${stringifiedParams}` : `${getBaseUrl()}/api/FiyatListesi`
 }
 
 export const FiyatListesi_ListeGetGet = async (params?: FiyatListesiListeGetGetParams, options?: RequestInit): Promise<FiyatListesi_ListeGetGetResponse> => {
@@ -27526,7 +27527,7 @@ export const getFiyatListesiPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/FiyatListesi`
+  return `${getBaseUrl()}/api/FiyatListesi`
 }
 
 export const FiyatListesi_PostPost = async (aaroModullerFiyatListesiKayitSadeKayitModelBody: AaroModullerFiyatListesiKayitSadeKayitModelBody, options?: RequestInit): Promise<FiyatListesi_PostPostResponse> => {
@@ -27588,7 +27589,7 @@ export const getFiyatListesiOnaylaPostUrl = (params: FiyatListesiOnaylaPostParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FiyatListesi/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FiyatListesi/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FiyatListesi/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/FiyatListesi/Onayla`
 }
 
 export const FiyatListesi_OnaylaPost = async (params: FiyatListesiOnaylaPostParams, options?: RequestInit): Promise<FiyatListesi_OnaylaPostResponse> => {
@@ -27649,7 +27650,7 @@ export const getFiyatListesiReddetPostUrl = (params: FiyatListesiReddetPostParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FiyatListesi/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FiyatListesi/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FiyatListesi/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/FiyatListesi/Reddet`
 }
 
 export const FiyatListesi_ReddetPost = async (params: FiyatListesiReddetPostParams, options?: RequestInit): Promise<FiyatListesi_ReddetPostResponse> => {
@@ -27710,7 +27711,7 @@ export const getFiyatListesiListeEsnekGetUrl = (params?: FiyatListesiListeEsnekG
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FiyatListesi/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FiyatListesi/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FiyatListesi/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/FiyatListesi/Liste`
 }
 
 export const FiyatListesi_ListeEsnekGet = async (params?: FiyatListesiListeEsnekGetParams, options?: RequestInit): Promise<FiyatListesi_ListeEsnekGetResponse> => {
@@ -27764,7 +27765,7 @@ export const getFiyatListesiListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/FiyatListesi/Liste`
+  return `${getBaseUrl()}/api/FiyatListesi/Liste`
 }
 
 export const FiyatListesi_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<FiyatListesi_ListePostPostResponse> => {
@@ -27826,7 +27827,7 @@ export const getFiyatListesiGrupluListeGetUrl = (params: FiyatListesiGrupluListe
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FiyatListesi/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FiyatListesi/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FiyatListesi/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/FiyatListesi/GrupluListe`
 }
 
 export const FiyatListesi_GrupluListeGet = async (params: FiyatListesiGrupluListeGetParams, options?: RequestInit): Promise<FiyatListesi_GrupluListeGetResponse> => {
@@ -27880,7 +27881,7 @@ export const getFiyatListesiOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/FiyatListesi/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/FiyatListesi/${id}/OnayDurumu`
 }
 
 export const FiyatListesi_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<FiyatListesi_OnayDurumuGetResponse> => {
@@ -27942,7 +27943,7 @@ export const getFiyatListesiDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FiyatListesi/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FiyatListesi/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FiyatListesi/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/FiyatListesi/${id}/DegisiklikGecmisi`
 }
 
 export const FiyatListesi_DegisiklikGecmisiGet = async (id: number,
@@ -28005,7 +28006,7 @@ export const getFiyatListesiBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FiyatListesi/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FiyatListesi/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FiyatListesi/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/FiyatListesi/${id}/Belgeler`
 }
 
 export const FiyatListesi_BelgelerGet = async (id: number,
@@ -28068,7 +28069,7 @@ export const getFiyatListesiBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FiyatListesi/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FiyatListesi/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FiyatListesi/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/FiyatListesi/${id}/BelgeEkle`
 }
 
 export const FiyatListesi_BelgeEklePost = async (id: number,
@@ -28132,7 +28133,7 @@ export const getFiyatListesiBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FiyatListesi/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FiyatListesi/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FiyatListesi/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/FiyatListesi/${id}/BelgeSil/${belgeID}`
 }
 
 export const FiyatListesi_BelgeSilDelete = async (id: number,
@@ -28196,7 +28197,7 @@ export const getFiyatListesiNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FiyatListesi/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FiyatListesi/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FiyatListesi/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/FiyatListesi/${id}/Notlar`
 }
 
 export const FiyatListesi_NotlarGet = async (id: number,
@@ -28251,7 +28252,7 @@ export const getFiyatListesiNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/FiyatListesi/${id}/NotEkle`
+  return `${getBaseUrl()}/api/FiyatListesi/${id}/NotEkle`
 }
 
 export const FiyatListesi_NotEklePost = async (id: number,
@@ -28308,7 +28309,7 @@ export const getFiyatListesiNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/FiyatListesi/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/FiyatListesi/${id}/NotSil/${notID}`
 }
 
 export const FiyatListesi_NotSilDelete = async (id: number,
@@ -28363,7 +28364,7 @@ export const getFiyatListesiSatirlarBulkCreatePostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/bulk-create`
+  return `${getBaseUrl()}/api/FiyatListesiSatirlar/bulk-create`
 }
 
 export const FiyatListesiSatirlar_BulkCreatePost = async (aaroModullerFiyatListesiSatirlarKayitSadeKayitModel: AaroModullerFiyatListesiSatirlarKayitSadeKayitModel[], options?: RequestInit): Promise<FiyatListesiSatirlar_BulkCreatePostResponse> => {
@@ -28418,7 +28419,7 @@ export const getFiyatListesiSatirlarBulkUpdatePostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/bulk-update`
+  return `${getBaseUrl()}/api/FiyatListesiSatirlar/bulk-update`
 }
 
 export const FiyatListesiSatirlar_BulkUpdatePost = async (fiyatListesiSatirlarBulkUpdatePostBody: FiyatListesiSatirlarBulkUpdatePostBodyOneItem[] | FiyatListesiSatirlarBulkUpdatePostBodyTwoItem[] | FiyatListesiSatirlarBulkUpdatePostBodyThreeItem[] | FiyatListesiSatirlarBulkUpdatePostBodyFourItem[] | FiyatListesiSatirlarBulkUpdatePostBodyFiveItem[], options?: RequestInit): Promise<FiyatListesiSatirlar_BulkUpdatePostResponse> => {
@@ -28473,7 +28474,7 @@ export const getFiyatListesiSatirlarGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/${id}`
+  return `${getBaseUrl()}/api/FiyatListesiSatirlar/${id}`
 }
 
 export const FiyatListesiSatirlar_GetGet = async (id: number, options?: RequestInit): Promise<FiyatListesiSatirlar_GetGetResponse> => {
@@ -28527,7 +28528,7 @@ export const getFiyatListesiSatirlarPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/${id}`
+  return `${getBaseUrl()}/api/FiyatListesiSatirlar/${id}`
 }
 
 export const FiyatListesiSatirlar_PutPut = async (id: number,
@@ -28583,7 +28584,7 @@ export const getFiyatListesiSatirlarDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/${id}`
+  return `${getBaseUrl()}/api/FiyatListesiSatirlar/${id}`
 }
 
 export const FiyatListesiSatirlar_DeleteDelete = async (id: number, options?: RequestInit): Promise<FiyatListesiSatirlar_DeleteDeleteResponse> => {
@@ -28644,7 +28645,7 @@ export const getFiyatListesiSatirlarListeGetGetUrl = (params?: FiyatListesiSatir
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FiyatListesiSatirlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FiyatListesiSatirlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FiyatListesiSatirlar?${stringifiedParams}` : `${getBaseUrl()}/api/FiyatListesiSatirlar`
 }
 
 export const FiyatListesiSatirlar_ListeGetGet = async (params?: FiyatListesiSatirlarListeGetGetParams, options?: RequestInit): Promise<FiyatListesiSatirlar_ListeGetGetResponse> => {
@@ -28698,7 +28699,7 @@ export const getFiyatListesiSatirlarPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/FiyatListesiSatirlar`
+  return `${getBaseUrl()}/api/FiyatListesiSatirlar`
 }
 
 export const FiyatListesiSatirlar_PostPost = async (aaroModullerFiyatListesiSatirlarKayitSadeKayitModelBody: AaroModullerFiyatListesiSatirlarKayitSadeKayitModelBody, options?: RequestInit): Promise<FiyatListesiSatirlar_PostPostResponse> => {
@@ -28760,7 +28761,7 @@ export const getFiyatListesiSatirlarOnaylaPostUrl = (params: FiyatListesiSatirla
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FiyatListesiSatirlar/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/FiyatListesiSatirlar/Onayla`
 }
 
 export const FiyatListesiSatirlar_OnaylaPost = async (params: FiyatListesiSatirlarOnaylaPostParams, options?: RequestInit): Promise<FiyatListesiSatirlar_OnaylaPostResponse> => {
@@ -28821,7 +28822,7 @@ export const getFiyatListesiSatirlarReddetPostUrl = (params: FiyatListesiSatirla
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FiyatListesiSatirlar/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/FiyatListesiSatirlar/Reddet`
 }
 
 export const FiyatListesiSatirlar_ReddetPost = async (params: FiyatListesiSatirlarReddetPostParams, options?: RequestInit): Promise<FiyatListesiSatirlar_ReddetPostResponse> => {
@@ -28882,7 +28883,7 @@ export const getFiyatListesiSatirlarListeEsnekGetUrl = (params?: FiyatListesiSat
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FiyatListesiSatirlar/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/FiyatListesiSatirlar/Liste`
 }
 
 export const FiyatListesiSatirlar_ListeEsnekGet = async (params?: FiyatListesiSatirlarListeEsnekGetParams, options?: RequestInit): Promise<FiyatListesiSatirlar_ListeEsnekGetResponse> => {
@@ -28936,7 +28937,7 @@ export const getFiyatListesiSatirlarListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/Liste`
+  return `${getBaseUrl()}/api/FiyatListesiSatirlar/Liste`
 }
 
 export const FiyatListesiSatirlar_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<FiyatListesiSatirlar_ListePostPostResponse> => {
@@ -28998,7 +28999,7 @@ export const getFiyatListesiSatirlarGrupluListeGetUrl = (params: FiyatListesiSat
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FiyatListesiSatirlar/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/FiyatListesiSatirlar/GrupluListe`
 }
 
 export const FiyatListesiSatirlar_GrupluListeGet = async (params: FiyatListesiSatirlarGrupluListeGetParams, options?: RequestInit): Promise<FiyatListesiSatirlar_GrupluListeGetResponse> => {
@@ -29052,7 +29053,7 @@ export const getFiyatListesiSatirlarOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/FiyatListesiSatirlar/${id}/OnayDurumu`
 }
 
 export const FiyatListesiSatirlar_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<FiyatListesiSatirlar_OnayDurumuGetResponse> => {
@@ -29114,7 +29115,7 @@ export const getFiyatListesiSatirlarDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FiyatListesiSatirlar/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/FiyatListesiSatirlar/${id}/DegisiklikGecmisi`
 }
 
 export const FiyatListesiSatirlar_DegisiklikGecmisiGet = async (id: number,
@@ -29177,7 +29178,7 @@ export const getFiyatListesiSatirlarBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FiyatListesiSatirlar/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/FiyatListesiSatirlar/${id}/Belgeler`
 }
 
 export const FiyatListesiSatirlar_BelgelerGet = async (id: number,
@@ -29240,7 +29241,7 @@ export const getFiyatListesiSatirlarBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FiyatListesiSatirlar/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/FiyatListesiSatirlar/${id}/BelgeEkle`
 }
 
 export const FiyatListesiSatirlar_BelgeEklePost = async (id: number,
@@ -29304,7 +29305,7 @@ export const getFiyatListesiSatirlarBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FiyatListesiSatirlar/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/FiyatListesiSatirlar/${id}/BelgeSil/${belgeID}`
 }
 
 export const FiyatListesiSatirlar_BelgeSilDelete = async (id: number,
@@ -29368,7 +29369,7 @@ export const getFiyatListesiSatirlarNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/FiyatListesiSatirlar/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/FiyatListesiSatirlar/${id}/Notlar`
 }
 
 export const FiyatListesiSatirlar_NotlarGet = async (id: number,
@@ -29423,7 +29424,7 @@ export const getFiyatListesiSatirlarNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/${id}/NotEkle`
+  return `${getBaseUrl()}/api/FiyatListesiSatirlar/${id}/NotEkle`
 }
 
 export const FiyatListesiSatirlar_NotEklePost = async (id: number,
@@ -29480,7 +29481,7 @@ export const getFiyatListesiSatirlarNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/FiyatListesiSatirlar/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/FiyatListesiSatirlar/${id}/NotSil/${notID}`
 }
 
 export const FiyatListesiSatirlar_NotSilDelete = async (id: number,
@@ -29535,7 +29536,7 @@ export const getGelirGiderGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GelirGider/${id}`
+  return `${getBaseUrl()}/api/GelirGider/${id}`
 }
 
 export const GelirGider_GetGet = async (id: number, options?: RequestInit): Promise<GelirGider_GetGetResponse> => {
@@ -29589,7 +29590,7 @@ export const getGelirGiderPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GelirGider/${id}`
+  return `${getBaseUrl()}/api/GelirGider/${id}`
 }
 
 export const GelirGider_PutPut = async (id: number,
@@ -29645,7 +29646,7 @@ export const getGelirGiderDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GelirGider/${id}`
+  return `${getBaseUrl()}/api/GelirGider/${id}`
 }
 
 export const GelirGider_DeleteDelete = async (id: number, options?: RequestInit): Promise<GelirGider_DeleteDeleteResponse> => {
@@ -29706,7 +29707,7 @@ export const getGelirGiderListeGetGetUrl = (params?: GelirGiderListeGetGetParams
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GelirGider?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GelirGider`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GelirGider?${stringifiedParams}` : `${getBaseUrl()}/api/GelirGider`
 }
 
 export const GelirGider_ListeGetGet = async (params?: GelirGiderListeGetGetParams, options?: RequestInit): Promise<GelirGider_ListeGetGetResponse> => {
@@ -29760,7 +29761,7 @@ export const getGelirGiderPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GelirGider`
+  return `${getBaseUrl()}/api/GelirGider`
 }
 
 export const GelirGider_PostPost = async (aaroModullerStokKayitSadeKayitModelBody: AaroModullerStokKayitSadeKayitModelBody, options?: RequestInit): Promise<GelirGider_PostPostResponse> => {
@@ -29822,7 +29823,7 @@ export const getGelirGiderOnaylaPostUrl = (params: GelirGiderOnaylaPostParams,) 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GelirGider/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GelirGider/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GelirGider/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/GelirGider/Onayla`
 }
 
 export const GelirGider_OnaylaPost = async (params: GelirGiderOnaylaPostParams, options?: RequestInit): Promise<GelirGider_OnaylaPostResponse> => {
@@ -29883,7 +29884,7 @@ export const getGelirGiderReddetPostUrl = (params: GelirGiderReddetPostParams,) 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GelirGider/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GelirGider/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GelirGider/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/GelirGider/Reddet`
 }
 
 export const GelirGider_ReddetPost = async (params: GelirGiderReddetPostParams, options?: RequestInit): Promise<GelirGider_ReddetPostResponse> => {
@@ -29944,7 +29945,7 @@ export const getGelirGiderListeEsnekGetUrl = (params?: GelirGiderListeEsnekGetPa
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GelirGider/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GelirGider/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GelirGider/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/GelirGider/Liste`
 }
 
 export const GelirGider_ListeEsnekGet = async (params?: GelirGiderListeEsnekGetParams, options?: RequestInit): Promise<GelirGider_ListeEsnekGetResponse> => {
@@ -29998,7 +29999,7 @@ export const getGelirGiderListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GelirGider/Liste`
+  return `${getBaseUrl()}/api/GelirGider/Liste`
 }
 
 export const GelirGider_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<GelirGider_ListePostPostResponse> => {
@@ -30060,7 +30061,7 @@ export const getGelirGiderGrupluListeGetUrl = (params: GelirGiderGrupluListeGetP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GelirGider/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GelirGider/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GelirGider/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/GelirGider/GrupluListe`
 }
 
 export const GelirGider_GrupluListeGet = async (params: GelirGiderGrupluListeGetParams, options?: RequestInit): Promise<GelirGider_GrupluListeGetResponse> => {
@@ -30114,7 +30115,7 @@ export const getGelirGiderOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GelirGider/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/GelirGider/${id}/OnayDurumu`
 }
 
 export const GelirGider_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<GelirGider_OnayDurumuGetResponse> => {
@@ -30176,7 +30177,7 @@ export const getGelirGiderDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GelirGider/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GelirGider/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GelirGider/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/GelirGider/${id}/DegisiklikGecmisi`
 }
 
 export const GelirGider_DegisiklikGecmisiGet = async (id: number,
@@ -30239,7 +30240,7 @@ export const getGelirGiderBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GelirGider/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GelirGider/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GelirGider/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/GelirGider/${id}/Belgeler`
 }
 
 export const GelirGider_BelgelerGet = async (id: number,
@@ -30302,7 +30303,7 @@ export const getGelirGiderBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GelirGider/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GelirGider/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GelirGider/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/GelirGider/${id}/BelgeEkle`
 }
 
 export const GelirGider_BelgeEklePost = async (id: number,
@@ -30366,7 +30367,7 @@ export const getGelirGiderBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GelirGider/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GelirGider/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GelirGider/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/GelirGider/${id}/BelgeSil/${belgeID}`
 }
 
 export const GelirGider_BelgeSilDelete = async (id: number,
@@ -30430,7 +30431,7 @@ export const getGelirGiderNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GelirGider/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GelirGider/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GelirGider/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/GelirGider/${id}/Notlar`
 }
 
 export const GelirGider_NotlarGet = async (id: number,
@@ -30485,7 +30486,7 @@ export const getGelirGiderNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GelirGider/${id}/NotEkle`
+  return `${getBaseUrl()}/api/GelirGider/${id}/NotEkle`
 }
 
 export const GelirGider_NotEklePost = async (id: number,
@@ -30542,7 +30543,7 @@ export const getGelirGiderNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/GelirGider/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/GelirGider/${id}/NotSil/${notID}`
 }
 
 export const GelirGider_NotSilDelete = async (id: number,
@@ -30604,7 +30605,7 @@ export const getGelirGiderHareketleriDetayliListeGetUrl = (params?: GelirGiderHa
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GelirGiderHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GelirGiderHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GelirGiderHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/GelirGiderHareketleri`
 }
 
 export const GelirGiderHareketleri_DetayliListeGet = async (params?: GelirGiderHareketleriDetayliListeGetParams, options?: RequestInit): Promise<GelirGiderHareketleri_DetayliListeGetResponse> => {
@@ -30658,7 +30659,7 @@ export const getGorevHareketleriGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GorevHareketleri/${id}`
+  return `${getBaseUrl()}/api/GorevHareketleri/${id}`
 }
 
 export const GorevHareketleri_GetGet = async (id: number, options?: RequestInit): Promise<GorevHareketleri_GetGetResponse> => {
@@ -30712,7 +30713,7 @@ export const getGorevHareketleriPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GorevHareketleri/${id}`
+  return `${getBaseUrl()}/api/GorevHareketleri/${id}`
 }
 
 export const GorevHareketleri_PutPut = async (id: number,
@@ -30768,7 +30769,7 @@ export const getGorevHareketleriDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GorevHareketleri/${id}`
+  return `${getBaseUrl()}/api/GorevHareketleri/${id}`
 }
 
 export const GorevHareketleri_DeleteDelete = async (id: number, options?: RequestInit): Promise<GorevHareketleri_DeleteDeleteResponse> => {
@@ -30829,7 +30830,7 @@ export const getGorevHareketleriListeGetGetUrl = (params?: GorevHareketleriListe
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GorevHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GorevHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GorevHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/GorevHareketleri`
 }
 
 export const GorevHareketleri_ListeGetGet = async (params?: GorevHareketleriListeGetGetParams, options?: RequestInit): Promise<GorevHareketleri_ListeGetGetResponse> => {
@@ -30883,7 +30884,7 @@ export const getGorevHareketleriPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GorevHareketleri`
+  return `${getBaseUrl()}/api/GorevHareketleri`
 }
 
 export const GorevHareketleri_PostPost = async (aaroModullerGorevHareketleriKayitSadeKayitModelBody: AaroModullerGorevHareketleriKayitSadeKayitModelBody, options?: RequestInit): Promise<GorevHareketleri_PostPostResponse> => {
@@ -30945,7 +30946,7 @@ export const getGorevHareketleriOnaylaPostUrl = (params: GorevHareketleriOnaylaP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GorevHareketleri/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GorevHareketleri/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GorevHareketleri/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/GorevHareketleri/Onayla`
 }
 
 export const GorevHareketleri_OnaylaPost = async (params: GorevHareketleriOnaylaPostParams, options?: RequestInit): Promise<GorevHareketleri_OnaylaPostResponse> => {
@@ -31006,7 +31007,7 @@ export const getGorevHareketleriReddetPostUrl = (params: GorevHareketleriReddetP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GorevHareketleri/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GorevHareketleri/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GorevHareketleri/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/GorevHareketleri/Reddet`
 }
 
 export const GorevHareketleri_ReddetPost = async (params: GorevHareketleriReddetPostParams, options?: RequestInit): Promise<GorevHareketleri_ReddetPostResponse> => {
@@ -31067,7 +31068,7 @@ export const getGorevHareketleriListeEsnekGetUrl = (params?: GorevHareketleriLis
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GorevHareketleri/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GorevHareketleri/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GorevHareketleri/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/GorevHareketleri/Liste`
 }
 
 export const GorevHareketleri_ListeEsnekGet = async (params?: GorevHareketleriListeEsnekGetParams, options?: RequestInit): Promise<GorevHareketleri_ListeEsnekGetResponse> => {
@@ -31121,7 +31122,7 @@ export const getGorevHareketleriListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GorevHareketleri/Liste`
+  return `${getBaseUrl()}/api/GorevHareketleri/Liste`
 }
 
 export const GorevHareketleri_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<GorevHareketleri_ListePostPostResponse> => {
@@ -31183,7 +31184,7 @@ export const getGorevHareketleriGrupluListeGetUrl = (params: GorevHareketleriGru
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GorevHareketleri/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GorevHareketleri/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GorevHareketleri/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/GorevHareketleri/GrupluListe`
 }
 
 export const GorevHareketleri_GrupluListeGet = async (params: GorevHareketleriGrupluListeGetParams, options?: RequestInit): Promise<GorevHareketleri_GrupluListeGetResponse> => {
@@ -31237,7 +31238,7 @@ export const getGorevHareketleriOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GorevHareketleri/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/GorevHareketleri/${id}/OnayDurumu`
 }
 
 export const GorevHareketleri_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<GorevHareketleri_OnayDurumuGetResponse> => {
@@ -31299,7 +31300,7 @@ export const getGorevHareketleriDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GorevHareketleri/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GorevHareketleri/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GorevHareketleri/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/GorevHareketleri/${id}/DegisiklikGecmisi`
 }
 
 export const GorevHareketleri_DegisiklikGecmisiGet = async (id: number,
@@ -31362,7 +31363,7 @@ export const getGorevHareketleriBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GorevHareketleri/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GorevHareketleri/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GorevHareketleri/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/GorevHareketleri/${id}/Belgeler`
 }
 
 export const GorevHareketleri_BelgelerGet = async (id: number,
@@ -31425,7 +31426,7 @@ export const getGorevHareketleriBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GorevHareketleri/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GorevHareketleri/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GorevHareketleri/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/GorevHareketleri/${id}/BelgeEkle`
 }
 
 export const GorevHareketleri_BelgeEklePost = async (id: number,
@@ -31489,7 +31490,7 @@ export const getGorevHareketleriBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GorevHareketleri/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GorevHareketleri/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GorevHareketleri/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/GorevHareketleri/${id}/BelgeSil/${belgeID}`
 }
 
 export const GorevHareketleri_BelgeSilDelete = async (id: number,
@@ -31553,7 +31554,7 @@ export const getGorevHareketleriNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GorevHareketleri/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GorevHareketleri/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GorevHareketleri/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/GorevHareketleri/${id}/Notlar`
 }
 
 export const GorevHareketleri_NotlarGet = async (id: number,
@@ -31608,7 +31609,7 @@ export const getGorevHareketleriNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GorevHareketleri/${id}/NotEkle`
+  return `${getBaseUrl()}/api/GorevHareketleri/${id}/NotEkle`
 }
 
 export const GorevHareketleri_NotEklePost = async (id: number,
@@ -31665,7 +31666,7 @@ export const getGorevHareketleriNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/GorevHareketleri/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/GorevHareketleri/${id}/NotSil/${notID}`
 }
 
 export const GorevHareketleri_NotSilDelete = async (id: number,
@@ -31720,7 +31721,7 @@ export const getGorevKullanicilariGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GorevKullanicilari/${id}`
+  return `${getBaseUrl()}/api/GorevKullanicilari/${id}`
 }
 
 export const GorevKullanicilari_GetGet = async (id: number, options?: RequestInit): Promise<GorevKullanicilari_GetGetResponse> => {
@@ -31774,7 +31775,7 @@ export const getGorevKullanicilariPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GorevKullanicilari/${id}`
+  return `${getBaseUrl()}/api/GorevKullanicilari/${id}`
 }
 
 export const GorevKullanicilari_PutPut = async (id: number,
@@ -31830,7 +31831,7 @@ export const getGorevKullanicilariDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GorevKullanicilari/${id}`
+  return `${getBaseUrl()}/api/GorevKullanicilari/${id}`
 }
 
 export const GorevKullanicilari_DeleteDelete = async (id: number, options?: RequestInit): Promise<GorevKullanicilari_DeleteDeleteResponse> => {
@@ -31891,7 +31892,7 @@ export const getGorevKullanicilariListeGetGetUrl = (params?: GorevKullanicilariL
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GorevKullanicilari?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GorevKullanicilari`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GorevKullanicilari?${stringifiedParams}` : `${getBaseUrl()}/api/GorevKullanicilari`
 }
 
 export const GorevKullanicilari_ListeGetGet = async (params?: GorevKullanicilariListeGetGetParams, options?: RequestInit): Promise<GorevKullanicilari_ListeGetGetResponse> => {
@@ -31945,7 +31946,7 @@ export const getGorevKullanicilariPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GorevKullanicilari`
+  return `${getBaseUrl()}/api/GorevKullanicilari`
 }
 
 export const GorevKullanicilari_PostPost = async (aaroModullerGorevKullanicilariKayitSadeKayitModelBody: AaroModullerGorevKullanicilariKayitSadeKayitModelBody, options?: RequestInit): Promise<GorevKullanicilari_PostPostResponse> => {
@@ -32007,7 +32008,7 @@ export const getGorevKullanicilariOnaylaPostUrl = (params: GorevKullanicilariOna
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GorevKullanicilari/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GorevKullanicilari/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GorevKullanicilari/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/GorevKullanicilari/Onayla`
 }
 
 export const GorevKullanicilari_OnaylaPost = async (params: GorevKullanicilariOnaylaPostParams, options?: RequestInit): Promise<GorevKullanicilari_OnaylaPostResponse> => {
@@ -32068,7 +32069,7 @@ export const getGorevKullanicilariReddetPostUrl = (params: GorevKullanicilariRed
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GorevKullanicilari/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GorevKullanicilari/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GorevKullanicilari/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/GorevKullanicilari/Reddet`
 }
 
 export const GorevKullanicilari_ReddetPost = async (params: GorevKullanicilariReddetPostParams, options?: RequestInit): Promise<GorevKullanicilari_ReddetPostResponse> => {
@@ -32129,7 +32130,7 @@ export const getGorevKullanicilariListeEsnekGetUrl = (params?: GorevKullanicilar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GorevKullanicilari/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GorevKullanicilari/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GorevKullanicilari/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/GorevKullanicilari/Liste`
 }
 
 export const GorevKullanicilari_ListeEsnekGet = async (params?: GorevKullanicilariListeEsnekGetParams, options?: RequestInit): Promise<GorevKullanicilari_ListeEsnekGetResponse> => {
@@ -32183,7 +32184,7 @@ export const getGorevKullanicilariListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GorevKullanicilari/Liste`
+  return `${getBaseUrl()}/api/GorevKullanicilari/Liste`
 }
 
 export const GorevKullanicilari_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<GorevKullanicilari_ListePostPostResponse> => {
@@ -32245,7 +32246,7 @@ export const getGorevKullanicilariGrupluListeGetUrl = (params: GorevKullanicilar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GorevKullanicilari/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GorevKullanicilari/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GorevKullanicilari/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/GorevKullanicilari/GrupluListe`
 }
 
 export const GorevKullanicilari_GrupluListeGet = async (params: GorevKullanicilariGrupluListeGetParams, options?: RequestInit): Promise<GorevKullanicilari_GrupluListeGetResponse> => {
@@ -32299,7 +32300,7 @@ export const getGorevKullanicilariOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GorevKullanicilari/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/GorevKullanicilari/${id}/OnayDurumu`
 }
 
 export const GorevKullanicilari_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<GorevKullanicilari_OnayDurumuGetResponse> => {
@@ -32361,7 +32362,7 @@ export const getGorevKullanicilariDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GorevKullanicilari/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GorevKullanicilari/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GorevKullanicilari/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/GorevKullanicilari/${id}/DegisiklikGecmisi`
 }
 
 export const GorevKullanicilari_DegisiklikGecmisiGet = async (id: number,
@@ -32424,7 +32425,7 @@ export const getGorevKullanicilariBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GorevKullanicilari/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GorevKullanicilari/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GorevKullanicilari/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/GorevKullanicilari/${id}/Belgeler`
 }
 
 export const GorevKullanicilari_BelgelerGet = async (id: number,
@@ -32487,7 +32488,7 @@ export const getGorevKullanicilariBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GorevKullanicilari/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GorevKullanicilari/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GorevKullanicilari/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/GorevKullanicilari/${id}/BelgeEkle`
 }
 
 export const GorevKullanicilari_BelgeEklePost = async (id: number,
@@ -32551,7 +32552,7 @@ export const getGorevKullanicilariBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GorevKullanicilari/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GorevKullanicilari/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GorevKullanicilari/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/GorevKullanicilari/${id}/BelgeSil/${belgeID}`
 }
 
 export const GorevKullanicilari_BelgeSilDelete = async (id: number,
@@ -32615,7 +32616,7 @@ export const getGorevKullanicilariNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GorevKullanicilari/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GorevKullanicilari/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GorevKullanicilari/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/GorevKullanicilari/${id}/Notlar`
 }
 
 export const GorevKullanicilari_NotlarGet = async (id: number,
@@ -32670,7 +32671,7 @@ export const getGorevKullanicilariNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GorevKullanicilari/${id}/NotEkle`
+  return `${getBaseUrl()}/api/GorevKullanicilari/${id}/NotEkle`
 }
 
 export const GorevKullanicilari_NotEklePost = async (id: number,
@@ -32727,7 +32728,7 @@ export const getGorevKullanicilariNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/GorevKullanicilari/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/GorevKullanicilari/${id}/NotSil/${notID}`
 }
 
 export const GorevKullanicilari_NotSilDelete = async (id: number,
@@ -32782,7 +32783,7 @@ export const getGorevlerGorevKaydetPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Gorevler/GorevKaydet`
+  return `${getBaseUrl()}/api/Gorevler/GorevKaydet`
 }
 
 export const Gorevler_GorevKaydetPost = async (aaroModullerGorevlerKayitSadeGorevEkleAPIModel: NonReadonly<AaroModullerGorevlerKayitSadeGorevEkleAPIModel>, options?: RequestInit): Promise<Gorevler_GorevKaydetPostResponse> => {
@@ -32837,7 +32838,7 @@ export const getGorevlerGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Gorevler/${id}`
+  return `${getBaseUrl()}/api/Gorevler/${id}`
 }
 
 export const Gorevler_GetGet = async (id: number, options?: RequestInit): Promise<Gorevler_GetGetResponse> => {
@@ -32891,7 +32892,7 @@ export const getGorevlerPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Gorevler/${id}`
+  return `${getBaseUrl()}/api/Gorevler/${id}`
 }
 
 export const Gorevler_PutPut = async (id: number,
@@ -32947,7 +32948,7 @@ export const getGorevlerDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Gorevler/${id}`
+  return `${getBaseUrl()}/api/Gorevler/${id}`
 }
 
 export const Gorevler_DeleteDelete = async (id: number, options?: RequestInit): Promise<Gorevler_DeleteDeleteResponse> => {
@@ -33008,7 +33009,7 @@ export const getGorevlerListeGetGetUrl = (params?: GorevlerListeGetGetParams,) =
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Gorevler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Gorevler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Gorevler?${stringifiedParams}` : `${getBaseUrl()}/api/Gorevler`
 }
 
 export const Gorevler_ListeGetGet = async (params?: GorevlerListeGetGetParams, options?: RequestInit): Promise<Gorevler_ListeGetGetResponse> => {
@@ -33062,7 +33063,7 @@ export const getGorevlerPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Gorevler`
+  return `${getBaseUrl()}/api/Gorevler`
 }
 
 export const Gorevler_PostPost = async (aaroModullerGorevlerKayitSadeKayitModelBody: AaroModullerGorevlerKayitSadeKayitModelBody, options?: RequestInit): Promise<Gorevler_PostPostResponse> => {
@@ -33124,7 +33125,7 @@ export const getGorevlerOnaylaPostUrl = (params: GorevlerOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Gorevler/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Gorevler/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Gorevler/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Gorevler/Onayla`
 }
 
 export const Gorevler_OnaylaPost = async (params: GorevlerOnaylaPostParams, options?: RequestInit): Promise<Gorevler_OnaylaPostResponse> => {
@@ -33185,7 +33186,7 @@ export const getGorevlerReddetPostUrl = (params: GorevlerReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Gorevler/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Gorevler/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Gorevler/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Gorevler/Reddet`
 }
 
 export const Gorevler_ReddetPost = async (params: GorevlerReddetPostParams, options?: RequestInit): Promise<Gorevler_ReddetPostResponse> => {
@@ -33246,7 +33247,7 @@ export const getGorevlerListeEsnekGetUrl = (params?: GorevlerListeEsnekGetParams
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Gorevler/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Gorevler/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Gorevler/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Gorevler/Liste`
 }
 
 export const Gorevler_ListeEsnekGet = async (params?: GorevlerListeEsnekGetParams, options?: RequestInit): Promise<Gorevler_ListeEsnekGetResponse> => {
@@ -33300,7 +33301,7 @@ export const getGorevlerListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Gorevler/Liste`
+  return `${getBaseUrl()}/api/Gorevler/Liste`
 }
 
 export const Gorevler_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Gorevler_ListePostPostResponse> => {
@@ -33362,7 +33363,7 @@ export const getGorevlerGrupluListeGetUrl = (params: GorevlerGrupluListeGetParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Gorevler/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Gorevler/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Gorevler/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Gorevler/GrupluListe`
 }
 
 export const Gorevler_GrupluListeGet = async (params: GorevlerGrupluListeGetParams, options?: RequestInit): Promise<Gorevler_GrupluListeGetResponse> => {
@@ -33416,7 +33417,7 @@ export const getGorevlerOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Gorevler/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Gorevler/${id}/OnayDurumu`
 }
 
 export const Gorevler_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Gorevler_OnayDurumuGetResponse> => {
@@ -33478,7 +33479,7 @@ export const getGorevlerDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Gorevler/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Gorevler/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Gorevler/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Gorevler/${id}/DegisiklikGecmisi`
 }
 
 export const Gorevler_DegisiklikGecmisiGet = async (id: number,
@@ -33541,7 +33542,7 @@ export const getGorevlerBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Gorevler/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Gorevler/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Gorevler/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Gorevler/${id}/Belgeler`
 }
 
 export const Gorevler_BelgelerGet = async (id: number,
@@ -33604,7 +33605,7 @@ export const getGorevlerBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Gorevler/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Gorevler/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Gorevler/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Gorevler/${id}/BelgeEkle`
 }
 
 export const Gorevler_BelgeEklePost = async (id: number,
@@ -33668,7 +33669,7 @@ export const getGorevlerBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Gorevler/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Gorevler/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Gorevler/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Gorevler/${id}/BelgeSil/${belgeID}`
 }
 
 export const Gorevler_BelgeSilDelete = async (id: number,
@@ -33732,7 +33733,7 @@ export const getGorevlerNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Gorevler/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Gorevler/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Gorevler/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Gorevler/${id}/Notlar`
 }
 
 export const Gorevler_NotlarGet = async (id: number,
@@ -33787,7 +33788,7 @@ export const getGorevlerNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Gorevler/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Gorevler/${id}/NotEkle`
 }
 
 export const Gorevler_NotEklePost = async (id: number,
@@ -33844,7 +33845,7 @@ export const getGorevlerNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Gorevler/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Gorevler/${id}/NotSil/${notID}`
 }
 
 export const Gorevler_NotSilDelete = async (id: number,
@@ -33906,7 +33907,7 @@ export const getGridSutunAyarlariGetirGetUrl = (params: GridSutunAyarlariGetirGe
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GridSutunAyarlari?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GridSutunAyarlari`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GridSutunAyarlari?${stringifiedParams}` : `${getBaseUrl()}/api/GridSutunAyarlari`
 }
 
 export const GridSutunAyarlari_GetirGet = async (params: GridSutunAyarlariGetirGetParams, options?: RequestInit): Promise<GridSutunAyarlari_GetirGetResponse> => {
@@ -33967,7 +33968,7 @@ export const getGridSutunAyarlariPostPostUrl = (params: GridSutunAyarlariPostPos
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GridSutunAyarlari?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GridSutunAyarlari`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GridSutunAyarlari?${stringifiedParams}` : `${getBaseUrl()}/api/GridSutunAyarlari`
 }
 
 export const GridSutunAyarlari_PostPost = async (gridSutunAyarlariPostPostBody: string[],
@@ -34030,7 +34031,7 @@ export const getGridSutunAyarlariSifirlaPostUrl = (params: GridSutunAyarlariSifi
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GridSutunAyarlari/Sifirla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GridSutunAyarlari/Sifirla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GridSutunAyarlari/Sifirla?${stringifiedParams}` : `${getBaseUrl()}/api/GridSutunAyarlari/Sifirla`
 }
 
 export const GridSutunAyarlari_SifirlaPost = async (params: GridSutunAyarlariSifirlaPostParams, options?: RequestInit): Promise<GridSutunAyarlari_SifirlaPostResponse> => {
@@ -34091,7 +34092,7 @@ export const getGridSutunAyarlariKullaniciAyarlariGetirGetUrl = (params: GridSut
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/GridSutunAyarlari/KullaniciAyarlari?${stringifiedParams}` : `https://erp.aaro.com.tr/api/GridSutunAyarlari/KullaniciAyarlari`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/GridSutunAyarlari/KullaniciAyarlari?${stringifiedParams}` : `${getBaseUrl()}/api/GridSutunAyarlari/KullaniciAyarlari`
 }
 
 export const GridSutunAyarlari_KullaniciAyarlariGetirGet = async (params: GridSutunAyarlariKullaniciAyarlariGetirGetParams, options?: RequestInit): Promise<GridSutunAyarlari_KullaniciAyarlariGetirGetResponse> => {
@@ -34145,7 +34146,7 @@ export const getGridSutunAyarlariKullaniciAyarlariKaydetPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/GridSutunAyarlari/KullaniciAyarlari`
+  return `${getBaseUrl()}/api/GridSutunAyarlari/KullaniciAyarlari`
 }
 
 export const GridSutunAyarlari_KullaniciAyarlariKaydetPost = async (aaroModullerGridSutunAyarlariYoneticiGridAyarlariKayitModel: AaroModullerGridSutunAyarlariYoneticiGridAyarlariKayitModel, options?: RequestInit): Promise<GridSutunAyarlari_KullaniciAyarlariKaydetPostResponse> => {
@@ -34200,7 +34201,7 @@ export const getHareketTurleriAltGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/HareketTurleriAlt/${id}`
+  return `${getBaseUrl()}/api/HareketTurleriAlt/${id}`
 }
 
 export const HareketTurleriAlt_GetGet = async (id: number, options?: RequestInit): Promise<HareketTurleriAlt_GetGetResponse> => {
@@ -34254,7 +34255,7 @@ export const getHareketTurleriAltPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/HareketTurleriAlt/${id}`
+  return `${getBaseUrl()}/api/HareketTurleriAlt/${id}`
 }
 
 export const HareketTurleriAlt_PutPut = async (id: number,
@@ -34310,7 +34311,7 @@ export const getHareketTurleriAltDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/HareketTurleriAlt/${id}`
+  return `${getBaseUrl()}/api/HareketTurleriAlt/${id}`
 }
 
 export const HareketTurleriAlt_DeleteDelete = async (id: number, options?: RequestInit): Promise<HareketTurleriAlt_DeleteDeleteResponse> => {
@@ -34371,7 +34372,7 @@ export const getHareketTurleriAltListeGetGetUrl = (params?: HareketTurleriAltLis
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/HareketTurleriAlt?${stringifiedParams}` : `https://erp.aaro.com.tr/api/HareketTurleriAlt`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/HareketTurleriAlt?${stringifiedParams}` : `${getBaseUrl()}/api/HareketTurleriAlt`
 }
 
 export const HareketTurleriAlt_ListeGetGet = async (params?: HareketTurleriAltListeGetGetParams, options?: RequestInit): Promise<HareketTurleriAlt_ListeGetGetResponse> => {
@@ -34425,7 +34426,7 @@ export const getHareketTurleriAltPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/HareketTurleriAlt`
+  return `${getBaseUrl()}/api/HareketTurleriAlt`
 }
 
 export const HareketTurleriAlt_PostPost = async (aaroModullerHareketTurleriAltKayitSadeKayitModelBody: AaroModullerHareketTurleriAltKayitSadeKayitModelBody, options?: RequestInit): Promise<HareketTurleriAlt_PostPostResponse> => {
@@ -34487,7 +34488,7 @@ export const getHareketTurleriAltOnaylaPostUrl = (params: HareketTurleriAltOnayl
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/HareketTurleriAlt/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/HareketTurleriAlt/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/HareketTurleriAlt/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/HareketTurleriAlt/Onayla`
 }
 
 export const HareketTurleriAlt_OnaylaPost = async (params: HareketTurleriAltOnaylaPostParams, options?: RequestInit): Promise<HareketTurleriAlt_OnaylaPostResponse> => {
@@ -34548,7 +34549,7 @@ export const getHareketTurleriAltReddetPostUrl = (params: HareketTurleriAltRedde
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/HareketTurleriAlt/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/HareketTurleriAlt/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/HareketTurleriAlt/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/HareketTurleriAlt/Reddet`
 }
 
 export const HareketTurleriAlt_ReddetPost = async (params: HareketTurleriAltReddetPostParams, options?: RequestInit): Promise<HareketTurleriAlt_ReddetPostResponse> => {
@@ -34609,7 +34610,7 @@ export const getHareketTurleriAltListeEsnekGetUrl = (params?: HareketTurleriAltL
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/HareketTurleriAlt/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/HareketTurleriAlt/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/HareketTurleriAlt/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/HareketTurleriAlt/Liste`
 }
 
 export const HareketTurleriAlt_ListeEsnekGet = async (params?: HareketTurleriAltListeEsnekGetParams, options?: RequestInit): Promise<HareketTurleriAlt_ListeEsnekGetResponse> => {
@@ -34663,7 +34664,7 @@ export const getHareketTurleriAltListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/HareketTurleriAlt/Liste`
+  return `${getBaseUrl()}/api/HareketTurleriAlt/Liste`
 }
 
 export const HareketTurleriAlt_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<HareketTurleriAlt_ListePostPostResponse> => {
@@ -34725,7 +34726,7 @@ export const getHareketTurleriAltGrupluListeGetUrl = (params: HareketTurleriAltG
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/HareketTurleriAlt/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/HareketTurleriAlt/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/HareketTurleriAlt/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/HareketTurleriAlt/GrupluListe`
 }
 
 export const HareketTurleriAlt_GrupluListeGet = async (params: HareketTurleriAltGrupluListeGetParams, options?: RequestInit): Promise<HareketTurleriAlt_GrupluListeGetResponse> => {
@@ -34779,7 +34780,7 @@ export const getHareketTurleriAltOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/HareketTurleriAlt/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/HareketTurleriAlt/${id}/OnayDurumu`
 }
 
 export const HareketTurleriAlt_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<HareketTurleriAlt_OnayDurumuGetResponse> => {
@@ -34841,7 +34842,7 @@ export const getHareketTurleriAltDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/HareketTurleriAlt/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/HareketTurleriAlt/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/HareketTurleriAlt/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/HareketTurleriAlt/${id}/DegisiklikGecmisi`
 }
 
 export const HareketTurleriAlt_DegisiklikGecmisiGet = async (id: number,
@@ -34904,7 +34905,7 @@ export const getHareketTurleriAltBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/HareketTurleriAlt/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/HareketTurleriAlt/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/HareketTurleriAlt/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/HareketTurleriAlt/${id}/Belgeler`
 }
 
 export const HareketTurleriAlt_BelgelerGet = async (id: number,
@@ -34967,7 +34968,7 @@ export const getHareketTurleriAltBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/HareketTurleriAlt/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/HareketTurleriAlt/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/HareketTurleriAlt/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/HareketTurleriAlt/${id}/BelgeEkle`
 }
 
 export const HareketTurleriAlt_BelgeEklePost = async (id: number,
@@ -35031,7 +35032,7 @@ export const getHareketTurleriAltBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/HareketTurleriAlt/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/HareketTurleriAlt/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/HareketTurleriAlt/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/HareketTurleriAlt/${id}/BelgeSil/${belgeID}`
 }
 
 export const HareketTurleriAlt_BelgeSilDelete = async (id: number,
@@ -35095,7 +35096,7 @@ export const getHareketTurleriAltNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/HareketTurleriAlt/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/HareketTurleriAlt/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/HareketTurleriAlt/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/HareketTurleriAlt/${id}/Notlar`
 }
 
 export const HareketTurleriAlt_NotlarGet = async (id: number,
@@ -35150,7 +35151,7 @@ export const getHareketTurleriAltNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/HareketTurleriAlt/${id}/NotEkle`
+  return `${getBaseUrl()}/api/HareketTurleriAlt/${id}/NotEkle`
 }
 
 export const HareketTurleriAlt_NotEklePost = async (id: number,
@@ -35207,7 +35208,7 @@ export const getHareketTurleriAltNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/HareketTurleriAlt/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/HareketTurleriAlt/${id}/NotSil/${notID}`
 }
 
 export const HareketTurleriAlt_NotSilDelete = async (id: number,
@@ -35262,7 +35263,7 @@ export const getIlcelerGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Ilceler/${id}`
+  return `${getBaseUrl()}/api/Ilceler/${id}`
 }
 
 export const Ilceler_GetGet = async (id: number, options?: RequestInit): Promise<Ilceler_GetGetResponse> => {
@@ -35316,7 +35317,7 @@ export const getIlcelerPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Ilceler/${id}`
+  return `${getBaseUrl()}/api/Ilceler/${id}`
 }
 
 export const Ilceler_PutPut = async (id: number,
@@ -35372,7 +35373,7 @@ export const getIlcelerDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Ilceler/${id}`
+  return `${getBaseUrl()}/api/Ilceler/${id}`
 }
 
 export const Ilceler_DeleteDelete = async (id: number, options?: RequestInit): Promise<Ilceler_DeleteDeleteResponse> => {
@@ -35433,7 +35434,7 @@ export const getIlcelerListeGetGetUrl = (params?: IlcelerListeGetGetParams,) => 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Ilceler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Ilceler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Ilceler?${stringifiedParams}` : `${getBaseUrl()}/api/Ilceler`
 }
 
 export const Ilceler_ListeGetGet = async (params?: IlcelerListeGetGetParams, options?: RequestInit): Promise<Ilceler_ListeGetGetResponse> => {
@@ -35487,7 +35488,7 @@ export const getIlcelerPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Ilceler`
+  return `${getBaseUrl()}/api/Ilceler`
 }
 
 export const Ilceler_PostPost = async (aaroModullerAdrsIlcelerKayitSadeKayitModelBody: AaroModullerAdrsIlcelerKayitSadeKayitModelBody, options?: RequestInit): Promise<Ilceler_PostPostResponse> => {
@@ -35549,7 +35550,7 @@ export const getIlcelerOnaylaPostUrl = (params: IlcelerOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Ilceler/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Ilceler/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Ilceler/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Ilceler/Onayla`
 }
 
 export const Ilceler_OnaylaPost = async (params: IlcelerOnaylaPostParams, options?: RequestInit): Promise<Ilceler_OnaylaPostResponse> => {
@@ -35610,7 +35611,7 @@ export const getIlcelerReddetPostUrl = (params: IlcelerReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Ilceler/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Ilceler/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Ilceler/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Ilceler/Reddet`
 }
 
 export const Ilceler_ReddetPost = async (params: IlcelerReddetPostParams, options?: RequestInit): Promise<Ilceler_ReddetPostResponse> => {
@@ -35671,7 +35672,7 @@ export const getIlcelerListeEsnekGetUrl = (params?: IlcelerListeEsnekGetParams,)
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Ilceler/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Ilceler/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Ilceler/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Ilceler/Liste`
 }
 
 export const Ilceler_ListeEsnekGet = async (params?: IlcelerListeEsnekGetParams, options?: RequestInit): Promise<Ilceler_ListeEsnekGetResponse> => {
@@ -35725,7 +35726,7 @@ export const getIlcelerListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Ilceler/Liste`
+  return `${getBaseUrl()}/api/Ilceler/Liste`
 }
 
 export const Ilceler_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Ilceler_ListePostPostResponse> => {
@@ -35787,7 +35788,7 @@ export const getIlcelerGrupluListeGetUrl = (params: IlcelerGrupluListeGetParams,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Ilceler/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Ilceler/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Ilceler/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Ilceler/GrupluListe`
 }
 
 export const Ilceler_GrupluListeGet = async (params: IlcelerGrupluListeGetParams, options?: RequestInit): Promise<Ilceler_GrupluListeGetResponse> => {
@@ -35841,7 +35842,7 @@ export const getIlcelerOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Ilceler/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Ilceler/${id}/OnayDurumu`
 }
 
 export const Ilceler_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Ilceler_OnayDurumuGetResponse> => {
@@ -35903,7 +35904,7 @@ export const getIlcelerDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Ilceler/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Ilceler/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Ilceler/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Ilceler/${id}/DegisiklikGecmisi`
 }
 
 export const Ilceler_DegisiklikGecmisiGet = async (id: number,
@@ -35966,7 +35967,7 @@ export const getIlcelerBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Ilceler/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Ilceler/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Ilceler/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Ilceler/${id}/Belgeler`
 }
 
 export const Ilceler_BelgelerGet = async (id: number,
@@ -36029,7 +36030,7 @@ export const getIlcelerBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Ilceler/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Ilceler/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Ilceler/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Ilceler/${id}/BelgeEkle`
 }
 
 export const Ilceler_BelgeEklePost = async (id: number,
@@ -36093,7 +36094,7 @@ export const getIlcelerBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Ilceler/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Ilceler/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Ilceler/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Ilceler/${id}/BelgeSil/${belgeID}`
 }
 
 export const Ilceler_BelgeSilDelete = async (id: number,
@@ -36157,7 +36158,7 @@ export const getIlcelerNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Ilceler/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Ilceler/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Ilceler/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Ilceler/${id}/Notlar`
 }
 
 export const Ilceler_NotlarGet = async (id: number,
@@ -36212,7 +36213,7 @@ export const getIlcelerNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Ilceler/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Ilceler/${id}/NotEkle`
 }
 
 export const Ilceler_NotEklePost = async (id: number,
@@ -36269,7 +36270,7 @@ export const getIlcelerNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Ilceler/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Ilceler/${id}/NotSil/${notID}`
 }
 
 export const Ilceler_NotSilDelete = async (id: number,
@@ -36324,7 +36325,7 @@ export const getIllerGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Iller/${id}`
+  return `${getBaseUrl()}/api/Iller/${id}`
 }
 
 export const Iller_GetGet = async (id: number, options?: RequestInit): Promise<Iller_GetGetResponse> => {
@@ -36378,7 +36379,7 @@ export const getIllerPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Iller/${id}`
+  return `${getBaseUrl()}/api/Iller/${id}`
 }
 
 export const Iller_PutPut = async (id: number,
@@ -36434,7 +36435,7 @@ export const getIllerDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Iller/${id}`
+  return `${getBaseUrl()}/api/Iller/${id}`
 }
 
 export const Iller_DeleteDelete = async (id: number, options?: RequestInit): Promise<Iller_DeleteDeleteResponse> => {
@@ -36495,7 +36496,7 @@ export const getIllerListeGetGetUrl = (params?: IllerListeGetGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Iller?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Iller`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Iller?${stringifiedParams}` : `${getBaseUrl()}/api/Iller`
 }
 
 export const Iller_ListeGetGet = async (params?: IllerListeGetGetParams, options?: RequestInit): Promise<Iller_ListeGetGetResponse> => {
@@ -36549,7 +36550,7 @@ export const getIllerPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Iller`
+  return `${getBaseUrl()}/api/Iller`
 }
 
 export const Iller_PostPost = async (aaroModullerAdrsIllerKayitSadeKayitModelBody: AaroModullerAdrsIllerKayitSadeKayitModelBody, options?: RequestInit): Promise<Iller_PostPostResponse> => {
@@ -36611,7 +36612,7 @@ export const getIllerOnaylaPostUrl = (params: IllerOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Iller/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Iller/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Iller/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Iller/Onayla`
 }
 
 export const Iller_OnaylaPost = async (params: IllerOnaylaPostParams, options?: RequestInit): Promise<Iller_OnaylaPostResponse> => {
@@ -36672,7 +36673,7 @@ export const getIllerReddetPostUrl = (params: IllerReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Iller/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Iller/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Iller/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Iller/Reddet`
 }
 
 export const Iller_ReddetPost = async (params: IllerReddetPostParams, options?: RequestInit): Promise<Iller_ReddetPostResponse> => {
@@ -36733,7 +36734,7 @@ export const getIllerListeEsnekGetUrl = (params?: IllerListeEsnekGetParams,) => 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Iller/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Iller/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Iller/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Iller/Liste`
 }
 
 export const Iller_ListeEsnekGet = async (params?: IllerListeEsnekGetParams, options?: RequestInit): Promise<Iller_ListeEsnekGetResponse> => {
@@ -36787,7 +36788,7 @@ export const getIllerListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Iller/Liste`
+  return `${getBaseUrl()}/api/Iller/Liste`
 }
 
 export const Iller_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Iller_ListePostPostResponse> => {
@@ -36849,7 +36850,7 @@ export const getIllerGrupluListeGetUrl = (params: IllerGrupluListeGetParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Iller/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Iller/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Iller/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Iller/GrupluListe`
 }
 
 export const Iller_GrupluListeGet = async (params: IllerGrupluListeGetParams, options?: RequestInit): Promise<Iller_GrupluListeGetResponse> => {
@@ -36903,7 +36904,7 @@ export const getIllerOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Iller/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Iller/${id}/OnayDurumu`
 }
 
 export const Iller_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Iller_OnayDurumuGetResponse> => {
@@ -36965,7 +36966,7 @@ export const getIllerDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Iller/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Iller/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Iller/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Iller/${id}/DegisiklikGecmisi`
 }
 
 export const Iller_DegisiklikGecmisiGet = async (id: number,
@@ -37028,7 +37029,7 @@ export const getIllerBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Iller/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Iller/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Iller/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Iller/${id}/Belgeler`
 }
 
 export const Iller_BelgelerGet = async (id: number,
@@ -37091,7 +37092,7 @@ export const getIllerBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Iller/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Iller/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Iller/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Iller/${id}/BelgeEkle`
 }
 
 export const Iller_BelgeEklePost = async (id: number,
@@ -37155,7 +37156,7 @@ export const getIllerBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Iller/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Iller/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Iller/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Iller/${id}/BelgeSil/${belgeID}`
 }
 
 export const Iller_BelgeSilDelete = async (id: number,
@@ -37219,7 +37220,7 @@ export const getIllerNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Iller/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Iller/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Iller/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Iller/${id}/Notlar`
 }
 
 export const Iller_NotlarGet = async (id: number,
@@ -37274,7 +37275,7 @@ export const getIllerNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Iller/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Iller/${id}/NotEkle`
 }
 
 export const Iller_NotEklePost = async (id: number,
@@ -37331,7 +37332,7 @@ export const getIllerNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Iller/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Iller/${id}/NotSil/${notID}`
 }
 
 export const Iller_NotSilDelete = async (id: number,
@@ -37386,7 +37387,7 @@ export const getIthalatIhracatGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/IthalatIhracat/${id}`
+  return `${getBaseUrl()}/api/IthalatIhracat/${id}`
 }
 
 export const IthalatIhracat_GetGet = async (id: number, options?: RequestInit): Promise<IthalatIhracat_GetGetResponse> => {
@@ -37440,7 +37441,7 @@ export const getIthalatIhracatPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/IthalatIhracat/${id}`
+  return `${getBaseUrl()}/api/IthalatIhracat/${id}`
 }
 
 export const IthalatIhracat_PutPut = async (id: number,
@@ -37496,7 +37497,7 @@ export const getIthalatIhracatDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/IthalatIhracat/${id}`
+  return `${getBaseUrl()}/api/IthalatIhracat/${id}`
 }
 
 export const IthalatIhracat_DeleteDelete = async (id: number, options?: RequestInit): Promise<IthalatIhracat_DeleteDeleteResponse> => {
@@ -37557,7 +37558,7 @@ export const getIthalatIhracatListeGetGetUrl = (params?: IthalatIhracatListeGetG
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/IthalatIhracat?${stringifiedParams}` : `https://erp.aaro.com.tr/api/IthalatIhracat`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/IthalatIhracat?${stringifiedParams}` : `${getBaseUrl()}/api/IthalatIhracat`
 }
 
 export const IthalatIhracat_ListeGetGet = async (params?: IthalatIhracatListeGetGetParams, options?: RequestInit): Promise<IthalatIhracat_ListeGetGetResponse> => {
@@ -37611,7 +37612,7 @@ export const getIthalatIhracatPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/IthalatIhracat`
+  return `${getBaseUrl()}/api/IthalatIhracat`
 }
 
 export const IthalatIhracat_PostPost = async (aaroModullerIthalatIhracatKayitSadeKayitModelBody: AaroModullerIthalatIhracatKayitSadeKayitModelBody, options?: RequestInit): Promise<IthalatIhracat_PostPostResponse> => {
@@ -37673,7 +37674,7 @@ export const getIthalatIhracatOnaylaPostUrl = (params: IthalatIhracatOnaylaPostP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/IthalatIhracat/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/IthalatIhracat/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/IthalatIhracat/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/IthalatIhracat/Onayla`
 }
 
 export const IthalatIhracat_OnaylaPost = async (params: IthalatIhracatOnaylaPostParams, options?: RequestInit): Promise<IthalatIhracat_OnaylaPostResponse> => {
@@ -37734,7 +37735,7 @@ export const getIthalatIhracatReddetPostUrl = (params: IthalatIhracatReddetPostP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/IthalatIhracat/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/IthalatIhracat/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/IthalatIhracat/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/IthalatIhracat/Reddet`
 }
 
 export const IthalatIhracat_ReddetPost = async (params: IthalatIhracatReddetPostParams, options?: RequestInit): Promise<IthalatIhracat_ReddetPostResponse> => {
@@ -37795,7 +37796,7 @@ export const getIthalatIhracatListeEsnekGetUrl = (params?: IthalatIhracatListeEs
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/IthalatIhracat/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/IthalatIhracat/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/IthalatIhracat/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/IthalatIhracat/Liste`
 }
 
 export const IthalatIhracat_ListeEsnekGet = async (params?: IthalatIhracatListeEsnekGetParams, options?: RequestInit): Promise<IthalatIhracat_ListeEsnekGetResponse> => {
@@ -37849,7 +37850,7 @@ export const getIthalatIhracatListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/IthalatIhracat/Liste`
+  return `${getBaseUrl()}/api/IthalatIhracat/Liste`
 }
 
 export const IthalatIhracat_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<IthalatIhracat_ListePostPostResponse> => {
@@ -37911,7 +37912,7 @@ export const getIthalatIhracatGrupluListeGetUrl = (params: IthalatIhracatGrupluL
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/IthalatIhracat/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/IthalatIhracat/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/IthalatIhracat/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/IthalatIhracat/GrupluListe`
 }
 
 export const IthalatIhracat_GrupluListeGet = async (params: IthalatIhracatGrupluListeGetParams, options?: RequestInit): Promise<IthalatIhracat_GrupluListeGetResponse> => {
@@ -37965,7 +37966,7 @@ export const getIthalatIhracatOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/IthalatIhracat/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/IthalatIhracat/${id}/OnayDurumu`
 }
 
 export const IthalatIhracat_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<IthalatIhracat_OnayDurumuGetResponse> => {
@@ -38027,7 +38028,7 @@ export const getIthalatIhracatDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/IthalatIhracat/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/IthalatIhracat/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/IthalatIhracat/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/IthalatIhracat/${id}/DegisiklikGecmisi`
 }
 
 export const IthalatIhracat_DegisiklikGecmisiGet = async (id: number,
@@ -38090,7 +38091,7 @@ export const getIthalatIhracatBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/IthalatIhracat/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/IthalatIhracat/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/IthalatIhracat/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/IthalatIhracat/${id}/Belgeler`
 }
 
 export const IthalatIhracat_BelgelerGet = async (id: number,
@@ -38153,7 +38154,7 @@ export const getIthalatIhracatBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/IthalatIhracat/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/IthalatIhracat/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/IthalatIhracat/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/IthalatIhracat/${id}/BelgeEkle`
 }
 
 export const IthalatIhracat_BelgeEklePost = async (id: number,
@@ -38217,7 +38218,7 @@ export const getIthalatIhracatBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/IthalatIhracat/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/IthalatIhracat/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/IthalatIhracat/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/IthalatIhracat/${id}/BelgeSil/${belgeID}`
 }
 
 export const IthalatIhracat_BelgeSilDelete = async (id: number,
@@ -38281,7 +38282,7 @@ export const getIthalatIhracatNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/IthalatIhracat/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/IthalatIhracat/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/IthalatIhracat/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/IthalatIhracat/${id}/Notlar`
 }
 
 export const IthalatIhracat_NotlarGet = async (id: number,
@@ -38336,7 +38337,7 @@ export const getIthalatIhracatNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/IthalatIhracat/${id}/NotEkle`
+  return `${getBaseUrl()}/api/IthalatIhracat/${id}/NotEkle`
 }
 
 export const IthalatIhracat_NotEklePost = async (id: number,
@@ -38393,7 +38394,7 @@ export const getIthalatIhracatNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/IthalatIhracat/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/IthalatIhracat/${id}/NotSil/${notID}`
 }
 
 export const IthalatIhracat_NotSilDelete = async (id: number,
@@ -38463,7 +38464,7 @@ export const getKaliteKontrolBaslikDetayliListeGetUrl = (params?: KaliteKontrolB
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/DetayliListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/DetayliListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolBaslik/DetayliListe?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolBaslik/DetayliListe`
 }
 
 export const KaliteKontrolBaslik_DetayliListeGet = async (params?: KaliteKontrolBaslikDetayliListeGetParams, options?: RequestInit): Promise<KaliteKontrolBaslik_DetayliListeGetResponse> => {
@@ -38517,7 +38518,7 @@ export const getKaliteKontrolBaslikGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/${id}`
+  return `${getBaseUrl()}/api/KaliteKontrolBaslik/${id}`
 }
 
 export const KaliteKontrolBaslik_GetGet = async (id: number, options?: RequestInit): Promise<KaliteKontrolBaslik_GetGetResponse> => {
@@ -38571,7 +38572,7 @@ export const getKaliteKontrolBaslikPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/${id}`
+  return `${getBaseUrl()}/api/KaliteKontrolBaslik/${id}`
 }
 
 export const KaliteKontrolBaslik_PutPut = async (id: number,
@@ -38627,7 +38628,7 @@ export const getKaliteKontrolBaslikDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/${id}`
+  return `${getBaseUrl()}/api/KaliteKontrolBaslik/${id}`
 }
 
 export const KaliteKontrolBaslik_DeleteDelete = async (id: number, options?: RequestInit): Promise<KaliteKontrolBaslik_DeleteDeleteResponse> => {
@@ -38688,7 +38689,7 @@ export const getKaliteKontrolBaslikListeGetGetUrl = (params?: KaliteKontrolBasli
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolBaslik?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolBaslik`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolBaslik?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolBaslik`
 }
 
 export const KaliteKontrolBaslik_ListeGetGet = async (params?: KaliteKontrolBaslikListeGetGetParams, options?: RequestInit): Promise<KaliteKontrolBaslik_ListeGetGetResponse> => {
@@ -38742,7 +38743,7 @@ export const getKaliteKontrolBaslikPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KaliteKontrolBaslik`
+  return `${getBaseUrl()}/api/KaliteKontrolBaslik`
 }
 
 export const KaliteKontrolBaslik_PostPost = async (aaroModullerKaliteKontrolBaslikKayitSadeKayitModelBody: AaroModullerKaliteKontrolBaslikKayitSadeKayitModelBody, options?: RequestInit): Promise<KaliteKontrolBaslik_PostPostResponse> => {
@@ -38804,7 +38805,7 @@ export const getKaliteKontrolBaslikOnaylaPostUrl = (params: KaliteKontrolBaslikO
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolBaslik/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolBaslik/Onayla`
 }
 
 export const KaliteKontrolBaslik_OnaylaPost = async (params: KaliteKontrolBaslikOnaylaPostParams, options?: RequestInit): Promise<KaliteKontrolBaslik_OnaylaPostResponse> => {
@@ -38865,7 +38866,7 @@ export const getKaliteKontrolBaslikReddetPostUrl = (params: KaliteKontrolBaslikR
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolBaslik/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolBaslik/Reddet`
 }
 
 export const KaliteKontrolBaslik_ReddetPost = async (params: KaliteKontrolBaslikReddetPostParams, options?: RequestInit): Promise<KaliteKontrolBaslik_ReddetPostResponse> => {
@@ -38926,7 +38927,7 @@ export const getKaliteKontrolBaslikListeEsnekGetUrl = (params?: KaliteKontrolBas
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolBaslik/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolBaslik/Liste`
 }
 
 export const KaliteKontrolBaslik_ListeEsnekGet = async (params?: KaliteKontrolBaslikListeEsnekGetParams, options?: RequestInit): Promise<KaliteKontrolBaslik_ListeEsnekGetResponse> => {
@@ -38980,7 +38981,7 @@ export const getKaliteKontrolBaslikListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/Liste`
+  return `${getBaseUrl()}/api/KaliteKontrolBaslik/Liste`
 }
 
 export const KaliteKontrolBaslik_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<KaliteKontrolBaslik_ListePostPostResponse> => {
@@ -39042,7 +39043,7 @@ export const getKaliteKontrolBaslikGrupluListeGetUrl = (params: KaliteKontrolBas
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolBaslik/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolBaslik/GrupluListe`
 }
 
 export const KaliteKontrolBaslik_GrupluListeGet = async (params: KaliteKontrolBaslikGrupluListeGetParams, options?: RequestInit): Promise<KaliteKontrolBaslik_GrupluListeGetResponse> => {
@@ -39096,7 +39097,7 @@ export const getKaliteKontrolBaslikOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/KaliteKontrolBaslik/${id}/OnayDurumu`
 }
 
 export const KaliteKontrolBaslik_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<KaliteKontrolBaslik_OnayDurumuGetResponse> => {
@@ -39158,7 +39159,7 @@ export const getKaliteKontrolBaslikDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolBaslik/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolBaslik/${id}/DegisiklikGecmisi`
 }
 
 export const KaliteKontrolBaslik_DegisiklikGecmisiGet = async (id: number,
@@ -39221,7 +39222,7 @@ export const getKaliteKontrolBaslikBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolBaslik/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolBaslik/${id}/Belgeler`
 }
 
 export const KaliteKontrolBaslik_BelgelerGet = async (id: number,
@@ -39284,7 +39285,7 @@ export const getKaliteKontrolBaslikBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolBaslik/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolBaslik/${id}/BelgeEkle`
 }
 
 export const KaliteKontrolBaslik_BelgeEklePost = async (id: number,
@@ -39348,7 +39349,7 @@ export const getKaliteKontrolBaslikBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolBaslik/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolBaslik/${id}/BelgeSil/${belgeID}`
 }
 
 export const KaliteKontrolBaslik_BelgeSilDelete = async (id: number,
@@ -39412,7 +39413,7 @@ export const getKaliteKontrolBaslikNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolBaslik/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolBaslik/${id}/Notlar`
 }
 
 export const KaliteKontrolBaslik_NotlarGet = async (id: number,
@@ -39467,7 +39468,7 @@ export const getKaliteKontrolBaslikNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/${id}/NotEkle`
+  return `${getBaseUrl()}/api/KaliteKontrolBaslik/${id}/NotEkle`
 }
 
 export const KaliteKontrolBaslik_NotEklePost = async (id: number,
@@ -39524,7 +39525,7 @@ export const getKaliteKontrolBaslikNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/KaliteKontrolBaslik/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/KaliteKontrolBaslik/${id}/NotSil/${notID}`
 }
 
 export const KaliteKontrolBaslik_NotSilDelete = async (id: number,
@@ -39579,7 +39580,7 @@ export const getKaliteKontrolleriGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KaliteKontrolleri/${id}`
+  return `${getBaseUrl()}/api/KaliteKontrolleri/${id}`
 }
 
 export const KaliteKontrolleri_GetGet = async (id: number, options?: RequestInit): Promise<KaliteKontrolleri_GetGetResponse> => {
@@ -39633,7 +39634,7 @@ export const getKaliteKontrolleriPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KaliteKontrolleri/${id}`
+  return `${getBaseUrl()}/api/KaliteKontrolleri/${id}`
 }
 
 export const KaliteKontrolleri_PutPut = async (id: number,
@@ -39689,7 +39690,7 @@ export const getKaliteKontrolleriDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KaliteKontrolleri/${id}`
+  return `${getBaseUrl()}/api/KaliteKontrolleri/${id}`
 }
 
 export const KaliteKontrolleri_DeleteDelete = async (id: number, options?: RequestInit): Promise<KaliteKontrolleri_DeleteDeleteResponse> => {
@@ -39750,7 +39751,7 @@ export const getKaliteKontrolleriListeGetGetUrl = (params?: KaliteKontrolleriLis
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolleri?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolleri`
 }
 
 export const KaliteKontrolleri_ListeGetGet = async (params?: KaliteKontrolleriListeGetGetParams, options?: RequestInit): Promise<KaliteKontrolleri_ListeGetGetResponse> => {
@@ -39804,7 +39805,7 @@ export const getKaliteKontrolleriPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KaliteKontrolleri`
+  return `${getBaseUrl()}/api/KaliteKontrolleri`
 }
 
 export const KaliteKontrolleri_PostPost = async (aaroModullerKaliteKontrolleriKayitSadeKayitModelBody: AaroModullerKaliteKontrolleriKayitSadeKayitModelBody, options?: RequestInit): Promise<KaliteKontrolleri_PostPostResponse> => {
@@ -39866,7 +39867,7 @@ export const getKaliteKontrolleriOnaylaPostUrl = (params: KaliteKontrolleriOnayl
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolleri/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolleri/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolleri/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolleri/Onayla`
 }
 
 export const KaliteKontrolleri_OnaylaPost = async (params: KaliteKontrolleriOnaylaPostParams, options?: RequestInit): Promise<KaliteKontrolleri_OnaylaPostResponse> => {
@@ -39927,7 +39928,7 @@ export const getKaliteKontrolleriReddetPostUrl = (params: KaliteKontrolleriRedde
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolleri/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolleri/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolleri/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolleri/Reddet`
 }
 
 export const KaliteKontrolleri_ReddetPost = async (params: KaliteKontrolleriReddetPostParams, options?: RequestInit): Promise<KaliteKontrolleri_ReddetPostResponse> => {
@@ -39988,7 +39989,7 @@ export const getKaliteKontrolleriListeEsnekGetUrl = (params?: KaliteKontrolleriL
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolleri/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolleri/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolleri/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolleri/Liste`
 }
 
 export const KaliteKontrolleri_ListeEsnekGet = async (params?: KaliteKontrolleriListeEsnekGetParams, options?: RequestInit): Promise<KaliteKontrolleri_ListeEsnekGetResponse> => {
@@ -40042,7 +40043,7 @@ export const getKaliteKontrolleriListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KaliteKontrolleri/Liste`
+  return `${getBaseUrl()}/api/KaliteKontrolleri/Liste`
 }
 
 export const KaliteKontrolleri_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<KaliteKontrolleri_ListePostPostResponse> => {
@@ -40104,7 +40105,7 @@ export const getKaliteKontrolleriGrupluListeGetUrl = (params: KaliteKontrolleriG
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolleri/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolleri/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolleri/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolleri/GrupluListe`
 }
 
 export const KaliteKontrolleri_GrupluListeGet = async (params: KaliteKontrolleriGrupluListeGetParams, options?: RequestInit): Promise<KaliteKontrolleri_GrupluListeGetResponse> => {
@@ -40158,7 +40159,7 @@ export const getKaliteKontrolleriOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KaliteKontrolleri/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/KaliteKontrolleri/${id}/OnayDurumu`
 }
 
 export const KaliteKontrolleri_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<KaliteKontrolleri_OnayDurumuGetResponse> => {
@@ -40220,7 +40221,7 @@ export const getKaliteKontrolleriDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolleri/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolleri/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolleri/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolleri/${id}/DegisiklikGecmisi`
 }
 
 export const KaliteKontrolleri_DegisiklikGecmisiGet = async (id: number,
@@ -40283,7 +40284,7 @@ export const getKaliteKontrolleriBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolleri/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolleri/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolleri/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolleri/${id}/Belgeler`
 }
 
 export const KaliteKontrolleri_BelgelerGet = async (id: number,
@@ -40346,7 +40347,7 @@ export const getKaliteKontrolleriBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolleri/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolleri/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolleri/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolleri/${id}/BelgeEkle`
 }
 
 export const KaliteKontrolleri_BelgeEklePost = async (id: number,
@@ -40410,7 +40411,7 @@ export const getKaliteKontrolleriBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolleri/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolleri/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolleri/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolleri/${id}/BelgeSil/${belgeID}`
 }
 
 export const KaliteKontrolleri_BelgeSilDelete = async (id: number,
@@ -40474,7 +40475,7 @@ export const getKaliteKontrolleriNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KaliteKontrolleri/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KaliteKontrolleri/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KaliteKontrolleri/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/KaliteKontrolleri/${id}/Notlar`
 }
 
 export const KaliteKontrolleri_NotlarGet = async (id: number,
@@ -40529,7 +40530,7 @@ export const getKaliteKontrolleriNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KaliteKontrolleri/${id}/NotEkle`
+  return `${getBaseUrl()}/api/KaliteKontrolleri/${id}/NotEkle`
 }
 
 export const KaliteKontrolleri_NotEklePost = async (id: number,
@@ -40586,7 +40587,7 @@ export const getKaliteKontrolleriNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/KaliteKontrolleri/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/KaliteKontrolleri/${id}/NotSil/${notID}`
 }
 
 export const KaliteKontrolleri_NotSilDelete = async (id: number,
@@ -40648,7 +40649,7 @@ export const getKasaMinListeGetUrl = (params?: KasaMinListeGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kasa/MinListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kasa/MinListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kasa/MinListe?${stringifiedParams}` : `${getBaseUrl()}/api/Kasa/MinListe`
 }
 
 export const Kasa_MinListeGet = async (params?: KasaMinListeGetParams, options?: RequestInit): Promise<Kasa_MinListeGetResponse> => {
@@ -40702,7 +40703,7 @@ export const getKasaDetayliPutPutUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kasa/Detayli`
+  return `${getBaseUrl()}/api/Kasa/Detayli`
 }
 
 export const Kasa_DetayliPutPut = async (aaroModullerKasaKayitSadeDetayliKayitModelAPI: AaroModullerKasaKayitSadeDetayliKayitModelAPI, options?: RequestInit): Promise<Kasa_DetayliPutPutResponse> => {
@@ -40757,7 +40758,7 @@ export const getKasaDetayliPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kasa/Detayli`
+  return `${getBaseUrl()}/api/Kasa/Detayli`
 }
 
 export const Kasa_DetayliPostPost = async (aaroModullerKasaKayitSadeDetayliKayitModelAPI: AaroModullerKasaKayitSadeDetayliKayitModelAPI, options?: RequestInit): Promise<Kasa_DetayliPostPostResponse> => {
@@ -40812,7 +40813,7 @@ export const getKasaDetayliGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kasa/Detayli/${id}`
+  return `${getBaseUrl()}/api/Kasa/Detayli/${id}`
 }
 
 export const Kasa_DetayliGetGet = async (id: number, options?: RequestInit): Promise<Kasa_DetayliGetGetResponse> => {
@@ -40866,7 +40867,7 @@ export const getKasaGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kasa/${id}`
+  return `${getBaseUrl()}/api/Kasa/${id}`
 }
 
 export const Kasa_GetGet = async (id: number, options?: RequestInit): Promise<Kasa_GetGetResponse> => {
@@ -40920,7 +40921,7 @@ export const getKasaPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kasa/${id}`
+  return `${getBaseUrl()}/api/Kasa/${id}`
 }
 
 export const Kasa_PutPut = async (id: number,
@@ -40976,7 +40977,7 @@ export const getKasaDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kasa/${id}`
+  return `${getBaseUrl()}/api/Kasa/${id}`
 }
 
 export const Kasa_DeleteDelete = async (id: number, options?: RequestInit): Promise<Kasa_DeleteDeleteResponse> => {
@@ -41037,7 +41038,7 @@ export const getKasaListeGetGetUrl = (params?: KasaListeGetGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kasa?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kasa`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kasa?${stringifiedParams}` : `${getBaseUrl()}/api/Kasa`
 }
 
 export const Kasa_ListeGetGet = async (params?: KasaListeGetGetParams, options?: RequestInit): Promise<Kasa_ListeGetGetResponse> => {
@@ -41091,7 +41092,7 @@ export const getKasaPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kasa`
+  return `${getBaseUrl()}/api/Kasa`
 }
 
 export const Kasa_PostPost = async (aaroModullerKasaKayitSadeKayitModelBody: AaroModullerKasaKayitSadeKayitModelBody, options?: RequestInit): Promise<Kasa_PostPostResponse> => {
@@ -41153,7 +41154,7 @@ export const getKasaOnaylaPostUrl = (params: KasaOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kasa/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kasa/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kasa/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Kasa/Onayla`
 }
 
 export const Kasa_OnaylaPost = async (params: KasaOnaylaPostParams, options?: RequestInit): Promise<Kasa_OnaylaPostResponse> => {
@@ -41214,7 +41215,7 @@ export const getKasaReddetPostUrl = (params: KasaReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kasa/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kasa/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kasa/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Kasa/Reddet`
 }
 
 export const Kasa_ReddetPost = async (params: KasaReddetPostParams, options?: RequestInit): Promise<Kasa_ReddetPostResponse> => {
@@ -41275,7 +41276,7 @@ export const getKasaListeEsnekGetUrl = (params?: KasaListeEsnekGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kasa/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kasa/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kasa/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Kasa/Liste`
 }
 
 export const Kasa_ListeEsnekGet = async (params?: KasaListeEsnekGetParams, options?: RequestInit): Promise<Kasa_ListeEsnekGetResponse> => {
@@ -41329,7 +41330,7 @@ export const getKasaListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kasa/Liste`
+  return `${getBaseUrl()}/api/Kasa/Liste`
 }
 
 export const Kasa_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Kasa_ListePostPostResponse> => {
@@ -41391,7 +41392,7 @@ export const getKasaGrupluListeGetUrl = (params: KasaGrupluListeGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kasa/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kasa/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kasa/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Kasa/GrupluListe`
 }
 
 export const Kasa_GrupluListeGet = async (params: KasaGrupluListeGetParams, options?: RequestInit): Promise<Kasa_GrupluListeGetResponse> => {
@@ -41445,7 +41446,7 @@ export const getKasaOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kasa/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Kasa/${id}/OnayDurumu`
 }
 
 export const Kasa_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Kasa_OnayDurumuGetResponse> => {
@@ -41507,7 +41508,7 @@ export const getKasaDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kasa/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kasa/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kasa/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Kasa/${id}/DegisiklikGecmisi`
 }
 
 export const Kasa_DegisiklikGecmisiGet = async (id: number,
@@ -41570,7 +41571,7 @@ export const getKasaBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kasa/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kasa/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kasa/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Kasa/${id}/Belgeler`
 }
 
 export const Kasa_BelgelerGet = async (id: number,
@@ -41633,7 +41634,7 @@ export const getKasaBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kasa/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kasa/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kasa/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Kasa/${id}/BelgeEkle`
 }
 
 export const Kasa_BelgeEklePost = async (id: number,
@@ -41697,7 +41698,7 @@ export const getKasaBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kasa/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kasa/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kasa/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Kasa/${id}/BelgeSil/${belgeID}`
 }
 
 export const Kasa_BelgeSilDelete = async (id: number,
@@ -41761,7 +41762,7 @@ export const getKasaNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kasa/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kasa/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kasa/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Kasa/${id}/Notlar`
 }
 
 export const Kasa_NotlarGet = async (id: number,
@@ -41816,7 +41817,7 @@ export const getKasaNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kasa/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Kasa/${id}/NotEkle`
 }
 
 export const Kasa_NotEklePost = async (id: number,
@@ -41873,7 +41874,7 @@ export const getKasaNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Kasa/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Kasa/${id}/NotSil/${notID}`
 }
 
 export const Kasa_NotSilDelete = async (id: number,
@@ -41935,7 +41936,7 @@ export const getKasaHareketleriDetayliListeGetUrl = (params?: KasaHareketleriDet
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KasaHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KasaHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KasaHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/KasaHareketleri`
 }
 
 export const KasaHareketleri_DetayliListeGet = async (params?: KasaHareketleriDetayliListeGetParams, options?: RequestInit): Promise<KasaHareketleri_DetayliListeGetResponse> => {
@@ -41996,7 +41997,7 @@ export const getKodlarKodlarTumSeviyelerGetUrl = (params?: KodlarKodlarTumSeviye
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kodlar/KodlarTumSeviyeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kodlar/KodlarTumSeviyeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kodlar/KodlarTumSeviyeler?${stringifiedParams}` : `${getBaseUrl()}/api/Kodlar/KodlarTumSeviyeler`
 }
 
 export const Kodlar_KodlarTumSeviyelerGet = async (params?: KodlarKodlarTumSeviyelerGetParams, options?: RequestInit): Promise<Kodlar_KodlarTumSeviyelerGetResponse> => {
@@ -42050,7 +42051,7 @@ export const getKodlarIDSizTumSeviyeleriBirdenKaydetPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kodlar/IDSizTumSeviyeleriBirdenKaydet`
+  return `${getBaseUrl()}/api/Kodlar/IDSizTumSeviyeleriBirdenKaydet`
 }
 
 export const Kodlar_IDSizTumSeviyeleriBirdenKaydetPost = async (aaroModullerDisardanAktarimEkKodlarExcelModel: AaroModullerDisardanAktarimEkKodlarExcelModel, options?: RequestInit): Promise<Kodlar_IDSizTumSeviyeleriBirdenKaydetPostResponse> => {
@@ -42105,7 +42106,7 @@ export const getKodlarGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kodlar/${id}`
+  return `${getBaseUrl()}/api/Kodlar/${id}`
 }
 
 export const Kodlar_GetGet = async (id: number, options?: RequestInit): Promise<Kodlar_GetGetResponse> => {
@@ -42159,7 +42160,7 @@ export const getKodlarPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kodlar/${id}`
+  return `${getBaseUrl()}/api/Kodlar/${id}`
 }
 
 export const Kodlar_PutPut = async (id: number,
@@ -42215,7 +42216,7 @@ export const getKodlarDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kodlar/${id}`
+  return `${getBaseUrl()}/api/Kodlar/${id}`
 }
 
 export const Kodlar_DeleteDelete = async (id: number, options?: RequestInit): Promise<Kodlar_DeleteDeleteResponse> => {
@@ -42276,7 +42277,7 @@ export const getKodlarListeGetGetUrl = (params?: KodlarListeGetGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kodlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kodlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kodlar?${stringifiedParams}` : `${getBaseUrl()}/api/Kodlar`
 }
 
 export const Kodlar_ListeGetGet = async (params?: KodlarListeGetGetParams, options?: RequestInit): Promise<Kodlar_ListeGetGetResponse> => {
@@ -42330,7 +42331,7 @@ export const getKodlarPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kodlar`
+  return `${getBaseUrl()}/api/Kodlar`
 }
 
 export const Kodlar_PostPost = async (aaroModullerKodlarKayitSadeKayitModelBody: AaroModullerKodlarKayitSadeKayitModelBody, options?: RequestInit): Promise<Kodlar_PostPostResponse> => {
@@ -42392,7 +42393,7 @@ export const getKodlarOnaylaPostUrl = (params: KodlarOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kodlar/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kodlar/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kodlar/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Kodlar/Onayla`
 }
 
 export const Kodlar_OnaylaPost = async (params: KodlarOnaylaPostParams, options?: RequestInit): Promise<Kodlar_OnaylaPostResponse> => {
@@ -42453,7 +42454,7 @@ export const getKodlarReddetPostUrl = (params: KodlarReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kodlar/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kodlar/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kodlar/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Kodlar/Reddet`
 }
 
 export const Kodlar_ReddetPost = async (params: KodlarReddetPostParams, options?: RequestInit): Promise<Kodlar_ReddetPostResponse> => {
@@ -42514,7 +42515,7 @@ export const getKodlarListeEsnekGetUrl = (params?: KodlarListeEsnekGetParams,) =
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kodlar/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kodlar/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kodlar/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Kodlar/Liste`
 }
 
 export const Kodlar_ListeEsnekGet = async (params?: KodlarListeEsnekGetParams, options?: RequestInit): Promise<Kodlar_ListeEsnekGetResponse> => {
@@ -42568,7 +42569,7 @@ export const getKodlarListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kodlar/Liste`
+  return `${getBaseUrl()}/api/Kodlar/Liste`
 }
 
 export const Kodlar_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Kodlar_ListePostPostResponse> => {
@@ -42630,7 +42631,7 @@ export const getKodlarGrupluListeGetUrl = (params: KodlarGrupluListeGetParams,) 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kodlar/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kodlar/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kodlar/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Kodlar/GrupluListe`
 }
 
 export const Kodlar_GrupluListeGet = async (params: KodlarGrupluListeGetParams, options?: RequestInit): Promise<Kodlar_GrupluListeGetResponse> => {
@@ -42684,7 +42685,7 @@ export const getKodlarOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kodlar/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Kodlar/${id}/OnayDurumu`
 }
 
 export const Kodlar_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Kodlar_OnayDurumuGetResponse> => {
@@ -42746,7 +42747,7 @@ export const getKodlarDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kodlar/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kodlar/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kodlar/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Kodlar/${id}/DegisiklikGecmisi`
 }
 
 export const Kodlar_DegisiklikGecmisiGet = async (id: number,
@@ -42809,7 +42810,7 @@ export const getKodlarBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kodlar/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kodlar/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kodlar/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Kodlar/${id}/Belgeler`
 }
 
 export const Kodlar_BelgelerGet = async (id: number,
@@ -42872,7 +42873,7 @@ export const getKodlarBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kodlar/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kodlar/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kodlar/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Kodlar/${id}/BelgeEkle`
 }
 
 export const Kodlar_BelgeEklePost = async (id: number,
@@ -42936,7 +42937,7 @@ export const getKodlarBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kodlar/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kodlar/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kodlar/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Kodlar/${id}/BelgeSil/${belgeID}`
 }
 
 export const Kodlar_BelgeSilDelete = async (id: number,
@@ -43000,7 +43001,7 @@ export const getKodlarNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kodlar/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kodlar/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kodlar/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Kodlar/${id}/Notlar`
 }
 
 export const Kodlar_NotlarGet = async (id: number,
@@ -43055,7 +43056,7 @@ export const getKodlarNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kodlar/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Kodlar/${id}/NotEkle`
 }
 
 export const Kodlar_NotEklePost = async (id: number,
@@ -43112,7 +43113,7 @@ export const getKodlarNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Kodlar/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Kodlar/${id}/NotSil/${notID}`
 }
 
 export const Kodlar_NotSilDelete = async (id: number,
@@ -43167,7 +43168,7 @@ export const getKullaniciGruplarGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KullaniciGruplar/${id}`
+  return `${getBaseUrl()}/api/KullaniciGruplar/${id}`
 }
 
 export const KullaniciGruplar_GetGet = async (id: number, options?: RequestInit): Promise<KullaniciGruplar_GetGetResponse> => {
@@ -43221,7 +43222,7 @@ export const getKullaniciGruplarPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KullaniciGruplar/${id}`
+  return `${getBaseUrl()}/api/KullaniciGruplar/${id}`
 }
 
 export const KullaniciGruplar_PutPut = async (id: number,
@@ -43277,7 +43278,7 @@ export const getKullaniciGruplarDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KullaniciGruplar/${id}`
+  return `${getBaseUrl()}/api/KullaniciGruplar/${id}`
 }
 
 export const KullaniciGruplar_DeleteDelete = async (id: number, options?: RequestInit): Promise<KullaniciGruplar_DeleteDeleteResponse> => {
@@ -43338,7 +43339,7 @@ export const getKullaniciGruplarListeGetGetUrl = (params?: KullaniciGruplarListe
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KullaniciGruplar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KullaniciGruplar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KullaniciGruplar?${stringifiedParams}` : `${getBaseUrl()}/api/KullaniciGruplar`
 }
 
 export const KullaniciGruplar_ListeGetGet = async (params?: KullaniciGruplarListeGetGetParams, options?: RequestInit): Promise<KullaniciGruplar_ListeGetGetResponse> => {
@@ -43392,7 +43393,7 @@ export const getKullaniciGruplarPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KullaniciGruplar`
+  return `${getBaseUrl()}/api/KullaniciGruplar`
 }
 
 export const KullaniciGruplar_PostPost = async (aaroModullerKullaniciGruplarKayitSadeKayitModelBody: AaroModullerKullaniciGruplarKayitSadeKayitModelBody, options?: RequestInit): Promise<KullaniciGruplar_PostPostResponse> => {
@@ -43454,7 +43455,7 @@ export const getKullaniciGruplarOnaylaPostUrl = (params: KullaniciGruplarOnaylaP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KullaniciGruplar/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KullaniciGruplar/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KullaniciGruplar/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/KullaniciGruplar/Onayla`
 }
 
 export const KullaniciGruplar_OnaylaPost = async (params: KullaniciGruplarOnaylaPostParams, options?: RequestInit): Promise<KullaniciGruplar_OnaylaPostResponse> => {
@@ -43515,7 +43516,7 @@ export const getKullaniciGruplarReddetPostUrl = (params: KullaniciGruplarReddetP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KullaniciGruplar/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KullaniciGruplar/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KullaniciGruplar/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/KullaniciGruplar/Reddet`
 }
 
 export const KullaniciGruplar_ReddetPost = async (params: KullaniciGruplarReddetPostParams, options?: RequestInit): Promise<KullaniciGruplar_ReddetPostResponse> => {
@@ -43576,7 +43577,7 @@ export const getKullaniciGruplarListeEsnekGetUrl = (params?: KullaniciGruplarLis
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KullaniciGruplar/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KullaniciGruplar/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KullaniciGruplar/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/KullaniciGruplar/Liste`
 }
 
 export const KullaniciGruplar_ListeEsnekGet = async (params?: KullaniciGruplarListeEsnekGetParams, options?: RequestInit): Promise<KullaniciGruplar_ListeEsnekGetResponse> => {
@@ -43630,7 +43631,7 @@ export const getKullaniciGruplarListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KullaniciGruplar/Liste`
+  return `${getBaseUrl()}/api/KullaniciGruplar/Liste`
 }
 
 export const KullaniciGruplar_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<KullaniciGruplar_ListePostPostResponse> => {
@@ -43692,7 +43693,7 @@ export const getKullaniciGruplarGrupluListeGetUrl = (params: KullaniciGruplarGru
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KullaniciGruplar/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KullaniciGruplar/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KullaniciGruplar/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/KullaniciGruplar/GrupluListe`
 }
 
 export const KullaniciGruplar_GrupluListeGet = async (params: KullaniciGruplarGrupluListeGetParams, options?: RequestInit): Promise<KullaniciGruplar_GrupluListeGetResponse> => {
@@ -43746,7 +43747,7 @@ export const getKullaniciGruplarOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KullaniciGruplar/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/KullaniciGruplar/${id}/OnayDurumu`
 }
 
 export const KullaniciGruplar_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<KullaniciGruplar_OnayDurumuGetResponse> => {
@@ -43808,7 +43809,7 @@ export const getKullaniciGruplarDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KullaniciGruplar/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KullaniciGruplar/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KullaniciGruplar/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/KullaniciGruplar/${id}/DegisiklikGecmisi`
 }
 
 export const KullaniciGruplar_DegisiklikGecmisiGet = async (id: number,
@@ -43871,7 +43872,7 @@ export const getKullaniciGruplarBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KullaniciGruplar/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KullaniciGruplar/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KullaniciGruplar/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/KullaniciGruplar/${id}/Belgeler`
 }
 
 export const KullaniciGruplar_BelgelerGet = async (id: number,
@@ -43934,7 +43935,7 @@ export const getKullaniciGruplarBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KullaniciGruplar/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KullaniciGruplar/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KullaniciGruplar/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/KullaniciGruplar/${id}/BelgeEkle`
 }
 
 export const KullaniciGruplar_BelgeEklePost = async (id: number,
@@ -43998,7 +43999,7 @@ export const getKullaniciGruplarBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KullaniciGruplar/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KullaniciGruplar/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KullaniciGruplar/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/KullaniciGruplar/${id}/BelgeSil/${belgeID}`
 }
 
 export const KullaniciGruplar_BelgeSilDelete = async (id: number,
@@ -44062,7 +44063,7 @@ export const getKullaniciGruplarNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/KullaniciGruplar/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/KullaniciGruplar/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/KullaniciGruplar/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/KullaniciGruplar/${id}/Notlar`
 }
 
 export const KullaniciGruplar_NotlarGet = async (id: number,
@@ -44117,7 +44118,7 @@ export const getKullaniciGruplarNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/KullaniciGruplar/${id}/NotEkle`
+  return `${getBaseUrl()}/api/KullaniciGruplar/${id}/NotEkle`
 }
 
 export const KullaniciGruplar_NotEklePost = async (id: number,
@@ -44174,7 +44175,7 @@ export const getKullaniciGruplarNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/KullaniciGruplar/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/KullaniciGruplar/${id}/NotSil/${notID}`
 }
 
 export const KullaniciGruplar_NotSilDelete = async (id: number,
@@ -44229,7 +44230,7 @@ export const getKullanicilarGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kullanicilar/${id}`
+  return `${getBaseUrl()}/api/Kullanicilar/${id}`
 }
 
 export const Kullanicilar_GetGet = async (id: number, options?: RequestInit): Promise<Kullanicilar_GetGetResponse> => {
@@ -44283,7 +44284,7 @@ export const getKullanicilarPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kullanicilar/${id}`
+  return `${getBaseUrl()}/api/Kullanicilar/${id}`
 }
 
 export const Kullanicilar_PutPut = async (id: number,
@@ -44339,7 +44340,7 @@ export const getKullanicilarDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kullanicilar/${id}`
+  return `${getBaseUrl()}/api/Kullanicilar/${id}`
 }
 
 export const Kullanicilar_DeleteDelete = async (id: number, options?: RequestInit): Promise<Kullanicilar_DeleteDeleteResponse> => {
@@ -44400,7 +44401,7 @@ export const getKullanicilarListeGetGetUrl = (params?: KullanicilarListeGetGetPa
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kullanicilar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kullanicilar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kullanicilar?${stringifiedParams}` : `${getBaseUrl()}/api/Kullanicilar`
 }
 
 export const Kullanicilar_ListeGetGet = async (params?: KullanicilarListeGetGetParams, options?: RequestInit): Promise<Kullanicilar_ListeGetGetResponse> => {
@@ -44454,7 +44455,7 @@ export const getKullanicilarPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kullanicilar`
+  return `${getBaseUrl()}/api/Kullanicilar`
 }
 
 export const Kullanicilar_PostPost = async (aaroModullerKullanicilarKayitSadeKayitModelBody: AaroModullerKullanicilarKayitSadeKayitModelBody, options?: RequestInit): Promise<Kullanicilar_PostPostResponse> => {
@@ -44516,7 +44517,7 @@ export const getKullanicilarOnaylaPostUrl = (params: KullanicilarOnaylaPostParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kullanicilar/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kullanicilar/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kullanicilar/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Kullanicilar/Onayla`
 }
 
 export const Kullanicilar_OnaylaPost = async (params: KullanicilarOnaylaPostParams, options?: RequestInit): Promise<Kullanicilar_OnaylaPostResponse> => {
@@ -44577,7 +44578,7 @@ export const getKullanicilarReddetPostUrl = (params: KullanicilarReddetPostParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kullanicilar/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kullanicilar/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kullanicilar/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Kullanicilar/Reddet`
 }
 
 export const Kullanicilar_ReddetPost = async (params: KullanicilarReddetPostParams, options?: RequestInit): Promise<Kullanicilar_ReddetPostResponse> => {
@@ -44638,7 +44639,7 @@ export const getKullanicilarListeEsnekGetUrl = (params?: KullanicilarListeEsnekG
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kullanicilar/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kullanicilar/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kullanicilar/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Kullanicilar/Liste`
 }
 
 export const Kullanicilar_ListeEsnekGet = async (params?: KullanicilarListeEsnekGetParams, options?: RequestInit): Promise<Kullanicilar_ListeEsnekGetResponse> => {
@@ -44692,7 +44693,7 @@ export const getKullanicilarListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kullanicilar/Liste`
+  return `${getBaseUrl()}/api/Kullanicilar/Liste`
 }
 
 export const Kullanicilar_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Kullanicilar_ListePostPostResponse> => {
@@ -44754,7 +44755,7 @@ export const getKullanicilarGrupluListeGetUrl = (params: KullanicilarGrupluListe
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kullanicilar/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kullanicilar/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kullanicilar/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Kullanicilar/GrupluListe`
 }
 
 export const Kullanicilar_GrupluListeGet = async (params: KullanicilarGrupluListeGetParams, options?: RequestInit): Promise<Kullanicilar_GrupluListeGetResponse> => {
@@ -44808,7 +44809,7 @@ export const getKullanicilarOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kullanicilar/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Kullanicilar/${id}/OnayDurumu`
 }
 
 export const Kullanicilar_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Kullanicilar_OnayDurumuGetResponse> => {
@@ -44870,7 +44871,7 @@ export const getKullanicilarDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kullanicilar/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kullanicilar/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kullanicilar/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Kullanicilar/${id}/DegisiklikGecmisi`
 }
 
 export const Kullanicilar_DegisiklikGecmisiGet = async (id: number,
@@ -44933,7 +44934,7 @@ export const getKullanicilarBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kullanicilar/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kullanicilar/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kullanicilar/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Kullanicilar/${id}/Belgeler`
 }
 
 export const Kullanicilar_BelgelerGet = async (id: number,
@@ -44996,7 +44997,7 @@ export const getKullanicilarBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kullanicilar/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kullanicilar/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kullanicilar/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Kullanicilar/${id}/BelgeEkle`
 }
 
 export const Kullanicilar_BelgeEklePost = async (id: number,
@@ -45060,7 +45061,7 @@ export const getKullanicilarBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kullanicilar/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kullanicilar/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kullanicilar/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Kullanicilar/${id}/BelgeSil/${belgeID}`
 }
 
 export const Kullanicilar_BelgeSilDelete = async (id: number,
@@ -45124,7 +45125,7 @@ export const getKullanicilarNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Kullanicilar/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Kullanicilar/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Kullanicilar/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Kullanicilar/${id}/Notlar`
 }
 
 export const Kullanicilar_NotlarGet = async (id: number,
@@ -45179,7 +45180,7 @@ export const getKullanicilarNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Kullanicilar/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Kullanicilar/${id}/NotEkle`
 }
 
 export const Kullanicilar_NotEklePost = async (id: number,
@@ -45236,7 +45237,7 @@ export const getKullanicilarNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Kullanicilar/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Kullanicilar/${id}/NotSil/${notID}`
 }
 
 export const Kullanicilar_NotSilDelete = async (id: number,
@@ -45291,7 +45292,7 @@ export const getMasrafMerkeziGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/MasrafMerkezi/${id}`
+  return `${getBaseUrl()}/api/MasrafMerkezi/${id}`
 }
 
 export const MasrafMerkezi_GetGet = async (id: number, options?: RequestInit): Promise<MasrafMerkezi_GetGetResponse> => {
@@ -45345,7 +45346,7 @@ export const getMasrafMerkeziPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/MasrafMerkezi/${id}`
+  return `${getBaseUrl()}/api/MasrafMerkezi/${id}`
 }
 
 export const MasrafMerkezi_PutPut = async (id: number,
@@ -45401,7 +45402,7 @@ export const getMasrafMerkeziDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/MasrafMerkezi/${id}`
+  return `${getBaseUrl()}/api/MasrafMerkezi/${id}`
 }
 
 export const MasrafMerkezi_DeleteDelete = async (id: number, options?: RequestInit): Promise<MasrafMerkezi_DeleteDeleteResponse> => {
@@ -45462,7 +45463,7 @@ export const getMasrafMerkeziListeGetGetUrl = (params?: MasrafMerkeziListeGetGet
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/MasrafMerkezi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/MasrafMerkezi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/MasrafMerkezi?${stringifiedParams}` : `${getBaseUrl()}/api/MasrafMerkezi`
 }
 
 export const MasrafMerkezi_ListeGetGet = async (params?: MasrafMerkeziListeGetGetParams, options?: RequestInit): Promise<MasrafMerkezi_ListeGetGetResponse> => {
@@ -45516,7 +45517,7 @@ export const getMasrafMerkeziPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/MasrafMerkezi`
+  return `${getBaseUrl()}/api/MasrafMerkezi`
 }
 
 export const MasrafMerkezi_PostPost = async (aaroModullerMasrafMerkeziKayitSadeKayitModelBody: AaroModullerMasrafMerkeziKayitSadeKayitModelBody, options?: RequestInit): Promise<MasrafMerkezi_PostPostResponse> => {
@@ -45578,7 +45579,7 @@ export const getMasrafMerkeziOnaylaPostUrl = (params: MasrafMerkeziOnaylaPostPar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/MasrafMerkezi/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/MasrafMerkezi/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/MasrafMerkezi/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/MasrafMerkezi/Onayla`
 }
 
 export const MasrafMerkezi_OnaylaPost = async (params: MasrafMerkeziOnaylaPostParams, options?: RequestInit): Promise<MasrafMerkezi_OnaylaPostResponse> => {
@@ -45639,7 +45640,7 @@ export const getMasrafMerkeziReddetPostUrl = (params: MasrafMerkeziReddetPostPar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/MasrafMerkezi/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/MasrafMerkezi/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/MasrafMerkezi/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/MasrafMerkezi/Reddet`
 }
 
 export const MasrafMerkezi_ReddetPost = async (params: MasrafMerkeziReddetPostParams, options?: RequestInit): Promise<MasrafMerkezi_ReddetPostResponse> => {
@@ -45700,7 +45701,7 @@ export const getMasrafMerkeziListeEsnekGetUrl = (params?: MasrafMerkeziListeEsne
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/MasrafMerkezi/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/MasrafMerkezi/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/MasrafMerkezi/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/MasrafMerkezi/Liste`
 }
 
 export const MasrafMerkezi_ListeEsnekGet = async (params?: MasrafMerkeziListeEsnekGetParams, options?: RequestInit): Promise<MasrafMerkezi_ListeEsnekGetResponse> => {
@@ -45754,7 +45755,7 @@ export const getMasrafMerkeziListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/MasrafMerkezi/Liste`
+  return `${getBaseUrl()}/api/MasrafMerkezi/Liste`
 }
 
 export const MasrafMerkezi_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<MasrafMerkezi_ListePostPostResponse> => {
@@ -45816,7 +45817,7 @@ export const getMasrafMerkeziGrupluListeGetUrl = (params: MasrafMerkeziGrupluLis
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/MasrafMerkezi/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/MasrafMerkezi/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/MasrafMerkezi/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/MasrafMerkezi/GrupluListe`
 }
 
 export const MasrafMerkezi_GrupluListeGet = async (params: MasrafMerkeziGrupluListeGetParams, options?: RequestInit): Promise<MasrafMerkezi_GrupluListeGetResponse> => {
@@ -45870,7 +45871,7 @@ export const getMasrafMerkeziOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/MasrafMerkezi/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/MasrafMerkezi/${id}/OnayDurumu`
 }
 
 export const MasrafMerkezi_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<MasrafMerkezi_OnayDurumuGetResponse> => {
@@ -45932,7 +45933,7 @@ export const getMasrafMerkeziDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/MasrafMerkezi/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/MasrafMerkezi/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/MasrafMerkezi/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/MasrafMerkezi/${id}/DegisiklikGecmisi`
 }
 
 export const MasrafMerkezi_DegisiklikGecmisiGet = async (id: number,
@@ -45995,7 +45996,7 @@ export const getMasrafMerkeziBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/MasrafMerkezi/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/MasrafMerkezi/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/MasrafMerkezi/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/MasrafMerkezi/${id}/Belgeler`
 }
 
 export const MasrafMerkezi_BelgelerGet = async (id: number,
@@ -46058,7 +46059,7 @@ export const getMasrafMerkeziBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/MasrafMerkezi/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/MasrafMerkezi/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/MasrafMerkezi/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/MasrafMerkezi/${id}/BelgeEkle`
 }
 
 export const MasrafMerkezi_BelgeEklePost = async (id: number,
@@ -46122,7 +46123,7 @@ export const getMasrafMerkeziBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/MasrafMerkezi/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/MasrafMerkezi/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/MasrafMerkezi/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/MasrafMerkezi/${id}/BelgeSil/${belgeID}`
 }
 
 export const MasrafMerkezi_BelgeSilDelete = async (id: number,
@@ -46186,7 +46187,7 @@ export const getMasrafMerkeziNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/MasrafMerkezi/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/MasrafMerkezi/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/MasrafMerkezi/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/MasrafMerkezi/${id}/Notlar`
 }
 
 export const MasrafMerkezi_NotlarGet = async (id: number,
@@ -46241,7 +46242,7 @@ export const getMasrafMerkeziNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/MasrafMerkezi/${id}/NotEkle`
+  return `${getBaseUrl()}/api/MasrafMerkezi/${id}/NotEkle`
 }
 
 export const MasrafMerkezi_NotEklePost = async (id: number,
@@ -46298,7 +46299,7 @@ export const getMasrafMerkeziNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/MasrafMerkezi/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/MasrafMerkezi/${id}/NotSil/${notID}`
 }
 
 export const MasrafMerkezi_NotSilDelete = async (id: number,
@@ -46353,7 +46354,7 @@ export const getMuhasebeGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Muhasebe/${id}`
+  return `${getBaseUrl()}/api/Muhasebe/${id}`
 }
 
 export const Muhasebe_GetGet = async (id: number, options?: RequestInit): Promise<Muhasebe_GetGetResponse> => {
@@ -46407,7 +46408,7 @@ export const getMuhasebePutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Muhasebe/${id}`
+  return `${getBaseUrl()}/api/Muhasebe/${id}`
 }
 
 export const Muhasebe_PutPut = async (id: number,
@@ -46463,7 +46464,7 @@ export const getMuhasebeDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Muhasebe/${id}`
+  return `${getBaseUrl()}/api/Muhasebe/${id}`
 }
 
 export const Muhasebe_DeleteDelete = async (id: number, options?: RequestInit): Promise<Muhasebe_DeleteDeleteResponse> => {
@@ -46524,7 +46525,7 @@ export const getMuhasebeListeGetGetUrl = (params?: MuhasebeListeGetGetParams,) =
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Muhasebe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Muhasebe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Muhasebe?${stringifiedParams}` : `${getBaseUrl()}/api/Muhasebe`
 }
 
 export const Muhasebe_ListeGetGet = async (params?: MuhasebeListeGetGetParams, options?: RequestInit): Promise<Muhasebe_ListeGetGetResponse> => {
@@ -46578,7 +46579,7 @@ export const getMuhasebePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Muhasebe`
+  return `${getBaseUrl()}/api/Muhasebe`
 }
 
 export const Muhasebe_PostPost = async (aaroModullerMuhasebeKayitSadeKayitModelBody: AaroModullerMuhasebeKayitSadeKayitModelBody, options?: RequestInit): Promise<Muhasebe_PostPostResponse> => {
@@ -46640,7 +46641,7 @@ export const getMuhasebeOnaylaPostUrl = (params: MuhasebeOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Muhasebe/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Muhasebe/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Muhasebe/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Muhasebe/Onayla`
 }
 
 export const Muhasebe_OnaylaPost = async (params: MuhasebeOnaylaPostParams, options?: RequestInit): Promise<Muhasebe_OnaylaPostResponse> => {
@@ -46701,7 +46702,7 @@ export const getMuhasebeReddetPostUrl = (params: MuhasebeReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Muhasebe/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Muhasebe/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Muhasebe/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Muhasebe/Reddet`
 }
 
 export const Muhasebe_ReddetPost = async (params: MuhasebeReddetPostParams, options?: RequestInit): Promise<Muhasebe_ReddetPostResponse> => {
@@ -46762,7 +46763,7 @@ export const getMuhasebeListeEsnekGetUrl = (params?: MuhasebeListeEsnekGetParams
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Muhasebe/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Muhasebe/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Muhasebe/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Muhasebe/Liste`
 }
 
 export const Muhasebe_ListeEsnekGet = async (params?: MuhasebeListeEsnekGetParams, options?: RequestInit): Promise<Muhasebe_ListeEsnekGetResponse> => {
@@ -46816,7 +46817,7 @@ export const getMuhasebeListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Muhasebe/Liste`
+  return `${getBaseUrl()}/api/Muhasebe/Liste`
 }
 
 export const Muhasebe_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Muhasebe_ListePostPostResponse> => {
@@ -46878,7 +46879,7 @@ export const getMuhasebeGrupluListeGetUrl = (params: MuhasebeGrupluListeGetParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Muhasebe/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Muhasebe/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Muhasebe/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Muhasebe/GrupluListe`
 }
 
 export const Muhasebe_GrupluListeGet = async (params: MuhasebeGrupluListeGetParams, options?: RequestInit): Promise<Muhasebe_GrupluListeGetResponse> => {
@@ -46932,7 +46933,7 @@ export const getMuhasebeOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Muhasebe/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Muhasebe/${id}/OnayDurumu`
 }
 
 export const Muhasebe_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Muhasebe_OnayDurumuGetResponse> => {
@@ -46994,7 +46995,7 @@ export const getMuhasebeDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Muhasebe/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Muhasebe/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Muhasebe/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Muhasebe/${id}/DegisiklikGecmisi`
 }
 
 export const Muhasebe_DegisiklikGecmisiGet = async (id: number,
@@ -47057,7 +47058,7 @@ export const getMuhasebeBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Muhasebe/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Muhasebe/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Muhasebe/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Muhasebe/${id}/Belgeler`
 }
 
 export const Muhasebe_BelgelerGet = async (id: number,
@@ -47120,7 +47121,7 @@ export const getMuhasebeBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Muhasebe/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Muhasebe/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Muhasebe/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Muhasebe/${id}/BelgeEkle`
 }
 
 export const Muhasebe_BelgeEklePost = async (id: number,
@@ -47184,7 +47185,7 @@ export const getMuhasebeBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Muhasebe/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Muhasebe/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Muhasebe/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Muhasebe/${id}/BelgeSil/${belgeID}`
 }
 
 export const Muhasebe_BelgeSilDelete = async (id: number,
@@ -47248,7 +47249,7 @@ export const getMuhasebeNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Muhasebe/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Muhasebe/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Muhasebe/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Muhasebe/${id}/Notlar`
 }
 
 export const Muhasebe_NotlarGet = async (id: number,
@@ -47303,7 +47304,7 @@ export const getMuhasebeNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Muhasebe/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Muhasebe/${id}/NotEkle`
 }
 
 export const Muhasebe_NotEklePost = async (id: number,
@@ -47360,7 +47361,7 @@ export const getMuhasebeNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Muhasebe/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Muhasebe/${id}/NotSil/${notID}`
 }
 
 export const Muhasebe_NotSilDelete = async (id: number,
@@ -47415,7 +47416,7 @@ export const getMVCEskiOzelApiResimYuklePostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/MVCEskiOzelApi/ResimYukle`
+  return `${getBaseUrl()}/api/MVCEskiOzelApi/ResimYukle`
 }
 
 export const MVCEskiOzelApi_ResimYuklePost = async (options?: RequestInit): Promise<MVCEskiOzelApi_ResimYuklePostResponse> => {
@@ -47476,7 +47477,7 @@ export const getMVCEskiOzelApiBelgeNoGetUrl = (params: MVCEskiOzelApiBelgeNoGetP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/MVCEskiOzelApi/BelgeNo?${stringifiedParams}` : `https://erp.aaro.com.tr/api/MVCEskiOzelApi/BelgeNo`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/MVCEskiOzelApi/BelgeNo?${stringifiedParams}` : `${getBaseUrl()}/api/MVCEskiOzelApi/BelgeNo`
 }
 
 export const MVCEskiOzelApi_BelgeNoGet = async (params: MVCEskiOzelApiBelgeNoGetParams, options?: RequestInit): Promise<MVCEskiOzelApi_BelgeNoGetResponse> => {
@@ -47537,7 +47538,7 @@ export const getMVCEskiOzelApiKartKoduGetUrl = (params: MVCEskiOzelApiKartKoduGe
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/MVCEskiOzelApi/KartKodu?${stringifiedParams}` : `https://erp.aaro.com.tr/api/MVCEskiOzelApi/KartKodu`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/MVCEskiOzelApi/KartKodu?${stringifiedParams}` : `${getBaseUrl()}/api/MVCEskiOzelApi/KartKodu`
 }
 
 export const MVCEskiOzelApi_KartKoduGet = async (params: MVCEskiOzelApiKartKoduGetParams, options?: RequestInit): Promise<MVCEskiOzelApi_KartKoduGetResponse> => {
@@ -47591,7 +47592,7 @@ export const getNotlarGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Notlar/${id}`
+  return `${getBaseUrl()}/api/Notlar/${id}`
 }
 
 export const Notlar_GetGet = async (id: number, options?: RequestInit): Promise<Notlar_GetGetResponse> => {
@@ -47645,7 +47646,7 @@ export const getNotlarPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Notlar/${id}`
+  return `${getBaseUrl()}/api/Notlar/${id}`
 }
 
 export const Notlar_PutPut = async (id: number,
@@ -47701,7 +47702,7 @@ export const getNotlarDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Notlar/${id}`
+  return `${getBaseUrl()}/api/Notlar/${id}`
 }
 
 export const Notlar_DeleteDelete = async (id: number, options?: RequestInit): Promise<Notlar_DeleteDeleteResponse> => {
@@ -47762,7 +47763,7 @@ export const getNotlarListeGetGetUrl = (params?: NotlarListeGetGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Notlar`
 }
 
 export const Notlar_ListeGetGet = async (params?: NotlarListeGetGetParams, options?: RequestInit): Promise<Notlar_ListeGetGetResponse> => {
@@ -47816,7 +47817,7 @@ export const getNotlarPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Notlar`
+  return `${getBaseUrl()}/api/Notlar`
 }
 
 export const Notlar_PostPost = async (aaroModullerNotlarKayitSadeKayitModelBody: AaroModullerNotlarKayitSadeKayitModelBody, options?: RequestInit): Promise<Notlar_PostPostResponse> => {
@@ -47878,7 +47879,7 @@ export const getNotlarOnaylaPostUrl = (params: NotlarOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Notlar/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Notlar/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Notlar/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Notlar/Onayla`
 }
 
 export const Notlar_OnaylaPost = async (params: NotlarOnaylaPostParams, options?: RequestInit): Promise<Notlar_OnaylaPostResponse> => {
@@ -47939,7 +47940,7 @@ export const getNotlarReddetPostUrl = (params: NotlarReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Notlar/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Notlar/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Notlar/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Notlar/Reddet`
 }
 
 export const Notlar_ReddetPost = async (params: NotlarReddetPostParams, options?: RequestInit): Promise<Notlar_ReddetPostResponse> => {
@@ -48000,7 +48001,7 @@ export const getNotlarListeEsnekGetUrl = (params?: NotlarListeEsnekGetParams,) =
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Notlar/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Notlar/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Notlar/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Notlar/Liste`
 }
 
 export const Notlar_ListeEsnekGet = async (params?: NotlarListeEsnekGetParams, options?: RequestInit): Promise<Notlar_ListeEsnekGetResponse> => {
@@ -48054,7 +48055,7 @@ export const getNotlarListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Notlar/Liste`
+  return `${getBaseUrl()}/api/Notlar/Liste`
 }
 
 export const Notlar_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Notlar_ListePostPostResponse> => {
@@ -48116,7 +48117,7 @@ export const getNotlarGrupluListeGetUrl = (params: NotlarGrupluListeGetParams,) 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Notlar/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Notlar/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Notlar/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Notlar/GrupluListe`
 }
 
 export const Notlar_GrupluListeGet = async (params: NotlarGrupluListeGetParams, options?: RequestInit): Promise<Notlar_GrupluListeGetResponse> => {
@@ -48170,7 +48171,7 @@ export const getNotlarOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Notlar/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Notlar/${id}/OnayDurumu`
 }
 
 export const Notlar_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Notlar_OnayDurumuGetResponse> => {
@@ -48232,7 +48233,7 @@ export const getNotlarDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Notlar/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Notlar/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Notlar/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Notlar/${id}/DegisiklikGecmisi`
 }
 
 export const Notlar_DegisiklikGecmisiGet = async (id: number,
@@ -48295,7 +48296,7 @@ export const getNotlarBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Notlar/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Notlar/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Notlar/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Notlar/${id}/Belgeler`
 }
 
 export const Notlar_BelgelerGet = async (id: number,
@@ -48358,7 +48359,7 @@ export const getNotlarBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Notlar/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Notlar/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Notlar/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Notlar/${id}/BelgeEkle`
 }
 
 export const Notlar_BelgeEklePost = async (id: number,
@@ -48422,7 +48423,7 @@ export const getNotlarBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Notlar/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Notlar/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Notlar/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Notlar/${id}/BelgeSil/${belgeID}`
 }
 
 export const Notlar_BelgeSilDelete = async (id: number,
@@ -48486,7 +48487,7 @@ export const getNotlarNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Notlar/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Notlar/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Notlar/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Notlar/${id}/Notlar`
 }
 
 export const Notlar_NotlarGet = async (id: number,
@@ -48541,7 +48542,7 @@ export const getNotlarNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Notlar/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Notlar/${id}/NotEkle`
 }
 
 export const Notlar_NotEklePost = async (id: number,
@@ -48598,7 +48599,7 @@ export const getNotlarNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Notlar/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Notlar/${id}/NotSil/${notID}`
 }
 
 export const Notlar_NotSilDelete = async (id: number,
@@ -48653,7 +48654,7 @@ export const getOlcuBirimleriGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/OlcuBirimleri/${id}`
+  return `${getBaseUrl()}/api/OlcuBirimleri/${id}`
 }
 
 export const OlcuBirimleri_GetGet = async (id: number, options?: RequestInit): Promise<OlcuBirimleri_GetGetResponse> => {
@@ -48707,7 +48708,7 @@ export const getOlcuBirimleriPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/OlcuBirimleri/${id}`
+  return `${getBaseUrl()}/api/OlcuBirimleri/${id}`
 }
 
 export const OlcuBirimleri_PutPut = async (id: number,
@@ -48763,7 +48764,7 @@ export const getOlcuBirimleriDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/OlcuBirimleri/${id}`
+  return `${getBaseUrl()}/api/OlcuBirimleri/${id}`
 }
 
 export const OlcuBirimleri_DeleteDelete = async (id: number, options?: RequestInit): Promise<OlcuBirimleri_DeleteDeleteResponse> => {
@@ -48824,7 +48825,7 @@ export const getOlcuBirimleriListeGetGetUrl = (params?: OlcuBirimleriListeGetGet
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/OlcuBirimleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/OlcuBirimleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/OlcuBirimleri?${stringifiedParams}` : `${getBaseUrl()}/api/OlcuBirimleri`
 }
 
 export const OlcuBirimleri_ListeGetGet = async (params?: OlcuBirimleriListeGetGetParams, options?: RequestInit): Promise<OlcuBirimleri_ListeGetGetResponse> => {
@@ -48878,7 +48879,7 @@ export const getOlcuBirimleriPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/OlcuBirimleri`
+  return `${getBaseUrl()}/api/OlcuBirimleri`
 }
 
 export const OlcuBirimleri_PostPost = async (aaroModullerOlcuBirimleriKayitSadeKayitModelBody: AaroModullerOlcuBirimleriKayitSadeKayitModelBody, options?: RequestInit): Promise<OlcuBirimleri_PostPostResponse> => {
@@ -48940,7 +48941,7 @@ export const getOlcuBirimleriOnaylaPostUrl = (params: OlcuBirimleriOnaylaPostPar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/OlcuBirimleri/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/OlcuBirimleri/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/OlcuBirimleri/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/OlcuBirimleri/Onayla`
 }
 
 export const OlcuBirimleri_OnaylaPost = async (params: OlcuBirimleriOnaylaPostParams, options?: RequestInit): Promise<OlcuBirimleri_OnaylaPostResponse> => {
@@ -49001,7 +49002,7 @@ export const getOlcuBirimleriReddetPostUrl = (params: OlcuBirimleriReddetPostPar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/OlcuBirimleri/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/OlcuBirimleri/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/OlcuBirimleri/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/OlcuBirimleri/Reddet`
 }
 
 export const OlcuBirimleri_ReddetPost = async (params: OlcuBirimleriReddetPostParams, options?: RequestInit): Promise<OlcuBirimleri_ReddetPostResponse> => {
@@ -49062,7 +49063,7 @@ export const getOlcuBirimleriListeEsnekGetUrl = (params?: OlcuBirimleriListeEsne
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/OlcuBirimleri/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/OlcuBirimleri/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/OlcuBirimleri/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/OlcuBirimleri/Liste`
 }
 
 export const OlcuBirimleri_ListeEsnekGet = async (params?: OlcuBirimleriListeEsnekGetParams, options?: RequestInit): Promise<OlcuBirimleri_ListeEsnekGetResponse> => {
@@ -49116,7 +49117,7 @@ export const getOlcuBirimleriListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/OlcuBirimleri/Liste`
+  return `${getBaseUrl()}/api/OlcuBirimleri/Liste`
 }
 
 export const OlcuBirimleri_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<OlcuBirimleri_ListePostPostResponse> => {
@@ -49178,7 +49179,7 @@ export const getOlcuBirimleriGrupluListeGetUrl = (params: OlcuBirimleriGrupluLis
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/OlcuBirimleri/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/OlcuBirimleri/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/OlcuBirimleri/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/OlcuBirimleri/GrupluListe`
 }
 
 export const OlcuBirimleri_GrupluListeGet = async (params: OlcuBirimleriGrupluListeGetParams, options?: RequestInit): Promise<OlcuBirimleri_GrupluListeGetResponse> => {
@@ -49232,7 +49233,7 @@ export const getOlcuBirimleriOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/OlcuBirimleri/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/OlcuBirimleri/${id}/OnayDurumu`
 }
 
 export const OlcuBirimleri_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<OlcuBirimleri_OnayDurumuGetResponse> => {
@@ -49294,7 +49295,7 @@ export const getOlcuBirimleriDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/OlcuBirimleri/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/OlcuBirimleri/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/OlcuBirimleri/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/OlcuBirimleri/${id}/DegisiklikGecmisi`
 }
 
 export const OlcuBirimleri_DegisiklikGecmisiGet = async (id: number,
@@ -49357,7 +49358,7 @@ export const getOlcuBirimleriBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/OlcuBirimleri/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/OlcuBirimleri/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/OlcuBirimleri/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/OlcuBirimleri/${id}/Belgeler`
 }
 
 export const OlcuBirimleri_BelgelerGet = async (id: number,
@@ -49420,7 +49421,7 @@ export const getOlcuBirimleriBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/OlcuBirimleri/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/OlcuBirimleri/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/OlcuBirimleri/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/OlcuBirimleri/${id}/BelgeEkle`
 }
 
 export const OlcuBirimleri_BelgeEklePost = async (id: number,
@@ -49484,7 +49485,7 @@ export const getOlcuBirimleriBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/OlcuBirimleri/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/OlcuBirimleri/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/OlcuBirimleri/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/OlcuBirimleri/${id}/BelgeSil/${belgeID}`
 }
 
 export const OlcuBirimleri_BelgeSilDelete = async (id: number,
@@ -49548,7 +49549,7 @@ export const getOlcuBirimleriNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/OlcuBirimleri/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/OlcuBirimleri/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/OlcuBirimleri/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/OlcuBirimleri/${id}/Notlar`
 }
 
 export const OlcuBirimleri_NotlarGet = async (id: number,
@@ -49603,7 +49604,7 @@ export const getOlcuBirimleriNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/OlcuBirimleri/${id}/NotEkle`
+  return `${getBaseUrl()}/api/OlcuBirimleri/${id}/NotEkle`
 }
 
 export const OlcuBirimleri_NotEklePost = async (id: number,
@@ -49660,7 +49661,7 @@ export const getOlcuBirimleriNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/OlcuBirimleri/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/OlcuBirimleri/${id}/NotSil/${notID}`
 }
 
 export const OlcuBirimleri_NotSilDelete = async (id: number,
@@ -49722,7 +49723,7 @@ export const getOnayKosulTanimOnaydaBekleyenlerGetUrl = (params?: OnayKosulTanim
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/OnayKosulTanim/OnaydaBekleyenler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/OnayKosulTanim/OnaydaBekleyenler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/OnayKosulTanim/OnaydaBekleyenler?${stringifiedParams}` : `${getBaseUrl()}/api/OnayKosulTanim/OnaydaBekleyenler`
 }
 
 export const OnayKosulTanim_OnaydaBekleyenlerGet = async (params?: OnayKosulTanimOnaydaBekleyenlerGetParams, options?: RequestInit): Promise<OnayKosulTanim_OnaydaBekleyenlerGetResponse> => {
@@ -49783,7 +49784,7 @@ export const getOnayKosulTanimOnaylanacaklarGetUrl = (params?: OnayKosulTanimOna
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/OnayKosulTanim/Onaylanacaklar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/OnayKosulTanim/Onaylanacaklar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/OnayKosulTanim/Onaylanacaklar?${stringifiedParams}` : `${getBaseUrl()}/api/OnayKosulTanim/Onaylanacaklar`
 }
 
 export const OnayKosulTanim_OnaylanacaklarGet = async (params?: OnayKosulTanimOnaylanacaklarGetParams, options?: RequestInit): Promise<OnayKosulTanim_OnaylanacaklarGetResponse> => {
@@ -49837,7 +49838,7 @@ export const getPaketGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Paket/${id}`
+  return `${getBaseUrl()}/api/Paket/${id}`
 }
 
 export const Paket_GetGet = async (id: number, options?: RequestInit): Promise<Paket_GetGetResponse> => {
@@ -49891,7 +49892,7 @@ export const getPaketPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Paket/${id}`
+  return `${getBaseUrl()}/api/Paket/${id}`
 }
 
 export const Paket_PutPut = async (id: number,
@@ -49947,7 +49948,7 @@ export const getPaketDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Paket/${id}`
+  return `${getBaseUrl()}/api/Paket/${id}`
 }
 
 export const Paket_DeleteDelete = async (id: number, options?: RequestInit): Promise<Paket_DeleteDeleteResponse> => {
@@ -50008,7 +50009,7 @@ export const getPaketListeGetGetUrl = (params?: PaketListeGetGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Paket?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Paket`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Paket?${stringifiedParams}` : `${getBaseUrl()}/api/Paket`
 }
 
 export const Paket_ListeGetGet = async (params?: PaketListeGetGetParams, options?: RequestInit): Promise<Paket_ListeGetGetResponse> => {
@@ -50062,7 +50063,7 @@ export const getPaketPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Paket`
+  return `${getBaseUrl()}/api/Paket`
 }
 
 export const Paket_PostPost = async (aaroModullerPaketKayitSadeKayitModelBody: AaroModullerPaketKayitSadeKayitModelBody, options?: RequestInit): Promise<Paket_PostPostResponse> => {
@@ -50124,7 +50125,7 @@ export const getPaketOnaylaPostUrl = (params: PaketOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Paket/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Paket/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Paket/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Paket/Onayla`
 }
 
 export const Paket_OnaylaPost = async (params: PaketOnaylaPostParams, options?: RequestInit): Promise<Paket_OnaylaPostResponse> => {
@@ -50185,7 +50186,7 @@ export const getPaketReddetPostUrl = (params: PaketReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Paket/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Paket/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Paket/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Paket/Reddet`
 }
 
 export const Paket_ReddetPost = async (params: PaketReddetPostParams, options?: RequestInit): Promise<Paket_ReddetPostResponse> => {
@@ -50246,7 +50247,7 @@ export const getPaketListeEsnekGetUrl = (params?: PaketListeEsnekGetParams,) => 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Paket/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Paket/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Paket/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Paket/Liste`
 }
 
 export const Paket_ListeEsnekGet = async (params?: PaketListeEsnekGetParams, options?: RequestInit): Promise<Paket_ListeEsnekGetResponse> => {
@@ -50300,7 +50301,7 @@ export const getPaketListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Paket/Liste`
+  return `${getBaseUrl()}/api/Paket/Liste`
 }
 
 export const Paket_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Paket_ListePostPostResponse> => {
@@ -50362,7 +50363,7 @@ export const getPaketGrupluListeGetUrl = (params: PaketGrupluListeGetParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Paket/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Paket/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Paket/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Paket/GrupluListe`
 }
 
 export const Paket_GrupluListeGet = async (params: PaketGrupluListeGetParams, options?: RequestInit): Promise<Paket_GrupluListeGetResponse> => {
@@ -50416,7 +50417,7 @@ export const getPaketOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Paket/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Paket/${id}/OnayDurumu`
 }
 
 export const Paket_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Paket_OnayDurumuGetResponse> => {
@@ -50478,7 +50479,7 @@ export const getPaketDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Paket/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Paket/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Paket/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Paket/${id}/DegisiklikGecmisi`
 }
 
 export const Paket_DegisiklikGecmisiGet = async (id: number,
@@ -50541,7 +50542,7 @@ export const getPaketBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Paket/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Paket/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Paket/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Paket/${id}/Belgeler`
 }
 
 export const Paket_BelgelerGet = async (id: number,
@@ -50604,7 +50605,7 @@ export const getPaketBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Paket/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Paket/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Paket/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Paket/${id}/BelgeEkle`
 }
 
 export const Paket_BelgeEklePost = async (id: number,
@@ -50668,7 +50669,7 @@ export const getPaketBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Paket/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Paket/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Paket/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Paket/${id}/BelgeSil/${belgeID}`
 }
 
 export const Paket_BelgeSilDelete = async (id: number,
@@ -50732,7 +50733,7 @@ export const getPaketNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Paket/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Paket/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Paket/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Paket/${id}/Notlar`
 }
 
 export const Paket_NotlarGet = async (id: number,
@@ -50787,7 +50788,7 @@ export const getPaketNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Paket/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Paket/${id}/NotEkle`
 }
 
 export const Paket_NotEklePost = async (id: number,
@@ -50844,7 +50845,7 @@ export const getPaketNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Paket/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Paket/${id}/NotSil/${notID}`
 }
 
 export const Paket_NotSilDelete = async (id: number,
@@ -50899,7 +50900,7 @@ export const getParametrelerSirketSubeGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/ParametrelerSirketSube/${id}`
+  return `${getBaseUrl()}/api/ParametrelerSirketSube/${id}`
 }
 
 export const ParametrelerSirketSube_GetGet = async (id: number, options?: RequestInit): Promise<ParametrelerSirketSube_GetGetResponse> => {
@@ -50953,7 +50954,7 @@ export const getParametrelerSirketSubePutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/ParametrelerSirketSube/${id}`
+  return `${getBaseUrl()}/api/ParametrelerSirketSube/${id}`
 }
 
 export const ParametrelerSirketSube_PutPut = async (id: number,
@@ -51009,7 +51010,7 @@ export const getParametrelerSirketSubeDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/ParametrelerSirketSube/${id}`
+  return `${getBaseUrl()}/api/ParametrelerSirketSube/${id}`
 }
 
 export const ParametrelerSirketSube_DeleteDelete = async (id: number, options?: RequestInit): Promise<ParametrelerSirketSube_DeleteDeleteResponse> => {
@@ -51070,7 +51071,7 @@ export const getParametrelerSirketSubeListeGetGetUrl = (params?: ParametrelerSir
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/ParametrelerSirketSube?${stringifiedParams}` : `https://erp.aaro.com.tr/api/ParametrelerSirketSube`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/ParametrelerSirketSube?${stringifiedParams}` : `${getBaseUrl()}/api/ParametrelerSirketSube`
 }
 
 export const ParametrelerSirketSube_ListeGetGet = async (params?: ParametrelerSirketSubeListeGetGetParams, options?: RequestInit): Promise<ParametrelerSirketSube_ListeGetGetResponse> => {
@@ -51124,7 +51125,7 @@ export const getParametrelerSirketSubePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/ParametrelerSirketSube`
+  return `${getBaseUrl()}/api/ParametrelerSirketSube`
 }
 
 export const ParametrelerSirketSube_PostPost = async (aaroModullerParametrelerSirketSubeKayitSadeKayitModelBody: AaroModullerParametrelerSirketSubeKayitSadeKayitModelBody, options?: RequestInit): Promise<ParametrelerSirketSube_PostPostResponse> => {
@@ -51186,7 +51187,7 @@ export const getParametrelerSirketSubeOnaylaPostUrl = (params: ParametrelerSirke
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/ParametrelerSirketSube/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/ParametrelerSirketSube/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/ParametrelerSirketSube/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/ParametrelerSirketSube/Onayla`
 }
 
 export const ParametrelerSirketSube_OnaylaPost = async (params: ParametrelerSirketSubeOnaylaPostParams, options?: RequestInit): Promise<ParametrelerSirketSube_OnaylaPostResponse> => {
@@ -51247,7 +51248,7 @@ export const getParametrelerSirketSubeReddetPostUrl = (params: ParametrelerSirke
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/ParametrelerSirketSube/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/ParametrelerSirketSube/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/ParametrelerSirketSube/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/ParametrelerSirketSube/Reddet`
 }
 
 export const ParametrelerSirketSube_ReddetPost = async (params: ParametrelerSirketSubeReddetPostParams, options?: RequestInit): Promise<ParametrelerSirketSube_ReddetPostResponse> => {
@@ -51308,7 +51309,7 @@ export const getParametrelerSirketSubeListeEsnekGetUrl = (params?: ParametrelerS
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/ParametrelerSirketSube/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/ParametrelerSirketSube/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/ParametrelerSirketSube/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/ParametrelerSirketSube/Liste`
 }
 
 export const ParametrelerSirketSube_ListeEsnekGet = async (params?: ParametrelerSirketSubeListeEsnekGetParams, options?: RequestInit): Promise<ParametrelerSirketSube_ListeEsnekGetResponse> => {
@@ -51362,7 +51363,7 @@ export const getParametrelerSirketSubeListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/ParametrelerSirketSube/Liste`
+  return `${getBaseUrl()}/api/ParametrelerSirketSube/Liste`
 }
 
 export const ParametrelerSirketSube_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<ParametrelerSirketSube_ListePostPostResponse> => {
@@ -51424,7 +51425,7 @@ export const getParametrelerSirketSubeGrupluListeGetUrl = (params: ParametrelerS
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/ParametrelerSirketSube/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/ParametrelerSirketSube/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/ParametrelerSirketSube/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/ParametrelerSirketSube/GrupluListe`
 }
 
 export const ParametrelerSirketSube_GrupluListeGet = async (params: ParametrelerSirketSubeGrupluListeGetParams, options?: RequestInit): Promise<ParametrelerSirketSube_GrupluListeGetResponse> => {
@@ -51478,7 +51479,7 @@ export const getParametrelerSirketSubeOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/ParametrelerSirketSube/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/ParametrelerSirketSube/${id}/OnayDurumu`
 }
 
 export const ParametrelerSirketSube_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<ParametrelerSirketSube_OnayDurumuGetResponse> => {
@@ -51540,7 +51541,7 @@ export const getParametrelerSirketSubeDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/ParametrelerSirketSube/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/ParametrelerSirketSube/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/ParametrelerSirketSube/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/ParametrelerSirketSube/${id}/DegisiklikGecmisi`
 }
 
 export const ParametrelerSirketSube_DegisiklikGecmisiGet = async (id: number,
@@ -51603,7 +51604,7 @@ export const getParametrelerSirketSubeBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/ParametrelerSirketSube/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/ParametrelerSirketSube/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/ParametrelerSirketSube/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/ParametrelerSirketSube/${id}/Belgeler`
 }
 
 export const ParametrelerSirketSube_BelgelerGet = async (id: number,
@@ -51666,7 +51667,7 @@ export const getParametrelerSirketSubeBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/ParametrelerSirketSube/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/ParametrelerSirketSube/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/ParametrelerSirketSube/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/ParametrelerSirketSube/${id}/BelgeEkle`
 }
 
 export const ParametrelerSirketSube_BelgeEklePost = async (id: number,
@@ -51730,7 +51731,7 @@ export const getParametrelerSirketSubeBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/ParametrelerSirketSube/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/ParametrelerSirketSube/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/ParametrelerSirketSube/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/ParametrelerSirketSube/${id}/BelgeSil/${belgeID}`
 }
 
 export const ParametrelerSirketSube_BelgeSilDelete = async (id: number,
@@ -51794,7 +51795,7 @@ export const getParametrelerSirketSubeNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/ParametrelerSirketSube/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/ParametrelerSirketSube/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/ParametrelerSirketSube/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/ParametrelerSirketSube/${id}/Notlar`
 }
 
 export const ParametrelerSirketSube_NotlarGet = async (id: number,
@@ -51849,7 +51850,7 @@ export const getParametrelerSirketSubeNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/ParametrelerSirketSube/${id}/NotEkle`
+  return `${getBaseUrl()}/api/ParametrelerSirketSube/${id}/NotEkle`
 }
 
 export const ParametrelerSirketSube_NotEklePost = async (id: number,
@@ -51906,7 +51907,7 @@ export const getParametrelerSirketSubeNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/ParametrelerSirketSube/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/ParametrelerSirketSube/${id}/NotSil/${notID}`
 }
 
 export const ParametrelerSirketSube_NotSilDelete = async (id: number,
@@ -51961,7 +51962,7 @@ export const getPerGirisCikisGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerGirisCikis/${id}`
+  return `${getBaseUrl()}/api/PerGirisCikis/${id}`
 }
 
 export const PerGirisCikis_GetGet = async (id: number, options?: RequestInit): Promise<PerGirisCikis_GetGetResponse> => {
@@ -52015,7 +52016,7 @@ export const getPerGirisCikisPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerGirisCikis/${id}`
+  return `${getBaseUrl()}/api/PerGirisCikis/${id}`
 }
 
 export const PerGirisCikis_PutPut = async (id: number,
@@ -52071,7 +52072,7 @@ export const getPerGirisCikisDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerGirisCikis/${id}`
+  return `${getBaseUrl()}/api/PerGirisCikis/${id}`
 }
 
 export const PerGirisCikis_DeleteDelete = async (id: number, options?: RequestInit): Promise<PerGirisCikis_DeleteDeleteResponse> => {
@@ -52132,7 +52133,7 @@ export const getPerGirisCikisListeGetGetUrl = (params?: PerGirisCikisListeGetGet
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerGirisCikis?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerGirisCikis`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerGirisCikis?${stringifiedParams}` : `${getBaseUrl()}/api/PerGirisCikis`
 }
 
 export const PerGirisCikis_ListeGetGet = async (params?: PerGirisCikisListeGetGetParams, options?: RequestInit): Promise<PerGirisCikis_ListeGetGetResponse> => {
@@ -52186,7 +52187,7 @@ export const getPerGirisCikisPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerGirisCikis`
+  return `${getBaseUrl()}/api/PerGirisCikis`
 }
 
 export const PerGirisCikis_PostPost = async (aaroModullerPerGirisCikisKayitSadeKayitModelBody: AaroModullerPerGirisCikisKayitSadeKayitModelBody, options?: RequestInit): Promise<PerGirisCikis_PostPostResponse> => {
@@ -52248,7 +52249,7 @@ export const getPerGirisCikisOnaylaPostUrl = (params: PerGirisCikisOnaylaPostPar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerGirisCikis/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerGirisCikis/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerGirisCikis/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/PerGirisCikis/Onayla`
 }
 
 export const PerGirisCikis_OnaylaPost = async (params: PerGirisCikisOnaylaPostParams, options?: RequestInit): Promise<PerGirisCikis_OnaylaPostResponse> => {
@@ -52309,7 +52310,7 @@ export const getPerGirisCikisReddetPostUrl = (params: PerGirisCikisReddetPostPar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerGirisCikis/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerGirisCikis/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerGirisCikis/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/PerGirisCikis/Reddet`
 }
 
 export const PerGirisCikis_ReddetPost = async (params: PerGirisCikisReddetPostParams, options?: RequestInit): Promise<PerGirisCikis_ReddetPostResponse> => {
@@ -52370,7 +52371,7 @@ export const getPerGirisCikisListeEsnekGetUrl = (params?: PerGirisCikisListeEsne
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerGirisCikis/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerGirisCikis/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerGirisCikis/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/PerGirisCikis/Liste`
 }
 
 export const PerGirisCikis_ListeEsnekGet = async (params?: PerGirisCikisListeEsnekGetParams, options?: RequestInit): Promise<PerGirisCikis_ListeEsnekGetResponse> => {
@@ -52424,7 +52425,7 @@ export const getPerGirisCikisListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerGirisCikis/Liste`
+  return `${getBaseUrl()}/api/PerGirisCikis/Liste`
 }
 
 export const PerGirisCikis_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<PerGirisCikis_ListePostPostResponse> => {
@@ -52486,7 +52487,7 @@ export const getPerGirisCikisGrupluListeGetUrl = (params: PerGirisCikisGrupluLis
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerGirisCikis/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerGirisCikis/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerGirisCikis/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/PerGirisCikis/GrupluListe`
 }
 
 export const PerGirisCikis_GrupluListeGet = async (params: PerGirisCikisGrupluListeGetParams, options?: RequestInit): Promise<PerGirisCikis_GrupluListeGetResponse> => {
@@ -52540,7 +52541,7 @@ export const getPerGirisCikisOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerGirisCikis/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/PerGirisCikis/${id}/OnayDurumu`
 }
 
 export const PerGirisCikis_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<PerGirisCikis_OnayDurumuGetResponse> => {
@@ -52602,7 +52603,7 @@ export const getPerGirisCikisDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerGirisCikis/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerGirisCikis/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerGirisCikis/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/PerGirisCikis/${id}/DegisiklikGecmisi`
 }
 
 export const PerGirisCikis_DegisiklikGecmisiGet = async (id: number,
@@ -52665,7 +52666,7 @@ export const getPerGirisCikisBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerGirisCikis/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerGirisCikis/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerGirisCikis/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/PerGirisCikis/${id}/Belgeler`
 }
 
 export const PerGirisCikis_BelgelerGet = async (id: number,
@@ -52728,7 +52729,7 @@ export const getPerGirisCikisBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerGirisCikis/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerGirisCikis/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerGirisCikis/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/PerGirisCikis/${id}/BelgeEkle`
 }
 
 export const PerGirisCikis_BelgeEklePost = async (id: number,
@@ -52792,7 +52793,7 @@ export const getPerGirisCikisBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerGirisCikis/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerGirisCikis/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerGirisCikis/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/PerGirisCikis/${id}/BelgeSil/${belgeID}`
 }
 
 export const PerGirisCikis_BelgeSilDelete = async (id: number,
@@ -52856,7 +52857,7 @@ export const getPerGirisCikisNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerGirisCikis/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerGirisCikis/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerGirisCikis/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/PerGirisCikis/${id}/Notlar`
 }
 
 export const PerGirisCikis_NotlarGet = async (id: number,
@@ -52911,7 +52912,7 @@ export const getPerGirisCikisNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerGirisCikis/${id}/NotEkle`
+  return `${getBaseUrl()}/api/PerGirisCikis/${id}/NotEkle`
 }
 
 export const PerGirisCikis_NotEklePost = async (id: number,
@@ -52968,7 +52969,7 @@ export const getPerGirisCikisNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/PerGirisCikis/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/PerGirisCikis/${id}/NotSil/${notID}`
 }
 
 export const PerGirisCikis_NotSilDelete = async (id: number,
@@ -53023,7 +53024,7 @@ export const getPerMesaiHareketDetayGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/${id}`
+  return `${getBaseUrl()}/api/PerMesaiHareketDetay/${id}`
 }
 
 export const PerMesaiHareketDetay_GetGet = async (id: number, options?: RequestInit): Promise<PerMesaiHareketDetay_GetGetResponse> => {
@@ -53077,7 +53078,7 @@ export const getPerMesaiHareketDetayPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/${id}`
+  return `${getBaseUrl()}/api/PerMesaiHareketDetay/${id}`
 }
 
 export const PerMesaiHareketDetay_PutPut = async (id: number,
@@ -53133,7 +53134,7 @@ export const getPerMesaiHareketDetayDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/${id}`
+  return `${getBaseUrl()}/api/PerMesaiHareketDetay/${id}`
 }
 
 export const PerMesaiHareketDetay_DeleteDelete = async (id: number, options?: RequestInit): Promise<PerMesaiHareketDetay_DeleteDeleteResponse> => {
@@ -53194,7 +53195,7 @@ export const getPerMesaiHareketDetayListeGetGetUrl = (params?: PerMesaiHareketDe
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerMesaiHareketDetay?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerMesaiHareketDetay`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerMesaiHareketDetay?${stringifiedParams}` : `${getBaseUrl()}/api/PerMesaiHareketDetay`
 }
 
 export const PerMesaiHareketDetay_ListeGetGet = async (params?: PerMesaiHareketDetayListeGetGetParams, options?: RequestInit): Promise<PerMesaiHareketDetay_ListeGetGetResponse> => {
@@ -53248,7 +53249,7 @@ export const getPerMesaiHareketDetayPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerMesaiHareketDetay`
+  return `${getBaseUrl()}/api/PerMesaiHareketDetay`
 }
 
 export const PerMesaiHareketDetay_PostPost = async (aaroModullerPerMesaiHareketDetayKayitSadeKayitModelBody: AaroModullerPerMesaiHareketDetayKayitSadeKayitModelBody, options?: RequestInit): Promise<PerMesaiHareketDetay_PostPostResponse> => {
@@ -53310,7 +53311,7 @@ export const getPerMesaiHareketDetayOnaylaPostUrl = (params: PerMesaiHareketDeta
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerMesaiHareketDetay/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/PerMesaiHareketDetay/Onayla`
 }
 
 export const PerMesaiHareketDetay_OnaylaPost = async (params: PerMesaiHareketDetayOnaylaPostParams, options?: RequestInit): Promise<PerMesaiHareketDetay_OnaylaPostResponse> => {
@@ -53371,7 +53372,7 @@ export const getPerMesaiHareketDetayReddetPostUrl = (params: PerMesaiHareketDeta
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerMesaiHareketDetay/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/PerMesaiHareketDetay/Reddet`
 }
 
 export const PerMesaiHareketDetay_ReddetPost = async (params: PerMesaiHareketDetayReddetPostParams, options?: RequestInit): Promise<PerMesaiHareketDetay_ReddetPostResponse> => {
@@ -53432,7 +53433,7 @@ export const getPerMesaiHareketDetayListeEsnekGetUrl = (params?: PerMesaiHareket
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerMesaiHareketDetay/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/PerMesaiHareketDetay/Liste`
 }
 
 export const PerMesaiHareketDetay_ListeEsnekGet = async (params?: PerMesaiHareketDetayListeEsnekGetParams, options?: RequestInit): Promise<PerMesaiHareketDetay_ListeEsnekGetResponse> => {
@@ -53486,7 +53487,7 @@ export const getPerMesaiHareketDetayListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/Liste`
+  return `${getBaseUrl()}/api/PerMesaiHareketDetay/Liste`
 }
 
 export const PerMesaiHareketDetay_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<PerMesaiHareketDetay_ListePostPostResponse> => {
@@ -53548,7 +53549,7 @@ export const getPerMesaiHareketDetayGrupluListeGetUrl = (params: PerMesaiHareket
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerMesaiHareketDetay/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/PerMesaiHareketDetay/GrupluListe`
 }
 
 export const PerMesaiHareketDetay_GrupluListeGet = async (params: PerMesaiHareketDetayGrupluListeGetParams, options?: RequestInit): Promise<PerMesaiHareketDetay_GrupluListeGetResponse> => {
@@ -53602,7 +53603,7 @@ export const getPerMesaiHareketDetayOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/PerMesaiHareketDetay/${id}/OnayDurumu`
 }
 
 export const PerMesaiHareketDetay_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<PerMesaiHareketDetay_OnayDurumuGetResponse> => {
@@ -53664,7 +53665,7 @@ export const getPerMesaiHareketDetayDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerMesaiHareketDetay/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/PerMesaiHareketDetay/${id}/DegisiklikGecmisi`
 }
 
 export const PerMesaiHareketDetay_DegisiklikGecmisiGet = async (id: number,
@@ -53727,7 +53728,7 @@ export const getPerMesaiHareketDetayBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerMesaiHareketDetay/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/PerMesaiHareketDetay/${id}/Belgeler`
 }
 
 export const PerMesaiHareketDetay_BelgelerGet = async (id: number,
@@ -53790,7 +53791,7 @@ export const getPerMesaiHareketDetayBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerMesaiHareketDetay/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/PerMesaiHareketDetay/${id}/BelgeEkle`
 }
 
 export const PerMesaiHareketDetay_BelgeEklePost = async (id: number,
@@ -53854,7 +53855,7 @@ export const getPerMesaiHareketDetayBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerMesaiHareketDetay/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/PerMesaiHareketDetay/${id}/BelgeSil/${belgeID}`
 }
 
 export const PerMesaiHareketDetay_BelgeSilDelete = async (id: number,
@@ -53918,7 +53919,7 @@ export const getPerMesaiHareketDetayNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerMesaiHareketDetay/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/PerMesaiHareketDetay/${id}/Notlar`
 }
 
 export const PerMesaiHareketDetay_NotlarGet = async (id: number,
@@ -53973,7 +53974,7 @@ export const getPerMesaiHareketDetayNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/${id}/NotEkle`
+  return `${getBaseUrl()}/api/PerMesaiHareketDetay/${id}/NotEkle`
 }
 
 export const PerMesaiHareketDetay_NotEklePost = async (id: number,
@@ -54030,7 +54031,7 @@ export const getPerMesaiHareketDetayNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/PerMesaiHareketDetay/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/PerMesaiHareketDetay/${id}/NotSil/${notID}`
 }
 
 export const PerMesaiHareketDetay_NotSilDelete = async (id: number,
@@ -54085,7 +54086,7 @@ export const getPerMesaiHareketDetayCihazBulkCreatePostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/bulk-create`
+  return `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/bulk-create`
 }
 
 export const PerMesaiHareketDetayCihaz_BulkCreatePost = async (aaroModullerPerMesaiHareketDetayCihazKayitSadeKayitModel: AaroModullerPerMesaiHareketDetayCihazKayitSadeKayitModel[], options?: RequestInit): Promise<PerMesaiHareketDetayCihaz_BulkCreatePostResponse> => {
@@ -54140,7 +54141,7 @@ export const getPerMesaiHareketDetayCihazGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/${id}`
+  return `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/${id}`
 }
 
 export const PerMesaiHareketDetayCihaz_GetGet = async (id: number, options?: RequestInit): Promise<PerMesaiHareketDetayCihaz_GetGetResponse> => {
@@ -54194,7 +54195,7 @@ export const getPerMesaiHareketDetayCihazPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/${id}`
+  return `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/${id}`
 }
 
 export const PerMesaiHareketDetayCihaz_PutPut = async (id: number,
@@ -54250,7 +54251,7 @@ export const getPerMesaiHareketDetayCihazDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/${id}`
+  return `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/${id}`
 }
 
 export const PerMesaiHareketDetayCihaz_DeleteDelete = async (id: number, options?: RequestInit): Promise<PerMesaiHareketDetayCihaz_DeleteDeleteResponse> => {
@@ -54311,7 +54312,7 @@ export const getPerMesaiHareketDetayCihazListeGetGetUrl = (params?: PerMesaiHare
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz?${stringifiedParams}` : `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz`
 }
 
 export const PerMesaiHareketDetayCihaz_ListeGetGet = async (params?: PerMesaiHareketDetayCihazListeGetGetParams, options?: RequestInit): Promise<PerMesaiHareketDetayCihaz_ListeGetGetResponse> => {
@@ -54365,7 +54366,7 @@ export const getPerMesaiHareketDetayCihazPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz`
+  return `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz`
 }
 
 export const PerMesaiHareketDetayCihaz_PostPost = async (aaroModullerPerMesaiHareketDetayCihazKayitSadeKayitModelBody: AaroModullerPerMesaiHareketDetayCihazKayitSadeKayitModelBody, options?: RequestInit): Promise<PerMesaiHareketDetayCihaz_PostPostResponse> => {
@@ -54427,7 +54428,7 @@ export const getPerMesaiHareketDetayCihazOnaylaPostUrl = (params: PerMesaiHareke
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/Onayla`
 }
 
 export const PerMesaiHareketDetayCihaz_OnaylaPost = async (params: PerMesaiHareketDetayCihazOnaylaPostParams, options?: RequestInit): Promise<PerMesaiHareketDetayCihaz_OnaylaPostResponse> => {
@@ -54488,7 +54489,7 @@ export const getPerMesaiHareketDetayCihazReddetPostUrl = (params: PerMesaiHareke
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/Reddet`
 }
 
 export const PerMesaiHareketDetayCihaz_ReddetPost = async (params: PerMesaiHareketDetayCihazReddetPostParams, options?: RequestInit): Promise<PerMesaiHareketDetayCihaz_ReddetPostResponse> => {
@@ -54549,7 +54550,7 @@ export const getPerMesaiHareketDetayCihazListeEsnekGetUrl = (params?: PerMesaiHa
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/Liste`
 }
 
 export const PerMesaiHareketDetayCihaz_ListeEsnekGet = async (params?: PerMesaiHareketDetayCihazListeEsnekGetParams, options?: RequestInit): Promise<PerMesaiHareketDetayCihaz_ListeEsnekGetResponse> => {
@@ -54603,7 +54604,7 @@ export const getPerMesaiHareketDetayCihazListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/Liste`
+  return `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/Liste`
 }
 
 export const PerMesaiHareketDetayCihaz_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<PerMesaiHareketDetayCihaz_ListePostPostResponse> => {
@@ -54665,7 +54666,7 @@ export const getPerMesaiHareketDetayCihazGrupluListeGetUrl = (params: PerMesaiHa
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/GrupluListe`
 }
 
 export const PerMesaiHareketDetayCihaz_GrupluListeGet = async (params: PerMesaiHareketDetayCihazGrupluListeGetParams, options?: RequestInit): Promise<PerMesaiHareketDetayCihaz_GrupluListeGetResponse> => {
@@ -54719,7 +54720,7 @@ export const getPerMesaiHareketDetayCihazOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/${id}/OnayDurumu`
 }
 
 export const PerMesaiHareketDetayCihaz_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<PerMesaiHareketDetayCihaz_OnayDurumuGetResponse> => {
@@ -54781,7 +54782,7 @@ export const getPerMesaiHareketDetayCihazDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/${id}/DegisiklikGecmisi`
 }
 
 export const PerMesaiHareketDetayCihaz_DegisiklikGecmisiGet = async (id: number,
@@ -54844,7 +54845,7 @@ export const getPerMesaiHareketDetayCihazBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/${id}/Belgeler`
 }
 
 export const PerMesaiHareketDetayCihaz_BelgelerGet = async (id: number,
@@ -54907,7 +54908,7 @@ export const getPerMesaiHareketDetayCihazBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/${id}/BelgeEkle`
 }
 
 export const PerMesaiHareketDetayCihaz_BelgeEklePost = async (id: number,
@@ -54971,7 +54972,7 @@ export const getPerMesaiHareketDetayCihazBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/${id}/BelgeSil/${belgeID}`
 }
 
 export const PerMesaiHareketDetayCihaz_BelgeSilDelete = async (id: number,
@@ -55035,7 +55036,7 @@ export const getPerMesaiHareketDetayCihazNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/${id}/Notlar`
 }
 
 export const PerMesaiHareketDetayCihaz_NotlarGet = async (id: number,
@@ -55090,7 +55091,7 @@ export const getPerMesaiHareketDetayCihazNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/${id}/NotEkle`
+  return `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/${id}/NotEkle`
 }
 
 export const PerMesaiHareketDetayCihaz_NotEklePost = async (id: number,
@@ -55147,7 +55148,7 @@ export const getPerMesaiHareketDetayCihazNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/PerMesaiHareketDetayCihaz/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/PerMesaiHareketDetayCihaz/${id}/NotSil/${notID}`
 }
 
 export const PerMesaiHareketDetayCihaz_NotSilDelete = async (id: number,
@@ -55202,7 +55203,7 @@ export const getPerOnayBaslikGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerOnayBaslik/${id}`
+  return `${getBaseUrl()}/api/PerOnayBaslik/${id}`
 }
 
 export const PerOnayBaslik_GetGet = async (id: number, options?: RequestInit): Promise<PerOnayBaslik_GetGetResponse> => {
@@ -55256,7 +55257,7 @@ export const getPerOnayBaslikPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerOnayBaslik/${id}`
+  return `${getBaseUrl()}/api/PerOnayBaslik/${id}`
 }
 
 export const PerOnayBaslik_PutPut = async (id: number,
@@ -55312,7 +55313,7 @@ export const getPerOnayBaslikDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerOnayBaslik/${id}`
+  return `${getBaseUrl()}/api/PerOnayBaslik/${id}`
 }
 
 export const PerOnayBaslik_DeleteDelete = async (id: number, options?: RequestInit): Promise<PerOnayBaslik_DeleteDeleteResponse> => {
@@ -55373,7 +55374,7 @@ export const getPerOnayBaslikListeGetGetUrl = (params?: PerOnayBaslikListeGetGet
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerOnayBaslik?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerOnayBaslik`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerOnayBaslik?${stringifiedParams}` : `${getBaseUrl()}/api/PerOnayBaslik`
 }
 
 export const PerOnayBaslik_ListeGetGet = async (params?: PerOnayBaslikListeGetGetParams, options?: RequestInit): Promise<PerOnayBaslik_ListeGetGetResponse> => {
@@ -55427,7 +55428,7 @@ export const getPerOnayBaslikPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerOnayBaslik`
+  return `${getBaseUrl()}/api/PerOnayBaslik`
 }
 
 export const PerOnayBaslik_PostPost = async (aaroModullerPerOnayBaslikKayitSadeKayitModelBody: AaroModullerPerOnayBaslikKayitSadeKayitModelBody, options?: RequestInit): Promise<PerOnayBaslik_PostPostResponse> => {
@@ -55489,7 +55490,7 @@ export const getPerOnayBaslikOnaylaPostUrl = (params: PerOnayBaslikOnaylaPostPar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerOnayBaslik/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerOnayBaslik/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerOnayBaslik/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/PerOnayBaslik/Onayla`
 }
 
 export const PerOnayBaslik_OnaylaPost = async (params: PerOnayBaslikOnaylaPostParams, options?: RequestInit): Promise<PerOnayBaslik_OnaylaPostResponse> => {
@@ -55550,7 +55551,7 @@ export const getPerOnayBaslikReddetPostUrl = (params: PerOnayBaslikReddetPostPar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerOnayBaslik/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerOnayBaslik/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerOnayBaslik/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/PerOnayBaslik/Reddet`
 }
 
 export const PerOnayBaslik_ReddetPost = async (params: PerOnayBaslikReddetPostParams, options?: RequestInit): Promise<PerOnayBaslik_ReddetPostResponse> => {
@@ -55611,7 +55612,7 @@ export const getPerOnayBaslikListeEsnekGetUrl = (params?: PerOnayBaslikListeEsne
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerOnayBaslik/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerOnayBaslik/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerOnayBaslik/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/PerOnayBaslik/Liste`
 }
 
 export const PerOnayBaslik_ListeEsnekGet = async (params?: PerOnayBaslikListeEsnekGetParams, options?: RequestInit): Promise<PerOnayBaslik_ListeEsnekGetResponse> => {
@@ -55665,7 +55666,7 @@ export const getPerOnayBaslikListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerOnayBaslik/Liste`
+  return `${getBaseUrl()}/api/PerOnayBaslik/Liste`
 }
 
 export const PerOnayBaslik_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<PerOnayBaslik_ListePostPostResponse> => {
@@ -55727,7 +55728,7 @@ export const getPerOnayBaslikGrupluListeGetUrl = (params: PerOnayBaslikGrupluLis
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerOnayBaslik/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerOnayBaslik/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerOnayBaslik/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/PerOnayBaslik/GrupluListe`
 }
 
 export const PerOnayBaslik_GrupluListeGet = async (params: PerOnayBaslikGrupluListeGetParams, options?: RequestInit): Promise<PerOnayBaslik_GrupluListeGetResponse> => {
@@ -55781,7 +55782,7 @@ export const getPerOnayBaslikOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerOnayBaslik/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/PerOnayBaslik/${id}/OnayDurumu`
 }
 
 export const PerOnayBaslik_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<PerOnayBaslik_OnayDurumuGetResponse> => {
@@ -55843,7 +55844,7 @@ export const getPerOnayBaslikDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerOnayBaslik/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerOnayBaslik/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerOnayBaslik/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/PerOnayBaslik/${id}/DegisiklikGecmisi`
 }
 
 export const PerOnayBaslik_DegisiklikGecmisiGet = async (id: number,
@@ -55906,7 +55907,7 @@ export const getPerOnayBaslikBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerOnayBaslik/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerOnayBaslik/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerOnayBaslik/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/PerOnayBaslik/${id}/Belgeler`
 }
 
 export const PerOnayBaslik_BelgelerGet = async (id: number,
@@ -55969,7 +55970,7 @@ export const getPerOnayBaslikBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerOnayBaslik/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerOnayBaslik/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerOnayBaslik/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/PerOnayBaslik/${id}/BelgeEkle`
 }
 
 export const PerOnayBaslik_BelgeEklePost = async (id: number,
@@ -56033,7 +56034,7 @@ export const getPerOnayBaslikBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerOnayBaslik/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerOnayBaslik/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerOnayBaslik/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/PerOnayBaslik/${id}/BelgeSil/${belgeID}`
 }
 
 export const PerOnayBaslik_BelgeSilDelete = async (id: number,
@@ -56097,7 +56098,7 @@ export const getPerOnayBaslikNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerOnayBaslik/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerOnayBaslik/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerOnayBaslik/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/PerOnayBaslik/${id}/Notlar`
 }
 
 export const PerOnayBaslik_NotlarGet = async (id: number,
@@ -56152,7 +56153,7 @@ export const getPerOnayBaslikNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerOnayBaslik/${id}/NotEkle`
+  return `${getBaseUrl()}/api/PerOnayBaslik/${id}/NotEkle`
 }
 
 export const PerOnayBaslik_NotEklePost = async (id: number,
@@ -56209,7 +56210,7 @@ export const getPerOnayBaslikNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/PerOnayBaslik/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/PerOnayBaslik/${id}/NotSil/${notID}`
 }
 
 export const PerOnayBaslik_NotSilDelete = async (id: number,
@@ -56264,7 +56265,7 @@ export const getPerPuantajGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerPuantaj/${id}`
+  return `${getBaseUrl()}/api/PerPuantaj/${id}`
 }
 
 export const PerPuantaj_GetGet = async (id: number, options?: RequestInit): Promise<PerPuantaj_GetGetResponse> => {
@@ -56318,7 +56319,7 @@ export const getPerPuantajPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerPuantaj/${id}`
+  return `${getBaseUrl()}/api/PerPuantaj/${id}`
 }
 
 export const PerPuantaj_PutPut = async (id: number,
@@ -56374,7 +56375,7 @@ export const getPerPuantajDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerPuantaj/${id}`
+  return `${getBaseUrl()}/api/PerPuantaj/${id}`
 }
 
 export const PerPuantaj_DeleteDelete = async (id: number, options?: RequestInit): Promise<PerPuantaj_DeleteDeleteResponse> => {
@@ -56435,7 +56436,7 @@ export const getPerPuantajListeGetGetUrl = (params?: PerPuantajListeGetGetParams
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerPuantaj?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerPuantaj`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerPuantaj?${stringifiedParams}` : `${getBaseUrl()}/api/PerPuantaj`
 }
 
 export const PerPuantaj_ListeGetGet = async (params?: PerPuantajListeGetGetParams, options?: RequestInit): Promise<PerPuantaj_ListeGetGetResponse> => {
@@ -56489,7 +56490,7 @@ export const getPerPuantajPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerPuantaj`
+  return `${getBaseUrl()}/api/PerPuantaj`
 }
 
 export const PerPuantaj_PostPost = async (aaroModullerPerPuantajKayitSadeKayitModelBody: AaroModullerPerPuantajKayitSadeKayitModelBody, options?: RequestInit): Promise<PerPuantaj_PostPostResponse> => {
@@ -56551,7 +56552,7 @@ export const getPerPuantajOnaylaPostUrl = (params: PerPuantajOnaylaPostParams,) 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerPuantaj/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerPuantaj/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerPuantaj/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/PerPuantaj/Onayla`
 }
 
 export const PerPuantaj_OnaylaPost = async (params: PerPuantajOnaylaPostParams, options?: RequestInit): Promise<PerPuantaj_OnaylaPostResponse> => {
@@ -56612,7 +56613,7 @@ export const getPerPuantajReddetPostUrl = (params: PerPuantajReddetPostParams,) 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerPuantaj/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerPuantaj/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerPuantaj/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/PerPuantaj/Reddet`
 }
 
 export const PerPuantaj_ReddetPost = async (params: PerPuantajReddetPostParams, options?: RequestInit): Promise<PerPuantaj_ReddetPostResponse> => {
@@ -56673,7 +56674,7 @@ export const getPerPuantajListeEsnekGetUrl = (params?: PerPuantajListeEsnekGetPa
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerPuantaj/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerPuantaj/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerPuantaj/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/PerPuantaj/Liste`
 }
 
 export const PerPuantaj_ListeEsnekGet = async (params?: PerPuantajListeEsnekGetParams, options?: RequestInit): Promise<PerPuantaj_ListeEsnekGetResponse> => {
@@ -56727,7 +56728,7 @@ export const getPerPuantajListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerPuantaj/Liste`
+  return `${getBaseUrl()}/api/PerPuantaj/Liste`
 }
 
 export const PerPuantaj_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<PerPuantaj_ListePostPostResponse> => {
@@ -56789,7 +56790,7 @@ export const getPerPuantajGrupluListeGetUrl = (params: PerPuantajGrupluListeGetP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerPuantaj/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerPuantaj/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerPuantaj/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/PerPuantaj/GrupluListe`
 }
 
 export const PerPuantaj_GrupluListeGet = async (params: PerPuantajGrupluListeGetParams, options?: RequestInit): Promise<PerPuantaj_GrupluListeGetResponse> => {
@@ -56843,7 +56844,7 @@ export const getPerPuantajOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerPuantaj/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/PerPuantaj/${id}/OnayDurumu`
 }
 
 export const PerPuantaj_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<PerPuantaj_OnayDurumuGetResponse> => {
@@ -56905,7 +56906,7 @@ export const getPerPuantajDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerPuantaj/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerPuantaj/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerPuantaj/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/PerPuantaj/${id}/DegisiklikGecmisi`
 }
 
 export const PerPuantaj_DegisiklikGecmisiGet = async (id: number,
@@ -56968,7 +56969,7 @@ export const getPerPuantajBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerPuantaj/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerPuantaj/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerPuantaj/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/PerPuantaj/${id}/Belgeler`
 }
 
 export const PerPuantaj_BelgelerGet = async (id: number,
@@ -57031,7 +57032,7 @@ export const getPerPuantajBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerPuantaj/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerPuantaj/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerPuantaj/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/PerPuantaj/${id}/BelgeEkle`
 }
 
 export const PerPuantaj_BelgeEklePost = async (id: number,
@@ -57095,7 +57096,7 @@ export const getPerPuantajBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerPuantaj/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerPuantaj/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerPuantaj/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/PerPuantaj/${id}/BelgeSil/${belgeID}`
 }
 
 export const PerPuantaj_BelgeSilDelete = async (id: number,
@@ -57159,7 +57160,7 @@ export const getPerPuantajNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/PerPuantaj/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/PerPuantaj/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/PerPuantaj/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/PerPuantaj/${id}/Notlar`
 }
 
 export const PerPuantaj_NotlarGet = async (id: number,
@@ -57214,7 +57215,7 @@ export const getPerPuantajNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/PerPuantaj/${id}/NotEkle`
+  return `${getBaseUrl()}/api/PerPuantaj/${id}/NotEkle`
 }
 
 export const PerPuantaj_NotEklePost = async (id: number,
@@ -57271,7 +57272,7 @@ export const getPerPuantajNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/PerPuantaj/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/PerPuantaj/${id}/NotSil/${notID}`
 }
 
 export const PerPuantaj_NotSilDelete = async (id: number,
@@ -57326,7 +57327,7 @@ export const getPersonelGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Personel/${id}`
+  return `${getBaseUrl()}/api/Personel/${id}`
 }
 
 export const Personel_GetGet = async (id: number, options?: RequestInit): Promise<Personel_GetGetResponse> => {
@@ -57380,7 +57381,7 @@ export const getPersonelPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Personel/${id}`
+  return `${getBaseUrl()}/api/Personel/${id}`
 }
 
 export const Personel_PutPut = async (id: number,
@@ -57436,7 +57437,7 @@ export const getPersonelDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Personel/${id}`
+  return `${getBaseUrl()}/api/Personel/${id}`
 }
 
 export const Personel_DeleteDelete = async (id: number, options?: RequestInit): Promise<Personel_DeleteDeleteResponse> => {
@@ -57497,7 +57498,7 @@ export const getPersonelListeGetGetUrl = (params?: PersonelListeGetGetParams,) =
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Personel?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Personel`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Personel?${stringifiedParams}` : `${getBaseUrl()}/api/Personel`
 }
 
 export const Personel_ListeGetGet = async (params?: PersonelListeGetGetParams, options?: RequestInit): Promise<Personel_ListeGetGetResponse> => {
@@ -57551,7 +57552,7 @@ export const getPersonelPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Personel`
+  return `${getBaseUrl()}/api/Personel`
 }
 
 export const Personel_PostPost = async (aaroModullerPersonelKayitSadeKayitModelBody: AaroModullerPersonelKayitSadeKayitModelBody, options?: RequestInit): Promise<Personel_PostPostResponse> => {
@@ -57613,7 +57614,7 @@ export const getPersonelOnaylaPostUrl = (params: PersonelOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Personel/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Personel/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Personel/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Personel/Onayla`
 }
 
 export const Personel_OnaylaPost = async (params: PersonelOnaylaPostParams, options?: RequestInit): Promise<Personel_OnaylaPostResponse> => {
@@ -57674,7 +57675,7 @@ export const getPersonelReddetPostUrl = (params: PersonelReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Personel/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Personel/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Personel/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Personel/Reddet`
 }
 
 export const Personel_ReddetPost = async (params: PersonelReddetPostParams, options?: RequestInit): Promise<Personel_ReddetPostResponse> => {
@@ -57735,7 +57736,7 @@ export const getPersonelListeEsnekGetUrl = (params?: PersonelListeEsnekGetParams
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Personel/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Personel/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Personel/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Personel/Liste`
 }
 
 export const Personel_ListeEsnekGet = async (params?: PersonelListeEsnekGetParams, options?: RequestInit): Promise<Personel_ListeEsnekGetResponse> => {
@@ -57789,7 +57790,7 @@ export const getPersonelListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Personel/Liste`
+  return `${getBaseUrl()}/api/Personel/Liste`
 }
 
 export const Personel_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Personel_ListePostPostResponse> => {
@@ -57851,7 +57852,7 @@ export const getPersonelGrupluListeGetUrl = (params: PersonelGrupluListeGetParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Personel/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Personel/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Personel/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Personel/GrupluListe`
 }
 
 export const Personel_GrupluListeGet = async (params: PersonelGrupluListeGetParams, options?: RequestInit): Promise<Personel_GrupluListeGetResponse> => {
@@ -57905,7 +57906,7 @@ export const getPersonelOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Personel/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Personel/${id}/OnayDurumu`
 }
 
 export const Personel_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Personel_OnayDurumuGetResponse> => {
@@ -57967,7 +57968,7 @@ export const getPersonelDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Personel/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Personel/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Personel/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Personel/${id}/DegisiklikGecmisi`
 }
 
 export const Personel_DegisiklikGecmisiGet = async (id: number,
@@ -58030,7 +58031,7 @@ export const getPersonelBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Personel/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Personel/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Personel/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Personel/${id}/Belgeler`
 }
 
 export const Personel_BelgelerGet = async (id: number,
@@ -58093,7 +58094,7 @@ export const getPersonelBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Personel/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Personel/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Personel/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Personel/${id}/BelgeEkle`
 }
 
 export const Personel_BelgeEklePost = async (id: number,
@@ -58157,7 +58158,7 @@ export const getPersonelBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Personel/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Personel/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Personel/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Personel/${id}/BelgeSil/${belgeID}`
 }
 
 export const Personel_BelgeSilDelete = async (id: number,
@@ -58221,7 +58222,7 @@ export const getPersonelNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Personel/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Personel/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Personel/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Personel/${id}/Notlar`
 }
 
 export const Personel_NotlarGet = async (id: number,
@@ -58276,7 +58277,7 @@ export const getPersonelNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Personel/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Personel/${id}/NotEkle`
 }
 
 export const Personel_NotEklePost = async (id: number,
@@ -58333,7 +58334,7 @@ export const getPersonelNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Personel/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Personel/${id}/NotSil/${notID}`
 }
 
 export const Personel_NotSilDelete = async (id: number,
@@ -58388,7 +58389,7 @@ export const getPlasiyerGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Plasiyer/${id}`
+  return `${getBaseUrl()}/api/Plasiyer/${id}`
 }
 
 export const Plasiyer_GetGet = async (id: number, options?: RequestInit): Promise<Plasiyer_GetGetResponse> => {
@@ -58442,7 +58443,7 @@ export const getPlasiyerPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Plasiyer/${id}`
+  return `${getBaseUrl()}/api/Plasiyer/${id}`
 }
 
 export const Plasiyer_PutPut = async (id: number,
@@ -58498,7 +58499,7 @@ export const getPlasiyerDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Plasiyer/${id}`
+  return `${getBaseUrl()}/api/Plasiyer/${id}`
 }
 
 export const Plasiyer_DeleteDelete = async (id: number, options?: RequestInit): Promise<Plasiyer_DeleteDeleteResponse> => {
@@ -58559,7 +58560,7 @@ export const getPlasiyerListeGetGetUrl = (params?: PlasiyerListeGetGetParams,) =
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Plasiyer?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Plasiyer`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Plasiyer?${stringifiedParams}` : `${getBaseUrl()}/api/Plasiyer`
 }
 
 export const Plasiyer_ListeGetGet = async (params?: PlasiyerListeGetGetParams, options?: RequestInit): Promise<Plasiyer_ListeGetGetResponse> => {
@@ -58613,7 +58614,7 @@ export const getPlasiyerPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Plasiyer`
+  return `${getBaseUrl()}/api/Plasiyer`
 }
 
 export const Plasiyer_PostPost = async (aaroModullerPlasiyerKayitSadeKayitModelBody: AaroModullerPlasiyerKayitSadeKayitModelBody, options?: RequestInit): Promise<Plasiyer_PostPostResponse> => {
@@ -58675,7 +58676,7 @@ export const getPlasiyerOnaylaPostUrl = (params: PlasiyerOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Plasiyer/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Plasiyer/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Plasiyer/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Plasiyer/Onayla`
 }
 
 export const Plasiyer_OnaylaPost = async (params: PlasiyerOnaylaPostParams, options?: RequestInit): Promise<Plasiyer_OnaylaPostResponse> => {
@@ -58736,7 +58737,7 @@ export const getPlasiyerReddetPostUrl = (params: PlasiyerReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Plasiyer/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Plasiyer/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Plasiyer/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Plasiyer/Reddet`
 }
 
 export const Plasiyer_ReddetPost = async (params: PlasiyerReddetPostParams, options?: RequestInit): Promise<Plasiyer_ReddetPostResponse> => {
@@ -58797,7 +58798,7 @@ export const getPlasiyerListeEsnekGetUrl = (params?: PlasiyerListeEsnekGetParams
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Plasiyer/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Plasiyer/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Plasiyer/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Plasiyer/Liste`
 }
 
 export const Plasiyer_ListeEsnekGet = async (params?: PlasiyerListeEsnekGetParams, options?: RequestInit): Promise<Plasiyer_ListeEsnekGetResponse> => {
@@ -58851,7 +58852,7 @@ export const getPlasiyerListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Plasiyer/Liste`
+  return `${getBaseUrl()}/api/Plasiyer/Liste`
 }
 
 export const Plasiyer_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Plasiyer_ListePostPostResponse> => {
@@ -58913,7 +58914,7 @@ export const getPlasiyerGrupluListeGetUrl = (params: PlasiyerGrupluListeGetParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Plasiyer/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Plasiyer/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Plasiyer/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Plasiyer/GrupluListe`
 }
 
 export const Plasiyer_GrupluListeGet = async (params: PlasiyerGrupluListeGetParams, options?: RequestInit): Promise<Plasiyer_GrupluListeGetResponse> => {
@@ -58967,7 +58968,7 @@ export const getPlasiyerOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Plasiyer/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Plasiyer/${id}/OnayDurumu`
 }
 
 export const Plasiyer_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Plasiyer_OnayDurumuGetResponse> => {
@@ -59029,7 +59030,7 @@ export const getPlasiyerDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Plasiyer/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Plasiyer/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Plasiyer/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Plasiyer/${id}/DegisiklikGecmisi`
 }
 
 export const Plasiyer_DegisiklikGecmisiGet = async (id: number,
@@ -59092,7 +59093,7 @@ export const getPlasiyerBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Plasiyer/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Plasiyer/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Plasiyer/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Plasiyer/${id}/Belgeler`
 }
 
 export const Plasiyer_BelgelerGet = async (id: number,
@@ -59155,7 +59156,7 @@ export const getPlasiyerBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Plasiyer/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Plasiyer/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Plasiyer/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Plasiyer/${id}/BelgeEkle`
 }
 
 export const Plasiyer_BelgeEklePost = async (id: number,
@@ -59219,7 +59220,7 @@ export const getPlasiyerBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Plasiyer/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Plasiyer/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Plasiyer/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Plasiyer/${id}/BelgeSil/${belgeID}`
 }
 
 export const Plasiyer_BelgeSilDelete = async (id: number,
@@ -59283,7 +59284,7 @@ export const getPlasiyerNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Plasiyer/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Plasiyer/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Plasiyer/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Plasiyer/${id}/Notlar`
 }
 
 export const Plasiyer_NotlarGet = async (id: number,
@@ -59338,7 +59339,7 @@ export const getPlasiyerNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Plasiyer/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Plasiyer/${id}/NotEkle`
 }
 
 export const Plasiyer_NotEklePost = async (id: number,
@@ -59395,7 +59396,7 @@ export const getPlasiyerNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Plasiyer/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Plasiyer/${id}/NotSil/${notID}`
 }
 
 export const Plasiyer_NotSilDelete = async (id: number,
@@ -59450,7 +59451,7 @@ export const getProjeGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Proje/${id}`
+  return `${getBaseUrl()}/api/Proje/${id}`
 }
 
 export const Proje_GetGet = async (id: number, options?: RequestInit): Promise<Proje_GetGetResponse> => {
@@ -59504,7 +59505,7 @@ export const getProjePutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Proje/${id}`
+  return `${getBaseUrl()}/api/Proje/${id}`
 }
 
 export const Proje_PutPut = async (id: number,
@@ -59560,7 +59561,7 @@ export const getProjeDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Proje/${id}`
+  return `${getBaseUrl()}/api/Proje/${id}`
 }
 
 export const Proje_DeleteDelete = async (id: number, options?: RequestInit): Promise<Proje_DeleteDeleteResponse> => {
@@ -59621,7 +59622,7 @@ export const getProjeListeGetGetUrl = (params?: ProjeListeGetGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Proje?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Proje`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Proje?${stringifiedParams}` : `${getBaseUrl()}/api/Proje`
 }
 
 export const Proje_ListeGetGet = async (params?: ProjeListeGetGetParams, options?: RequestInit): Promise<Proje_ListeGetGetResponse> => {
@@ -59675,7 +59676,7 @@ export const getProjePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Proje`
+  return `${getBaseUrl()}/api/Proje`
 }
 
 export const Proje_PostPost = async (aaroModullerProjeKayitSadeKayitModelBody: AaroModullerProjeKayitSadeKayitModelBody, options?: RequestInit): Promise<Proje_PostPostResponse> => {
@@ -59737,7 +59738,7 @@ export const getProjeOnaylaPostUrl = (params: ProjeOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Proje/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Proje/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Proje/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Proje/Onayla`
 }
 
 export const Proje_OnaylaPost = async (params: ProjeOnaylaPostParams, options?: RequestInit): Promise<Proje_OnaylaPostResponse> => {
@@ -59798,7 +59799,7 @@ export const getProjeReddetPostUrl = (params: ProjeReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Proje/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Proje/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Proje/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Proje/Reddet`
 }
 
 export const Proje_ReddetPost = async (params: ProjeReddetPostParams, options?: RequestInit): Promise<Proje_ReddetPostResponse> => {
@@ -59859,7 +59860,7 @@ export const getProjeListeEsnekGetUrl = (params?: ProjeListeEsnekGetParams,) => 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Proje/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Proje/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Proje/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Proje/Liste`
 }
 
 export const Proje_ListeEsnekGet = async (params?: ProjeListeEsnekGetParams, options?: RequestInit): Promise<Proje_ListeEsnekGetResponse> => {
@@ -59913,7 +59914,7 @@ export const getProjeListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Proje/Liste`
+  return `${getBaseUrl()}/api/Proje/Liste`
 }
 
 export const Proje_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Proje_ListePostPostResponse> => {
@@ -59975,7 +59976,7 @@ export const getProjeGrupluListeGetUrl = (params: ProjeGrupluListeGetParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Proje/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Proje/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Proje/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Proje/GrupluListe`
 }
 
 export const Proje_GrupluListeGet = async (params: ProjeGrupluListeGetParams, options?: RequestInit): Promise<Proje_GrupluListeGetResponse> => {
@@ -60029,7 +60030,7 @@ export const getProjeOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Proje/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Proje/${id}/OnayDurumu`
 }
 
 export const Proje_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Proje_OnayDurumuGetResponse> => {
@@ -60091,7 +60092,7 @@ export const getProjeDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Proje/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Proje/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Proje/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Proje/${id}/DegisiklikGecmisi`
 }
 
 export const Proje_DegisiklikGecmisiGet = async (id: number,
@@ -60154,7 +60155,7 @@ export const getProjeBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Proje/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Proje/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Proje/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Proje/${id}/Belgeler`
 }
 
 export const Proje_BelgelerGet = async (id: number,
@@ -60217,7 +60218,7 @@ export const getProjeBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Proje/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Proje/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Proje/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Proje/${id}/BelgeEkle`
 }
 
 export const Proje_BelgeEklePost = async (id: number,
@@ -60281,7 +60282,7 @@ export const getProjeBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Proje/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Proje/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Proje/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Proje/${id}/BelgeSil/${belgeID}`
 }
 
 export const Proje_BelgeSilDelete = async (id: number,
@@ -60345,7 +60346,7 @@ export const getProjeNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Proje/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Proje/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Proje/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Proje/${id}/Notlar`
 }
 
 export const Proje_NotlarGet = async (id: number,
@@ -60400,7 +60401,7 @@ export const getProjeNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Proje/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Proje/${id}/NotEkle`
 }
 
 export const Proje_NotEklePost = async (id: number,
@@ -60457,7 +60458,7 @@ export const getProjeNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Proje/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Proje/${id}/NotSil/${notID}`
 }
 
 export const Proje_NotSilDelete = async (id: number,
@@ -60519,7 +60520,7 @@ export const getRehberSeceneklerPostUrl = (params: RehberSeceneklerPostParams,) 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Rehber/Secenekler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Rehber/Secenekler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Rehber/Secenekler?${stringifiedParams}` : `${getBaseUrl()}/api/Rehber/Secenekler`
 }
 
 export const Rehber_SeceneklerPost = async (rehberSeceneklerPostBody: number[],
@@ -60575,7 +60576,7 @@ export const getSablonGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sablon/${id}`
+  return `${getBaseUrl()}/api/Sablon/${id}`
 }
 
 export const Sablon_GetGet = async (id: number, options?: RequestInit): Promise<Sablon_GetGetResponse> => {
@@ -60629,7 +60630,7 @@ export const getSablonPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sablon/${id}`
+  return `${getBaseUrl()}/api/Sablon/${id}`
 }
 
 export const Sablon_PutPut = async (id: number,
@@ -60685,7 +60686,7 @@ export const getSablonDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sablon/${id}`
+  return `${getBaseUrl()}/api/Sablon/${id}`
 }
 
 export const Sablon_DeleteDelete = async (id: number, options?: RequestInit): Promise<Sablon_DeleteDeleteResponse> => {
@@ -60746,7 +60747,7 @@ export const getSablonListeGetGetUrl = (params?: SablonListeGetGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sablon?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sablon`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sablon?${stringifiedParams}` : `${getBaseUrl()}/api/Sablon`
 }
 
 export const Sablon_ListeGetGet = async (params?: SablonListeGetGetParams, options?: RequestInit): Promise<Sablon_ListeGetGetResponse> => {
@@ -60800,7 +60801,7 @@ export const getSablonPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sablon`
+  return `${getBaseUrl()}/api/Sablon`
 }
 
 export const Sablon_PostPost = async (aaroModullerSablonKayitSadeKayitModelBody: AaroModullerSablonKayitSadeKayitModelBody, options?: RequestInit): Promise<Sablon_PostPostResponse> => {
@@ -60862,7 +60863,7 @@ export const getSablonOnaylaPostUrl = (params: SablonOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sablon/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sablon/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sablon/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Sablon/Onayla`
 }
 
 export const Sablon_OnaylaPost = async (params: SablonOnaylaPostParams, options?: RequestInit): Promise<Sablon_OnaylaPostResponse> => {
@@ -60923,7 +60924,7 @@ export const getSablonReddetPostUrl = (params: SablonReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sablon/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sablon/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sablon/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Sablon/Reddet`
 }
 
 export const Sablon_ReddetPost = async (params: SablonReddetPostParams, options?: RequestInit): Promise<Sablon_ReddetPostResponse> => {
@@ -60984,7 +60985,7 @@ export const getSablonListeEsnekGetUrl = (params?: SablonListeEsnekGetParams,) =
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sablon/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sablon/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sablon/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Sablon/Liste`
 }
 
 export const Sablon_ListeEsnekGet = async (params?: SablonListeEsnekGetParams, options?: RequestInit): Promise<Sablon_ListeEsnekGetResponse> => {
@@ -61038,7 +61039,7 @@ export const getSablonListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sablon/Liste`
+  return `${getBaseUrl()}/api/Sablon/Liste`
 }
 
 export const Sablon_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Sablon_ListePostPostResponse> => {
@@ -61100,7 +61101,7 @@ export const getSablonGrupluListeGetUrl = (params: SablonGrupluListeGetParams,) 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sablon/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sablon/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sablon/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Sablon/GrupluListe`
 }
 
 export const Sablon_GrupluListeGet = async (params: SablonGrupluListeGetParams, options?: RequestInit): Promise<Sablon_GrupluListeGetResponse> => {
@@ -61154,7 +61155,7 @@ export const getSablonOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sablon/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Sablon/${id}/OnayDurumu`
 }
 
 export const Sablon_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Sablon_OnayDurumuGetResponse> => {
@@ -61216,7 +61217,7 @@ export const getSablonDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sablon/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sablon/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sablon/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Sablon/${id}/DegisiklikGecmisi`
 }
 
 export const Sablon_DegisiklikGecmisiGet = async (id: number,
@@ -61279,7 +61280,7 @@ export const getSablonBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sablon/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sablon/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sablon/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Sablon/${id}/Belgeler`
 }
 
 export const Sablon_BelgelerGet = async (id: number,
@@ -61342,7 +61343,7 @@ export const getSablonBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sablon/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sablon/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sablon/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Sablon/${id}/BelgeEkle`
 }
 
 export const Sablon_BelgeEklePost = async (id: number,
@@ -61406,7 +61407,7 @@ export const getSablonBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sablon/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sablon/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sablon/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Sablon/${id}/BelgeSil/${belgeID}`
 }
 
 export const Sablon_BelgeSilDelete = async (id: number,
@@ -61470,7 +61471,7 @@ export const getSablonNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sablon/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sablon/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sablon/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Sablon/${id}/Notlar`
 }
 
 export const Sablon_NotlarGet = async (id: number,
@@ -61525,7 +61526,7 @@ export const getSablonNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sablon/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Sablon/${id}/NotEkle`
 }
 
 export const Sablon_NotEklePost = async (id: number,
@@ -61582,7 +61583,7 @@ export const getSablonNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Sablon/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Sablon/${id}/NotSil/${notID}`
 }
 
 export const Sablon_NotSilDelete = async (id: number,
@@ -61644,7 +61645,7 @@ export const getSatinAlmaTalepHareketleriDetayliListeGetUrl = (params?: SatinAlm
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SatinAlmaTalepHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SatinAlmaTalepHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SatinAlmaTalepHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/SatinAlmaTalepHareketleri`
 }
 
 export const SatinAlmaTalepHareketleri_DetayliListeGet = async (params?: SatinAlmaTalepHareketleriDetayliListeGetParams, options?: RequestInit): Promise<SatinAlmaTalepHareketleri_DetayliListeGetResponse> => {
@@ -61705,7 +61706,7 @@ export const getSatinAlmaTalepListeDetayliListeGetUrl = (params?: SatinAlmaTalep
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SatinAlmaTalepListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SatinAlmaTalepListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SatinAlmaTalepListe?${stringifiedParams}` : `${getBaseUrl()}/api/SatinAlmaTalepListe`
 }
 
 export const SatinAlmaTalepListe_DetayliListeGet = async (params?: SatinAlmaTalepListeDetayliListeGetParams, options?: RequestInit): Promise<SatinAlmaTalepListe_DetayliListeGetResponse> => {
@@ -61766,7 +61767,7 @@ export const getSatisFaturasiHareketleriDetayliListeGetUrl = (params?: SatisFatu
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SatisFaturasiHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SatisFaturasiHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SatisFaturasiHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/SatisFaturasiHareketleri`
 }
 
 export const SatisFaturasiHareketleri_DetayliListeGet = async (params?: SatisFaturasiHareketleriDetayliListeGetParams, options?: RequestInit): Promise<SatisFaturasiHareketleri_DetayliListeGetResponse> => {
@@ -61827,7 +61828,7 @@ export const getSatisFaturasiListeDetayliListeGetUrl = (params?: SatisFaturasiLi
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SatisFaturasiListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SatisFaturasiListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SatisFaturasiListe?${stringifiedParams}` : `${getBaseUrl()}/api/SatisFaturasiListe`
 }
 
 export const SatisFaturasiListe_DetayliListeGet = async (params?: SatisFaturasiListeDetayliListeGetParams, options?: RequestInit): Promise<SatisFaturasiListe_DetayliListeGetResponse> => {
@@ -61888,7 +61889,7 @@ export const getSatisIadeFaturasiHareketleriDetayliListeGetUrl = (params?: Satis
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SatisIadeFaturasiHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SatisIadeFaturasiHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SatisIadeFaturasiHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/SatisIadeFaturasiHareketleri`
 }
 
 export const SatisIadeFaturasiHareketleri_DetayliListeGet = async (params?: SatisIadeFaturasiHareketleriDetayliListeGetParams, options?: RequestInit): Promise<SatisIadeFaturasiHareketleri_DetayliListeGetResponse> => {
@@ -61949,7 +61950,7 @@ export const getSatisIadeFaturasiListeDetayliListeGetUrl = (params?: SatisIadeFa
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SatisIadeFaturasiListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SatisIadeFaturasiListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SatisIadeFaturasiListe?${stringifiedParams}` : `${getBaseUrl()}/api/SatisIadeFaturasiListe`
 }
 
 export const SatisIadeFaturasiListe_DetayliListeGet = async (params?: SatisIadeFaturasiListeDetayliListeGetParams, options?: RequestInit): Promise<SatisIadeFaturasiListe_DetayliListeGetResponse> => {
@@ -62010,7 +62011,7 @@ export const getSatisIadeIrsaliyesiHareketleriDetayliListeGetUrl = (params?: Sat
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SatisIadeIrsaliyesiHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SatisIadeIrsaliyesiHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SatisIadeIrsaliyesiHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/SatisIadeIrsaliyesiHareketleri`
 }
 
 export const SatisIadeIrsaliyesiHareketleri_DetayliListeGet = async (params?: SatisIadeIrsaliyesiHareketleriDetayliListeGetParams, options?: RequestInit): Promise<SatisIadeIrsaliyesiHareketleri_DetayliListeGetResponse> => {
@@ -62071,7 +62072,7 @@ export const getSatisIadeIrsaliyesiListeDetayliListeGetUrl = (params?: SatisIade
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SatisIadeIrsaliyesiListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SatisIadeIrsaliyesiListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SatisIadeIrsaliyesiListe?${stringifiedParams}` : `${getBaseUrl()}/api/SatisIadeIrsaliyesiListe`
 }
 
 export const SatisIadeIrsaliyesiListe_DetayliListeGet = async (params?: SatisIadeIrsaliyesiListeDetayliListeGetParams, options?: RequestInit): Promise<SatisIadeIrsaliyesiListe_DetayliListeGetResponse> => {
@@ -62132,7 +62133,7 @@ export const getSatisIrsaliyesiHareketleriDetayliListeGetUrl = (params?: SatisIr
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SatisIrsaliyesiHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SatisIrsaliyesiHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SatisIrsaliyesiHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/SatisIrsaliyesiHareketleri`
 }
 
 export const SatisIrsaliyesiHareketleri_DetayliListeGet = async (params?: SatisIrsaliyesiHareketleriDetayliListeGetParams, options?: RequestInit): Promise<SatisIrsaliyesiHareketleri_DetayliListeGetResponse> => {
@@ -62193,7 +62194,7 @@ export const getSatisIrsaliyesiListeDetayliListeGetUrl = (params?: SatisIrsaliye
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SatisIrsaliyesiListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SatisIrsaliyesiListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SatisIrsaliyesiListe?${stringifiedParams}` : `${getBaseUrl()}/api/SatisIrsaliyesiListe`
 }
 
 export const SatisIrsaliyesiListe_DetayliListeGet = async (params?: SatisIrsaliyesiListeDetayliListeGetParams, options?: RequestInit): Promise<SatisIrsaliyesiListe_DetayliListeGetResponse> => {
@@ -62247,7 +62248,7 @@ export const getSeriLotSeriLotHizliKayitPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/SeriLot/SeriLotHizliKayit`
+  return `${getBaseUrl()}/api/SeriLot/SeriLotHizliKayit`
 }
 
 export const SeriLot_SeriLotHizliKayitPost = async (aaroModullerSeriLotKayitSadeSeriLotHizliKayitModel: AaroModullerSeriLotKayitSadeSeriLotHizliKayitModel, options?: RequestInit): Promise<SeriLot_SeriLotHizliKayitPostResponse> => {
@@ -62302,7 +62303,7 @@ export const getSeriLotGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/SeriLot/${id}`
+  return `${getBaseUrl()}/api/SeriLot/${id}`
 }
 
 export const SeriLot_GetGet = async (id: number, options?: RequestInit): Promise<SeriLot_GetGetResponse> => {
@@ -62356,7 +62357,7 @@ export const getSeriLotPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/SeriLot/${id}`
+  return `${getBaseUrl()}/api/SeriLot/${id}`
 }
 
 export const SeriLot_PutPut = async (id: number,
@@ -62412,7 +62413,7 @@ export const getSeriLotDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/SeriLot/${id}`
+  return `${getBaseUrl()}/api/SeriLot/${id}`
 }
 
 export const SeriLot_DeleteDelete = async (id: number, options?: RequestInit): Promise<SeriLot_DeleteDeleteResponse> => {
@@ -62473,7 +62474,7 @@ export const getSeriLotListeGetGetUrl = (params?: SeriLotListeGetGetParams,) => 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SeriLot?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SeriLot`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SeriLot?${stringifiedParams}` : `${getBaseUrl()}/api/SeriLot`
 }
 
 export const SeriLot_ListeGetGet = async (params?: SeriLotListeGetGetParams, options?: RequestInit): Promise<SeriLot_ListeGetGetResponse> => {
@@ -62527,7 +62528,7 @@ export const getSeriLotPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/SeriLot`
+  return `${getBaseUrl()}/api/SeriLot`
 }
 
 export const SeriLot_PostPost = async (aaroModullerSeriLotKayitSadeKayitModelBody: AaroModullerSeriLotKayitSadeKayitModelBody, options?: RequestInit): Promise<SeriLot_PostPostResponse> => {
@@ -62589,7 +62590,7 @@ export const getSeriLotOnaylaPostUrl = (params: SeriLotOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SeriLot/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SeriLot/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SeriLot/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/SeriLot/Onayla`
 }
 
 export const SeriLot_OnaylaPost = async (params: SeriLotOnaylaPostParams, options?: RequestInit): Promise<SeriLot_OnaylaPostResponse> => {
@@ -62650,7 +62651,7 @@ export const getSeriLotReddetPostUrl = (params: SeriLotReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SeriLot/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SeriLot/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SeriLot/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/SeriLot/Reddet`
 }
 
 export const SeriLot_ReddetPost = async (params: SeriLotReddetPostParams, options?: RequestInit): Promise<SeriLot_ReddetPostResponse> => {
@@ -62711,7 +62712,7 @@ export const getSeriLotListeEsnekGetUrl = (params?: SeriLotListeEsnekGetParams,)
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SeriLot/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SeriLot/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SeriLot/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/SeriLot/Liste`
 }
 
 export const SeriLot_ListeEsnekGet = async (params?: SeriLotListeEsnekGetParams, options?: RequestInit): Promise<SeriLot_ListeEsnekGetResponse> => {
@@ -62765,7 +62766,7 @@ export const getSeriLotListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/SeriLot/Liste`
+  return `${getBaseUrl()}/api/SeriLot/Liste`
 }
 
 export const SeriLot_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<SeriLot_ListePostPostResponse> => {
@@ -62827,7 +62828,7 @@ export const getSeriLotGrupluListeGetUrl = (params: SeriLotGrupluListeGetParams,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SeriLot/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SeriLot/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SeriLot/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/SeriLot/GrupluListe`
 }
 
 export const SeriLot_GrupluListeGet = async (params: SeriLotGrupluListeGetParams, options?: RequestInit): Promise<SeriLot_GrupluListeGetResponse> => {
@@ -62881,7 +62882,7 @@ export const getSeriLotOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/SeriLot/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/SeriLot/${id}/OnayDurumu`
 }
 
 export const SeriLot_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<SeriLot_OnayDurumuGetResponse> => {
@@ -62943,7 +62944,7 @@ export const getSeriLotDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SeriLot/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SeriLot/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SeriLot/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/SeriLot/${id}/DegisiklikGecmisi`
 }
 
 export const SeriLot_DegisiklikGecmisiGet = async (id: number,
@@ -63006,7 +63007,7 @@ export const getSeriLotBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SeriLot/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SeriLot/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SeriLot/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/SeriLot/${id}/Belgeler`
 }
 
 export const SeriLot_BelgelerGet = async (id: number,
@@ -63069,7 +63070,7 @@ export const getSeriLotBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SeriLot/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SeriLot/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SeriLot/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/SeriLot/${id}/BelgeEkle`
 }
 
 export const SeriLot_BelgeEklePost = async (id: number,
@@ -63133,7 +63134,7 @@ export const getSeriLotBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SeriLot/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SeriLot/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SeriLot/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/SeriLot/${id}/BelgeSil/${belgeID}`
 }
 
 export const SeriLot_BelgeSilDelete = async (id: number,
@@ -63197,7 +63198,7 @@ export const getSeriLotNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SeriLot/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SeriLot/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SeriLot/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/SeriLot/${id}/Notlar`
 }
 
 export const SeriLot_NotlarGet = async (id: number,
@@ -63252,7 +63253,7 @@ export const getSeriLotNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/SeriLot/${id}/NotEkle`
+  return `${getBaseUrl()}/api/SeriLot/${id}/NotEkle`
 }
 
 export const SeriLot_NotEklePost = async (id: number,
@@ -63309,7 +63310,7 @@ export const getSeriLotNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/SeriLot/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/SeriLot/${id}/NotSil/${notID}`
 }
 
 export const SeriLot_NotSilDelete = async (id: number,
@@ -63364,7 +63365,7 @@ export const getSeriLotHareketleriGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/SeriLotHareketleri/${id}`
+  return `${getBaseUrl()}/api/SeriLotHareketleri/${id}`
 }
 
 export const SeriLotHareketleri_GetGet = async (id: number, options?: RequestInit): Promise<SeriLotHareketleri_GetGetResponse> => {
@@ -63418,7 +63419,7 @@ export const getSeriLotHareketleriPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/SeriLotHareketleri/${id}`
+  return `${getBaseUrl()}/api/SeriLotHareketleri/${id}`
 }
 
 export const SeriLotHareketleri_PutPut = async (id: number,
@@ -63474,7 +63475,7 @@ export const getSeriLotHareketleriDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/SeriLotHareketleri/${id}`
+  return `${getBaseUrl()}/api/SeriLotHareketleri/${id}`
 }
 
 export const SeriLotHareketleri_DeleteDelete = async (id: number, options?: RequestInit): Promise<SeriLotHareketleri_DeleteDeleteResponse> => {
@@ -63535,7 +63536,7 @@ export const getSeriLotHareketleriListeGetGetUrl = (params?: SeriLotHareketleriL
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SeriLotHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SeriLotHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SeriLotHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/SeriLotHareketleri`
 }
 
 export const SeriLotHareketleri_ListeGetGet = async (params?: SeriLotHareketleriListeGetGetParams, options?: RequestInit): Promise<SeriLotHareketleri_ListeGetGetResponse> => {
@@ -63589,7 +63590,7 @@ export const getSeriLotHareketleriPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/SeriLotHareketleri`
+  return `${getBaseUrl()}/api/SeriLotHareketleri`
 }
 
 export const SeriLotHareketleri_PostPost = async (aaroModullerSeriLotHareketleriKayitSadeKayitModelBody: AaroModullerSeriLotHareketleriKayitSadeKayitModelBody, options?: RequestInit): Promise<SeriLotHareketleri_PostPostResponse> => {
@@ -63651,7 +63652,7 @@ export const getSeriLotHareketleriOnaylaPostUrl = (params: SeriLotHareketleriOna
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SeriLotHareketleri/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SeriLotHareketleri/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SeriLotHareketleri/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/SeriLotHareketleri/Onayla`
 }
 
 export const SeriLotHareketleri_OnaylaPost = async (params: SeriLotHareketleriOnaylaPostParams, options?: RequestInit): Promise<SeriLotHareketleri_OnaylaPostResponse> => {
@@ -63712,7 +63713,7 @@ export const getSeriLotHareketleriReddetPostUrl = (params: SeriLotHareketleriRed
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SeriLotHareketleri/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SeriLotHareketleri/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SeriLotHareketleri/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/SeriLotHareketleri/Reddet`
 }
 
 export const SeriLotHareketleri_ReddetPost = async (params: SeriLotHareketleriReddetPostParams, options?: RequestInit): Promise<SeriLotHareketleri_ReddetPostResponse> => {
@@ -63773,7 +63774,7 @@ export const getSeriLotHareketleriListeEsnekGetUrl = (params?: SeriLotHareketler
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SeriLotHareketleri/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SeriLotHareketleri/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SeriLotHareketleri/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/SeriLotHareketleri/Liste`
 }
 
 export const SeriLotHareketleri_ListeEsnekGet = async (params?: SeriLotHareketleriListeEsnekGetParams, options?: RequestInit): Promise<SeriLotHareketleri_ListeEsnekGetResponse> => {
@@ -63827,7 +63828,7 @@ export const getSeriLotHareketleriListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/SeriLotHareketleri/Liste`
+  return `${getBaseUrl()}/api/SeriLotHareketleri/Liste`
 }
 
 export const SeriLotHareketleri_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<SeriLotHareketleri_ListePostPostResponse> => {
@@ -63889,7 +63890,7 @@ export const getSeriLotHareketleriGrupluListeGetUrl = (params: SeriLotHareketler
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SeriLotHareketleri/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SeriLotHareketleri/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SeriLotHareketleri/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/SeriLotHareketleri/GrupluListe`
 }
 
 export const SeriLotHareketleri_GrupluListeGet = async (params: SeriLotHareketleriGrupluListeGetParams, options?: RequestInit): Promise<SeriLotHareketleri_GrupluListeGetResponse> => {
@@ -63943,7 +63944,7 @@ export const getSeriLotHareketleriOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/SeriLotHareketleri/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/SeriLotHareketleri/${id}/OnayDurumu`
 }
 
 export const SeriLotHareketleri_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<SeriLotHareketleri_OnayDurumuGetResponse> => {
@@ -64005,7 +64006,7 @@ export const getSeriLotHareketleriDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SeriLotHareketleri/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SeriLotHareketleri/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SeriLotHareketleri/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/SeriLotHareketleri/${id}/DegisiklikGecmisi`
 }
 
 export const SeriLotHareketleri_DegisiklikGecmisiGet = async (id: number,
@@ -64068,7 +64069,7 @@ export const getSeriLotHareketleriBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SeriLotHareketleri/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SeriLotHareketleri/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SeriLotHareketleri/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/SeriLotHareketleri/${id}/Belgeler`
 }
 
 export const SeriLotHareketleri_BelgelerGet = async (id: number,
@@ -64131,7 +64132,7 @@ export const getSeriLotHareketleriBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SeriLotHareketleri/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SeriLotHareketleri/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SeriLotHareketleri/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/SeriLotHareketleri/${id}/BelgeEkle`
 }
 
 export const SeriLotHareketleri_BelgeEklePost = async (id: number,
@@ -64195,7 +64196,7 @@ export const getSeriLotHareketleriBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SeriLotHareketleri/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SeriLotHareketleri/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SeriLotHareketleri/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/SeriLotHareketleri/${id}/BelgeSil/${belgeID}`
 }
 
 export const SeriLotHareketleri_BelgeSilDelete = async (id: number,
@@ -64259,7 +64260,7 @@ export const getSeriLotHareketleriNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SeriLotHareketleri/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SeriLotHareketleri/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SeriLotHareketleri/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/SeriLotHareketleri/${id}/Notlar`
 }
 
 export const SeriLotHareketleri_NotlarGet = async (id: number,
@@ -64314,7 +64315,7 @@ export const getSeriLotHareketleriNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/SeriLotHareketleri/${id}/NotEkle`
+  return `${getBaseUrl()}/api/SeriLotHareketleri/${id}/NotEkle`
 }
 
 export const SeriLotHareketleri_NotEklePost = async (id: number,
@@ -64371,7 +64372,7 @@ export const getSeriLotHareketleriNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/SeriLotHareketleri/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/SeriLotHareketleri/${id}/NotSil/${notID}`
 }
 
 export const SeriLotHareketleri_NotSilDelete = async (id: number,
@@ -64433,7 +64434,7 @@ export const getSiparisListeDetayliListeGetUrl = (params?: SiparisListeDetayliLi
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SiparisListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SiparisListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SiparisListe?${stringifiedParams}` : `${getBaseUrl()}/api/SiparisListe`
 }
 
 export const SiparisListe_DetayliListeGet = async (params?: SiparisListeDetayliListeGetParams, options?: RequestInit): Promise<SiparisListe_DetayliListeGetResponse> => {
@@ -64494,7 +64495,7 @@ export const getSipCariHareketleriDetayliListeGetUrl = (params?: SipCariHareketl
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SipCariHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SipCariHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SipCariHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/SipCariHareketleri`
 }
 
 export const SipCariHareketleri_DetayliListeGet = async (params?: SipCariHareketleriDetayliListeGetParams, options?: RequestInit): Promise<SipCariHareketleri_DetayliListeGetResponse> => {
@@ -64555,7 +64556,7 @@ export const getSipStokHareketleriDetayliListeGetUrl = (params?: SipStokHareketl
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/SipStokHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/SipStokHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/SipStokHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/SipStokHareketleri`
 }
 
 export const SipStokHareketleri_DetayliListeGet = async (params?: SipStokHareketleriDetayliListeGetParams, options?: RequestInit): Promise<SipStokHareketleri_DetayliListeGetResponse> => {
@@ -64609,7 +64610,7 @@ export const getSirketlerGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sirketler/${id}`
+  return `${getBaseUrl()}/api/Sirketler/${id}`
 }
 
 export const Sirketler_GetGet = async (id: number, options?: RequestInit): Promise<Sirketler_GetGetResponse> => {
@@ -64663,7 +64664,7 @@ export const getSirketlerPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sirketler/${id}`
+  return `${getBaseUrl()}/api/Sirketler/${id}`
 }
 
 export const Sirketler_PutPut = async (id: number,
@@ -64719,7 +64720,7 @@ export const getSirketlerDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sirketler/${id}`
+  return `${getBaseUrl()}/api/Sirketler/${id}`
 }
 
 export const Sirketler_DeleteDelete = async (id: number, options?: RequestInit): Promise<Sirketler_DeleteDeleteResponse> => {
@@ -64780,7 +64781,7 @@ export const getSirketlerListeGetGetUrl = (params?: SirketlerListeGetGetParams,)
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sirketler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sirketler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sirketler?${stringifiedParams}` : `${getBaseUrl()}/api/Sirketler`
 }
 
 export const Sirketler_ListeGetGet = async (params?: SirketlerListeGetGetParams, options?: RequestInit): Promise<Sirketler_ListeGetGetResponse> => {
@@ -64834,7 +64835,7 @@ export const getSirketlerPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sirketler`
+  return `${getBaseUrl()}/api/Sirketler`
 }
 
 export const Sirketler_PostPost = async (aaroModullerSirketlerKayitSadeKayitModelBody: AaroModullerSirketlerKayitSadeKayitModelBody, options?: RequestInit): Promise<Sirketler_PostPostResponse> => {
@@ -64896,7 +64897,7 @@ export const getSirketlerOnaylaPostUrl = (params: SirketlerOnaylaPostParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sirketler/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sirketler/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sirketler/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Sirketler/Onayla`
 }
 
 export const Sirketler_OnaylaPost = async (params: SirketlerOnaylaPostParams, options?: RequestInit): Promise<Sirketler_OnaylaPostResponse> => {
@@ -64957,7 +64958,7 @@ export const getSirketlerReddetPostUrl = (params: SirketlerReddetPostParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sirketler/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sirketler/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sirketler/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Sirketler/Reddet`
 }
 
 export const Sirketler_ReddetPost = async (params: SirketlerReddetPostParams, options?: RequestInit): Promise<Sirketler_ReddetPostResponse> => {
@@ -65018,7 +65019,7 @@ export const getSirketlerListeEsnekGetUrl = (params?: SirketlerListeEsnekGetPara
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sirketler/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sirketler/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sirketler/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Sirketler/Liste`
 }
 
 export const Sirketler_ListeEsnekGet = async (params?: SirketlerListeEsnekGetParams, options?: RequestInit): Promise<Sirketler_ListeEsnekGetResponse> => {
@@ -65072,7 +65073,7 @@ export const getSirketlerListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sirketler/Liste`
+  return `${getBaseUrl()}/api/Sirketler/Liste`
 }
 
 export const Sirketler_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Sirketler_ListePostPostResponse> => {
@@ -65134,7 +65135,7 @@ export const getSirketlerGrupluListeGetUrl = (params: SirketlerGrupluListeGetPar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sirketler/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sirketler/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sirketler/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Sirketler/GrupluListe`
 }
 
 export const Sirketler_GrupluListeGet = async (params: SirketlerGrupluListeGetParams, options?: RequestInit): Promise<Sirketler_GrupluListeGetResponse> => {
@@ -65188,7 +65189,7 @@ export const getSirketlerOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sirketler/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Sirketler/${id}/OnayDurumu`
 }
 
 export const Sirketler_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Sirketler_OnayDurumuGetResponse> => {
@@ -65250,7 +65251,7 @@ export const getSirketlerDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sirketler/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sirketler/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sirketler/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Sirketler/${id}/DegisiklikGecmisi`
 }
 
 export const Sirketler_DegisiklikGecmisiGet = async (id: number,
@@ -65313,7 +65314,7 @@ export const getSirketlerBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sirketler/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sirketler/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sirketler/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Sirketler/${id}/Belgeler`
 }
 
 export const Sirketler_BelgelerGet = async (id: number,
@@ -65376,7 +65377,7 @@ export const getSirketlerBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sirketler/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sirketler/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sirketler/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Sirketler/${id}/BelgeEkle`
 }
 
 export const Sirketler_BelgeEklePost = async (id: number,
@@ -65440,7 +65441,7 @@ export const getSirketlerBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sirketler/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sirketler/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sirketler/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Sirketler/${id}/BelgeSil/${belgeID}`
 }
 
 export const Sirketler_BelgeSilDelete = async (id: number,
@@ -65504,7 +65505,7 @@ export const getSirketlerNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sirketler/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sirketler/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sirketler/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Sirketler/${id}/Notlar`
 }
 
 export const Sirketler_NotlarGet = async (id: number,
@@ -65559,7 +65560,7 @@ export const getSirketlerNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sirketler/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Sirketler/${id}/NotEkle`
 }
 
 export const Sirketler_NotEklePost = async (id: number,
@@ -65616,7 +65617,7 @@ export const getSirketlerNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Sirketler/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Sirketler/${id}/NotSil/${notID}`
 }
 
 export const Sirketler_NotSilDelete = async (id: number,
@@ -65671,7 +65672,7 @@ export const getSozlesmeGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sozlesme/${id}`
+  return `${getBaseUrl()}/api/Sozlesme/${id}`
 }
 
 export const Sozlesme_GetGet = async (id: number, options?: RequestInit): Promise<Sozlesme_GetGetResponse> => {
@@ -65725,7 +65726,7 @@ export const getSozlesmePutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sozlesme/${id}`
+  return `${getBaseUrl()}/api/Sozlesme/${id}`
 }
 
 export const Sozlesme_PutPut = async (id: number,
@@ -65781,7 +65782,7 @@ export const getSozlesmeDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sozlesme/${id}`
+  return `${getBaseUrl()}/api/Sozlesme/${id}`
 }
 
 export const Sozlesme_DeleteDelete = async (id: number, options?: RequestInit): Promise<Sozlesme_DeleteDeleteResponse> => {
@@ -65842,7 +65843,7 @@ export const getSozlesmeListeGetGetUrl = (params?: SozlesmeListeGetGetParams,) =
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sozlesme?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sozlesme`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sozlesme?${stringifiedParams}` : `${getBaseUrl()}/api/Sozlesme`
 }
 
 export const Sozlesme_ListeGetGet = async (params?: SozlesmeListeGetGetParams, options?: RequestInit): Promise<Sozlesme_ListeGetGetResponse> => {
@@ -65896,7 +65897,7 @@ export const getSozlesmePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sozlesme`
+  return `${getBaseUrl()}/api/Sozlesme`
 }
 
 export const Sozlesme_PostPost = async (aaroModullerSozlesmeKayitSadeKayitModelBody: AaroModullerSozlesmeKayitSadeKayitModelBody, options?: RequestInit): Promise<Sozlesme_PostPostResponse> => {
@@ -65958,7 +65959,7 @@ export const getSozlesmeOnaylaPostUrl = (params: SozlesmeOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sozlesme/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sozlesme/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sozlesme/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Sozlesme/Onayla`
 }
 
 export const Sozlesme_OnaylaPost = async (params: SozlesmeOnaylaPostParams, options?: RequestInit): Promise<Sozlesme_OnaylaPostResponse> => {
@@ -66019,7 +66020,7 @@ export const getSozlesmeReddetPostUrl = (params: SozlesmeReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sozlesme/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sozlesme/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sozlesme/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Sozlesme/Reddet`
 }
 
 export const Sozlesme_ReddetPost = async (params: SozlesmeReddetPostParams, options?: RequestInit): Promise<Sozlesme_ReddetPostResponse> => {
@@ -66080,7 +66081,7 @@ export const getSozlesmeListeEsnekGetUrl = (params?: SozlesmeListeEsnekGetParams
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sozlesme/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sozlesme/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sozlesme/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Sozlesme/Liste`
 }
 
 export const Sozlesme_ListeEsnekGet = async (params?: SozlesmeListeEsnekGetParams, options?: RequestInit): Promise<Sozlesme_ListeEsnekGetResponse> => {
@@ -66134,7 +66135,7 @@ export const getSozlesmeListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sozlesme/Liste`
+  return `${getBaseUrl()}/api/Sozlesme/Liste`
 }
 
 export const Sozlesme_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Sozlesme_ListePostPostResponse> => {
@@ -66196,7 +66197,7 @@ export const getSozlesmeGrupluListeGetUrl = (params: SozlesmeGrupluListeGetParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sozlesme/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sozlesme/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sozlesme/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Sozlesme/GrupluListe`
 }
 
 export const Sozlesme_GrupluListeGet = async (params: SozlesmeGrupluListeGetParams, options?: RequestInit): Promise<Sozlesme_GrupluListeGetResponse> => {
@@ -66250,7 +66251,7 @@ export const getSozlesmeOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sozlesme/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Sozlesme/${id}/OnayDurumu`
 }
 
 export const Sozlesme_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Sozlesme_OnayDurumuGetResponse> => {
@@ -66312,7 +66313,7 @@ export const getSozlesmeDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sozlesme/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sozlesme/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sozlesme/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Sozlesme/${id}/DegisiklikGecmisi`
 }
 
 export const Sozlesme_DegisiklikGecmisiGet = async (id: number,
@@ -66375,7 +66376,7 @@ export const getSozlesmeBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sozlesme/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sozlesme/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sozlesme/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Sozlesme/${id}/Belgeler`
 }
 
 export const Sozlesme_BelgelerGet = async (id: number,
@@ -66438,7 +66439,7 @@ export const getSozlesmeBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sozlesme/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sozlesme/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sozlesme/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Sozlesme/${id}/BelgeEkle`
 }
 
 export const Sozlesme_BelgeEklePost = async (id: number,
@@ -66502,7 +66503,7 @@ export const getSozlesmeBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sozlesme/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sozlesme/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sozlesme/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Sozlesme/${id}/BelgeSil/${belgeID}`
 }
 
 export const Sozlesme_BelgeSilDelete = async (id: number,
@@ -66566,7 +66567,7 @@ export const getSozlesmeNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Sozlesme/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Sozlesme/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Sozlesme/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Sozlesme/${id}/Notlar`
 }
 
 export const Sozlesme_NotlarGet = async (id: number,
@@ -66621,7 +66622,7 @@ export const getSozlesmeNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Sozlesme/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Sozlesme/${id}/NotEkle`
 }
 
 export const Sozlesme_NotEklePost = async (id: number,
@@ -66678,7 +66679,7 @@ export const getSozlesmeNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Sozlesme/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Sozlesme/${id}/NotSil/${notID}`
 }
 
 export const Sozlesme_NotSilDelete = async (id: number,
@@ -66740,7 +66741,7 @@ export const getStokMinListeGetUrl = (params?: StokMinListeGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Stok/MinListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Stok/MinListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Stok/MinListe?${stringifiedParams}` : `${getBaseUrl()}/api/Stok/MinListe`
 }
 
 export const Stok_MinListeGet = async (params?: StokMinListeGetParams, options?: RequestInit): Promise<Stok_MinListeGetResponse> => {
@@ -66801,7 +66802,7 @@ export const getStokStokMiktarListeGetUrl = (params?: StokStokMiktarListeGetPara
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Stok/StokMiktarListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Stok/StokMiktarListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Stok/StokMiktarListe?${stringifiedParams}` : `${getBaseUrl()}/api/Stok/StokMiktarListe`
 }
 
 export const Stok_StokMiktarListeGet = async (params?: StokStokMiktarListeGetParams, options?: RequestInit): Promise<Stok_StokMiktarListeGetResponse> => {
@@ -66855,7 +66856,7 @@ export const getStokDetayliPutPutUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Stok/Detayli`
+  return `${getBaseUrl()}/api/Stok/Detayli`
 }
 
 export const Stok_DetayliPutPut = async (aaroModullerStokKayitSadeDetayliKayitModelAPI: AaroModullerStokKayitSadeDetayliKayitModelAPI, options?: RequestInit): Promise<Stok_DetayliPutPutResponse> => {
@@ -66910,7 +66911,7 @@ export const getStokDetayliPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Stok/Detayli`
+  return `${getBaseUrl()}/api/Stok/Detayli`
 }
 
 export const Stok_DetayliPostPost = async (aaroModullerStokKayitSadeDetayliKayitModelAPI: AaroModullerStokKayitSadeDetayliKayitModelAPI, options?: RequestInit): Promise<Stok_DetayliPostPostResponse> => {
@@ -66965,7 +66966,7 @@ export const getStokDetayliGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Stok/Detayli/${id}`
+  return `${getBaseUrl()}/api/Stok/Detayli/${id}`
 }
 
 export const Stok_DetayliGetGet = async (id: number, options?: RequestInit): Promise<Stok_DetayliGetGetResponse> => {
@@ -67019,7 +67020,7 @@ export const getStokGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Stok/${id}`
+  return `${getBaseUrl()}/api/Stok/${id}`
 }
 
 export const Stok_GetGet = async (id: number, options?: RequestInit): Promise<Stok_GetGetResponse> => {
@@ -67073,7 +67074,7 @@ export const getStokPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Stok/${id}`
+  return `${getBaseUrl()}/api/Stok/${id}`
 }
 
 export const Stok_PutPut = async (id: number,
@@ -67129,7 +67130,7 @@ export const getStokDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Stok/${id}`
+  return `${getBaseUrl()}/api/Stok/${id}`
 }
 
 export const Stok_DeleteDelete = async (id: number, options?: RequestInit): Promise<Stok_DeleteDeleteResponse> => {
@@ -67190,7 +67191,7 @@ export const getStokListeGetGetUrl = (params?: StokListeGetGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Stok?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Stok`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Stok?${stringifiedParams}` : `${getBaseUrl()}/api/Stok`
 }
 
 export const Stok_ListeGetGet = async (params?: StokListeGetGetParams, options?: RequestInit): Promise<Stok_ListeGetGetResponse> => {
@@ -67244,7 +67245,7 @@ export const getStokPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Stok`
+  return `${getBaseUrl()}/api/Stok`
 }
 
 export const Stok_PostPost = async (aaroModullerStokKayitSadeKayitModelBody: AaroModullerStokKayitSadeKayitModelBody, options?: RequestInit): Promise<Stok_PostPostResponse> => {
@@ -67306,7 +67307,7 @@ export const getStokOnaylaPostUrl = (params: StokOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Stok/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Stok/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Stok/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Stok/Onayla`
 }
 
 export const Stok_OnaylaPost = async (params: StokOnaylaPostParams, options?: RequestInit): Promise<Stok_OnaylaPostResponse> => {
@@ -67367,7 +67368,7 @@ export const getStokReddetPostUrl = (params: StokReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Stok/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Stok/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Stok/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Stok/Reddet`
 }
 
 export const Stok_ReddetPost = async (params: StokReddetPostParams, options?: RequestInit): Promise<Stok_ReddetPostResponse> => {
@@ -67428,7 +67429,7 @@ export const getStokListeEsnekGetUrl = (params?: StokListeEsnekGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Stok/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Stok/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Stok/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Stok/Liste`
 }
 
 export const Stok_ListeEsnekGet = async (params?: StokListeEsnekGetParams, options?: RequestInit): Promise<Stok_ListeEsnekGetResponse> => {
@@ -67482,7 +67483,7 @@ export const getStokListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Stok/Liste`
+  return `${getBaseUrl()}/api/Stok/Liste`
 }
 
 export const Stok_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Stok_ListePostPostResponse> => {
@@ -67544,7 +67545,7 @@ export const getStokGrupluListeGetUrl = (params: StokGrupluListeGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Stok/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Stok/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Stok/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Stok/GrupluListe`
 }
 
 export const Stok_GrupluListeGet = async (params: StokGrupluListeGetParams, options?: RequestInit): Promise<Stok_GrupluListeGetResponse> => {
@@ -67598,7 +67599,7 @@ export const getStokOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Stok/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Stok/${id}/OnayDurumu`
 }
 
 export const Stok_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Stok_OnayDurumuGetResponse> => {
@@ -67660,7 +67661,7 @@ export const getStokDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Stok/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Stok/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Stok/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Stok/${id}/DegisiklikGecmisi`
 }
 
 export const Stok_DegisiklikGecmisiGet = async (id: number,
@@ -67723,7 +67724,7 @@ export const getStokBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Stok/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Stok/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Stok/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Stok/${id}/Belgeler`
 }
 
 export const Stok_BelgelerGet = async (id: number,
@@ -67786,7 +67787,7 @@ export const getStokBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Stok/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Stok/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Stok/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Stok/${id}/BelgeEkle`
 }
 
 export const Stok_BelgeEklePost = async (id: number,
@@ -67850,7 +67851,7 @@ export const getStokBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Stok/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Stok/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Stok/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Stok/${id}/BelgeSil/${belgeID}`
 }
 
 export const Stok_BelgeSilDelete = async (id: number,
@@ -67914,7 +67915,7 @@ export const getStokNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Stok/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Stok/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Stok/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Stok/${id}/Notlar`
 }
 
 export const Stok_NotlarGet = async (id: number,
@@ -67969,7 +67970,7 @@ export const getStokNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Stok/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Stok/${id}/NotEkle`
 }
 
 export const Stok_NotEklePost = async (id: number,
@@ -68026,7 +68027,7 @@ export const getStokNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Stok/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Stok/${id}/NotSil/${notID}`
 }
 
 export const Stok_NotSilDelete = async (id: number,
@@ -68081,7 +68082,7 @@ export const getStokBarkodGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokBarkod/${id}`
+  return `${getBaseUrl()}/api/StokBarkod/${id}`
 }
 
 export const StokBarkod_GetGet = async (id: number, options?: RequestInit): Promise<StokBarkod_GetGetResponse> => {
@@ -68135,7 +68136,7 @@ export const getStokBarkodPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokBarkod/${id}`
+  return `${getBaseUrl()}/api/StokBarkod/${id}`
 }
 
 export const StokBarkod_PutPut = async (id: number,
@@ -68191,7 +68192,7 @@ export const getStokBarkodDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokBarkod/${id}`
+  return `${getBaseUrl()}/api/StokBarkod/${id}`
 }
 
 export const StokBarkod_DeleteDelete = async (id: number, options?: RequestInit): Promise<StokBarkod_DeleteDeleteResponse> => {
@@ -68252,7 +68253,7 @@ export const getStokBarkodListeGetGetUrl = (params?: StokBarkodListeGetGetParams
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokBarkod?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokBarkod`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokBarkod?${stringifiedParams}` : `${getBaseUrl()}/api/StokBarkod`
 }
 
 export const StokBarkod_ListeGetGet = async (params?: StokBarkodListeGetGetParams, options?: RequestInit): Promise<StokBarkod_ListeGetGetResponse> => {
@@ -68306,7 +68307,7 @@ export const getStokBarkodPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokBarkod`
+  return `${getBaseUrl()}/api/StokBarkod`
 }
 
 export const StokBarkod_PostPost = async (aaroModullerStokBarkodKayitSadeKayitModelBody: AaroModullerStokBarkodKayitSadeKayitModelBody, options?: RequestInit): Promise<StokBarkod_PostPostResponse> => {
@@ -68368,7 +68369,7 @@ export const getStokBarkodOnaylaPostUrl = (params: StokBarkodOnaylaPostParams,) 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokBarkod/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokBarkod/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokBarkod/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/StokBarkod/Onayla`
 }
 
 export const StokBarkod_OnaylaPost = async (params: StokBarkodOnaylaPostParams, options?: RequestInit): Promise<StokBarkod_OnaylaPostResponse> => {
@@ -68429,7 +68430,7 @@ export const getStokBarkodReddetPostUrl = (params: StokBarkodReddetPostParams,) 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokBarkod/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokBarkod/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokBarkod/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/StokBarkod/Reddet`
 }
 
 export const StokBarkod_ReddetPost = async (params: StokBarkodReddetPostParams, options?: RequestInit): Promise<StokBarkod_ReddetPostResponse> => {
@@ -68490,7 +68491,7 @@ export const getStokBarkodListeEsnekGetUrl = (params?: StokBarkodListeEsnekGetPa
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokBarkod/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokBarkod/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokBarkod/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/StokBarkod/Liste`
 }
 
 export const StokBarkod_ListeEsnekGet = async (params?: StokBarkodListeEsnekGetParams, options?: RequestInit): Promise<StokBarkod_ListeEsnekGetResponse> => {
@@ -68544,7 +68545,7 @@ export const getStokBarkodListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokBarkod/Liste`
+  return `${getBaseUrl()}/api/StokBarkod/Liste`
 }
 
 export const StokBarkod_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<StokBarkod_ListePostPostResponse> => {
@@ -68606,7 +68607,7 @@ export const getStokBarkodGrupluListeGetUrl = (params: StokBarkodGrupluListeGetP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokBarkod/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokBarkod/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokBarkod/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/StokBarkod/GrupluListe`
 }
 
 export const StokBarkod_GrupluListeGet = async (params: StokBarkodGrupluListeGetParams, options?: RequestInit): Promise<StokBarkod_GrupluListeGetResponse> => {
@@ -68660,7 +68661,7 @@ export const getStokBarkodOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokBarkod/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/StokBarkod/${id}/OnayDurumu`
 }
 
 export const StokBarkod_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<StokBarkod_OnayDurumuGetResponse> => {
@@ -68722,7 +68723,7 @@ export const getStokBarkodDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokBarkod/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokBarkod/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokBarkod/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/StokBarkod/${id}/DegisiklikGecmisi`
 }
 
 export const StokBarkod_DegisiklikGecmisiGet = async (id: number,
@@ -68785,7 +68786,7 @@ export const getStokBarkodBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokBarkod/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokBarkod/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokBarkod/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/StokBarkod/${id}/Belgeler`
 }
 
 export const StokBarkod_BelgelerGet = async (id: number,
@@ -68848,7 +68849,7 @@ export const getStokBarkodBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokBarkod/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokBarkod/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokBarkod/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/StokBarkod/${id}/BelgeEkle`
 }
 
 export const StokBarkod_BelgeEklePost = async (id: number,
@@ -68912,7 +68913,7 @@ export const getStokBarkodBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokBarkod/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokBarkod/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokBarkod/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/StokBarkod/${id}/BelgeSil/${belgeID}`
 }
 
 export const StokBarkod_BelgeSilDelete = async (id: number,
@@ -68976,7 +68977,7 @@ export const getStokBarkodNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokBarkod/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokBarkod/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokBarkod/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/StokBarkod/${id}/Notlar`
 }
 
 export const StokBarkod_NotlarGet = async (id: number,
@@ -69031,7 +69032,7 @@ export const getStokBarkodNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokBarkod/${id}/NotEkle`
+  return `${getBaseUrl()}/api/StokBarkod/${id}/NotEkle`
 }
 
 export const StokBarkod_NotEklePost = async (id: number,
@@ -69088,7 +69089,7 @@ export const getStokBarkodNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/StokBarkod/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/StokBarkod/${id}/NotSil/${notID}`
 }
 
 export const StokBarkod_NotSilDelete = async (id: number,
@@ -69143,7 +69144,7 @@ export const getStokDepoMiktarGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokDepoMiktar/${id}`
+  return `${getBaseUrl()}/api/StokDepoMiktar/${id}`
 }
 
 export const StokDepoMiktar_GetGet = async (id: number, options?: RequestInit): Promise<StokDepoMiktar_GetGetResponse> => {
@@ -69197,7 +69198,7 @@ export const getStokDepoMiktarPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokDepoMiktar/${id}`
+  return `${getBaseUrl()}/api/StokDepoMiktar/${id}`
 }
 
 export const StokDepoMiktar_PutPut = async (id: number,
@@ -69253,7 +69254,7 @@ export const getStokDepoMiktarDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokDepoMiktar/${id}`
+  return `${getBaseUrl()}/api/StokDepoMiktar/${id}`
 }
 
 export const StokDepoMiktar_DeleteDelete = async (id: number, options?: RequestInit): Promise<StokDepoMiktar_DeleteDeleteResponse> => {
@@ -69314,7 +69315,7 @@ export const getStokDepoMiktarListeGetGetUrl = (params?: StokDepoMiktarListeGetG
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokDepoMiktar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokDepoMiktar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokDepoMiktar?${stringifiedParams}` : `${getBaseUrl()}/api/StokDepoMiktar`
 }
 
 export const StokDepoMiktar_ListeGetGet = async (params?: StokDepoMiktarListeGetGetParams, options?: RequestInit): Promise<StokDepoMiktar_ListeGetGetResponse> => {
@@ -69368,7 +69369,7 @@ export const getStokDepoMiktarPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokDepoMiktar`
+  return `${getBaseUrl()}/api/StokDepoMiktar`
 }
 
 export const StokDepoMiktar_PostPost = async (aaroModullerStokDepoMiktarKayitSadeKayitModelBody: AaroModullerStokDepoMiktarKayitSadeKayitModelBody, options?: RequestInit): Promise<StokDepoMiktar_PostPostResponse> => {
@@ -69430,7 +69431,7 @@ export const getStokDepoMiktarOnaylaPostUrl = (params: StokDepoMiktarOnaylaPostP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokDepoMiktar/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokDepoMiktar/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokDepoMiktar/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/StokDepoMiktar/Onayla`
 }
 
 export const StokDepoMiktar_OnaylaPost = async (params: StokDepoMiktarOnaylaPostParams, options?: RequestInit): Promise<StokDepoMiktar_OnaylaPostResponse> => {
@@ -69491,7 +69492,7 @@ export const getStokDepoMiktarReddetPostUrl = (params: StokDepoMiktarReddetPostP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokDepoMiktar/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokDepoMiktar/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokDepoMiktar/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/StokDepoMiktar/Reddet`
 }
 
 export const StokDepoMiktar_ReddetPost = async (params: StokDepoMiktarReddetPostParams, options?: RequestInit): Promise<StokDepoMiktar_ReddetPostResponse> => {
@@ -69552,7 +69553,7 @@ export const getStokDepoMiktarListeEsnekGetUrl = (params?: StokDepoMiktarListeEs
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokDepoMiktar/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokDepoMiktar/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokDepoMiktar/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/StokDepoMiktar/Liste`
 }
 
 export const StokDepoMiktar_ListeEsnekGet = async (params?: StokDepoMiktarListeEsnekGetParams, options?: RequestInit): Promise<StokDepoMiktar_ListeEsnekGetResponse> => {
@@ -69606,7 +69607,7 @@ export const getStokDepoMiktarListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokDepoMiktar/Liste`
+  return `${getBaseUrl()}/api/StokDepoMiktar/Liste`
 }
 
 export const StokDepoMiktar_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<StokDepoMiktar_ListePostPostResponse> => {
@@ -69668,7 +69669,7 @@ export const getStokDepoMiktarGrupluListeGetUrl = (params: StokDepoMiktarGrupluL
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokDepoMiktar/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokDepoMiktar/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokDepoMiktar/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/StokDepoMiktar/GrupluListe`
 }
 
 export const StokDepoMiktar_GrupluListeGet = async (params: StokDepoMiktarGrupluListeGetParams, options?: RequestInit): Promise<StokDepoMiktar_GrupluListeGetResponse> => {
@@ -69722,7 +69723,7 @@ export const getStokDepoMiktarOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokDepoMiktar/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/StokDepoMiktar/${id}/OnayDurumu`
 }
 
 export const StokDepoMiktar_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<StokDepoMiktar_OnayDurumuGetResponse> => {
@@ -69784,7 +69785,7 @@ export const getStokDepoMiktarDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokDepoMiktar/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokDepoMiktar/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokDepoMiktar/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/StokDepoMiktar/${id}/DegisiklikGecmisi`
 }
 
 export const StokDepoMiktar_DegisiklikGecmisiGet = async (id: number,
@@ -69847,7 +69848,7 @@ export const getStokDepoMiktarBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokDepoMiktar/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokDepoMiktar/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokDepoMiktar/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/StokDepoMiktar/${id}/Belgeler`
 }
 
 export const StokDepoMiktar_BelgelerGet = async (id: number,
@@ -69910,7 +69911,7 @@ export const getStokDepoMiktarBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokDepoMiktar/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokDepoMiktar/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokDepoMiktar/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/StokDepoMiktar/${id}/BelgeEkle`
 }
 
 export const StokDepoMiktar_BelgeEklePost = async (id: number,
@@ -69974,7 +69975,7 @@ export const getStokDepoMiktarBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokDepoMiktar/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokDepoMiktar/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokDepoMiktar/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/StokDepoMiktar/${id}/BelgeSil/${belgeID}`
 }
 
 export const StokDepoMiktar_BelgeSilDelete = async (id: number,
@@ -70038,7 +70039,7 @@ export const getStokDepoMiktarNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokDepoMiktar/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokDepoMiktar/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokDepoMiktar/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/StokDepoMiktar/${id}/Notlar`
 }
 
 export const StokDepoMiktar_NotlarGet = async (id: number,
@@ -70093,7 +70094,7 @@ export const getStokDepoMiktarNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokDepoMiktar/${id}/NotEkle`
+  return `${getBaseUrl()}/api/StokDepoMiktar/${id}/NotEkle`
 }
 
 export const StokDepoMiktar_NotEklePost = async (id: number,
@@ -70150,7 +70151,7 @@ export const getStokDepoMiktarNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/StokDepoMiktar/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/StokDepoMiktar/${id}/NotSil/${notID}`
 }
 
 export const StokDepoMiktar_NotSilDelete = async (id: number,
@@ -70212,7 +70213,7 @@ export const getStokGelirGiderDemirbasHareketleriDetayliListeGetUrl = (params?: 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokGelirGiderDemirbasHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokGelirGiderDemirbasHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokGelirGiderDemirbasHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/StokGelirGiderDemirbasHareketleri`
 }
 
 export const StokGelirGiderDemirbasHareketleri_DetayliListeGet = async (params?: StokGelirGiderDemirbasHareketleriDetayliListeGetParams, options?: RequestInit): Promise<StokGelirGiderDemirbasHareketleri_DetayliListeGetResponse> => {
@@ -70273,7 +70274,7 @@ export const getStokHareketleriDetayliListeGetUrl = (params?: StokHareketleriDet
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/StokHareketleri`
 }
 
 export const StokHareketleri_DetayliListeGet = async (params?: StokHareketleriDetayliListeGetParams, options?: RequestInit): Promise<StokHareketleri_DetayliListeGetResponse> => {
@@ -70334,7 +70335,7 @@ export const getStokHareketleriGrupluListeGetUrl = (params: StokHareketleriGrupl
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokHareketleri/Pivot?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokHareketleri/Pivot`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokHareketleri/Pivot?${stringifiedParams}` : `${getBaseUrl()}/api/StokHareketleri/Pivot`
 }
 
 export const StokHareketleri_GrupluListeGet = async (params: StokHareketleriGrupluListeGetParams, options?: RequestInit): Promise<StokHareketleri_GrupluListeGetResponse> => {
@@ -70388,7 +70389,7 @@ export const getStokOzetGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokOzet/${id}`
+  return `${getBaseUrl()}/api/StokOzet/${id}`
 }
 
 export const StokOzet_GetGet = async (id: number, options?: RequestInit): Promise<StokOzet_GetGetResponse> => {
@@ -70442,7 +70443,7 @@ export const getStokOzetPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokOzet/${id}`
+  return `${getBaseUrl()}/api/StokOzet/${id}`
 }
 
 export const StokOzet_PutPut = async (id: number,
@@ -70498,7 +70499,7 @@ export const getStokOzetDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokOzet/${id}`
+  return `${getBaseUrl()}/api/StokOzet/${id}`
 }
 
 export const StokOzet_DeleteDelete = async (id: number, options?: RequestInit): Promise<StokOzet_DeleteDeleteResponse> => {
@@ -70559,7 +70560,7 @@ export const getStokOzetListeGetGetUrl = (params?: StokOzetListeGetGetParams,) =
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokOzet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokOzet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokOzet?${stringifiedParams}` : `${getBaseUrl()}/api/StokOzet`
 }
 
 export const StokOzet_ListeGetGet = async (params?: StokOzetListeGetGetParams, options?: RequestInit): Promise<StokOzet_ListeGetGetResponse> => {
@@ -70613,7 +70614,7 @@ export const getStokOzetPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokOzet`
+  return `${getBaseUrl()}/api/StokOzet`
 }
 
 export const StokOzet_PostPost = async (aaroModullerStokOzetKayitSadeKayitModelBody: AaroModullerStokOzetKayitSadeKayitModelBody, options?: RequestInit): Promise<StokOzet_PostPostResponse> => {
@@ -70675,7 +70676,7 @@ export const getStokOzetOnaylaPostUrl = (params: StokOzetOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokOzet/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokOzet/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokOzet/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/StokOzet/Onayla`
 }
 
 export const StokOzet_OnaylaPost = async (params: StokOzetOnaylaPostParams, options?: RequestInit): Promise<StokOzet_OnaylaPostResponse> => {
@@ -70736,7 +70737,7 @@ export const getStokOzetReddetPostUrl = (params: StokOzetReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokOzet/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokOzet/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokOzet/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/StokOzet/Reddet`
 }
 
 export const StokOzet_ReddetPost = async (params: StokOzetReddetPostParams, options?: RequestInit): Promise<StokOzet_ReddetPostResponse> => {
@@ -70797,7 +70798,7 @@ export const getStokOzetListeEsnekGetUrl = (params?: StokOzetListeEsnekGetParams
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokOzet/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokOzet/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokOzet/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/StokOzet/Liste`
 }
 
 export const StokOzet_ListeEsnekGet = async (params?: StokOzetListeEsnekGetParams, options?: RequestInit): Promise<StokOzet_ListeEsnekGetResponse> => {
@@ -70851,7 +70852,7 @@ export const getStokOzetListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokOzet/Liste`
+  return `${getBaseUrl()}/api/StokOzet/Liste`
 }
 
 export const StokOzet_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<StokOzet_ListePostPostResponse> => {
@@ -70913,7 +70914,7 @@ export const getStokOzetGrupluListeGetUrl = (params: StokOzetGrupluListeGetParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokOzet/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokOzet/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokOzet/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/StokOzet/GrupluListe`
 }
 
 export const StokOzet_GrupluListeGet = async (params: StokOzetGrupluListeGetParams, options?: RequestInit): Promise<StokOzet_GrupluListeGetResponse> => {
@@ -70967,7 +70968,7 @@ export const getStokOzetOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokOzet/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/StokOzet/${id}/OnayDurumu`
 }
 
 export const StokOzet_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<StokOzet_OnayDurumuGetResponse> => {
@@ -71029,7 +71030,7 @@ export const getStokOzetDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokOzet/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokOzet/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokOzet/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/StokOzet/${id}/DegisiklikGecmisi`
 }
 
 export const StokOzet_DegisiklikGecmisiGet = async (id: number,
@@ -71092,7 +71093,7 @@ export const getStokOzetBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokOzet/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokOzet/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokOzet/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/StokOzet/${id}/Belgeler`
 }
 
 export const StokOzet_BelgelerGet = async (id: number,
@@ -71155,7 +71156,7 @@ export const getStokOzetBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokOzet/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokOzet/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokOzet/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/StokOzet/${id}/BelgeEkle`
 }
 
 export const StokOzet_BelgeEklePost = async (id: number,
@@ -71219,7 +71220,7 @@ export const getStokOzetBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokOzet/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokOzet/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokOzet/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/StokOzet/${id}/BelgeSil/${belgeID}`
 }
 
 export const StokOzet_BelgeSilDelete = async (id: number,
@@ -71283,7 +71284,7 @@ export const getStokOzetNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokOzet/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokOzet/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokOzet/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/StokOzet/${id}/Notlar`
 }
 
 export const StokOzet_NotlarGet = async (id: number,
@@ -71338,7 +71339,7 @@ export const getStokOzetNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokOzet/${id}/NotEkle`
+  return `${getBaseUrl()}/api/StokOzet/${id}/NotEkle`
 }
 
 export const StokOzet_NotEklePost = async (id: number,
@@ -71395,7 +71396,7 @@ export const getStokOzetNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/StokOzet/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/StokOzet/${id}/NotSil/${notID}`
 }
 
 export const StokOzet_NotSilDelete = async (id: number,
@@ -71450,7 +71451,7 @@ export const getStokRafGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokRaf/${id}`
+  return `${getBaseUrl()}/api/StokRaf/${id}`
 }
 
 export const StokRaf_GetGet = async (id: number, options?: RequestInit): Promise<StokRaf_GetGetResponse> => {
@@ -71504,7 +71505,7 @@ export const getStokRafPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokRaf/${id}`
+  return `${getBaseUrl()}/api/StokRaf/${id}`
 }
 
 export const StokRaf_PutPut = async (id: number,
@@ -71560,7 +71561,7 @@ export const getStokRafDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokRaf/${id}`
+  return `${getBaseUrl()}/api/StokRaf/${id}`
 }
 
 export const StokRaf_DeleteDelete = async (id: number, options?: RequestInit): Promise<StokRaf_DeleteDeleteResponse> => {
@@ -71621,7 +71622,7 @@ export const getStokRafListeGetGetUrl = (params?: StokRafListeGetGetParams,) => 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokRaf?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokRaf`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokRaf?${stringifiedParams}` : `${getBaseUrl()}/api/StokRaf`
 }
 
 export const StokRaf_ListeGetGet = async (params?: StokRafListeGetGetParams, options?: RequestInit): Promise<StokRaf_ListeGetGetResponse> => {
@@ -71675,7 +71676,7 @@ export const getStokRafPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokRaf`
+  return `${getBaseUrl()}/api/StokRaf`
 }
 
 export const StokRaf_PostPost = async (aaroModullerStokRafKayitSadeKayitModelBody: AaroModullerStokRafKayitSadeKayitModelBody, options?: RequestInit): Promise<StokRaf_PostPostResponse> => {
@@ -71737,7 +71738,7 @@ export const getStokRafOnaylaPostUrl = (params: StokRafOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokRaf/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokRaf/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokRaf/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/StokRaf/Onayla`
 }
 
 export const StokRaf_OnaylaPost = async (params: StokRafOnaylaPostParams, options?: RequestInit): Promise<StokRaf_OnaylaPostResponse> => {
@@ -71798,7 +71799,7 @@ export const getStokRafReddetPostUrl = (params: StokRafReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokRaf/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokRaf/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokRaf/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/StokRaf/Reddet`
 }
 
 export const StokRaf_ReddetPost = async (params: StokRafReddetPostParams, options?: RequestInit): Promise<StokRaf_ReddetPostResponse> => {
@@ -71859,7 +71860,7 @@ export const getStokRafListeEsnekGetUrl = (params?: StokRafListeEsnekGetParams,)
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokRaf/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokRaf/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokRaf/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/StokRaf/Liste`
 }
 
 export const StokRaf_ListeEsnekGet = async (params?: StokRafListeEsnekGetParams, options?: RequestInit): Promise<StokRaf_ListeEsnekGetResponse> => {
@@ -71913,7 +71914,7 @@ export const getStokRafListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokRaf/Liste`
+  return `${getBaseUrl()}/api/StokRaf/Liste`
 }
 
 export const StokRaf_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<StokRaf_ListePostPostResponse> => {
@@ -71975,7 +71976,7 @@ export const getStokRafGrupluListeGetUrl = (params: StokRafGrupluListeGetParams,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokRaf/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokRaf/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokRaf/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/StokRaf/GrupluListe`
 }
 
 export const StokRaf_GrupluListeGet = async (params: StokRafGrupluListeGetParams, options?: RequestInit): Promise<StokRaf_GrupluListeGetResponse> => {
@@ -72029,7 +72030,7 @@ export const getStokRafOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokRaf/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/StokRaf/${id}/OnayDurumu`
 }
 
 export const StokRaf_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<StokRaf_OnayDurumuGetResponse> => {
@@ -72091,7 +72092,7 @@ export const getStokRafDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokRaf/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokRaf/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokRaf/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/StokRaf/${id}/DegisiklikGecmisi`
 }
 
 export const StokRaf_DegisiklikGecmisiGet = async (id: number,
@@ -72154,7 +72155,7 @@ export const getStokRafBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokRaf/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokRaf/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokRaf/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/StokRaf/${id}/Belgeler`
 }
 
 export const StokRaf_BelgelerGet = async (id: number,
@@ -72217,7 +72218,7 @@ export const getStokRafBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokRaf/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokRaf/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokRaf/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/StokRaf/${id}/BelgeEkle`
 }
 
 export const StokRaf_BelgeEklePost = async (id: number,
@@ -72281,7 +72282,7 @@ export const getStokRafBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokRaf/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokRaf/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokRaf/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/StokRaf/${id}/BelgeSil/${belgeID}`
 }
 
 export const StokRaf_BelgeSilDelete = async (id: number,
@@ -72345,7 +72346,7 @@ export const getStokRafNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokRaf/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokRaf/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokRaf/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/StokRaf/${id}/Notlar`
 }
 
 export const StokRaf_NotlarGet = async (id: number,
@@ -72400,7 +72401,7 @@ export const getStokRafNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokRaf/${id}/NotEkle`
+  return `${getBaseUrl()}/api/StokRaf/${id}/NotEkle`
 }
 
 export const StokRaf_NotEklePost = async (id: number,
@@ -72457,7 +72458,7 @@ export const getStokRafNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/StokRaf/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/StokRaf/${id}/NotSil/${notID}`
 }
 
 export const StokRaf_NotSilDelete = async (id: number,
@@ -72512,7 +72513,7 @@ export const getStokSayimGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokSayim/${id}`
+  return `${getBaseUrl()}/api/StokSayim/${id}`
 }
 
 export const StokSayim_GetGet = async (id: number, options?: RequestInit): Promise<StokSayim_GetGetResponse> => {
@@ -72566,7 +72567,7 @@ export const getStokSayimPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokSayim/${id}`
+  return `${getBaseUrl()}/api/StokSayim/${id}`
 }
 
 export const StokSayim_PutPut = async (id: number,
@@ -72622,7 +72623,7 @@ export const getStokSayimDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokSayim/${id}`
+  return `${getBaseUrl()}/api/StokSayim/${id}`
 }
 
 export const StokSayim_DeleteDelete = async (id: number, options?: RequestInit): Promise<StokSayim_DeleteDeleteResponse> => {
@@ -72683,7 +72684,7 @@ export const getStokSayimListeGetGetUrl = (params?: StokSayimListeGetGetParams,)
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokSayim?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokSayim`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokSayim?${stringifiedParams}` : `${getBaseUrl()}/api/StokSayim`
 }
 
 export const StokSayim_ListeGetGet = async (params?: StokSayimListeGetGetParams, options?: RequestInit): Promise<StokSayim_ListeGetGetResponse> => {
@@ -72737,7 +72738,7 @@ export const getStokSayimPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokSayim`
+  return `${getBaseUrl()}/api/StokSayim`
 }
 
 export const StokSayim_PostPost = async (aaroModullerStokSayimKayitSadeKayitModelBody: AaroModullerStokSayimKayitSadeKayitModelBody, options?: RequestInit): Promise<StokSayim_PostPostResponse> => {
@@ -72799,7 +72800,7 @@ export const getStokSayimOnaylaPostUrl = (params: StokSayimOnaylaPostParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokSayim/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokSayim/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokSayim/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/StokSayim/Onayla`
 }
 
 export const StokSayim_OnaylaPost = async (params: StokSayimOnaylaPostParams, options?: RequestInit): Promise<StokSayim_OnaylaPostResponse> => {
@@ -72860,7 +72861,7 @@ export const getStokSayimReddetPostUrl = (params: StokSayimReddetPostParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokSayim/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokSayim/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokSayim/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/StokSayim/Reddet`
 }
 
 export const StokSayim_ReddetPost = async (params: StokSayimReddetPostParams, options?: RequestInit): Promise<StokSayim_ReddetPostResponse> => {
@@ -72921,7 +72922,7 @@ export const getStokSayimListeEsnekGetUrl = (params?: StokSayimListeEsnekGetPara
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokSayim/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokSayim/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokSayim/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/StokSayim/Liste`
 }
 
 export const StokSayim_ListeEsnekGet = async (params?: StokSayimListeEsnekGetParams, options?: RequestInit): Promise<StokSayim_ListeEsnekGetResponse> => {
@@ -72975,7 +72976,7 @@ export const getStokSayimListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokSayim/Liste`
+  return `${getBaseUrl()}/api/StokSayim/Liste`
 }
 
 export const StokSayim_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<StokSayim_ListePostPostResponse> => {
@@ -73037,7 +73038,7 @@ export const getStokSayimGrupluListeGetUrl = (params: StokSayimGrupluListeGetPar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokSayim/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokSayim/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokSayim/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/StokSayim/GrupluListe`
 }
 
 export const StokSayim_GrupluListeGet = async (params: StokSayimGrupluListeGetParams, options?: RequestInit): Promise<StokSayim_GrupluListeGetResponse> => {
@@ -73091,7 +73092,7 @@ export const getStokSayimOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokSayim/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/StokSayim/${id}/OnayDurumu`
 }
 
 export const StokSayim_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<StokSayim_OnayDurumuGetResponse> => {
@@ -73153,7 +73154,7 @@ export const getStokSayimDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokSayim/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokSayim/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokSayim/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/StokSayim/${id}/DegisiklikGecmisi`
 }
 
 export const StokSayim_DegisiklikGecmisiGet = async (id: number,
@@ -73216,7 +73217,7 @@ export const getStokSayimBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokSayim/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokSayim/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokSayim/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/StokSayim/${id}/Belgeler`
 }
 
 export const StokSayim_BelgelerGet = async (id: number,
@@ -73279,7 +73280,7 @@ export const getStokSayimBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokSayim/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokSayim/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokSayim/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/StokSayim/${id}/BelgeEkle`
 }
 
 export const StokSayim_BelgeEklePost = async (id: number,
@@ -73343,7 +73344,7 @@ export const getStokSayimBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokSayim/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokSayim/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokSayim/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/StokSayim/${id}/BelgeSil/${belgeID}`
 }
 
 export const StokSayim_BelgeSilDelete = async (id: number,
@@ -73407,7 +73408,7 @@ export const getStokSayimNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokSayim/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokSayim/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokSayim/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/StokSayim/${id}/Notlar`
 }
 
 export const StokSayim_NotlarGet = async (id: number,
@@ -73462,7 +73463,7 @@ export const getStokSayimNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokSayim/${id}/NotEkle`
+  return `${getBaseUrl()}/api/StokSayim/${id}/NotEkle`
 }
 
 export const StokSayim_NotEklePost = async (id: number,
@@ -73519,7 +73520,7 @@ export const getStokSayimNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/StokSayim/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/StokSayim/${id}/NotSil/${notID}`
 }
 
 export const StokSayim_NotSilDelete = async (id: number,
@@ -73574,7 +73575,7 @@ export const getStokSayimHareketleriGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokSayimHareketleri/${id}`
+  return `${getBaseUrl()}/api/StokSayimHareketleri/${id}`
 }
 
 export const StokSayimHareketleri_GetGet = async (id: number, options?: RequestInit): Promise<StokSayimHareketleri_GetGetResponse> => {
@@ -73628,7 +73629,7 @@ export const getStokSayimHareketleriPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokSayimHareketleri/${id}`
+  return `${getBaseUrl()}/api/StokSayimHareketleri/${id}`
 }
 
 export const StokSayimHareketleri_PutPut = async (id: number,
@@ -73684,7 +73685,7 @@ export const getStokSayimHareketleriDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokSayimHareketleri/${id}`
+  return `${getBaseUrl()}/api/StokSayimHareketleri/${id}`
 }
 
 export const StokSayimHareketleri_DeleteDelete = async (id: number, options?: RequestInit): Promise<StokSayimHareketleri_DeleteDeleteResponse> => {
@@ -73745,7 +73746,7 @@ export const getStokSayimHareketleriListeGetGetUrl = (params?: StokSayimHareketl
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokSayimHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokSayimHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokSayimHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/StokSayimHareketleri`
 }
 
 export const StokSayimHareketleri_ListeGetGet = async (params?: StokSayimHareketleriListeGetGetParams, options?: RequestInit): Promise<StokSayimHareketleri_ListeGetGetResponse> => {
@@ -73799,7 +73800,7 @@ export const getStokSayimHareketleriPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokSayimHareketleri`
+  return `${getBaseUrl()}/api/StokSayimHareketleri`
 }
 
 export const StokSayimHareketleri_PostPost = async (aaroModullerStokSayimHareketleriListeKayitModelBody: AaroModullerStokSayimHareketleriListeKayitModelBody, options?: RequestInit): Promise<StokSayimHareketleri_PostPostResponse> => {
@@ -73861,7 +73862,7 @@ export const getStokSayimHareketleriOnaylaPostUrl = (params: StokSayimHareketler
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokSayimHareketleri/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokSayimHareketleri/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokSayimHareketleri/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/StokSayimHareketleri/Onayla`
 }
 
 export const StokSayimHareketleri_OnaylaPost = async (params: StokSayimHareketleriOnaylaPostParams, options?: RequestInit): Promise<StokSayimHareketleri_OnaylaPostResponse> => {
@@ -73922,7 +73923,7 @@ export const getStokSayimHareketleriReddetPostUrl = (params: StokSayimHareketler
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokSayimHareketleri/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokSayimHareketleri/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokSayimHareketleri/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/StokSayimHareketleri/Reddet`
 }
 
 export const StokSayimHareketleri_ReddetPost = async (params: StokSayimHareketleriReddetPostParams, options?: RequestInit): Promise<StokSayimHareketleri_ReddetPostResponse> => {
@@ -73983,7 +73984,7 @@ export const getStokSayimHareketleriListeEsnekGetUrl = (params?: StokSayimHareke
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokSayimHareketleri/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokSayimHareketleri/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokSayimHareketleri/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/StokSayimHareketleri/Liste`
 }
 
 export const StokSayimHareketleri_ListeEsnekGet = async (params?: StokSayimHareketleriListeEsnekGetParams, options?: RequestInit): Promise<StokSayimHareketleri_ListeEsnekGetResponse> => {
@@ -74037,7 +74038,7 @@ export const getStokSayimHareketleriListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokSayimHareketleri/Liste`
+  return `${getBaseUrl()}/api/StokSayimHareketleri/Liste`
 }
 
 export const StokSayimHareketleri_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<StokSayimHareketleri_ListePostPostResponse> => {
@@ -74099,7 +74100,7 @@ export const getStokSayimHareketleriGrupluListeGetUrl = (params: StokSayimHareke
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokSayimHareketleri/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokSayimHareketleri/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokSayimHareketleri/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/StokSayimHareketleri/GrupluListe`
 }
 
 export const StokSayimHareketleri_GrupluListeGet = async (params: StokSayimHareketleriGrupluListeGetParams, options?: RequestInit): Promise<StokSayimHareketleri_GrupluListeGetResponse> => {
@@ -74153,7 +74154,7 @@ export const getStokSayimHareketleriOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokSayimHareketleri/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/StokSayimHareketleri/${id}/OnayDurumu`
 }
 
 export const StokSayimHareketleri_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<StokSayimHareketleri_OnayDurumuGetResponse> => {
@@ -74215,7 +74216,7 @@ export const getStokSayimHareketleriDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokSayimHareketleri/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokSayimHareketleri/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokSayimHareketleri/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/StokSayimHareketleri/${id}/DegisiklikGecmisi`
 }
 
 export const StokSayimHareketleri_DegisiklikGecmisiGet = async (id: number,
@@ -74278,7 +74279,7 @@ export const getStokSayimHareketleriBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokSayimHareketleri/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokSayimHareketleri/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokSayimHareketleri/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/StokSayimHareketleri/${id}/Belgeler`
 }
 
 export const StokSayimHareketleri_BelgelerGet = async (id: number,
@@ -74341,7 +74342,7 @@ export const getStokSayimHareketleriBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokSayimHareketleri/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokSayimHareketleri/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokSayimHareketleri/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/StokSayimHareketleri/${id}/BelgeEkle`
 }
 
 export const StokSayimHareketleri_BelgeEklePost = async (id: number,
@@ -74405,7 +74406,7 @@ export const getStokSayimHareketleriBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokSayimHareketleri/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokSayimHareketleri/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokSayimHareketleri/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/StokSayimHareketleri/${id}/BelgeSil/${belgeID}`
 }
 
 export const StokSayimHareketleri_BelgeSilDelete = async (id: number,
@@ -74469,7 +74470,7 @@ export const getStokSayimHareketleriNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokSayimHareketleri/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokSayimHareketleri/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokSayimHareketleri/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/StokSayimHareketleri/${id}/Notlar`
 }
 
 export const StokSayimHareketleri_NotlarGet = async (id: number,
@@ -74524,7 +74525,7 @@ export const getStokSayimHareketleriNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokSayimHareketleri/${id}/NotEkle`
+  return `${getBaseUrl()}/api/StokSayimHareketleri/${id}/NotEkle`
 }
 
 export const StokSayimHareketleri_NotEklePost = async (id: number,
@@ -74581,7 +74582,7 @@ export const getStokSayimHareketleriNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/StokSayimHareketleri/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/StokSayimHareketleri/${id}/NotSil/${notID}`
 }
 
 export const StokSayimHareketleri_NotSilDelete = async (id: number,
@@ -74636,7 +74637,7 @@ export const getStokVergiGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokVergi/${id}`
+  return `${getBaseUrl()}/api/StokVergi/${id}`
 }
 
 export const StokVergi_GetGet = async (id: number, options?: RequestInit): Promise<StokVergi_GetGetResponse> => {
@@ -74690,7 +74691,7 @@ export const getStokVergiPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokVergi/${id}`
+  return `${getBaseUrl()}/api/StokVergi/${id}`
 }
 
 export const StokVergi_PutPut = async (id: number,
@@ -74746,7 +74747,7 @@ export const getStokVergiDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokVergi/${id}`
+  return `${getBaseUrl()}/api/StokVergi/${id}`
 }
 
 export const StokVergi_DeleteDelete = async (id: number, options?: RequestInit): Promise<StokVergi_DeleteDeleteResponse> => {
@@ -74807,7 +74808,7 @@ export const getStokVergiListeGetGetUrl = (params?: StokVergiListeGetGetParams,)
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokVergi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokVergi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokVergi?${stringifiedParams}` : `${getBaseUrl()}/api/StokVergi`
 }
 
 export const StokVergi_ListeGetGet = async (params?: StokVergiListeGetGetParams, options?: RequestInit): Promise<StokVergi_ListeGetGetResponse> => {
@@ -74861,7 +74862,7 @@ export const getStokVergiPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokVergi`
+  return `${getBaseUrl()}/api/StokVergi`
 }
 
 export const StokVergi_PostPost = async (aaroModullerStokVergiKayitSadeKayitModelBody: AaroModullerStokVergiKayitSadeKayitModelBody, options?: RequestInit): Promise<StokVergi_PostPostResponse> => {
@@ -74923,7 +74924,7 @@ export const getStokVergiOnaylaPostUrl = (params: StokVergiOnaylaPostParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokVergi/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokVergi/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokVergi/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/StokVergi/Onayla`
 }
 
 export const StokVergi_OnaylaPost = async (params: StokVergiOnaylaPostParams, options?: RequestInit): Promise<StokVergi_OnaylaPostResponse> => {
@@ -74984,7 +74985,7 @@ export const getStokVergiReddetPostUrl = (params: StokVergiReddetPostParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokVergi/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokVergi/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokVergi/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/StokVergi/Reddet`
 }
 
 export const StokVergi_ReddetPost = async (params: StokVergiReddetPostParams, options?: RequestInit): Promise<StokVergi_ReddetPostResponse> => {
@@ -75045,7 +75046,7 @@ export const getStokVergiListeEsnekGetUrl = (params?: StokVergiListeEsnekGetPara
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokVergi/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokVergi/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokVergi/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/StokVergi/Liste`
 }
 
 export const StokVergi_ListeEsnekGet = async (params?: StokVergiListeEsnekGetParams, options?: RequestInit): Promise<StokVergi_ListeEsnekGetResponse> => {
@@ -75099,7 +75100,7 @@ export const getStokVergiListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokVergi/Liste`
+  return `${getBaseUrl()}/api/StokVergi/Liste`
 }
 
 export const StokVergi_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<StokVergi_ListePostPostResponse> => {
@@ -75161,7 +75162,7 @@ export const getStokVergiGrupluListeGetUrl = (params: StokVergiGrupluListeGetPar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokVergi/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokVergi/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokVergi/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/StokVergi/GrupluListe`
 }
 
 export const StokVergi_GrupluListeGet = async (params: StokVergiGrupluListeGetParams, options?: RequestInit): Promise<StokVergi_GrupluListeGetResponse> => {
@@ -75215,7 +75216,7 @@ export const getStokVergiOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokVergi/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/StokVergi/${id}/OnayDurumu`
 }
 
 export const StokVergi_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<StokVergi_OnayDurumuGetResponse> => {
@@ -75277,7 +75278,7 @@ export const getStokVergiDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokVergi/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokVergi/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokVergi/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/StokVergi/${id}/DegisiklikGecmisi`
 }
 
 export const StokVergi_DegisiklikGecmisiGet = async (id: number,
@@ -75340,7 +75341,7 @@ export const getStokVergiBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokVergi/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokVergi/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokVergi/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/StokVergi/${id}/Belgeler`
 }
 
 export const StokVergi_BelgelerGet = async (id: number,
@@ -75403,7 +75404,7 @@ export const getStokVergiBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokVergi/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokVergi/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokVergi/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/StokVergi/${id}/BelgeEkle`
 }
 
 export const StokVergi_BelgeEklePost = async (id: number,
@@ -75467,7 +75468,7 @@ export const getStokVergiBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokVergi/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokVergi/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokVergi/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/StokVergi/${id}/BelgeSil/${belgeID}`
 }
 
 export const StokVergi_BelgeSilDelete = async (id: number,
@@ -75531,7 +75532,7 @@ export const getStokVergiNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/StokVergi/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/StokVergi/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/StokVergi/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/StokVergi/${id}/Notlar`
 }
 
 export const StokVergi_NotlarGet = async (id: number,
@@ -75586,7 +75587,7 @@ export const getStokVergiNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/StokVergi/${id}/NotEkle`
+  return `${getBaseUrl()}/api/StokVergi/${id}/NotEkle`
 }
 
 export const StokVergi_NotEklePost = async (id: number,
@@ -75643,7 +75644,7 @@ export const getStokVergiNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/StokVergi/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/StokVergi/${id}/NotSil/${notID}`
 }
 
 export const StokVergi_NotSilDelete = async (id: number,
@@ -75698,7 +75699,7 @@ export const getSubelerGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Subeler/${id}`
+  return `${getBaseUrl()}/api/Subeler/${id}`
 }
 
 export const Subeler_GetGet = async (id: number, options?: RequestInit): Promise<Subeler_GetGetResponse> => {
@@ -75752,7 +75753,7 @@ export const getSubelerPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Subeler/${id}`
+  return `${getBaseUrl()}/api/Subeler/${id}`
 }
 
 export const Subeler_PutPut = async (id: number,
@@ -75808,7 +75809,7 @@ export const getSubelerDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Subeler/${id}`
+  return `${getBaseUrl()}/api/Subeler/${id}`
 }
 
 export const Subeler_DeleteDelete = async (id: number, options?: RequestInit): Promise<Subeler_DeleteDeleteResponse> => {
@@ -75869,7 +75870,7 @@ export const getSubelerDetayliListeGetUrl = (params?: SubelerDetayliListeGetPara
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Subeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Subeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Subeler?${stringifiedParams}` : `${getBaseUrl()}/api/Subeler`
 }
 
 export const Subeler_DetayliListeGet = async (params?: SubelerDetayliListeGetParams, options?: RequestInit): Promise<Subeler_DetayliListeGetResponse> => {
@@ -75923,7 +75924,7 @@ export const getSubelerPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Subeler`
+  return `${getBaseUrl()}/api/Subeler`
 }
 
 export const Subeler_PostPost = async (aaroModullerSubelerKayitSadeKayitModelBody: AaroModullerSubelerKayitSadeKayitModelBody, options?: RequestInit): Promise<Subeler_PostPostResponse> => {
@@ -75985,7 +75986,7 @@ export const getSubelerOnaylaPostUrl = (params: SubelerOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Subeler/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Subeler/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Subeler/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Subeler/Onayla`
 }
 
 export const Subeler_OnaylaPost = async (params: SubelerOnaylaPostParams, options?: RequestInit): Promise<Subeler_OnaylaPostResponse> => {
@@ -76046,7 +76047,7 @@ export const getSubelerReddetPostUrl = (params: SubelerReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Subeler/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Subeler/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Subeler/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Subeler/Reddet`
 }
 
 export const Subeler_ReddetPost = async (params: SubelerReddetPostParams, options?: RequestInit): Promise<Subeler_ReddetPostResponse> => {
@@ -76107,7 +76108,7 @@ export const getSubelerListeEsnekGetUrl = (params?: SubelerListeEsnekGetParams,)
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Subeler/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Subeler/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Subeler/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Subeler/Liste`
 }
 
 export const Subeler_ListeEsnekGet = async (params?: SubelerListeEsnekGetParams, options?: RequestInit): Promise<Subeler_ListeEsnekGetResponse> => {
@@ -76161,7 +76162,7 @@ export const getSubelerListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Subeler/Liste`
+  return `${getBaseUrl()}/api/Subeler/Liste`
 }
 
 export const Subeler_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Subeler_ListePostPostResponse> => {
@@ -76223,7 +76224,7 @@ export const getSubelerGrupluListeGetUrl = (params: SubelerGrupluListeGetParams,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Subeler/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Subeler/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Subeler/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Subeler/GrupluListe`
 }
 
 export const Subeler_GrupluListeGet = async (params: SubelerGrupluListeGetParams, options?: RequestInit): Promise<Subeler_GrupluListeGetResponse> => {
@@ -76277,7 +76278,7 @@ export const getSubelerOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Subeler/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Subeler/${id}/OnayDurumu`
 }
 
 export const Subeler_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Subeler_OnayDurumuGetResponse> => {
@@ -76339,7 +76340,7 @@ export const getSubelerDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Subeler/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Subeler/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Subeler/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Subeler/${id}/DegisiklikGecmisi`
 }
 
 export const Subeler_DegisiklikGecmisiGet = async (id: number,
@@ -76402,7 +76403,7 @@ export const getSubelerBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Subeler/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Subeler/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Subeler/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Subeler/${id}/Belgeler`
 }
 
 export const Subeler_BelgelerGet = async (id: number,
@@ -76465,7 +76466,7 @@ export const getSubelerBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Subeler/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Subeler/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Subeler/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Subeler/${id}/BelgeEkle`
 }
 
 export const Subeler_BelgeEklePost = async (id: number,
@@ -76529,7 +76530,7 @@ export const getSubelerBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Subeler/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Subeler/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Subeler/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Subeler/${id}/BelgeSil/${belgeID}`
 }
 
 export const Subeler_BelgeSilDelete = async (id: number,
@@ -76593,7 +76594,7 @@ export const getSubelerNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Subeler/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Subeler/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Subeler/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Subeler/${id}/Notlar`
 }
 
 export const Subeler_NotlarGet = async (id: number,
@@ -76648,7 +76649,7 @@ export const getSubelerNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Subeler/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Subeler/${id}/NotEkle`
 }
 
 export const Subeler_NotEklePost = async (id: number,
@@ -76705,7 +76706,7 @@ export const getSubelerNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Subeler/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Subeler/${id}/NotSil/${notID}`
 }
 
 export const Subeler_NotSilDelete = async (id: number,
@@ -76760,7 +76761,7 @@ export const getTakvimGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Takvim/${id}`
+  return `${getBaseUrl()}/api/Takvim/${id}`
 }
 
 export const Takvim_GetGet = async (id: number, options?: RequestInit): Promise<Takvim_GetGetResponse> => {
@@ -76814,7 +76815,7 @@ export const getTakvimPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Takvim/${id}`
+  return `${getBaseUrl()}/api/Takvim/${id}`
 }
 
 export const Takvim_PutPut = async (id: number,
@@ -76870,7 +76871,7 @@ export const getTakvimDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Takvim/${id}`
+  return `${getBaseUrl()}/api/Takvim/${id}`
 }
 
 export const Takvim_DeleteDelete = async (id: number, options?: RequestInit): Promise<Takvim_DeleteDeleteResponse> => {
@@ -76931,7 +76932,7 @@ export const getTakvimListeGetGetUrl = (params?: TakvimListeGetGetParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Takvim?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Takvim`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Takvim?${stringifiedParams}` : `${getBaseUrl()}/api/Takvim`
 }
 
 export const Takvim_ListeGetGet = async (params?: TakvimListeGetGetParams, options?: RequestInit): Promise<Takvim_ListeGetGetResponse> => {
@@ -76985,7 +76986,7 @@ export const getTakvimPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Takvim`
+  return `${getBaseUrl()}/api/Takvim`
 }
 
 export const Takvim_PostPost = async (aaroModullerTakvimKayitSadeKayitModelBody: AaroModullerTakvimKayitSadeKayitModelBody, options?: RequestInit): Promise<Takvim_PostPostResponse> => {
@@ -77047,7 +77048,7 @@ export const getTakvimOnaylaPostUrl = (params: TakvimOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Takvim/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Takvim/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Takvim/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Takvim/Onayla`
 }
 
 export const Takvim_OnaylaPost = async (params: TakvimOnaylaPostParams, options?: RequestInit): Promise<Takvim_OnaylaPostResponse> => {
@@ -77108,7 +77109,7 @@ export const getTakvimReddetPostUrl = (params: TakvimReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Takvim/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Takvim/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Takvim/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Takvim/Reddet`
 }
 
 export const Takvim_ReddetPost = async (params: TakvimReddetPostParams, options?: RequestInit): Promise<Takvim_ReddetPostResponse> => {
@@ -77169,7 +77170,7 @@ export const getTakvimListeEsnekGetUrl = (params?: TakvimListeEsnekGetParams,) =
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Takvim/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Takvim/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Takvim/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Takvim/Liste`
 }
 
 export const Takvim_ListeEsnekGet = async (params?: TakvimListeEsnekGetParams, options?: RequestInit): Promise<Takvim_ListeEsnekGetResponse> => {
@@ -77223,7 +77224,7 @@ export const getTakvimListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Takvim/Liste`
+  return `${getBaseUrl()}/api/Takvim/Liste`
 }
 
 export const Takvim_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Takvim_ListePostPostResponse> => {
@@ -77285,7 +77286,7 @@ export const getTakvimGrupluListeGetUrl = (params: TakvimGrupluListeGetParams,) 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Takvim/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Takvim/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Takvim/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Takvim/GrupluListe`
 }
 
 export const Takvim_GrupluListeGet = async (params: TakvimGrupluListeGetParams, options?: RequestInit): Promise<Takvim_GrupluListeGetResponse> => {
@@ -77339,7 +77340,7 @@ export const getTakvimOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Takvim/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Takvim/${id}/OnayDurumu`
 }
 
 export const Takvim_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Takvim_OnayDurumuGetResponse> => {
@@ -77401,7 +77402,7 @@ export const getTakvimDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Takvim/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Takvim/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Takvim/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Takvim/${id}/DegisiklikGecmisi`
 }
 
 export const Takvim_DegisiklikGecmisiGet = async (id: number,
@@ -77464,7 +77465,7 @@ export const getTakvimBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Takvim/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Takvim/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Takvim/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Takvim/${id}/Belgeler`
 }
 
 export const Takvim_BelgelerGet = async (id: number,
@@ -77527,7 +77528,7 @@ export const getTakvimBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Takvim/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Takvim/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Takvim/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Takvim/${id}/BelgeEkle`
 }
 
 export const Takvim_BelgeEklePost = async (id: number,
@@ -77591,7 +77592,7 @@ export const getTakvimBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Takvim/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Takvim/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Takvim/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Takvim/${id}/BelgeSil/${belgeID}`
 }
 
 export const Takvim_BelgeSilDelete = async (id: number,
@@ -77655,7 +77656,7 @@ export const getTakvimNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Takvim/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Takvim/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Takvim/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Takvim/${id}/Notlar`
 }
 
 export const Takvim_NotlarGet = async (id: number,
@@ -77710,7 +77711,7 @@ export const getTakvimNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Takvim/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Takvim/${id}/NotEkle`
 }
 
 export const Takvim_NotEklePost = async (id: number,
@@ -77767,7 +77768,7 @@ export const getTakvimNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Takvim/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Takvim/${id}/NotSil/${notID}`
 }
 
 export const Takvim_NotSilDelete = async (id: number,
@@ -77822,7 +77823,7 @@ export const getTakvimStrGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/TakvimStr/${id}`
+  return `${getBaseUrl()}/api/TakvimStr/${id}`
 }
 
 export const TakvimStr_GetGet = async (id: number, options?: RequestInit): Promise<TakvimStr_GetGetResponse> => {
@@ -77876,7 +77877,7 @@ export const getTakvimStrPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/TakvimStr/${id}`
+  return `${getBaseUrl()}/api/TakvimStr/${id}`
 }
 
 export const TakvimStr_PutPut = async (id: number,
@@ -77932,7 +77933,7 @@ export const getTakvimStrDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/TakvimStr/${id}`
+  return `${getBaseUrl()}/api/TakvimStr/${id}`
 }
 
 export const TakvimStr_DeleteDelete = async (id: number, options?: RequestInit): Promise<TakvimStr_DeleteDeleteResponse> => {
@@ -77993,7 +77994,7 @@ export const getTakvimStrListeGetGetUrl = (params?: TakvimStrListeGetGetParams,)
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/TakvimStr?${stringifiedParams}` : `https://erp.aaro.com.tr/api/TakvimStr`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/TakvimStr?${stringifiedParams}` : `${getBaseUrl()}/api/TakvimStr`
 }
 
 export const TakvimStr_ListeGetGet = async (params?: TakvimStrListeGetGetParams, options?: RequestInit): Promise<TakvimStr_ListeGetGetResponse> => {
@@ -78047,7 +78048,7 @@ export const getTakvimStrPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/TakvimStr`
+  return `${getBaseUrl()}/api/TakvimStr`
 }
 
 export const TakvimStr_PostPost = async (aaroModullerTakvimStrKayitSadeKayitModelBody: AaroModullerTakvimStrKayitSadeKayitModelBody, options?: RequestInit): Promise<TakvimStr_PostPostResponse> => {
@@ -78109,7 +78110,7 @@ export const getTakvimStrOnaylaPostUrl = (params: TakvimStrOnaylaPostParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/TakvimStr/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/TakvimStr/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/TakvimStr/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/TakvimStr/Onayla`
 }
 
 export const TakvimStr_OnaylaPost = async (params: TakvimStrOnaylaPostParams, options?: RequestInit): Promise<TakvimStr_OnaylaPostResponse> => {
@@ -78170,7 +78171,7 @@ export const getTakvimStrReddetPostUrl = (params: TakvimStrReddetPostParams,) =>
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/TakvimStr/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/TakvimStr/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/TakvimStr/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/TakvimStr/Reddet`
 }
 
 export const TakvimStr_ReddetPost = async (params: TakvimStrReddetPostParams, options?: RequestInit): Promise<TakvimStr_ReddetPostResponse> => {
@@ -78231,7 +78232,7 @@ export const getTakvimStrListeEsnekGetUrl = (params?: TakvimStrListeEsnekGetPara
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/TakvimStr/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/TakvimStr/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/TakvimStr/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/TakvimStr/Liste`
 }
 
 export const TakvimStr_ListeEsnekGet = async (params?: TakvimStrListeEsnekGetParams, options?: RequestInit): Promise<TakvimStr_ListeEsnekGetResponse> => {
@@ -78285,7 +78286,7 @@ export const getTakvimStrListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/TakvimStr/Liste`
+  return `${getBaseUrl()}/api/TakvimStr/Liste`
 }
 
 export const TakvimStr_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<TakvimStr_ListePostPostResponse> => {
@@ -78347,7 +78348,7 @@ export const getTakvimStrGrupluListeGetUrl = (params: TakvimStrGrupluListeGetPar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/TakvimStr/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/TakvimStr/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/TakvimStr/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/TakvimStr/GrupluListe`
 }
 
 export const TakvimStr_GrupluListeGet = async (params: TakvimStrGrupluListeGetParams, options?: RequestInit): Promise<TakvimStr_GrupluListeGetResponse> => {
@@ -78401,7 +78402,7 @@ export const getTakvimStrOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/TakvimStr/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/TakvimStr/${id}/OnayDurumu`
 }
 
 export const TakvimStr_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<TakvimStr_OnayDurumuGetResponse> => {
@@ -78463,7 +78464,7 @@ export const getTakvimStrDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/TakvimStr/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/TakvimStr/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/TakvimStr/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/TakvimStr/${id}/DegisiklikGecmisi`
 }
 
 export const TakvimStr_DegisiklikGecmisiGet = async (id: number,
@@ -78526,7 +78527,7 @@ export const getTakvimStrBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/TakvimStr/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/TakvimStr/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/TakvimStr/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/TakvimStr/${id}/Belgeler`
 }
 
 export const TakvimStr_BelgelerGet = async (id: number,
@@ -78589,7 +78590,7 @@ export const getTakvimStrBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/TakvimStr/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/TakvimStr/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/TakvimStr/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/TakvimStr/${id}/BelgeEkle`
 }
 
 export const TakvimStr_BelgeEklePost = async (id: number,
@@ -78653,7 +78654,7 @@ export const getTakvimStrBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/TakvimStr/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/TakvimStr/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/TakvimStr/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/TakvimStr/${id}/BelgeSil/${belgeID}`
 }
 
 export const TakvimStr_BelgeSilDelete = async (id: number,
@@ -78717,7 +78718,7 @@ export const getTakvimStrNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/TakvimStr/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/TakvimStr/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/TakvimStr/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/TakvimStr/${id}/Notlar`
 }
 
 export const TakvimStr_NotlarGet = async (id: number,
@@ -78772,7 +78773,7 @@ export const getTakvimStrNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/TakvimStr/${id}/NotEkle`
+  return `${getBaseUrl()}/api/TakvimStr/${id}/NotEkle`
 }
 
 export const TakvimStr_NotEklePost = async (id: number,
@@ -78829,7 +78830,7 @@ export const getTakvimStrNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/TakvimStr/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/TakvimStr/${id}/NotSil/${notID}`
 }
 
 export const TakvimStr_NotSilDelete = async (id: number,
@@ -78884,7 +78885,7 @@ export const getUlkelerGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Ulkeler/${id}`
+  return `${getBaseUrl()}/api/Ulkeler/${id}`
 }
 
 export const Ulkeler_GetGet = async (id: number, options?: RequestInit): Promise<Ulkeler_GetGetResponse> => {
@@ -78938,7 +78939,7 @@ export const getUlkelerPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Ulkeler/${id}`
+  return `${getBaseUrl()}/api/Ulkeler/${id}`
 }
 
 export const Ulkeler_PutPut = async (id: number,
@@ -78994,7 +78995,7 @@ export const getUlkelerDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Ulkeler/${id}`
+  return `${getBaseUrl()}/api/Ulkeler/${id}`
 }
 
 export const Ulkeler_DeleteDelete = async (id: number, options?: RequestInit): Promise<Ulkeler_DeleteDeleteResponse> => {
@@ -79055,7 +79056,7 @@ export const getUlkelerListeGetGetUrl = (params?: UlkelerListeGetGetParams,) => 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Ulkeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Ulkeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Ulkeler?${stringifiedParams}` : `${getBaseUrl()}/api/Ulkeler`
 }
 
 export const Ulkeler_ListeGetGet = async (params?: UlkelerListeGetGetParams, options?: RequestInit): Promise<Ulkeler_ListeGetGetResponse> => {
@@ -79109,7 +79110,7 @@ export const getUlkelerPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Ulkeler`
+  return `${getBaseUrl()}/api/Ulkeler`
 }
 
 export const Ulkeler_PostPost = async (aaroModullerAdrsUlkelerKayitSadeKayitModelBody: AaroModullerAdrsUlkelerKayitSadeKayitModelBody, options?: RequestInit): Promise<Ulkeler_PostPostResponse> => {
@@ -79171,7 +79172,7 @@ export const getUlkelerOnaylaPostUrl = (params: UlkelerOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Ulkeler/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Ulkeler/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Ulkeler/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Ulkeler/Onayla`
 }
 
 export const Ulkeler_OnaylaPost = async (params: UlkelerOnaylaPostParams, options?: RequestInit): Promise<Ulkeler_OnaylaPostResponse> => {
@@ -79232,7 +79233,7 @@ export const getUlkelerReddetPostUrl = (params: UlkelerReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Ulkeler/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Ulkeler/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Ulkeler/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Ulkeler/Reddet`
 }
 
 export const Ulkeler_ReddetPost = async (params: UlkelerReddetPostParams, options?: RequestInit): Promise<Ulkeler_ReddetPostResponse> => {
@@ -79293,7 +79294,7 @@ export const getUlkelerListeEsnekGetUrl = (params?: UlkelerListeEsnekGetParams,)
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Ulkeler/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Ulkeler/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Ulkeler/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Ulkeler/Liste`
 }
 
 export const Ulkeler_ListeEsnekGet = async (params?: UlkelerListeEsnekGetParams, options?: RequestInit): Promise<Ulkeler_ListeEsnekGetResponse> => {
@@ -79347,7 +79348,7 @@ export const getUlkelerListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Ulkeler/Liste`
+  return `${getBaseUrl()}/api/Ulkeler/Liste`
 }
 
 export const Ulkeler_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Ulkeler_ListePostPostResponse> => {
@@ -79409,7 +79410,7 @@ export const getUlkelerGrupluListeGetUrl = (params: UlkelerGrupluListeGetParams,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Ulkeler/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Ulkeler/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Ulkeler/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Ulkeler/GrupluListe`
 }
 
 export const Ulkeler_GrupluListeGet = async (params: UlkelerGrupluListeGetParams, options?: RequestInit): Promise<Ulkeler_GrupluListeGetResponse> => {
@@ -79463,7 +79464,7 @@ export const getUlkelerOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Ulkeler/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Ulkeler/${id}/OnayDurumu`
 }
 
 export const Ulkeler_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Ulkeler_OnayDurumuGetResponse> => {
@@ -79525,7 +79526,7 @@ export const getUlkelerDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Ulkeler/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Ulkeler/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Ulkeler/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Ulkeler/${id}/DegisiklikGecmisi`
 }
 
 export const Ulkeler_DegisiklikGecmisiGet = async (id: number,
@@ -79588,7 +79589,7 @@ export const getUlkelerBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Ulkeler/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Ulkeler/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Ulkeler/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Ulkeler/${id}/Belgeler`
 }
 
 export const Ulkeler_BelgelerGet = async (id: number,
@@ -79651,7 +79652,7 @@ export const getUlkelerBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Ulkeler/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Ulkeler/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Ulkeler/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Ulkeler/${id}/BelgeEkle`
 }
 
 export const Ulkeler_BelgeEklePost = async (id: number,
@@ -79715,7 +79716,7 @@ export const getUlkelerBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Ulkeler/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Ulkeler/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Ulkeler/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Ulkeler/${id}/BelgeSil/${belgeID}`
 }
 
 export const Ulkeler_BelgeSilDelete = async (id: number,
@@ -79779,7 +79780,7 @@ export const getUlkelerNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Ulkeler/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Ulkeler/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Ulkeler/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Ulkeler/${id}/Notlar`
 }
 
 export const Ulkeler_NotlarGet = async (id: number,
@@ -79834,7 +79835,7 @@ export const getUlkelerNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Ulkeler/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Ulkeler/${id}/NotEkle`
 }
 
 export const Ulkeler_NotEklePost = async (id: number,
@@ -79891,7 +79892,7 @@ export const getUlkelerNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Ulkeler/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Ulkeler/${id}/NotSil/${notID}`
 }
 
 export const Ulkeler_NotSilDelete = async (id: number,
@@ -79946,7 +79947,7 @@ export const getUrAkisOperasyonGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyon/${id}`
+  return `${getBaseUrl()}/api/UrAkisOperasyon/${id}`
 }
 
 export const UrAkisOperasyon_GetGet = async (id: number, options?: RequestInit): Promise<UrAkisOperasyon_GetGetResponse> => {
@@ -80000,7 +80001,7 @@ export const getUrAkisOperasyonPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyon/${id}`
+  return `${getBaseUrl()}/api/UrAkisOperasyon/${id}`
 }
 
 export const UrAkisOperasyon_PutPut = async (id: number,
@@ -80056,7 +80057,7 @@ export const getUrAkisOperasyonDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyon/${id}`
+  return `${getBaseUrl()}/api/UrAkisOperasyon/${id}`
 }
 
 export const UrAkisOperasyon_DeleteDelete = async (id: number, options?: RequestInit): Promise<UrAkisOperasyon_DeleteDeleteResponse> => {
@@ -80127,7 +80128,7 @@ export const getUrAkisOperasyonListeGetGetUrl = (params?: UrAkisOperasyonListeGe
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyon?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyon`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyon?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyon`
 }
 
 export const UrAkisOperasyon_ListeGetGet = async (params?: UrAkisOperasyonListeGetGetParams, options?: RequestInit): Promise<UrAkisOperasyon_ListeGetGetResponse> => {
@@ -80181,7 +80182,7 @@ export const getUrAkisOperasyonPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyon`
+  return `${getBaseUrl()}/api/UrAkisOperasyon`
 }
 
 export const UrAkisOperasyon_PostPost = async (aaroModullerUrAkisOperasyonKayitSadeKayitModelBody: AaroModullerUrAkisOperasyonKayitSadeKayitModelBody, options?: RequestInit): Promise<UrAkisOperasyon_PostPostResponse> => {
@@ -80243,7 +80244,7 @@ export const getUrAkisOperasyonOnaylaPostUrl = (params: UrAkisOperasyonOnaylaPos
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyon/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyon/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyon/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyon/Onayla`
 }
 
 export const UrAkisOperasyon_OnaylaPost = async (params: UrAkisOperasyonOnaylaPostParams, options?: RequestInit): Promise<UrAkisOperasyon_OnaylaPostResponse> => {
@@ -80304,7 +80305,7 @@ export const getUrAkisOperasyonReddetPostUrl = (params: UrAkisOperasyonReddetPos
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyon/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyon/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyon/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyon/Reddet`
 }
 
 export const UrAkisOperasyon_ReddetPost = async (params: UrAkisOperasyonReddetPostParams, options?: RequestInit): Promise<UrAkisOperasyon_ReddetPostResponse> => {
@@ -80365,7 +80366,7 @@ export const getUrAkisOperasyonListeEsnekGetUrl = (params?: UrAkisOperasyonListe
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyon/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyon/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyon/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyon/Liste`
 }
 
 export const UrAkisOperasyon_ListeEsnekGet = async (params?: UrAkisOperasyonListeEsnekGetParams, options?: RequestInit): Promise<UrAkisOperasyon_ListeEsnekGetResponse> => {
@@ -80419,7 +80420,7 @@ export const getUrAkisOperasyonListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyon/Liste`
+  return `${getBaseUrl()}/api/UrAkisOperasyon/Liste`
 }
 
 export const UrAkisOperasyon_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<UrAkisOperasyon_ListePostPostResponse> => {
@@ -80481,7 +80482,7 @@ export const getUrAkisOperasyonGrupluListeGetUrl = (params: UrAkisOperasyonGrupl
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyon/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyon/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyon/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyon/GrupluListe`
 }
 
 export const UrAkisOperasyon_GrupluListeGet = async (params: UrAkisOperasyonGrupluListeGetParams, options?: RequestInit): Promise<UrAkisOperasyon_GrupluListeGetResponse> => {
@@ -80535,7 +80536,7 @@ export const getUrAkisOperasyonOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyon/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/UrAkisOperasyon/${id}/OnayDurumu`
 }
 
 export const UrAkisOperasyon_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<UrAkisOperasyon_OnayDurumuGetResponse> => {
@@ -80597,7 +80598,7 @@ export const getUrAkisOperasyonDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyon/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyon/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyon/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyon/${id}/DegisiklikGecmisi`
 }
 
 export const UrAkisOperasyon_DegisiklikGecmisiGet = async (id: number,
@@ -80660,7 +80661,7 @@ export const getUrAkisOperasyonBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyon/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyon/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyon/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyon/${id}/Belgeler`
 }
 
 export const UrAkisOperasyon_BelgelerGet = async (id: number,
@@ -80723,7 +80724,7 @@ export const getUrAkisOperasyonBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyon/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyon/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyon/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyon/${id}/BelgeEkle`
 }
 
 export const UrAkisOperasyon_BelgeEklePost = async (id: number,
@@ -80787,7 +80788,7 @@ export const getUrAkisOperasyonBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyon/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyon/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyon/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyon/${id}/BelgeSil/${belgeID}`
 }
 
 export const UrAkisOperasyon_BelgeSilDelete = async (id: number,
@@ -80851,7 +80852,7 @@ export const getUrAkisOperasyonNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyon/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyon/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyon/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyon/${id}/Notlar`
 }
 
 export const UrAkisOperasyon_NotlarGet = async (id: number,
@@ -80906,7 +80907,7 @@ export const getUrAkisOperasyonNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyon/${id}/NotEkle`
+  return `${getBaseUrl()}/api/UrAkisOperasyon/${id}/NotEkle`
 }
 
 export const UrAkisOperasyon_NotEklePost = async (id: number,
@@ -80963,7 +80964,7 @@ export const getUrAkisOperasyonNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyon/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/UrAkisOperasyon/${id}/NotSil/${notID}`
 }
 
 export const UrAkisOperasyon_NotSilDelete = async (id: number,
@@ -81018,7 +81019,7 @@ export const getUrAkisOperasyonHammaddeGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/${id}`
+  return `${getBaseUrl()}/api/UrAkisOperasyonHammadde/${id}`
 }
 
 export const UrAkisOperasyonHammadde_GetGet = async (id: number, options?: RequestInit): Promise<UrAkisOperasyonHammadde_GetGetResponse> => {
@@ -81072,7 +81073,7 @@ export const getUrAkisOperasyonHammaddePutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/${id}`
+  return `${getBaseUrl()}/api/UrAkisOperasyonHammadde/${id}`
 }
 
 export const UrAkisOperasyonHammadde_PutPut = async (id: number,
@@ -81128,7 +81129,7 @@ export const getUrAkisOperasyonHammaddeDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/${id}`
+  return `${getBaseUrl()}/api/UrAkisOperasyonHammadde/${id}`
 }
 
 export const UrAkisOperasyonHammadde_DeleteDelete = async (id: number, options?: RequestInit): Promise<UrAkisOperasyonHammadde_DeleteDeleteResponse> => {
@@ -81189,7 +81190,7 @@ export const getUrAkisOperasyonHammaddeDetayliListeGetUrl = (params?: UrAkisOper
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonHammadde?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonHammadde`
 }
 
 export const UrAkisOperasyonHammadde_DetayliListeGet = async (params?: UrAkisOperasyonHammaddeDetayliListeGetParams, options?: RequestInit): Promise<UrAkisOperasyonHammadde_DetayliListeGetResponse> => {
@@ -81243,7 +81244,7 @@ export const getUrAkisOperasyonHammaddePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde`
+  return `${getBaseUrl()}/api/UrAkisOperasyonHammadde`
 }
 
 export const UrAkisOperasyonHammadde_PostPost = async (aaroModullerUrAkisOperasyonHammaddeKayitSadeKayitModelBody: AaroModullerUrAkisOperasyonHammaddeKayitSadeKayitModelBody, options?: RequestInit): Promise<UrAkisOperasyonHammadde_PostPostResponse> => {
@@ -81305,7 +81306,7 @@ export const getUrAkisOperasyonHammaddeOnaylaPostUrl = (params: UrAkisOperasyonH
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonHammadde/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonHammadde/Onayla`
 }
 
 export const UrAkisOperasyonHammadde_OnaylaPost = async (params: UrAkisOperasyonHammaddeOnaylaPostParams, options?: RequestInit): Promise<UrAkisOperasyonHammadde_OnaylaPostResponse> => {
@@ -81366,7 +81367,7 @@ export const getUrAkisOperasyonHammaddeReddetPostUrl = (params: UrAkisOperasyonH
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonHammadde/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonHammadde/Reddet`
 }
 
 export const UrAkisOperasyonHammadde_ReddetPost = async (params: UrAkisOperasyonHammaddeReddetPostParams, options?: RequestInit): Promise<UrAkisOperasyonHammadde_ReddetPostResponse> => {
@@ -81427,7 +81428,7 @@ export const getUrAkisOperasyonHammaddeListeEsnekGetUrl = (params?: UrAkisOperas
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonHammadde/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonHammadde/Liste`
 }
 
 export const UrAkisOperasyonHammadde_ListeEsnekGet = async (params?: UrAkisOperasyonHammaddeListeEsnekGetParams, options?: RequestInit): Promise<UrAkisOperasyonHammadde_ListeEsnekGetResponse> => {
@@ -81481,7 +81482,7 @@ export const getUrAkisOperasyonHammaddeListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/Liste`
+  return `${getBaseUrl()}/api/UrAkisOperasyonHammadde/Liste`
 }
 
 export const UrAkisOperasyonHammadde_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<UrAkisOperasyonHammadde_ListePostPostResponse> => {
@@ -81543,7 +81544,7 @@ export const getUrAkisOperasyonHammaddeGrupluListeGetUrl = (params: UrAkisOperas
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonHammadde/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonHammadde/GrupluListe`
 }
 
 export const UrAkisOperasyonHammadde_GrupluListeGet = async (params: UrAkisOperasyonHammaddeGrupluListeGetParams, options?: RequestInit): Promise<UrAkisOperasyonHammadde_GrupluListeGetResponse> => {
@@ -81597,7 +81598,7 @@ export const getUrAkisOperasyonHammaddeOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/UrAkisOperasyonHammadde/${id}/OnayDurumu`
 }
 
 export const UrAkisOperasyonHammadde_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<UrAkisOperasyonHammadde_OnayDurumuGetResponse> => {
@@ -81659,7 +81660,7 @@ export const getUrAkisOperasyonHammaddeDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonHammadde/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonHammadde/${id}/DegisiklikGecmisi`
 }
 
 export const UrAkisOperasyonHammadde_DegisiklikGecmisiGet = async (id: number,
@@ -81722,7 +81723,7 @@ export const getUrAkisOperasyonHammaddeBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonHammadde/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonHammadde/${id}/Belgeler`
 }
 
 export const UrAkisOperasyonHammadde_BelgelerGet = async (id: number,
@@ -81785,7 +81786,7 @@ export const getUrAkisOperasyonHammaddeBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonHammadde/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonHammadde/${id}/BelgeEkle`
 }
 
 export const UrAkisOperasyonHammadde_BelgeEklePost = async (id: number,
@@ -81849,7 +81850,7 @@ export const getUrAkisOperasyonHammaddeBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonHammadde/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonHammadde/${id}/BelgeSil/${belgeID}`
 }
 
 export const UrAkisOperasyonHammadde_BelgeSilDelete = async (id: number,
@@ -81913,7 +81914,7 @@ export const getUrAkisOperasyonHammaddeNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonHammadde/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonHammadde/${id}/Notlar`
 }
 
 export const UrAkisOperasyonHammadde_NotlarGet = async (id: number,
@@ -81968,7 +81969,7 @@ export const getUrAkisOperasyonHammaddeNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/${id}/NotEkle`
+  return `${getBaseUrl()}/api/UrAkisOperasyonHammadde/${id}/NotEkle`
 }
 
 export const UrAkisOperasyonHammadde_NotEklePost = async (id: number,
@@ -82025,7 +82026,7 @@ export const getUrAkisOperasyonHammaddeNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonHammadde/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/UrAkisOperasyonHammadde/${id}/NotSil/${notID}`
 }
 
 export const UrAkisOperasyonHammadde_NotSilDelete = async (id: number,
@@ -82080,7 +82081,7 @@ export const getUrAkisOperasyonMamulGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/${id}`
+  return `${getBaseUrl()}/api/UrAkisOperasyonMamul/${id}`
 }
 
 export const UrAkisOperasyonMamul_GetGet = async (id: number, options?: RequestInit): Promise<UrAkisOperasyonMamul_GetGetResponse> => {
@@ -82134,7 +82135,7 @@ export const getUrAkisOperasyonMamulPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/${id}`
+  return `${getBaseUrl()}/api/UrAkisOperasyonMamul/${id}`
 }
 
 export const UrAkisOperasyonMamul_PutPut = async (id: number,
@@ -82190,7 +82191,7 @@ export const getUrAkisOperasyonMamulDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/${id}`
+  return `${getBaseUrl()}/api/UrAkisOperasyonMamul/${id}`
 }
 
 export const UrAkisOperasyonMamul_DeleteDelete = async (id: number, options?: RequestInit): Promise<UrAkisOperasyonMamul_DeleteDeleteResponse> => {
@@ -82251,7 +82252,7 @@ export const getUrAkisOperasyonMamulDetayliListeGetUrl = (params?: UrAkisOperasy
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonMamul?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonMamul`
 }
 
 export const UrAkisOperasyonMamul_DetayliListeGet = async (params?: UrAkisOperasyonMamulDetayliListeGetParams, options?: RequestInit): Promise<UrAkisOperasyonMamul_DetayliListeGetResponse> => {
@@ -82305,7 +82306,7 @@ export const getUrAkisOperasyonMamulPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul`
+  return `${getBaseUrl()}/api/UrAkisOperasyonMamul`
 }
 
 export const UrAkisOperasyonMamul_PostPost = async (aaroModullerUrAkisOperasyonMamulKayitSadeKayitModelBody: AaroModullerUrAkisOperasyonMamulKayitSadeKayitModelBody, options?: RequestInit): Promise<UrAkisOperasyonMamul_PostPostResponse> => {
@@ -82367,7 +82368,7 @@ export const getUrAkisOperasyonMamulOnaylaPostUrl = (params: UrAkisOperasyonMamu
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonMamul/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonMamul/Onayla`
 }
 
 export const UrAkisOperasyonMamul_OnaylaPost = async (params: UrAkisOperasyonMamulOnaylaPostParams, options?: RequestInit): Promise<UrAkisOperasyonMamul_OnaylaPostResponse> => {
@@ -82428,7 +82429,7 @@ export const getUrAkisOperasyonMamulReddetPostUrl = (params: UrAkisOperasyonMamu
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonMamul/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonMamul/Reddet`
 }
 
 export const UrAkisOperasyonMamul_ReddetPost = async (params: UrAkisOperasyonMamulReddetPostParams, options?: RequestInit): Promise<UrAkisOperasyonMamul_ReddetPostResponse> => {
@@ -82489,7 +82490,7 @@ export const getUrAkisOperasyonMamulListeEsnekGetUrl = (params?: UrAkisOperasyon
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonMamul/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonMamul/Liste`
 }
 
 export const UrAkisOperasyonMamul_ListeEsnekGet = async (params?: UrAkisOperasyonMamulListeEsnekGetParams, options?: RequestInit): Promise<UrAkisOperasyonMamul_ListeEsnekGetResponse> => {
@@ -82543,7 +82544,7 @@ export const getUrAkisOperasyonMamulListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/Liste`
+  return `${getBaseUrl()}/api/UrAkisOperasyonMamul/Liste`
 }
 
 export const UrAkisOperasyonMamul_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<UrAkisOperasyonMamul_ListePostPostResponse> => {
@@ -82605,7 +82606,7 @@ export const getUrAkisOperasyonMamulGrupluListeGetUrl = (params: UrAkisOperasyon
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonMamul/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonMamul/GrupluListe`
 }
 
 export const UrAkisOperasyonMamul_GrupluListeGet = async (params: UrAkisOperasyonMamulGrupluListeGetParams, options?: RequestInit): Promise<UrAkisOperasyonMamul_GrupluListeGetResponse> => {
@@ -82659,7 +82660,7 @@ export const getUrAkisOperasyonMamulOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/UrAkisOperasyonMamul/${id}/OnayDurumu`
 }
 
 export const UrAkisOperasyonMamul_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<UrAkisOperasyonMamul_OnayDurumuGetResponse> => {
@@ -82721,7 +82722,7 @@ export const getUrAkisOperasyonMamulDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonMamul/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonMamul/${id}/DegisiklikGecmisi`
 }
 
 export const UrAkisOperasyonMamul_DegisiklikGecmisiGet = async (id: number,
@@ -82784,7 +82785,7 @@ export const getUrAkisOperasyonMamulBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonMamul/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonMamul/${id}/Belgeler`
 }
 
 export const UrAkisOperasyonMamul_BelgelerGet = async (id: number,
@@ -82847,7 +82848,7 @@ export const getUrAkisOperasyonMamulBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonMamul/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonMamul/${id}/BelgeEkle`
 }
 
 export const UrAkisOperasyonMamul_BelgeEklePost = async (id: number,
@@ -82911,7 +82912,7 @@ export const getUrAkisOperasyonMamulBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonMamul/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonMamul/${id}/BelgeSil/${belgeID}`
 }
 
 export const UrAkisOperasyonMamul_BelgeSilDelete = async (id: number,
@@ -82975,7 +82976,7 @@ export const getUrAkisOperasyonMamulNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonMamul/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonMamul/${id}/Notlar`
 }
 
 export const UrAkisOperasyonMamul_NotlarGet = async (id: number,
@@ -83030,7 +83031,7 @@ export const getUrAkisOperasyonMamulNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/${id}/NotEkle`
+  return `${getBaseUrl()}/api/UrAkisOperasyonMamul/${id}/NotEkle`
 }
 
 export const UrAkisOperasyonMamul_NotEklePost = async (id: number,
@@ -83087,7 +83088,7 @@ export const getUrAkisOperasyonMamulNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonMamul/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/UrAkisOperasyonMamul/${id}/NotSil/${notID}`
 }
 
 export const UrAkisOperasyonMamul_NotSilDelete = async (id: number,
@@ -83142,7 +83143,7 @@ export const getUrAkisOperasyonPersonelGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/${id}`
+  return `${getBaseUrl()}/api/UrAkisOperasyonPersonel/${id}`
 }
 
 export const UrAkisOperasyonPersonel_GetGet = async (id: number, options?: RequestInit): Promise<UrAkisOperasyonPersonel_GetGetResponse> => {
@@ -83196,7 +83197,7 @@ export const getUrAkisOperasyonPersonelPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/${id}`
+  return `${getBaseUrl()}/api/UrAkisOperasyonPersonel/${id}`
 }
 
 export const UrAkisOperasyonPersonel_PutPut = async (id: number,
@@ -83252,7 +83253,7 @@ export const getUrAkisOperasyonPersonelDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/${id}`
+  return `${getBaseUrl()}/api/UrAkisOperasyonPersonel/${id}`
 }
 
 export const UrAkisOperasyonPersonel_DeleteDelete = async (id: number, options?: RequestInit): Promise<UrAkisOperasyonPersonel_DeleteDeleteResponse> => {
@@ -83313,7 +83314,7 @@ export const getUrAkisOperasyonPersonelDetayliListeGetUrl = (params?: UrAkisOper
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonPersonel?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonPersonel`
 }
 
 export const UrAkisOperasyonPersonel_DetayliListeGet = async (params?: UrAkisOperasyonPersonelDetayliListeGetParams, options?: RequestInit): Promise<UrAkisOperasyonPersonel_DetayliListeGetResponse> => {
@@ -83367,7 +83368,7 @@ export const getUrAkisOperasyonPersonelPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel`
+  return `${getBaseUrl()}/api/UrAkisOperasyonPersonel`
 }
 
 export const UrAkisOperasyonPersonel_PostPost = async (aaroModullerUrAkisOperasyonPersonelKayitSadeKayitModelBody: AaroModullerUrAkisOperasyonPersonelKayitSadeKayitModelBody, options?: RequestInit): Promise<UrAkisOperasyonPersonel_PostPostResponse> => {
@@ -83429,7 +83430,7 @@ export const getUrAkisOperasyonPersonelOnaylaPostUrl = (params: UrAkisOperasyonP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonPersonel/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonPersonel/Onayla`
 }
 
 export const UrAkisOperasyonPersonel_OnaylaPost = async (params: UrAkisOperasyonPersonelOnaylaPostParams, options?: RequestInit): Promise<UrAkisOperasyonPersonel_OnaylaPostResponse> => {
@@ -83490,7 +83491,7 @@ export const getUrAkisOperasyonPersonelReddetPostUrl = (params: UrAkisOperasyonP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonPersonel/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonPersonel/Reddet`
 }
 
 export const UrAkisOperasyonPersonel_ReddetPost = async (params: UrAkisOperasyonPersonelReddetPostParams, options?: RequestInit): Promise<UrAkisOperasyonPersonel_ReddetPostResponse> => {
@@ -83551,7 +83552,7 @@ export const getUrAkisOperasyonPersonelListeEsnekGetUrl = (params?: UrAkisOperas
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonPersonel/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonPersonel/Liste`
 }
 
 export const UrAkisOperasyonPersonel_ListeEsnekGet = async (params?: UrAkisOperasyonPersonelListeEsnekGetParams, options?: RequestInit): Promise<UrAkisOperasyonPersonel_ListeEsnekGetResponse> => {
@@ -83605,7 +83606,7 @@ export const getUrAkisOperasyonPersonelListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/Liste`
+  return `${getBaseUrl()}/api/UrAkisOperasyonPersonel/Liste`
 }
 
 export const UrAkisOperasyonPersonel_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<UrAkisOperasyonPersonel_ListePostPostResponse> => {
@@ -83667,7 +83668,7 @@ export const getUrAkisOperasyonPersonelGrupluListeGetUrl = (params: UrAkisOperas
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonPersonel/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonPersonel/GrupluListe`
 }
 
 export const UrAkisOperasyonPersonel_GrupluListeGet = async (params: UrAkisOperasyonPersonelGrupluListeGetParams, options?: RequestInit): Promise<UrAkisOperasyonPersonel_GrupluListeGetResponse> => {
@@ -83721,7 +83722,7 @@ export const getUrAkisOperasyonPersonelOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/UrAkisOperasyonPersonel/${id}/OnayDurumu`
 }
 
 export const UrAkisOperasyonPersonel_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<UrAkisOperasyonPersonel_OnayDurumuGetResponse> => {
@@ -83783,7 +83784,7 @@ export const getUrAkisOperasyonPersonelDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonPersonel/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonPersonel/${id}/DegisiklikGecmisi`
 }
 
 export const UrAkisOperasyonPersonel_DegisiklikGecmisiGet = async (id: number,
@@ -83846,7 +83847,7 @@ export const getUrAkisOperasyonPersonelBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonPersonel/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonPersonel/${id}/Belgeler`
 }
 
 export const UrAkisOperasyonPersonel_BelgelerGet = async (id: number,
@@ -83909,7 +83910,7 @@ export const getUrAkisOperasyonPersonelBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonPersonel/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonPersonel/${id}/BelgeEkle`
 }
 
 export const UrAkisOperasyonPersonel_BelgeEklePost = async (id: number,
@@ -83973,7 +83974,7 @@ export const getUrAkisOperasyonPersonelBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonPersonel/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonPersonel/${id}/BelgeSil/${belgeID}`
 }
 
 export const UrAkisOperasyonPersonel_BelgeSilDelete = async (id: number,
@@ -84037,7 +84038,7 @@ export const getUrAkisOperasyonPersonelNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrAkisOperasyonPersonel/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/UrAkisOperasyonPersonel/${id}/Notlar`
 }
 
 export const UrAkisOperasyonPersonel_NotlarGet = async (id: number,
@@ -84092,7 +84093,7 @@ export const getUrAkisOperasyonPersonelNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/${id}/NotEkle`
+  return `${getBaseUrl()}/api/UrAkisOperasyonPersonel/${id}/NotEkle`
 }
 
 export const UrAkisOperasyonPersonel_NotEklePost = async (id: number,
@@ -84149,7 +84150,7 @@ export const getUrAkisOperasyonPersonelNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/UrAkisOperasyonPersonel/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/UrAkisOperasyonPersonel/${id}/NotSil/${notID}`
 }
 
 export const UrAkisOperasyonPersonel_NotSilDelete = async (id: number,
@@ -84204,7 +84205,7 @@ export const getUrBenzerlikGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrBenzerlik/${id}`
+  return `${getBaseUrl()}/api/UrBenzerlik/${id}`
 }
 
 export const UrBenzerlik_GetGet = async (id: number, options?: RequestInit): Promise<UrBenzerlik_GetGetResponse> => {
@@ -84258,7 +84259,7 @@ export const getUrBenzerlikPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrBenzerlik/${id}`
+  return `${getBaseUrl()}/api/UrBenzerlik/${id}`
 }
 
 export const UrBenzerlik_PutPut = async (id: number,
@@ -84314,7 +84315,7 @@ export const getUrBenzerlikDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrBenzerlik/${id}`
+  return `${getBaseUrl()}/api/UrBenzerlik/${id}`
 }
 
 export const UrBenzerlik_DeleteDelete = async (id: number, options?: RequestInit): Promise<UrBenzerlik_DeleteDeleteResponse> => {
@@ -84375,7 +84376,7 @@ export const getUrBenzerlikListeGetGetUrl = (params?: UrBenzerlikListeGetGetPara
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrBenzerlik?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrBenzerlik`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrBenzerlik?${stringifiedParams}` : `${getBaseUrl()}/api/UrBenzerlik`
 }
 
 export const UrBenzerlik_ListeGetGet = async (params?: UrBenzerlikListeGetGetParams, options?: RequestInit): Promise<UrBenzerlik_ListeGetGetResponse> => {
@@ -84429,7 +84430,7 @@ export const getUrBenzerlikPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrBenzerlik`
+  return `${getBaseUrl()}/api/UrBenzerlik`
 }
 
 export const UrBenzerlik_PostPost = async (aaroModullerKartlarUrBenzerlikKayitSadeKayitModelBody: AaroModullerKartlarUrBenzerlikKayitSadeKayitModelBody, options?: RequestInit): Promise<UrBenzerlik_PostPostResponse> => {
@@ -84491,7 +84492,7 @@ export const getUrBenzerlikOnaylaPostUrl = (params: UrBenzerlikOnaylaPostParams,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrBenzerlik/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrBenzerlik/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrBenzerlik/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/UrBenzerlik/Onayla`
 }
 
 export const UrBenzerlik_OnaylaPost = async (params: UrBenzerlikOnaylaPostParams, options?: RequestInit): Promise<UrBenzerlik_OnaylaPostResponse> => {
@@ -84552,7 +84553,7 @@ export const getUrBenzerlikReddetPostUrl = (params: UrBenzerlikReddetPostParams,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrBenzerlik/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrBenzerlik/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrBenzerlik/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/UrBenzerlik/Reddet`
 }
 
 export const UrBenzerlik_ReddetPost = async (params: UrBenzerlikReddetPostParams, options?: RequestInit): Promise<UrBenzerlik_ReddetPostResponse> => {
@@ -84613,7 +84614,7 @@ export const getUrBenzerlikListeEsnekGetUrl = (params?: UrBenzerlikListeEsnekGet
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrBenzerlik/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrBenzerlik/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrBenzerlik/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/UrBenzerlik/Liste`
 }
 
 export const UrBenzerlik_ListeEsnekGet = async (params?: UrBenzerlikListeEsnekGetParams, options?: RequestInit): Promise<UrBenzerlik_ListeEsnekGetResponse> => {
@@ -84667,7 +84668,7 @@ export const getUrBenzerlikListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrBenzerlik/Liste`
+  return `${getBaseUrl()}/api/UrBenzerlik/Liste`
 }
 
 export const UrBenzerlik_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<UrBenzerlik_ListePostPostResponse> => {
@@ -84729,7 +84730,7 @@ export const getUrBenzerlikGrupluListeGetUrl = (params: UrBenzerlikGrupluListeGe
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrBenzerlik/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrBenzerlik/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrBenzerlik/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/UrBenzerlik/GrupluListe`
 }
 
 export const UrBenzerlik_GrupluListeGet = async (params: UrBenzerlikGrupluListeGetParams, options?: RequestInit): Promise<UrBenzerlik_GrupluListeGetResponse> => {
@@ -84783,7 +84784,7 @@ export const getUrBenzerlikOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrBenzerlik/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/UrBenzerlik/${id}/OnayDurumu`
 }
 
 export const UrBenzerlik_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<UrBenzerlik_OnayDurumuGetResponse> => {
@@ -84845,7 +84846,7 @@ export const getUrBenzerlikDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrBenzerlik/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrBenzerlik/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrBenzerlik/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/UrBenzerlik/${id}/DegisiklikGecmisi`
 }
 
 export const UrBenzerlik_DegisiklikGecmisiGet = async (id: number,
@@ -84908,7 +84909,7 @@ export const getUrBenzerlikBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrBenzerlik/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrBenzerlik/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrBenzerlik/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/UrBenzerlik/${id}/Belgeler`
 }
 
 export const UrBenzerlik_BelgelerGet = async (id: number,
@@ -84971,7 +84972,7 @@ export const getUrBenzerlikBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrBenzerlik/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrBenzerlik/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrBenzerlik/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/UrBenzerlik/${id}/BelgeEkle`
 }
 
 export const UrBenzerlik_BelgeEklePost = async (id: number,
@@ -85035,7 +85036,7 @@ export const getUrBenzerlikBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrBenzerlik/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrBenzerlik/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrBenzerlik/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/UrBenzerlik/${id}/BelgeSil/${belgeID}`
 }
 
 export const UrBenzerlik_BelgeSilDelete = async (id: number,
@@ -85099,7 +85100,7 @@ export const getUrBenzerlikNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrBenzerlik/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrBenzerlik/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrBenzerlik/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/UrBenzerlik/${id}/Notlar`
 }
 
 export const UrBenzerlik_NotlarGet = async (id: number,
@@ -85154,7 +85155,7 @@ export const getUrBenzerlikNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrBenzerlik/${id}/NotEkle`
+  return `${getBaseUrl()}/api/UrBenzerlik/${id}/NotEkle`
 }
 
 export const UrBenzerlik_NotEklePost = async (id: number,
@@ -85211,7 +85212,7 @@ export const getUrBenzerlikNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/UrBenzerlik/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/UrBenzerlik/${id}/NotSil/${notID}`
 }
 
 export const UrBenzerlik_NotSilDelete = async (id: number,
@@ -85266,7 +85267,7 @@ export const getUrBolumGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrBolum/${id}`
+  return `${getBaseUrl()}/api/UrBolum/${id}`
 }
 
 export const UrBolum_GetGet = async (id: number, options?: RequestInit): Promise<UrBolum_GetGetResponse> => {
@@ -85320,7 +85321,7 @@ export const getUrBolumPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrBolum/${id}`
+  return `${getBaseUrl()}/api/UrBolum/${id}`
 }
 
 export const UrBolum_PutPut = async (id: number,
@@ -85376,7 +85377,7 @@ export const getUrBolumDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrBolum/${id}`
+  return `${getBaseUrl()}/api/UrBolum/${id}`
 }
 
 export const UrBolum_DeleteDelete = async (id: number, options?: RequestInit): Promise<UrBolum_DeleteDeleteResponse> => {
@@ -85437,7 +85438,7 @@ export const getUrBolumListeGetGetUrl = (params?: UrBolumListeGetGetParams,) => 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrBolum?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrBolum`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrBolum?${stringifiedParams}` : `${getBaseUrl()}/api/UrBolum`
 }
 
 export const UrBolum_ListeGetGet = async (params?: UrBolumListeGetGetParams, options?: RequestInit): Promise<UrBolum_ListeGetGetResponse> => {
@@ -85491,7 +85492,7 @@ export const getUrBolumPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrBolum`
+  return `${getBaseUrl()}/api/UrBolum`
 }
 
 export const UrBolum_PostPost = async (aaroModullerUrBolumKayitSadeKayitModelBody: AaroModullerUrBolumKayitSadeKayitModelBody, options?: RequestInit): Promise<UrBolum_PostPostResponse> => {
@@ -85553,7 +85554,7 @@ export const getUrBolumOnaylaPostUrl = (params: UrBolumOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrBolum/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrBolum/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrBolum/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/UrBolum/Onayla`
 }
 
 export const UrBolum_OnaylaPost = async (params: UrBolumOnaylaPostParams, options?: RequestInit): Promise<UrBolum_OnaylaPostResponse> => {
@@ -85614,7 +85615,7 @@ export const getUrBolumReddetPostUrl = (params: UrBolumReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrBolum/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrBolum/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrBolum/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/UrBolum/Reddet`
 }
 
 export const UrBolum_ReddetPost = async (params: UrBolumReddetPostParams, options?: RequestInit): Promise<UrBolum_ReddetPostResponse> => {
@@ -85675,7 +85676,7 @@ export const getUrBolumListeEsnekGetUrl = (params?: UrBolumListeEsnekGetParams,)
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrBolum/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrBolum/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrBolum/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/UrBolum/Liste`
 }
 
 export const UrBolum_ListeEsnekGet = async (params?: UrBolumListeEsnekGetParams, options?: RequestInit): Promise<UrBolum_ListeEsnekGetResponse> => {
@@ -85729,7 +85730,7 @@ export const getUrBolumListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrBolum/Liste`
+  return `${getBaseUrl()}/api/UrBolum/Liste`
 }
 
 export const UrBolum_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<UrBolum_ListePostPostResponse> => {
@@ -85791,7 +85792,7 @@ export const getUrBolumGrupluListeGetUrl = (params: UrBolumGrupluListeGetParams,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrBolum/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrBolum/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrBolum/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/UrBolum/GrupluListe`
 }
 
 export const UrBolum_GrupluListeGet = async (params: UrBolumGrupluListeGetParams, options?: RequestInit): Promise<UrBolum_GrupluListeGetResponse> => {
@@ -85845,7 +85846,7 @@ export const getUrBolumOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrBolum/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/UrBolum/${id}/OnayDurumu`
 }
 
 export const UrBolum_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<UrBolum_OnayDurumuGetResponse> => {
@@ -85907,7 +85908,7 @@ export const getUrBolumDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrBolum/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrBolum/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrBolum/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/UrBolum/${id}/DegisiklikGecmisi`
 }
 
 export const UrBolum_DegisiklikGecmisiGet = async (id: number,
@@ -85970,7 +85971,7 @@ export const getUrBolumBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrBolum/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrBolum/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrBolum/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/UrBolum/${id}/Belgeler`
 }
 
 export const UrBolum_BelgelerGet = async (id: number,
@@ -86033,7 +86034,7 @@ export const getUrBolumBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrBolum/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrBolum/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrBolum/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/UrBolum/${id}/BelgeEkle`
 }
 
 export const UrBolum_BelgeEklePost = async (id: number,
@@ -86097,7 +86098,7 @@ export const getUrBolumBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrBolum/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrBolum/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrBolum/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/UrBolum/${id}/BelgeSil/${belgeID}`
 }
 
 export const UrBolum_BelgeSilDelete = async (id: number,
@@ -86161,7 +86162,7 @@ export const getUrBolumNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrBolum/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrBolum/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrBolum/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/UrBolum/${id}/Notlar`
 }
 
 export const UrBolum_NotlarGet = async (id: number,
@@ -86216,7 +86217,7 @@ export const getUrBolumNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrBolum/${id}/NotEkle`
+  return `${getBaseUrl()}/api/UrBolum/${id}/NotEkle`
 }
 
 export const UrBolum_NotEklePost = async (id: number,
@@ -86273,7 +86274,7 @@ export const getUrBolumNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/UrBolum/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/UrBolum/${id}/NotSil/${notID}`
 }
 
 export const UrBolum_NotSilDelete = async (id: number,
@@ -86328,7 +86329,7 @@ export const getUrIsEmriGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrIsEmri/${id}`
+  return `${getBaseUrl()}/api/UrIsEmri/${id}`
 }
 
 export const UrIsEmri_GetGet = async (id: number, options?: RequestInit): Promise<UrIsEmri_GetGetResponse> => {
@@ -86382,7 +86383,7 @@ export const getUrIsEmriPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrIsEmri/${id}`
+  return `${getBaseUrl()}/api/UrIsEmri/${id}`
 }
 
 export const UrIsEmri_PutPut = async (id: number,
@@ -86438,7 +86439,7 @@ export const getUrIsEmriDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrIsEmri/${id}`
+  return `${getBaseUrl()}/api/UrIsEmri/${id}`
 }
 
 export const UrIsEmri_DeleteDelete = async (id: number, options?: RequestInit): Promise<UrIsEmri_DeleteDeleteResponse> => {
@@ -86499,7 +86500,7 @@ export const getUrIsEmriDetayliListeGetUrl = (params?: UrIsEmriDetayliListeGetPa
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrIsEmri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrIsEmri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrIsEmri?${stringifiedParams}` : `${getBaseUrl()}/api/UrIsEmri`
 }
 
 export const UrIsEmri_DetayliListeGet = async (params?: UrIsEmriDetayliListeGetParams, options?: RequestInit): Promise<UrIsEmri_DetayliListeGetResponse> => {
@@ -86553,7 +86554,7 @@ export const getUrIsEmriPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrIsEmri`
+  return `${getBaseUrl()}/api/UrIsEmri`
 }
 
 export const UrIsEmri_PostPost = async (aaroModullerUrIsEmriKayitSadeKayitModelBody: AaroModullerUrIsEmriKayitSadeKayitModelBody, options?: RequestInit): Promise<UrIsEmri_PostPostResponse> => {
@@ -86615,7 +86616,7 @@ export const getUrIsEmriTamamlanmisUretimMaliyetleriGetUrl = (params?: UrIsEmriT
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrIsEmri/TamamlanmisUretimMaliyetleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrIsEmri/TamamlanmisUretimMaliyetleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrIsEmri/TamamlanmisUretimMaliyetleri?${stringifiedParams}` : `${getBaseUrl()}/api/UrIsEmri/TamamlanmisUretimMaliyetleri`
 }
 
 export const UrIsEmri_TamamlanmisUretimMaliyetleriGet = async (params?: UrIsEmriTamamlanmisUretimMaliyetleriGetParams, options?: RequestInit): Promise<UrIsEmri_TamamlanmisUretimMaliyetleriGetResponse> => {
@@ -86676,7 +86677,7 @@ export const getUrIsEmriAltIsEmriGetUrl = (params: UrIsEmriAltIsEmriGetParams,) 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrIsEmri/AltIsEmri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrIsEmri/AltIsEmri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrIsEmri/AltIsEmri?${stringifiedParams}` : `${getBaseUrl()}/api/UrIsEmri/AltIsEmri`
 }
 
 export const UrIsEmri_AltIsEmriGet = async (params: UrIsEmriAltIsEmriGetParams, options?: RequestInit): Promise<UrIsEmri_AltIsEmriGetResponse> => {
@@ -86737,7 +86738,7 @@ export const getUrIsEmriOnaylaPostUrl = (params: UrIsEmriOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrIsEmri/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrIsEmri/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrIsEmri/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/UrIsEmri/Onayla`
 }
 
 export const UrIsEmri_OnaylaPost = async (params: UrIsEmriOnaylaPostParams, options?: RequestInit): Promise<UrIsEmri_OnaylaPostResponse> => {
@@ -86798,7 +86799,7 @@ export const getUrIsEmriReddetPostUrl = (params: UrIsEmriReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrIsEmri/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrIsEmri/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrIsEmri/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/UrIsEmri/Reddet`
 }
 
 export const UrIsEmri_ReddetPost = async (params: UrIsEmriReddetPostParams, options?: RequestInit): Promise<UrIsEmri_ReddetPostResponse> => {
@@ -86859,7 +86860,7 @@ export const getUrIsEmriListeEsnekGetUrl = (params?: UrIsEmriListeEsnekGetParams
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrIsEmri/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrIsEmri/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrIsEmri/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/UrIsEmri/Liste`
 }
 
 export const UrIsEmri_ListeEsnekGet = async (params?: UrIsEmriListeEsnekGetParams, options?: RequestInit): Promise<UrIsEmri_ListeEsnekGetResponse> => {
@@ -86913,7 +86914,7 @@ export const getUrIsEmriListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrIsEmri/Liste`
+  return `${getBaseUrl()}/api/UrIsEmri/Liste`
 }
 
 export const UrIsEmri_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<UrIsEmri_ListePostPostResponse> => {
@@ -86975,7 +86976,7 @@ export const getUrIsEmriGrupluListeGetUrl = (params: UrIsEmriGrupluListeGetParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrIsEmri/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrIsEmri/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrIsEmri/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/UrIsEmri/GrupluListe`
 }
 
 export const UrIsEmri_GrupluListeGet = async (params: UrIsEmriGrupluListeGetParams, options?: RequestInit): Promise<UrIsEmri_GrupluListeGetResponse> => {
@@ -87029,7 +87030,7 @@ export const getUrIsEmriOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrIsEmri/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/UrIsEmri/${id}/OnayDurumu`
 }
 
 export const UrIsEmri_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<UrIsEmri_OnayDurumuGetResponse> => {
@@ -87091,7 +87092,7 @@ export const getUrIsEmriDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrIsEmri/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrIsEmri/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrIsEmri/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/UrIsEmri/${id}/DegisiklikGecmisi`
 }
 
 export const UrIsEmri_DegisiklikGecmisiGet = async (id: number,
@@ -87154,7 +87155,7 @@ export const getUrIsEmriBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrIsEmri/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrIsEmri/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrIsEmri/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/UrIsEmri/${id}/Belgeler`
 }
 
 export const UrIsEmri_BelgelerGet = async (id: number,
@@ -87217,7 +87218,7 @@ export const getUrIsEmriBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrIsEmri/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrIsEmri/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrIsEmri/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/UrIsEmri/${id}/BelgeEkle`
 }
 
 export const UrIsEmri_BelgeEklePost = async (id: number,
@@ -87281,7 +87282,7 @@ export const getUrIsEmriBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrIsEmri/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrIsEmri/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrIsEmri/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/UrIsEmri/${id}/BelgeSil/${belgeID}`
 }
 
 export const UrIsEmri_BelgeSilDelete = async (id: number,
@@ -87345,7 +87346,7 @@ export const getUrIsEmriNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrIsEmri/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrIsEmri/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrIsEmri/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/UrIsEmri/${id}/Notlar`
 }
 
 export const UrIsEmri_NotlarGet = async (id: number,
@@ -87400,7 +87401,7 @@ export const getUrIsEmriNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrIsEmri/${id}/NotEkle`
+  return `${getBaseUrl()}/api/UrIsEmri/${id}/NotEkle`
 }
 
 export const UrIsEmri_NotEklePost = async (id: number,
@@ -87457,7 +87458,7 @@ export const getUrIsEmriNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/UrIsEmri/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/UrIsEmri/${id}/NotSil/${notID}`
 }
 
 export const UrIsEmri_NotSilDelete = async (id: number,
@@ -87519,7 +87520,7 @@ export const getUrIsEmriPlanListeGetUrl = (params?: UrIsEmriPlanListeGetParams,)
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrIsEmriPlan/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrIsEmriPlan/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrIsEmriPlan/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/UrIsEmriPlan/Liste`
 }
 
 export const UrIsEmriPlan_ListeGet = async (params?: UrIsEmriPlanListeGetParams, options?: RequestInit): Promise<UrIsEmriPlan_ListeGetResponse> => {
@@ -87580,7 +87581,7 @@ export const getUrIsEmriPlanTumIsEmriPlanGetUrl = (params?: UrIsEmriPlanTumIsEmr
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrIsEmriPlan/TumIsEmriPlan?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrIsEmriPlan/TumIsEmriPlan`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrIsEmriPlan/TumIsEmriPlan?${stringifiedParams}` : `${getBaseUrl()}/api/UrIsEmriPlan/TumIsEmriPlan`
 }
 
 export const UrIsEmriPlan_TumIsEmriPlanGet = async (params?: UrIsEmriPlanTumIsEmriPlanGetParams, options?: RequestInit): Promise<UrIsEmriPlan_TumIsEmriPlanGetResponse> => {
@@ -87634,7 +87635,7 @@ export const getUrMakineGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrMakine/${id}`
+  return `${getBaseUrl()}/api/UrMakine/${id}`
 }
 
 export const UrMakine_GetGet = async (id: number, options?: RequestInit): Promise<UrMakine_GetGetResponse> => {
@@ -87688,7 +87689,7 @@ export const getUrMakinePutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrMakine/${id}`
+  return `${getBaseUrl()}/api/UrMakine/${id}`
 }
 
 export const UrMakine_PutPut = async (id: number,
@@ -87744,7 +87745,7 @@ export const getUrMakineDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrMakine/${id}`
+  return `${getBaseUrl()}/api/UrMakine/${id}`
 }
 
 export const UrMakine_DeleteDelete = async (id: number, options?: RequestInit): Promise<UrMakine_DeleteDeleteResponse> => {
@@ -87805,7 +87806,7 @@ export const getUrMakineListeGetGetUrl = (params?: UrMakineListeGetGetParams,) =
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrMakine?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrMakine`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrMakine?${stringifiedParams}` : `${getBaseUrl()}/api/UrMakine`
 }
 
 export const UrMakine_ListeGetGet = async (params?: UrMakineListeGetGetParams, options?: RequestInit): Promise<UrMakine_ListeGetGetResponse> => {
@@ -87859,7 +87860,7 @@ export const getUrMakinePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrMakine`
+  return `${getBaseUrl()}/api/UrMakine`
 }
 
 export const UrMakine_PostPost = async (aaroModullerUrMakineKayitSadeKayitModelBody: AaroModullerUrMakineKayitSadeKayitModelBody, options?: RequestInit): Promise<UrMakine_PostPostResponse> => {
@@ -87921,7 +87922,7 @@ export const getUrMakineOnaylaPostUrl = (params: UrMakineOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrMakine/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrMakine/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrMakine/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/UrMakine/Onayla`
 }
 
 export const UrMakine_OnaylaPost = async (params: UrMakineOnaylaPostParams, options?: RequestInit): Promise<UrMakine_OnaylaPostResponse> => {
@@ -87982,7 +87983,7 @@ export const getUrMakineReddetPostUrl = (params: UrMakineReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrMakine/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrMakine/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrMakine/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/UrMakine/Reddet`
 }
 
 export const UrMakine_ReddetPost = async (params: UrMakineReddetPostParams, options?: RequestInit): Promise<UrMakine_ReddetPostResponse> => {
@@ -88043,7 +88044,7 @@ export const getUrMakineListeEsnekGetUrl = (params?: UrMakineListeEsnekGetParams
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrMakine/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrMakine/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrMakine/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/UrMakine/Liste`
 }
 
 export const UrMakine_ListeEsnekGet = async (params?: UrMakineListeEsnekGetParams, options?: RequestInit): Promise<UrMakine_ListeEsnekGetResponse> => {
@@ -88097,7 +88098,7 @@ export const getUrMakineListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrMakine/Liste`
+  return `${getBaseUrl()}/api/UrMakine/Liste`
 }
 
 export const UrMakine_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<UrMakine_ListePostPostResponse> => {
@@ -88159,7 +88160,7 @@ export const getUrMakineGrupluListeGetUrl = (params: UrMakineGrupluListeGetParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrMakine/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrMakine/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrMakine/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/UrMakine/GrupluListe`
 }
 
 export const UrMakine_GrupluListeGet = async (params: UrMakineGrupluListeGetParams, options?: RequestInit): Promise<UrMakine_GrupluListeGetResponse> => {
@@ -88213,7 +88214,7 @@ export const getUrMakineOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrMakine/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/UrMakine/${id}/OnayDurumu`
 }
 
 export const UrMakine_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<UrMakine_OnayDurumuGetResponse> => {
@@ -88275,7 +88276,7 @@ export const getUrMakineDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrMakine/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrMakine/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrMakine/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/UrMakine/${id}/DegisiklikGecmisi`
 }
 
 export const UrMakine_DegisiklikGecmisiGet = async (id: number,
@@ -88338,7 +88339,7 @@ export const getUrMakineBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrMakine/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrMakine/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrMakine/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/UrMakine/${id}/Belgeler`
 }
 
 export const UrMakine_BelgelerGet = async (id: number,
@@ -88401,7 +88402,7 @@ export const getUrMakineBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrMakine/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrMakine/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrMakine/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/UrMakine/${id}/BelgeEkle`
 }
 
 export const UrMakine_BelgeEklePost = async (id: number,
@@ -88465,7 +88466,7 @@ export const getUrMakineBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrMakine/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrMakine/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrMakine/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/UrMakine/${id}/BelgeSil/${belgeID}`
 }
 
 export const UrMakine_BelgeSilDelete = async (id: number,
@@ -88529,7 +88530,7 @@ export const getUrMakineNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrMakine/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrMakine/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrMakine/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/UrMakine/${id}/Notlar`
 }
 
 export const UrMakine_NotlarGet = async (id: number,
@@ -88584,7 +88585,7 @@ export const getUrMakineNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrMakine/${id}/NotEkle`
+  return `${getBaseUrl()}/api/UrMakine/${id}/NotEkle`
 }
 
 export const UrMakine_NotEklePost = async (id: number,
@@ -88641,7 +88642,7 @@ export const getUrMakineNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/UrMakine/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/UrMakine/${id}/NotSil/${notID}`
 }
 
 export const UrMakine_NotSilDelete = async (id: number,
@@ -88696,7 +88697,7 @@ export const getUrMakineArizaGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrMakineAriza/${id}`
+  return `${getBaseUrl()}/api/UrMakineAriza/${id}`
 }
 
 export const UrMakineAriza_GetGet = async (id: number, options?: RequestInit): Promise<UrMakineAriza_GetGetResponse> => {
@@ -88750,7 +88751,7 @@ export const getUrMakineArizaPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrMakineAriza/${id}`
+  return `${getBaseUrl()}/api/UrMakineAriza/${id}`
 }
 
 export const UrMakineAriza_PutPut = async (id: number,
@@ -88806,7 +88807,7 @@ export const getUrMakineArizaDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrMakineAriza/${id}`
+  return `${getBaseUrl()}/api/UrMakineAriza/${id}`
 }
 
 export const UrMakineAriza_DeleteDelete = async (id: number, options?: RequestInit): Promise<UrMakineAriza_DeleteDeleteResponse> => {
@@ -88867,7 +88868,7 @@ export const getUrMakineArizaDetayliListeGetUrl = (params?: UrMakineArizaDetayli
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrMakineAriza?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrMakineAriza`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrMakineAriza?${stringifiedParams}` : `${getBaseUrl()}/api/UrMakineAriza`
 }
 
 export const UrMakineAriza_DetayliListeGet = async (params?: UrMakineArizaDetayliListeGetParams, options?: RequestInit): Promise<UrMakineAriza_DetayliListeGetResponse> => {
@@ -88921,7 +88922,7 @@ export const getUrMakineArizaPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrMakineAriza`
+  return `${getBaseUrl()}/api/UrMakineAriza`
 }
 
 export const UrMakineAriza_PostPost = async (aaroModullerUrMakineArizaKayitSadeKayitModelBody: AaroModullerUrMakineArizaKayitSadeKayitModelBody, options?: RequestInit): Promise<UrMakineAriza_PostPostResponse> => {
@@ -88983,7 +88984,7 @@ export const getUrMakineArizaOnaylaPostUrl = (params: UrMakineArizaOnaylaPostPar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrMakineAriza/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrMakineAriza/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrMakineAriza/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/UrMakineAriza/Onayla`
 }
 
 export const UrMakineAriza_OnaylaPost = async (params: UrMakineArizaOnaylaPostParams, options?: RequestInit): Promise<UrMakineAriza_OnaylaPostResponse> => {
@@ -89044,7 +89045,7 @@ export const getUrMakineArizaReddetPostUrl = (params: UrMakineArizaReddetPostPar
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrMakineAriza/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrMakineAriza/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrMakineAriza/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/UrMakineAriza/Reddet`
 }
 
 export const UrMakineAriza_ReddetPost = async (params: UrMakineArizaReddetPostParams, options?: RequestInit): Promise<UrMakineAriza_ReddetPostResponse> => {
@@ -89105,7 +89106,7 @@ export const getUrMakineArizaListeEsnekGetUrl = (params?: UrMakineArizaListeEsne
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrMakineAriza/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrMakineAriza/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrMakineAriza/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/UrMakineAriza/Liste`
 }
 
 export const UrMakineAriza_ListeEsnekGet = async (params?: UrMakineArizaListeEsnekGetParams, options?: RequestInit): Promise<UrMakineAriza_ListeEsnekGetResponse> => {
@@ -89159,7 +89160,7 @@ export const getUrMakineArizaListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrMakineAriza/Liste`
+  return `${getBaseUrl()}/api/UrMakineAriza/Liste`
 }
 
 export const UrMakineAriza_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<UrMakineAriza_ListePostPostResponse> => {
@@ -89221,7 +89222,7 @@ export const getUrMakineArizaGrupluListeGetUrl = (params: UrMakineArizaGrupluLis
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrMakineAriza/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrMakineAriza/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrMakineAriza/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/UrMakineAriza/GrupluListe`
 }
 
 export const UrMakineAriza_GrupluListeGet = async (params: UrMakineArizaGrupluListeGetParams, options?: RequestInit): Promise<UrMakineAriza_GrupluListeGetResponse> => {
@@ -89275,7 +89276,7 @@ export const getUrMakineArizaOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrMakineAriza/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/UrMakineAriza/${id}/OnayDurumu`
 }
 
 export const UrMakineAriza_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<UrMakineAriza_OnayDurumuGetResponse> => {
@@ -89337,7 +89338,7 @@ export const getUrMakineArizaDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrMakineAriza/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrMakineAriza/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrMakineAriza/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/UrMakineAriza/${id}/DegisiklikGecmisi`
 }
 
 export const UrMakineAriza_DegisiklikGecmisiGet = async (id: number,
@@ -89400,7 +89401,7 @@ export const getUrMakineArizaBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrMakineAriza/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrMakineAriza/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrMakineAriza/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/UrMakineAriza/${id}/Belgeler`
 }
 
 export const UrMakineAriza_BelgelerGet = async (id: number,
@@ -89463,7 +89464,7 @@ export const getUrMakineArizaBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrMakineAriza/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrMakineAriza/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrMakineAriza/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/UrMakineAriza/${id}/BelgeEkle`
 }
 
 export const UrMakineAriza_BelgeEklePost = async (id: number,
@@ -89527,7 +89528,7 @@ export const getUrMakineArizaBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrMakineAriza/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrMakineAriza/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrMakineAriza/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/UrMakineAriza/${id}/BelgeSil/${belgeID}`
 }
 
 export const UrMakineAriza_BelgeSilDelete = async (id: number,
@@ -89591,7 +89592,7 @@ export const getUrMakineArizaNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrMakineAriza/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrMakineAriza/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrMakineAriza/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/UrMakineAriza/${id}/Notlar`
 }
 
 export const UrMakineAriza_NotlarGet = async (id: number,
@@ -89646,7 +89647,7 @@ export const getUrMakineArizaNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrMakineAriza/${id}/NotEkle`
+  return `${getBaseUrl()}/api/UrMakineAriza/${id}/NotEkle`
 }
 
 export const UrMakineAriza_NotEklePost = async (id: number,
@@ -89703,7 +89704,7 @@ export const getUrMakineArizaNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/UrMakineAriza/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/UrMakineAriza/${id}/NotSil/${notID}`
 }
 
 export const UrMakineAriza_NotSilDelete = async (id: number,
@@ -89758,7 +89759,7 @@ export const getUrOperasyonGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrOperasyon/${id}`
+  return `${getBaseUrl()}/api/UrOperasyon/${id}`
 }
 
 export const UrOperasyon_GetGet = async (id: number, options?: RequestInit): Promise<UrOperasyon_GetGetResponse> => {
@@ -89812,7 +89813,7 @@ export const getUrOperasyonPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrOperasyon/${id}`
+  return `${getBaseUrl()}/api/UrOperasyon/${id}`
 }
 
 export const UrOperasyon_PutPut = async (id: number,
@@ -89868,7 +89869,7 @@ export const getUrOperasyonDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrOperasyon/${id}`
+  return `${getBaseUrl()}/api/UrOperasyon/${id}`
 }
 
 export const UrOperasyon_DeleteDelete = async (id: number, options?: RequestInit): Promise<UrOperasyon_DeleteDeleteResponse> => {
@@ -89929,7 +89930,7 @@ export const getUrOperasyonListeGetGetUrl = (params?: UrOperasyonListeGetGetPara
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrOperasyon?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrOperasyon`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrOperasyon?${stringifiedParams}` : `${getBaseUrl()}/api/UrOperasyon`
 }
 
 export const UrOperasyon_ListeGetGet = async (params?: UrOperasyonListeGetGetParams, options?: RequestInit): Promise<UrOperasyon_ListeGetGetResponse> => {
@@ -89983,7 +89984,7 @@ export const getUrOperasyonPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrOperasyon`
+  return `${getBaseUrl()}/api/UrOperasyon`
 }
 
 export const UrOperasyon_PostPost = async (aaroModullerUrOperasyonKayitSadeKayitModelBody: AaroModullerUrOperasyonKayitSadeKayitModelBody, options?: RequestInit): Promise<UrOperasyon_PostPostResponse> => {
@@ -90045,7 +90046,7 @@ export const getUrOperasyonOnaylaPostUrl = (params: UrOperasyonOnaylaPostParams,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrOperasyon/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrOperasyon/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrOperasyon/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/UrOperasyon/Onayla`
 }
 
 export const UrOperasyon_OnaylaPost = async (params: UrOperasyonOnaylaPostParams, options?: RequestInit): Promise<UrOperasyon_OnaylaPostResponse> => {
@@ -90106,7 +90107,7 @@ export const getUrOperasyonReddetPostUrl = (params: UrOperasyonReddetPostParams,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrOperasyon/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrOperasyon/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrOperasyon/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/UrOperasyon/Reddet`
 }
 
 export const UrOperasyon_ReddetPost = async (params: UrOperasyonReddetPostParams, options?: RequestInit): Promise<UrOperasyon_ReddetPostResponse> => {
@@ -90167,7 +90168,7 @@ export const getUrOperasyonListeEsnekGetUrl = (params?: UrOperasyonListeEsnekGet
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrOperasyon/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrOperasyon/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrOperasyon/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/UrOperasyon/Liste`
 }
 
 export const UrOperasyon_ListeEsnekGet = async (params?: UrOperasyonListeEsnekGetParams, options?: RequestInit): Promise<UrOperasyon_ListeEsnekGetResponse> => {
@@ -90221,7 +90222,7 @@ export const getUrOperasyonListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrOperasyon/Liste`
+  return `${getBaseUrl()}/api/UrOperasyon/Liste`
 }
 
 export const UrOperasyon_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<UrOperasyon_ListePostPostResponse> => {
@@ -90283,7 +90284,7 @@ export const getUrOperasyonGrupluListeGetUrl = (params: UrOperasyonGrupluListeGe
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrOperasyon/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrOperasyon/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrOperasyon/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/UrOperasyon/GrupluListe`
 }
 
 export const UrOperasyon_GrupluListeGet = async (params: UrOperasyonGrupluListeGetParams, options?: RequestInit): Promise<UrOperasyon_GrupluListeGetResponse> => {
@@ -90337,7 +90338,7 @@ export const getUrOperasyonOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrOperasyon/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/UrOperasyon/${id}/OnayDurumu`
 }
 
 export const UrOperasyon_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<UrOperasyon_OnayDurumuGetResponse> => {
@@ -90399,7 +90400,7 @@ export const getUrOperasyonDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrOperasyon/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrOperasyon/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrOperasyon/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/UrOperasyon/${id}/DegisiklikGecmisi`
 }
 
 export const UrOperasyon_DegisiklikGecmisiGet = async (id: number,
@@ -90462,7 +90463,7 @@ export const getUrOperasyonBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrOperasyon/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrOperasyon/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrOperasyon/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/UrOperasyon/${id}/Belgeler`
 }
 
 export const UrOperasyon_BelgelerGet = async (id: number,
@@ -90525,7 +90526,7 @@ export const getUrOperasyonBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrOperasyon/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrOperasyon/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrOperasyon/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/UrOperasyon/${id}/BelgeEkle`
 }
 
 export const UrOperasyon_BelgeEklePost = async (id: number,
@@ -90589,7 +90590,7 @@ export const getUrOperasyonBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrOperasyon/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrOperasyon/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrOperasyon/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/UrOperasyon/${id}/BelgeSil/${belgeID}`
 }
 
 export const UrOperasyon_BelgeSilDelete = async (id: number,
@@ -90653,7 +90654,7 @@ export const getUrOperasyonNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrOperasyon/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrOperasyon/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrOperasyon/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/UrOperasyon/${id}/Notlar`
 }
 
 export const UrOperasyon_NotlarGet = async (id: number,
@@ -90708,7 +90709,7 @@ export const getUrOperasyonNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrOperasyon/${id}/NotEkle`
+  return `${getBaseUrl()}/api/UrOperasyon/${id}/NotEkle`
 }
 
 export const UrOperasyon_NotEklePost = async (id: number,
@@ -90765,7 +90766,7 @@ export const getUrOperasyonNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/UrOperasyon/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/UrOperasyon/${id}/NotSil/${notID}`
 }
 
 export const UrOperasyon_NotSilDelete = async (id: number,
@@ -90820,7 +90821,7 @@ export const getUrOperasyonMakineGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrOperasyonMakine/${id}`
+  return `${getBaseUrl()}/api/UrOperasyonMakine/${id}`
 }
 
 export const UrOperasyonMakine_GetGet = async (id: number, options?: RequestInit): Promise<UrOperasyonMakine_GetGetResponse> => {
@@ -90874,7 +90875,7 @@ export const getUrOperasyonMakinePutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrOperasyonMakine/${id}`
+  return `${getBaseUrl()}/api/UrOperasyonMakine/${id}`
 }
 
 export const UrOperasyonMakine_PutPut = async (id: number,
@@ -90930,7 +90931,7 @@ export const getUrOperasyonMakineDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrOperasyonMakine/${id}`
+  return `${getBaseUrl()}/api/UrOperasyonMakine/${id}`
 }
 
 export const UrOperasyonMakine_DeleteDelete = async (id: number, options?: RequestInit): Promise<UrOperasyonMakine_DeleteDeleteResponse> => {
@@ -90991,7 +90992,7 @@ export const getUrOperasyonMakineListeGetGetUrl = (params?: UrOperasyonMakineLis
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrOperasyonMakine?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrOperasyonMakine`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrOperasyonMakine?${stringifiedParams}` : `${getBaseUrl()}/api/UrOperasyonMakine`
 }
 
 export const UrOperasyonMakine_ListeGetGet = async (params?: UrOperasyonMakineListeGetGetParams, options?: RequestInit): Promise<UrOperasyonMakine_ListeGetGetResponse> => {
@@ -91045,7 +91046,7 @@ export const getUrOperasyonMakinePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrOperasyonMakine`
+  return `${getBaseUrl()}/api/UrOperasyonMakine`
 }
 
 export const UrOperasyonMakine_PostPost = async (aaroModullerUrOperasyonMakineKayitSadeKayitModelBody: AaroModullerUrOperasyonMakineKayitSadeKayitModelBody, options?: RequestInit): Promise<UrOperasyonMakine_PostPostResponse> => {
@@ -91107,7 +91108,7 @@ export const getUrOperasyonMakineOnaylaPostUrl = (params: UrOperasyonMakineOnayl
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrOperasyonMakine/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrOperasyonMakine/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrOperasyonMakine/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/UrOperasyonMakine/Onayla`
 }
 
 export const UrOperasyonMakine_OnaylaPost = async (params: UrOperasyonMakineOnaylaPostParams, options?: RequestInit): Promise<UrOperasyonMakine_OnaylaPostResponse> => {
@@ -91168,7 +91169,7 @@ export const getUrOperasyonMakineReddetPostUrl = (params: UrOperasyonMakineRedde
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrOperasyonMakine/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrOperasyonMakine/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrOperasyonMakine/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/UrOperasyonMakine/Reddet`
 }
 
 export const UrOperasyonMakine_ReddetPost = async (params: UrOperasyonMakineReddetPostParams, options?: RequestInit): Promise<UrOperasyonMakine_ReddetPostResponse> => {
@@ -91229,7 +91230,7 @@ export const getUrOperasyonMakineListeEsnekGetUrl = (params?: UrOperasyonMakineL
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrOperasyonMakine/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrOperasyonMakine/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrOperasyonMakine/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/UrOperasyonMakine/Liste`
 }
 
 export const UrOperasyonMakine_ListeEsnekGet = async (params?: UrOperasyonMakineListeEsnekGetParams, options?: RequestInit): Promise<UrOperasyonMakine_ListeEsnekGetResponse> => {
@@ -91283,7 +91284,7 @@ export const getUrOperasyonMakineListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrOperasyonMakine/Liste`
+  return `${getBaseUrl()}/api/UrOperasyonMakine/Liste`
 }
 
 export const UrOperasyonMakine_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<UrOperasyonMakine_ListePostPostResponse> => {
@@ -91345,7 +91346,7 @@ export const getUrOperasyonMakineGrupluListeGetUrl = (params: UrOperasyonMakineG
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrOperasyonMakine/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrOperasyonMakine/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrOperasyonMakine/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/UrOperasyonMakine/GrupluListe`
 }
 
 export const UrOperasyonMakine_GrupluListeGet = async (params: UrOperasyonMakineGrupluListeGetParams, options?: RequestInit): Promise<UrOperasyonMakine_GrupluListeGetResponse> => {
@@ -91399,7 +91400,7 @@ export const getUrOperasyonMakineOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrOperasyonMakine/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/UrOperasyonMakine/${id}/OnayDurumu`
 }
 
 export const UrOperasyonMakine_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<UrOperasyonMakine_OnayDurumuGetResponse> => {
@@ -91461,7 +91462,7 @@ export const getUrOperasyonMakineDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrOperasyonMakine/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrOperasyonMakine/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrOperasyonMakine/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/UrOperasyonMakine/${id}/DegisiklikGecmisi`
 }
 
 export const UrOperasyonMakine_DegisiklikGecmisiGet = async (id: number,
@@ -91524,7 +91525,7 @@ export const getUrOperasyonMakineBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrOperasyonMakine/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrOperasyonMakine/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrOperasyonMakine/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/UrOperasyonMakine/${id}/Belgeler`
 }
 
 export const UrOperasyonMakine_BelgelerGet = async (id: number,
@@ -91587,7 +91588,7 @@ export const getUrOperasyonMakineBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrOperasyonMakine/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrOperasyonMakine/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrOperasyonMakine/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/UrOperasyonMakine/${id}/BelgeEkle`
 }
 
 export const UrOperasyonMakine_BelgeEklePost = async (id: number,
@@ -91651,7 +91652,7 @@ export const getUrOperasyonMakineBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrOperasyonMakine/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrOperasyonMakine/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrOperasyonMakine/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/UrOperasyonMakine/${id}/BelgeSil/${belgeID}`
 }
 
 export const UrOperasyonMakine_BelgeSilDelete = async (id: number,
@@ -91715,7 +91716,7 @@ export const getUrOperasyonMakineNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrOperasyonMakine/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrOperasyonMakine/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrOperasyonMakine/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/UrOperasyonMakine/${id}/Notlar`
 }
 
 export const UrOperasyonMakine_NotlarGet = async (id: number,
@@ -91770,7 +91771,7 @@ export const getUrOperasyonMakineNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrOperasyonMakine/${id}/NotEkle`
+  return `${getBaseUrl()}/api/UrOperasyonMakine/${id}/NotEkle`
 }
 
 export const UrOperasyonMakine_NotEklePost = async (id: number,
@@ -91827,7 +91828,7 @@ export const getUrOperasyonMakineNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/UrOperasyonMakine/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/UrOperasyonMakine/${id}/NotSil/${notID}`
 }
 
 export const UrOperasyonMakine_NotSilDelete = async (id: number,
@@ -91889,7 +91890,7 @@ export const getUrReceteReceteDetaylariGetirGetUrl = (params: UrReceteReceteDeta
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrRecete/ReceteDetaylariGetir?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrRecete/ReceteDetaylariGetir`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrRecete/ReceteDetaylariGetir?${stringifiedParams}` : `${getBaseUrl()}/api/UrRecete/ReceteDetaylariGetir`
 }
 
 export const UrRecete_ReceteDetaylariGetirGet = async (params: UrReceteReceteDetaylariGetirGetParams, options?: RequestInit): Promise<UrRecete_ReceteDetaylariGetirGetResponse> => {
@@ -91950,7 +91951,7 @@ export const getUrReceteOperasyonMamulHammaddeIleAltReceteIleDetayliGetUrl = (pa
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrRecete/OperasyonMamulHammaddeIleAltReceteIleDetayli?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrRecete/OperasyonMamulHammaddeIleAltReceteIleDetayli`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrRecete/OperasyonMamulHammaddeIleAltReceteIleDetayli?${stringifiedParams}` : `${getBaseUrl()}/api/UrRecete/OperasyonMamulHammaddeIleAltReceteIleDetayli`
 }
 
 export const UrRecete_OperasyonMamulHammaddeIleAltReceteIleDetayliGet = async (params: UrReceteOperasyonMamulHammaddeIleAltReceteIleDetayliGetParams, options?: RequestInit): Promise<UrRecete_OperasyonMamulHammaddeIleAltReceteIleDetayliGetResponse> => {
@@ -92004,7 +92005,7 @@ export const getUrReceteGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrRecete/${id}`
+  return `${getBaseUrl()}/api/UrRecete/${id}`
 }
 
 export const UrRecete_GetGet = async (id: number, options?: RequestInit): Promise<UrRecete_GetGetResponse> => {
@@ -92058,7 +92059,7 @@ export const getUrRecetePutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrRecete/${id}`
+  return `${getBaseUrl()}/api/UrRecete/${id}`
 }
 
 export const UrRecete_PutPut = async (id: number,
@@ -92114,7 +92115,7 @@ export const getUrReceteDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrRecete/${id}`
+  return `${getBaseUrl()}/api/UrRecete/${id}`
 }
 
 export const UrRecete_DeleteDelete = async (id: number, options?: RequestInit): Promise<UrRecete_DeleteDeleteResponse> => {
@@ -92175,7 +92176,7 @@ export const getUrReceteListeGetGetUrl = (params?: UrReceteListeGetGetParams,) =
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrRecete?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrRecete`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrRecete?${stringifiedParams}` : `${getBaseUrl()}/api/UrRecete`
 }
 
 export const UrRecete_ListeGetGet = async (params?: UrReceteListeGetGetParams, options?: RequestInit): Promise<UrRecete_ListeGetGetResponse> => {
@@ -92229,7 +92230,7 @@ export const getUrRecetePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrRecete`
+  return `${getBaseUrl()}/api/UrRecete`
 }
 
 export const UrRecete_PostPost = async (aaroModullerUrReceteKayitSadeKayitModelBody: AaroModullerUrReceteKayitSadeKayitModelBody, options?: RequestInit): Promise<UrRecete_PostPostResponse> => {
@@ -92291,7 +92292,7 @@ export const getUrReceteOnaylaPostUrl = (params: UrReceteOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrRecete/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrRecete/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrRecete/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/UrRecete/Onayla`
 }
 
 export const UrRecete_OnaylaPost = async (params: UrReceteOnaylaPostParams, options?: RequestInit): Promise<UrRecete_OnaylaPostResponse> => {
@@ -92352,7 +92353,7 @@ export const getUrReceteReddetPostUrl = (params: UrReceteReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrRecete/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrRecete/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrRecete/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/UrRecete/Reddet`
 }
 
 export const UrRecete_ReddetPost = async (params: UrReceteReddetPostParams, options?: RequestInit): Promise<UrRecete_ReddetPostResponse> => {
@@ -92413,7 +92414,7 @@ export const getUrReceteListeEsnekGetUrl = (params?: UrReceteListeEsnekGetParams
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrRecete/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrRecete/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrRecete/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/UrRecete/Liste`
 }
 
 export const UrRecete_ListeEsnekGet = async (params?: UrReceteListeEsnekGetParams, options?: RequestInit): Promise<UrRecete_ListeEsnekGetResponse> => {
@@ -92467,7 +92468,7 @@ export const getUrReceteListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrRecete/Liste`
+  return `${getBaseUrl()}/api/UrRecete/Liste`
 }
 
 export const UrRecete_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<UrRecete_ListePostPostResponse> => {
@@ -92529,7 +92530,7 @@ export const getUrReceteGrupluListeGetUrl = (params: UrReceteGrupluListeGetParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrRecete/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrRecete/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrRecete/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/UrRecete/GrupluListe`
 }
 
 export const UrRecete_GrupluListeGet = async (params: UrReceteGrupluListeGetParams, options?: RequestInit): Promise<UrRecete_GrupluListeGetResponse> => {
@@ -92583,7 +92584,7 @@ export const getUrReceteOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrRecete/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/UrRecete/${id}/OnayDurumu`
 }
 
 export const UrRecete_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<UrRecete_OnayDurumuGetResponse> => {
@@ -92645,7 +92646,7 @@ export const getUrReceteDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrRecete/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrRecete/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrRecete/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/UrRecete/${id}/DegisiklikGecmisi`
 }
 
 export const UrRecete_DegisiklikGecmisiGet = async (id: number,
@@ -92708,7 +92709,7 @@ export const getUrReceteBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrRecete/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrRecete/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrRecete/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/UrRecete/${id}/Belgeler`
 }
 
 export const UrRecete_BelgelerGet = async (id: number,
@@ -92771,7 +92772,7 @@ export const getUrReceteBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrRecete/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrRecete/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrRecete/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/UrRecete/${id}/BelgeEkle`
 }
 
 export const UrRecete_BelgeEklePost = async (id: number,
@@ -92835,7 +92836,7 @@ export const getUrReceteBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrRecete/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrRecete/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrRecete/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/UrRecete/${id}/BelgeSil/${belgeID}`
 }
 
 export const UrRecete_BelgeSilDelete = async (id: number,
@@ -92899,7 +92900,7 @@ export const getUrReceteNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrRecete/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrRecete/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrRecete/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/UrRecete/${id}/Notlar`
 }
 
 export const UrRecete_NotlarGet = async (id: number,
@@ -92954,7 +92955,7 @@ export const getUrReceteNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrRecete/${id}/NotEkle`
+  return `${getBaseUrl()}/api/UrRecete/${id}/NotEkle`
 }
 
 export const UrRecete_NotEklePost = async (id: number,
@@ -93011,7 +93012,7 @@ export const getUrReceteNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/UrRecete/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/UrRecete/${id}/NotSil/${notID}`
 }
 
 export const UrRecete_NotSilDelete = async (id: number,
@@ -93066,7 +93067,7 @@ export const getUrReceteOperasyonYariMamulKopyalaYapistirPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyon/YariMamulKopyalaYapistir`
+  return `${getBaseUrl()}/api/UrReceteOperasyon/YariMamulKopyalaYapistir`
 }
 
 export const UrReceteOperasyon_YariMamulKopyalaYapistirPost = async (aaroModullerUrReceteOperasyonKayitSadeYariMamulReceteKopyala: AaroModullerUrReceteOperasyonKayitSadeYariMamulReceteKopyala, options?: RequestInit): Promise<UrReceteOperasyon_YariMamulKopyalaYapistirPostResponse> => {
@@ -93121,7 +93122,7 @@ export const getUrReceteOperasyonGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyon/${id}`
+  return `${getBaseUrl()}/api/UrReceteOperasyon/${id}`
 }
 
 export const UrReceteOperasyon_GetGet = async (id: number, options?: RequestInit): Promise<UrReceteOperasyon_GetGetResponse> => {
@@ -93175,7 +93176,7 @@ export const getUrReceteOperasyonPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyon/${id}`
+  return `${getBaseUrl()}/api/UrReceteOperasyon/${id}`
 }
 
 export const UrReceteOperasyon_PutPut = async (id: number,
@@ -93231,7 +93232,7 @@ export const getUrReceteOperasyonDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyon/${id}`
+  return `${getBaseUrl()}/api/UrReceteOperasyon/${id}`
 }
 
 export const UrReceteOperasyon_DeleteDelete = async (id: number, options?: RequestInit): Promise<UrReceteOperasyon_DeleteDeleteResponse> => {
@@ -93292,7 +93293,7 @@ export const getUrReceteOperasyonListeGetGetUrl = (params?: UrReceteOperasyonLis
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyon?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyon`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyon?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyon`
 }
 
 export const UrReceteOperasyon_ListeGetGet = async (params?: UrReceteOperasyonListeGetGetParams, options?: RequestInit): Promise<UrReceteOperasyon_ListeGetGetResponse> => {
@@ -93346,7 +93347,7 @@ export const getUrReceteOperasyonPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyon`
+  return `${getBaseUrl()}/api/UrReceteOperasyon`
 }
 
 export const UrReceteOperasyon_PostPost = async (aaroModullerUrReceteOperasyonKayitSadeKayitModelBody: AaroModullerUrReceteOperasyonKayitSadeKayitModelBody, options?: RequestInit): Promise<UrReceteOperasyon_PostPostResponse> => {
@@ -93408,7 +93409,7 @@ export const getUrReceteOperasyonOnaylaPostUrl = (params: UrReceteOperasyonOnayl
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyon/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyon/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyon/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyon/Onayla`
 }
 
 export const UrReceteOperasyon_OnaylaPost = async (params: UrReceteOperasyonOnaylaPostParams, options?: RequestInit): Promise<UrReceteOperasyon_OnaylaPostResponse> => {
@@ -93469,7 +93470,7 @@ export const getUrReceteOperasyonReddetPostUrl = (params: UrReceteOperasyonRedde
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyon/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyon/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyon/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyon/Reddet`
 }
 
 export const UrReceteOperasyon_ReddetPost = async (params: UrReceteOperasyonReddetPostParams, options?: RequestInit): Promise<UrReceteOperasyon_ReddetPostResponse> => {
@@ -93530,7 +93531,7 @@ export const getUrReceteOperasyonListeEsnekGetUrl = (params?: UrReceteOperasyonL
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyon/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyon/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyon/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyon/Liste`
 }
 
 export const UrReceteOperasyon_ListeEsnekGet = async (params?: UrReceteOperasyonListeEsnekGetParams, options?: RequestInit): Promise<UrReceteOperasyon_ListeEsnekGetResponse> => {
@@ -93584,7 +93585,7 @@ export const getUrReceteOperasyonListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyon/Liste`
+  return `${getBaseUrl()}/api/UrReceteOperasyon/Liste`
 }
 
 export const UrReceteOperasyon_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<UrReceteOperasyon_ListePostPostResponse> => {
@@ -93646,7 +93647,7 @@ export const getUrReceteOperasyonGrupluListeGetUrl = (params: UrReceteOperasyonG
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyon/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyon/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyon/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyon/GrupluListe`
 }
 
 export const UrReceteOperasyon_GrupluListeGet = async (params: UrReceteOperasyonGrupluListeGetParams, options?: RequestInit): Promise<UrReceteOperasyon_GrupluListeGetResponse> => {
@@ -93700,7 +93701,7 @@ export const getUrReceteOperasyonOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyon/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/UrReceteOperasyon/${id}/OnayDurumu`
 }
 
 export const UrReceteOperasyon_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<UrReceteOperasyon_OnayDurumuGetResponse> => {
@@ -93762,7 +93763,7 @@ export const getUrReceteOperasyonDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyon/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyon/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyon/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyon/${id}/DegisiklikGecmisi`
 }
 
 export const UrReceteOperasyon_DegisiklikGecmisiGet = async (id: number,
@@ -93825,7 +93826,7 @@ export const getUrReceteOperasyonBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyon/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyon/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyon/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyon/${id}/Belgeler`
 }
 
 export const UrReceteOperasyon_BelgelerGet = async (id: number,
@@ -93888,7 +93889,7 @@ export const getUrReceteOperasyonBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyon/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyon/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyon/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyon/${id}/BelgeEkle`
 }
 
 export const UrReceteOperasyon_BelgeEklePost = async (id: number,
@@ -93952,7 +93953,7 @@ export const getUrReceteOperasyonBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyon/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyon/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyon/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyon/${id}/BelgeSil/${belgeID}`
 }
 
 export const UrReceteOperasyon_BelgeSilDelete = async (id: number,
@@ -94016,7 +94017,7 @@ export const getUrReceteOperasyonNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyon/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyon/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyon/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyon/${id}/Notlar`
 }
 
 export const UrReceteOperasyon_NotlarGet = async (id: number,
@@ -94071,7 +94072,7 @@ export const getUrReceteOperasyonNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyon/${id}/NotEkle`
+  return `${getBaseUrl()}/api/UrReceteOperasyon/${id}/NotEkle`
 }
 
 export const UrReceteOperasyon_NotEklePost = async (id: number,
@@ -94128,7 +94129,7 @@ export const getUrReceteOperasyonNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyon/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/UrReceteOperasyon/${id}/NotSil/${notID}`
 }
 
 export const UrReceteOperasyon_NotSilDelete = async (id: number,
@@ -94183,7 +94184,7 @@ export const getUrReceteOperasyonHammaddeGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/${id}`
+  return `${getBaseUrl()}/api/UrReceteOperasyonHammadde/${id}`
 }
 
 export const UrReceteOperasyonHammadde_GetGet = async (id: number, options?: RequestInit): Promise<UrReceteOperasyonHammadde_GetGetResponse> => {
@@ -94237,7 +94238,7 @@ export const getUrReceteOperasyonHammaddePutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/${id}`
+  return `${getBaseUrl()}/api/UrReceteOperasyonHammadde/${id}`
 }
 
 export const UrReceteOperasyonHammadde_PutPut = async (id: number,
@@ -94293,7 +94294,7 @@ export const getUrReceteOperasyonHammaddeDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/${id}`
+  return `${getBaseUrl()}/api/UrReceteOperasyonHammadde/${id}`
 }
 
 export const UrReceteOperasyonHammadde_DeleteDelete = async (id: number, options?: RequestInit): Promise<UrReceteOperasyonHammadde_DeleteDeleteResponse> => {
@@ -94354,7 +94355,7 @@ export const getUrReceteOperasyonHammaddeListeGetGetUrl = (params?: UrReceteOper
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyonHammadde?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyonHammadde`
 }
 
 export const UrReceteOperasyonHammadde_ListeGetGet = async (params?: UrReceteOperasyonHammaddeListeGetGetParams, options?: RequestInit): Promise<UrReceteOperasyonHammadde_ListeGetGetResponse> => {
@@ -94408,7 +94409,7 @@ export const getUrReceteOperasyonHammaddePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde`
+  return `${getBaseUrl()}/api/UrReceteOperasyonHammadde`
 }
 
 export const UrReceteOperasyonHammadde_PostPost = async (aaroModullerUrReceteOperasyonHammaddeKayitSadeKayitModelBody: AaroModullerUrReceteOperasyonHammaddeKayitSadeKayitModelBody, options?: RequestInit): Promise<UrReceteOperasyonHammadde_PostPostResponse> => {
@@ -94470,7 +94471,7 @@ export const getUrReceteOperasyonHammaddeOnaylaPostUrl = (params: UrReceteOperas
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyonHammadde/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyonHammadde/Onayla`
 }
 
 export const UrReceteOperasyonHammadde_OnaylaPost = async (params: UrReceteOperasyonHammaddeOnaylaPostParams, options?: RequestInit): Promise<UrReceteOperasyonHammadde_OnaylaPostResponse> => {
@@ -94531,7 +94532,7 @@ export const getUrReceteOperasyonHammaddeReddetPostUrl = (params: UrReceteOperas
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyonHammadde/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyonHammadde/Reddet`
 }
 
 export const UrReceteOperasyonHammadde_ReddetPost = async (params: UrReceteOperasyonHammaddeReddetPostParams, options?: RequestInit): Promise<UrReceteOperasyonHammadde_ReddetPostResponse> => {
@@ -94592,7 +94593,7 @@ export const getUrReceteOperasyonHammaddeListeEsnekGetUrl = (params?: UrReceteOp
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyonHammadde/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyonHammadde/Liste`
 }
 
 export const UrReceteOperasyonHammadde_ListeEsnekGet = async (params?: UrReceteOperasyonHammaddeListeEsnekGetParams, options?: RequestInit): Promise<UrReceteOperasyonHammadde_ListeEsnekGetResponse> => {
@@ -94646,7 +94647,7 @@ export const getUrReceteOperasyonHammaddeListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/Liste`
+  return `${getBaseUrl()}/api/UrReceteOperasyonHammadde/Liste`
 }
 
 export const UrReceteOperasyonHammadde_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<UrReceteOperasyonHammadde_ListePostPostResponse> => {
@@ -94708,7 +94709,7 @@ export const getUrReceteOperasyonHammaddeGrupluListeGetUrl = (params: UrReceteOp
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyonHammadde/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyonHammadde/GrupluListe`
 }
 
 export const UrReceteOperasyonHammadde_GrupluListeGet = async (params: UrReceteOperasyonHammaddeGrupluListeGetParams, options?: RequestInit): Promise<UrReceteOperasyonHammadde_GrupluListeGetResponse> => {
@@ -94762,7 +94763,7 @@ export const getUrReceteOperasyonHammaddeOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/UrReceteOperasyonHammadde/${id}/OnayDurumu`
 }
 
 export const UrReceteOperasyonHammadde_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<UrReceteOperasyonHammadde_OnayDurumuGetResponse> => {
@@ -94824,7 +94825,7 @@ export const getUrReceteOperasyonHammaddeDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyonHammadde/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyonHammadde/${id}/DegisiklikGecmisi`
 }
 
 export const UrReceteOperasyonHammadde_DegisiklikGecmisiGet = async (id: number,
@@ -94887,7 +94888,7 @@ export const getUrReceteOperasyonHammaddeBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyonHammadde/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyonHammadde/${id}/Belgeler`
 }
 
 export const UrReceteOperasyonHammadde_BelgelerGet = async (id: number,
@@ -94950,7 +94951,7 @@ export const getUrReceteOperasyonHammaddeBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyonHammadde/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyonHammadde/${id}/BelgeEkle`
 }
 
 export const UrReceteOperasyonHammadde_BelgeEklePost = async (id: number,
@@ -95014,7 +95015,7 @@ export const getUrReceteOperasyonHammaddeBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyonHammadde/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyonHammadde/${id}/BelgeSil/${belgeID}`
 }
 
 export const UrReceteOperasyonHammadde_BelgeSilDelete = async (id: number,
@@ -95078,7 +95079,7 @@ export const getUrReceteOperasyonHammaddeNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyonHammadde/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyonHammadde/${id}/Notlar`
 }
 
 export const UrReceteOperasyonHammadde_NotlarGet = async (id: number,
@@ -95133,7 +95134,7 @@ export const getUrReceteOperasyonHammaddeNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/${id}/NotEkle`
+  return `${getBaseUrl()}/api/UrReceteOperasyonHammadde/${id}/NotEkle`
 }
 
 export const UrReceteOperasyonHammadde_NotEklePost = async (id: number,
@@ -95190,7 +95191,7 @@ export const getUrReceteOperasyonHammaddeNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyonHammadde/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/UrReceteOperasyonHammadde/${id}/NotSil/${notID}`
 }
 
 export const UrReceteOperasyonHammadde_NotSilDelete = async (id: number,
@@ -95245,7 +95246,7 @@ export const getUrReceteOperasyonMamulZincirSilDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/ZincirSil/${id}`
+  return `${getBaseUrl()}/api/UrReceteOperasyonMamul/ZincirSil/${id}`
 }
 
 export const UrReceteOperasyonMamul_ZincirSilDelete = async (id: number, options?: RequestInit): Promise<UrReceteOperasyonMamul_ZincirSilDeleteResponse> => {
@@ -95299,7 +95300,7 @@ export const getUrReceteOperasyonMamulYariMamulGetirGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/YariMamulGetir/${id}`
+  return `${getBaseUrl()}/api/UrReceteOperasyonMamul/YariMamulGetir/${id}`
 }
 
 export const UrReceteOperasyonMamul_YariMamulGetirGet = async (id: number, options?: RequestInit): Promise<UrReceteOperasyonMamul_YariMamulGetirGetResponse> => {
@@ -95353,7 +95354,7 @@ export const getUrReceteOperasyonMamulYariMamulKaydetPutUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/YariMamulKaydet`
+  return `${getBaseUrl()}/api/UrReceteOperasyonMamul/YariMamulKaydet`
 }
 
 export const UrReceteOperasyonMamul_YariMamulKaydetPut = async (aaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModel: AaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModel, options?: RequestInit): Promise<UrReceteOperasyonMamul_YariMamulKaydetPutResponse> => {
@@ -95408,7 +95409,7 @@ export const getUrReceteOperasyonMamulGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/${id}`
+  return `${getBaseUrl()}/api/UrReceteOperasyonMamul/${id}`
 }
 
 export const UrReceteOperasyonMamul_GetGet = async (id: number, options?: RequestInit): Promise<UrReceteOperasyonMamul_GetGetResponse> => {
@@ -95462,7 +95463,7 @@ export const getUrReceteOperasyonMamulPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/${id}`
+  return `${getBaseUrl()}/api/UrReceteOperasyonMamul/${id}`
 }
 
 export const UrReceteOperasyonMamul_PutPut = async (id: number,
@@ -95518,7 +95519,7 @@ export const getUrReceteOperasyonMamulDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/${id}`
+  return `${getBaseUrl()}/api/UrReceteOperasyonMamul/${id}`
 }
 
 export const UrReceteOperasyonMamul_DeleteDelete = async (id: number, options?: RequestInit): Promise<UrReceteOperasyonMamul_DeleteDeleteResponse> => {
@@ -95579,7 +95580,7 @@ export const getUrReceteOperasyonMamulListeGetGetUrl = (params?: UrReceteOperasy
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyonMamul?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyonMamul`
 }
 
 export const UrReceteOperasyonMamul_ListeGetGet = async (params?: UrReceteOperasyonMamulListeGetGetParams, options?: RequestInit): Promise<UrReceteOperasyonMamul_ListeGetGetResponse> => {
@@ -95633,7 +95634,7 @@ export const getUrReceteOperasyonMamulPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul`
+  return `${getBaseUrl()}/api/UrReceteOperasyonMamul`
 }
 
 export const UrReceteOperasyonMamul_PostPost = async (aaroModullerUrReceteOperasyonMamulKayitSadeKayitModelBody: AaroModullerUrReceteOperasyonMamulKayitSadeKayitModelBody, options?: RequestInit): Promise<UrReceteOperasyonMamul_PostPostResponse> => {
@@ -95695,7 +95696,7 @@ export const getUrReceteOperasyonMamulOnaylaPostUrl = (params: UrReceteOperasyon
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyonMamul/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyonMamul/Onayla`
 }
 
 export const UrReceteOperasyonMamul_OnaylaPost = async (params: UrReceteOperasyonMamulOnaylaPostParams, options?: RequestInit): Promise<UrReceteOperasyonMamul_OnaylaPostResponse> => {
@@ -95756,7 +95757,7 @@ export const getUrReceteOperasyonMamulReddetPostUrl = (params: UrReceteOperasyon
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyonMamul/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyonMamul/Reddet`
 }
 
 export const UrReceteOperasyonMamul_ReddetPost = async (params: UrReceteOperasyonMamulReddetPostParams, options?: RequestInit): Promise<UrReceteOperasyonMamul_ReddetPostResponse> => {
@@ -95817,7 +95818,7 @@ export const getUrReceteOperasyonMamulListeEsnekGetUrl = (params?: UrReceteOpera
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyonMamul/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyonMamul/Liste`
 }
 
 export const UrReceteOperasyonMamul_ListeEsnekGet = async (params?: UrReceteOperasyonMamulListeEsnekGetParams, options?: RequestInit): Promise<UrReceteOperasyonMamul_ListeEsnekGetResponse> => {
@@ -95871,7 +95872,7 @@ export const getUrReceteOperasyonMamulListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/Liste`
+  return `${getBaseUrl()}/api/UrReceteOperasyonMamul/Liste`
 }
 
 export const UrReceteOperasyonMamul_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<UrReceteOperasyonMamul_ListePostPostResponse> => {
@@ -95933,7 +95934,7 @@ export const getUrReceteOperasyonMamulGrupluListeGetUrl = (params: UrReceteOpera
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyonMamul/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyonMamul/GrupluListe`
 }
 
 export const UrReceteOperasyonMamul_GrupluListeGet = async (params: UrReceteOperasyonMamulGrupluListeGetParams, options?: RequestInit): Promise<UrReceteOperasyonMamul_GrupluListeGetResponse> => {
@@ -95987,7 +95988,7 @@ export const getUrReceteOperasyonMamulOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/UrReceteOperasyonMamul/${id}/OnayDurumu`
 }
 
 export const UrReceteOperasyonMamul_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<UrReceteOperasyonMamul_OnayDurumuGetResponse> => {
@@ -96049,7 +96050,7 @@ export const getUrReceteOperasyonMamulDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyonMamul/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyonMamul/${id}/DegisiklikGecmisi`
 }
 
 export const UrReceteOperasyonMamul_DegisiklikGecmisiGet = async (id: number,
@@ -96112,7 +96113,7 @@ export const getUrReceteOperasyonMamulBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyonMamul/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyonMamul/${id}/Belgeler`
 }
 
 export const UrReceteOperasyonMamul_BelgelerGet = async (id: number,
@@ -96175,7 +96176,7 @@ export const getUrReceteOperasyonMamulBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyonMamul/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyonMamul/${id}/BelgeEkle`
 }
 
 export const UrReceteOperasyonMamul_BelgeEklePost = async (id: number,
@@ -96239,7 +96240,7 @@ export const getUrReceteOperasyonMamulBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyonMamul/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyonMamul/${id}/BelgeSil/${belgeID}`
 }
 
 export const UrReceteOperasyonMamul_BelgeSilDelete = async (id: number,
@@ -96303,7 +96304,7 @@ export const getUrReceteOperasyonMamulNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/UrReceteOperasyonMamul/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/UrReceteOperasyonMamul/${id}/Notlar`
 }
 
 export const UrReceteOperasyonMamul_NotlarGet = async (id: number,
@@ -96358,7 +96359,7 @@ export const getUrReceteOperasyonMamulNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/${id}/NotEkle`
+  return `${getBaseUrl()}/api/UrReceteOperasyonMamul/${id}/NotEkle`
 }
 
 export const UrReceteOperasyonMamul_NotEklePost = async (id: number,
@@ -96415,7 +96416,7 @@ export const getUrReceteOperasyonMamulNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/UrReceteOperasyonMamul/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/UrReceteOperasyonMamul/${id}/NotSil/${notID}`
 }
 
 export const UrReceteOperasyonMamul_NotSilDelete = async (id: number,
@@ -96470,7 +96471,7 @@ export const getVergiDairesiGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/VergiDairesi/${id}`
+  return `${getBaseUrl()}/api/VergiDairesi/${id}`
 }
 
 export const VergiDairesi_GetGet = async (id: number, options?: RequestInit): Promise<VergiDairesi_GetGetResponse> => {
@@ -96524,7 +96525,7 @@ export const getVergiDairesiPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/VergiDairesi/${id}`
+  return `${getBaseUrl()}/api/VergiDairesi/${id}`
 }
 
 export const VergiDairesi_PutPut = async (id: number,
@@ -96580,7 +96581,7 @@ export const getVergiDairesiDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/VergiDairesi/${id}`
+  return `${getBaseUrl()}/api/VergiDairesi/${id}`
 }
 
 export const VergiDairesi_DeleteDelete = async (id: number, options?: RequestInit): Promise<VergiDairesi_DeleteDeleteResponse> => {
@@ -96641,7 +96642,7 @@ export const getVergiDairesiListeGetGetUrl = (params?: VergiDairesiListeGetGetPa
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/VergiDairesi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/VergiDairesi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/VergiDairesi?${stringifiedParams}` : `${getBaseUrl()}/api/VergiDairesi`
 }
 
 export const VergiDairesi_ListeGetGet = async (params?: VergiDairesiListeGetGetParams, options?: RequestInit): Promise<VergiDairesi_ListeGetGetResponse> => {
@@ -96695,7 +96696,7 @@ export const getVergiDairesiPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/VergiDairesi`
+  return `${getBaseUrl()}/api/VergiDairesi`
 }
 
 export const VergiDairesi_PostPost = async (aaroModullerVergiDairesiKayitSadeKayitModelBody: AaroModullerVergiDairesiKayitSadeKayitModelBody, options?: RequestInit): Promise<VergiDairesi_PostPostResponse> => {
@@ -96757,7 +96758,7 @@ export const getVergiDairesiOnaylaPostUrl = (params: VergiDairesiOnaylaPostParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/VergiDairesi/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/VergiDairesi/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/VergiDairesi/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/VergiDairesi/Onayla`
 }
 
 export const VergiDairesi_OnaylaPost = async (params: VergiDairesiOnaylaPostParams, options?: RequestInit): Promise<VergiDairesi_OnaylaPostResponse> => {
@@ -96818,7 +96819,7 @@ export const getVergiDairesiReddetPostUrl = (params: VergiDairesiReddetPostParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/VergiDairesi/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/VergiDairesi/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/VergiDairesi/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/VergiDairesi/Reddet`
 }
 
 export const VergiDairesi_ReddetPost = async (params: VergiDairesiReddetPostParams, options?: RequestInit): Promise<VergiDairesi_ReddetPostResponse> => {
@@ -96879,7 +96880,7 @@ export const getVergiDairesiListeEsnekGetUrl = (params?: VergiDairesiListeEsnekG
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/VergiDairesi/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/VergiDairesi/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/VergiDairesi/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/VergiDairesi/Liste`
 }
 
 export const VergiDairesi_ListeEsnekGet = async (params?: VergiDairesiListeEsnekGetParams, options?: RequestInit): Promise<VergiDairesi_ListeEsnekGetResponse> => {
@@ -96933,7 +96934,7 @@ export const getVergiDairesiListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/VergiDairesi/Liste`
+  return `${getBaseUrl()}/api/VergiDairesi/Liste`
 }
 
 export const VergiDairesi_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<VergiDairesi_ListePostPostResponse> => {
@@ -96995,7 +96996,7 @@ export const getVergiDairesiGrupluListeGetUrl = (params: VergiDairesiGrupluListe
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/VergiDairesi/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/VergiDairesi/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/VergiDairesi/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/VergiDairesi/GrupluListe`
 }
 
 export const VergiDairesi_GrupluListeGet = async (params: VergiDairesiGrupluListeGetParams, options?: RequestInit): Promise<VergiDairesi_GrupluListeGetResponse> => {
@@ -97049,7 +97050,7 @@ export const getVergiDairesiOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/VergiDairesi/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/VergiDairesi/${id}/OnayDurumu`
 }
 
 export const VergiDairesi_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<VergiDairesi_OnayDurumuGetResponse> => {
@@ -97111,7 +97112,7 @@ export const getVergiDairesiDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/VergiDairesi/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/VergiDairesi/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/VergiDairesi/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/VergiDairesi/${id}/DegisiklikGecmisi`
 }
 
 export const VergiDairesi_DegisiklikGecmisiGet = async (id: number,
@@ -97174,7 +97175,7 @@ export const getVergiDairesiBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/VergiDairesi/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/VergiDairesi/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/VergiDairesi/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/VergiDairesi/${id}/Belgeler`
 }
 
 export const VergiDairesi_BelgelerGet = async (id: number,
@@ -97237,7 +97238,7 @@ export const getVergiDairesiBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/VergiDairesi/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/VergiDairesi/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/VergiDairesi/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/VergiDairesi/${id}/BelgeEkle`
 }
 
 export const VergiDairesi_BelgeEklePost = async (id: number,
@@ -97301,7 +97302,7 @@ export const getVergiDairesiBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/VergiDairesi/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/VergiDairesi/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/VergiDairesi/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/VergiDairesi/${id}/BelgeSil/${belgeID}`
 }
 
 export const VergiDairesi_BelgeSilDelete = async (id: number,
@@ -97365,7 +97366,7 @@ export const getVergiDairesiNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/VergiDairesi/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/VergiDairesi/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/VergiDairesi/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/VergiDairesi/${id}/Notlar`
 }
 
 export const VergiDairesi_NotlarGet = async (id: number,
@@ -97420,7 +97421,7 @@ export const getVergiDairesiNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/VergiDairesi/${id}/NotEkle`
+  return `${getBaseUrl()}/api/VergiDairesi/${id}/NotEkle`
 }
 
 export const VergiDairesi_NotEklePost = async (id: number,
@@ -97477,7 +97478,7 @@ export const getVergiDairesiNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/VergiDairesi/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/VergiDairesi/${id}/NotSil/${notID}`
 }
 
 export const VergiDairesi_NotSilDelete = async (id: number,
@@ -97539,7 +97540,7 @@ export const getVergiHareketleriDetayliListeGetUrl = (params?: VergiHareketleriD
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/VergiHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/VergiHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/VergiHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/VergiHareketleri`
 }
 
 export const VergiHareketleri_DetayliListeGet = async (params?: VergiHareketleriDetayliListeGetParams, options?: RequestInit): Promise<VergiHareketleri_DetayliListeGetResponse> => {
@@ -97600,7 +97601,7 @@ export const getVerilenSiparisHareketleriDetayliListeGetUrl = (params?: VerilenS
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/VerilenSiparisHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/VerilenSiparisHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/VerilenSiparisHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/VerilenSiparisHareketleri`
 }
 
 export const VerilenSiparisHareketleri_DetayliListeGet = async (params?: VerilenSiparisHareketleriDetayliListeGetParams, options?: RequestInit): Promise<VerilenSiparisHareketleri_DetayliListeGetResponse> => {
@@ -97661,7 +97662,7 @@ export const getVerilenSiparisListeDetayliListeGetUrl = (params?: VerilenSiparis
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/VerilenSiparisListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/VerilenSiparisListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/VerilenSiparisListe?${stringifiedParams}` : `${getBaseUrl()}/api/VerilenSiparisListe`
 }
 
 export const VerilenSiparisListe_DetayliListeGet = async (params?: VerilenSiparisListeDetayliListeGetParams, options?: RequestInit): Promise<VerilenSiparisListe_DetayliListeGetResponse> => {
@@ -97722,7 +97723,7 @@ export const getVerilenTeklifHareketleriDetayliListeGetUrl = (params?: VerilenTe
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/VerilenTeklifHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/VerilenTeklifHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/VerilenTeklifHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/VerilenTeklifHareketleri`
 }
 
 export const VerilenTeklifHareketleri_DetayliListeGet = async (params?: VerilenTeklifHareketleriDetayliListeGetParams, options?: RequestInit): Promise<VerilenTeklifHareketleri_DetayliListeGetResponse> => {
@@ -97783,7 +97784,7 @@ export const getVerilenTeklifListeDetayliListeGetUrl = (params?: VerilenTeklifLi
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/VerilenTeklifListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/VerilenTeklifListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/VerilenTeklifListe?${stringifiedParams}` : `${getBaseUrl()}/api/VerilenTeklifListe`
 }
 
 export const VerilenTeklifListe_DetayliListeGet = async (params?: VerilenTeklifListeDetayliListeGetParams, options?: RequestInit): Promise<VerilenTeklifListe_DetayliListeGetResponse> => {
@@ -97837,7 +97838,7 @@ export const getYetkilerGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Yetkiler/${id}`
+  return `${getBaseUrl()}/api/Yetkiler/${id}`
 }
 
 export const Yetkiler_GetGet = async (id: number, options?: RequestInit): Promise<Yetkiler_GetGetResponse> => {
@@ -97891,7 +97892,7 @@ export const getYetkilerPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Yetkiler/${id}`
+  return `${getBaseUrl()}/api/Yetkiler/${id}`
 }
 
 export const Yetkiler_PutPut = async (id: number,
@@ -97947,7 +97948,7 @@ export const getYetkilerDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Yetkiler/${id}`
+  return `${getBaseUrl()}/api/Yetkiler/${id}`
 }
 
 export const Yetkiler_DeleteDelete = async (id: number, options?: RequestInit): Promise<Yetkiler_DeleteDeleteResponse> => {
@@ -98008,7 +98009,7 @@ export const getYetkilerListeGetGetUrl = (params?: YetkilerListeGetGetParams,) =
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Yetkiler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Yetkiler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Yetkiler?${stringifiedParams}` : `${getBaseUrl()}/api/Yetkiler`
 }
 
 export const Yetkiler_ListeGetGet = async (params?: YetkilerListeGetGetParams, options?: RequestInit): Promise<Yetkiler_ListeGetGetResponse> => {
@@ -98062,7 +98063,7 @@ export const getYetkilerPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Yetkiler`
+  return `${getBaseUrl()}/api/Yetkiler`
 }
 
 export const Yetkiler_PostPost = async (aaroModullerYetkilerKayitSadeKayitModelBody: AaroModullerYetkilerKayitSadeKayitModelBody, options?: RequestInit): Promise<Yetkiler_PostPostResponse> => {
@@ -98124,7 +98125,7 @@ export const getYetkilerOnaylaPostUrl = (params: YetkilerOnaylaPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Yetkiler/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Yetkiler/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Yetkiler/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/Yetkiler/Onayla`
 }
 
 export const Yetkiler_OnaylaPost = async (params: YetkilerOnaylaPostParams, options?: RequestInit): Promise<Yetkiler_OnaylaPostResponse> => {
@@ -98185,7 +98186,7 @@ export const getYetkilerReddetPostUrl = (params: YetkilerReddetPostParams,) => {
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Yetkiler/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Yetkiler/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Yetkiler/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/Yetkiler/Reddet`
 }
 
 export const Yetkiler_ReddetPost = async (params: YetkilerReddetPostParams, options?: RequestInit): Promise<Yetkiler_ReddetPostResponse> => {
@@ -98246,7 +98247,7 @@ export const getYetkilerListeEsnekGetUrl = (params?: YetkilerListeEsnekGetParams
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Yetkiler/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Yetkiler/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Yetkiler/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/Yetkiler/Liste`
 }
 
 export const Yetkiler_ListeEsnekGet = async (params?: YetkilerListeEsnekGetParams, options?: RequestInit): Promise<Yetkiler_ListeEsnekGetResponse> => {
@@ -98300,7 +98301,7 @@ export const getYetkilerListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Yetkiler/Liste`
+  return `${getBaseUrl()}/api/Yetkiler/Liste`
 }
 
 export const Yetkiler_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<Yetkiler_ListePostPostResponse> => {
@@ -98362,7 +98363,7 @@ export const getYetkilerGrupluListeGetUrl = (params: YetkilerGrupluListeGetParam
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Yetkiler/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Yetkiler/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Yetkiler/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/Yetkiler/GrupluListe`
 }
 
 export const Yetkiler_GrupluListeGet = async (params: YetkilerGrupluListeGetParams, options?: RequestInit): Promise<Yetkiler_GrupluListeGetResponse> => {
@@ -98416,7 +98417,7 @@ export const getYetkilerOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Yetkiler/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/Yetkiler/${id}/OnayDurumu`
 }
 
 export const Yetkiler_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<Yetkiler_OnayDurumuGetResponse> => {
@@ -98478,7 +98479,7 @@ export const getYetkilerDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Yetkiler/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Yetkiler/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Yetkiler/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/Yetkiler/${id}/DegisiklikGecmisi`
 }
 
 export const Yetkiler_DegisiklikGecmisiGet = async (id: number,
@@ -98541,7 +98542,7 @@ export const getYetkilerBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Yetkiler/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Yetkiler/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Yetkiler/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/Yetkiler/${id}/Belgeler`
 }
 
 export const Yetkiler_BelgelerGet = async (id: number,
@@ -98604,7 +98605,7 @@ export const getYetkilerBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Yetkiler/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Yetkiler/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Yetkiler/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/Yetkiler/${id}/BelgeEkle`
 }
 
 export const Yetkiler_BelgeEklePost = async (id: number,
@@ -98668,7 +98669,7 @@ export const getYetkilerBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Yetkiler/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Yetkiler/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Yetkiler/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/Yetkiler/${id}/BelgeSil/${belgeID}`
 }
 
 export const Yetkiler_BelgeSilDelete = async (id: number,
@@ -98732,7 +98733,7 @@ export const getYetkilerNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/Yetkiler/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/Yetkiler/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/Yetkiler/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/Yetkiler/${id}/Notlar`
 }
 
 export const Yetkiler_NotlarGet = async (id: number,
@@ -98787,7 +98788,7 @@ export const getYetkilerNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/Yetkiler/${id}/NotEkle`
+  return `${getBaseUrl()}/api/Yetkiler/${id}/NotEkle`
 }
 
 export const Yetkiler_NotEklePost = async (id: number,
@@ -98844,7 +98845,7 @@ export const getYetkilerNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/Yetkiler/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/Yetkiler/${id}/NotSil/${notID}`
 }
 
 export const Yetkiler_NotSilDelete = async (id: number,
@@ -98899,7 +98900,7 @@ export const getYetkilerAltGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YetkilerAlt/${id}`
+  return `${getBaseUrl()}/api/YetkilerAlt/${id}`
 }
 
 export const YetkilerAlt_GetGet = async (id: number, options?: RequestInit): Promise<YetkilerAlt_GetGetResponse> => {
@@ -98953,7 +98954,7 @@ export const getYetkilerAltPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YetkilerAlt/${id}`
+  return `${getBaseUrl()}/api/YetkilerAlt/${id}`
 }
 
 export const YetkilerAlt_PutPut = async (id: number,
@@ -99009,7 +99010,7 @@ export const getYetkilerAltDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YetkilerAlt/${id}`
+  return `${getBaseUrl()}/api/YetkilerAlt/${id}`
 }
 
 export const YetkilerAlt_DeleteDelete = async (id: number, options?: RequestInit): Promise<YetkilerAlt_DeleteDeleteResponse> => {
@@ -99070,7 +99071,7 @@ export const getYetkilerAltListeGetGetUrl = (params?: YetkilerAltListeGetGetPara
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YetkilerAlt?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YetkilerAlt`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YetkilerAlt?${stringifiedParams}` : `${getBaseUrl()}/api/YetkilerAlt`
 }
 
 export const YetkilerAlt_ListeGetGet = async (params?: YetkilerAltListeGetGetParams, options?: RequestInit): Promise<YetkilerAlt_ListeGetGetResponse> => {
@@ -99124,7 +99125,7 @@ export const getYetkilerAltPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YetkilerAlt`
+  return `${getBaseUrl()}/api/YetkilerAlt`
 }
 
 export const YetkilerAlt_PostPost = async (aaroModullerYetkilerAltKayitSadeKayitModelBody: AaroModullerYetkilerAltKayitSadeKayitModelBody, options?: RequestInit): Promise<YetkilerAlt_PostPostResponse> => {
@@ -99186,7 +99187,7 @@ export const getYetkilerAltOnaylaPostUrl = (params: YetkilerAltOnaylaPostParams,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YetkilerAlt/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YetkilerAlt/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YetkilerAlt/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/YetkilerAlt/Onayla`
 }
 
 export const YetkilerAlt_OnaylaPost = async (params: YetkilerAltOnaylaPostParams, options?: RequestInit): Promise<YetkilerAlt_OnaylaPostResponse> => {
@@ -99247,7 +99248,7 @@ export const getYetkilerAltReddetPostUrl = (params: YetkilerAltReddetPostParams,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YetkilerAlt/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YetkilerAlt/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YetkilerAlt/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/YetkilerAlt/Reddet`
 }
 
 export const YetkilerAlt_ReddetPost = async (params: YetkilerAltReddetPostParams, options?: RequestInit): Promise<YetkilerAlt_ReddetPostResponse> => {
@@ -99308,7 +99309,7 @@ export const getYetkilerAltListeEsnekGetUrl = (params?: YetkilerAltListeEsnekGet
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YetkilerAlt/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YetkilerAlt/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YetkilerAlt/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/YetkilerAlt/Liste`
 }
 
 export const YetkilerAlt_ListeEsnekGet = async (params?: YetkilerAltListeEsnekGetParams, options?: RequestInit): Promise<YetkilerAlt_ListeEsnekGetResponse> => {
@@ -99362,7 +99363,7 @@ export const getYetkilerAltListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YetkilerAlt/Liste`
+  return `${getBaseUrl()}/api/YetkilerAlt/Liste`
 }
 
 export const YetkilerAlt_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<YetkilerAlt_ListePostPostResponse> => {
@@ -99424,7 +99425,7 @@ export const getYetkilerAltGrupluListeGetUrl = (params: YetkilerAltGrupluListeGe
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YetkilerAlt/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YetkilerAlt/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YetkilerAlt/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/YetkilerAlt/GrupluListe`
 }
 
 export const YetkilerAlt_GrupluListeGet = async (params: YetkilerAltGrupluListeGetParams, options?: RequestInit): Promise<YetkilerAlt_GrupluListeGetResponse> => {
@@ -99478,7 +99479,7 @@ export const getYetkilerAltOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YetkilerAlt/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/YetkilerAlt/${id}/OnayDurumu`
 }
 
 export const YetkilerAlt_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<YetkilerAlt_OnayDurumuGetResponse> => {
@@ -99540,7 +99541,7 @@ export const getYetkilerAltDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YetkilerAlt/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YetkilerAlt/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YetkilerAlt/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/YetkilerAlt/${id}/DegisiklikGecmisi`
 }
 
 export const YetkilerAlt_DegisiklikGecmisiGet = async (id: number,
@@ -99603,7 +99604,7 @@ export const getYetkilerAltBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YetkilerAlt/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YetkilerAlt/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YetkilerAlt/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/YetkilerAlt/${id}/Belgeler`
 }
 
 export const YetkilerAlt_BelgelerGet = async (id: number,
@@ -99666,7 +99667,7 @@ export const getYetkilerAltBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YetkilerAlt/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YetkilerAlt/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YetkilerAlt/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/YetkilerAlt/${id}/BelgeEkle`
 }
 
 export const YetkilerAlt_BelgeEklePost = async (id: number,
@@ -99730,7 +99731,7 @@ export const getYetkilerAltBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YetkilerAlt/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YetkilerAlt/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YetkilerAlt/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/YetkilerAlt/${id}/BelgeSil/${belgeID}`
 }
 
 export const YetkilerAlt_BelgeSilDelete = async (id: number,
@@ -99794,7 +99795,7 @@ export const getYetkilerAltNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YetkilerAlt/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YetkilerAlt/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YetkilerAlt/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/YetkilerAlt/${id}/Notlar`
 }
 
 export const YetkilerAlt_NotlarGet = async (id: number,
@@ -99849,7 +99850,7 @@ export const getYetkilerAltNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YetkilerAlt/${id}/NotEkle`
+  return `${getBaseUrl()}/api/YetkilerAlt/${id}/NotEkle`
 }
 
 export const YetkilerAlt_NotEklePost = async (id: number,
@@ -99906,7 +99907,7 @@ export const getYetkilerAltNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/YetkilerAlt/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/YetkilerAlt/${id}/NotSil/${notID}`
 }
 
 export const YetkilerAlt_NotSilDelete = async (id: number,
@@ -99961,7 +99962,7 @@ export const getYevmiyeFisGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YevmiyeFis/${id}`
+  return `${getBaseUrl()}/api/YevmiyeFis/${id}`
 }
 
 export const YevmiyeFis_GetGet = async (id: number, options?: RequestInit): Promise<YevmiyeFis_GetGetResponse> => {
@@ -100015,7 +100016,7 @@ export const getYevmiyeFisPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YevmiyeFis/${id}`
+  return `${getBaseUrl()}/api/YevmiyeFis/${id}`
 }
 
 export const YevmiyeFis_PutPut = async (id: number,
@@ -100071,7 +100072,7 @@ export const getYevmiyeFisDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YevmiyeFis/${id}`
+  return `${getBaseUrl()}/api/YevmiyeFis/${id}`
 }
 
 export const YevmiyeFis_DeleteDelete = async (id: number, options?: RequestInit): Promise<YevmiyeFis_DeleteDeleteResponse> => {
@@ -100132,7 +100133,7 @@ export const getYevmiyeFisDetayliListeGetUrl = (params?: YevmiyeFisDetayliListeG
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YevmiyeFis?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YevmiyeFis`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YevmiyeFis?${stringifiedParams}` : `${getBaseUrl()}/api/YevmiyeFis`
 }
 
 export const YevmiyeFis_DetayliListeGet = async (params?: YevmiyeFisDetayliListeGetParams, options?: RequestInit): Promise<YevmiyeFis_DetayliListeGetResponse> => {
@@ -100186,7 +100187,7 @@ export const getYevmiyeFisPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YevmiyeFis`
+  return `${getBaseUrl()}/api/YevmiyeFis`
 }
 
 export const YevmiyeFis_PostPost = async (aaroModullerYevmiyeFisKayitSadeKayitModelBody: AaroModullerYevmiyeFisKayitSadeKayitModelBody, options?: RequestInit): Promise<YevmiyeFis_PostPostResponse> => {
@@ -100248,7 +100249,7 @@ export const getYevmiyeFisOnaylaPostUrl = (params: YevmiyeFisOnaylaPostParams,) 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YevmiyeFis/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YevmiyeFis/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YevmiyeFis/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/YevmiyeFis/Onayla`
 }
 
 export const YevmiyeFis_OnaylaPost = async (params: YevmiyeFisOnaylaPostParams, options?: RequestInit): Promise<YevmiyeFis_OnaylaPostResponse> => {
@@ -100309,7 +100310,7 @@ export const getYevmiyeFisReddetPostUrl = (params: YevmiyeFisReddetPostParams,) 
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YevmiyeFis/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YevmiyeFis/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YevmiyeFis/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/YevmiyeFis/Reddet`
 }
 
 export const YevmiyeFis_ReddetPost = async (params: YevmiyeFisReddetPostParams, options?: RequestInit): Promise<YevmiyeFis_ReddetPostResponse> => {
@@ -100370,7 +100371,7 @@ export const getYevmiyeFisListeEsnekGetUrl = (params?: YevmiyeFisListeEsnekGetPa
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YevmiyeFis/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YevmiyeFis/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YevmiyeFis/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/YevmiyeFis/Liste`
 }
 
 export const YevmiyeFis_ListeEsnekGet = async (params?: YevmiyeFisListeEsnekGetParams, options?: RequestInit): Promise<YevmiyeFis_ListeEsnekGetResponse> => {
@@ -100424,7 +100425,7 @@ export const getYevmiyeFisListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YevmiyeFis/Liste`
+  return `${getBaseUrl()}/api/YevmiyeFis/Liste`
 }
 
 export const YevmiyeFis_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<YevmiyeFis_ListePostPostResponse> => {
@@ -100486,7 +100487,7 @@ export const getYevmiyeFisGrupluListeGetUrl = (params: YevmiyeFisGrupluListeGetP
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YevmiyeFis/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YevmiyeFis/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YevmiyeFis/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/YevmiyeFis/GrupluListe`
 }
 
 export const YevmiyeFis_GrupluListeGet = async (params: YevmiyeFisGrupluListeGetParams, options?: RequestInit): Promise<YevmiyeFis_GrupluListeGetResponse> => {
@@ -100540,7 +100541,7 @@ export const getYevmiyeFisOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YevmiyeFis/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/YevmiyeFis/${id}/OnayDurumu`
 }
 
 export const YevmiyeFis_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<YevmiyeFis_OnayDurumuGetResponse> => {
@@ -100602,7 +100603,7 @@ export const getYevmiyeFisDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YevmiyeFis/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YevmiyeFis/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YevmiyeFis/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/YevmiyeFis/${id}/DegisiklikGecmisi`
 }
 
 export const YevmiyeFis_DegisiklikGecmisiGet = async (id: number,
@@ -100665,7 +100666,7 @@ export const getYevmiyeFisBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YevmiyeFis/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YevmiyeFis/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YevmiyeFis/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/YevmiyeFis/${id}/Belgeler`
 }
 
 export const YevmiyeFis_BelgelerGet = async (id: number,
@@ -100728,7 +100729,7 @@ export const getYevmiyeFisBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YevmiyeFis/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YevmiyeFis/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YevmiyeFis/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/YevmiyeFis/${id}/BelgeEkle`
 }
 
 export const YevmiyeFis_BelgeEklePost = async (id: number,
@@ -100792,7 +100793,7 @@ export const getYevmiyeFisBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YevmiyeFis/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YevmiyeFis/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YevmiyeFis/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/YevmiyeFis/${id}/BelgeSil/${belgeID}`
 }
 
 export const YevmiyeFis_BelgeSilDelete = async (id: number,
@@ -100856,7 +100857,7 @@ export const getYevmiyeFisNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YevmiyeFis/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YevmiyeFis/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YevmiyeFis/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/YevmiyeFis/${id}/Notlar`
 }
 
 export const YevmiyeFis_NotlarGet = async (id: number,
@@ -100911,7 +100912,7 @@ export const getYevmiyeFisNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YevmiyeFis/${id}/NotEkle`
+  return `${getBaseUrl()}/api/YevmiyeFis/${id}/NotEkle`
 }
 
 export const YevmiyeFis_NotEklePost = async (id: number,
@@ -100968,7 +100969,7 @@ export const getYevmiyeFisNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/YevmiyeFis/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/YevmiyeFis/${id}/NotSil/${notID}`
 }
 
 export const YevmiyeFis_NotSilDelete = async (id: number,
@@ -101023,7 +101024,7 @@ export const getYevmiyeFisHareketleriGetGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/${id}`
+  return `${getBaseUrl()}/api/YevmiyeFisHareketleri/${id}`
 }
 
 export const YevmiyeFisHareketleri_GetGet = async (id: number, options?: RequestInit): Promise<YevmiyeFisHareketleri_GetGetResponse> => {
@@ -101077,7 +101078,7 @@ export const getYevmiyeFisHareketleriPutPutUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/${id}`
+  return `${getBaseUrl()}/api/YevmiyeFisHareketleri/${id}`
 }
 
 export const YevmiyeFisHareketleri_PutPut = async (id: number,
@@ -101133,7 +101134,7 @@ export const getYevmiyeFisHareketleriDeleteDeleteUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/${id}`
+  return `${getBaseUrl()}/api/YevmiyeFisHareketleri/${id}`
 }
 
 export const YevmiyeFisHareketleri_DeleteDelete = async (id: number, options?: RequestInit): Promise<YevmiyeFisHareketleri_DeleteDeleteResponse> => {
@@ -101194,7 +101195,7 @@ export const getYevmiyeFisHareketleriDetayliListeGetUrl = (params?: YevmiyeFisHa
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YevmiyeFisHareketleri?${stringifiedParams}` : `${getBaseUrl()}/api/YevmiyeFisHareketleri`
 }
 
 export const YevmiyeFisHareketleri_DetayliListeGet = async (params?: YevmiyeFisHareketleriDetayliListeGetParams, options?: RequestInit): Promise<YevmiyeFisHareketleri_DetayliListeGetResponse> => {
@@ -101248,7 +101249,7 @@ export const getYevmiyeFisHareketleriPostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri`
+  return `${getBaseUrl()}/api/YevmiyeFisHareketleri`
 }
 
 export const YevmiyeFisHareketleri_PostPost = async (aaroModullerYevmiyeFisHareketleriKayitSadeKayitModelBody: AaroModullerYevmiyeFisHareketleriKayitSadeKayitModelBody, options?: RequestInit): Promise<YevmiyeFisHareketleri_PostPostResponse> => {
@@ -101310,7 +101311,7 @@ export const getYevmiyeFisHareketleriOnaylaPostUrl = (params: YevmiyeFisHareketl
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/Onayla?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/Onayla`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YevmiyeFisHareketleri/Onayla?${stringifiedParams}` : `${getBaseUrl()}/api/YevmiyeFisHareketleri/Onayla`
 }
 
 export const YevmiyeFisHareketleri_OnaylaPost = async (params: YevmiyeFisHareketleriOnaylaPostParams, options?: RequestInit): Promise<YevmiyeFisHareketleri_OnaylaPostResponse> => {
@@ -101371,7 +101372,7 @@ export const getYevmiyeFisHareketleriReddetPostUrl = (params: YevmiyeFisHareketl
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/Reddet?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/Reddet`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YevmiyeFisHareketleri/Reddet?${stringifiedParams}` : `${getBaseUrl()}/api/YevmiyeFisHareketleri/Reddet`
 }
 
 export const YevmiyeFisHareketleri_ReddetPost = async (params: YevmiyeFisHareketleriReddetPostParams, options?: RequestInit): Promise<YevmiyeFisHareketleri_ReddetPostResponse> => {
@@ -101432,7 +101433,7 @@ export const getYevmiyeFisHareketleriListeEsnekGetUrl = (params?: YevmiyeFisHare
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/Liste?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/Liste`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YevmiyeFisHareketleri/Liste?${stringifiedParams}` : `${getBaseUrl()}/api/YevmiyeFisHareketleri/Liste`
 }
 
 export const YevmiyeFisHareketleri_ListeEsnekGet = async (params?: YevmiyeFisHareketleriListeEsnekGetParams, options?: RequestInit): Promise<YevmiyeFisHareketleri_ListeEsnekGetResponse> => {
@@ -101486,7 +101487,7 @@ export const getYevmiyeFisHareketleriListePostPostUrl = () => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/Liste`
+  return `${getBaseUrl()}/api/YevmiyeFisHareketleri/Liste`
 }
 
 export const YevmiyeFisHareketleri_ListePostPost = async (linqFilteringAdvancedFilterRequestBody: LinqFilteringAdvancedFilterRequestBody, options?: RequestInit): Promise<YevmiyeFisHareketleri_ListePostPostResponse> => {
@@ -101548,7 +101549,7 @@ export const getYevmiyeFisHareketleriGrupluListeGetUrl = (params: YevmiyeFisHare
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/GrupluListe?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/GrupluListe`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YevmiyeFisHareketleri/GrupluListe?${stringifiedParams}` : `${getBaseUrl()}/api/YevmiyeFisHareketleri/GrupluListe`
 }
 
 export const YevmiyeFisHareketleri_GrupluListeGet = async (params: YevmiyeFisHareketleriGrupluListeGetParams, options?: RequestInit): Promise<YevmiyeFisHareketleri_GrupluListeGetResponse> => {
@@ -101602,7 +101603,7 @@ export const getYevmiyeFisHareketleriOnayDurumuGetUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/${id}/OnayDurumu`
+  return `${getBaseUrl()}/api/YevmiyeFisHareketleri/${id}/OnayDurumu`
 }
 
 export const YevmiyeFisHareketleri_OnayDurumuGet = async (id: number, options?: RequestInit): Promise<YevmiyeFisHareketleri_OnayDurumuGetResponse> => {
@@ -101664,7 +101665,7 @@ export const getYevmiyeFisHareketleriDegisiklikGecmisiGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/${id}/DegisiklikGecmisi?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/${id}/DegisiklikGecmisi`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YevmiyeFisHareketleri/${id}/DegisiklikGecmisi?${stringifiedParams}` : `${getBaseUrl()}/api/YevmiyeFisHareketleri/${id}/DegisiklikGecmisi`
 }
 
 export const YevmiyeFisHareketleri_DegisiklikGecmisiGet = async (id: number,
@@ -101727,7 +101728,7 @@ export const getYevmiyeFisHareketleriBelgelerGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/${id}/Belgeler?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/${id}/Belgeler`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YevmiyeFisHareketleri/${id}/Belgeler?${stringifiedParams}` : `${getBaseUrl()}/api/YevmiyeFisHareketleri/${id}/Belgeler`
 }
 
 export const YevmiyeFisHareketleri_BelgelerGet = async (id: number,
@@ -101790,7 +101791,7 @@ export const getYevmiyeFisHareketleriBelgeEklePostUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/${id}/BelgeEkle?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/${id}/BelgeEkle`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YevmiyeFisHareketleri/${id}/BelgeEkle?${stringifiedParams}` : `${getBaseUrl()}/api/YevmiyeFisHareketleri/${id}/BelgeEkle`
 }
 
 export const YevmiyeFisHareketleri_BelgeEklePost = async (id: number,
@@ -101854,7 +101855,7 @@ export const getYevmiyeFisHareketleriBelgeSilDeleteUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/${id}/BelgeSil/${belgeID}`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YevmiyeFisHareketleri/${id}/BelgeSil/${belgeID}?${stringifiedParams}` : `${getBaseUrl()}/api/YevmiyeFisHareketleri/${id}/BelgeSil/${belgeID}`
 }
 
 export const YevmiyeFisHareketleri_BelgeSilDelete = async (id: number,
@@ -101918,7 +101919,7 @@ export const getYevmiyeFisHareketleriNotlarGetUrl = (id: number,
 
   const stringifiedParams = normalizedParams.toString();
 
-  return stringifiedParams.length > 0 ? `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/${id}/Notlar?${stringifiedParams}` : `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/${id}/Notlar`
+  return stringifiedParams.length > 0 ? `${getBaseUrl()}/api/YevmiyeFisHareketleri/${id}/Notlar?${stringifiedParams}` : `${getBaseUrl()}/api/YevmiyeFisHareketleri/${id}/Notlar`
 }
 
 export const YevmiyeFisHareketleri_NotlarGet = async (id: number,
@@ -101973,7 +101974,7 @@ export const getYevmiyeFisHareketleriNotEklePostUrl = (id: number,) => {
 
 
 
-  return `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/${id}/NotEkle`
+  return `${getBaseUrl()}/api/YevmiyeFisHareketleri/${id}/NotEkle`
 }
 
 export const YevmiyeFisHareketleri_NotEklePost = async (id: number,
@@ -102030,7 +102031,7 @@ export const getYevmiyeFisHareketleriNotSilDeleteUrl = (id: number,
 
 
 
-  return `https://erp.aaro.com.tr/api/YevmiyeFisHareketleri/${id}/NotSil/${notID}`
+  return `${getBaseUrl()}/api/YevmiyeFisHareketleri/${id}/NotSil/${notID}`
 }
 
 export const YevmiyeFisHareketleri_NotSilDelete = async (id: number,
