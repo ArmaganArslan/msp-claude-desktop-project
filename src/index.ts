@@ -34,12 +34,8 @@ try {
 }
 
 // ─── Imports ─────────────────────────────────────────────────────────────────
-import express from "express";
-import cors from "cors";
-import { AsyncLocalStorage } from "node:async_hooks";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { z } from "zod";
 import {
   searchTools,
@@ -50,11 +46,9 @@ import { log, logHttp, logMcpTool, getLogConfig } from "./logger.js";
 
 // ─── ERP Auth: API_TOKEN / ERP_BEARER_TOKEN ──────────────────────────────────
 // Orval-generated client uses global fetch. We wrap fetch once so every API call
-// automatically sends Authorization header from Claude Desktop "env" or express request.
+// automatically sends Authorization header from Claude Desktop "env".
 const bearerFromEnv =
   process.env.API_TOKEN || process.env.ERP_BEARER_TOKEN || undefined;
-
-export const authContext = new AsyncLocalStorage<string | undefined>();
 
 const originalFetch = globalThis.fetch.bind(globalThis);
 
@@ -70,12 +64,10 @@ globalThis.fetch = async (
         : input.url;
   const method = (init?.method ?? "GET").toUpperCase();
 
-  const currentBearer = authContext.getStore() || bearerFromEnv;
-
-  if (currentBearer) {
+  if (bearerFromEnv) {
     const existing = new Headers(init?.headers ?? undefined);
     if (!existing.has("Authorization")) {
-      existing.set("Authorization", `Bearer ${currentBearer}`);
+      existing.set("Authorization", `Bearer ${bearerFromEnv}`);
     }
     if (!existing.has("Accept")) existing.set("Accept", "application/json");
     init = { ...init, headers: existing };
@@ -308,164 +300,15 @@ async function main() {
     },
   );
 
-  // ── Sunucu Bağlantı / Taşıma Ayarı ─────────────────────────────────────
-  const transportMode = process.env.TRANSPORT || "stdio";
+  // ── Claude Desktop'a Bağlan ────────────────────────────────────────────
+  const transport = new StdioServerTransport();
+  await server.connect(transport);
+
   const cfg = getLogConfig();
-
-  if (transportMode === "sse") {
-    // SSE / Express Modu (Uzak Sunucu / Canlı)
-    const app = express();
-    app.use(cors());
-    app.use(express.urlencoded({ extended: true }));
-    app.use(express.json());
-
-    // ─── CLAUDE WEB OAUTH 2.0 HACK ──────────────────────────────────────────
-    // Claude'un "kullanıcıyı login'e yollayıp token alma" akışını simüle ediyoruz.
-    // Kullanıcının ekrandan gireceği token'ı geçici "code" parametresi gibi Claude'a aktarıp,
-    // Claude'un arka planda yapacağı /token isteğinde bunu gerçek "access_token" gibi teslim ediyoruz.
-    
-    app.get("/authorize", (req, res) => {
-      const redirectUri = req.query.redirect_uri as string;
-      const state = req.query.state as string;
-      
-      if (!redirectUri) {
-         res.status(400).send("redirect_uri eksik.");
-         return;
-      }
-
-      const html = `
-        <html>
-          <head>
-             <meta charset="utf-8">
-            <title>AARO ERP Kimlik Doğrulama</title>
-            <style>
-              body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f4f4f5; margin:0;}
-              .box { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; max-width: 400px; width:100%;}
-              input { padding: 10px; width: 100%; margin: 15px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-              button { background: #3b82f6; color: white; border: none; padding: 10px; width: 100%; border-radius: 4px; cursor: pointer; font-weight: bold;}
-              button:hover { background: #2563eb; }
-              p { color: #555; font-size: 14px;}
-            </style>
-          </head>
-          <body>
-            <div class="box">
-              <h2>Claude ↔ AARO ERP</h2>
-              <p>Claude üzerinden AARO ERP verilerine erişmek için lütfen size ait olan <b>API Bağlantı Token</b> bilginizi kutucuğa yapıştırın.</p>
-              <form method="POST" action="/authorize">
-                <input type="hidden" name="redirect_uri" value="\${encodeURIComponent(redirectUri)}" />
-                <input type="hidden" name="state" value="\${encodeURIComponent(state || "")}" />
-                <input type="password" name="erp_token" placeholder="AARO API Token Gönderin" required />
-                <button type="submit">Doğrula ve Bağlan</button>
-              </form>
-            </div>
-          </body>
-        </html>
-      `;
-      res.send(html);
-    });
-
-    app.post("/authorize", (req, res) => {
-      const { erp_token, redirect_uri, state } = req.body;
-      if (!redirect_uri || !erp_token) {
-        res.status(400).send("Eksik bilgi (token veya redirect_uri).");
-        return;
-      }
-      // Tokonu guvenli sekilde encode edip OAuth Code gibi claude'a yolluyoruz.
-      res.redirect(`\${decodeURIComponent(redirect_uri)}?code=\${encodeURIComponent(erp_token)}&state=\${encodeURIComponent(state || "")}`);
-    });
-
-    app.post("/token", (req, res) => {
-      // YONTEM 1: Claude eger OAuth Client Credentials istiyorsa, client_secret bizim ERP tokenimiz olacaktir.
-      if (req.body.client_secret) {
-        res.json({
-          access_token: req.body.client_secret,
-          token_type: "Bearer"
-        });
-        return;
-      }
-
-      // YONTEM 2: Claude eger /token istegini Basic Auth ile yapiyorsa
-      const authHeader = req.headers.authorization;
-      if (authHeader && authHeader.toLowerCase().startsWith("basic ")) {
-         const b64 = authHeader.substring(6);
-         const decoded = Buffer.from(b64, 'base64').toString('utf-8');
-         const parts = decoded.split(':');
-         if (parts.length === 2 && parts[1]) {
-             res.json({
-               access_token: parts[1], // Client Secret = ERP Token
-               token_type: "Bearer"
-             });
-             return;
-         }
-      }
-
-      // YONTEM 3: Kullanici Login akisindan (Code flow) geldiyse
-      const code = req.body.code || req.query.code;
-      if (code) {
-        res.json({
-          access_token: code,
-          token_type: "Bearer"
-        });
-        return;
-      }
-
-      res.status(400).json({ error: "invalid_request", error_description: "Code, client_secret veya basic auth parametreleri bulunamadi" });
-    });
-
-    // ─── CLAUDE WEB OAUTH BITIS ──────────────────────────────────────────
-
-    const sseTransport = new StreamableHTTPServerTransport();
-    await server.connect(sseTransport);
-
-    const handleReq = async (req: express.Request, res: express.Response) => {
-      // Authorization başlığından token çekilir
-      let token = undefined;
-      const authHeader = req.headers.authorization;
-      
-      if (authHeader) {
-        if (authHeader.toLowerCase().startsWith("bearer ")) {
-          // Normal Token kullaniminda (Code akisindan sonra veya std custom connector ile)
-          token = authHeader.substring(7);
-        } else if (authHeader.toLowerCase().startsWith("basic ")) {
-          // Claude eger doğrudan Basic Auth ile erismek istiyorsa (Client credentials'i dogrudan HTTP requestlerine isliyorsa)
-          const b64 = authHeader.substring(6);
-          const decoded = Buffer.from(b64, 'base64').toString('utf-8');
-          const parts = decoded.split(':');
-          if (parts.length === 2 && parts[1]) {
-             token = parts[1]; // Sifre (Client Secret) = ERP Token
-          }
-        }
-      }
-
-      // authContext ile sarmalayarak fetch override'ına thread-local token'i geçir
-      authContext.run(token, () => {
-        sseTransport.handleRequest(req, res);
-      });
-    };
-
-    // Client hem GET /sse hem de POST /message yapabilmeli 
-    // veya dogrudan /mcp diyerek tek uctan baglanabilmeli
-    app.all("/mcp", handleReq);
-    app.all("/sse", handleReq);
-    app.all("/message", handleReq);
-
-    const port = process.env.PORT || 3000;
-    app.listen(port, () => {
-      log.info(`AARO ERP MCP Server (SSE Modu) http://localhost:${port} adresinde dinliyor`, {
-        ...cfg,
-        authConfigured: Boolean(bearerFromEnv),
-      });
-    });
-  } else {
-    // Standart I/O Modu (Lokal Geliştirme - Claude Desktop)
-    const transport = new StdioServerTransport();
-    await server.connect(transport);
-
-    log.info("AARO ERP MCP Server baslatildi (stdio)", {
-      ...cfg,
-      authConfigured: Boolean(bearerFromEnv),
-    });
-  }
+  log.info("AARO ERP MCP Server baslatildi (stdio)", {
+    ...cfg,
+    authConfigured: Boolean(bearerFromEnv),
+  });
 }
 
 main().catch((err) => {
