@@ -13,6 +13,7 @@
     //"allowJs": true,
     //"checkJs": false,
     "noEmitOnError": true,
+    // ÖNEMLİ: Eğer ileride @types/jest veya @types/express gibi yeni tip paketleri kurarsan, TS'in tanıması için adlarını bu diziye eklemelisin.
     "types": ["node"]
   },
   "include": ["src/**/*"],
