@@ -10,7 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 try {
-  const envPath = join(__dirname, "../../.env");
+  const envPath = join(__dirname, "../.env"); // dev mode'da claude desktop config json'da base url, token vs. girmemek için
   const lines = readFileSync(envPath, "utf-8").split("\n");
 
   for (const line of lines) {
