@@ -6386,7 +6386,7 @@
   },
   {
     "name": "BeklenenTahsilatlarVeOdemeler_GetGet",
-    "description": "",
+    "description": "Belirtilen ID'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.",
     "handlerName": "BeklenenTahsilatlarVeOdemeler_GetGetHandler",
     "params": {
       "pathParams": [
@@ -6437,9 +6437,9 @@
     }
   },
   {
-    "name": "BeklenenTahsilatlarVeOdemeler_DetayliListeGet",
+    "name": "BeklenenTahsilatlarVeOdemeler_ListeGetGet",
     "description": "",
-    "handlerName": "BeklenenTahsilatlarVeOdemeler_DetayliListeGetHandler",
+    "handlerName": "BeklenenTahsilatlarVeOdemeler_ListeGetGetHandler",
     "params": {
       "queryParams": [
         "Kisit.dovizSembol",
@@ -39315,7 +39315,7 @@
   },
   {
     "name": "UrAkisOperasyon_GetGet",
-    "description": "",
+    "description": "Belirtilen ID'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.",
     "handlerName": "UrAkisOperasyon_GetGetHandler",
     "params": {
       "pathParams": [
@@ -39369,7 +39369,7 @@
   },
   {
     "name": "UrAkisOperasyon_DeleteDelete",
-    "description": "",
+    "description": "Belirtilen kaydı siler veya pasifleştirir.\nINTENT: sil, kaldır, pasifleştir, devre dışı bırak, kapat\nKULLANIM: Artık kullanılmayan kayıtları sistemden kaldırma veya pasifleştirme.\nIS_KURALLARI: Hareketi veya bağlı kaydı bulunan kartlar tamamen silinemez; yalnızca pasifleştirilebilir.",
     "handlerName": "UrAkisOperasyon_DeleteDeleteHandler",
     "params": {
       "pathParams": [
@@ -39829,7 +39829,7 @@
   },
   {
     "name": "UrAkisOperasyonHammadde_GetGet",
-    "description": "",
+    "description": "Belirtilen ID'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.",
     "handlerName": "UrAkisOperasyonHammadde_GetGetHandler",
     "params": {
       "pathParams": [
@@ -39868,9 +39868,9 @@
     }
   },
   {
-    "name": "UrAkisOperasyonHammadde_DetayliListeGet",
+    "name": "UrAkisOperasyonHammadde_ListeGetGet",
     "description": "",
-    "handlerName": "UrAkisOperasyonHammadde_DetayliListeGetHandler",
+    "handlerName": "UrAkisOperasyonHammadde_ListeGetGetHandler",
     "params": {
       "queryParams": [
         "Kisit.receteHammaddeID",
@@ -40238,7 +40238,7 @@
   },
   {
     "name": "UrAkisOperasyonMamul_GetGet",
-    "description": "",
+    "description": "Belirtilen ID'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.",
     "handlerName": "UrAkisOperasyonMamul_GetGetHandler",
     "params": {
       "pathParams": [
@@ -40276,9 +40276,9 @@
     }
   },
   {
-    "name": "UrAkisOperasyonMamul_DetayliListeGet",
+    "name": "UrAkisOperasyonMamul_ListeGetGet",
     "description": "",
-    "handlerName": "UrAkisOperasyonMamul_DetayliListeGetHandler",
+    "handlerName": "UrAkisOperasyonMamul_ListeGetGetHandler",
     "params": {
       "queryParams": [
         "Kisit.stokID",
@@ -40643,7 +40643,7 @@
   },
   {
     "name": "UrAkisOperasyonPersonel_GetGet",
-    "description": "",
+    "description": "Belirtilen ID'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.",
     "handlerName": "UrAkisOperasyonPersonel_GetGetHandler",
     "params": {
       "pathParams": [
@@ -40678,9 +40678,9 @@
     }
   },
   {
-    "name": "UrAkisOperasyonPersonel_DetayliListeGet",
+    "name": "UrAkisOperasyonPersonel_ListeGetGet",
     "description": "",
-    "handlerName": "UrAkisOperasyonPersonel_DetayliListeGetHandler",
+    "handlerName": "UrAkisOperasyonPersonel_ListeGetGetHandler",
     "params": {
       "queryParams": [
         "Kisit.personelKodu",
@@ -41803,8 +41803,34 @@
     }
   },
   {
-    "name": "UrIsEmri_GetGet",
+    "name": "UrIsEmri_TamamlanmisUretimMaliyetleriGet",
     "description": "",
+    "handlerName": "UrIsEmri_TamamlanmisUretimMaliyetleriGetHandler",
+    "params": {
+      "queryParams": [
+        "SiralamaKisiti",
+        "SayfalandirmaBilgisi.siralamaKisiti",
+        "SayfalandirmaBilgisi.sayfa",
+        "SayfalandirmaBilgisi.sayfaSatirSayisi"
+      ]
+    }
+  },
+  {
+    "name": "UrIsEmri_AltIsEmriGet",
+    "description": "",
+    "handlerName": "UrIsEmri_AltIsEmriGetHandler",
+    "params": {
+      "queryParams": [
+        "IsEmriID",
+        "SayfalandirmaBilgisi.siralamaKisiti",
+        "SayfalandirmaBilgisi.sayfa",
+        "SayfalandirmaBilgisi.sayfaSatirSayisi"
+      ]
+    }
+  },
+  {
+    "name": "UrIsEmri_GetGet",
+    "description": "Belirtilen ID'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.",
     "handlerName": "UrIsEmri_GetGetHandler",
     "params": {
       "pathParams": [
@@ -41853,7 +41879,7 @@
   },
   {
     "name": "UrIsEmri_DeleteDelete",
-    "description": "",
+    "description": "Belirtilen kaydı siler veya pasifleştirir.\nINTENT: sil, kaldır, pasifleştir, devre dışı bırak, kapat\nKULLANIM: Artık kullanılmayan kayıtları sistemden kaldırma veya pasifleştirme.\nIS_KURALLARI: Hareketi veya bağlı kaydı bulunan kartlar tamamen silinemez; yalnızca pasifleştirilebilir.",
     "handlerName": "UrIsEmri_DeleteDeleteHandler",
     "params": {
       "pathParams": [
@@ -41862,9 +41888,9 @@
     }
   },
   {
-    "name": "UrIsEmri_DetayliListeGet",
+    "name": "UrIsEmri_ListeGetGet",
     "description": "",
-    "handlerName": "UrIsEmri_DetayliListeGetHandler",
+    "handlerName": "UrIsEmri_ListeGetGetHandler",
     "params": {
       "queryParams": [
         "Kisit.subeKodu",
@@ -41970,32 +41996,6 @@
         "PlanKilit",
         "AltReceteSeviye",
         "AltRecetelereIsEmriVerilsinMi"
-      ]
-    }
-  },
-  {
-    "name": "UrIsEmri_TamamlanmisUretimMaliyetleriGet",
-    "description": "",
-    "handlerName": "UrIsEmri_TamamlanmisUretimMaliyetleriGetHandler",
-    "params": {
-      "queryParams": [
-        "SiralamaKisiti",
-        "SayfalandirmaBilgisi.siralamaKisiti",
-        "SayfalandirmaBilgisi.sayfa",
-        "SayfalandirmaBilgisi.sayfaSatirSayisi"
-      ]
-    }
-  },
-  {
-    "name": "UrIsEmri_AltIsEmriGet",
-    "description": "",
-    "handlerName": "UrIsEmri_AltIsEmriGetHandler",
-    "params": {
-      "queryParams": [
-        "IsEmriID",
-        "SayfalandirmaBilgisi.siralamaKisiti",
-        "SayfalandirmaBilgisi.sayfa",
-        "SayfalandirmaBilgisi.sayfaSatirSayisi"
       ]
     }
   },
@@ -42285,7 +42285,6 @@
     "handlerName": "UrIsEmriPlan_ListeGetHandler",
     "params": {
       "queryParams": [
-        "Kisit",
         "SayfalandirmaBilgisi.siralamaKisiti",
         "SayfalandirmaBilgisi.sayfa",
         "SayfalandirmaBilgisi.sayfaSatirSayisi"
@@ -42746,7 +42745,7 @@
   },
   {
     "name": "UrMakineAriza_GetGet",
-    "description": "",
+    "description": "Belirtilen ID'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.",
     "handlerName": "UrMakineAriza_GetGetHandler",
     "params": {
       "pathParams": [
@@ -42782,7 +42781,7 @@
   },
   {
     "name": "UrMakineAriza_DeleteDelete",
-    "description": "",
+    "description": "Belirtilen kaydı siler veya pasifleştirir.\nINTENT: sil, kaldır, pasifleştir, devre dışı bırak, kapat\nKULLANIM: Artık kullanılmayan kayıtları sistemden kaldırma veya pasifleştirme.\nIS_KURALLARI: Hareketi veya bağlı kaydı bulunan kartlar tamamen silinemez; yalnızca pasifleştirilebilir.",
     "handlerName": "UrMakineAriza_DeleteDeleteHandler",
     "params": {
       "pathParams": [
@@ -42791,9 +42790,9 @@
     }
   },
   {
-    "name": "UrMakineAriza_DetayliListeGet",
+    "name": "UrMakineAriza_ListeGetGet",
     "description": "",
-    "handlerName": "UrMakineAriza_DetayliListeGetHandler",
+    "handlerName": "UrMakineAriza_ListeGetGetHandler",
     "params": {
       "queryParams": [
         "Kisit.olsTar",
@@ -47895,7 +47894,7 @@
   },
   {
     "name": "YevmiyeFis_GetGet",
-    "description": "",
+    "description": "Belirtilen ID'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.",
     "handlerName": "YevmiyeFis_GetGetHandler",
     "params": {
       "pathParams": [
@@ -47929,7 +47928,7 @@
   },
   {
     "name": "YevmiyeFis_DeleteDelete",
-    "description": "",
+    "description": "Belirtilen kaydı siler veya pasifleştirir.\nINTENT: sil, kaldır, pasifleştir, devre dışı bırak, kapat\nKULLANIM: Artık kullanılmayan kayıtları sistemden kaldırma veya pasifleştirme.\nIS_KURALLARI: Hareketi veya bağlı kaydı bulunan kartlar tamamen silinemez; yalnızca pasifleştirilebilir.",
     "handlerName": "YevmiyeFis_DeleteDeleteHandler",
     "params": {
       "pathParams": [
@@ -47938,9 +47937,9 @@
     }
   },
   {
-    "name": "YevmiyeFis_DetayliListeGet",
+    "name": "YevmiyeFis_ListeGetGet",
     "description": "",
-    "handlerName": "YevmiyeFis_DetayliListeGetHandler",
+    "handlerName": "YevmiyeFis_ListeGetGetHandler",
     "params": {
       "queryParams": [
         "Kisit.subeKodu",
@@ -48291,7 +48290,7 @@
   },
   {
     "name": "YevmiyeFisHareketleri_GetGet",
-    "description": "",
+    "description": "Belirtilen ID'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.",
     "handlerName": "YevmiyeFisHareketleri_GetGetHandler",
     "params": {
       "pathParams": [
@@ -48339,7 +48338,7 @@
   },
   {
     "name": "YevmiyeFisHareketleri_DeleteDelete",
-    "description": "",
+    "description": "Belirtilen kaydı siler veya pasifleştirir.\nINTENT: sil, kaldır, pasifleştir, devre dışı bırak, kapat\nKULLANIM: Artık kullanılmayan kayıtları sistemden kaldırma veya pasifleştirme.\nIS_KURALLARI: Hareketi veya bağlı kaydı bulunan kartlar tamamen silinemez; yalnızca pasifleştirilebilir.",
     "handlerName": "YevmiyeFisHareketleri_DeleteDeleteHandler",
     "params": {
       "pathParams": [
@@ -48348,9 +48347,9 @@
     }
   },
   {
-    "name": "YevmiyeFisHareketleri_DetayliListeGet",
+    "name": "YevmiyeFisHareketleri_ListeGetGet",
     "description": "",
-    "handlerName": "YevmiyeFisHareketleri_DetayliListeGetHandler",
+    "handlerName": "YevmiyeFisHareketleri_ListeGetGetHandler",
     "params": {
       "queryParams": [
         "Kisit.subeKodu",

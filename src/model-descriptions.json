@@ -2388,7 +2388,7 @@
       "ResimAdresi": "Ürünün görsel URL adresi. (Domain İsmi + Resim Adresi)"
     }
   },
-  "BeklenenTahsilatlarVeOdemeler_DetayliListeGet": {
+  "BeklenenTahsilatlarVeOdemeler_ListeGetGet": {
     "paramDescriptions": {
       "SayfalandirmaBilgisi.siralamaKisiti": "Listeleme işlemlerinde sıralama için kullanılacak kısıtı belirtir.\r\nÖrneğin, \"Tarih\", \"Tarih:desc\", \"Tarih,Adi\", \"Tarih:desc,Adi\" gibi bir değer alabilir.",
       "SayfalandirmaBilgisi.sayfa": "Geçerli sayfa numarasını (1'den başlar) alır veya ayarlar.",
@@ -2681,7 +2681,7 @@
       "SubeID": "Bağlı şube ID'si",
       "SirketID": "Bağlı şirket ID'si",
       "Durum": "Aktif/Pasif durumu - true: Aktif, false: Pasif",
-      "TipID": "Cari tipi : \r\nMusteri = 102001,\r\nSatici = 102002,\r\nKaraliste = 102003,\r\nPotansiyel = 102004,\r\nPersonel = 102005,\r\nKamu = 102006,\r\nOrtak = 102007,",
+      "TipID": "Cari tipi : \r\nMusteri = 102001,\r\nSatici = 102002,\r\nKaraliste = 102003,\r\nPotansiyel = 102004,\r\nPersonel = 102005,\r\nKamu = 102006,\r\nOrtak = 102007,\r\nMCP_NOT: Kullanıcı belirtmemiş ise default değeri 102001 gönder.",
       "EntegrasyonTanimID": "Muhasebeleşme ID'si - Muhasebeleşme sistemi ile bağlantı. Hangi Muhasebeleşme tanımı kullanılarak Muhasebe Hesap Planınında hangi hesaplara atılacağını belirler"
     },
     "paramDescriptions": {
@@ -2691,7 +2691,7 @@
       "Kisit.subeID": "Bağlı şube ID'si",
       "Kisit.sirketID": "Bağlı şirket ID'si",
       "Kisit.durum": "Aktif/Pasif durumu - true: Aktif, false: Pasif",
-      "Kisit.tipID": "Cari tipi : \r\nMusteri = 102001,\r\nSatici = 102002,\r\nKaraliste = 102003,\r\nPotansiyel = 102004,\r\nPersonel = 102005,\r\nKamu = 102006,\r\nOrtak = 102007,",
+      "Kisit.tipID": "Cari tipi : \r\nMusteri = 102001,\r\nSatici = 102002,\r\nKaraliste = 102003,\r\nPotansiyel = 102004,\r\nPersonel = 102005,\r\nKamu = 102006,\r\nOrtak = 102007,\r\nMCP_NOT: Kullanıcı belirtmemiş ise default değeri 102001 gönder.",
       "Kisit.entegrasyonTanimID": "Muhasebeleşme ID'si - Muhasebeleşme sistemi ile bağlantı. Hangi Muhasebeleşme tanımı kullanılarak Muhasebe Hesap Planınında hangi hesaplara atılacağını belirler",
       "SayfalandirmaBilgisi.siralamaKisiti": "Listeleme işlemlerinde sıralama için kullanılacak kısıtı belirtir.\r\nÖrneğin, \"Tarih\", \"Tarih:desc\", \"Tarih,Adi\", \"Tarih:desc,Adi\" gibi bir değer alabilir.",
       "SayfalandirmaBilgisi.sayfa": "Geçerli sayfa numarasını (1'den başlar) alır veya ayarlar.",
@@ -14805,7 +14805,7 @@
       "SayfalandirmaBilgisi.sayfaSatirSayisi": "Sayfa başına satır sayısını alır veya ayarlar. maxSayfaSatirSayisi değerini aşamaz."
     }
   },
-  "UrAkisOperasyonHammadde_DetayliListeGet": {
+  "UrAkisOperasyonHammadde_ListeGetGet": {
     "paramDescriptions": {
       "SayfalandirmaBilgisi.siralamaKisiti": "Listeleme işlemlerinde sıralama için kullanılacak kısıtı belirtir.\r\nÖrneğin, \"Tarih\", \"Tarih:desc\", \"Tarih,Adi\", \"Tarih:desc,Adi\" gibi bir değer alabilir.",
       "SayfalandirmaBilgisi.sayfa": "Geçerli sayfa numarasını (1'den başlar) alır veya ayarlar.",
@@ -14862,7 +14862,7 @@
       "SayfalandirmaBilgisi.sayfaSatirSayisi": "Sayfa başına satır sayısını alır veya ayarlar. maxSayfaSatirSayisi değerini aşamaz."
     }
   },
-  "UrAkisOperasyonMamul_DetayliListeGet": {
+  "UrAkisOperasyonMamul_ListeGetGet": {
     "paramDescriptions": {
       "SayfalandirmaBilgisi.siralamaKisiti": "Listeleme işlemlerinde sıralama için kullanılacak kısıtı belirtir.\r\nÖrneğin, \"Tarih\", \"Tarih:desc\", \"Tarih,Adi\", \"Tarih:desc,Adi\" gibi bir değer alabilir.",
       "SayfalandirmaBilgisi.sayfa": "Geçerli sayfa numarasını (1'den başlar) alır veya ayarlar.",
@@ -14919,7 +14919,7 @@
       "SayfalandirmaBilgisi.sayfaSatirSayisi": "Sayfa başına satır sayısını alır veya ayarlar. maxSayfaSatirSayisi değerini aşamaz."
     }
   },
-  "UrAkisOperasyonPersonel_DetayliListeGet": {
+  "UrAkisOperasyonPersonel_ListeGetGet": {
     "paramDescriptions": {
       "SayfalandirmaBilgisi.siralamaKisiti": "Listeleme işlemlerinde sıralama için kullanılacak kısıtı belirtir.\r\nÖrneğin, \"Tarih\", \"Tarih:desc\", \"Tarih,Adi\", \"Tarih:desc,Adi\" gibi bir değer alabilir.",
       "SayfalandirmaBilgisi.sayfa": "Geçerli sayfa numarasını (1'den başlar) alır veya ayarlar.",
@@ -15090,13 +15090,6 @@
       "SayfalandirmaBilgisi.sayfaSatirSayisi": "Sayfa başına satır sayısını alır veya ayarlar. maxSayfaSatirSayisi değerini aşamaz."
     }
   },
-  "UrIsEmri_DetayliListeGet": {
-    "paramDescriptions": {
-      "SayfalandirmaBilgisi.siralamaKisiti": "Listeleme işlemlerinde sıralama için kullanılacak kısıtı belirtir.\r\nÖrneğin, \"Tarih\", \"Tarih:desc\", \"Tarih,Adi\", \"Tarih:desc,Adi\" gibi bir değer alabilir.",
-      "SayfalandirmaBilgisi.sayfa": "Geçerli sayfa numarasını (1'den başlar) alır veya ayarlar.",
-      "SayfalandirmaBilgisi.sayfaSatirSayisi": "Sayfa başına satır sayısını alır veya ayarlar. maxSayfaSatirSayisi değerini aşamaz."
-    }
-  },
   "UrIsEmri_TamamlanmisUretimMaliyetleriGet": {
     "paramDescriptions": {
       "SayfalandirmaBilgisi.siralamaKisiti": "Listeleme işlemlerinde sıralama için kullanılacak kısıtı belirtir.\r\nÖrneğin, \"Tarih\", \"Tarih:desc\", \"Tarih,Adi\", \"Tarih:desc,Adi\" gibi bir değer alabilir.",
@@ -15105,6 +15098,13 @@
     }
   },
   "UrIsEmri_AltIsEmriGet": {
+    "paramDescriptions": {
+      "SayfalandirmaBilgisi.siralamaKisiti": "Listeleme işlemlerinde sıralama için kullanılacak kısıtı belirtir.\r\nÖrneğin, \"Tarih\", \"Tarih:desc\", \"Tarih,Adi\", \"Tarih:desc,Adi\" gibi bir değer alabilir.",
+      "SayfalandirmaBilgisi.sayfa": "Geçerli sayfa numarasını (1'den başlar) alır veya ayarlar.",
+      "SayfalandirmaBilgisi.sayfaSatirSayisi": "Sayfa başına satır sayısını alır veya ayarlar. maxSayfaSatirSayisi değerini aşamaz."
+    }
+  },
+  "UrIsEmri_ListeGetGet": {
     "paramDescriptions": {
       "SayfalandirmaBilgisi.siralamaKisiti": "Listeleme işlemlerinde sıralama için kullanılacak kısıtı belirtir.\r\nÖrneğin, \"Tarih\", \"Tarih:desc\", \"Tarih,Adi\", \"Tarih:desc,Adi\" gibi bir değer alabilir.",
       "SayfalandirmaBilgisi.sayfa": "Geçerli sayfa numarasını (1'den başlar) alır veya ayarlar.",
@@ -15232,7 +15232,7 @@
       "SayfalandirmaBilgisi.sayfaSatirSayisi": "Sayfa başına satır sayısını alır veya ayarlar. maxSayfaSatirSayisi değerini aşamaz."
     }
   },
-  "UrMakineAriza_DetayliListeGet": {
+  "UrMakineAriza_ListeGetGet": {
     "paramDescriptions": {
       "SayfalandirmaBilgisi.siralamaKisiti": "Listeleme işlemlerinde sıralama için kullanılacak kısıtı belirtir.\r\nÖrneğin, \"Tarih\", \"Tarih:desc\", \"Tarih,Adi\", \"Tarih:desc,Adi\" gibi bir değer alabilir.",
       "SayfalandirmaBilgisi.sayfa": "Geçerli sayfa numarasını (1'den başlar) alır veya ayarlar.",
@@ -16069,7 +16069,7 @@
       "SayfalandirmaBilgisi.sayfaSatirSayisi": "Sayfa başına satır sayısını alır veya ayarlar. maxSayfaSatirSayisi değerini aşamaz."
     }
   },
-  "YevmiyeFis_DetayliListeGet": {
+  "YevmiyeFis_ListeGetGet": {
     "paramDescriptions": {
       "SayfalandirmaBilgisi.siralamaKisiti": "Listeleme işlemlerinde sıralama için kullanılacak kısıtı belirtir.\r\nÖrneğin, \"Tarih\", \"Tarih:desc\", \"Tarih,Adi\", \"Tarih:desc,Adi\" gibi bir değer alabilir.",
       "SayfalandirmaBilgisi.sayfa": "Geçerli sayfa numarasını (1'den başlar) alır veya ayarlar.",
@@ -16126,7 +16126,7 @@
       "SayfalandirmaBilgisi.sayfaSatirSayisi": "Sayfa başına satır sayısını alır veya ayarlar. maxSayfaSatirSayisi değerini aşamaz."
     }
   },
-  "YevmiyeFisHareketleri_DetayliListeGet": {
+  "YevmiyeFisHareketleri_ListeGetGet": {
     "paramDescriptions": {
       "SayfalandirmaBilgisi.siralamaKisiti": "Listeleme işlemlerinde sıralama için kullanılacak kısıtı belirtir.\r\nÖrneğin, \"Tarih\", \"Tarih:desc\", \"Tarih,Adi\", \"Tarih:desc,Adi\" gibi bir değer alabilir.",
       "SayfalandirmaBilgisi.sayfa": "Geçerli sayfa numarasını (1'den başlar) alır veya ayarlar.",

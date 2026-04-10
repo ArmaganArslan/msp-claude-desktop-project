@@ -7,28 +7,28 @@
 
 // https://stackoverflow.com/questions/49579094/typescript-conditional-types-filter-out-readonly-properties-pick-only-requir/49579497#49579497
 type IfEquals<X, Y, A = X, B = never> = (<T>() => T extends X ? 1 : 2) extends <
-T,
+  T,
 >() => T extends Y ? 1 : 2
-? A
-: B;
+  ? A
+  : B;
 
 type WritableKeys<T> = {
-[P in keyof T]-?: IfEquals<
-  { [Q in P]: T[P] },
-  { -readonly [Q in P]: T[P] },
-  P
->;
+  [P in keyof T]-?: IfEquals<
+    { [Q in P]: T[P] },
+    { -readonly [Q in P]: T[P] },
+    P
+  >;
 }[keyof T];
 
 type UnionToIntersection<U> =
-  (U extends any ? (k: U)=>void : never) extends ((k: infer I)=>void) ? I : never;
+  (U extends any ? (k: U) => void : never) extends ((k: infer I) => void) ? I : never;
 type DistributeReadOnlyOverUnions<T> = T extends any ? NonReadonly<T> : never;
 
 type Writable<T> = Pick<T, WritableKeys<T>>;
 type NonReadonly<T> = [T] extends [UnionToIntersection<T>] ? {
   [P in keyof Writable<T>]: T[P] extends object
-    ? NonReadonly<NonNullable<T[P]>>
-    : T[P];
+  ? NonReadonly<NonNullable<T[P]>>
+  : T[P];
 } : DistributeReadOnlyOverUnions<T>;
 
 import {
@@ -133,7 +133,7 @@ import {
   BayiSiparisVergiToplamlariGetParams,
   AaroMVCControllersWebApiBayiControllerBayiSiparisKalemModel,
   AaroModullerBeklenenTahsilatlarVeOdemelerKayitSadeKayitModelBody,
-  BeklenenTahsilatlarVeOdemelerDetayliListeGetParams,
+  BeklenenTahsilatlarVeOdemelerListeGetGetParams,
   BeklenenTahsilatlarVeOdemelerOnaylaPostParams,
   BeklenenTahsilatlarVeOdemelerReddetPostParams,
   BeklenenTahsilatlarVeOdemelerListeEsnekGetParams,
@@ -951,7 +951,7 @@ import {
   UrAkisOperasyonBelgeSilDeleteParams,
   UrAkisOperasyonNotlarGetParams,
   AaroModullerUrAkisOperasyonHammaddeKayitSadeKayitModelBody,
-  UrAkisOperasyonHammaddeDetayliListeGetParams,
+  UrAkisOperasyonHammaddeListeGetGetParams,
   UrAkisOperasyonHammaddeOnaylaPostParams,
   UrAkisOperasyonHammaddeReddetPostParams,
   UrAkisOperasyonHammaddeListeEsnekGetParams,
@@ -962,7 +962,7 @@ import {
   UrAkisOperasyonHammaddeBelgeSilDeleteParams,
   UrAkisOperasyonHammaddeNotlarGetParams,
   AaroModullerUrAkisOperasyonMamulKayitSadeKayitModelBody,
-  UrAkisOperasyonMamulDetayliListeGetParams,
+  UrAkisOperasyonMamulListeGetGetParams,
   UrAkisOperasyonMamulOnaylaPostParams,
   UrAkisOperasyonMamulReddetPostParams,
   UrAkisOperasyonMamulListeEsnekGetParams,
@@ -973,7 +973,7 @@ import {
   UrAkisOperasyonMamulBelgeSilDeleteParams,
   UrAkisOperasyonMamulNotlarGetParams,
   AaroModullerUrAkisOperasyonPersonelKayitSadeKayitModelBody,
-  UrAkisOperasyonPersonelDetayliListeGetParams,
+  UrAkisOperasyonPersonelListeGetGetParams,
   UrAkisOperasyonPersonelOnaylaPostParams,
   UrAkisOperasyonPersonelReddetPostParams,
   UrAkisOperasyonPersonelListeEsnekGetParams,
@@ -1005,10 +1005,10 @@ import {
   UrBolumBelgeEklePostParams,
   UrBolumBelgeSilDeleteParams,
   UrBolumNotlarGetParams,
-  AaroModullerUrIsEmriKayitSadeKayitModelBody,
-  UrIsEmriDetayliListeGetParams,
   UrIsEmriTamamlanmisUretimMaliyetleriGetParams,
   UrIsEmriAltIsEmriGetParams,
+  AaroModullerUrIsEmriKayitSadeKayitModelBody,
+  UrIsEmriListeGetGetParams,
   UrIsEmriOnaylaPostParams,
   UrIsEmriReddetPostParams,
   UrIsEmriListeEsnekGetParams,
@@ -1032,7 +1032,7 @@ import {
   UrMakineBelgeSilDeleteParams,
   UrMakineNotlarGetParams,
   AaroModullerUrMakineArizaKayitSadeKayitModelBody,
-  UrMakineArizaDetayliListeGetParams,
+  UrMakineArizaListeGetGetParams,
   UrMakineArizaOnaylaPostParams,
   UrMakineArizaReddetPostParams,
   UrMakineArizaListeEsnekGetParams,
@@ -1161,7 +1161,7 @@ import {
   YetkilerAltBelgeSilDeleteParams,
   YetkilerAltNotlarGetParams,
   AaroModullerYevmiyeFisKayitSadeKayitModelBody,
-  YevmiyeFisDetayliListeGetParams,
+  YevmiyeFisListeGetGetParams,
   YevmiyeFisOnaylaPostParams,
   YevmiyeFisReddetPostParams,
   YevmiyeFisListeEsnekGetParams,
@@ -1172,7 +1172,7 @@ import {
   YevmiyeFisBelgeSilDeleteParams,
   YevmiyeFisNotlarGetParams,
   AaroModullerYevmiyeFisHareketleriKayitSadeKayitModelBody,
-  YevmiyeFisHareketleriDetayliListeGetParams,
+  YevmiyeFisHareketleriListeGetGetParams,
   YevmiyeFisHareketleriOnaylaPostParams,
   YevmiyeFisHareketleriReddetPostParams,
   YevmiyeFisHareketleriListeEsnekGetParams,
@@ -1351,7 +1351,7 @@ import {
   BeklenenTahsilatlarVeOdemeler_GetGet,
   BeklenenTahsilatlarVeOdemeler_PutPut,
   BeklenenTahsilatlarVeOdemeler_DeleteDelete,
-  BeklenenTahsilatlarVeOdemeler_DetayliListeGet,
+  BeklenenTahsilatlarVeOdemeler_ListeGetGet,
   BeklenenTahsilatlarVeOdemeler_PostPost,
   BeklenenTahsilatlarVeOdemeler_OnaylaPost,
   BeklenenTahsilatlarVeOdemeler_ReddetPost,
@@ -2671,7 +2671,7 @@ import {
   UrAkisOperasyonHammadde_GetGet,
   UrAkisOperasyonHammadde_PutPut,
   UrAkisOperasyonHammadde_DeleteDelete,
-  UrAkisOperasyonHammadde_DetayliListeGet,
+  UrAkisOperasyonHammadde_ListeGetGet,
   UrAkisOperasyonHammadde_PostPost,
   UrAkisOperasyonHammadde_OnaylaPost,
   UrAkisOperasyonHammadde_ReddetPost,
@@ -2689,7 +2689,7 @@ import {
   UrAkisOperasyonMamul_GetGet,
   UrAkisOperasyonMamul_PutPut,
   UrAkisOperasyonMamul_DeleteDelete,
-  UrAkisOperasyonMamul_DetayliListeGet,
+  UrAkisOperasyonMamul_ListeGetGet,
   UrAkisOperasyonMamul_PostPost,
   UrAkisOperasyonMamul_OnaylaPost,
   UrAkisOperasyonMamul_ReddetPost,
@@ -2707,7 +2707,7 @@ import {
   UrAkisOperasyonPersonel_GetGet,
   UrAkisOperasyonPersonel_PutPut,
   UrAkisOperasyonPersonel_DeleteDelete,
-  UrAkisOperasyonPersonel_DetayliListeGet,
+  UrAkisOperasyonPersonel_ListeGetGet,
   UrAkisOperasyonPersonel_PostPost,
   UrAkisOperasyonPersonel_OnaylaPost,
   UrAkisOperasyonPersonel_ReddetPost,
@@ -2758,13 +2758,13 @@ import {
   UrBolum_NotlarGet,
   UrBolum_NotEklePost,
   UrBolum_NotSilDelete,
+  UrIsEmri_TamamlanmisUretimMaliyetleriGet,
+  UrIsEmri_AltIsEmriGet,
   UrIsEmri_GetGet,
   UrIsEmri_PutPut,
   UrIsEmri_DeleteDelete,
-  UrIsEmri_DetayliListeGet,
+  UrIsEmri_ListeGetGet,
   UrIsEmri_PostPost,
-  UrIsEmri_TamamlanmisUretimMaliyetleriGet,
-  UrIsEmri_AltIsEmriGet,
   UrIsEmri_OnaylaPost,
   UrIsEmri_ReddetPost,
   UrIsEmri_ListeEsnekGet,
@@ -2801,7 +2801,7 @@ import {
   UrMakineAriza_GetGet,
   UrMakineAriza_PutPut,
   UrMakineAriza_DeleteDelete,
-  UrMakineAriza_DetayliListeGet,
+  UrMakineAriza_ListeGetGet,
   UrMakineAriza_PostPost,
   UrMakineAriza_OnaylaPost,
   UrMakineAriza_ReddetPost,
@@ -3012,7 +3012,7 @@ import {
   YevmiyeFis_GetGet,
   YevmiyeFis_PutPut,
   YevmiyeFis_DeleteDelete,
-  YevmiyeFis_DetayliListeGet,
+  YevmiyeFis_ListeGetGet,
   YevmiyeFis_PostPost,
   YevmiyeFis_OnaylaPost,
   YevmiyeFis_ReddetPost,
@@ -3030,7 +3030,7 @@ import {
   YevmiyeFisHareketleri_GetGet,
   YevmiyeFisHareketleri_PutPut,
   YevmiyeFisHareketleri_DeleteDelete,
-  YevmiyeFisHareketleri_DetayliListeGet,
+  YevmiyeFisHareketleri_ListeGetGet,
   YevmiyeFisHareketleri_PostPost,
   YevmiyeFisHareketleri_OnaylaPost,
   YevmiyeFisHareketleri_ReddetPost,
@@ -7204,22 +7204,22 @@ Alternatif İsimler: GetActiveBasket, SepetListesi, GetDraftOrderItems
 Kullanım: Bayi portalında sepet ekranı açıldığında ürünlerin, miktarların ve güncel fiyatların gösterilmesi için kullanılır.
  */
 
-export type Bayi_SepetGetArgs = {
-  queryParams: BayiSepetGetParams;
-}
+// export type Bayi_SepetGetArgs = {
+//   queryParams: BayiSepetGetParams;
+// }
 
-export const Bayi_SepetGetHandler = async (args: Bayi_SepetGetArgs) => {
-  const res = await Bayi_SepetGet(args.queryParams);
+// export const Bayi_SepetGetHandler = async (args: Bayi_SepetGetArgs) => {
+//   const res = await Bayi_SepetGet(args.queryParams);
 
-  return {
-    content: [
-      {
-        type: 'text' as const,
-        text: JSON.stringify(res),
-      },
-    ],
-  };
-};
+//   return {
+//     content: [
+//       {
+//         type: 'text' as const,
+//         text: JSON.stringify(res),
+//       },
+//     ],
+//   };
+// };
 
 /**
  * @summary Sepeti (Taslak Siparişi) onaylayarak kesin siparişe dönüştürür veya tüm sepeti iptal ederek siler.
@@ -7401,6 +7401,11 @@ export const Bayi_SepetKalemDuzeltPostHandler = async (args: Bayi_SepetKalemDuze
   };
 };
 
+/**
+ * @summary Belirtilen ID'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.
+INTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle
+KULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.
+ */
 
 export type BeklenenTahsilatlarVeOdemeler_GetGetArgs = {
   pathParams: {
@@ -7469,12 +7474,12 @@ export const BeklenenTahsilatlarVeOdemeler_DeleteDeleteHandler = async (args: Be
 };
 
 
-export type BeklenenTahsilatlarVeOdemeler_DetayliListeGetArgs = {
-  queryParams: BeklenenTahsilatlarVeOdemelerDetayliListeGetParams;
+export type BeklenenTahsilatlarVeOdemeler_ListeGetGetArgs = {
+  queryParams: BeklenenTahsilatlarVeOdemelerListeGetGetParams;
 }
 
-export const BeklenenTahsilatlarVeOdemeler_DetayliListeGetHandler = async (args: BeklenenTahsilatlarVeOdemeler_DetayliListeGetArgs) => {
-  const res = await BeklenenTahsilatlarVeOdemeler_DetayliListeGet(args.queryParams);
+export const BeklenenTahsilatlarVeOdemeler_ListeGetGetHandler = async (args: BeklenenTahsilatlarVeOdemeler_ListeGetGetArgs) => {
+  const res = await BeklenenTahsilatlarVeOdemeler_ListeGetGet(args.queryParams);
 
   return {
     content: [
@@ -13549,22 +13554,22 @@ export const DepoTerminal_FaturaIrsaliyeKalemDetaylarGetHandler = async (args: D
 };
 
 
-export type DepoTerminal_FaturaIrsaliyeKalemDetayGetArgs = {
-  queryParams: DepoTerminalFaturaIrsaliyeKalemDetayGetParams;
-}
+// export type DepoTerminal_FaturaIrsaliyeKalemDetayGetArgs = {
+//   queryParams: DepoTerminalFaturaIrsaliyeKalemDetayGetParams;
+// }
 
-export const DepoTerminal_FaturaIrsaliyeKalemDetayGetHandler = async (args: DepoTerminal_FaturaIrsaliyeKalemDetayGetArgs) => {
-  const res = await DepoTerminal_FaturaIrsaliyeKalemDetayGet(args.queryParams);
+// export const DepoTerminal_FaturaIrsaliyeKalemDetayGetHandler = async (args: DepoTerminal_FaturaIrsaliyeKalemDetayGetArgs) => {
+//   const res = await DepoTerminal_FaturaIrsaliyeKalemDetayGet(args.queryParams);
 
-  return {
-    content: [
-      {
-        type: 'text' as const,
-        text: JSON.stringify(res),
-      },
-    ],
-  };
-};
+//   return {
+//     content: [
+//       {
+//         type: 'text' as const,
+//         text: JSON.stringify(res),
+//       },
+//     ],
+//   };
+// };
 
 
 export type DepoTerminal_FaturaIrsaliyeKalemDetayPostArgs = {
@@ -13604,18 +13609,18 @@ export const DepoTerminal_StokMiktarListesiGetHandler = async (args: DepoTermina
 };
 
 
-export const DepoTerminal_TransferGetHandler = async () => {
-  const res = await DepoTerminal_TransferGet();
+// export const DepoTerminal_TransferGetHandler = async () => {
+//   const res = await DepoTerminal_TransferGet();
 
-  return {
-    content: [
-      {
-        type: 'text' as const,
-        text: JSON.stringify(res),
-      },
-    ],
-  };
-};
+//   return {
+//     content: [
+//       {
+//         type: 'text' as const,
+//         text: JSON.stringify(res),
+//       },
+//     ],
+//   };
+// };
 
 
 export type DepoTerminal_TransferPostArgs = {
@@ -13700,22 +13705,22 @@ export const DepoTerminal_DepolarArasiTransferKalemDetaylarGetHandler = async ()
 };
 
 
-export type DepoTerminal_DepolarArasiTransferKalemDetayGetArgs = {
-  queryParams: DepoTerminalDepolarArasiTransferKalemDetayGetParams;
-}
+// export type DepoTerminal_DepolarArasiTransferKalemDetayGetArgs = {
+//   queryParams: DepoTerminalDepolarArasiTransferKalemDetayGetParams;
+// }
 
-export const DepoTerminal_DepolarArasiTransferKalemDetayGetHandler = async (args: DepoTerminal_DepolarArasiTransferKalemDetayGetArgs) => {
-  const res = await DepoTerminal_DepolarArasiTransferKalemDetayGet(args.queryParams);
+// export const DepoTerminal_DepolarArasiTransferKalemDetayGetHandler = async (args: DepoTerminal_DepolarArasiTransferKalemDetayGetArgs) => {
+//   const res = await DepoTerminal_DepolarArasiTransferKalemDetayGet(args.queryParams);
 
-  return {
-    content: [
-      {
-        type: 'text' as const,
-        text: JSON.stringify(res),
-      },
-    ],
-  };
-};
+//   return {
+//     content: [
+//       {
+//         type: 'text' as const,
+//         text: JSON.stringify(res),
+//       },
+//     ],
+//   };
+// };
 
 
 export type DepoTerminal_DepolarArasiTransferKalemDetayPostArgs = {
@@ -16127,7 +16132,8 @@ export const FiyatListesiSatirlar_BulkCreatePostHandler = async (args: FiyatList
  */
 
 export type FiyatListesiSatirlar_BulkUpdatePostArgs = {
-  bodyParams: FiyatListesiSatirlarBulkUpdatePostBodyOneItem[] | FiyatListesiSatirlarBulkUpdatePostBodyTwoItem[] | FiyatListesiSatirlarBulkUpdatePostBodyThreeItem[] | FiyatListesiSatirlarBulkUpdatePostBodyFourItem[] | FiyatListesiSatirlarBulkUpdatePostBodyFiveItem[];
+  bodyParams: FiyatListesiSatirlarBulkUpdatePostBodyOneItem[]
+  // | FiyatListesiSatirlarBulkUpdatePostBodyTwoItem[] | FiyatListesiSatirlarBulkUpdatePostBodyThreeItem[] | FiyatListesiSatirlarBulkUpdatePostBodyFourItem[] | FiyatListesiSatirlarBulkUpdatePostBodyFiveItem[];
 }
 
 export const FiyatListesiSatirlar_BulkUpdatePostHandler = async (args: FiyatListesiSatirlar_BulkUpdatePostArgs) => {
@@ -31419,22 +31425,22 @@ export const SatisIrsaliyesiListe_GrupluListeGetHandler = async (args: SatisIrsa
 Kullanım: Çok sayıda seri numarasının (örn: barkod okutarak) tek seferde sisteme aktarılması veya otomatik seri üretilmesi işlemlerinde kullanılır. Kayıt Getirme işlemidir.
  */
 
-export type SeriLot_SeriLotHizliKayitGetArgs = {
-  queryParams: SeriLotSeriLotHizliKayitGetParams;
-}
+// export type SeriLot_SeriLotHizliKayitGetArgs = {
+//   queryParams: SeriLotSeriLotHizliKayitGetParams;
+// }
 
-export const SeriLot_SeriLotHizliKayitGetHandler = async (args: SeriLot_SeriLotHizliKayitGetArgs) => {
-  const res = await SeriLot_SeriLotHizliKayitGet(args.queryParams);
+// export const SeriLot_SeriLotHizliKayitGetHandler = async (args: SeriLot_SeriLotHizliKayitGetArgs) => {
+//   const res = await SeriLot_SeriLotHizliKayitGet(args.queryParams);
 
-  return {
-    content: [
-      {
-        type: 'text' as const,
-        text: JSON.stringify(res),
-      },
-    ],
-  };
-};
+//   return {
+//     content: [
+//       {
+//         type: 'text' as const,
+//         text: JSON.stringify(res),
+//       },
+//     ],
+//   };
+// };
 
 /**
  * @summary Seri/Lot kayıtları için hızlı giriş ekranı bilgilerini kaydeder.
@@ -39238,6 +39244,11 @@ export const Ulkeler_NotSilDeleteHandler = async (args: Ulkeler_NotSilDeleteArgs
   };
 };
 
+/**
+ * @summary Belirtilen ID'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.
+INTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle
+KULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.
+ */
 
 export type UrAkisOperasyon_GetGetArgs = {
   pathParams: {
@@ -39279,6 +39290,12 @@ export const UrAkisOperasyon_PutPutHandler = async (args: UrAkisOperasyon_PutPut
   };
 };
 
+/**
+ * @summary Belirtilen kaydı siler veya pasifleştirir.
+INTENT: sil, kaldır, pasifleştir, devre dışı bırak, kapat
+KULLANIM: Artık kullanılmayan kayıtları sistemden kaldırma veya pasifleştirme.
+IS_KURALLARI: Hareketi veya bağlı kaydı bulunan kartlar tamamen silinemez; yalnızca pasifleştirilebilir.
+ */
 
 export type UrAkisOperasyon_DeleteDeleteArgs = {
   pathParams: {
@@ -39655,6 +39672,11 @@ export const UrAkisOperasyon_NotSilDeleteHandler = async (args: UrAkisOperasyon_
   };
 };
 
+/**
+ * @summary Belirtilen ID'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.
+INTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle
+KULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.
+ */
 
 export type UrAkisOperasyonHammadde_GetGetArgs = {
   pathParams: {
@@ -39723,12 +39745,12 @@ export const UrAkisOperasyonHammadde_DeleteDeleteHandler = async (args: UrAkisOp
 };
 
 
-export type UrAkisOperasyonHammadde_DetayliListeGetArgs = {
-  queryParams: UrAkisOperasyonHammaddeDetayliListeGetParams;
+export type UrAkisOperasyonHammadde_ListeGetGetArgs = {
+  queryParams: UrAkisOperasyonHammaddeListeGetGetParams;
 }
 
-export const UrAkisOperasyonHammadde_DetayliListeGetHandler = async (args: UrAkisOperasyonHammadde_DetayliListeGetArgs) => {
-  const res = await UrAkisOperasyonHammadde_DetayliListeGet(args.queryParams);
+export const UrAkisOperasyonHammadde_ListeGetGetHandler = async (args: UrAkisOperasyonHammadde_ListeGetGetArgs) => {
+  const res = await UrAkisOperasyonHammadde_ListeGetGet(args.queryParams);
 
   return {
     content: [
@@ -40078,6 +40100,11 @@ export const UrAkisOperasyonHammadde_NotSilDeleteHandler = async (args: UrAkisOp
   };
 };
 
+/**
+ * @summary Belirtilen ID'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.
+INTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle
+KULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.
+ */
 
 export type UrAkisOperasyonMamul_GetGetArgs = {
   pathParams: {
@@ -40146,12 +40173,12 @@ export const UrAkisOperasyonMamul_DeleteDeleteHandler = async (args: UrAkisOpera
 };
 
 
-export type UrAkisOperasyonMamul_DetayliListeGetArgs = {
-  queryParams: UrAkisOperasyonMamulDetayliListeGetParams;
+export type UrAkisOperasyonMamul_ListeGetGetArgs = {
+  queryParams: UrAkisOperasyonMamulListeGetGetParams;
 }
 
-export const UrAkisOperasyonMamul_DetayliListeGetHandler = async (args: UrAkisOperasyonMamul_DetayliListeGetArgs) => {
-  const res = await UrAkisOperasyonMamul_DetayliListeGet(args.queryParams);
+export const UrAkisOperasyonMamul_ListeGetGetHandler = async (args: UrAkisOperasyonMamul_ListeGetGetArgs) => {
+  const res = await UrAkisOperasyonMamul_ListeGetGet(args.queryParams);
 
   return {
     content: [
@@ -40501,6 +40528,11 @@ export const UrAkisOperasyonMamul_NotSilDeleteHandler = async (args: UrAkisOpera
   };
 };
 
+/**
+ * @summary Belirtilen ID'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.
+INTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle
+KULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.
+ */
 
 export type UrAkisOperasyonPersonel_GetGetArgs = {
   pathParams: {
@@ -40569,12 +40601,12 @@ export const UrAkisOperasyonPersonel_DeleteDeleteHandler = async (args: UrAkisOp
 };
 
 
-export type UrAkisOperasyonPersonel_DetayliListeGetArgs = {
-  queryParams: UrAkisOperasyonPersonelDetayliListeGetParams;
+export type UrAkisOperasyonPersonel_ListeGetGetArgs = {
+  queryParams: UrAkisOperasyonPersonelListeGetGetParams;
 }
 
-export const UrAkisOperasyonPersonel_DetayliListeGetHandler = async (args: UrAkisOperasyonPersonel_DetayliListeGetArgs) => {
-  const res = await UrAkisOperasyonPersonel_DetayliListeGet(args.queryParams);
+export const UrAkisOperasyonPersonel_ListeGetGetHandler = async (args: UrAkisOperasyonPersonel_ListeGetGetArgs) => {
+  const res = await UrAkisOperasyonPersonel_ListeGetGet(args.queryParams);
 
   return {
     content: [
@@ -41781,6 +41813,47 @@ export const UrBolum_NotSilDeleteHandler = async (args: UrBolum_NotSilDeleteArgs
 };
 
 
+export type UrIsEmri_TamamlanmisUretimMaliyetleriGetArgs = {
+  queryParams: UrIsEmriTamamlanmisUretimMaliyetleriGetParams;
+}
+
+export const UrIsEmri_TamamlanmisUretimMaliyetleriGetHandler = async (args: UrIsEmri_TamamlanmisUretimMaliyetleriGetArgs) => {
+  const res = await UrIsEmri_TamamlanmisUretimMaliyetleriGet(args.queryParams);
+
+  return {
+    content: [
+      {
+        type: 'text' as const,
+        text: JSON.stringify(res),
+      },
+    ],
+  };
+};
+
+
+export type UrIsEmri_AltIsEmriGetArgs = {
+  queryParams: UrIsEmriAltIsEmriGetParams;
+}
+
+export const UrIsEmri_AltIsEmriGetHandler = async (args: UrIsEmri_AltIsEmriGetArgs) => {
+  const res = await UrIsEmri_AltIsEmriGet(args.queryParams);
+
+  return {
+    content: [
+      {
+        type: 'text' as const,
+        text: JSON.stringify(res),
+      },
+    ],
+  };
+};
+
+/**
+ * @summary Belirtilen ID'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.
+INTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle
+KULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.
+ */
+
 export type UrIsEmri_GetGetArgs = {
   pathParams: {
     id: number
@@ -41821,6 +41894,12 @@ export const UrIsEmri_PutPutHandler = async (args: UrIsEmri_PutPutArgs) => {
   };
 };
 
+/**
+ * @summary Belirtilen kaydı siler veya pasifleştirir.
+INTENT: sil, kaldır, pasifleştir, devre dışı bırak, kapat
+KULLANIM: Artık kullanılmayan kayıtları sistemden kaldırma veya pasifleştirme.
+IS_KURALLARI: Hareketi veya bağlı kaydı bulunan kartlar tamamen silinemez; yalnızca pasifleştirilebilir.
+ */
 
 export type UrIsEmri_DeleteDeleteArgs = {
   pathParams: {
@@ -41842,12 +41921,12 @@ export const UrIsEmri_DeleteDeleteHandler = async (args: UrIsEmri_DeleteDeleteAr
 };
 
 
-export type UrIsEmri_DetayliListeGetArgs = {
-  queryParams: UrIsEmriDetayliListeGetParams;
+export type UrIsEmri_ListeGetGetArgs = {
+  queryParams: UrIsEmriListeGetGetParams;
 }
 
-export const UrIsEmri_DetayliListeGetHandler = async (args: UrIsEmri_DetayliListeGetArgs) => {
-  const res = await UrIsEmri_DetayliListeGet(args.queryParams);
+export const UrIsEmri_ListeGetGetHandler = async (args: UrIsEmri_ListeGetGetArgs) => {
+  const res = await UrIsEmri_ListeGetGet(args.queryParams);
 
   return {
     content: [
@@ -41866,42 +41945,6 @@ export type UrIsEmri_PostPostArgs = {
 
 export const UrIsEmri_PostPostHandler = async (args: UrIsEmri_PostPostArgs) => {
   const res = await UrIsEmri_PostPost(args.bodyParams);
-
-  return {
-    content: [
-      {
-        type: 'text' as const,
-        text: JSON.stringify(res),
-      },
-    ],
-  };
-};
-
-
-export type UrIsEmri_TamamlanmisUretimMaliyetleriGetArgs = {
-  queryParams: UrIsEmriTamamlanmisUretimMaliyetleriGetParams;
-}
-
-export const UrIsEmri_TamamlanmisUretimMaliyetleriGetHandler = async (args: UrIsEmri_TamamlanmisUretimMaliyetleriGetArgs) => {
-  const res = await UrIsEmri_TamamlanmisUretimMaliyetleriGet(args.queryParams);
-
-  return {
-    content: [
-      {
-        type: 'text' as const,
-        text: JSON.stringify(res),
-      },
-    ],
-  };
-};
-
-
-export type UrIsEmri_AltIsEmriGetArgs = {
-  queryParams: UrIsEmriAltIsEmriGetParams;
-}
-
-export const UrIsEmri_AltIsEmriGetHandler = async (args: UrIsEmri_AltIsEmriGetArgs) => {
-  const res = await UrIsEmri_AltIsEmriGet(args.queryParams);
 
   return {
     content: [
@@ -42697,6 +42740,11 @@ export const UrMakine_NotSilDeleteHandler = async (args: UrMakine_NotSilDeleteAr
   };
 };
 
+/**
+ * @summary Belirtilen ID'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.
+INTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle
+KULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.
+ */
 
 export type UrMakineAriza_GetGetArgs = {
   pathParams: {
@@ -42738,6 +42786,12 @@ export const UrMakineAriza_PutPutHandler = async (args: UrMakineAriza_PutPutArgs
   };
 };
 
+/**
+ * @summary Belirtilen kaydı siler veya pasifleştirir.
+INTENT: sil, kaldır, pasifleştir, devre dışı bırak, kapat
+KULLANIM: Artık kullanılmayan kayıtları sistemden kaldırma veya pasifleştirme.
+IS_KURALLARI: Hareketi veya bağlı kaydı bulunan kartlar tamamen silinemez; yalnızca pasifleştirilebilir.
+ */
 
 export type UrMakineAriza_DeleteDeleteArgs = {
   pathParams: {
@@ -42759,12 +42813,12 @@ export const UrMakineAriza_DeleteDeleteHandler = async (args: UrMakineAriza_Dele
 };
 
 
-export type UrMakineAriza_DetayliListeGetArgs = {
-  queryParams: UrMakineArizaDetayliListeGetParams;
+export type UrMakineAriza_ListeGetGetArgs = {
+  queryParams: UrMakineArizaListeGetGetParams;
 }
 
-export const UrMakineAriza_DetayliListeGetHandler = async (args: UrMakineAriza_DetayliListeGetArgs) => {
-  const res = await UrMakineAriza_DetayliListeGet(args.queryParams);
+export const UrMakineAriza_ListeGetGetHandler = async (args: UrMakineAriza_ListeGetGetArgs) => {
+  const res = await UrMakineAriza_ListeGetGet(args.queryParams);
 
   return {
     content: [
@@ -47886,6 +47940,11 @@ export const YetkilerAlt_NotSilDeleteHandler = async (args: YetkilerAlt_NotSilDe
   };
 };
 
+/**
+ * @summary Belirtilen ID'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.
+INTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle
+KULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.
+ */
 
 export type YevmiyeFis_GetGetArgs = {
   pathParams: {
@@ -47927,6 +47986,12 @@ export const YevmiyeFis_PutPutHandler = async (args: YevmiyeFis_PutPutArgs) => {
   };
 };
 
+/**
+ * @summary Belirtilen kaydı siler veya pasifleştirir.
+INTENT: sil, kaldır, pasifleştir, devre dışı bırak, kapat
+KULLANIM: Artık kullanılmayan kayıtları sistemden kaldırma veya pasifleştirme.
+IS_KURALLARI: Hareketi veya bağlı kaydı bulunan kartlar tamamen silinemez; yalnızca pasifleştirilebilir.
+ */
 
 export type YevmiyeFis_DeleteDeleteArgs = {
   pathParams: {
@@ -47948,12 +48013,12 @@ export const YevmiyeFis_DeleteDeleteHandler = async (args: YevmiyeFis_DeleteDele
 };
 
 
-export type YevmiyeFis_DetayliListeGetArgs = {
-  queryParams: YevmiyeFisDetayliListeGetParams;
+export type YevmiyeFis_ListeGetGetArgs = {
+  queryParams: YevmiyeFisListeGetGetParams;
 }
 
-export const YevmiyeFis_DetayliListeGetHandler = async (args: YevmiyeFis_DetayliListeGetArgs) => {
-  const res = await YevmiyeFis_DetayliListeGet(args.queryParams);
+export const YevmiyeFis_ListeGetGetHandler = async (args: YevmiyeFis_ListeGetGetArgs) => {
+  const res = await YevmiyeFis_ListeGetGet(args.queryParams);
 
   return {
     content: [
@@ -48303,6 +48368,11 @@ export const YevmiyeFis_NotSilDeleteHandler = async (args: YevmiyeFis_NotSilDele
   };
 };
 
+/**
+ * @summary Belirtilen ID'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.
+INTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle
+KULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.
+ */
 
 export type YevmiyeFisHareketleri_GetGetArgs = {
   pathParams: {
@@ -48344,6 +48414,12 @@ export const YevmiyeFisHareketleri_PutPutHandler = async (args: YevmiyeFisHareke
   };
 };
 
+/**
+ * @summary Belirtilen kaydı siler veya pasifleştirir.
+INTENT: sil, kaldır, pasifleştir, devre dışı bırak, kapat
+KULLANIM: Artık kullanılmayan kayıtları sistemden kaldırma veya pasifleştirme.
+IS_KURALLARI: Hareketi veya bağlı kaydı bulunan kartlar tamamen silinemez; yalnızca pasifleştirilebilir.
+ */
 
 export type YevmiyeFisHareketleri_DeleteDeleteArgs = {
   pathParams: {
@@ -48365,12 +48441,12 @@ export const YevmiyeFisHareketleri_DeleteDeleteHandler = async (args: YevmiyeFis
 };
 
 
-export type YevmiyeFisHareketleri_DetayliListeGetArgs = {
-  queryParams: YevmiyeFisHareketleriDetayliListeGetParams;
+export type YevmiyeFisHareketleri_ListeGetGetArgs = {
+  queryParams: YevmiyeFisHareketleriListeGetGetParams;
 }
 
-export const YevmiyeFisHareketleri_DetayliListeGetHandler = async (args: YevmiyeFisHareketleri_DetayliListeGetArgs) => {
-  const res = await YevmiyeFisHareketleri_DetayliListeGet(args.queryParams);
+export const YevmiyeFisHareketleri_ListeGetGetHandler = async (args: YevmiyeFisHareketleri_ListeGetGetArgs) => {
+  const res = await YevmiyeFisHareketleri_ListeGetGet(args.queryParams);
 
   return {
     content: [

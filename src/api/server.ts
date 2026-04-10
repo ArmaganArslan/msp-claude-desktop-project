@@ -8,10 +8,10 @@
 import {
   McpServer
 } from '@modelcontextprotocol/sdk/server/mcp.js';
-  
+
 import {
   StdioServerTransport
-} from '@modelcontextprotocol/sdk/server/stdio.js';  
+} from '@modelcontextprotocol/sdk/server/stdio.js';
 
 import {
   Account_OturumBilgisiGetirPostHandler,
@@ -180,7 +180,7 @@ import {
   BeklenenTahsilatlarVeOdemeler_GetGetHandler,
   BeklenenTahsilatlarVeOdemeler_PutPutHandler,
   BeklenenTahsilatlarVeOdemeler_DeleteDeleteHandler,
-  BeklenenTahsilatlarVeOdemeler_DetayliListeGetHandler,
+  BeklenenTahsilatlarVeOdemeler_ListeGetGetHandler,
   BeklenenTahsilatlarVeOdemeler_PostPostHandler,
   BeklenenTahsilatlarVeOdemeler_OnaylaPostHandler,
   BeklenenTahsilatlarVeOdemeler_ReddetPostHandler,
@@ -1500,7 +1500,7 @@ import {
   UrAkisOperasyonHammadde_GetGetHandler,
   UrAkisOperasyonHammadde_PutPutHandler,
   UrAkisOperasyonHammadde_DeleteDeleteHandler,
-  UrAkisOperasyonHammadde_DetayliListeGetHandler,
+  UrAkisOperasyonHammadde_ListeGetGetHandler,
   UrAkisOperasyonHammadde_PostPostHandler,
   UrAkisOperasyonHammadde_OnaylaPostHandler,
   UrAkisOperasyonHammadde_ReddetPostHandler,
@@ -1518,7 +1518,7 @@ import {
   UrAkisOperasyonMamul_GetGetHandler,
   UrAkisOperasyonMamul_PutPutHandler,
   UrAkisOperasyonMamul_DeleteDeleteHandler,
-  UrAkisOperasyonMamul_DetayliListeGetHandler,
+  UrAkisOperasyonMamul_ListeGetGetHandler,
   UrAkisOperasyonMamul_PostPostHandler,
   UrAkisOperasyonMamul_OnaylaPostHandler,
   UrAkisOperasyonMamul_ReddetPostHandler,
@@ -1536,7 +1536,7 @@ import {
   UrAkisOperasyonPersonel_GetGetHandler,
   UrAkisOperasyonPersonel_PutPutHandler,
   UrAkisOperasyonPersonel_DeleteDeleteHandler,
-  UrAkisOperasyonPersonel_DetayliListeGetHandler,
+  UrAkisOperasyonPersonel_ListeGetGetHandler,
   UrAkisOperasyonPersonel_PostPostHandler,
   UrAkisOperasyonPersonel_OnaylaPostHandler,
   UrAkisOperasyonPersonel_ReddetPostHandler,
@@ -1587,13 +1587,13 @@ import {
   UrBolum_NotlarGetHandler,
   UrBolum_NotEklePostHandler,
   UrBolum_NotSilDeleteHandler,
+  UrIsEmri_TamamlanmisUretimMaliyetleriGetHandler,
+  UrIsEmri_AltIsEmriGetHandler,
   UrIsEmri_GetGetHandler,
   UrIsEmri_PutPutHandler,
   UrIsEmri_DeleteDeleteHandler,
-  UrIsEmri_DetayliListeGetHandler,
+  UrIsEmri_ListeGetGetHandler,
   UrIsEmri_PostPostHandler,
-  UrIsEmri_TamamlanmisUretimMaliyetleriGetHandler,
-  UrIsEmri_AltIsEmriGetHandler,
   UrIsEmri_OnaylaPostHandler,
   UrIsEmri_ReddetPostHandler,
   UrIsEmri_ListeEsnekGetHandler,
@@ -1630,7 +1630,7 @@ import {
   UrMakineAriza_GetGetHandler,
   UrMakineAriza_PutPutHandler,
   UrMakineAriza_DeleteDeleteHandler,
-  UrMakineAriza_DetayliListeGetHandler,
+  UrMakineAriza_ListeGetGetHandler,
   UrMakineAriza_PostPostHandler,
   UrMakineAriza_OnaylaPostHandler,
   UrMakineAriza_ReddetPostHandler,
@@ -1841,7 +1841,7 @@ import {
   YevmiyeFis_GetGetHandler,
   YevmiyeFis_PutPutHandler,
   YevmiyeFis_DeleteDeleteHandler,
-  YevmiyeFis_DetayliListeGetHandler,
+  YevmiyeFis_ListeGetGetHandler,
   YevmiyeFis_PostPostHandler,
   YevmiyeFis_OnaylaPostHandler,
   YevmiyeFis_ReddetPostHandler,
@@ -1859,7 +1859,7 @@ import {
   YevmiyeFisHareketleri_GetGetHandler,
   YevmiyeFisHareketleri_PutPutHandler,
   YevmiyeFisHareketleri_DeleteDeleteHandler,
-  YevmiyeFisHareketleri_DetayliListeGetHandler,
+  YevmiyeFisHareketleri_ListeGetGetHandler,
   YevmiyeFisHareketleri_PostPostHandler,
   YevmiyeFisHareketleri_OnaylaPostHandler,
   YevmiyeFisHareketleri_ReddetPostHandler,
@@ -2063,7 +2063,7 @@ import {
   BeklenenTahsilatlarVeOdemelerPutPutParams,
   BeklenenTahsilatlarVeOdemelerPutPutBody,
   BeklenenTahsilatlarVeOdemelerDeleteDeleteParams,
-  BeklenenTahsilatlarVeOdemelerDetayliListeGetQueryParams,
+  BeklenenTahsilatlarVeOdemelerListeGetGetQueryParams,
   BeklenenTahsilatlarVeOdemelerPostPostBody,
   BeklenenTahsilatlarVeOdemelerOnaylaPostQueryParams,
   BeklenenTahsilatlarVeOdemelerReddetPostQueryParams,
@@ -3826,7 +3826,7 @@ import {
   UrAkisOperasyonHammaddePutPutParams,
   UrAkisOperasyonHammaddePutPutBody,
   UrAkisOperasyonHammaddeDeleteDeleteParams,
-  UrAkisOperasyonHammaddeDetayliListeGetQueryParams,
+  UrAkisOperasyonHammaddeListeGetGetQueryParams,
   UrAkisOperasyonHammaddePostPostBody,
   UrAkisOperasyonHammaddeOnaylaPostQueryParams,
   UrAkisOperasyonHammaddeReddetPostQueryParams,
@@ -3851,7 +3851,7 @@ import {
   UrAkisOperasyonMamulPutPutParams,
   UrAkisOperasyonMamulPutPutBody,
   UrAkisOperasyonMamulDeleteDeleteParams,
-  UrAkisOperasyonMamulDetayliListeGetQueryParams,
+  UrAkisOperasyonMamulListeGetGetQueryParams,
   UrAkisOperasyonMamulPostPostBody,
   UrAkisOperasyonMamulOnaylaPostQueryParams,
   UrAkisOperasyonMamulReddetPostQueryParams,
@@ -3876,7 +3876,7 @@ import {
   UrAkisOperasyonPersonelPutPutParams,
   UrAkisOperasyonPersonelPutPutBody,
   UrAkisOperasyonPersonelDeleteDeleteParams,
-  UrAkisOperasyonPersonelDetayliListeGetQueryParams,
+  UrAkisOperasyonPersonelListeGetGetQueryParams,
   UrAkisOperasyonPersonelPostPostBody,
   UrAkisOperasyonPersonelOnaylaPostQueryParams,
   UrAkisOperasyonPersonelReddetPostQueryParams,
@@ -3947,14 +3947,14 @@ import {
   UrBolumNotEklePostParams,
   UrBolumNotEklePostBody,
   UrBolumNotSilDeleteParams,
+  UrIsEmriTamamlanmisUretimMaliyetleriGetQueryParams,
+  UrIsEmriAltIsEmriGetQueryParams,
   UrIsEmriGetGetParams,
   UrIsEmriPutPutParams,
   UrIsEmriPutPutBody,
   UrIsEmriDeleteDeleteParams,
-  UrIsEmriDetayliListeGetQueryParams,
+  UrIsEmriListeGetGetQueryParams,
   UrIsEmriPostPostBody,
-  UrIsEmriTamamlanmisUretimMaliyetleriGetQueryParams,
-  UrIsEmriAltIsEmriGetQueryParams,
   UrIsEmriOnaylaPostQueryParams,
   UrIsEmriReddetPostQueryParams,
   UrIsEmriListeEsnekGetQueryParams,
@@ -4005,7 +4005,7 @@ import {
   UrMakineArizaPutPutParams,
   UrMakineArizaPutPutBody,
   UrMakineArizaDeleteDeleteParams,
-  UrMakineArizaDetayliListeGetQueryParams,
+  UrMakineArizaListeGetGetQueryParams,
   UrMakineArizaPostPostBody,
   UrMakineArizaOnaylaPostQueryParams,
   UrMakineArizaReddetPostQueryParams,
@@ -4286,7 +4286,7 @@ import {
   YevmiyeFisPutPutParams,
   YevmiyeFisPutPutBody,
   YevmiyeFisDeleteDeleteParams,
-  YevmiyeFisDetayliListeGetQueryParams,
+  YevmiyeFisListeGetGetQueryParams,
   YevmiyeFisPostPostBody,
   YevmiyeFisOnaylaPostQueryParams,
   YevmiyeFisReddetPostQueryParams,
@@ -4311,7 +4311,7 @@ import {
   YevmiyeFisHareketleriPutPutParams,
   YevmiyeFisHareketleriPutPutBody,
   YevmiyeFisHareketleriDeleteDeleteParams,
-  YevmiyeFisHareketleriDetayliListeGetQueryParams,
+  YevmiyeFisHareketleriListeGetGetQueryParams,
   YevmiyeFisHareketleriPostPostBody,
   YevmiyeFisHareketleriOnaylaPostQueryParams,
   YevmiyeFisHareketleriReddetPostQueryParams,
@@ -5813,7 +5813,7 @@ server.tool(
 
 server.tool(
   'BeklenenTahsilatlarVeOdemeler_GetGet',
-  '',
+  'Belirtilen ID\'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\r\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.',
   {
     pathParams: BeklenenTahsilatlarVeOdemelerGetGetParams
   },
@@ -5840,12 +5840,12 @@ server.tool(
 );
 
 server.tool(
-  'BeklenenTahsilatlarVeOdemeler_DetayliListeGet',
+  'BeklenenTahsilatlarVeOdemeler_ListeGetGet',
   '',
   {
-    queryParams: BeklenenTahsilatlarVeOdemelerDetayliListeGetQueryParams
+    queryParams: BeklenenTahsilatlarVeOdemelerListeGetGetQueryParams
   },
-  BeklenenTahsilatlarVeOdemeler_DetayliListeGetHandler
+  BeklenenTahsilatlarVeOdemeler_ListeGetGetHandler
 );
 
 server.tool(
@@ -17959,7 +17959,7 @@ server.tool(
 
 server.tool(
   'UrAkisOperasyon_GetGet',
-  '',
+  'Belirtilen ID\'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\r\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.',
   {
     pathParams: UrAkisOperasyonGetGetParams
   },
@@ -17978,7 +17978,7 @@ server.tool(
 
 server.tool(
   'UrAkisOperasyon_DeleteDelete',
-  '',
+  'Belirtilen kaydı siler veya pasifleştirir.\r\nINTENT: sil, kaldır, pasifleştir, devre dışı bırak, kapat\r\nKULLANIM: Artık kullanılmayan kayıtları sistemden kaldırma veya pasifleştirme.\r\nIS_KURALLARI: Hareketi veya bağlı kaydı bulunan kartlar tamamen silinemez; yalnızca pasifleştirilebilir.',
   {
     pathParams: UrAkisOperasyonDeleteDeleteParams
   },
@@ -18128,7 +18128,7 @@ server.tool(
 
 server.tool(
   'UrAkisOperasyonHammadde_GetGet',
-  '',
+  'Belirtilen ID\'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\r\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.',
   {
     pathParams: UrAkisOperasyonHammaddeGetGetParams
   },
@@ -18155,12 +18155,12 @@ server.tool(
 );
 
 server.tool(
-  'UrAkisOperasyonHammadde_DetayliListeGet',
+  'UrAkisOperasyonHammadde_ListeGetGet',
   '',
   {
-    queryParams: UrAkisOperasyonHammaddeDetayliListeGetQueryParams
+    queryParams: UrAkisOperasyonHammaddeListeGetGetQueryParams
   },
-  UrAkisOperasyonHammadde_DetayliListeGetHandler
+  UrAkisOperasyonHammadde_ListeGetGetHandler
 );
 
 server.tool(
@@ -18297,7 +18297,7 @@ server.tool(
 
 server.tool(
   'UrAkisOperasyonMamul_GetGet',
-  '',
+  'Belirtilen ID\'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\r\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.',
   {
     pathParams: UrAkisOperasyonMamulGetGetParams
   },
@@ -18324,12 +18324,12 @@ server.tool(
 );
 
 server.tool(
-  'UrAkisOperasyonMamul_DetayliListeGet',
+  'UrAkisOperasyonMamul_ListeGetGet',
   '',
   {
-    queryParams: UrAkisOperasyonMamulDetayliListeGetQueryParams
+    queryParams: UrAkisOperasyonMamulListeGetGetQueryParams
   },
-  UrAkisOperasyonMamul_DetayliListeGetHandler
+  UrAkisOperasyonMamul_ListeGetGetHandler
 );
 
 server.tool(
@@ -18466,7 +18466,7 @@ server.tool(
 
 server.tool(
   'UrAkisOperasyonPersonel_GetGet',
-  '',
+  'Belirtilen ID\'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\r\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.',
   {
     pathParams: UrAkisOperasyonPersonelGetGetParams
   },
@@ -18493,12 +18493,12 @@ server.tool(
 );
 
 server.tool(
-  'UrAkisOperasyonPersonel_DetayliListeGet',
+  'UrAkisOperasyonPersonel_ListeGetGet',
   '',
   {
-    queryParams: UrAkisOperasyonPersonelDetayliListeGetQueryParams
+    queryParams: UrAkisOperasyonPersonelListeGetGetQueryParams
   },
-  UrAkisOperasyonPersonel_DetayliListeGetHandler
+  UrAkisOperasyonPersonel_ListeGetGetHandler
 );
 
 server.tool(
@@ -18972,8 +18972,26 @@ server.tool(
 );
 
 server.tool(
-  'UrIsEmri_GetGet',
+  'UrIsEmri_TamamlanmisUretimMaliyetleriGet',
   '',
+  {
+    queryParams: UrIsEmriTamamlanmisUretimMaliyetleriGetQueryParams
+  },
+  UrIsEmri_TamamlanmisUretimMaliyetleriGetHandler
+);
+
+server.tool(
+  'UrIsEmri_AltIsEmriGet',
+  '',
+  {
+    queryParams: UrIsEmriAltIsEmriGetQueryParams
+  },
+  UrIsEmri_AltIsEmriGetHandler
+);
+
+server.tool(
+  'UrIsEmri_GetGet',
+  'Belirtilen ID\'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\r\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.',
   {
     pathParams: UrIsEmriGetGetParams
   },
@@ -18992,7 +19010,7 @@ server.tool(
 
 server.tool(
   'UrIsEmri_DeleteDelete',
-  '',
+  'Belirtilen kaydı siler veya pasifleştirir.\r\nINTENT: sil, kaldır, pasifleştir, devre dışı bırak, kapat\r\nKULLANIM: Artık kullanılmayan kayıtları sistemden kaldırma veya pasifleştirme.\r\nIS_KURALLARI: Hareketi veya bağlı kaydı bulunan kartlar tamamen silinemez; yalnızca pasifleştirilebilir.',
   {
     pathParams: UrIsEmriDeleteDeleteParams
   },
@@ -19000,12 +19018,12 @@ server.tool(
 );
 
 server.tool(
-  'UrIsEmri_DetayliListeGet',
+  'UrIsEmri_ListeGetGet',
   '',
   {
-    queryParams: UrIsEmriDetayliListeGetQueryParams
+    queryParams: UrIsEmriListeGetGetQueryParams
   },
-  UrIsEmri_DetayliListeGetHandler
+  UrIsEmri_ListeGetGetHandler
 );
 
 server.tool(
@@ -19015,24 +19033,6 @@ server.tool(
     bodyParams: UrIsEmriPostPostBody
   },
   UrIsEmri_PostPostHandler
-);
-
-server.tool(
-  'UrIsEmri_TamamlanmisUretimMaliyetleriGet',
-  '',
-  {
-    queryParams: UrIsEmriTamamlanmisUretimMaliyetleriGetQueryParams
-  },
-  UrIsEmri_TamamlanmisUretimMaliyetleriGetHandler
-);
-
-server.tool(
-  'UrIsEmri_AltIsEmriGet',
-  '',
-  {
-    queryParams: UrIsEmriAltIsEmriGetQueryParams
-  },
-  UrIsEmri_AltIsEmriGetHandler
 );
 
 server.tool(
@@ -19347,7 +19347,7 @@ server.tool(
 
 server.tool(
   'UrMakineAriza_GetGet',
-  '',
+  'Belirtilen ID\'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\r\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.',
   {
     pathParams: UrMakineArizaGetGetParams
   },
@@ -19366,7 +19366,7 @@ server.tool(
 
 server.tool(
   'UrMakineAriza_DeleteDelete',
-  '',
+  'Belirtilen kaydı siler veya pasifleştirir.\r\nINTENT: sil, kaldır, pasifleştir, devre dışı bırak, kapat\r\nKULLANIM: Artık kullanılmayan kayıtları sistemden kaldırma veya pasifleştirme.\r\nIS_KURALLARI: Hareketi veya bağlı kaydı bulunan kartlar tamamen silinemez; yalnızca pasifleştirilebilir.',
   {
     pathParams: UrMakineArizaDeleteDeleteParams
   },
@@ -19374,12 +19374,12 @@ server.tool(
 );
 
 server.tool(
-  'UrMakineAriza_DetayliListeGet',
+  'UrMakineAriza_ListeGetGet',
   '',
   {
-    queryParams: UrMakineArizaDetayliListeGetQueryParams
+    queryParams: UrMakineArizaListeGetGetQueryParams
   },
-  UrMakineAriza_DetayliListeGetHandler
+  UrMakineAriza_ListeGetGetHandler
 );
 
 server.tool(
@@ -21316,7 +21316,7 @@ server.tool(
 
 server.tool(
   'YevmiyeFis_GetGet',
-  '',
+  'Belirtilen ID\'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\r\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.',
   {
     pathParams: YevmiyeFisGetGetParams
   },
@@ -21335,7 +21335,7 @@ server.tool(
 
 server.tool(
   'YevmiyeFis_DeleteDelete',
-  '',
+  'Belirtilen kaydı siler veya pasifleştirir.\r\nINTENT: sil, kaldır, pasifleştir, devre dışı bırak, kapat\r\nKULLANIM: Artık kullanılmayan kayıtları sistemden kaldırma veya pasifleştirme.\r\nIS_KURALLARI: Hareketi veya bağlı kaydı bulunan kartlar tamamen silinemez; yalnızca pasifleştirilebilir.',
   {
     pathParams: YevmiyeFisDeleteDeleteParams
   },
@@ -21343,12 +21343,12 @@ server.tool(
 );
 
 server.tool(
-  'YevmiyeFis_DetayliListeGet',
+  'YevmiyeFis_ListeGetGet',
   '',
   {
-    queryParams: YevmiyeFisDetayliListeGetQueryParams
+    queryParams: YevmiyeFisListeGetGetQueryParams
   },
-  YevmiyeFis_DetayliListeGetHandler
+  YevmiyeFis_ListeGetGetHandler
 );
 
 server.tool(
@@ -21485,7 +21485,7 @@ server.tool(
 
 server.tool(
   'YevmiyeFisHareketleri_GetGet',
-  '',
+  'Belirtilen ID\'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\r\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.',
   {
     pathParams: YevmiyeFisHareketleriGetGetParams
   },
@@ -21504,7 +21504,7 @@ server.tool(
 
 server.tool(
   'YevmiyeFisHareketleri_DeleteDelete',
-  '',
+  'Belirtilen kaydı siler veya pasifleştirir.\r\nINTENT: sil, kaldır, pasifleştir, devre dışı bırak, kapat\r\nKULLANIM: Artık kullanılmayan kayıtları sistemden kaldırma veya pasifleştirme.\r\nIS_KURALLARI: Hareketi veya bağlı kaydı bulunan kartlar tamamen silinemez; yalnızca pasifleştirilebilir.',
   {
     pathParams: YevmiyeFisHareketleriDeleteDeleteParams
   },
@@ -21512,12 +21512,12 @@ server.tool(
 );
 
 server.tool(
-  'YevmiyeFisHareketleri_DetayliListeGet',
+  'YevmiyeFisHareketleri_ListeGetGet',
   '',
   {
-    queryParams: YevmiyeFisHareketleriDetayliListeGetQueryParams
+    queryParams: YevmiyeFisHareketleriListeGetGetQueryParams
   },
-  YevmiyeFisHareketleri_DetayliListeGetHandler
+  YevmiyeFisHareketleri_ListeGetGetHandler
 );
 
 server.tool(

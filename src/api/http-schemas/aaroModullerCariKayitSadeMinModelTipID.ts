@@ -14,6 +14,7 @@ Potansiyel = 102004,
 Personel = 102005,
 Kamu = 102006,
 Ortak = 102007,
+MCP_NOT: Kullanıcı belirtmemiş ise default değeri 102001 gönder.
  */
 export type AaroModullerCariKayitSadeMinModelTipID = typeof AaroModullerCariKayitSadeMinModelTipID[keyof typeof AaroModullerCariKayitSadeMinModelTipID];
 

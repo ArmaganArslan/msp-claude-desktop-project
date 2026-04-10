@@ -6,7 +6,6 @@
  */
 
 export type UrIsEmriPlanListeGetParams = {
-Kisit?: { [key: string]: unknown };
 /**
  * Listeleme işlemlerinde sıralama için kullanılacak kısıtı belirtir.
 Örneğin, "Tarih", "Tarih:desc", "Tarih,Adi", "Tarih:desc,Adi" gibi bir değer alabilir.
