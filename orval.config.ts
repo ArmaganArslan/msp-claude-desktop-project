@@ -3,7 +3,7 @@ import { defineConfig } from 'orval';
 export default defineConfig({
   aaroApi: {
     input: {
-      target: './src/apiSchema/openapi.json',
+      target: './src/apiSchema/openapi-with-tags.json',
     },
     output: {
       mode: 'single',
