@@ -152,6 +152,7 @@ export const _AaroModullerGorevlerKayitSadeGorevEkleAPIModelProgramID = {
   NUMBER_7999: 7999,
   NUMBER_8001: 8001,
   NUMBER_8002: 8002,
+  NUMBER_8003: 8003,
   NUMBER_8004: 8004,
   NUMBER_8005: 8005,
   NUMBER_8006: 8006,

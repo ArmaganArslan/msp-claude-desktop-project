@@ -17,9 +17,11 @@ export interface AaroModullerCariKayitSadeKayitModel {
   /** Cari unvanı/adı - Müşteri veya tedarikçi firma/kişi adı (zorunlu) */
   CariAdi?: string;
   TabelaAdi?: string;
-  /** Vergi dairesi ID'si - Bağlı vergi dairesi */
+  /** Vergi dairesi ID'si - Bağlı vergi dairesi
+  MCP_NOT: Kullanıcı belirtmemiş ise default değeri 1 gönder. */
   VergiDairesiID?: number;
-  /** Vergi numarası - TC kimlik no veya vergi no */
+  /** Vergi numarası - TC kimlik no veya vergi no
+  MCP_NOT: Kullanıcı belirtmemiş ise default değeri "0" gönder. */
   VergiNo?: string;
   /** Çalışma para birimi ID'si - Ana para birimi tanımı. Cari ile yapılacak ticarette tercih edilen döviz cinsi */
   CalismaParaBirimiID?: number;
@@ -37,7 +39,8 @@ export interface AaroModullerCariKayitSadeKayitModel {
   SubeID?: number;
   /** Bağlı şirket ID'si */
   SirketID?: number;
-  /** Aktif/Pasif durumu */
+  /** Aktif/Pasif durumu
+  MCP_NOT: Oluştururken değeri true gönder. */
   Durum?: boolean;
   /** Cari tipi :
   Musteri = 102001,
@@ -46,7 +49,8 @@ export interface AaroModullerCariKayitSadeKayitModel {
   Potansiyel = 102004,
   Personel = 102005,
   Kamu = 102006,
-  Ortak = 102007, */
+  Ortak = 102007,
+  MCP_NOT: Kullanıcı belirtmemiş ise default değeri 102001 gönder. */
   TipID?: AaroModullerCariKayitSadeKayitModelTipID;
   /** Muhasebeleşme ID'si - Muhasebeleşme sistemi ile bağlantı. Hangi Muhasebeleşme tanımı kullanılarak Muhasebe Hesap Planınında hangi hesaplara atılacağını belirler */
   EntegrasyonTanimID?: number;

@@ -8,6 +8,7 @@ import type { StokListeGetGetKisitFaturaKartTuru } from './stokListeGetGetKisitF
 import type { StokListeGetGetKisitOnayDurum } from './stokListeGetGetKisitOnayDurum.js';
 import type { StokListeGetGetKisitTakipYontemi } from './stokListeGetGetKisitTakipYontemi.js';
 import type { StokListeGetGetKisitTipID } from './stokListeGetGetKisitTipID.js';
+import type { StokListeGetGetKisitYatirimTesvikSiniflandirmaKodu } from './stokListeGetGetKisitYatirimTesvikSiniflandirmaKodu.js';
 
 export type StokListeGetGetParams = {
 /**
@@ -576,6 +577,7 @@ Stok kartına ait ön tanımlı üretim reçetesinin kodunu belirtir
  * Ilaç ve tıbbi cihazlar için gererklidir kartın ilaç mı tıbbi cihaz mı olduğunu belitir
  */
 'Kisit.faturaKartTuru'?: StokListeGetGetKisitFaturaKartTuru;
+'Kisit.yatirimTesvikSiniflandirmaKodu'?: StokListeGetGetKisitYatirimTesvikSiniflandirmaKodu;
 /**
  * Listeleme işlemlerinde sıralama için kullanılacak kısıtı belirtir.
 Örneğin, "Tarih", "Tarih:desc", "Tarih,Adi", "Tarih:desc,Adi" gibi bir değer alabilir.

@@ -7,6 +7,7 @@
 import type { AaroModullerStokKayitSadeKayitModelFaturaKartTuru } from './aaroModullerStokKayitSadeKayitModelFaturaKartTuru.js';
 import type { AaroModullerStokKayitSadeKayitModelTakipYontemi } from './aaroModullerStokKayitSadeKayitModelTakipYontemi.js';
 import type { AaroModullerStokKayitSadeKayitModelTipID } from './aaroModullerStokKayitSadeKayitModelTipID.js';
+import type { AaroModullerStokKayitSadeKayitModelYatirimTesvikSiniflandirmaKodu } from './aaroModullerStokKayitSadeKayitModelYatirimTesvikSiniflandirmaKodu.js';
 
 /**
  * Stok kartı kayıt işlemleri için detay veri modeli.
@@ -179,4 +180,5 @@ export interface AaroModullerStokKayitSadeKayitModel {
   WooVariationID?: string;
   /** Ilaç ve tıbbi cihazlar için gererklidir kartın ilaç mı tıbbi cihaz mı olduğunu belitir */
   FaturaKartTuru?: AaroModullerStokKayitSadeKayitModelFaturaKartTuru;
+  YatirimTesvikSiniflandirmaKodu?: AaroModullerStokKayitSadeKayitModelYatirimTesvikSiniflandirmaKodu;
 }

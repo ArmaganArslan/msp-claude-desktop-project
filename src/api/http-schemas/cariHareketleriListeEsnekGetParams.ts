@@ -6,9 +6,24 @@
  */
 
 export type CariHareketleriListeEsnekGetParams = {
+/**
+ * Virgül ayraçlı esnek filtre dizisi ({Alan}:{Operator}:{Deger}:{Mantik}). Örn: "Tarih:ge:!Bugun" (Bugüden büyük ve eşit hareketler)
+ */
 Kisit?: string;
+/**
+ * Virgül ayraçlı sıralama kriteri. Örn: "Tarih:desc,Tutar:asc"
+ */
 Siralama?: string;
+/**
+ * İstenen sayfa numarası (1'den başlar).
+ */
 Sayfa?: number;
-SatirSayisi?: number;
+/**
+ * Sayfa başına getirilecek hareket adedi.
+ */
+SayfaSatirSayisi?: number;
+/**
+ * Yanıtta dönmesi istenen dinamik kolonlar, virgülle ayrılarak. Boş bırakılırsa tüm veriler döner.
+ */
 Sutunlar?: string;
 };

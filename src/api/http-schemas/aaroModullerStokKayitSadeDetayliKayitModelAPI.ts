@@ -10,6 +10,7 @@ import type { AaroModullerStokBarkodKayitSadeKayitModel } from './aaroModullerSt
 import type { AaroModullerStokKayitSadeDetayliKayitModelAPIFaturaKartTuru } from './aaroModullerStokKayitSadeDetayliKayitModelAPIFaturaKartTuru.js';
 import type { AaroModullerStokKayitSadeDetayliKayitModelAPITakipYontemi } from './aaroModullerStokKayitSadeDetayliKayitModelAPITakipYontemi.js';
 import type { AaroModullerStokKayitSadeDetayliKayitModelAPITipID } from './aaroModullerStokKayitSadeDetayliKayitModelAPITipID.js';
+import type { AaroModullerStokKayitSadeDetayliKayitModelAPIYatirimTesvikSiniflandirmaKodu } from './aaroModullerStokKayitSadeDetayliKayitModelAPIYatirimTesvikSiniflandirmaKodu.js';
 import type { AaroModullerStokKayitSadeStokEntegrasyonTanimKayitModel } from './aaroModullerStokKayitSadeStokEntegrasyonTanimKayitModel.js';
 
 export interface AaroModullerStokKayitSadeDetayliKayitModelAPI {
@@ -185,4 +186,5 @@ export interface AaroModullerStokKayitSadeDetayliKayitModelAPI {
   WooVariationID?: string;
   /** Ilaç ve tıbbi cihazlar için gererklidir kartın ilaç mı tıbbi cihaz mı olduğunu belitir */
   FaturaKartTuru?: AaroModullerStokKayitSadeDetayliKayitModelAPIFaturaKartTuru;
+  YatirimTesvikSiniflandirmaKodu?: AaroModullerStokKayitSadeDetayliKayitModelAPIYatirimTesvikSiniflandirmaKodu;
 }

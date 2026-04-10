@@ -10,11 +10,12 @@ import type { AaroModullerParametrelerParametreSonucDetayliOnDeger } from './aar
 import type { AaroModullerParametrelerParametreSonucDetayliParametreID } from './aaroModullerParametrelerParametreSonucDetayliParametreID.js';
 
 export interface AaroModullerParametrelerParametreSonucDetayli {
-  ParametreID?: AaroModullerParametrelerParametreSonucDetayliParametreID;
   SirketID?: number;
   SubeID?: number;
-  Deger?: AaroModullerParametrelerParametreSonucDetayliDeger;
-  DegerTipi?: AaroModullerParametrelerParametreSonucDetayliDegerTipi;
-  OnDeger?: AaroModullerParametrelerParametreSonucDetayliOnDeger;
+  ParametreID?: AaroModullerParametrelerParametreSonucDetayliParametreID;
+  ParametreAdi?: string;
   Aciklama?: string;
+  DegerTipi?: AaroModullerParametrelerParametreSonucDetayliDegerTipi;
+  Deger?: AaroModullerParametrelerParametreSonucDetayliDeger;
+  OnDeger?: AaroModullerParametrelerParametreSonucDetayliOnDeger;
 }

@@ -8,10 +8,10 @@
 import {
   McpServer
 } from '@modelcontextprotocol/sdk/server/mcp.js';
-
+  
 import {
   StdioServerTransport
-} from '@modelcontextprotocol/sdk/server/stdio.js';
+} from '@modelcontextprotocol/sdk/server/stdio.js';  
 
 import {
   Account_OturumBilgisiGetirPostHandler,
@@ -40,18 +40,67 @@ import {
   Aciklamalar_NotlarGetHandler,
   Aciklamalar_NotEklePostHandler,
   Aciklamalar_NotSilDeleteHandler,
-  AlinanSiparisHareketleri_DetayliListeGetHandler,
-  AlinanSiparisListe_DetayliListeGetHandler,
-  AlinanTeklifHareketleri_DetayliListeGetHandler,
-  AlinanTeklifListe_DetayliListeGetHandler,
-  AlisFaturasiHareketleri_DetayliListeGetHandler,
-  AlisFaturasiListe_DetayliListeGetHandler,
-  AlisIadeFaturasiHareketleri_DetayliListeGetHandler,
-  AlisIadeFaturasiListe_DetayliListeGetHandler,
-  AlisIadeIrsaliyesiHareketleri_DetayliListeGetHandler,
-  AlisIadeIrsaliyesiListe_DetayliListeGetHandler,
-  AlisIrsaliyesiHareketleri_DetayliListeGetHandler,
-  AlisIrsaliyesiListe_DetayliListeGetHandler,
+  AlinanSiparisHareketleri_GetGetHandler,
+  AlinanSiparisHareketleri_ListeGetGetHandler,
+  AlinanSiparisHareketleri_ListeEsnekGetHandler,
+  AlinanSiparisHareketleri_ListePostPostHandler,
+  AlinanSiparisHareketleri_GrupluListeGetHandler,
+  AlinanSiparisListe_GetGetHandler,
+  AlinanSiparisListe_ListeGetGetHandler,
+  AlinanSiparisListe_ListeEsnekGetHandler,
+  AlinanSiparisListe_ListePostPostHandler,
+  AlinanSiparisListe_GrupluListeGetHandler,
+  AlinanTeklifHareketleri_GetGetHandler,
+  AlinanTeklifHareketleri_ListeGetGetHandler,
+  AlinanTeklifHareketleri_ListeEsnekGetHandler,
+  AlinanTeklifHareketleri_ListePostPostHandler,
+  AlinanTeklifHareketleri_GrupluListeGetHandler,
+  AlinanTeklifListe_GetGetHandler,
+  AlinanTeklifListe_ListeGetGetHandler,
+  AlinanTeklifListe_ListeEsnekGetHandler,
+  AlinanTeklifListe_ListePostPostHandler,
+  AlinanTeklifListe_GrupluListeGetHandler,
+  AlisFaturasiHareketleri_GetGetHandler,
+  AlisFaturasiHareketleri_ListeGetGetHandler,
+  AlisFaturasiHareketleri_ListeEsnekGetHandler,
+  AlisFaturasiHareketleri_ListePostPostHandler,
+  AlisFaturasiHareketleri_GrupluListeGetHandler,
+  AlisFaturasiListe_GetGetHandler,
+  AlisFaturasiListe_ListeGetGetHandler,
+  AlisFaturasiListe_ListeEsnekGetHandler,
+  AlisFaturasiListe_ListePostPostHandler,
+  AlisFaturasiListe_GrupluListeGetHandler,
+  AlisIadeFaturasiHareketleri_GetGetHandler,
+  AlisIadeFaturasiHareketleri_ListeGetGetHandler,
+  AlisIadeFaturasiHareketleri_ListeEsnekGetHandler,
+  AlisIadeFaturasiHareketleri_ListePostPostHandler,
+  AlisIadeFaturasiHareketleri_GrupluListeGetHandler,
+  AlisIadeFaturasiListe_GetGetHandler,
+  AlisIadeFaturasiListe_ListeGetGetHandler,
+  AlisIadeFaturasiListe_ListeEsnekGetHandler,
+  AlisIadeFaturasiListe_ListePostPostHandler,
+  AlisIadeFaturasiListe_GrupluListeGetHandler,
+  AlisIadeIrsaliyesiHareketleri_GetGetHandler,
+  AlisIadeIrsaliyesiHareketleri_ListeGetGetHandler,
+  AlisIadeIrsaliyesiHareketleri_ListeEsnekGetHandler,
+  AlisIadeIrsaliyesiHareketleri_ListePostPostHandler,
+  AlisIadeIrsaliyesiHareketleri_GrupluListeGetHandler,
+  AlisIadeIrsaliyesiListe_GetGetHandler,
+  AlisIadeIrsaliyesiListe_ListeGetGetHandler,
+  AlisIadeIrsaliyesiListe_ListeEsnekGetHandler,
+  AlisIadeIrsaliyesiListe_ListePostPostHandler,
+  AlisIadeIrsaliyesiListe_GrupluListeGetHandler,
+  AlisIrsaliyesiHareketleri_GetGetHandler,
+  AlisIrsaliyesiHareketleri_ListeGetGetHandler,
+  AlisIrsaliyesiHareketleri_ListeEsnekGetHandler,
+  AlisIrsaliyesiHareketleri_ListePostPostHandler,
+  AlisIrsaliyesiHareketleri_GrupluListeGetHandler,
+  AlisIrsaliyesiListe_GetGetHandler,
+  AlisIrsaliyesiListe_ListeGetGetHandler,
+  AlisIrsaliyesiListe_ListeEsnekGetHandler,
+  AlisIrsaliyesiListe_ListePostPostHandler,
+  AlisIrsaliyesiListe_GrupluListeGetHandler,
+  Auth_ExchangeTokenPostHandler,
   Banka_GetGetHandler,
   Banka_PutPutHandler,
   Banka_DeleteDeleteHandler,
@@ -70,7 +119,11 @@ import {
   Banka_NotlarGetHandler,
   Banka_NotEklePostHandler,
   Banka_NotSilDeleteHandler,
-  BankaHareketleri_DetayliListeGetHandler,
+  BankaHareketleri_GetGetHandler,
+  BankaHareketleri_ListeGetGetHandler,
+  BankaHareketleri_ListeEsnekGetHandler,
+  BankaHareketleri_ListePostPostHandler,
+  BankaHareketleri_GrupluListeGetHandler,
   BankaHesap_MinListeGetHandler,
   BankaHesap_DetayliPutPutHandler,
   BankaHesap_DetayliPostPostHandler,
@@ -201,8 +254,10 @@ import {
   CariBanka_NotlarGetHandler,
   CariBanka_NotEklePostHandler,
   CariBanka_NotSilDeleteHandler,
-  CariHareketleri_DetayliListeGetHandler,
+  CariHareketleri_GetGetHandler,
+  CariHareketleri_ListeGetGetHandler,
   CariHareketleri_ListeEsnekGetHandler,
+  CariHareketleri_ListePostPostHandler,
   CariHareketleri_GrupluListeGetHandler,
   CariIlgili_GetGetHandler,
   CariIlgili_PutPutHandler,
@@ -277,7 +332,11 @@ import {
   CekSenet_NotlarGetHandler,
   CekSenet_NotEklePostHandler,
   CekSenet_NotSilDeleteHandler,
-  CekSenetHareketleri_DetayliListeGetHandler,
+  CekSenetHareketleri_GetGetHandler,
+  CekSenetHareketleri_ListeGetGetHandler,
+  CekSenetHareketleri_ListeEsnekGetHandler,
+  CekSenetHareketleri_ListePostPostHandler,
+  CekSenetHareketleri_GrupluListeGetHandler,
   DegisiklikLoglari_GetGetHandler,
   DegisiklikLoglari_PutPutHandler,
   DegisiklikLoglari_DeleteDeleteHandler,
@@ -310,6 +369,9 @@ import {
   Dekont_KalemTekGetHandler,
   Dekont_KalemlerGetHandler,
   Dekont_KalemlerOtomatikGetHandler,
+  Demirbas_DetayliGetGetHandler,
+  Demirbas_DetayliPutPutHandler,
+  Demirbas_DetayliPostPostHandler,
   Demirbas_GetGetHandler,
   Demirbas_PutPutHandler,
   Demirbas_DeleteDeleteHandler,
@@ -328,7 +390,11 @@ import {
   Demirbas_NotlarGetHandler,
   Demirbas_NotEklePostHandler,
   Demirbas_NotSilDeleteHandler,
-  DemirbasHareketleri_DetayliListeGetHandler,
+  DemirbasHareketleri_GetGetHandler,
+  DemirbasHareketleri_ListeGetGetHandler,
+  DemirbasHareketleri_ListeEsnekGetHandler,
+  DemirbasHareketleri_ListePostPostHandler,
+  DemirbasHareketleri_GrupluListeGetHandler,
   Depo_GetGetHandler,
   Depo_PutPutHandler,
   Depo_DeleteDeleteHandler,
@@ -347,8 +413,16 @@ import {
   Depo_NotlarGetHandler,
   Depo_NotEklePostHandler,
   Depo_NotSilDeleteHandler,
-  DepolarArasiTransferHareketleri_DetayliListeGetHandler,
-  DepolarArasiTransferListe_DetayliListeGetHandler,
+  DepolarArasiTransferHareketleri_GetGetHandler,
+  DepolarArasiTransferHareketleri_ListeGetGetHandler,
+  DepolarArasiTransferHareketleri_ListeEsnekGetHandler,
+  DepolarArasiTransferHareketleri_ListePostPostHandler,
+  DepolarArasiTransferHareketleri_GrupluListeGetHandler,
+  DepolarArasiTransferListe_GetGetHandler,
+  DepolarArasiTransferListe_ListeGetGetHandler,
+  DepolarArasiTransferListe_ListeEsnekGetHandler,
+  DepolarArasiTransferListe_ListePostPostHandler,
+  DepolarArasiTransferListe_GrupluListeGetHandler,
   DepoTerminal_HareketListesiGetHandler,
   DepoTerminal_ListeKayitlarSayisiGetHandler,
   DepoTerminal_FaturaIrsaliyeGetHandler,
@@ -438,7 +512,11 @@ import {
   Etiketler_NotlarGetHandler,
   Etiketler_NotEklePostHandler,
   Etiketler_NotSilDeleteHandler,
-  FaturaListe_DetayliListeGetHandler,
+  FaturaListe_GetGetHandler,
+  FaturaListe_ListeGetGetHandler,
+  FaturaListe_ListeEsnekGetHandler,
+  FaturaListe_ListePostPostHandler,
+  FaturaListe_GrupluListeGetHandler,
   FiyatListesi_GetGetHandler,
   FiyatListesi_PutPutHandler,
   FiyatListesi_DeleteDeleteHandler,
@@ -458,7 +536,7 @@ import {
   FiyatListesi_NotEklePostHandler,
   FiyatListesi_NotSilDeleteHandler,
   FiyatListesiSatirlar_BulkCreatePostHandler,
-  //FiyatListesiSatirlar_BulkUpdatePostHandler,
+  FiyatListesiSatirlar_BulkUpdatePostHandler,
   FiyatListesiSatirlar_GetGetHandler,
   FiyatListesiSatirlar_PutPutHandler,
   FiyatListesiSatirlar_DeleteDeleteHandler,
@@ -477,6 +555,9 @@ import {
   FiyatListesiSatirlar_NotlarGetHandler,
   FiyatListesiSatirlar_NotEklePostHandler,
   FiyatListesiSatirlar_NotSilDeleteHandler,
+  GelirGider_DetayliGetGetHandler,
+  GelirGider_DetayliPutPutHandler,
+  GelirGider_DetayliPostPostHandler,
   GelirGider_GetGetHandler,
   GelirGider_PutPutHandler,
   GelirGider_DeleteDeleteHandler,
@@ -495,7 +576,11 @@ import {
   GelirGider_NotlarGetHandler,
   GelirGider_NotEklePostHandler,
   GelirGider_NotSilDeleteHandler,
-  GelirGiderHareketleri_DetayliListeGetHandler,
+  GelirGiderHareketleri_GetGetHandler,
+  GelirGiderHareketleri_ListeGetGetHandler,
+  GelirGiderHareketleri_ListeEsnekGetHandler,
+  GelirGiderHareketleri_ListePostPostHandler,
+  GelirGiderHareketleri_GrupluListeGetHandler,
   GorevHareketleri_GetGetHandler,
   GorevHareketleri_PutPutHandler,
   GorevHareketleri_DeleteDeleteHandler,
@@ -687,7 +772,11 @@ import {
   Kasa_NotlarGetHandler,
   Kasa_NotEklePostHandler,
   Kasa_NotSilDeleteHandler,
-  KasaHareketleri_DetayliListeGetHandler,
+  KasaHareketleri_GetGetHandler,
+  KasaHareketleri_ListeGetGetHandler,
+  KasaHareketleri_ListeEsnekGetHandler,
+  KasaHareketleri_ListePostPostHandler,
+  KasaHareketleri_GrupluListeGetHandler,
   Kodlar_KodlarTumSeviyelerGetHandler,
   Kodlar_IDSizTumSeviyeleriBirdenKaydetPostHandler,
   Kodlar_GetGetHandler,
@@ -1021,16 +1110,56 @@ import {
   Sablon_NotlarGetHandler,
   Sablon_NotEklePostHandler,
   Sablon_NotSilDeleteHandler,
-  SatinAlmaTalepHareketleri_DetayliListeGetHandler,
-  SatinAlmaTalepListe_DetayliListeGetHandler,
-  SatisFaturasiHareketleri_DetayliListeGetHandler,
-  SatisFaturasiListe_DetayliListeGetHandler,
-  SatisIadeFaturasiHareketleri_DetayliListeGetHandler,
-  SatisIadeFaturasiListe_DetayliListeGetHandler,
-  SatisIadeIrsaliyesiHareketleri_DetayliListeGetHandler,
-  SatisIadeIrsaliyesiListe_DetayliListeGetHandler,
-  SatisIrsaliyesiHareketleri_DetayliListeGetHandler,
-  SatisIrsaliyesiListe_DetayliListeGetHandler,
+  SatinAlmaTalepHareketleri_GetGetHandler,
+  SatinAlmaTalepHareketleri_ListeGetGetHandler,
+  SatinAlmaTalepHareketleri_ListeEsnekGetHandler,
+  SatinAlmaTalepHareketleri_ListePostPostHandler,
+  SatinAlmaTalepHareketleri_GrupluListeGetHandler,
+  SatinAlmaTalepListe_GetGetHandler,
+  SatinAlmaTalepListe_ListeGetGetHandler,
+  SatinAlmaTalepListe_ListeEsnekGetHandler,
+  SatinAlmaTalepListe_ListePostPostHandler,
+  SatinAlmaTalepListe_GrupluListeGetHandler,
+  SatisFaturasiHareketleri_GetGetHandler,
+  SatisFaturasiHareketleri_ListeGetGetHandler,
+  SatisFaturasiHareketleri_ListeEsnekGetHandler,
+  SatisFaturasiHareketleri_ListePostPostHandler,
+  SatisFaturasiHareketleri_GrupluListeGetHandler,
+  SatisFaturasiListe_GetGetHandler,
+  SatisFaturasiListe_ListeGetGetHandler,
+  SatisFaturasiListe_ListeEsnekGetHandler,
+  SatisFaturasiListe_ListePostPostHandler,
+  SatisFaturasiListe_GrupluListeGetHandler,
+  SatisIadeFaturasiHareketleri_GetGetHandler,
+  SatisIadeFaturasiHareketleri_ListeGetGetHandler,
+  SatisIadeFaturasiHareketleri_ListeEsnekGetHandler,
+  SatisIadeFaturasiHareketleri_ListePostPostHandler,
+  SatisIadeFaturasiHareketleri_GrupluListeGetHandler,
+  SatisIadeFaturasiListe_GetGetHandler,
+  SatisIadeFaturasiListe_ListeGetGetHandler,
+  SatisIadeFaturasiListe_ListeEsnekGetHandler,
+  SatisIadeFaturasiListe_ListePostPostHandler,
+  SatisIadeFaturasiListe_GrupluListeGetHandler,
+  SatisIadeIrsaliyesiHareketleri_GetGetHandler,
+  SatisIadeIrsaliyesiHareketleri_ListeGetGetHandler,
+  SatisIadeIrsaliyesiHareketleri_ListeEsnekGetHandler,
+  SatisIadeIrsaliyesiHareketleri_ListePostPostHandler,
+  SatisIadeIrsaliyesiHareketleri_GrupluListeGetHandler,
+  SatisIadeIrsaliyesiListe_GetGetHandler,
+  SatisIadeIrsaliyesiListe_ListeGetGetHandler,
+  SatisIadeIrsaliyesiListe_ListeEsnekGetHandler,
+  SatisIadeIrsaliyesiListe_ListePostPostHandler,
+  SatisIadeIrsaliyesiListe_GrupluListeGetHandler,
+  SatisIrsaliyesiHareketleri_GetGetHandler,
+  SatisIrsaliyesiHareketleri_ListeGetGetHandler,
+  SatisIrsaliyesiHareketleri_ListeEsnekGetHandler,
+  SatisIrsaliyesiHareketleri_ListePostPostHandler,
+  SatisIrsaliyesiHareketleri_GrupluListeGetHandler,
+  SatisIrsaliyesiListe_GetGetHandler,
+  SatisIrsaliyesiListe_ListeGetGetHandler,
+  SatisIrsaliyesiListe_ListeEsnekGetHandler,
+  SatisIrsaliyesiListe_ListePostPostHandler,
+  SatisIrsaliyesiListe_GrupluListeGetHandler,
   SeriLot_SeriLotHizliKayitPostHandler,
   SeriLot_GetGetHandler,
   SeriLot_PutPutHandler,
@@ -1068,9 +1197,21 @@ import {
   SeriLotHareketleri_NotlarGetHandler,
   SeriLotHareketleri_NotEklePostHandler,
   SeriLotHareketleri_NotSilDeleteHandler,
-  SiparisListe_DetayliListeGetHandler,
-  SipCariHareketleri_DetayliListeGetHandler,
-  SipStokHareketleri_DetayliListeGetHandler,
+  SiparisListe_GetGetHandler,
+  SiparisListe_ListeGetGetHandler,
+  SiparisListe_ListeEsnekGetHandler,
+  SiparisListe_ListePostPostHandler,
+  SiparisListe_GrupluListeGetHandler,
+  SipCariHareketleri_GetGetHandler,
+  SipCariHareketleri_ListeGetGetHandler,
+  SipCariHareketleri_ListeEsnekGetHandler,
+  SipCariHareketleri_ListePostPostHandler,
+  SipCariHareketleri_GrupluListeGetHandler,
+  SipStokHareketleri_GetGetHandler,
+  SipStokHareketleri_ListeGetGetHandler,
+  SipStokHareketleri_ListeEsnekGetHandler,
+  SipStokHareketleri_ListePostPostHandler,
+  SipStokHareketleri_GrupluListeGetHandler,
   Sirketler_GetGetHandler,
   Sirketler_PutPutHandler,
   Sirketler_DeleteDeleteHandler,
@@ -1166,8 +1307,15 @@ import {
   StokDepoMiktar_NotlarGetHandler,
   StokDepoMiktar_NotEklePostHandler,
   StokDepoMiktar_NotSilDeleteHandler,
-  StokGelirGiderDemirbasHareketleri_DetayliListeGetHandler,
-  StokHareketleri_DetayliListeGetHandler,
+  StokGelirGiderDemirbasHareketleri_GetGetHandler,
+  StokGelirGiderDemirbasHareketleri_ListeGetGetHandler,
+  StokGelirGiderDemirbasHareketleri_ListeEsnekGetHandler,
+  StokGelirGiderDemirbasHareketleri_ListePostPostHandler,
+  StokGelirGiderDemirbasHareketleri_GrupluListeGetHandler,
+  StokHareketleri_GetGetHandler,
+  StokHareketleri_ListeGetGetHandler,
+  StokHareketleri_ListeEsnekGetHandler,
+  StokHareketleri_ListePostPostHandler,
   StokHareketleri_GrupluListeGetHandler,
   StokOzet_GetGetHandler,
   StokOzet_PutPutHandler,
@@ -1629,11 +1777,31 @@ import {
   VergiDairesi_NotlarGetHandler,
   VergiDairesi_NotEklePostHandler,
   VergiDairesi_NotSilDeleteHandler,
-  VergiHareketleri_DetayliListeGetHandler,
-  VerilenSiparisHareketleri_DetayliListeGetHandler,
-  VerilenSiparisListe_DetayliListeGetHandler,
-  VerilenTeklifHareketleri_DetayliListeGetHandler,
-  VerilenTeklifListe_DetayliListeGetHandler,
+  VergiHareketleri_GetGetHandler,
+  VergiHareketleri_ListeGetGetHandler,
+  VergiHareketleri_ListeEsnekGetHandler,
+  VergiHareketleri_ListePostPostHandler,
+  VergiHareketleri_GrupluListeGetHandler,
+  VerilenSiparisHareketleri_GetGetHandler,
+  VerilenSiparisHareketleri_ListeGetGetHandler,
+  VerilenSiparisHareketleri_ListeEsnekGetHandler,
+  VerilenSiparisHareketleri_ListePostPostHandler,
+  VerilenSiparisHareketleri_GrupluListeGetHandler,
+  VerilenSiparisListe_GetGetHandler,
+  VerilenSiparisListe_ListeGetGetHandler,
+  VerilenSiparisListe_ListeEsnekGetHandler,
+  VerilenSiparisListe_ListePostPostHandler,
+  VerilenSiparisListe_GrupluListeGetHandler,
+  VerilenTeklifHareketleri_GetGetHandler,
+  VerilenTeklifHareketleri_ListeGetGetHandler,
+  VerilenTeklifHareketleri_ListeEsnekGetHandler,
+  VerilenTeklifHareketleri_ListePostPostHandler,
+  VerilenTeklifHareketleri_GrupluListeGetHandler,
+  VerilenTeklifListe_GetGetHandler,
+  VerilenTeklifListe_ListeGetGetHandler,
+  VerilenTeklifListe_ListeEsnekGetHandler,
+  VerilenTeklifListe_ListePostPostHandler,
+  VerilenTeklifListe_GrupluListeGetHandler,
   Yetkiler_GetGetHandler,
   Yetkiler_PutPutHandler,
   Yetkiler_DeleteDeleteHandler,
@@ -1736,18 +1904,67 @@ import {
   AciklamalarNotEklePostParams,
   AciklamalarNotEklePostBody,
   AciklamalarNotSilDeleteParams,
-  AlinanSiparisHareketleriDetayliListeGetQueryParams,
-  AlinanSiparisListeDetayliListeGetQueryParams,
-  AlinanTeklifHareketleriDetayliListeGetQueryParams,
-  AlinanTeklifListeDetayliListeGetQueryParams,
-  AlisFaturasiHareketleriDetayliListeGetQueryParams,
-  AlisFaturasiListeDetayliListeGetQueryParams,
-  AlisIadeFaturasiHareketleriDetayliListeGetQueryParams,
-  AlisIadeFaturasiListeDetayliListeGetQueryParams,
-  AlisIadeIrsaliyesiHareketleriDetayliListeGetQueryParams,
-  AlisIadeIrsaliyesiListeDetayliListeGetQueryParams,
-  AlisIrsaliyesiHareketleriDetayliListeGetQueryParams,
-  AlisIrsaliyesiListeDetayliListeGetQueryParams,
+  AlinanSiparisHareketleriGetGetParams,
+  AlinanSiparisHareketleriListeGetGetQueryParams,
+  AlinanSiparisHareketleriListeEsnekGetQueryParams,
+  AlinanSiparisHareketleriListePostPostBody,
+  AlinanSiparisHareketleriGrupluListeGetQueryParams,
+  AlinanSiparisListeGetGetParams,
+  AlinanSiparisListeListeGetGetQueryParams,
+  AlinanSiparisListeListeEsnekGetQueryParams,
+  AlinanSiparisListeListePostPostBody,
+  AlinanSiparisListeGrupluListeGetQueryParams,
+  AlinanTeklifHareketleriGetGetParams,
+  AlinanTeklifHareketleriListeGetGetQueryParams,
+  AlinanTeklifHareketleriListeEsnekGetQueryParams,
+  AlinanTeklifHareketleriListePostPostBody,
+  AlinanTeklifHareketleriGrupluListeGetQueryParams,
+  AlinanTeklifListeGetGetParams,
+  AlinanTeklifListeListeGetGetQueryParams,
+  AlinanTeklifListeListeEsnekGetQueryParams,
+  AlinanTeklifListeListePostPostBody,
+  AlinanTeklifListeGrupluListeGetQueryParams,
+  AlisFaturasiHareketleriGetGetParams,
+  AlisFaturasiHareketleriListeGetGetQueryParams,
+  AlisFaturasiHareketleriListeEsnekGetQueryParams,
+  AlisFaturasiHareketleriListePostPostBody,
+  AlisFaturasiHareketleriGrupluListeGetQueryParams,
+  AlisFaturasiListeGetGetParams,
+  AlisFaturasiListeListeGetGetQueryParams,
+  AlisFaturasiListeListeEsnekGetQueryParams,
+  AlisFaturasiListeListePostPostBody,
+  AlisFaturasiListeGrupluListeGetQueryParams,
+  AlisIadeFaturasiHareketleriGetGetParams,
+  AlisIadeFaturasiHareketleriListeGetGetQueryParams,
+  AlisIadeFaturasiHareketleriListeEsnekGetQueryParams,
+  AlisIadeFaturasiHareketleriListePostPostBody,
+  AlisIadeFaturasiHareketleriGrupluListeGetQueryParams,
+  AlisIadeFaturasiListeGetGetParams,
+  AlisIadeFaturasiListeListeGetGetQueryParams,
+  AlisIadeFaturasiListeListeEsnekGetQueryParams,
+  AlisIadeFaturasiListeListePostPostBody,
+  AlisIadeFaturasiListeGrupluListeGetQueryParams,
+  AlisIadeIrsaliyesiHareketleriGetGetParams,
+  AlisIadeIrsaliyesiHareketleriListeGetGetQueryParams,
+  AlisIadeIrsaliyesiHareketleriListeEsnekGetQueryParams,
+  AlisIadeIrsaliyesiHareketleriListePostPostBody,
+  AlisIadeIrsaliyesiHareketleriGrupluListeGetQueryParams,
+  AlisIadeIrsaliyesiListeGetGetParams,
+  AlisIadeIrsaliyesiListeListeGetGetQueryParams,
+  AlisIadeIrsaliyesiListeListeEsnekGetQueryParams,
+  AlisIadeIrsaliyesiListeListePostPostBody,
+  AlisIadeIrsaliyesiListeGrupluListeGetQueryParams,
+  AlisIrsaliyesiHareketleriGetGetParams,
+  AlisIrsaliyesiHareketleriListeGetGetQueryParams,
+  AlisIrsaliyesiHareketleriListeEsnekGetQueryParams,
+  AlisIrsaliyesiHareketleriListePostPostBody,
+  AlisIrsaliyesiHareketleriGrupluListeGetQueryParams,
+  AlisIrsaliyesiListeGetGetParams,
+  AlisIrsaliyesiListeListeGetGetQueryParams,
+  AlisIrsaliyesiListeListeEsnekGetQueryParams,
+  AlisIrsaliyesiListeListePostPostBody,
+  AlisIrsaliyesiListeGrupluListeGetQueryParams,
+  AuthExchangeTokenPostBody,
   BankaGetGetParams,
   BankaPutPutParams,
   BankaPutPutBody,
@@ -1773,7 +1990,11 @@ import {
   BankaNotEklePostParams,
   BankaNotEklePostBody,
   BankaNotSilDeleteParams,
-  BankaHareketleriDetayliListeGetQueryParams,
+  BankaHareketleriGetGetParams,
+  BankaHareketleriListeGetGetQueryParams,
+  BankaHareketleriListeEsnekGetQueryParams,
+  BankaHareketleriListePostPostBody,
+  BankaHareketleriGrupluListeGetQueryParams,
   BankaHesapMinListeGetQueryParams,
   BankaHesapDetayliPutPutBody,
   BankaHesapDetayliPostPostBody,
@@ -1943,8 +2164,10 @@ import {
   CariBankaNotEklePostParams,
   CariBankaNotEklePostBody,
   CariBankaNotSilDeleteParams,
-  CariHareketleriDetayliListeGetQueryParams,
+  CariHareketleriGetGetParams,
+  CariHareketleriListeGetGetQueryParams,
   CariHareketleriListeEsnekGetQueryParams,
+  CariHareketleriListePostPostBody,
   CariHareketleriGrupluListeGetQueryParams,
   CariIlgiliGetGetParams,
   CariIlgiliPutPutParams,
@@ -2047,7 +2270,11 @@ import {
   CekSenetNotEklePostParams,
   CekSenetNotEklePostBody,
   CekSenetNotSilDeleteParams,
-  CekSenetHareketleriDetayliListeGetQueryParams,
+  CekSenetHareketleriGetGetParams,
+  CekSenetHareketleriListeGetGetQueryParams,
+  CekSenetHareketleriListeEsnekGetQueryParams,
+  CekSenetHareketleriListePostPostBody,
+  CekSenetHareketleriGrupluListeGetQueryParams,
   DegisiklikLoglariGetGetParams,
   DegisiklikLoglariPutPutParams,
   DegisiklikLoglariPutPutBody,
@@ -2089,6 +2316,9 @@ import {
   DekontKalemTekGetQueryParams,
   DekontKalemlerGetQueryParams,
   DekontKalemlerOtomatikGetQueryParams,
+  DemirbasDetayliGetGetParams,
+  DemirbasDetayliPutPutBody,
+  DemirbasDetayliPostPostBody,
   DemirbasGetGetParams,
   DemirbasPutPutParams,
   DemirbasPutPutBody,
@@ -2114,7 +2344,11 @@ import {
   DemirbasNotEklePostParams,
   DemirbasNotEklePostBody,
   DemirbasNotSilDeleteParams,
-  DemirbasHareketleriDetayliListeGetQueryParams,
+  DemirbasHareketleriGetGetParams,
+  DemirbasHareketleriListeGetGetQueryParams,
+  DemirbasHareketleriListeEsnekGetQueryParams,
+  DemirbasHareketleriListePostPostBody,
+  DemirbasHareketleriGrupluListeGetQueryParams,
   DepoGetGetParams,
   DepoPutPutParams,
   DepoPutPutBody,
@@ -2140,8 +2374,16 @@ import {
   DepoNotEklePostParams,
   DepoNotEklePostBody,
   DepoNotSilDeleteParams,
-  DepolarArasiTransferHareketleriDetayliListeGetQueryParams,
-  DepolarArasiTransferListeDetayliListeGetQueryParams,
+  DepolarArasiTransferHareketleriGetGetParams,
+  DepolarArasiTransferHareketleriListeGetGetQueryParams,
+  DepolarArasiTransferHareketleriListeEsnekGetQueryParams,
+  DepolarArasiTransferHareketleriListePostPostBody,
+  DepolarArasiTransferHareketleriGrupluListeGetQueryParams,
+  DepolarArasiTransferListeGetGetParams,
+  DepolarArasiTransferListeListeGetGetQueryParams,
+  DepolarArasiTransferListeListeEsnekGetQueryParams,
+  DepolarArasiTransferListeListePostPostBody,
+  DepolarArasiTransferListeGrupluListeGetQueryParams,
   DepoTerminalHareketListesiGetQueryParams,
   DepoTerminalFaturaIrsaliyeGetQueryParams,
   DepoTerminalFaturaIrsaliyeKalemlerGetQueryParams,
@@ -2258,7 +2500,11 @@ import {
   EtiketlerNotEklePostParams,
   EtiketlerNotEklePostBody,
   EtiketlerNotSilDeleteParams,
-  FaturaListeDetayliListeGetQueryParams,
+  FaturaListeGetGetParams,
+  FaturaListeListeGetGetQueryParams,
+  FaturaListeListeEsnekGetQueryParams,
+  FaturaListeListePostPostBody,
+  FaturaListeGrupluListeGetQueryParams,
   FiyatListesiGetGetParams,
   FiyatListesiPutPutParams,
   FiyatListesiPutPutBody,
@@ -2311,6 +2557,9 @@ import {
   FiyatListesiSatirlarNotEklePostParams,
   FiyatListesiSatirlarNotEklePostBody,
   FiyatListesiSatirlarNotSilDeleteParams,
+  GelirGiderDetayliGetGetParams,
+  GelirGiderDetayliPutPutBody,
+  GelirGiderDetayliPostPostBody,
   GelirGiderGetGetParams,
   GelirGiderPutPutParams,
   GelirGiderPutPutBody,
@@ -2336,7 +2585,11 @@ import {
   GelirGiderNotEklePostParams,
   GelirGiderNotEklePostBody,
   GelirGiderNotSilDeleteParams,
-  GelirGiderHareketleriDetayliListeGetQueryParams,
+  GelirGiderHareketleriGetGetParams,
+  GelirGiderHareketleriListeGetGetQueryParams,
+  GelirGiderHareketleriListeEsnekGetQueryParams,
+  GelirGiderHareketleriListePostPostBody,
+  GelirGiderHareketleriGrupluListeGetQueryParams,
   GorevHareketleriGetGetParams,
   GorevHareketleriPutPutParams,
   GorevHareketleriPutPutBody,
@@ -2599,7 +2852,11 @@ import {
   KasaNotEklePostParams,
   KasaNotEklePostBody,
   KasaNotSilDeleteParams,
-  KasaHareketleriDetayliListeGetQueryParams,
+  KasaHareketleriGetGetParams,
+  KasaHareketleriListeGetGetQueryParams,
+  KasaHareketleriListeEsnekGetQueryParams,
+  KasaHareketleriListePostPostBody,
+  KasaHareketleriGrupluListeGetQueryParams,
   KodlarKodlarTumSeviyelerGetQueryParams,
   KodlarIDSizTumSeviyeleriBirdenKaydetPostBody,
   KodlarGetGetParams,
@@ -3059,16 +3316,56 @@ import {
   SablonNotEklePostParams,
   SablonNotEklePostBody,
   SablonNotSilDeleteParams,
-  SatinAlmaTalepHareketleriDetayliListeGetQueryParams,
-  SatinAlmaTalepListeDetayliListeGetQueryParams,
-  SatisFaturasiHareketleriDetayliListeGetQueryParams,
-  SatisFaturasiListeDetayliListeGetQueryParams,
-  SatisIadeFaturasiHareketleriDetayliListeGetQueryParams,
-  SatisIadeFaturasiListeDetayliListeGetQueryParams,
-  SatisIadeIrsaliyesiHareketleriDetayliListeGetQueryParams,
-  SatisIadeIrsaliyesiListeDetayliListeGetQueryParams,
-  SatisIrsaliyesiHareketleriDetayliListeGetQueryParams,
-  SatisIrsaliyesiListeDetayliListeGetQueryParams,
+  SatinAlmaTalepHareketleriGetGetParams,
+  SatinAlmaTalepHareketleriListeGetGetQueryParams,
+  SatinAlmaTalepHareketleriListeEsnekGetQueryParams,
+  SatinAlmaTalepHareketleriListePostPostBody,
+  SatinAlmaTalepHareketleriGrupluListeGetQueryParams,
+  SatinAlmaTalepListeGetGetParams,
+  SatinAlmaTalepListeListeGetGetQueryParams,
+  SatinAlmaTalepListeListeEsnekGetQueryParams,
+  SatinAlmaTalepListeListePostPostBody,
+  SatinAlmaTalepListeGrupluListeGetQueryParams,
+  SatisFaturasiHareketleriGetGetParams,
+  SatisFaturasiHareketleriListeGetGetQueryParams,
+  SatisFaturasiHareketleriListeEsnekGetQueryParams,
+  SatisFaturasiHareketleriListePostPostBody,
+  SatisFaturasiHareketleriGrupluListeGetQueryParams,
+  SatisFaturasiListeGetGetParams,
+  SatisFaturasiListeListeGetGetQueryParams,
+  SatisFaturasiListeListeEsnekGetQueryParams,
+  SatisFaturasiListeListePostPostBody,
+  SatisFaturasiListeGrupluListeGetQueryParams,
+  SatisIadeFaturasiHareketleriGetGetParams,
+  SatisIadeFaturasiHareketleriListeGetGetQueryParams,
+  SatisIadeFaturasiHareketleriListeEsnekGetQueryParams,
+  SatisIadeFaturasiHareketleriListePostPostBody,
+  SatisIadeFaturasiHareketleriGrupluListeGetQueryParams,
+  SatisIadeFaturasiListeGetGetParams,
+  SatisIadeFaturasiListeListeGetGetQueryParams,
+  SatisIadeFaturasiListeListeEsnekGetQueryParams,
+  SatisIadeFaturasiListeListePostPostBody,
+  SatisIadeFaturasiListeGrupluListeGetQueryParams,
+  SatisIadeIrsaliyesiHareketleriGetGetParams,
+  SatisIadeIrsaliyesiHareketleriListeGetGetQueryParams,
+  SatisIadeIrsaliyesiHareketleriListeEsnekGetQueryParams,
+  SatisIadeIrsaliyesiHareketleriListePostPostBody,
+  SatisIadeIrsaliyesiHareketleriGrupluListeGetQueryParams,
+  SatisIadeIrsaliyesiListeGetGetParams,
+  SatisIadeIrsaliyesiListeListeGetGetQueryParams,
+  SatisIadeIrsaliyesiListeListeEsnekGetQueryParams,
+  SatisIadeIrsaliyesiListeListePostPostBody,
+  SatisIadeIrsaliyesiListeGrupluListeGetQueryParams,
+  SatisIrsaliyesiHareketleriGetGetParams,
+  SatisIrsaliyesiHareketleriListeGetGetQueryParams,
+  SatisIrsaliyesiHareketleriListeEsnekGetQueryParams,
+  SatisIrsaliyesiHareketleriListePostPostBody,
+  SatisIrsaliyesiHareketleriGrupluListeGetQueryParams,
+  SatisIrsaliyesiListeGetGetParams,
+  SatisIrsaliyesiListeListeGetGetQueryParams,
+  SatisIrsaliyesiListeListeEsnekGetQueryParams,
+  SatisIrsaliyesiListeListePostPostBody,
+  SatisIrsaliyesiListeGrupluListeGetQueryParams,
   SeriLotSeriLotHizliKayitPostBody,
   SeriLotGetGetParams,
   SeriLotPutPutParams,
@@ -3120,9 +3417,21 @@ import {
   SeriLotHareketleriNotEklePostParams,
   SeriLotHareketleriNotEklePostBody,
   SeriLotHareketleriNotSilDeleteParams,
-  SiparisListeDetayliListeGetQueryParams,
-  SipCariHareketleriDetayliListeGetQueryParams,
-  SipStokHareketleriDetayliListeGetQueryParams,
+  SiparisListeGetGetParams,
+  SiparisListeListeGetGetQueryParams,
+  SiparisListeListeEsnekGetQueryParams,
+  SiparisListeListePostPostBody,
+  SiparisListeGrupluListeGetQueryParams,
+  SipCariHareketleriGetGetParams,
+  SipCariHareketleriListeGetGetQueryParams,
+  SipCariHareketleriListeEsnekGetQueryParams,
+  SipCariHareketleriListePostPostBody,
+  SipCariHareketleriGrupluListeGetQueryParams,
+  SipStokHareketleriGetGetParams,
+  SipStokHareketleriListeGetGetQueryParams,
+  SipStokHareketleriListeEsnekGetQueryParams,
+  SipStokHareketleriListePostPostBody,
+  SipStokHareketleriGrupluListeGetQueryParams,
   SirketlerGetGetParams,
   SirketlerPutPutParams,
   SirketlerPutPutBody,
@@ -3253,8 +3562,15 @@ import {
   StokDepoMiktarNotEklePostParams,
   StokDepoMiktarNotEklePostBody,
   StokDepoMiktarNotSilDeleteParams,
-  StokGelirGiderDemirbasHareketleriDetayliListeGetQueryParams,
-  StokHareketleriDetayliListeGetQueryParams,
+  StokGelirGiderDemirbasHareketleriGetGetParams,
+  StokGelirGiderDemirbasHareketleriListeGetGetQueryParams,
+  StokGelirGiderDemirbasHareketleriListeEsnekGetQueryParams,
+  StokGelirGiderDemirbasHareketleriListePostPostBody,
+  StokGelirGiderDemirbasHareketleriGrupluListeGetQueryParams,
+  StokHareketleriGetGetParams,
+  StokHareketleriListeGetGetQueryParams,
+  StokHareketleriListeEsnekGetQueryParams,
+  StokHareketleriListePostPostBody,
   StokHareketleriGrupluListeGetQueryParams,
   StokOzetGetGetParams,
   StokOzetPutPutParams,
@@ -3891,11 +4207,31 @@ import {
   VergiDairesiNotEklePostParams,
   VergiDairesiNotEklePostBody,
   VergiDairesiNotSilDeleteParams,
-  VergiHareketleriDetayliListeGetQueryParams,
-  VerilenSiparisHareketleriDetayliListeGetQueryParams,
-  VerilenSiparisListeDetayliListeGetQueryParams,
-  VerilenTeklifHareketleriDetayliListeGetQueryParams,
-  VerilenTeklifListeDetayliListeGetQueryParams,
+  VergiHareketleriGetGetParams,
+  VergiHareketleriListeGetGetQueryParams,
+  VergiHareketleriListeEsnekGetQueryParams,
+  VergiHareketleriListePostPostBody,
+  VergiHareketleriGrupluListeGetQueryParams,
+  VerilenSiparisHareketleriGetGetParams,
+  VerilenSiparisHareketleriListeGetGetQueryParams,
+  VerilenSiparisHareketleriListeEsnekGetQueryParams,
+  VerilenSiparisHareketleriListePostPostBody,
+  VerilenSiparisHareketleriGrupluListeGetQueryParams,
+  VerilenSiparisListeGetGetParams,
+  VerilenSiparisListeListeGetGetQueryParams,
+  VerilenSiparisListeListeEsnekGetQueryParams,
+  VerilenSiparisListeListePostPostBody,
+  VerilenSiparisListeGrupluListeGetQueryParams,
+  VerilenTeklifHareketleriGetGetParams,
+  VerilenTeklifHareketleriListeGetGetQueryParams,
+  VerilenTeklifHareketleriListeEsnekGetQueryParams,
+  VerilenTeklifHareketleriListePostPostBody,
+  VerilenTeklifHareketleriGrupluListeGetQueryParams,
+  VerilenTeklifListeGetGetParams,
+  VerilenTeklifListeListeGetGetQueryParams,
+  VerilenTeklifListeListeEsnekGetQueryParams,
+  VerilenTeklifListeListePostPostBody,
+  VerilenTeklifListeGrupluListeGetQueryParams,
   YetkilerGetGetParams,
   YetkilerPutPutParams,
   YetkilerPutPutBody,
@@ -4231,111 +4567,552 @@ server.tool(
 );
 
 server.tool(
-  'AlinanSiparisHareketleri_DetayliListeGet',
-  'Filtrelenmiş alınan sipariş hareketleri listesini getirir. Arama, sayfalama ve sıralama destekler.\r\nAlternatif İsimler: OrderLineList, SalesOrderMovementQuery, SiparisHareketRaporu\r\nKullanım: Sipariş takip ekranları, bekleyen sipariş analizleri, sevkiyat planlama ve pivot raporlar için veri çekme.\r\nMCP Kullanımı: Kullanıcının \"Hangi siparişte ne kadar ürün var?\", \"Bekleyen siparişler neler?\" gibi soruları için ana veri kaynağıdır.',
+  'AlinanSiparisHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
   {
-    queryParams: AlinanSiparisHareketleriDetayliListeGetQueryParams
+    pathParams: AlinanSiparisHareketleriGetGetParams
   },
-  AlinanSiparisHareketleri_DetayliListeGetHandler
+  AlinanSiparisHareketleri_GetGetHandler
 );
 
 server.tool(
-  'AlinanSiparisListe_DetayliListeGet',
-  'Filtrelenmiş alınan sipariş fiş listesini getirir. Fiş bazında özet bilgiler sunar.\r\nAlternatif İsimler: SalesOrderList, HeaderQuery, SiparisFisSorgulama, GetOrders\r\nKullanım: Sipariş yönetimi ana ekranı, fiş arama, tarihe göre sipariş takibi ve onay bekleyen siparişlerin listelenmesi.\r\nMCP Kullanımı: Kullanıcının \"Bu ayki siparişler hangileri?\", \"X müşterisinin son siparişlerinin durumu nedir?\" gibi fiş bazlı soruları için ana kaynaktır.',
+  'AlinanSiparisHareketleri_ListeGetGet',
+  '',
   {
-    queryParams: AlinanSiparisListeDetayliListeGetQueryParams
+    queryParams: AlinanSiparisHareketleriListeGetGetQueryParams
   },
-  AlinanSiparisListe_DetayliListeGetHandler
+  AlinanSiparisHareketleri_ListeGetGetHandler
 );
 
 server.tool(
-  'AlinanTeklifHareketleri_DetayliListeGet',
-  'Filtrelenmiş satın alma teklif kalem (satır) listesini getirir. Ürün veya hizmet bazında tedarikçi fiyat analizleri için veri sunar.\r\nAlternatif İsimler: QuoteDetails, LineItemQuery, TeklifDetaySorgulama, GetQuoteLines\r\nKullanım: Teklif kalemlerinin analizi, hangi üründen ne kadar teklif verildiği raporları, bekleyen teklif satırlarının takibi.\r\nMCP Kullanımı: Kullanıcının \"Hangi ürünler için teklif aldık?\", \"X ürününün teklif fiyatı neydi?\", \"Satış tekliflerindeki stok miktarları nedir?\" gibi soruları için temel kaynaktır.',
+  'AlinanSiparisHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
   {
-    queryParams: AlinanTeklifHareketleriDetayliListeGetQueryParams
+    queryParams: AlinanSiparisHareketleriListeEsnekGetQueryParams
   },
-  AlinanTeklifHareketleri_DetayliListeGetHandler
+  AlinanSiparisHareketleri_ListeEsnekGetHandler
 );
 
 server.tool(
-  'AlinanTeklifListe_DetayliListeGet',
-  'Filtrelenmiş satın alma teklif fiş listesini getirir. Tedarikçilerin sunduğu genel teklif şartlarını ve durumlarını izlemek için kullanılır.\r\nAlternatif İsimler: QuoteList, ProposalQuery, TeklifSorgulama, GetProposals\r\nKullanım: Teklif takip ekranı, bekleyen tekliflerin analizi, satış personeli bazlı teklif raporları.\r\nMCP Kullanımı: Kullanıcının \"Geçen hafta verilen teklifler neler?\", \"Onay bekleyen tekliflerimiz hangileri?\", \"X müşterisine verilen son teklif\" gibi soruları için veri sağlar.',
+  'AlinanSiparisHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
   {
-    queryParams: AlinanTeklifListeDetayliListeGetQueryParams
+    bodyParams: AlinanSiparisHareketleriListePostPostBody
   },
-  AlinanTeklifListe_DetayliListeGetHandler
+  AlinanSiparisHareketleri_ListePostPostHandler
 );
 
 server.tool(
-  'AlisFaturasiHareketleri_DetayliListeGet',
-  'Filtrelenmiş alış faturası hareket listesini getirir. Ürün bazlı satın alma analizi ve raporlama için kullanılır.\r\nAlternatif İsimler: PurchaseLineList, ExpenseDetailQuery, AlisDetaySorgulama, GetPurchaseItems\r\nKullanım: Satın alma maliyet analizleri, tedarikçi bazlı ürün fiyat takibi ve stok girişlerinin kontrolü.\r\nMCP Kullanımı: Kullanıcının \"X ürününü en son kaçtan aldık?\", \"Bu ay hangi üründen ne kadar satın alındı?\", \"Y tedarikçisinden gelen fatura kalemleri\" gibi maliyet ve miktar soruları için temel kaynaktır.',
+  'AlinanSiparisHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
   {
-    queryParams: AlisFaturasiHareketleriDetayliListeGetQueryParams
+    queryParams: AlinanSiparisHareketleriGrupluListeGetQueryParams
   },
-  AlisFaturasiHareketleri_DetayliListeGetHandler
+  AlinanSiparisHareketleri_GrupluListeGetHandler
 );
 
 server.tool(
-  'AlisFaturasiListe_DetayliListeGet',
-  'Filtrelenmiş alış faturası listesini getirir. Fatura bazında finansal özet ve durum bilgileri sunar.\r\nAlternatif İsimler: InvoiceList, PurchaseSummaryQuery, AlisFisSorgulama, GetPurchaseInvoices\r\nKullanım: Fatura takip ekranları, ödenecek faturaların analizi, tedarikçi bazlı borç takibi ve muhasebe kayıtlarının kontrolü.\r\nMCP Kullanımı: Kullanıcının \"Bu ayki toplam alış faturalarımız?\", \"X tedarikçisinden gelen faturanın vadesi nedir?\", \"Son kaydedilen faturalar\" gibi fiş odaklı soruları için ana kaynaktır.',
+  'AlinanSiparisListe_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
   {
-    queryParams: AlisFaturasiListeDetayliListeGetQueryParams
+    pathParams: AlinanSiparisListeGetGetParams
   },
-  AlisFaturasiListe_DetayliListeGetHandler
+  AlinanSiparisListe_GetGetHandler
 );
 
 server.tool(
-  'AlisIadeFaturasiHareketleri_DetayliListeGet',
-  'Filtrelenmiş alış iade faturası hareket listesini getirir. Ürün bazlı iade analizi ve raporlama sunar.\r\nAlternatif İsimler: ReturnLineList, CreditNoteDetailQuery, IadeDetaySorgulama, GetReturnItems\r\nKullanım: İade edilen ürünlerin miktar takibi, iade maliyet analizleri ve tedarikçi bazlı iade performans raporları.\r\nMCP Kullanımı: Kullanıcının \"Hangi ürünleri iade ettik?\", \"X tedarikçisine yapılan iadelerin toplam tutarı nedir?\", \"Geçen ayki iade kalemleri\" gibi soruları için temel kaynaktır.',
+  'AlinanSiparisListe_ListeGetGet',
+  '',
   {
-    queryParams: AlisIadeFaturasiHareketleriDetayliListeGetQueryParams
+    queryParams: AlinanSiparisListeListeGetGetQueryParams
   },
-  AlisIadeFaturasiHareketleri_DetayliListeGetHandler
+  AlinanSiparisListe_ListeGetGetHandler
 );
 
 server.tool(
-  'AlisIadeFaturasiListe_DetayliListeGet',
-  'Filtrelenmiş alış iade faturası listesini getirir. Fatura bazında finansal özet ve iade durum bilgileri sunar.\r\nAlternatif İsimler: ReturnInvoiceList, CreditNoteQuery, AlisIadeFisSorgulama, GetReturnInvoices\r\nKullanım: İade takip ekranları, tedarikçiden beklenen alacakların analizi ve muhasebe iade kayıtlarının kontrolü.\r\nMCP Kullanımı: Kullanıcının \"Bu ay ne kadarlık iade faturası kestik?\", \"X firmasına kesilen iade faturasının numarası nedir?\", \"İade tutarlarının genel toplamı\" gibi fiş bazlı soruları için ana kaynaktır.',
+  'AlinanSiparisListe_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
   {
-    queryParams: AlisIadeFaturasiListeDetayliListeGetQueryParams
+    queryParams: AlinanSiparisListeListeEsnekGetQueryParams
   },
-  AlisIadeFaturasiListe_DetayliListeGetHandler
+  AlinanSiparisListe_ListeEsnekGetHandler
 );
 
 server.tool(
-  'AlisIadeIrsaliyesiHareketleri_DetayliListeGet',
-  'Filtrelenmiş alış iade irsaliyesi hareket listesini getirir. Ürün bazlı fiziksel iade analizi sunar.\r\nAlternatif İsimler: ReturnDeliveryLineList, ShipmentDetailQuery, IrsaliyeIadeDetaySorgulama, GetReturnShipmentItems\r\nKullanım: Depodan çıkan iade malların takibi, henüz faturalanmamış iade irsaliyelerinin analizi ve lojistik iade raporları.\r\nMCP Kullanımı: Kullanıcının \"Hangi ürünlerin iadesi depodan çıktı?\", \"X tedarikçisine fiziksel olarak ne kadar ürün gönderildi?\", \"Faturalanmak üzere bekleyen iade irsaliye kalemleri\" gibi soruları için temel kaynaktır.',
+  'AlinanSiparisListe_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
   {
-    queryParams: AlisIadeIrsaliyesiHareketleriDetayliListeGetQueryParams
+    bodyParams: AlinanSiparisListeListePostPostBody
   },
-  AlisIadeIrsaliyesiHareketleri_DetayliListeGetHandler
+  AlinanSiparisListe_ListePostPostHandler
 );
 
 server.tool(
-  'AlisIadeIrsaliyesiListe_DetayliListeGet',
-  'Filtrelenmiş alış iade irsaliye listesini getirir. Fiş bazında sevkiyat ve faturalanma özet bilgileri sunar.\r\nAlternatif İsimler: ReturnDeliveryList, ShipmentQuery, IrsaliyeIadeFisSorgulama, GetReturnShipments\r\nKullanım: İade sevkiyatlarının takibi, açıkta kalan (faturalanmamış) iade irsaliyelerinin analizi ve lojistik raporlama.\r\nMCP Kullanımı: Kullanıcının \"X tedarikçisine bugün hangi iadeler gönderildi?\", \"Faturalanmayı bekleyen iade irsaliyeleri hangileri?\", \"Belirli bir numara ile iade irsaliyesi araması\" gibi soruları için ana kaynaktır.',
+  'AlinanSiparisListe_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
   {
-    queryParams: AlisIadeIrsaliyesiListeDetayliListeGetQueryParams
+    queryParams: AlinanSiparisListeGrupluListeGetQueryParams
   },
-  AlisIadeIrsaliyesiListe_DetayliListeGetHandler
+  AlinanSiparisListe_GrupluListeGetHandler
 );
 
 server.tool(
-  'AlisIrsaliyesiHareketleri_DetayliListeGet',
-  'Filtrelenmiş alış irsaliyesi hareket listesini getirir. Ürün bazlı fiziksel giriş analizi sunar.\r\nAlternatif İsimler: DeliveryLineList, ReceivingDetailQuery, IrsaliyeDetaySorgulama, GetReceivedItems\r\nKullanım: Depoya giren ürünlerin takibi, mal kabul listeleri, henüz faturalanmamış irsaliye kalemlerinin kontrolü.\r\nMCP Kullanımı: Kullanıcının \"Depoya giren ürünler hangileri?\", \"X tarihinde hangi malları teslim aldık?\", \"Henüz faturası gelmemiş irsaliye satırları neler?\" gibi soruları için temel kaynaktır.',
+  'AlinanTeklifHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
   {
-    queryParams: AlisIrsaliyesiHareketleriDetayliListeGetQueryParams
+    pathParams: AlinanTeklifHareketleriGetGetParams
   },
-  AlisIrsaliyesiHareketleri_DetayliListeGetHandler
+  AlinanTeklifHareketleri_GetGetHandler
 );
 
 server.tool(
-  'AlisIrsaliyesiListe_DetayliListeGet',
-  'Filtrelenmiş alış irsaliye listesini getirir. Fiş bazında giriş ve faturalanma özet bilgileri sunar.\r\nAlternatif İsimler: DeliveryList, IncomingShipmentQuery, IrsaliyeFisSorgulama, GetIncomingShipments\r\nKullanım: Mal kabul süreçlerinin takibi, depoya giren irsaliyelerin analizi ve faturalanmayı bekleyen irsaliyelerin raporlanması.\r\nMCP Kullanımı: Kullanıcının \"Bugün hangi tedarikçilerden mal geldi?\", \"Açıkta kalan (faturalanmamış) irsaliyeler hangileri?\", \"Belirli bir irsaliye numarasının durumu\" gibi soruları için ana kaynaktır.',
+  'AlinanTeklifHareketleri_ListeGetGet',
+  '',
   {
-    queryParams: AlisIrsaliyesiListeDetayliListeGetQueryParams
+    queryParams: AlinanTeklifHareketleriListeGetGetQueryParams
   },
-  AlisIrsaliyesiListe_DetayliListeGetHandler
+  AlinanTeklifHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'AlinanTeklifHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: AlinanTeklifHareketleriListeEsnekGetQueryParams
+  },
+  AlinanTeklifHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'AlinanTeklifHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: AlinanTeklifHareketleriListePostPostBody
+  },
+  AlinanTeklifHareketleri_ListePostPostHandler
+);
+
+server.tool(
+  'AlinanTeklifHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: AlinanTeklifHareketleriGrupluListeGetQueryParams
+  },
+  AlinanTeklifHareketleri_GrupluListeGetHandler
+);
+
+server.tool(
+  'AlinanTeklifListe_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: AlinanTeklifListeGetGetParams
+  },
+  AlinanTeklifListe_GetGetHandler
+);
+
+server.tool(
+  'AlinanTeklifListe_ListeGetGet',
+  '',
+  {
+    queryParams: AlinanTeklifListeListeGetGetQueryParams
+  },
+  AlinanTeklifListe_ListeGetGetHandler
+);
+
+server.tool(
+  'AlinanTeklifListe_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: AlinanTeklifListeListeEsnekGetQueryParams
+  },
+  AlinanTeklifListe_ListeEsnekGetHandler
+);
+
+server.tool(
+  'AlinanTeklifListe_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: AlinanTeklifListeListePostPostBody
+  },
+  AlinanTeklifListe_ListePostPostHandler
+);
+
+server.tool(
+  'AlinanTeklifListe_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: AlinanTeklifListeGrupluListeGetQueryParams
+  },
+  AlinanTeklifListe_GrupluListeGetHandler
+);
+
+server.tool(
+  'AlisFaturasiHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: AlisFaturasiHareketleriGetGetParams
+  },
+  AlisFaturasiHareketleri_GetGetHandler
+);
+
+server.tool(
+  'AlisFaturasiHareketleri_ListeGetGet',
+  '',
+  {
+    queryParams: AlisFaturasiHareketleriListeGetGetQueryParams
+  },
+  AlisFaturasiHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'AlisFaturasiHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: AlisFaturasiHareketleriListeEsnekGetQueryParams
+  },
+  AlisFaturasiHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'AlisFaturasiHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: AlisFaturasiHareketleriListePostPostBody
+  },
+  AlisFaturasiHareketleri_ListePostPostHandler
+);
+
+server.tool(
+  'AlisFaturasiHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: AlisFaturasiHareketleriGrupluListeGetQueryParams
+  },
+  AlisFaturasiHareketleri_GrupluListeGetHandler
+);
+
+server.tool(
+  'AlisFaturasiListe_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: AlisFaturasiListeGetGetParams
+  },
+  AlisFaturasiListe_GetGetHandler
+);
+
+server.tool(
+  'AlisFaturasiListe_ListeGetGet',
+  '',
+  {
+    queryParams: AlisFaturasiListeListeGetGetQueryParams
+  },
+  AlisFaturasiListe_ListeGetGetHandler
+);
+
+server.tool(
+  'AlisFaturasiListe_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: AlisFaturasiListeListeEsnekGetQueryParams
+  },
+  AlisFaturasiListe_ListeEsnekGetHandler
+);
+
+server.tool(
+  'AlisFaturasiListe_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: AlisFaturasiListeListePostPostBody
+  },
+  AlisFaturasiListe_ListePostPostHandler
+);
+
+server.tool(
+  'AlisFaturasiListe_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: AlisFaturasiListeGrupluListeGetQueryParams
+  },
+  AlisFaturasiListe_GrupluListeGetHandler
+);
+
+server.tool(
+  'AlisIadeFaturasiHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: AlisIadeFaturasiHareketleriGetGetParams
+  },
+  AlisIadeFaturasiHareketleri_GetGetHandler
+);
+
+server.tool(
+  'AlisIadeFaturasiHareketleri_ListeGetGet',
+  '',
+  {
+    queryParams: AlisIadeFaturasiHareketleriListeGetGetQueryParams
+  },
+  AlisIadeFaturasiHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'AlisIadeFaturasiHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: AlisIadeFaturasiHareketleriListeEsnekGetQueryParams
+  },
+  AlisIadeFaturasiHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'AlisIadeFaturasiHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: AlisIadeFaturasiHareketleriListePostPostBody
+  },
+  AlisIadeFaturasiHareketleri_ListePostPostHandler
+);
+
+server.tool(
+  'AlisIadeFaturasiHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: AlisIadeFaturasiHareketleriGrupluListeGetQueryParams
+  },
+  AlisIadeFaturasiHareketleri_GrupluListeGetHandler
+);
+
+server.tool(
+  'AlisIadeFaturasiListe_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: AlisIadeFaturasiListeGetGetParams
+  },
+  AlisIadeFaturasiListe_GetGetHandler
+);
+
+server.tool(
+  'AlisIadeFaturasiListe_ListeGetGet',
+  '',
+  {
+    queryParams: AlisIadeFaturasiListeListeGetGetQueryParams
+  },
+  AlisIadeFaturasiListe_ListeGetGetHandler
+);
+
+server.tool(
+  'AlisIadeFaturasiListe_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: AlisIadeFaturasiListeListeEsnekGetQueryParams
+  },
+  AlisIadeFaturasiListe_ListeEsnekGetHandler
+);
+
+server.tool(
+  'AlisIadeFaturasiListe_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: AlisIadeFaturasiListeListePostPostBody
+  },
+  AlisIadeFaturasiListe_ListePostPostHandler
+);
+
+server.tool(
+  'AlisIadeFaturasiListe_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: AlisIadeFaturasiListeGrupluListeGetQueryParams
+  },
+  AlisIadeFaturasiListe_GrupluListeGetHandler
+);
+
+server.tool(
+  'AlisIadeIrsaliyesiHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: AlisIadeIrsaliyesiHareketleriGetGetParams
+  },
+  AlisIadeIrsaliyesiHareketleri_GetGetHandler
+);
+
+server.tool(
+  'AlisIadeIrsaliyesiHareketleri_ListeGetGet',
+  '',
+  {
+    queryParams: AlisIadeIrsaliyesiHareketleriListeGetGetQueryParams
+  },
+  AlisIadeIrsaliyesiHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'AlisIadeIrsaliyesiHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: AlisIadeIrsaliyesiHareketleriListeEsnekGetQueryParams
+  },
+  AlisIadeIrsaliyesiHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'AlisIadeIrsaliyesiHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: AlisIadeIrsaliyesiHareketleriListePostPostBody
+  },
+  AlisIadeIrsaliyesiHareketleri_ListePostPostHandler
+);
+
+server.tool(
+  'AlisIadeIrsaliyesiHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: AlisIadeIrsaliyesiHareketleriGrupluListeGetQueryParams
+  },
+  AlisIadeIrsaliyesiHareketleri_GrupluListeGetHandler
+);
+
+server.tool(
+  'AlisIadeIrsaliyesiListe_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: AlisIadeIrsaliyesiListeGetGetParams
+  },
+  AlisIadeIrsaliyesiListe_GetGetHandler
+);
+
+server.tool(
+  'AlisIadeIrsaliyesiListe_ListeGetGet',
+  '',
+  {
+    queryParams: AlisIadeIrsaliyesiListeListeGetGetQueryParams
+  },
+  AlisIadeIrsaliyesiListe_ListeGetGetHandler
+);
+
+server.tool(
+  'AlisIadeIrsaliyesiListe_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: AlisIadeIrsaliyesiListeListeEsnekGetQueryParams
+  },
+  AlisIadeIrsaliyesiListe_ListeEsnekGetHandler
+);
+
+server.tool(
+  'AlisIadeIrsaliyesiListe_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: AlisIadeIrsaliyesiListeListePostPostBody
+  },
+  AlisIadeIrsaliyesiListe_ListePostPostHandler
+);
+
+server.tool(
+  'AlisIadeIrsaliyesiListe_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: AlisIadeIrsaliyesiListeGrupluListeGetQueryParams
+  },
+  AlisIadeIrsaliyesiListe_GrupluListeGetHandler
+);
+
+server.tool(
+  'AlisIrsaliyesiHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: AlisIrsaliyesiHareketleriGetGetParams
+  },
+  AlisIrsaliyesiHareketleri_GetGetHandler
+);
+
+server.tool(
+  'AlisIrsaliyesiHareketleri_ListeGetGet',
+  '',
+  {
+    queryParams: AlisIrsaliyesiHareketleriListeGetGetQueryParams
+  },
+  AlisIrsaliyesiHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'AlisIrsaliyesiHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: AlisIrsaliyesiHareketleriListeEsnekGetQueryParams
+  },
+  AlisIrsaliyesiHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'AlisIrsaliyesiHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: AlisIrsaliyesiHareketleriListePostPostBody
+  },
+  AlisIrsaliyesiHareketleri_ListePostPostHandler
+);
+
+server.tool(
+  'AlisIrsaliyesiHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: AlisIrsaliyesiHareketleriGrupluListeGetQueryParams
+  },
+  AlisIrsaliyesiHareketleri_GrupluListeGetHandler
+);
+
+server.tool(
+  'AlisIrsaliyesiListe_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: AlisIrsaliyesiListeGetGetParams
+  },
+  AlisIrsaliyesiListe_GetGetHandler
+);
+
+server.tool(
+  'AlisIrsaliyesiListe_ListeGetGet',
+  '',
+  {
+    queryParams: AlisIrsaliyesiListeListeGetGetQueryParams
+  },
+  AlisIrsaliyesiListe_ListeGetGetHandler
+);
+
+server.tool(
+  'AlisIrsaliyesiListe_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: AlisIrsaliyesiListeListeEsnekGetQueryParams
+  },
+  AlisIrsaliyesiListe_ListeEsnekGetHandler
+);
+
+server.tool(
+  'AlisIrsaliyesiListe_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: AlisIrsaliyesiListeListePostPostBody
+  },
+  AlisIrsaliyesiListe_ListePostPostHandler
+);
+
+server.tool(
+  'AlisIrsaliyesiListe_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: AlisIrsaliyesiListeGrupluListeGetQueryParams
+  },
+  AlisIrsaliyesiListe_GrupluListeGetHandler
+);
+
+server.tool(
+  'Auth_ExchangeTokenPost',
+  '',
+  {
+    bodyParams: AuthExchangeTokenPostBody
+  },
+  Auth_ExchangeTokenPostHandler
 );
 
 server.tool(
@@ -4508,12 +5285,48 @@ server.tool(
 );
 
 server.tool(
-  'BankaHareketleri_DetayliListeGet',
-  'Filtrelenmiş banka hareket listesini getirir. Banka hesapları bazında işlem detayları ve bakiye analizi sunar.\r\nAlternatif İsimler: BankTransactionList, StatementQuery, BankaSorgulama, GetBankMovements\r\nKullanım: Banka ekstre kontrolleri, günlük nakit akış takibi, ödeme ve tahsilat doğrulamaları.\r\nMCP Kullanımı: Kullanıcının \"Bugün bankaya ne kadar para geldi?\", \"X bankasındaki son işlemler\", \"Z tedarikçisine yapılan havale kaydı\" gibi finansal soruları için ana kaynaktır.',
+  'BankaHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
   {
-    queryParams: BankaHareketleriDetayliListeGetQueryParams
+    pathParams: BankaHareketleriGetGetParams
   },
-  BankaHareketleri_DetayliListeGetHandler
+  BankaHareketleri_GetGetHandler
+);
+
+server.tool(
+  'BankaHareketleri_ListeGetGet',
+  '',
+  {
+    queryParams: BankaHareketleriListeGetGetQueryParams
+  },
+  BankaHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'BankaHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: BankaHareketleriListeEsnekGetQueryParams
+  },
+  BankaHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'BankaHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: BankaHareketleriListePostPostBody
+  },
+  BankaHareketleri_ListePostPostHandler
+);
+
+server.tool(
+  'BankaHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: BankaHareketleriGrupluListeGetQueryParams
+  },
+  BankaHareketleri_GrupluListeGetHandler
 );
 
 server.tool(
@@ -5720,17 +6533,26 @@ server.tool(
 );
 
 server.tool(
-  'CariHareketleri_DetayliListeGet',
-  'Cari hesap hareketlerinin detaylı listesini getirir. Müşteri\/tedarikçi hesap ekstreleri, \r\nborç\/alacak durumları ve finansal raporlama için kullanılır.\r\nFiltreleme, sayfalama ve sıralama desteği sunar.',
+  'CariHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
   {
-    queryParams: CariHareketleriDetayliListeGetQueryParams
+    pathParams: CariHareketleriGetGetParams
   },
-  CariHareketleri_DetayliListeGetHandler
+  CariHareketleri_GetGetHandler
+);
+
+server.tool(
+  'CariHareketleri_ListeGetGet',
+  '',
+  {
+    queryParams: CariHareketleriListeGetGetQueryParams
+  },
+  CariHareketleri_ListeGetGetHandler
 );
 
 server.tool(
   'CariHareketleri_ListeEsnekGet',
-  '',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
   {
     queryParams: CariHareketleriListeEsnekGetQueryParams
   },
@@ -5738,8 +6560,17 @@ server.tool(
 );
 
 server.tool(
+  'CariHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: CariHareketleriListePostPostBody
+  },
+  CariHareketleri_ListePostPostHandler
+);
+
+server.tool(
   'CariHareketleri_GrupluListeGet',
-  'ERP\'de Cari hareket verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nSatış Analizleri:\r\n- Aylık\/yıllık müşteri bazlı satış raporları oluşturma\r\n- Müşteri bazında ciro analizi ve trend takibi\r\n- En çok satış yapılan müşterilerin belirlenmesi (ABC analizi)\r\n- Sezonsal satış paternlerinin müşteri bazında analizi\r\n- Yeni müşteri kazanım oranları ve performans ölçümü        \r\nPerformans Değerlendirme:\r\n- Plasiyer bazında performans değerlendirme ve hedef takibi\r\n- Satış temsilcisi bazında müşteri portföy analizi\r\n- Bölge\/şehir bazında satış performans karşılaştırması\r\n- Müşteri sadakat analizleri (tekrar alım oranları)        \r\nFinansal Analizler:\r\n- Müşteri bazında alacak\/borç durumu özeti\r\n- Vadeli satışların müşteri bazında takibi\r\n- Müşteri risk analizleri (ödeme gecikmesi, limit aşımı)\r\n- Nakit akış tahminleri için müşteri bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Dönemsel müşteri hareketlilik raporları\r\n- İade oranlarının müşteri bazında analizi\r\n- Ödeme yöntemlerinin müşteri bazında dağılımı\r\n- Müşteri segmentasyonu için davranış analizleri\r\n- Fatura bazlı tahsilat performans takibi        \r\nStratejik Kararlar:\r\n- Müşteri portföy optimizasyonu için veri analizi\r\n- Fiyatlandırma stratejileri için müşteri bazlı elastisite analizi\r\n- Yeni pazar fırsatlarının belirlenmesi\r\n- Müşteri yaşam boyu değeri (CLV) hesaplamaları\r\n- Çapraz satış fırsatlarının tespiti         \r\nUyum ve Kontrol:\r\n- Mali müşavir raporları için müşteri bazlı özetler\r\n- Vergi denetimi için cari hareket özetleri\r\n- İç denetim süreçleri için müşteri bazlı anomali tespiti\r\n- Muhasebe dönem kapama raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının pivot yetki kontrolü yapılır\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Borç\/Alacak durumuna göre tutarlar otomatik işaretlenir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, üzeri için filtre daraltılmalı\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu aya kadar müşteri bazında toplam satışları göster\" \r\ngibi sorguları cevaplayabilir. Finansal raporlama ve analiz için temel veri kaynağıdır.',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
   {
     queryParams: CariHareketleriGrupluListeGetQueryParams
   },
@@ -6432,12 +7263,48 @@ server.tool(
 );
 
 server.tool(
-  'CekSenetHareketleri_DetayliListeGet',
-  'Belirli kriterlere göre çek\/senet işlem hareketlerini listeler. \r\n\"Hangi çek ne zaman ciro edildi?\", \"Bu senedin tahsilat hareketi hangi dekontla yapıldı?\" gibi soruların yanıtını verir.\r\nAlternatif İsimler: TransactionLog, MovementQuery, HareketSorgulama, GetTransactionDetails\r\nKullanım: Finansal denetim, evrak izlenebilirliği (audit trail) ve geçmişe dönük işlem raporlaması.\r\nMCP Kullanımı: Kullanıcının \"X çekine hangi işlemler yapıldı?\", \"Bugün yapılan çek tahsilatları?\", \"Bu senedin geçmiş hareketleri neler?\" gibi tarihçe odaklı soruları için ana kaynaktır.',
+  'CekSenetHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
   {
-    queryParams: CekSenetHareketleriDetayliListeGetQueryParams
+    pathParams: CekSenetHareketleriGetGetParams
   },
-  CekSenetHareketleri_DetayliListeGetHandler
+  CekSenetHareketleri_GetGetHandler
+);
+
+server.tool(
+  'CekSenetHareketleri_ListeGetGet',
+  '',
+  {
+    queryParams: CekSenetHareketleriListeGetGetQueryParams
+  },
+  CekSenetHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'CekSenetHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: CekSenetHareketleriListeEsnekGetQueryParams
+  },
+  CekSenetHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'CekSenetHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: CekSenetHareketleriListePostPostBody
+  },
+  CekSenetHareketleri_ListePostPostHandler
+);
+
+server.tool(
+  'CekSenetHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: CekSenetHareketleriGrupluListeGetQueryParams
+  },
+  CekSenetHareketleri_GrupluListeGetHandler
 );
 
 server.tool(
@@ -6738,6 +7605,33 @@ server.tool(
 );
 
 server.tool(
+  'Demirbas_DetayliGetGet',
+  'Belirtilen Stok ID\'si ile Demirbaş kartının tüm detaylı bilgilerini getirir.\r\nINTENT: detaylı Demirbaş verisi getir, tam demirbaş bilgisi\r\nKULLANIM: Demirbaş kartı ile birlikte ilişkili muhasebe entegrasyon kodları da lazımsa bu endpoint kullanılır.\r\nIS_KURALLARI: StokID (id) parametresi zorunludur ve sistemde kayıtlı olmalıdır.\r\nMCP_NOT: Sadece temel alanlar (adı, kodu vb.) istenecekse standart GET \/api\/Demirbas\/{id} kullanılabilir. \r\n         Tüm ilişkili detaylar (entegrasyon) tek seferde çekilmek isteniyorsa bu endpoint tercih edilmelidir.',
+  {
+    pathParams: DemirbasDetayliGetGetParams
+  },
+  Demirbas_DetayliGetGetHandler
+);
+
+server.tool(
+  'Demirbas_DetayliPutPut',
+  'Demirbaş ana kaydını entegrasyon tanımı ve muhasebe hesaplarıyla birlikte tek seferde günceller\r\nINTENT: detaylı demirbaş güncelle, tam kayıt aç, muhasebe hesabıyla birlikte güncelle, komple kayıt\r\nKULLANIM: Entegrasyon tanımı ve muhasebe hesapları da aynı anda güncellenecekse standart Put yerine bu endpoint kullanılır.\r\nIS_KURALLARI: StokKodu benzersiz olmalı. EntegrasyonTanimi isteğe bağlıdır; gönderilmezse otomatik oluşturulur.\r\nMCP_NOT: Sadece temel demirbaş bilgileri kaydedilecekse standart PUT \/api\/Demirbas tercih edilir.\r\n         Muhasebe entegrasyonu da kurulacaksa bu endpoint tek çağrıyla işlemi tamamlar.',
+  {
+    bodyParams: DemirbasDetayliPutPutBody
+  },
+  Demirbas_DetayliPutPutHandler
+);
+
+server.tool(
+  'Demirbas_DetayliPostPost',
+  'Demirbaş ana kaydını entegrasyon tanımı ve muhasebe hesaplarıyla birlikte tek seferde oluşturur.\r\nINTENT: detaylı demirbaş oluştur, tam kayıt aç, muhasebe hesabıyla birlikte ekle, komple kayıt\r\nKULLANIM: Entegrasyon tanımı ve muhasebe hesapları da aynı anda kaydedilecekse standart Post yerine bu endpoint kullanılır.\r\nIS_KURALLARI: StokKodu benzersiz olmalı. EntegrasyonTanimi isteğe bağlıdır; gönderilmezse otomatik oluşturulur.\r\nMCP_NOT: Sadece temel demirbaş bilgileri kaydedilecekse standart POST \/api\/Demirbas tercih edilir.\r\n         Muhasebe entegrasyonu da kurulacaksa bu endpoint tek çağrıyla işlemi tamamlar.',
+  {
+    bodyParams: DemirbasDetayliPostPostBody
+  },
+  Demirbas_DetayliPostPostHandler
+);
+
+server.tool(
   'Demirbas_GetGet',
   'Belirtilen ID\'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\r\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.',
   {
@@ -6907,12 +7801,48 @@ server.tool(
 );
 
 server.tool(
-  'DemirbasHareketleri_DetayliListeGet',
-  'Filtrelenmiş demirbaş hareket dökümünü getirir. Varlıkların alım maliyetleri, işlem gördüğü cariler ve ilgili muhasebe belgelerini sunar.\r\nAlternatif İsimler: AssetMovementReport, FixedAssetAudit, DemirbasHareketSorgulama, GetAssetTransactionHistory\r\nKullanım: Demirbaş alım-satım analizi, maliyet takibi vs. için kullanılır.\r\nMCP Kullanımı: Kullanıcının \"Bu yıl alınan demirbaşların listesi?\", \"Demirbaş satış hareketleri?\" gibi muhasebe ve işlem odaklı soruları için ana kaynaktır.',
+  'DemirbasHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
   {
-    queryParams: DemirbasHareketleriDetayliListeGetQueryParams
+    pathParams: DemirbasHareketleriGetGetParams
   },
-  DemirbasHareketleri_DetayliListeGetHandler
+  DemirbasHareketleri_GetGetHandler
+);
+
+server.tool(
+  'DemirbasHareketleri_ListeGetGet',
+  '',
+  {
+    queryParams: DemirbasHareketleriListeGetGetQueryParams
+  },
+  DemirbasHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'DemirbasHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: DemirbasHareketleriListeEsnekGetQueryParams
+  },
+  DemirbasHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'DemirbasHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: DemirbasHareketleriListePostPostBody
+  },
+  DemirbasHareketleri_ListePostPostHandler
+);
+
+server.tool(
+  'DemirbasHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: DemirbasHareketleriGrupluListeGetQueryParams
+  },
+  DemirbasHareketleri_GrupluListeGetHandler
 );
 
 server.tool(
@@ -7085,21 +8015,93 @@ server.tool(
 );
 
 server.tool(
-  'DepolarArasiTransferHareketleri_DetayliListeGet',
-  'Filtrelenmiş depolar arası transfer hareket listesini getirir. Ürün bazlı transfer analizi sunar.\r\nAlternatif İsimler: TransferLineList, InternalMovementQuery, DepoTransferDetaySorgulama, GetTransferItems\r\nKullanım: Şubeler arası mal sevk takibi, transit aşamasındaki (yoldaki) stokların analizi ve depo bazlı giriş-çıkış kontrolleri.\r\nMCP Kullanımı: Kullanıcının \"Ana depodan şubeye hangi ürünler gönderildi?\", \"X ürününün transfer geçmişi\", \"Bugünkü depo transfer kalemleri\" gibi soruları için temel kaynaktır.',
+  'DepolarArasiTransferHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
   {
-    queryParams: DepolarArasiTransferHareketleriDetayliListeGetQueryParams
+    pathParams: DepolarArasiTransferHareketleriGetGetParams
   },
-  DepolarArasiTransferHareketleri_DetayliListeGetHandler
+  DepolarArasiTransferHareketleri_GetGetHandler
 );
 
 server.tool(
-  'DepolarArasiTransferListe_DetayliListeGet',
-  'Filtrelenmiş depo transfer listesini getirir. Fiş bazında çıkış-giriş depo ve durum özetleri sunar.\r\nAlternatif İsimler: TransferList, StockMovementQuery, DepoTransferFisSorgulama, GetTransferHeaders\r\nKullanım: Depo transfer sevk irsaliyelerinin takibi, bekleyen transfer onayları ve şubeler arası lojistik raporlama.\r\nMCP Kullanımı: Kullanıcının \"Bugün depodan hangi şubelere transfer yapıldı?\", \"Onay bekleyen depo transferleri hangileri?\", \"Belirli bir transfer fişinin durumu\" gibi soruları için ana kaynaktır.',
+  'DepolarArasiTransferHareketleri_ListeGetGet',
+  '',
   {
-    queryParams: DepolarArasiTransferListeDetayliListeGetQueryParams
+    queryParams: DepolarArasiTransferHareketleriListeGetGetQueryParams
   },
-  DepolarArasiTransferListe_DetayliListeGetHandler
+  DepolarArasiTransferHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'DepolarArasiTransferHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: DepolarArasiTransferHareketleriListeEsnekGetQueryParams
+  },
+  DepolarArasiTransferHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'DepolarArasiTransferHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: DepolarArasiTransferHareketleriListePostPostBody
+  },
+  DepolarArasiTransferHareketleri_ListePostPostHandler
+);
+
+server.tool(
+  'DepolarArasiTransferHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: DepolarArasiTransferHareketleriGrupluListeGetQueryParams
+  },
+  DepolarArasiTransferHareketleri_GrupluListeGetHandler
+);
+
+server.tool(
+  'DepolarArasiTransferListe_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: DepolarArasiTransferListeGetGetParams
+  },
+  DepolarArasiTransferListe_GetGetHandler
+);
+
+server.tool(
+  'DepolarArasiTransferListe_ListeGetGet',
+  '',
+  {
+    queryParams: DepolarArasiTransferListeListeGetGetQueryParams
+  },
+  DepolarArasiTransferListe_ListeGetGetHandler
+);
+
+server.tool(
+  'DepolarArasiTransferListe_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: DepolarArasiTransferListeListeEsnekGetQueryParams
+  },
+  DepolarArasiTransferListe_ListeEsnekGetHandler
+);
+
+server.tool(
+  'DepolarArasiTransferListe_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: DepolarArasiTransferListeListePostPostBody
+  },
+  DepolarArasiTransferListe_ListePostPostHandler
+);
+
+server.tool(
+  'DepolarArasiTransferListe_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: DepolarArasiTransferListeGrupluListeGetQueryParams
+  },
+  DepolarArasiTransferListe_GrupluListeGetHandler
 );
 
 server.tool(
@@ -7925,12 +8927,48 @@ server.tool(
 );
 
 server.tool(
-  'FaturaListe_DetayliListeGet',
-  'Filtrelenmiş tüm Fatura, İrsaliye ve Finansal Hareket listesini (başlık bazında) detaylı olarak getirir.\r\nKullanım Senaryoları\r\nGünlük Muhasebe: \"Bugün kesilen satış faturaları\" veya \"Gelen e-faturalar\" gibi listeler oluşturmak.\r\nMCP Kullanımı: Kullanıcının \"X firmasından gelen son faturalar nelerdir?\", \"Bu ay iptal edilen faturaları getir\" veya \"Onay bekleyen e-faturalar hangileri?\" gibi sorularına cevap verirken kullanılan ana servistir.\r\nSistemdeki AI\/ChatBot istediğiniz tipte filtreyi uygulayıp sonuçları getirecektir.',
+  'FaturaListe_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
   {
-    queryParams: FaturaListeDetayliListeGetQueryParams
+    pathParams: FaturaListeGetGetParams
   },
-  FaturaListe_DetayliListeGetHandler
+  FaturaListe_GetGetHandler
+);
+
+server.tool(
+  'FaturaListe_ListeGetGet',
+  '',
+  {
+    queryParams: FaturaListeListeGetGetQueryParams
+  },
+  FaturaListe_ListeGetGetHandler
+);
+
+server.tool(
+  'FaturaListe_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: FaturaListeListeEsnekGetQueryParams
+  },
+  FaturaListe_ListeEsnekGetHandler
+);
+
+server.tool(
+  'FaturaListe_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: FaturaListeListePostPostBody
+  },
+  FaturaListe_ListePostPostHandler
+);
+
+server.tool(
+  'FaturaListe_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: FaturaListeGrupluListeGetQueryParams
+  },
+  FaturaListe_GrupluListeGetHandler
 );
 
 server.tool(
@@ -8290,6 +9328,33 @@ server.tool(
 );
 
 server.tool(
+  'GelirGider_DetayliGetGet',
+  'Belirtilen Stok ID\'si ile GelirGider kartının tüm detaylı bilgilerini getirir.\r\nINTENT: detaylı GelirGider verisi getir, tam gelir gider bilgisi\r\nKULLANIM: GelirGider kartı ile birlikte ilişkili muhasebe entegrasyon kodları da lazımsa bu endpoint kullanılır.\r\nIS_KURALLARI: StokID (id) parametresi zorunludur ve sistemde kayıtlı olmalıdır.\r\nMCP_NOT: Sadece temel alanlar (adı, kodu vb.) istenecekse standart GET \/api\/GelirGider\/{id} kullanılabilir. \r\n         Tüm ilişkili detaylar (entegrasyon) tek seferde çekilmek isteniyorsa bu endpoint tercih edilmelidir.',
+  {
+    pathParams: GelirGiderDetayliGetGetParams
+  },
+  GelirGider_DetayliGetGetHandler
+);
+
+server.tool(
+  'GelirGider_DetayliPutPut',
+  'GelirGider ana kaydını entegrasyon tanımı ve muhasebe hesaplarıyla birlikte tek seferde günceller\r\nINTENT: detaylı gelir gider güncelle, tam kayıt aç, muhasebe hesabıyla birlikte güncelle, komple kayıt\r\nKULLANIM: Entegrasyon tanımı ve muhasebe hesapları da aynı anda güncellenecekse standart Put yerine bu endpoint kullanılır.\r\nIS_KURALLARI: StokKodu benzersiz olmalı. EntegrasyonTanimi isteğe bağlıdır; gönderilmezse otomatik oluşturulur.\r\nMCP_NOT: Sadece temel gelir gider bilgileri kaydedilecekse standart PUT \/api\/GelirGider tercih edilir.\r\n         Muhasebe entegrasyonu da kurulacaksa bu endpoint tek çağrıyla işlemi tamamlar.',
+  {
+    bodyParams: GelirGiderDetayliPutPutBody
+  },
+  GelirGider_DetayliPutPutHandler
+);
+
+server.tool(
+  'GelirGider_DetayliPostPost',
+  'GelirGider ana kaydını entegrasyon tanımı ve muhasebe hesaplarıyla birlikte tek seferde oluşturur.\r\nINTENT: detaylı gelir gider oluştur, tam kayıt aç, muhasebe hesabıyla birlikte ekle, komple kayıt\r\nKULLANIM: Entegrasyon tanımı ve muhasebe hesapları da aynı anda kaydedilecekse standart Post yerine bu endpoint kullanılır.\r\nIS_KURALLARI: StokKodu benzersiz olmalı. EntegrasyonTanimi isteğe bağlıdır; gönderilmezse otomatik oluşturulur.\r\nMCP_NOT: Sadece temel gelir gider bilgileri kaydedilecekse standart POST \/api\/GelirGider tercih edilir.\r\n         Muhasebe entegrasyonu da kurulacaksa bu endpoint tek çağrıyla işlemi tamamlar.',
+  {
+    bodyParams: GelirGiderDetayliPostPostBody
+  },
+  GelirGider_DetayliPostPostHandler
+);
+
+server.tool(
   'GelirGider_GetGet',
   'Belirtilen ID\'ye sahip kaydı getirir. Kart detay bilgilerini döndürür.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile sorgula, kartı görüntüle\r\nKULLANIM: Kart görüntüleme, düzenleme öncesi mevcut bilgileri alma.',
   {
@@ -8459,12 +9524,48 @@ server.tool(
 );
 
 server.tool(
-  'GelirGiderHareketleri_DetayliListeGet',
-  'Filtrelenmiş gelir-gider hareket listesini getirir. Hizmet ve masraf kalemleri bazında bütçe ve maliyet analizi sunar.\r\nAlternatif İsimler: IncomeExpenseList, ExpenseQuery, GiderSorgulama, GetFinancialMovements\r\nKullanım: Genel gider takibi, hizmet alışlarının maliyet analizi, departman bazlı masraf raporları ve kâr-zarar kontrolü.\r\nMCP Kullanımı: Kullanıcının \"Bu ayki kira giderimiz ne kadar?\", \"Yol ve yemek masrafları toplamı nedir?\", \"X dönemindeki operasyonel gelirlerimiz\" gibi soruları için ana kaynaktır.',
+  'GelirGiderHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
   {
-    queryParams: GelirGiderHareketleriDetayliListeGetQueryParams
+    pathParams: GelirGiderHareketleriGetGetParams
   },
-  GelirGiderHareketleri_DetayliListeGetHandler
+  GelirGiderHareketleri_GetGetHandler
+);
+
+server.tool(
+  'GelirGiderHareketleri_ListeGetGet',
+  '',
+  {
+    queryParams: GelirGiderHareketleriListeGetGetQueryParams
+  },
+  GelirGiderHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'GelirGiderHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: GelirGiderHareketleriListeEsnekGetQueryParams
+  },
+  GelirGiderHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'GelirGiderHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: GelirGiderHareketleriListePostPostBody
+  },
+  GelirGiderHareketleri_ListePostPostHandler
+);
+
+server.tool(
+  'GelirGiderHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: GelirGiderHareketleriGrupluListeGetQueryParams
+  },
+  GelirGiderHareketleri_GrupluListeGetHandler
 );
 
 server.tool(
@@ -10258,12 +11359,48 @@ server.tool(
 );
 
 server.tool(
-  'KasaHareketleri_DetayliListeGet',
-  'Filtrelenmiş kasa hareket listesini getirir. Kasa bazında işlem detayları ve güncel nakit bakiye analizi sunar.\r\nAlternatif İsimler: CashTransactionList, CashStatementQuery, KasaSorgulama, GetCashMovements\r\nKullanım: Günlük kasa kapanış kontrolleri, personelden tahsilat takibi, elden yapılan masraf ödemeleri ve kasa mutabakatları.\r\nMCP Kullanımı: Kullanıcının \"Kasada ne kadar para var?\", \"Bugün kasadan çıkan ödemeler neler?\", \"Elden yapılan tahsilatların listesi\" gibi nakit odaklı soruları için ana kaynaktır.',
+  'KasaHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
   {
-    queryParams: KasaHareketleriDetayliListeGetQueryParams
+    pathParams: KasaHareketleriGetGetParams
   },
-  KasaHareketleri_DetayliListeGetHandler
+  KasaHareketleri_GetGetHandler
+);
+
+server.tool(
+  'KasaHareketleri_ListeGetGet',
+  '',
+  {
+    queryParams: KasaHareketleriListeGetGetQueryParams
+  },
+  KasaHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'KasaHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: KasaHareketleriListeEsnekGetQueryParams
+  },
+  KasaHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'KasaHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: KasaHareketleriListePostPostBody
+  },
+  KasaHareketleri_ListePostPostHandler
+);
+
+server.tool(
+  'KasaHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: KasaHareketleriGrupluListeGetQueryParams
+  },
+  KasaHareketleri_GrupluListeGetHandler
 );
 
 server.tool(
@@ -13388,93 +14525,453 @@ server.tool(
 );
 
 server.tool(
-  'SatinAlmaTalepHareketleri_DetayliListeGet',
-  'Filtrelenmiş satın alma talep hareket (satır) listesini getirir. Kalem bazında ürün ve miktar analizi sunar.\r\nAlternatif İsimler: RequisitionDetails, RequestLineQuery, TalepDetaySorgulama, GetRequestLines\r\nKullanım: Talep edilen stokların toplam miktarlarının takibi, onay bekleyen satırların analizi ve satın alma emirleri için veri hazırlama.\r\nMCP Kullanımı: Kullanıcının \"X stok kodu için bekleyen talepler neler?\", \"Gelecek hafta teslim alınması gereken talep kalemleri\" gibi soruları için temel kaynaktır.',
+  'SatinAlmaTalepHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
   {
-    queryParams: SatinAlmaTalepHareketleriDetayliListeGetQueryParams
+    pathParams: SatinAlmaTalepHareketleriGetGetParams
   },
-  SatinAlmaTalepHareketleri_DetayliListeGetHandler
+  SatinAlmaTalepHareketleri_GetGetHandler
 );
 
 server.tool(
-  'SatinAlmaTalepListe_DetayliListeGet',
-  'Filtrelenmiş satın alma talep fiş listesini getirir. Taleplerin süreç takibi ve onay yönetimi için kullanılır.\r\nAlternatif İsimler: RequisitionList, RequestSummaryQuery, TalepSorgulama, GetPurchaseRequests\r\nKullanım: Departman bazlı talep takibi, onay bekleyen taleplerin analizi ve satın alma emirlerine dönüşecek taleplerin planlanması.\r\nMCP Kullanımı: Kullanıcının \"Bekleyen satın alma taleplerimiz neler?\", \"X departmanının yaptığı talepler\", \"Son 1 haftadaki acil talepler\" gibi soruları için ana kaynaktır.',
+  'SatinAlmaTalepHareketleri_ListeGetGet',
+  '',
   {
-    queryParams: SatinAlmaTalepListeDetayliListeGetQueryParams
+    queryParams: SatinAlmaTalepHareketleriListeGetGetQueryParams
   },
-  SatinAlmaTalepListe_DetayliListeGetHandler
+  SatinAlmaTalepHareketleri_ListeGetGetHandler
 );
 
 server.tool(
-  'SatisFaturasiHareketleri_DetayliListeGet',
-  'Filtrelenmiş satış faturası hareket listesini getirir. Ürün bazlı satış analizi ve ciro raporlaması sunar.\r\nAlternatif İsimler: SalesLineList, RevenueDetailQuery, SatisDetaySorgulama, GetSalesItems\r\nKullanım: Ürün bazlı satış performans raporları, bölge\/plasiyer bazlı satış analizleri ve periyodik ciro kontrolleri.\r\nMCP Kullanımı: Kullanıcının \"En çok hangi ürünü sattık?\", \"X müşterisine yapılan satışların detayları\", \"Geçen ayki satış kalemlerinin toplam tutarı\" gibi soruları için ana kaynaktır.',
+  'SatinAlmaTalepHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
   {
-    queryParams: SatisFaturasiHareketleriDetayliListeGetQueryParams
+    queryParams: SatinAlmaTalepHareketleriListeEsnekGetQueryParams
   },
-  SatisFaturasiHareketleri_DetayliListeGetHandler
+  SatinAlmaTalepHareketleri_ListeEsnekGetHandler
 );
 
 server.tool(
-  'SatisFaturasiListe_DetayliListeGet',
-  'Filtrelenmiş satış faturası listesini getirir. Fatura bazında finansal özet ve yasal statü bilgileri sunar.\r\nAlternatif İsimler: InvoiceMasterList, SalesSummaryQuery, SatisFisSorgulama, GetSalesInvoices\r\nKullanım: Tahsilat bekleyen faturaların analizi, günlük satış toplamlarının takibi, E-Fatura gönderim durumlarının kontrolü ve müşteri hesap mutabakatları.\r\nMCP Kullanımı: Kullanıcının \"Bu ay ne kadar satış faturası kestik?\", \"X müşterisinin son faturası kaç TL?\", \"Faturaların vadelere göre dağılımı\" gibi fiş odaklı soruları için ana kaynaktır.',
+  'SatinAlmaTalepHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
   {
-    queryParams: SatisFaturasiListeDetayliListeGetQueryParams
+    bodyParams: SatinAlmaTalepHareketleriListePostPostBody
   },
-  SatisFaturasiListe_DetayliListeGetHandler
+  SatinAlmaTalepHareketleri_ListePostPostHandler
 );
 
 server.tool(
-  'SatisIadeFaturasiHareketleri_DetayliListeGet',
-  'Filtrelenmiş satış iade faturası hareket listesini getirir. Ürün bazlı iade analizi ve raporlama sunar.\r\nAlternatif İsimler: ReturnLineList, SalesCreditNoteDetailQuery, IadeDetaySorgulama, GetSalesReturnItems\r\nKullanım: İade edilen ürünlerin miktar takibi, iade nedenlerinin analizi ve müşteri bazlı iade oranlarının raporlanması.\r\nMCP Kullanımı: Kullanıcının \"Müşteriler en çok hangi ürünleri iade ediyor?\", \"X müşterisinden gelen iade kalemleri\", \"X tarihindeki iade tutarları\" gibi soruları için temel kaynaktır.',
+  'SatinAlmaTalepHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
   {
-    queryParams: SatisIadeFaturasiHareketleriDetayliListeGetQueryParams
+    queryParams: SatinAlmaTalepHareketleriGrupluListeGetQueryParams
   },
-  SatisIadeFaturasiHareketleri_DetayliListeGetHandler
+  SatinAlmaTalepHareketleri_GrupluListeGetHandler
 );
 
 server.tool(
-  'SatisIadeFaturasiListe_DetayliListeGet',
-  'Filtrelenmiş satış iade faturası listesini getirir. Fatura bazında finansal özet ve yasal statü bilgileri sunar.\r\nAlternatif İsimler: SalesReturnMasterList, CreditNoteQuery, SatisIadeFisSorgulama, GetSalesReturns\r\nKullanım: İade süreçlerinin genel takibi, müşteriye sağlanan iade kredilerinin analizi ve muhasebe kayıtlarının kontrolü.\r\nMCP Kullanımı: Kullanıcının \"Bu hafta ne kadarlık satış iadesi aldık?\", \"X müşterisine ait iade faturaları neler?\", \"İade faturalarının toplam tutarı\" gibi fiş bazlı soruları için ana kaynaktır.',
+  'SatinAlmaTalepListe_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
   {
-    queryParams: SatisIadeFaturasiListeDetayliListeGetQueryParams
+    pathParams: SatinAlmaTalepListeGetGetParams
   },
-  SatisIadeFaturasiListe_DetayliListeGetHandler
+  SatinAlmaTalepListe_GetGetHandler
 );
 
 server.tool(
-  'SatisIadeIrsaliyesiHareketleri_DetayliListeGet',
-  'Filtrelenmiş satış iade irsaliyesi hareket listesini getirir. Ürün bazlı fiziksel iade girişi analizi sunar.\r\nAlternatif İsimler: ReturnReceivingLineList, ShipmentReturnQuery, IrsaliyeIadeDetaySorgulama, GetCustomerReturnItems\r\nKullanım: Depoya geri gelen iade ürünlerin miktar takibi, henüz faturalanmamış iade irsaliye kalemlerinin analizi ve depo mal kabul raporları.\r\nMCP Kullanımı: Kullanıcının \"Hangi ürünler müşteriden iade olarak depoya girdi?\", \"X müşterisinden gelen fiziksel iade kalemleri neler?\", \"Faturalanmak üzere bekleyen iade irsaliyeleri\" gibi soruları için temel kaynaktır.',
+  'SatinAlmaTalepListe_ListeGetGet',
+  '',
   {
-    queryParams: SatisIadeIrsaliyesiHareketleriDetayliListeGetQueryParams
+    queryParams: SatinAlmaTalepListeListeGetGetQueryParams
   },
-  SatisIadeIrsaliyesiHareketleri_DetayliListeGetHandler
+  SatinAlmaTalepListe_ListeGetGetHandler
 );
 
 server.tool(
-  'SatisIadeIrsaliyesiListe_DetayliListeGet',
-  'Filtrelenmiş satış iade irsaliye listesini getirir. Fiş bazında fiziksel iade ve faturalanma özet bilgileri sunar.\r\nAlternatif İsimler: ReturnDeliveryList, CustomerReturnQuery, IrsaliyeIadeFisSorgulama, GetReturnShipments\r\nKullanım: Müşteriden gelen iadelerin depo bazlı takibi, açıkta kalan (faturalanmamış\/iadeli) irsaliyelerin analizi ve lojistik raporlama.\r\nMCP Kullanımı: Kullanıcının \"X müşterisinden bugün hangi iade irsaliyeleri geldi?\", \"Faturalanmayı bekleyen müşteri iade irsaliyeleri hangileri?\", \"Belirli bir numara ile iade irsaliyesi araması\" gibi soruları için ana kaynaktır.',
+  'SatinAlmaTalepListe_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
   {
-    queryParams: SatisIadeIrsaliyesiListeDetayliListeGetQueryParams
+    queryParams: SatinAlmaTalepListeListeEsnekGetQueryParams
   },
-  SatisIadeIrsaliyesiListe_DetayliListeGetHandler
+  SatinAlmaTalepListe_ListeEsnekGetHandler
 );
 
 server.tool(
-  'SatisIrsaliyesiHareketleri_DetayliListeGet',
-  'Filtrelenmiş satış irsaliyesi hareket listesini getirir. Ürün bazlı fiziksel sevkiyat analizi sunar.\r\nAlternatif İsimler: DeliveryLineList, DispatchDetailQuery, IrsaliyeDetaySorgulama, GetDispatchedItems\r\nKullanım: Depodan çıkan ürünlerin miktar takibi, sevkiyat performans analizleri ve henüz faturalanmamış irsaliye kalemlerinin kontrolü.\r\nMCP Kullanımı: Kullanıcının \"Depodan hangi ürünler sevk edildi?\", \"X müşterisine fiziksel olarak hangi mallar gönderildi?\", \"Faturalanmayı bekleyen sevkiyat kalemleri neler?\" gibi lojistik soruları için temel kaynaktır.',
+  'SatinAlmaTalepListe_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
   {
-    queryParams: SatisIrsaliyesiHareketleriDetayliListeGetQueryParams
+    bodyParams: SatinAlmaTalepListeListePostPostBody
   },
-  SatisIrsaliyesiHareketleri_DetayliListeGetHandler
+  SatinAlmaTalepListe_ListePostPostHandler
 );
 
 server.tool(
-  'SatisIrsaliyesiListe_DetayliListeGet',
-  'Filtrelenmiş satış irsaliye listesini getirir. Fiş bazında sevkiyat ve faturalanma özet bilgileri sunar.\r\nAlternatif İsimler: DispatchList, ShipmentQuery, SatisIrsaliyeFisSorgulama, GetDispatches\r\nKullanım: Günlük sevkiyat takibi, depodan çıkan irsaliyelerin analizi ve faturalanmayı bekleyen irsaliyelerin raporlanması.\r\nMCP Kullanımı: Kullanıcının \"Bugün hangi müşterilere sevkiyat yapıldı?\", \"Açıkta kalan (faturalanmamış) satış irsaliyeleri hangileri?\", \"Belirli bir irsaliye numarasının durumu\" gibi soruları için ana kaynaktır.',
+  'SatinAlmaTalepListe_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
   {
-    queryParams: SatisIrsaliyesiListeDetayliListeGetQueryParams
+    queryParams: SatinAlmaTalepListeGrupluListeGetQueryParams
   },
-  SatisIrsaliyesiListe_DetayliListeGetHandler
+  SatinAlmaTalepListe_GrupluListeGetHandler
+);
+
+server.tool(
+  'SatisFaturasiHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: SatisFaturasiHareketleriGetGetParams
+  },
+  SatisFaturasiHareketleri_GetGetHandler
+);
+
+server.tool(
+  'SatisFaturasiHareketleri_ListeGetGet',
+  '',
+  {
+    queryParams: SatisFaturasiHareketleriListeGetGetQueryParams
+  },
+  SatisFaturasiHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'SatisFaturasiHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: SatisFaturasiHareketleriListeEsnekGetQueryParams
+  },
+  SatisFaturasiHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'SatisFaturasiHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: SatisFaturasiHareketleriListePostPostBody
+  },
+  SatisFaturasiHareketleri_ListePostPostHandler
+);
+
+server.tool(
+  'SatisFaturasiHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: SatisFaturasiHareketleriGrupluListeGetQueryParams
+  },
+  SatisFaturasiHareketleri_GrupluListeGetHandler
+);
+
+server.tool(
+  'SatisFaturasiListe_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: SatisFaturasiListeGetGetParams
+  },
+  SatisFaturasiListe_GetGetHandler
+);
+
+server.tool(
+  'SatisFaturasiListe_ListeGetGet',
+  '',
+  {
+    queryParams: SatisFaturasiListeListeGetGetQueryParams
+  },
+  SatisFaturasiListe_ListeGetGetHandler
+);
+
+server.tool(
+  'SatisFaturasiListe_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: SatisFaturasiListeListeEsnekGetQueryParams
+  },
+  SatisFaturasiListe_ListeEsnekGetHandler
+);
+
+server.tool(
+  'SatisFaturasiListe_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: SatisFaturasiListeListePostPostBody
+  },
+  SatisFaturasiListe_ListePostPostHandler
+);
+
+server.tool(
+  'SatisFaturasiListe_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: SatisFaturasiListeGrupluListeGetQueryParams
+  },
+  SatisFaturasiListe_GrupluListeGetHandler
+);
+
+server.tool(
+  'SatisIadeFaturasiHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: SatisIadeFaturasiHareketleriGetGetParams
+  },
+  SatisIadeFaturasiHareketleri_GetGetHandler
+);
+
+server.tool(
+  'SatisIadeFaturasiHareketleri_ListeGetGet',
+  '',
+  {
+    queryParams: SatisIadeFaturasiHareketleriListeGetGetQueryParams
+  },
+  SatisIadeFaturasiHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'SatisIadeFaturasiHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: SatisIadeFaturasiHareketleriListeEsnekGetQueryParams
+  },
+  SatisIadeFaturasiHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'SatisIadeFaturasiHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: SatisIadeFaturasiHareketleriListePostPostBody
+  },
+  SatisIadeFaturasiHareketleri_ListePostPostHandler
+);
+
+server.tool(
+  'SatisIadeFaturasiHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: SatisIadeFaturasiHareketleriGrupluListeGetQueryParams
+  },
+  SatisIadeFaturasiHareketleri_GrupluListeGetHandler
+);
+
+server.tool(
+  'SatisIadeFaturasiListe_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: SatisIadeFaturasiListeGetGetParams
+  },
+  SatisIadeFaturasiListe_GetGetHandler
+);
+
+server.tool(
+  'SatisIadeFaturasiListe_ListeGetGet',
+  '',
+  {
+    queryParams: SatisIadeFaturasiListeListeGetGetQueryParams
+  },
+  SatisIadeFaturasiListe_ListeGetGetHandler
+);
+
+server.tool(
+  'SatisIadeFaturasiListe_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: SatisIadeFaturasiListeListeEsnekGetQueryParams
+  },
+  SatisIadeFaturasiListe_ListeEsnekGetHandler
+);
+
+server.tool(
+  'SatisIadeFaturasiListe_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: SatisIadeFaturasiListeListePostPostBody
+  },
+  SatisIadeFaturasiListe_ListePostPostHandler
+);
+
+server.tool(
+  'SatisIadeFaturasiListe_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: SatisIadeFaturasiListeGrupluListeGetQueryParams
+  },
+  SatisIadeFaturasiListe_GrupluListeGetHandler
+);
+
+server.tool(
+  'SatisIadeIrsaliyesiHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: SatisIadeIrsaliyesiHareketleriGetGetParams
+  },
+  SatisIadeIrsaliyesiHareketleri_GetGetHandler
+);
+
+server.tool(
+  'SatisIadeIrsaliyesiHareketleri_ListeGetGet',
+  '',
+  {
+    queryParams: SatisIadeIrsaliyesiHareketleriListeGetGetQueryParams
+  },
+  SatisIadeIrsaliyesiHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'SatisIadeIrsaliyesiHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: SatisIadeIrsaliyesiHareketleriListeEsnekGetQueryParams
+  },
+  SatisIadeIrsaliyesiHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'SatisIadeIrsaliyesiHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: SatisIadeIrsaliyesiHareketleriListePostPostBody
+  },
+  SatisIadeIrsaliyesiHareketleri_ListePostPostHandler
+);
+
+server.tool(
+  'SatisIadeIrsaliyesiHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: SatisIadeIrsaliyesiHareketleriGrupluListeGetQueryParams
+  },
+  SatisIadeIrsaliyesiHareketleri_GrupluListeGetHandler
+);
+
+server.tool(
+  'SatisIadeIrsaliyesiListe_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: SatisIadeIrsaliyesiListeGetGetParams
+  },
+  SatisIadeIrsaliyesiListe_GetGetHandler
+);
+
+server.tool(
+  'SatisIadeIrsaliyesiListe_ListeGetGet',
+  '',
+  {
+    queryParams: SatisIadeIrsaliyesiListeListeGetGetQueryParams
+  },
+  SatisIadeIrsaliyesiListe_ListeGetGetHandler
+);
+
+server.tool(
+  'SatisIadeIrsaliyesiListe_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: SatisIadeIrsaliyesiListeListeEsnekGetQueryParams
+  },
+  SatisIadeIrsaliyesiListe_ListeEsnekGetHandler
+);
+
+server.tool(
+  'SatisIadeIrsaliyesiListe_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: SatisIadeIrsaliyesiListeListePostPostBody
+  },
+  SatisIadeIrsaliyesiListe_ListePostPostHandler
+);
+
+server.tool(
+  'SatisIadeIrsaliyesiListe_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: SatisIadeIrsaliyesiListeGrupluListeGetQueryParams
+  },
+  SatisIadeIrsaliyesiListe_GrupluListeGetHandler
+);
+
+server.tool(
+  'SatisIrsaliyesiHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: SatisIrsaliyesiHareketleriGetGetParams
+  },
+  SatisIrsaliyesiHareketleri_GetGetHandler
+);
+
+server.tool(
+  'SatisIrsaliyesiHareketleri_ListeGetGet',
+  '',
+  {
+    queryParams: SatisIrsaliyesiHareketleriListeGetGetQueryParams
+  },
+  SatisIrsaliyesiHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'SatisIrsaliyesiHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: SatisIrsaliyesiHareketleriListeEsnekGetQueryParams
+  },
+  SatisIrsaliyesiHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'SatisIrsaliyesiHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: SatisIrsaliyesiHareketleriListePostPostBody
+  },
+  SatisIrsaliyesiHareketleri_ListePostPostHandler
+);
+
+server.tool(
+  'SatisIrsaliyesiHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: SatisIrsaliyesiHareketleriGrupluListeGetQueryParams
+  },
+  SatisIrsaliyesiHareketleri_GrupluListeGetHandler
+);
+
+server.tool(
+  'SatisIrsaliyesiListe_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: SatisIrsaliyesiListeGetGetParams
+  },
+  SatisIrsaliyesiListe_GetGetHandler
+);
+
+server.tool(
+  'SatisIrsaliyesiListe_ListeGetGet',
+  '',
+  {
+    queryParams: SatisIrsaliyesiListeListeGetGetQueryParams
+  },
+  SatisIrsaliyesiListe_ListeGetGetHandler
+);
+
+server.tool(
+  'SatisIrsaliyesiListe_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: SatisIrsaliyesiListeListeEsnekGetQueryParams
+  },
+  SatisIrsaliyesiListe_ListeEsnekGetHandler
+);
+
+server.tool(
+  'SatisIrsaliyesiListe_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: SatisIrsaliyesiListeListePostPostBody
+  },
+  SatisIrsaliyesiListe_ListePostPostHandler
+);
+
+server.tool(
+  'SatisIrsaliyesiListe_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: SatisIrsaliyesiListeGrupluListeGetQueryParams
+  },
+  SatisIrsaliyesiListe_GrupluListeGetHandler
 );
 
 server.tool(
@@ -13825,30 +15322,138 @@ server.tool(
 );
 
 server.tool(
-  'SiparisListe_DetayliListeGet',
-  'Filtrelenmiş Sipariş, Teklif ve Talep listesini (başlık bazında) detaylı olarak getirir.\r\nBelirli bir müşterinin veya tedarikçinin açıkta bekleyen tüm işlem hacmini görüntülemek, Onay bekleyen satınalma talepleri veya süresi dolan teklifler listelerini görmek için kullanılır.',
+  'SiparisListe_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
   {
-    queryParams: SiparisListeDetayliListeGetQueryParams
+    pathParams: SiparisListeGetGetParams
   },
-  SiparisListe_DetayliListeGetHandler
+  SiparisListe_GetGetHandler
 );
 
 server.tool(
-  'SipCariHareketleri_DetayliListeGet',
-  'Cari bazlı filtrelenebilir talep, teklif ve sipariş hareketlerini getirir.\r\nSatınalma taleplerinden başlayarak, verilen\/alınan tekliflerin siparişe dönüşüm süreçlerini ve bu süreçlerin nakit akışına etkilerini raporlar. \r\nAlternatif İsimler: ProposalOrderHistory, QuoteAndDemandQuery, CariTicariSorgulama, GetCommercialLifecycle\r\nMCP Kullanımı: Kullanıcının \"Açık tekliflerimizin toplamı?\", \"X firmasından beklediğimiz satınalma talepleri?\", \"Henüz siparişe dönmemiş teklifler?\" gibi operasyonel süreç soruları için ana kaynaktır.',
+  'SiparisListe_ListeGetGet',
+  '',
   {
-    queryParams: SipCariHareketleriDetayliListeGetQueryParams
+    queryParams: SiparisListeListeGetGetQueryParams
   },
-  SipCariHareketleri_DetayliListeGetHandler
+  SiparisListe_ListeGetGetHandler
 );
 
 server.tool(
-  'SipStokHareketleri_DetayliListeGet',
-  'Filtrelenmiş sipariş-stok hareket (Talep, Teklif ve Sipariş) listesini detaylı olarak getirir. Ürün bazlı sipariş ve teslimat performansı analizi sunar.\r\nSipariş Durumu (Onaylanmış veya Beklemede), Stok ve Cari bazlı detaylı filtreleme imkanı sağlar.\r\nAlternatif İsimler: OrderLineList, OrderItemQuery, SiparisDetaySorgulama, GetOrderLines\r\nKullanım: Bekleyen sipariş kalemlerinin analizi, stok müsaitlik kontrolü, ürün bazlı sipariş hacmi raporları, sevkiyat planlama ve istenen ürünler için son verilen tekliflerdeki birim fiyatları listeleme.\r\nMCP Kullanımı: Kullanıcının \"X müşterisinin bekleyen sipariş kalemlerini dök\", \"Termini bugün olan ürünler neler?\" gibi soruları için temel kaynaktır.',
+  'SiparisListe_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
   {
-    queryParams: SipStokHareketleriDetayliListeGetQueryParams
+    queryParams: SiparisListeListeEsnekGetQueryParams
   },
-  SipStokHareketleri_DetayliListeGetHandler
+  SiparisListe_ListeEsnekGetHandler
+);
+
+server.tool(
+  'SiparisListe_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: SiparisListeListePostPostBody
+  },
+  SiparisListe_ListePostPostHandler
+);
+
+server.tool(
+  'SiparisListe_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: SiparisListeGrupluListeGetQueryParams
+  },
+  SiparisListe_GrupluListeGetHandler
+);
+
+server.tool(
+  'SipCariHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: SipCariHareketleriGetGetParams
+  },
+  SipCariHareketleri_GetGetHandler
+);
+
+server.tool(
+  'SipCariHareketleri_ListeGetGet',
+  '',
+  {
+    queryParams: SipCariHareketleriListeGetGetQueryParams
+  },
+  SipCariHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'SipCariHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: SipCariHareketleriListeEsnekGetQueryParams
+  },
+  SipCariHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'SipCariHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: SipCariHareketleriListePostPostBody
+  },
+  SipCariHareketleri_ListePostPostHandler
+);
+
+server.tool(
+  'SipCariHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: SipCariHareketleriGrupluListeGetQueryParams
+  },
+  SipCariHareketleri_GrupluListeGetHandler
+);
+
+server.tool(
+  'SipStokHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: SipStokHareketleriGetGetParams
+  },
+  SipStokHareketleri_GetGetHandler
+);
+
+server.tool(
+  'SipStokHareketleri_ListeGetGet',
+  '',
+  {
+    queryParams: SipStokHareketleriListeGetGetQueryParams
+  },
+  SipStokHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'SipStokHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: SipStokHareketleriListeEsnekGetQueryParams
+  },
+  SipStokHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'SipStokHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: SipStokHareketleriListePostPostBody
+  },
+  SipStokHareketleri_ListePostPostHandler
+);
+
+server.tool(
+  'SipStokHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: SipStokHareketleriGrupluListeGetQueryParams
+  },
+  SipStokHareketleri_GrupluListeGetHandler
 );
 
 server.tool(
@@ -14742,26 +16347,89 @@ server.tool(
 );
 
 server.tool(
-  'StokGelirGiderDemirbasHareketleri_DetayliListeGet',
-  'Filtrelenmiş birleşik hareket listesini, Faturada geçen tüm kalem tiplerindeki verileri getirir. Stok, hizmet ve demirbaş kalemleri bazında global analiz sunar.\r\nAlternatif İsimler: UnifiedTransactionStream, VarlıkTrafigi, GeneralMovementLedger\r\nKullanım: Faturada işlenen stok hizmet ve demirbaş hareketlerinin tümünü görüntülemek ve raporlamak için kullanılır',
+  'StokGelirGiderDemirbasHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
   {
-    queryParams: StokGelirGiderDemirbasHareketleriDetayliListeGetQueryParams
+    pathParams: StokGelirGiderDemirbasHareketleriGetGetParams
   },
-  StokGelirGiderDemirbasHareketleri_DetayliListeGetHandler
+  StokGelirGiderDemirbasHareketleri_GetGetHandler
 );
 
 server.tool(
-  'StokHareketleri_DetayliListeGet',
-  'Stok hareketlerinin detaylı listesini getirir. \r\nStok hareketlerinin detaylı analizleri ve takibi için kullanılır.\r\nFiltreleme, sayfalama ve sıralama desteği sunar.',
+  'StokGelirGiderDemirbasHareketleri_ListeGetGet',
+  '',
   {
-    queryParams: StokHareketleriDetayliListeGetQueryParams
+    queryParams: StokGelirGiderDemirbasHareketleriListeGetGetQueryParams
   },
-  StokHareketleri_DetayliListeGetHandler
+  StokGelirGiderDemirbasHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'StokGelirGiderDemirbasHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: StokGelirGiderDemirbasHareketleriListeEsnekGetQueryParams
+  },
+  StokGelirGiderDemirbasHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'StokGelirGiderDemirbasHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: StokGelirGiderDemirbasHareketleriListePostPostBody
+  },
+  StokGelirGiderDemirbasHareketleri_ListePostPostHandler
+);
+
+server.tool(
+  'StokGelirGiderDemirbasHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: StokGelirGiderDemirbasHareketleriGrupluListeGetQueryParams
+  },
+  StokGelirGiderDemirbasHareketleri_GrupluListeGetHandler
+);
+
+server.tool(
+  'StokHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: StokHareketleriGetGetParams
+  },
+  StokHareketleri_GetGetHandler
+);
+
+server.tool(
+  'StokHareketleri_ListeGetGet',
+  '',
+  {
+    queryParams: StokHareketleriListeGetGetQueryParams
+  },
+  StokHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'StokHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: StokHareketleriListeEsnekGetQueryParams
+  },
+  StokHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'StokHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: StokHareketleriListePostPostBody
+  },
+  StokHareketleri_ListePostPostHandler
 );
 
 server.tool(
   'StokHareketleri_GrupluListeGet',
-  'Stok hareket verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu Web API endpoint\'i stok hareketlerini pivot table benzeri şekilde gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\nAlternatif İsimler: StockMovementGrouping, InventoryMovementPivot, StockTransactionSummary, MaterialMovementAnalysis\r\n\r\nKullanım Senaryoları:\r\nStok Analizleri:\r\n- Aylık\/yıllık ürün bazlı hareket raporları oluşturma\r\n- Ürün bazında giriş\/çıkış miktarları analizi\r\n- En çok hareket gören ürünlerin belirlenmesi (ABC analizi)\r\n- Sezonsal stok hareket paternlerinin ürün bazında analizi\r\n- Kritik stok seviyelerinin tespit edilmesi \r\nDepo Yönetimi:\r\n- Depo bazında stok hareket performans değerlendirme\r\n- Raf\/lokasyon bazında hareket yoğunluğu analizi\r\n- Depo verimliliği ve kapasite kullanım oranları\r\n- Transfer hareketlerinin depo bazında takibi\r\n- Envanter devir hızı analizleri \r\nOperasyonel Raporlama:\r\n- Dönemsel stok giriş\/çıkış özetleri\r\n- Fire\/zayi oranlarının ürün\/kategori bazında analizi\r\n- Üretim-tüketim dengesi raporları\r\n- Seri\/lot bazında izlenebilirlik raporları\r\n- Stok yaşlandırma analizleri \r\nMaliyet Analizleri:\r\n- Ürün bazında ortalama maliyet hesaplamaları\r\n- Stok değer hareketlerinin takibi\r\n- Karlılık analizleri için maliyet dağılımları\r\n- Enflasyon etkilerinin stok maliyetlerine yansıması\r\n- FIFO\/LIFO maliyet metodları karşılaştırması \r\nSatın Alma ve Tedarik:\r\n- Tedarikçi bazında alım performans analizleri\r\n- Sipariş-teslimat süre analizleri\r\n- Tedarikçi kalite performans değerlendirmeleri\r\n- Minimum-maksimum stok seviyelerinin optimizasyonu\r\n- Talep tahminleme için geçmiş hareket analizleri \r\nÜretim Planlama:\r\n- Hammadde tüketim oranları ve planlaması\r\n- Üretim kapasitesi ve kaynak kullanım analizleri\r\n- Yarı mamul ve mamul hareket takibi\r\n- Üretim verimliliği ölçümleri\r\n- İş emri bazında malzeme tüketim analizleri \r\nFinansal Kontrol:\r\n- Stok devir hızı ve cash flow etkisi analizleri\r\n- Ölü stok tespiti ve değer kaybı hesaplamaları\r\n- Sigorta değerlendirmeleri için stok değer raporları\r\n- Mali müşavir raporları için stok hareket özetleri\r\n- Vergi denetimi için stok hareket dökümleri \r\nUyum ve İzlenebilirlik:\r\n- İthalat\/ihracat gümrük beyanları için stok raporları\r\n- Çevre mevzuatı için atık\/geri dönüşüm takibi\r\n- Kalite kontrol süreçleri için hareket izleme\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının stok hareketleri pivot yetki kontrolü yapılır\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Giriş\/çıkış durumuna göre miktarlar otomatik işaretlenir\r\n- Maksimum 50.000 kayıt üzerinde gruplama yapılır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu aya kadar ürün bazında toplam giriş miktarlarını göster\", \r\n\"Depo bazında en çok hareket gören ürünler hangileri\" gibi sorguları cevaplayabilir. \r\nStok yönetimi ve operasyonel raporlama için temel veri kaynağıdır.',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
   {
     queryParams: StokHareketleriGrupluListeGetQueryParams
   },
@@ -19084,48 +20752,228 @@ server.tool(
 );
 
 server.tool(
-  'VergiHareketleri_DetayliListeGet',
-  'Filtrelenmiş vergi hareket listesini getirir. Vergi türleri ve oranları bazında detaylı analiz sunar.\r\nAlternatif İsimler: TaxLineList, TaxAuditQuery, VergiSorgulama, GetTaxDetails\r\nKullanım: KDV beyannamesi hazırlık süreçleri, tevkifatlı faturaların takibi, vergi gider analizleri ve mali denetim raporları.\r\nMCP Kullanımı: Kullanıcının \"Bu ayki toplam KDV yükümüz?\", \"X oranındaki KDV tutarları\", \"Tevkifat uygulanan işlemlerin listesi\" gibi mali ve mevzuat odaklı soruları için ana kaynaktır.',
+  'VergiHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
   {
-    queryParams: VergiHareketleriDetayliListeGetQueryParams
+    pathParams: VergiHareketleriGetGetParams
   },
-  VergiHareketleri_DetayliListeGetHandler
+  VergiHareketleri_GetGetHandler
 );
 
 server.tool(
-  'VerilenSiparisHareketleri_DetayliListeGet',
-  'Filtrelenmiş verilen sipariş hareket (satır) listesini getirir. Ürün bazlı satın alma ve teslimat performansı analizi sunar.\r\nAlternatif İsimler: PurchaseLineList, OrderMovementQuery, SiparisHareketSorgulama, GetPurchaseOrderLines\r\nKullanım: Tedarikçiden bekleyen malların analizi, açık satın alma siparişlerinin takibi, mal kabul öncesi sipariş kontrolü ve bütçe planlama.\r\nMCP Kullanımı: Kullanıcının \"X tedarikçisine verdiğimiz bekleyen siparişler?\", \"Hangi ürünleri bekliyoruz?\", \"Önümüzdeki hafta gelecek olan sipariş kalemleri\" gibi soruları için temel kaynaktır.',
+  'VergiHareketleri_ListeGetGet',
+  '',
   {
-    queryParams: VerilenSiparisHareketleriDetayliListeGetQueryParams
+    queryParams: VergiHareketleriListeGetGetQueryParams
   },
-  VerilenSiparisHareketleri_DetayliListeGetHandler
+  VergiHareketleri_ListeGetGetHandler
 );
 
 server.tool(
-  'VerilenSiparisListe_DetayliListeGet',
-  'Filtrelenmiş verilen sipariş fiş listesini getirir. Fiş bazında bakiye ve süreç durum bilgileri sunar.\r\nAlternatif İsimler: MasterPurchaseOrderList, OrderSummaryQuery, SiparisFisSorgulama, GetPurchaseOrders\r\nKullanım: Açık satın alma siparişlerinin takibi, onay bekleyen siparişlerin analizi ve tedarikçi bazlı satın alma hacmi raporlaması.\r\nMCP Kullanımı: Kullanıcının \"Bu ay verdiğimiz toplam sipariş tutarı?\", \"Onay bekleyen satın alma siparişleri hangileri?\", \"X tedarikçisine açılan son siparişler\" gibi fiş odaklı soruları için ana kaynaktır.',
+  'VergiHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
   {
-    queryParams: VerilenSiparisListeDetayliListeGetQueryParams
+    queryParams: VergiHareketleriListeEsnekGetQueryParams
   },
-  VerilenSiparisListe_DetayliListeGetHandler
+  VergiHareketleri_ListeEsnekGetHandler
 );
 
 server.tool(
-  'VerilenTeklifHareketleri_DetayliListeGet',
-  'Filtrelenmiş satış teklifi hareket (satır) listesini getirir. Kalem bazında fiyat analizi ve stok rezervasyon öngörüsü sunar.\r\nAlternatif İsimler: SalesQuoteLineList, ProposalDetailQuery, TeklifDetaySorgulama, GetQuoteLines\r\nKullanım: Hangi üründen ne kadar teklif verildiğinin analizi, satış fiyat istatistikleri ve bekleyen teklif satırlarının operasyonel takibi.\r\nMCP Kullanımı: Kullanıcının \"Hangi ürünler için satış teklifi verdik?\", \"X müşterisine verilen teklifteki birim fiyat nedir?\", \"Satış tekliflerindeki toplam bekleyen stok miktarı?\" gibi soruları için temel kaynaktır.',
+  'VergiHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
   {
-    queryParams: VerilenTeklifHareketleriDetayliListeGetQueryParams
+    bodyParams: VergiHareketleriListePostPostBody
   },
-  VerilenTeklifHareketleri_DetayliListeGetHandler
+  VergiHareketleri_ListePostPostHandler
 );
 
 server.tool(
-  'VerilenTeklifListe_DetayliListeGet',
-  'Filtrelenmiş satış teklif fiş listesini getirir. Müşterilere verilen tekliflerin genel performansını, bakiye etkilerini ve durumlarını izlemek için kullanılır.\r\nAlternatif İsimler: MasterSalesQuoteList, ProposalSummaryQuery, TeklifFisSorgulama, GetSalesProposals\r\nKullanım: Satış ekibi için bekleyen tekliflerin analizi, süresi dolmak üzere olan proformaların takibi ve müşteri bazlı satış fırsatı raporlaması.\r\nMCP Kullanımı: Kullanıcının \"Bu hafta müşterilere verilen teklifler?\", \"Onay bekleyen satış tekliflerimiz hangileri?\", \"X müşterisine sunulan son teklif tutarı\" gibi soruları için ana kaynaktır.',
+  'VergiHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
   {
-    queryParams: VerilenTeklifListeDetayliListeGetQueryParams
+    queryParams: VergiHareketleriGrupluListeGetQueryParams
   },
-  VerilenTeklifListe_DetayliListeGetHandler
+  VergiHareketleri_GrupluListeGetHandler
+);
+
+server.tool(
+  'VerilenSiparisHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: VerilenSiparisHareketleriGetGetParams
+  },
+  VerilenSiparisHareketleri_GetGetHandler
+);
+
+server.tool(
+  'VerilenSiparisHareketleri_ListeGetGet',
+  '',
+  {
+    queryParams: VerilenSiparisHareketleriListeGetGetQueryParams
+  },
+  VerilenSiparisHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'VerilenSiparisHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: VerilenSiparisHareketleriListeEsnekGetQueryParams
+  },
+  VerilenSiparisHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'VerilenSiparisHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: VerilenSiparisHareketleriListePostPostBody
+  },
+  VerilenSiparisHareketleri_ListePostPostHandler
+);
+
+server.tool(
+  'VerilenSiparisHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: VerilenSiparisHareketleriGrupluListeGetQueryParams
+  },
+  VerilenSiparisHareketleri_GrupluListeGetHandler
+);
+
+server.tool(
+  'VerilenSiparisListe_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: VerilenSiparisListeGetGetParams
+  },
+  VerilenSiparisListe_GetGetHandler
+);
+
+server.tool(
+  'VerilenSiparisListe_ListeGetGet',
+  '',
+  {
+    queryParams: VerilenSiparisListeListeGetGetQueryParams
+  },
+  VerilenSiparisListe_ListeGetGetHandler
+);
+
+server.tool(
+  'VerilenSiparisListe_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: VerilenSiparisListeListeEsnekGetQueryParams
+  },
+  VerilenSiparisListe_ListeEsnekGetHandler
+);
+
+server.tool(
+  'VerilenSiparisListe_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: VerilenSiparisListeListePostPostBody
+  },
+  VerilenSiparisListe_ListePostPostHandler
+);
+
+server.tool(
+  'VerilenSiparisListe_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: VerilenSiparisListeGrupluListeGetQueryParams
+  },
+  VerilenSiparisListe_GrupluListeGetHandler
+);
+
+server.tool(
+  'VerilenTeklifHareketleri_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: VerilenTeklifHareketleriGetGetParams
+  },
+  VerilenTeklifHareketleri_GetGetHandler
+);
+
+server.tool(
+  'VerilenTeklifHareketleri_ListeGetGet',
+  '',
+  {
+    queryParams: VerilenTeklifHareketleriListeGetGetQueryParams
+  },
+  VerilenTeklifHareketleri_ListeGetGetHandler
+);
+
+server.tool(
+  'VerilenTeklifHareketleri_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: VerilenTeklifHareketleriListeEsnekGetQueryParams
+  },
+  VerilenTeklifHareketleri_ListeEsnekGetHandler
+);
+
+server.tool(
+  'VerilenTeklifHareketleri_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: VerilenTeklifHareketleriListePostPostBody
+  },
+  VerilenTeklifHareketleri_ListePostPostHandler
+);
+
+server.tool(
+  'VerilenTeklifHareketleri_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: VerilenTeklifHareketleriGrupluListeGetQueryParams
+  },
+  VerilenTeklifHareketleri_GrupluListeGetHandler
+);
+
+server.tool(
+  'VerilenTeklifListe_GetGet',
+  'Belirtilen ID\'ye sahip hareket başlık kaydını veya satır detayını getirir.\r\nINTENT: kaydı getir, detayı göster, bilgileri al, ID ile hareket sorgula, belgeyi görüntüle\r\nKULLANIM: Hareket kaydı görüntüleme, detay sayfası veya düzenleme öncesi mevcut başlık bilgilerini alma hedeflenir.',
+  {
+    pathParams: VerilenTeklifListeGetGetParams
+  },
+  VerilenTeklifListe_GetGetHandler
+);
+
+server.tool(
+  'VerilenTeklifListe_ListeGetGet',
+  '',
+  {
+    queryParams: VerilenTeklifListeListeGetGetQueryParams
+  },
+  VerilenTeklifListe_ListeGetGetHandler
+);
+
+server.tool(
+  'VerilenTeklifListe_ListeEsnekGet',
+  'Dinamik ve esnek sorgulama altyapısı ile hareket\/belge listesini getirir. String tabanlı karmaşık filtreler ve kolon seçimi destekler.\r\nINTENT: esnek sorgula, dinamik filtrele, belgeleri string ile filtrele, özel hareket sorguları oluştur\r\nKULLANIM: İnsan geliştirici ve sistemler arası özel entegrasyonlar içindir. Belirli tutar aşanlar, tarihten büyük olanlar gibi sorgular yapılabilir.\r\nMCP_NOT: Bu endpoint MCP\/AI çağrıları için tip güvensizliği ve string formatlaması sebebiyle ÖNERİLMEZ. \r\n         Bunun yerine daha güvenli sorgular için mutlaka POST \/Liste (AdvancedFilterRequest alan endpoint) kullanılmalıdır!',
+  {
+    queryParams: VerilenTeklifListeListeEsnekGetQueryParams
+  },
+  VerilenTeklifListe_ListeEsnekGetHandler
+);
+
+server.tool(
+  'VerilenTeklifListe_ListePostPost',
+  'Tip güvenli JSON filtresi (AdvancedFilterRequest) kullanarak gelişmiş, çok koşullu hareket ve belge araması yapar.\r\nINTENT: karmaşık hareket filtrele, tarihe\/tutara göre çok koşullu belge ara, birleşik sorgu çalıştır, detaylı arama yap\r\nKULLANIM: Tarih aralığı, birden fazla cari, tutar kısıtlamaları veya AND\/OR mantıksal sorguları gereken durumlar içindir.\r\nMCP_NOT: MCP ve AI asistan üzerinden yapılacak hareket listeleme veya filtrelemelerinde BİRİNCİL ve ZORUNLU kullanılması gereken metottur.\r\nFILTRE: TListe modeli üzerinde Esit, Icerir, IleBaslar, BuyukturKucuktur gibi her türlü operatörü destekler.',
+  {
+    bodyParams: VerilenTeklifListeListePostPostBody
+  },
+  VerilenTeklifListe_ListePostPostHandler
+);
+
+server.tool(
+  'VerilenTeklifListe_GrupluListeGet',
+  'ERP\'de genel Hareket (Fatura, İrsaliye, Sipariş, Kasa, Banka vb.) verilerini gruplama ve agregasyon işlemleri için kullanılır. \r\nBu fonksiyon pivot table benzeri çalışarak, belirtilen alanlara göre verileri gruplar ve \r\nmatematiksel işlemler (toplam, ortalama, min, max, sayım) uygular.\r\n\r\nKullanım Senaryoları:\r\nAnalizler ve Trendler:\r\n- Aylık\/yıllık satış, alış veya sipariş bazlı genel işlem raporları oluşturma\r\n- Belge türü veya hareket grubu bazında tutar\/miktar analizi ve trend takibi\r\n- En çok hareket gören kayıtların (Cari, Stok, Kasa vb.) belirlenmesi (ABC analizi)\r\n- Sezonsal hareket paternlerinin dönem bazında analizi\r\n- Belge durumlarına (Onaylandı, Bekliyor, İptal vb.) göre işlem dağılımı ve hacmi        \r\nPerformans Değerlendirme:\r\n- Şube, depo veya departman bazında operasyonel işlem hacmi değerlendirmesi\r\n- Kullanıcı\/personel bazında işlenen hareket sayılarının karşılaştırması\r\n- Süreç tıkanıklıkları veya onay durumunda bekleyen evrak havuzu analizi       \r\nFinansal ve Stok Analizleri:\r\n- Döviz türü, ödeme şekli veya vade seçeneklerine göre finansal işlem özeti\r\n- Depolar veya kasalar arası sirkülasyon yoğunluğunun takibi\r\n- İşlem yönüne göre (Giriş\/Çıkış, Alacak\/Borç) konsolide dönem analizi\r\n- Nakit ve stok akış tahminleri için dönemsel bazlı projeksiyonlar     \r\nOperasyonel Raporlama:\r\n- Geciken sipariş veya sevkiyatların aylık dökümleri\r\n- İade ve iptal oranlarının ilgili liste bazında analizi\r\n- Sipariş, teklif veya satın alma taleplerinin hareket durum dağılımı\r\n- Günlük, saatlik veya vardiya bazlı işlem üretim analizleri        \r\nStratejik Kararlar:\r\n- Finansal ve operasyonel dar boğazları tespit etmek için veri analizi\r\n- Kaynak yönetimi (personel, depo) planlamasında miktar veya fatura sayısı analizi\r\n- Dönemsel kampanya başarılarının hareket yoğunluğuna göre ölçümü        \r\nUyum ve Kontrol:\r\n- Mali denetimler için evrak türlerine veya dönemlere göre özetler\r\n- Vergi periyotlarında işlem matrahı \/ KDV dağılım özetleri\r\n- ERP içi modüller (Örn. İrsaliye \/ Fatura) arası mutabakat tespiti\r\n- Gün sonu veya dönem kapama işlemleri için tasdik raporları\r\n\r\nİş Kuralları:\r\n- En az bir grup alanı belirtilmelidir\r\n- En az bir değer alanı ve gruplama tipi belirtilmelidir\r\n- Kullanıcının yetkisi kontrol edilir (Örn: admin:HareketOzetleri)\r\n- Boş\/null değerler hesaplamalarda 0 olarak kabul edilir\r\n- Maksimum 50000 kayıt üzerinden gruplama yapılır, listelerde performans için filtre daraltılmalıdır\r\n\r\nMCP\/Chatbot Açıklama:\r\nBu API ile kullanıcı \"Bu seneki satışları çeyrek bazında topla\", \"İptal edilen faturaları aya göre say\",\r\n\"Aylara göre toplam depo çıkış hareket miktarını bul\" gibi istatistiksel sorgularına yanıt alabilir.',
+  {
+    queryParams: VerilenTeklifListeGrupluListeGetQueryParams
+  },
+  VerilenTeklifListe_GrupluListeGetHandler
 );
 
 server.tool(

@@ -271,10 +271,12 @@ export type CariListeGetGetParams = {
 'Kisit.tabelaAdi'?: string;
 /**
  * Vergi dairesi ID'si - Bağlı vergi dairesi
+MCP_NOT: Kullanıcı belirtmemiş ise default değeri 1 gönder.
  */
 'Kisit.vergiDairesiID'?: number;
 /**
  * Vergi numarası - TC kimlik no veya vergi no
+MCP_NOT: Kullanıcı belirtmemiş ise default değeri "0" gönder.
  */
 'Kisit.vergiNo'?: string;
 /**
@@ -311,6 +313,7 @@ export type CariListeGetGetParams = {
 'Kisit.sirketID'?: number;
 /**
  * Aktif/Pasif durumu
+MCP_NOT: Oluştururken değeri true gönder.
  */
 'Kisit.durum'?: boolean;
 /**
@@ -322,6 +325,7 @@ Potansiyel = 102004,
 Personel = 102005,
 Kamu = 102006,
 Ortak = 102007,
+MCP_NOT: Kullanıcı belirtmemiş ise default değeri 102001 gönder.
  */
 'Kisit.tipID'?: CariListeGetGetKisitTipID;
 /**

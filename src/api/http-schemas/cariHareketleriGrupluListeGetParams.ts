@@ -8,15 +8,15 @@
 export type CariHareketleriGrupluListeGetParams = {
 /**
  * Gruplama yapılacak alan adları (virgülle ayrılmış).
-Örnek: "CariAdi,SozlesmeAdi" veya "Yil,Ay,CariAdi"
-Alan adları ListeModel sınıfındaki property isimlerle eşleşmelidir.
+Örnek: "BelgeTuru,Durum" veya "Tarih_Yil,Tarih_Ay,SubeAdi"
+Alan adları ilgili ListeModel sınıfındaki (TListe) property isimlerle eşleşmelidir.
 Boş geçilemez - en az bir grup alanı zorunludur.
  */
 Gruplar: string;
 /**
  * Hesaplama yapılacak alanlar ve işlem tipleri (virgülle ayrılmış).
 Format: "AlanAdi:IslemTipi,AlanAdi:IslemTipi"
-Örnek: "Tutar:SUM,Miktar:AVG,CariAdi:COUNT"
+Örnek: "Tutar:SUM,Miktar:AVG,KayıtID:COUNT"
 
 Geçerli İşlem Tipleri:
 - SUM: Toplam (sayısal alanlar için)
@@ -30,7 +30,7 @@ Boş geçilemez - en az bir değer alanı zorunludur.
  */
 Degerler: string;
 /**
- * Filtreleme kriterleri içeren ListeModel objesi. ListeModel'de olan tüm alanlar ile arama yapılabilir. EsnekAramaKisiti ile Kod, Ad ve belirli alanlar içinde parça metin araması yapılabilir
+ * Gruplama yapılmadan önce veri tabanında filtrelenecek ön koşulları temsil eder. ListeEsnek metodundaki string filtreleriyle / operatörle aynı yapıdadır.
  */
 Kisit: string;
 };

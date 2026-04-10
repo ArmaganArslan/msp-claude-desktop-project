@@ -9,9 +9,10 @@ import type { AaroModullerYetkiProgramID } from './aaroModullerYetkiProgramID.js
 
 export interface AaroModullerYetki {
   ProgramID?: AaroModullerYetkiProgramID;
+  ProgramAdi?: string;
   KayitTipi?: AaroModullerYetkiKayitTipi;
   SirketID?: number;
   SubeID?: number;
-  Sonuc?: boolean;
+  Yetki?: boolean;
   Mesaj?: string;
 }

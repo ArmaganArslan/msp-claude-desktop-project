@@ -6,4 +6,7 @@
  */
 import type { LinqFilteringAdvancedFilterRequest } from './linqFilteringAdvancedFilterRequest.js';
 
+/**
+ * Alanlar üzerinde operatör tabanlı (Büyüktür, Küçüktür, Listede var vs.) filtreleme yapabilen kapsamlı filtre nesnesi.
+ */
 export type LinqFilteringAdvancedFilterRequestBody = LinqFilteringAdvancedFilterRequest;

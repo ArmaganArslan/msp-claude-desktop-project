@@ -8,6 +8,7 @@ import type { DemirbasListeGetGetKisitFaturaKartTuru } from './demirbasListeGetG
 import type { DemirbasListeGetGetKisitOnayDurum } from './demirbasListeGetGetKisitOnayDurum.js';
 import type { DemirbasListeGetGetKisitTakipYontemi } from './demirbasListeGetGetKisitTakipYontemi.js';
 import type { DemirbasListeGetGetKisitTipID } from './demirbasListeGetGetKisitTipID.js';
+import type { DemirbasListeGetGetKisitYatirimTesvikSiniflandirmaKodu } from './demirbasListeGetGetKisitYatirimTesvikSiniflandirmaKodu.js';
 
 export type DemirbasListeGetGetParams = {
 /**
@@ -576,6 +577,7 @@ Stok kartına ait ön tanımlı üretim reçetesinin kodunu belirtir
  * Ilaç ve tıbbi cihazlar için gererklidir kartın ilaç mı tıbbi cihaz mı olduğunu belitir
  */
 'Kisit.faturaKartTuru'?: DemirbasListeGetGetKisitFaturaKartTuru;
+'Kisit.yatirimTesvikSiniflandirmaKodu'?: DemirbasListeGetGetKisitYatirimTesvikSiniflandirmaKodu;
 /**
  * Listeleme işlemlerinde sıralama için kullanılacak kısıtı belirtir.
 Örneğin, "Tarih", "Tarih:desc", "Tarih,Adi", "Tarih:desc,Adi" gibi bir değer alabilir.

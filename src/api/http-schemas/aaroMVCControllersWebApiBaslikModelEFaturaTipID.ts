@@ -26,4 +26,9 @@ export const AaroMVCControllersWebApiBaslikModelEFaturaTipID = {
   NUMBER_12: 12,
   NUMBER_13: 13,
   NUMBER_14: 14,
+  NUMBER_15: 15,
+  NUMBER_16: 16,
+  NUMBER_17: 17,
+  NUMBER_18: 18,
+  NUMBER_19: 19,
 } as const;
