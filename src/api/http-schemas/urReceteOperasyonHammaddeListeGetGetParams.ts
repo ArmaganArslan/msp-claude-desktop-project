@@ -10,7 +10,6 @@ export type UrReceteOperasyonHammaddeListeGetGetParams = {
 'Kisit.hammaddeKodu'?: string;
 'Kisit.hammaddeAdi'?: string;
 'Kisit.brm1Kodu'?: string;
-'Kisit.brmID'?: number;
 'Kisit.receteID'?: number;
 'Kisit.receteAdi'?: string;
 'Kisit.receteKodu'?: string;

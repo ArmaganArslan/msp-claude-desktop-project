@@ -1100,7 +1100,7 @@ import {
   UrReceteOperasyonHammaddeBelgeEklePostParams,
   UrReceteOperasyonHammaddeBelgeSilDeleteParams,
   UrReceteOperasyonHammaddeNotlarGetParams,
-  AaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModel,
+  AaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulPostModel,
   AaroModullerUrReceteOperasyonMamulKayitSadeKayitModelBody,
   UrReceteOperasyonMamulListeGetGetParams,
   UrReceteOperasyonMamulOnaylaPostParams,
@@ -134189,7 +134189,7 @@ Yarı mamulün hammadde ve çıktı bilgilerini toplu halde kaydeder veya günce
  */
 
 export type UrReceteOperasyonMamul_YariMamulKaydetPutArgs = {
-  bodyParams: AaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModel;
+  bodyParams: AaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulPostModel;
 }
 
 export const UrReceteOperasyonMamul_YariMamulKaydetPutHandler = async (args: UrReceteOperasyonMamul_YariMamulKaydetPutArgs) => {

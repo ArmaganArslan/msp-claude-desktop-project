@@ -28,4 +28,5 @@ export interface AaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariM
   Hata?: string;
   MamulSayisi?: number;
   BrmID?: number;
+  SecilenBirimSirasi?: number;
 }

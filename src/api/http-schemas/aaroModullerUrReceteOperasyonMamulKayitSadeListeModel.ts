@@ -10,7 +10,6 @@ export interface AaroModullerUrReceteOperasyonMamulKayitSadeListeModel {
   MamulKodu?: string;
   MamulAdi?: string;
   Brm1Kodu?: string;
-  BrmID?: number;
   ReceteID?: number;
   ReceteAdi?: string;
   ReceteKodu?: string;

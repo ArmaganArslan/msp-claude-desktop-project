@@ -112543,7 +112543,6 @@ export const UrReceteOperasyonHammaddeGetGetResponse = zod.object({
   "HammaddeKodu": zod.string().optional(),
   "HammaddeAdi": zod.string().optional(),
   "Brm1Kodu": zod.string().optional(),
-  "BrmID": zod.number().optional(),
   "ReceteID": zod.number().optional(),
   "ReceteAdi": zod.string().optional(),
   "ReceteKodu": zod.string().optional(),
@@ -112610,7 +112609,6 @@ export const UrReceteOperasyonHammaddePutPutResponse = zod.object({
   "HammaddeKodu": zod.string().optional(),
   "HammaddeAdi": zod.string().optional(),
   "Brm1Kodu": zod.string().optional(),
-  "BrmID": zod.number().optional(),
   "ReceteID": zod.number().optional(),
   "ReceteAdi": zod.string().optional(),
   "ReceteKodu": zod.string().optional(),
@@ -112662,7 +112660,6 @@ export const UrReceteOperasyonHammaddeDeleteDeleteResponse = zod.object({
   "HammaddeKodu": zod.string().optional(),
   "HammaddeAdi": zod.string().optional(),
   "Brm1Kodu": zod.string().optional(),
-  "BrmID": zod.number().optional(),
   "ReceteID": zod.number().optional(),
   "ReceteAdi": zod.string().optional(),
   "ReceteKodu": zod.string().optional(),
@@ -112709,7 +112706,6 @@ export const UrReceteOperasyonHammaddeListeGetGetQueryParams = zod.object({
   "Kisit.hammaddeKodu": zod.string().optional(),
   "Kisit.hammaddeAdi": zod.string().optional(),
   "Kisit.brm1Kodu": zod.string().optional(),
-  "Kisit.brmID": zod.number().optional(),
   "Kisit.receteID": zod.number().optional(),
   "Kisit.receteAdi": zod.string().optional(),
   "Kisit.receteKodu": zod.string().optional(),
@@ -112766,7 +112762,6 @@ export const UrReceteOperasyonHammaddeListeGetGetResponse = zod.object({
   "HammaddeKodu": zod.string().optional(),
   "HammaddeAdi": zod.string().optional(),
   "Brm1Kodu": zod.string().optional(),
-  "BrmID": zod.number().optional(),
   "ReceteID": zod.number().optional(),
   "ReceteAdi": zod.string().optional(),
   "ReceteKodu": zod.string().optional(),
@@ -112829,7 +112824,6 @@ export const UrReceteOperasyonHammaddePostPostResponse = zod.object({
   "HammaddeKodu": zod.string().optional(),
   "HammaddeAdi": zod.string().optional(),
   "Brm1Kodu": zod.string().optional(),
-  "BrmID": zod.number().optional(),
   "ReceteID": zod.number().optional(),
   "ReceteAdi": zod.string().optional(),
   "ReceteKodu": zod.string().optional(),
@@ -112968,7 +112962,6 @@ export const UrReceteOperasyonHammaddeListePostPostResponse = zod.object({
   "HammaddeKodu": zod.string().optional(),
   "HammaddeAdi": zod.string().optional(),
   "Brm1Kodu": zod.string().optional(),
-  "BrmID": zod.number().optional(),
   "ReceteID": zod.number().optional(),
   "ReceteAdi": zod.string().optional(),
   "ReceteKodu": zod.string().optional(),
@@ -113489,7 +113482,8 @@ export const UrReceteOperasyonMamulYariMamulGetirGetResponse = zod.object({
   "DepoID": zod.number().optional(),
   "Hata": zod.string().optional(),
   "MamulSayisi": zod.number().optional(),
-  "BrmID": zod.number().optional()
+  "BrmID": zod.number().optional(),
+  "SecilenBirimSirasi": zod.number().optional()
 }).optional(),
   "Mesajlar": zod.record(zod.string(), zod.string()).optional(),
   "Sonuc": zod.boolean().optional(),
@@ -113498,6 +113492,7 @@ export const UrReceteOperasyonMamulYariMamulGetirGetResponse = zod.object({
 
 
 export const UrReceteOperasyonMamulYariMamulKaydetPutBody = zod.object({
+  "MamulMiktarlst": zod.number().optional(),
   "ReceteOperasyonMamulID": zod.number().optional(),
   "ReceteOperasyonID": zod.number().optional(),
   "ReceteOperasyonHammaddeID": zod.number().optional(),
@@ -113519,11 +113514,13 @@ export const UrReceteOperasyonMamulYariMamulKaydetPutBody = zod.object({
   "DepoID": zod.number().optional(),
   "Hata": zod.string().optional(),
   "MamulSayisi": zod.number().optional(),
-  "BrmID": zod.number().optional()
+  "BrmID": zod.number().optional(),
+  "SecilenBirimSirasi": zod.number().optional()
 })
 
 export const UrReceteOperasyonMamulYariMamulKaydetPutResponse = zod.object({
   "Model": zod.object({
+  "MamulMiktarlst": zod.number().optional(),
   "ReceteOperasyonMamulID": zod.number().optional(),
   "ReceteOperasyonID": zod.number().optional(),
   "ReceteOperasyonHammaddeID": zod.number().optional(),
@@ -113545,7 +113542,8 @@ export const UrReceteOperasyonMamulYariMamulKaydetPutResponse = zod.object({
   "DepoID": zod.number().optional(),
   "Hata": zod.string().optional(),
   "MamulSayisi": zod.number().optional(),
-  "BrmID": zod.number().optional()
+  "BrmID": zod.number().optional(),
+  "SecilenBirimSirasi": zod.number().optional()
 }).optional(),
   "Mesajlar": zod.record(zod.string(), zod.string()).optional(),
   "Sonuc": zod.boolean().optional(),
@@ -113562,7 +113560,6 @@ export const UrReceteOperasyonMamulGetGetResponse = zod.object({
   "MamulKodu": zod.string().optional(),
   "MamulAdi": zod.string().optional(),
   "Brm1Kodu": zod.string().optional(),
-  "BrmID": zod.number().optional(),
   "ReceteID": zod.number().optional(),
   "ReceteAdi": zod.string().optional(),
   "ReceteKodu": zod.string().optional(),
@@ -113631,7 +113628,6 @@ export const UrReceteOperasyonMamulPutPutResponse = zod.object({
   "MamulKodu": zod.string().optional(),
   "MamulAdi": zod.string().optional(),
   "Brm1Kodu": zod.string().optional(),
-  "BrmID": zod.number().optional(),
   "ReceteID": zod.number().optional(),
   "ReceteAdi": zod.string().optional(),
   "ReceteKodu": zod.string().optional(),
@@ -113683,7 +113679,6 @@ export const UrReceteOperasyonMamulDeleteDeleteResponse = zod.object({
   "MamulKodu": zod.string().optional(),
   "MamulAdi": zod.string().optional(),
   "Brm1Kodu": zod.string().optional(),
-  "BrmID": zod.number().optional(),
   "ReceteID": zod.number().optional(),
   "ReceteAdi": zod.string().optional(),
   "ReceteKodu": zod.string().optional(),
@@ -113730,7 +113725,6 @@ export const UrReceteOperasyonMamulListeGetGetQueryParams = zod.object({
   "Kisit.mamulKodu": zod.string().optional(),
   "Kisit.mamulAdi": zod.string().optional(),
   "Kisit.brm1Kodu": zod.string().optional(),
-  "Kisit.brmID": zod.number().optional(),
   "Kisit.receteID": zod.number().optional(),
   "Kisit.receteAdi": zod.string().optional(),
   "Kisit.receteKodu": zod.string().optional(),
@@ -113787,7 +113781,6 @@ export const UrReceteOperasyonMamulListeGetGetResponse = zod.object({
   "MamulKodu": zod.string().optional(),
   "MamulAdi": zod.string().optional(),
   "Brm1Kodu": zod.string().optional(),
-  "BrmID": zod.number().optional(),
   "ReceteID": zod.number().optional(),
   "ReceteAdi": zod.string().optional(),
   "ReceteKodu": zod.string().optional(),
@@ -113852,7 +113845,6 @@ export const UrReceteOperasyonMamulPostPostResponse = zod.object({
   "MamulKodu": zod.string().optional(),
   "MamulAdi": zod.string().optional(),
   "Brm1Kodu": zod.string().optional(),
-  "BrmID": zod.number().optional(),
   "ReceteID": zod.number().optional(),
   "ReceteAdi": zod.string().optional(),
   "ReceteKodu": zod.string().optional(),
@@ -113995,7 +113987,6 @@ export const UrReceteOperasyonMamulListePostPostResponse = zod.object({
   "MamulKodu": zod.string().optional(),
   "MamulAdi": zod.string().optional(),
   "Brm1Kodu": zod.string().optional(),
-  "BrmID": zod.number().optional(),
   "ReceteID": zod.number().optional(),
   "ReceteAdi": zod.string().optional(),
   "ReceteKodu": zod.string().optional(),

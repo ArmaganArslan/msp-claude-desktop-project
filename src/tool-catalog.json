@@ -44923,7 +44923,6 @@
         "Kisit.hammaddeKodu",
         "Kisit.hammaddeAdi",
         "Kisit.brm1Kodu",
-        "Kisit.brmID",
         "Kisit.receteID",
         "Kisit.receteAdi",
         "Kisit.receteKodu",
@@ -45292,6 +45291,7 @@
     "handlerName": "UrReceteOperasyonMamul_YariMamulKaydetPutHandler",
     "params": {
       "bodyParams": [
+        "MamulMiktarlst",
         "ReceteOperasyonMamulID",
         "ReceteOperasyonID",
         "ReceteOperasyonHammaddeID",
@@ -45313,7 +45313,8 @@
         "DepoID",
         "Hata",
         "MamulSayisi",
-        "BrmID"
+        "BrmID",
+        "SecilenBirimSirasi"
       ]
     }
   },
@@ -45372,7 +45373,6 @@
         "Kisit.mamulKodu",
         "Kisit.mamulAdi",
         "Kisit.brm1Kodu",
-        "Kisit.brmID",
         "Kisit.receteID",
         "Kisit.receteAdi",
         "Kisit.receteKodu",

@@ -2426,7 +2426,8 @@ UrReceteOperasyonHammaddeBelgeEklePostParams,
 UrReceteOperasyonHammaddeBelgeSilDeleteParams,
 UrReceteOperasyonHammaddeNotlarGetParams,
 AaroKayitSonucAaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModel,
-AaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModel,
+AaroKayitSonucAaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulPostModel,
+AaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulPostModel,
 AaroKayitSonucAaroModullerUrReceteOperasyonMamulKayitSadeListeModel,
 AaroModullerUrReceteOperasyonMamulKayitSadeKayitModelBody,
 AaroKayitSonucListeSystemCollectionsGenericIEnumerableAaroModullerUrReceteOperasyonMamulKayitSadeListeModel,
@@ -104281,22 +104282,22 @@ export const UrReceteOperasyonMamul_YariMamulGetirGet = async (id: number, optio
 
 
 export type UrReceteOperasyonMamul_YariMamulKaydetPutResponse200ApplicationJson = {
-  data: AaroKayitSonucAaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModel
+  data: AaroKayitSonucAaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulPostModel
   status: 200
 }
 
 export type UrReceteOperasyonMamul_YariMamulKaydetPutResponse200TextJson = {
-  data: AaroKayitSonucAaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModel
+  data: AaroKayitSonucAaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulPostModel
   status: 200
 }
 
 export type UrReceteOperasyonMamul_YariMamulKaydetPutResponse200ApplicationXml = {
-  data: AaroKayitSonucAaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModel
+  data: AaroKayitSonucAaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulPostModel
   status: 200
 }
 
 export type UrReceteOperasyonMamul_YariMamulKaydetPutResponse200TextXml = {
-  data: AaroKayitSonucAaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModel
+  data: AaroKayitSonucAaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulPostModel
   status: 200
 }
 
@@ -104315,7 +104316,7 @@ export const getUrReceteOperasyonMamulYariMamulKaydetPutUrl = () => {
   return `${getBaseUrl()}/api/UrReceteOperasyonMamul/YariMamulKaydet`
 }
 
-export const UrReceteOperasyonMamul_YariMamulKaydetPut = async (aaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModel: AaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModel, options?: RequestInit): Promise<UrReceteOperasyonMamul_YariMamulKaydetPutResponse> => {
+export const UrReceteOperasyonMamul_YariMamulKaydetPut = async (aaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulPostModel: AaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulPostModel, options?: RequestInit): Promise<UrReceteOperasyonMamul_YariMamulKaydetPutResponse> => {
   
   const res = await fetch(getUrReceteOperasyonMamulYariMamulKaydetPutUrl(),
   {      
@@ -104323,7 +104324,7 @@ export const UrReceteOperasyonMamul_YariMamulKaydetPut = async (aaroModullerUrRe
     method: 'PUT',
     headers: { 'Content-Type': 'application/json', ...options?.headers },
     body: JSON.stringify(
-      aaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulViewModel,)
+      aaroModullerUrReceteOperasyonMamulKayitSadeReceteOperasyonYariMamulPostModel,)
   }
 )
 
