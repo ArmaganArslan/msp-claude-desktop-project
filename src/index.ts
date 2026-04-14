@@ -41,6 +41,7 @@ import {
   searchTools,
   getToolDetails,
   callTool,
+  getModelFields,
 } from "./registry/tool-registry.js";
 import { log, logHttp, logMcpTool, getLogConfig } from "./logger.js";
 
@@ -125,7 +126,8 @@ async function main() {
         "MANDATORY WORKFLOW:",
         "1. You MUST call search_api_tools first",
         "2. Then you MUST call get_tool_details",
-        "3. Then you MUST call call_api_tool",
+        "3. (If toolName ends with '_GrupluListe' or '_GrupluListeGet') you MUST call get_model_fields",
+        "4. Then you MUST call call_api_tool",
 
         "",
         "STRICT RULES:",
@@ -216,7 +218,8 @@ async function main() {
 
       "",
       "MANDATORY FLOW:",
-      "- After calling this tool, you MUST call call_api_tool",
+      "- After calling this tool, if toolName ends with '_GrupluListe' or '_GrupluListeGet', you MUST call get_model_fields",
+      "- Otherwise, you MUST call call_api_tool",
       "- You MUST NOT answer the user yet",
 
       "",
@@ -243,7 +246,40 @@ async function main() {
     },
   );
 
-  // ── 3. call_api_tool ────────────────────────────────────────────────────
+  // ── 3. get_model_fields ──────────────────────────────────────────────────
+  server.tool(
+    "get_model_fields",
+    [
+      "OPTIONAL BUT REQUIRED FOR GRUPLULISTE in ERP workflow.",
+      "",
+      "Use this tool ONLY if the toolName from search_api_tools ends with '_GrupluListe' or '_GrupluListeGet'.",
+      "Retrieves the fields (Gruplar, Degerler) that can be used for grouping and aggregation.",
+      "",
+      "MANDATORY FLOW:",
+      "- Call this BEFORE call_api_tool for GrupluListe endpoints.",
+    ].join("\n"),
+    {
+      toolName: z.string().describe("Tool adı (search_api_tools sonucundan)"),
+    },
+    async (args) => {
+      logMcpTool("get_model_fields", "start", args as Record<string, unknown>);
+      const started = performance.now();
+      try {
+        const out = await getModelFields(args.toolName);
+        logMcpTool("get_model_fields", "end", undefined, {
+          ms: Math.round(performance.now() - started),
+        });
+        return out;
+      } catch (e: any) {
+        logMcpTool("get_model_fields", "error", args as Record<string, unknown>, {
+          message: e?.message,
+        });
+        throw e;
+      }
+    },
+  );
+
+  // ── 4. call_api_tool ────────────────────────────────────────────────────
   server.tool(
     "call_api_tool",
     [

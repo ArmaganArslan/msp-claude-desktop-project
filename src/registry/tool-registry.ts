@@ -156,3 +156,82 @@ export async function callTool(
     return mcpError(`API hatası: ${err.message}`);
   }
 }
+
+export async function getModelFields(toolName: string) {
+  // 1. Tool adına göre controller'ı bul (Örn: "StokHareketleri_GrupluListeGet" -> "StokHareketleri")
+  const [controller] = toolName.split("_");
+  if (!controller) {
+    return mcpError(`Tool adı geçerli değil: '${toolName}'`);
+  }
+
+  // 2. OpenAPI JSON yükle
+  const openApiPath = join(__dirname, "../../src/apiSchema/openapi.json");
+  let openApiDoc: any;
+  try {
+    openApiDoc = JSON.parse(readFileSync(openApiPath, "utf-8"));
+  } catch (err: any) {
+    return mcpError(`openapi.json okunamadı: ${err.message}`);
+  }
+
+  // 3. Model şemasını bul (Aaro.Moduller.StokHareketleriListeModel veya Aaro.Moduller.CariHareketleriListe.ListeModel)
+  const schemas = openApiDoc?.components?.schemas || {};
+  const possibleNames = [
+    `Aaro.Moduller.${controller}ListeModel`,
+    `Aaro.Moduller.${controller}Liste.ListeModel`,
+    `Aaro.Moduller.${controller}.ListeModel`
+  ];
+
+  let modelName = possibleNames.find(name => schemas[name]);
+
+  // Eğer doğrudan eşleşme bulamazsak, controller adını içeren ve ListeModel ile biten bir key arayalım
+  if (!modelName) {
+    modelName = Object.keys(schemas).find(
+      key => key.includes(controller) && (key.endsWith("ListeModel") || key.endsWith("Liste.ListeModel"))
+    );
+  }
+
+  const schema = modelName ? schemas[modelName] : undefined;
+
+  if (!schema || !schema.properties) {
+    return mcpError(`Model '${controller}' için ${possibleNames.join(" veya ")} OpenAPI şemalarında bulunamadı veya 'properties' içermiyor.`);
+  }
+
+  // 4. Alanları grupla
+  const gruplar: Record<string, string[]> = {
+    string: [],
+    tarih_sayi: [],
+    id: []
+  };
+  
+  const degerler: Record<string, string[]> = {
+    SUM_AVG_MIN_MAX: [],
+    MIN_MAX_COUNT: []
+  };
+
+  for (const [propName, propDef] of Object.entries(schema.properties)) {
+    const p: any = propDef;
+    const type = p.type;
+    const format = p.format;
+
+    // ID kontrolü
+    if (propName.match(/ID$/i) || propName.match(/Id$/i)) {
+      gruplar.id.push(propName);
+      continue; // ID alanları degerler'de toplamak genellikle anlamsızdır
+    }
+
+    if (type === "string") {
+      if (format === "date-time") {
+        gruplar.tarih_sayi.push(propName);
+        degerler.MIN_MAX_COUNT.push(propName);
+      } else {
+        gruplar.string.push(propName);
+        degerler.MIN_MAX_COUNT.push(propName);
+      }
+    } else if (type === "number" || type === "integer") {
+      gruplar.tarih_sayi.push(propName);
+      degerler.SUM_AVG_MIN_MAX.push(propName);
+    }
+  }
+
+  return mcpText({ gruplar, degerler });
+}
